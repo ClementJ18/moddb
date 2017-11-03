@@ -106,8 +106,9 @@ def _mod_page_parser(url, soup, rss):
         follow_url = None
 
     comment = url + "#commentform"
+    count = Count(visits_total_num, followers_num, files_num, articles_num, reviews_num)
 
-    return Mod(mod_name, desc, tags, url, comment, follow_url, followers_num, suggestions, rank, visits_total_num, contact_url, homepage, None, articles, files_num, articles_num, game_name, game_url, rating, genre, theme, players, reviews_num, last_update, release_date, publishers)
+    return Mod(mod_name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, None, articles, count, game_name, game_url, rating, genre, theme, players, last_update, release_date, publishers)
 
 def parse_mod(url):
     if _url_checker(url, "mods"):
@@ -192,7 +193,9 @@ def _game_page_parser(url, soup, rss):
         follow_url = None
 
     comment = url + "#commentform"
-    return Game(game_name, desc, tags, url, comment, follow_url, followers_num, suggestions, rank, visits_num, contact_url, homepage, None, articles, files_num, articles_num, engine_name, engine_url, publishers, mods_num, reviews_num, genre, rating, players, project, boxart_url)
+    count = Count(visits_num, followers_num, files_num, articles_num, reviews_num)
+
+    return Game(game_name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, None, articles, count, engine_name, engine_url, publishers, mods_num, genre, rating, players, project, boxart_url)
 
 
 def parse_game(url):
