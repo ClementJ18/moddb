@@ -1,7 +1,7 @@
 class Mod():
     """"""
-    def __init__(self, mod_name, game_name, mod_url, game_url, desc, articles, tags, followers_num, publishers, rating, genre, theme, players, rank, visits_total_num, files_num, articles_num, reviews_num, last_update, suggestions, homepage, follow_url, comment, release_date):
-        self.mod_name = mod_name
+    def __init__(self, name, game_name, mod_url, game_url, desc, articles, tags, followers_num, publishers, rating, genre, theme, players, rank, visits_num, files_num, articles_num, reviews_num, last_update, suggestions, homepage, follow_url, comment, release_date):
+        self.name = name
         self.game_name = game_name
         self.mod_url = mod_url
         self.game_url = game_url
@@ -15,7 +15,7 @@ class Mod():
         self.theme = theme
         self.players = players
         self.rank = rank
-        self.visits_total_num = visits_total_num
+        self.visits_num = visits_num
         self.files_num = files_num
         self.articles_num = articles_num
         self.reviews_num = reviews_num

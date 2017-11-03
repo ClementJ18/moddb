@@ -16,8 +16,25 @@ def _soup_page(url):
     return soup, rss
 
 def _article_parser(rss):
+    articles = list()
     article_list = rss.find_all("item")
-    return article_list
+    for article in article_list:
+        title = article.title.string
+        desc = article.find_all(type="plain")[1].string
+        link = article.link.string
+        date = article.pubDate.string[:-14]
+        articles.append(Article(title, desc, link, date))
+    
+    return articles
+
+def _tag_parser(raw_tags, url):
+    tags = list()
+    for tag in raw_tags:
+        name = tag.a.string
+        link = url + tag.a["href"]
+        tags.append(Tag(name, url))
+
+    return tags
 
 def _page_parser(url, soup, rss):
 
@@ -28,25 +45,20 @@ def _page_parser(url, soup, rss):
             return None
 
     misc = soup.find_all("h5")
-    mod_name = soup.title.string[:-9]
+    game = [x.parent.a for x in misc if x.string == "Game"][0]
+    game_name = game.string
+    game_url = "http://www.moddb.com" + game["href"]
+
+    mod_name = soup.title.string[:-9].replace("for" + game_name, "")
     mod_url = url
     try:
         desc = str(soup.find(itemprop="description")["content"])
     except KeyError:
         desc = str(soup.find(itemprop="description").string)
-
-    game = [x.parent.a for x in misc if x.string == "Game"][0]
-    game_name = game.string
-    game_url = "http://www.moddb.com" + game["href"]
     
     articles = _article_parser(rss)
+    tags = _tag_parser(soup.find(id="tagsform").find_all(class_="row"), url)
 
-    raw_tags = soup.find(id="tagsform")
-    tags = list()
-    for x in raw_tags.descendants:
-        if str(type(x)) == "<class 'bs4.element.NavigableString'>":
-            if len(x) > 0 and x != "\n" and x != " ":
-                tags.append(str(x))    
     try: 
         publishers = [x.parent.a.string for x in misc if x.string in ["Developer", "Creator"]][0]
     except IndexError:
@@ -66,9 +78,9 @@ def _page_parser(url, soup, rss):
     visits_total_num = _string_grab1("Visits")
     files_num = _string_grab1("Files")
     articles_num = _string_grab1("Articles")
-    reviews_num = _string_grab1("Review")
+    reviews_num = _string_grab1("Reviews")
     homepage = _string_grab1("Homepage")
-    followers_num = _string_grab1("Wathchers")
+    followers_num = _string_grab1("Watchers")
 
     try:
         last_update = [x.parent.time.string for x in misc if x.string == "Last Update"][0]
@@ -80,11 +92,11 @@ def _page_parser(url, soup, rss):
     for x in suggestions_raw:
         link = x.find("a",class_="heading")
         image_url = link.parent.parent.find("img")["src"]
-        suggestion = Suggestion(link.string, link.url, image_url)
+        suggestion = Suggestion(link.string, link["href"], image_url)
         suggestions.append(suggestion)
 
     try:
-        follow_url = [x.parent.a["href"] for x in misc if x.string == "Mod watch"][0]
+        follow_url = url + [x.parent.a["href"] for x in misc if x.string == "Mod watch"][0]
     except IndexError:
         follow_url = None
 
