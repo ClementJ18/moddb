@@ -17,7 +17,7 @@ The Moddb-reader library is a scrapping library for the ModDB site which can scr
 Object Class
 ===================
 
-.. autoclass:: Object
+.. autoclass:: Page
     :members:
 
 
