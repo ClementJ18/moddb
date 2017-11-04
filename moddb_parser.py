@@ -38,7 +38,7 @@ def _tag_parser(raw_tags, url):
 
 def _mod_page_parser(url, soup, rss):
 
-    def _string_grab1(string):
+    def _string_grab(string):
         try:
             return [x.parent.a.string for x in misc if x.string == string][0]
         except IndexError:
@@ -67,15 +67,15 @@ def _mod_page_parser(url, soup, rss):
 
     release_date = soup.time.string
 
-    theme = _string_grab1("Theme")
-    genre = _string_grab1("Genre")
-    players = _string_grab1("Players")
-    rank = _string_grab1("Rank")
-    visits_total_num = _string_grab1("Visits")
-    files_num = _string_grab1("Files")
-    articles_num = _string_grab1("Articles")
-    reviews_num = _string_grab1("Reviews")
-    followers_num = _string_grab1("Watchers")
+    theme = _string_grab("Theme")
+    genre = _string_grab("Genre")
+    players = _string_grab("Players")
+    rank = _string_grab("Rank")
+    visits_total_num = _string_grab("Visits")
+    files_num = _string_grab("Files")
+    articles_num = _string_grab("Articles")
+    reviews_num = _string_grab("Reviews")
+    followers_num = _string_grab("Watchers")
 
     try:
         contact_url = url + [x.parent.a["href"] for x in misc if x.string == "Contact"][0]
@@ -107,8 +107,9 @@ def _mod_page_parser(url, soup, rss):
 
     comment = url + "#commentform"
     count = Count(visits_total_num, followers_num, files_num, articles_num, reviews_num)
+    style = Style(genre, theme, players)
 
-    return Mod(mod_name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, None, articles, count, game_name, game_url, rating, genre, theme, players, last_update, release_date, publishers)
+    return Mod(mod_name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, None, articles, count, style, game_name, game_url, rating, last_update, release_date, publishers)
 
 def parse_mod(url):
     if _url_checker(url, "mods"):
@@ -118,7 +119,7 @@ def parse_mod(url):
     
 def _game_page_parser(url, soup, rss):
     
-    def _string_grab1(string):
+    def _string_grab(string):
         try:
             return [x.parent.a.string for x in misc if x.string == string][0]
         except IndexError:
@@ -147,17 +148,17 @@ def _game_page_parser(url, soup, rss):
 
     release_date = soup.time.string
 
-    theme = _string_grab1("Theme")
-    genre = _string_grab1("Genre")
-    players = _string_grab1("Players")
-    rank = _string_grab1("Rank")
-    visits_num = _string_grab1("Visits")
-    files_num = _string_grab1("Files")
-    articles_num = _string_grab1("Articles")
-    reviews_num = _string_grab1("Reviews")
-    followers_num = _string_grab1("Watchers")
-    mods_num = _string_grab1("Mods")
-    project = _string_grab1("Project")
+    theme = _string_grab("Theme")
+    genre = _string_grab("Genre")
+    players = _string_grab("Players")
+    rank = _string_grab("Rank")
+    visits_num = _string_grab("Visits")
+    files_num = _string_grab("Files")
+    articles_num = _string_grab("Articles")
+    reviews_num = _string_grab("Reviews")
+    followers_num = _string_grab("Watchers")
+    mods_num = _string_grab("Mods")
+    project = _string_grab("Project")
 
     try:
         contact_url = url + [x.parent.a["href"] for x in misc if x.string == "Contact"][0]
@@ -193,9 +194,10 @@ def _game_page_parser(url, soup, rss):
         follow_url = None
 
     comment = url + "#commentform"
-    count = Count(visits_num, followers_num, files_num, articles_num, reviews_num)
+    count = GameCount(visits_num, followers_num, files_num, articles_num, reviews_num, mods_num)
+    style = Style(genre, theme, players)
 
-    return Game(game_name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, None, articles, count, engine_name, engine_url, publishers, mods_num, genre, rating, players, project, boxart_url)
+    return Game(game_name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, None, articles, count, engine_name, engine_url, publishers, rating, project, boxart_url)
 
 
 def parse_game(url):
