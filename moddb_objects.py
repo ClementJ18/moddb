@@ -2,7 +2,7 @@ class Object():
     """Base class for every page scrapper object, cointains general variables. Also contains the count object, a list of tag 
     objects (tags), a list of article objects (articles) and a list of suggestion objects (suggestions). Share links is only 
     type None at the moment"""
-    def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact_url, homepage, share_links, articles, count, style):
+    def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact, homepage, share_links, articles, count, style):
         self.name = name
         self.desc = desc
         self.tags = tags
@@ -11,7 +11,7 @@ class Object():
         self.follow = follow
         self.suggestions = suggestions
         self.rank = rank
-        self.contact_url = contact_url
+        self.contact = contact
         self.homepage = homepage
         self.share_links = share_links
         self.articles = articles
@@ -24,7 +24,7 @@ class Object():
 
 class Mod(Object):
     """Mod object for mod pages"""
-    def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact_url, homepage, share_links, articles, count, style, game, game_url, rating, last_update, release_date, publishers):
+    def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact, homepage, share_links, articles, count, style, game, game_url, rating, last_update, release_date, publishers):
         Object.__init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
         self.game = game
         self.game_url = game_url
@@ -35,7 +35,7 @@ class Mod(Object):
 
 class Game(Object):
     """Game object for game pages"""
-    def __init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, share_links, articles, count, style, engine, engine_url, rating, players, project, boxart):
+    def __init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact, homepage, share_links, articles, count, style, engine, engine_url, rating, players, project, boxart):
         Object.__init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
         self.engine = engine
         self.engine_url = engine_url
