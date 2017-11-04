@@ -1,7 +1,7 @@
-class Object():
+class Page():
     """Represents the base class for a scrapped page. 
 
-    There should be no need to create any of these manually. Any of the attrbiutes could potentially be None if the detail isn't found on the page.
+    There should be no need to create any of these manually or call any. Any of the attrbiutes could potentially be None if the detail isn't found on the page.
 
     Attributes
     -----------
@@ -58,7 +58,7 @@ class Object():
 class Mod(Object):
     """Mod object for mod pages"""
     def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact, homepage, share_links, articles, count, style, game, game_url, rating, last_update, release_date, publishers):
-        Object.__init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
+        Page.__init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
         self.game = game
         self.game_url = game_url
         self.rating = rating
@@ -69,7 +69,7 @@ class Mod(Object):
 class Game(Object):
     """Game object for game pages"""
     def __init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact, homepage, share_links, articles, count, style, engine, engine_url, rating, players, project, boxart):
-        Object.__init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
+        Page.__init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
         self.engine = engine
         self.engine_url = engine_url
         self.publishers = publishers

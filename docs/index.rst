@@ -10,4 +10,5 @@ ModDB Reader
 
 Object Class
 ~~~~~~~~~
- .. autoclass:: Object
+
+.. autoclass:: Object
