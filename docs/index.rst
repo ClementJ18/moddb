@@ -9,7 +9,7 @@ ModDB Reader
 
 
 Object Class
-~~~~~~~~~
+~~~~~~~~~~~~~
 
 .. autoclass:: Object
     :members:
