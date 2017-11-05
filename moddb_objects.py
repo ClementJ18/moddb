@@ -13,7 +13,7 @@ class Page():
     desc : str
         Short description of the Mod/Game
     tags : list
-        List of :class: Tag
+        List of :class: `Tag`
     url : str
         URL of the Mod/Game, the one supplied in the :func: parse_mod()
     comment : str
@@ -21,7 +21,7 @@ class Page():
     follow : str
         URL to follow the Mod/Game
     suggestions : list
-        List of :class: Suggestion
+        List of :class: `Suggestion`
     rank : str
         Rank of the Mod/Game
     contact : str
@@ -31,11 +31,11 @@ class Page():
     share_link : None
         For future implementation of the share link, None at the moment
     articles : list
-        List of :class: Article
-    count : :class: Count
-        The :class: Count which represent statistics on the Mod/Game
-    style : :class: Style
-        The :class: Style which represents the different style information gathered on the Mod/Game
+        List of :class: `Article`
+    count : :class: `Count`
+        The :class: `Count` which represent statistics on the Mod/Game
+    style : :class: `Style`
+        The :class: `Style` which represents the different style information gathered on the Mod/Game
     
     """
     
