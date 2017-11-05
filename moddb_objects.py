@@ -6,22 +6,22 @@ class Page():
     There should be no need to create any of these manually or call any. Any of the 
     attributes could potentially be None if the detail isn't found on the page.
 
-    Attributes
-    ----------
+    **Attributes**
+    
     name : str
         Name of the Mod/Game
     desc : str
         Short description of the Mod/Game
     tags : list
-        List of :class: `Tag`
+        List of :class: Tag
     url : str
-        URL of the Mod/Game, the one supplied in the :func: parse_mod(url)
+        URL of the Mod/Game, the one supplied in the :func: parse_mod()
     comment : str
         URL to the comment form for that Mod/Game
     follow : str
         URL to follow the Mod/Game
     suggestions : list
-        List of :class: `Suggestion`
+        List of :class: Suggestion
     rank : str
         Rank of the Mod/Game
     contact : str
@@ -31,11 +31,12 @@ class Page():
     share_link : None
         For future implementation of the share link, None at the moment
     articles : list
-        List of :class: `Article`
-    count : :class: `Count`
-        The :class: `Count` which represent statistics on the Mod/Game
-    style : :class: `Style`
-        The :class: `Style` which represents the different 'style' information gathered on the Mod/Game
+        List of :class: Article
+    count : :class: Count
+        The :class: Count which represent statistics on the Mod/Game
+    style : :class: Style
+        The :class: Style which represents the different style information gathered on the Mod/Game
+    
     """
     
     def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact, homepage, share_links, articles, count, style):
