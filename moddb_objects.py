@@ -6,8 +6,10 @@ class Page():
     There should be no need to create any of these manually or call any. Any of the 
     attributes could potentially be None if the detail isn't found on the page.
 
-    **Attributes**
-    
+    Attributes
+    ~~~~~~~~~~~~~
+
+
     name : str
         Name of the Mod/Game
     desc : str
