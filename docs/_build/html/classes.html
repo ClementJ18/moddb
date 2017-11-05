@@ -163,6 +163,45 @@
 game page (more later). The parsed pages are then returned as objects which are listed below in all their glory.</p>
 <div class="section" id="page-class">
 <h2>Page Class<a class="headerlink" href="#page-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="moddb_objects.Page">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Page</code><a class="reference internal" href="_modules/moddb_objects.html#Page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the base class for a scrapped page.</p>
+<p>There should be no need to create any of these manually or call any. Any of the 
+attributes could potentially be None if the detail isn’t found on the page.</p>
+<p><strong>Attributes</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the Mod/Game</dd>
+<dt>desc <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Short description of the Mod/Game</dd>
+<dt>tags <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>List of :class: Tag</dd>
+<dt>url <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL of the Mod/Game, the one supplied in the :func: parse_mod()</dd>
+<dt>comment <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to the comment form for that Mod/Game</dd>
+<dt>follow <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to follow the Mod/Game</dd>
+<dt>suggestions <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>List of :class: Suggestion</dd>
+<dt>rank <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Rank of the Mod/Game</dd>
+<dt>contact <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to contact the Development Team for the Mod</dd>
+<dt>homepage <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to the homepage supplied by the Development Team for the Mod</dd>
+<dt>share_link <span class="classifier-delimiter">:</span> <span class="classifier">None</span></dt>
+<dd>For future implementation of the share link, None at the moment</dd>
+<dt>articles <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>List of :class: Article</dd>
+<dt>count <span class="classifier-delimiter">:</span> <span class="classifier">:class: Count</span></dt>
+<dd>The :class: Count which represent statistics on the Mod/Game</dd>
+<dt>style <span class="classifier-delimiter">:</span> <span class="classifier">:class: Style</span></dt>
+<dd>The :class: Style which represents the different style information gathered on the Mod/Game</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 

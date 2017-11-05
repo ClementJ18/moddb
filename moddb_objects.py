@@ -6,10 +6,8 @@ class Page():
     There should be no need to create any of these manually or call any. Any of the 
     attributes could potentially be None if the detail isn't found on the page.
 
-    Attributes
-    ~~~~~~~~~~~~~
-
-
+    **Attributes**
+    
     name : str
         Name of the Mod/Game
     desc : str
@@ -61,7 +59,7 @@ class Page():
         return self.name             
 
 
-class Mod(Object):
+class Mod(Page):
     """Mod object for mod pages"""
 
     def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact, homepage, share_links, articles, count, style, game, game_url, rating, last_update, release_date, publishers):
@@ -73,7 +71,7 @@ class Mod(Object):
         self.release_date = release_date
         self.publishers = publishers
 
-class Game(Object):
+class Game(Page):
     """Game object for game pages"""
 
     def __init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact, homepage, share_links, articles, count, style, engine, engine_url, rating, players, project, boxart):
@@ -86,19 +84,19 @@ class Game(Object):
         self.boxart = boxart
 
 
-class Engine(Object):
+class Engine(Page):
     """In progress..."""
 
     def __init__():
         pass
 
-class Dev(Object):
+class Dev(Page):
     """In progress..."""
 
     def __init__():
         pass
 
-class Group(Object):
+class Group(Page):
     """In progress..."""
 
     def __init__():
