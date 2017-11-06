@@ -92,6 +92,12 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Classes Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#mod-class">Mod Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#game-class">Game Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#count-class">Count Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tag-class">Tag Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suggestion-class">Suggestion Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#style-class">Style Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#article-class">Article Class</a></li>
 </ul>
 </li>
 </ul>
@@ -208,6 +214,158 @@ None if the data isn’t found on the page. Usually happens on smaller mod pages
 <dd>When the mod was released, will be ‘TBD’ if it hasn’t be released yet</dd>
 <dt>publishers <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
 <dd>Name of the publishers of the Mod</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="game-class">
+<h2>Game Class<a class="headerlink" href="#game-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="moddb_objects.Game">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Game</code><a class="reference internal" href="_modules/moddb_objects.html#Game"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Game object for scrapped game pages. Any of the attrbiutes can potentially be None if the 
+data is not foud on the page</p>
+<p><strong>Attributes</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the Mod/Game</dd>
+<dt>desc <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Short description of the Mod/Game</dd>
+<dt>tags <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>List of :class: <cite>Tag</cite></dd>
+<dt>url <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL of the Mod/Game, the one supplied in the :func: parse_mod()</dd>
+<dt>comment <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to the comment form for that Mod/Game</dd>
+<dt>follow <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to follow the Mod/Game</dd>
+<dt>suggestions <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>List of :class: <cite>Suggestion</cite></dd>
+<dt>rank <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Rank of the Mod/Game</dd>
+<dt>contact <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to contact the Development Team for the Mod</dd>
+<dt>homepage <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to the homepage supplied by the Development Team for the Mod</dd>
+<dt>share_link <span class="classifier-delimiter">:</span> <span class="classifier">None</span></dt>
+<dd>For future implementation of the share link, None at the moment</dd>
+<dt>articles <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>List of :class: <cite>Article</cite></dd>
+<dt>count <span class="classifier-delimiter">:</span> <span class="classifier">:class: <cite>Count</cite></span></dt>
+<dd>The :class: <cite>Count</cite> which represent statistics on the Mod/Game</dd>
+<dt>style <span class="classifier-delimiter">:</span> <span class="classifier">:class: <cite>Style</cite></span></dt>
+<dd>The :class: <cite>Style</cite> which represents the different style information gathered on the Mod/Game</dd>
+<dt>engine <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the Game engine</dd>
+<dt>engine_url <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL for the Game engine</dd>
+<dt>publishers <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the Game publishers</dd>
+<dt>rating <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Rating of the Game out of ten</dd>
+<dt>last_update <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Last time the Game showed a sign of life (new video, new file, new article, new image)</dd>
+<dt>boxart <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to the image for the Game’s boxart</dd>
+<dt>release_date <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>When the mod was released, will be ‘TBD’ if it hasn’t be released yet</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="count-class">
+<h2>Count Class<a class="headerlink" href="#count-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="moddb_objects.GameCount">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">GameCount</code><a class="reference internal" href="_modules/moddb_objects.html#GameCount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.GameCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for scrapped statistics. All variable here are number of that variable name (number of articles, number of 
+followers, number of visits, ect…)</p>
+<p><strong>Attributes</strong></p>
+<dl class="docutils">
+<dt>visits <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Is composed of the total amount of visits over time and the visits today</dd>
+<dt>followers <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of users watching this mod/game</dd>
+<dt>file <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of files uploaded by this mod/game</dd>
+<dt>articles <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of articles published by the mod/game</dd>
+<dt>reviews <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of reviews the game/mod has received</dd>
+<dt>mods <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of mods for the game (exclusive to games)</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="tag-class">
+<h2>Tag Class<a class="headerlink" href="#tag-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="moddb_objects.Tag">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Tag</code><a class="reference internal" href="_modules/moddb_objects.html#Tag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for tags scrapped.</p>
+<p><strong>Attributes</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the tag</dd>
+<dt>url <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL of the tag</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="suggestion-class">
+<h2>Suggestion Class<a class="headerlink" href="#suggestion-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="moddb_objects.Suggestion">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Suggestion</code><a class="reference internal" href="_modules/moddb_objects.html#Suggestion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Suggestion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for scrapped suggestions.</p>
+<p><strong>Attributes</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the Mod/Game suggested</dd>
+<dt>url <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to that Mod/Game</dd>
+<dt>image <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to the thumbnail for the Mod/Game</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="style-class">
+<h2>Style Class<a class="headerlink" href="#style-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="moddb_objects.Style">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Style</code><a class="reference internal" href="_modules/moddb_objects.html#Style"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Style" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for scrapped style details from pages.</p>
+<p><strong>Attributes</strong></p>
+<dl class="docutils">
+<dt>genre <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>The genre of the mod/game (Strategy, Turn based, ect…)</dd>
+<dt>theme <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>The theme of the mod/game (fantasy, sci-fi, historical, ect…)</dd>
+<dt>players <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>The player style of the mod/game (singeplayer, multiplayer, both, ect…)</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="article-class">
+<h2>Article Class<a class="headerlink" href="#article-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="moddb_objects.Article">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Article</code><a class="reference internal" href="_modules/moddb_objects.html#Article"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Article" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for scrapped articles from the rss soup object.</p>
+<p><strong>Attributes</strong></p>
+<dl class="docutils">
+<dt>title <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Title of the article</dd>
+<dt>desc <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>The short description of the article</dd>
+<dt>url <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL to the article</dd>
+<dt>date <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Date the article was published</dd>
 </dl>
 </dd></dl>
 

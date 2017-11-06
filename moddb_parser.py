@@ -72,10 +72,10 @@ def _mod_page_parser(url, soup, rss):
     players = _string_grab("Players")
     rank = _string_grab("Rank")
     visits_total_num = _string_grab("Visits")
-    files_num = _string_grab("Files")
-    articles_num = _string_grab("Articles")
-    reviews_num = _string_grab("Reviews")
-    followers_num = _string_grab("Watchers")
+    files_num = int(_string_grab("Files"))
+    articles_num = int(_string_grab("Articles"))
+    reviews_num = int(_string_grab("Reviews"))
+    followers_num = int(_string_grab("Watchers"))
 
     try:
         contact_url = url + [x.parent.a["href"] for x in misc if x.string == "Contact"][0]
@@ -153,11 +153,11 @@ def _game_page_parser(url, soup, rss):
     players = _string_grab("Players")
     rank = _string_grab("Rank")
     visits_num = _string_grab("Visits")
-    files_num = _string_grab("Files")
-    articles_num = _string_grab("Articles")
-    reviews_num = _string_grab("Reviews")
-    followers_num = _string_grab("Watchers")
-    mods_num = _string_grab("Mods")
+    files_num = int(_string_grab("Files"))
+    articles_num = int(_string_grab("Articles"))
+    reviews_num = int(_string_grab("Reviews"))
+    followers_num = int(_string_grab("Watchers"))
+    mods_num = int(_string_grab("Mods"))
     project = _string_grab("Project")
     release_date = _string_grab("Release date")
 
