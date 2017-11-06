@@ -36,6 +36,12 @@ def _tag_parser(raw_tags, url):
 
     return tags
 
+def _count_parser():
+    pass
+
+def _style_parser():
+    pass
+
 def _mod_page_parser(url, soup, rss):
 
     def _string_grab(string):
@@ -206,3 +212,11 @@ def parse_game(url):
         soup, rss = _soup_page(url)
         game = _game_page_parser(url, soup, rss)
         return game
+
+def parse_page(url):
+    if _url_checker(url, "games"):
+        return parse_game(url)
+    elif _url_checker(url, "mods"):
+        return parse_mod(url)
+    else:
+        return None
