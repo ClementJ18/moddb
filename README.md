@@ -2,7 +2,7 @@
 
 A simple python scrapper to get some information from ModDB mod pages. Just supply an url to `parse_mod` or `parse_game` and watch the magic unfold.
 
-Example:
+## Example
 
 ```py
 import moddb_reader
@@ -22,3 +22,9 @@ game.engine
 ```
 
 For more information on game and mod attributes check out the source code.
+
+## Installation
+
+```
+pip install moddb_reader
+```
