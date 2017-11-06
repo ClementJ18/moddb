@@ -61,7 +61,7 @@ def _mod_page_parser(url, soup, rss):
         publishers = None
 
     try:
-        rating = soup.find(itemprop="ratingValue")["content"]
+        rating = float(soup.find(itemprop="ratingValue")["content"])
     except TypeError:
         rating = None
 
@@ -142,7 +142,7 @@ def _game_page_parser(url, soup, rss):
         publishers = None
 
     try:
-        rating = soup.find(itemprop="ratingValue")["content"]
+        rating = float(soup.find(itemprop="ratingValue")["content"])
     except TypeError:
         rating = None
 
@@ -159,6 +159,7 @@ def _game_page_parser(url, soup, rss):
     followers_num = _string_grab("Watchers")
     mods_num = _string_grab("Mods")
     project = _string_grab("Project")
+    release_date = _string_grab("Release date")
 
     try:
         contact_url = url + [x.parent.a["href"] for x in misc if x.string == "Contact"][0]

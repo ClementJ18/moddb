@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 
 class Page():
-    """Represents the base class for a scrapped page. 
-
-    There should be no need to create any of these manually or call any. Any of the 
-    attributes could potentially be None if the detail isn't found on the page.
-
-    **Attributes**
-    
+    """    
     name : str
         Name of the Mod/Game
     desc : str
@@ -36,7 +30,6 @@ class Page():
         The :class: `Count` which represent statistics on the Mod/Game
     style : :class: `Style`
         The :class: `Style` which represents the different style information gathered on the Mod/Game
-    
     """
     
     def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact, homepage, share_links, articles, count, style):
@@ -60,7 +53,25 @@ class Page():
 
 
 class Mod(Page):
-    """Mod object for mod pages"""
+    """Mod object for scrapped mod pages, inherits from the :class: `Page` object. Any of these can be 
+    None if the data isn't found on the page. Usually happens on smaller mod pages.
+    
+    **Attributes**
+    {}
+    game : str
+        Name of the game the Mod is created for
+    game_url : str
+        URL for the game the Mod is created for
+    rating : float
+        Rating of the mod out of ten
+    last_update : str
+        Last time the mod showed a sign of life (new video, new file, new article, new image)
+    release_date : str
+        When the mod was released, will be 'TBD' if it hasn't be released yet
+    publishers : str
+        Name of the publishers of the Mod
+    """
+    __doc__ = __doc__.format(Page.__doc__)
 
     def __init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact, homepage, share_links, articles, count, style, game, game_url, rating, last_update, release_date, publishers):
         Page.__init__(self, name, desc, tags, url, comment, follow, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
@@ -74,7 +85,7 @@ class Mod(Page):
 class Game(Page):
     """Game object for game pages"""
 
-    def __init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact, homepage, share_links, articles, count, style, engine, engine_url, rating, players, project, boxart):
+    def __init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact, homepage, share_links, articles, count, style, engine, engine_url, rating, players, project, boxart, release_date):
         Page.__init__(self, name, desc, tags, url, comment, follow_url, suggestions, rank, contact_url, homepage, share_links, articles, count, style)
         self.engine = engine
         self.engine_url = engine_url
@@ -82,6 +93,7 @@ class Game(Page):
         self.rating = rating
         self.project = project
         self.boxart = boxart
+        self.release_date = release_date
 
 
 class Engine(Page):

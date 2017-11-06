@@ -4,9 +4,9 @@ Classes Reference
 ===================
 
 
-Page Class
+Mod Class
 ------------
 
-.. autoclass:: Page()
+.. autoclass:: Mod()
     :members:
 

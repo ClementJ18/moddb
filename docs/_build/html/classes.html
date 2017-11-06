@@ -91,7 +91,7 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Classes Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#page-class">Page Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mod-class">Mod Class</a></li>
 </ul>
 </li>
 </ul>
@@ -159,14 +159,13 @@
             
   <div class="section" id="classes-reference">
 <h1>Classes Reference<a class="headerlink" href="#classes-reference" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="page-class">
-<h2>Page Class<a class="headerlink" href="#page-class" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mod-class">
+<h2>Mod Class<a class="headerlink" href="#mod-class" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="moddb_objects.Page">
-<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Page</code><a class="reference internal" href="_modules/moddb_objects.html#Page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Page" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents the base class for a scrapped page.</p>
-<p>There should be no need to create any of these manually or call any. Any of the 
-attributes could potentially be None if the detail isn’t found on the page.</p>
+<dt id="moddb_objects.Mod">
+<em class="property">class </em><code class="descclassname">moddb_objects.</code><code class="descname">Mod</code><a class="reference internal" href="_modules/moddb_objects.html#Mod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb_objects.Mod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mod object for scrapped mod pages, inherits from the :class: <cite>Page</cite> object. Any of these can be 
+None if the data isn’t found on the page. Usually happens on smaller mod pages.</p>
 <p><strong>Attributes</strong></p>
 <dl class="docutils">
 <dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
@@ -197,6 +196,18 @@ attributes could potentially be None if the detail isn’t found on the page.</p
 <dd>The :class: <cite>Count</cite> which represent statistics on the Mod/Game</dd>
 <dt>style <span class="classifier-delimiter">:</span> <span class="classifier">:class: <cite>Style</cite></span></dt>
 <dd>The :class: <cite>Style</cite> which represents the different style information gathered on the Mod/Game</dd>
+<dt>game <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the game the Mod is created for</dd>
+<dt>game_url <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>URL for the game the Mod is created for</dd>
+<dt>rating <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Rating of the mod out of ten</dd>
+<dt>last_update <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Last time the mod showed a sign of life (new video, new file, new article, new image)</dd>
+<dt>release_date <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>When the mod was released, will be ‘TBD’ if it hasn’t be released yet</dd>
+<dt>publishers <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the publishers of the Mod</dd>
 </dl>
 </dd></dl>
 

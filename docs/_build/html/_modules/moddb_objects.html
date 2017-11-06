@@ -157,14 +157,8 @@
   <h1>Source code for moddb_objects</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
-<div class="viewcode-block" id="Page"><a class="viewcode-back" href="../classes.html#moddb_objects.Page">[docs]</a><span class="k">class</span> <span class="nc">Page</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Represents the base class for a scrapped page. </span>
-
-<span class="sd">    There should be no need to create any of these manually or call any. Any of the </span>
-<span class="sd">    attributes could potentially be None if the detail isn&#39;t found on the page.</span>
-
-<span class="sd">    **Attributes**</span>
-<span class="sd">    </span>
+<span class="k">class</span> <span class="nc">Page</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;    </span>
 <span class="sd">    name : str</span>
 <span class="sd">        Name of the Mod/Game</span>
 <span class="sd">    desc : str</span>
@@ -193,7 +187,6 @@
 <span class="sd">        The :class: `Count` which represent statistics on the Mod/Game</span>
 <span class="sd">    style : :class: `Style`</span>
 <span class="sd">        The :class: `Style` which represents the different style information gathered on the Mod/Game</span>
-<span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">follow</span><span class="p">,</span> <span class="n">suggestions</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">contact</span><span class="p">,</span> <span class="n">homepage</span><span class="p">,</span> <span class="n">share_links</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
@@ -213,11 +206,29 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">style</span>
 
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>             </div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>             
 
 
-<span class="k">class</span> <span class="nc">Mod</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Mod object for mod pages&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Mod"><a class="viewcode-back" href="../classes.html#moddb_objects.Mod">[docs]</a><span class="k">class</span> <span class="nc">Mod</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Mod object for scrapped mod pages, inherits from the :class: `Page` object. Any of these can be </span>
+<span class="sd">    None if the data isn&#39;t found on the page. Usually happens on smaller mod pages.</span>
+<span class="sd">    </span>
+<span class="sd">    **Attributes**</span>
+<span class="sd">    {}</span>
+<span class="sd">    game : str</span>
+<span class="sd">        Name of the game the Mod is created for</span>
+<span class="sd">    game_url : str</span>
+<span class="sd">        URL for the game the Mod is created for</span>
+<span class="sd">    rating : float</span>
+<span class="sd">        Rating of the mod out of ten</span>
+<span class="sd">    last_update : str</span>
+<span class="sd">        Last time the mod showed a sign of life (new video, new file, new article, new image)</span>
+<span class="sd">    release_date : str</span>
+<span class="sd">        When the mod was released, will be &#39;TBD&#39; if it hasn&#39;t be released yet</span>
+<span class="sd">    publishers : str</span>
+<span class="sd">        Name of the publishers of the Mod</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__doc__</span> <span class="o">=</span> <span class="vm">__doc__</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Page</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">follow</span><span class="p">,</span> <span class="n">suggestions</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">contact</span><span class="p">,</span> <span class="n">homepage</span><span class="p">,</span> <span class="n">share_links</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="n">game</span><span class="p">,</span> <span class="n">game_url</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="n">last_update</span><span class="p">,</span> <span class="n">release_date</span><span class="p">,</span> <span class="n">publishers</span><span class="p">):</span>
         <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">follow</span><span class="p">,</span> <span class="n">suggestions</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">contact_url</span><span class="p">,</span> <span class="n">homepage</span><span class="p">,</span> <span class="n">share_links</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
@@ -226,12 +237,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="n">rating</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_update</span> <span class="o">=</span> <span class="n">last_update</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">release_date</span> <span class="o">=</span> <span class="n">release_date</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">publishers</span> <span class="o">=</span> <span class="n">publishers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publishers</span> <span class="o">=</span> <span class="n">publishers</span></div>
 
 <span class="k">class</span> <span class="nc">Game</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Game object for game pages&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">follow_url</span><span class="p">,</span> <span class="n">suggestions</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">contact</span><span class="p">,</span> <span class="n">homepage</span><span class="p">,</span> <span class="n">share_links</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">engine_url</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">boxart</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">follow_url</span><span class="p">,</span> <span class="n">suggestions</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">contact</span><span class="p">,</span> <span class="n">homepage</span><span class="p">,</span> <span class="n">share_links</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">engine_url</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">boxart</span><span class="p">,</span> <span class="n">release_date</span><span class="p">):</span>
         <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">follow_url</span><span class="p">,</span> <span class="n">suggestions</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">contact_url</span><span class="p">,</span> <span class="n">homepage</span><span class="p">,</span> <span class="n">share_links</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">=</span> <span class="n">engine</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">engine_url</span> <span class="o">=</span> <span class="n">engine_url</span>
@@ -239,6 +250,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="n">rating</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">project</span> <span class="o">=</span> <span class="n">project</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boxart</span> <span class="o">=</span> <span class="n">boxart</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">release_date</span> <span class="o">=</span> <span class="n">release_date</span>
 
 
 <span class="k">class</span> <span class="nc">Engine</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
