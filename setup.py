@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
-
-setup(name='ModReader',
-      version='0.1',
-      description='ModDB Mod Scrapper',
-      author='Clement Julia',
-      author_email='clement.julia13@gmail.com',
-      url='',
-      packages=['requests', 'bs4'],
-     )
+setup(name = "ModDB Reader",
+    version = 0.2,
+    description = "A scrapper for ModDB Mod and Game pages",
+    author = "Clement Julia",
+    author_email = "clement.julia13@gmail.com",
+    url = "https://github.com/ClementJ18/moddb_reader",
+    packages = ["reader"])
