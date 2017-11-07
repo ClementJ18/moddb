@@ -88,3 +88,9 @@ class Tag():
         self.name = name
         self.url = url
 
+class Share():
+    def __init__(self, facebook, twitter, email, reddit):
+        self.facebook = facebook
+        self.twitter = twitter
+        self.email = email
+        self.reddit = reddit

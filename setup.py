@@ -8,4 +8,4 @@ setup(name = "ModDB Reader",
     author = "Clement Julia",
     author_email = "clement.julia13@gmail.com",
     url = "https://github.com/ClementJ18/moddb_reader",
-    packages = ["reader"])
+    packages = ["moddb_reader", "moddb_parser", "moddb_objects"])

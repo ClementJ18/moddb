@@ -1,5 +1,5 @@
 #!/usr/bin/python3.6
-from moddb_objects import *
+from .moddb_objects import *
 from bs4 import BeautifulSoup
 import requests
 
@@ -76,6 +76,15 @@ class Reader():
             suggestions.append(suggestion)
 
         return suggestions
+
+    def _share_parser(self):
+        try:
+            share_tags = [x.parent.span for x in self.misc if x.string in "Share"]
+        except IndexError:
+            return None
+
+        return Share(share_tags[0]["href"], share_tags[1]["href"], share_tags[2]["href"], share_tags[3]["href"])
+
 
     def _basic_game_parser(self):
         engine = [x.parent.a for x in self.misc if x.string == "Engine"][0]
@@ -160,8 +169,9 @@ class Reader():
 
         desc, publishers, rating, rank, release_date, contact_url, homepage, last_update, comment, articles, tags, style, suggestions, icon= self._general_parser()
         engine_name, engine_url, game_name, project, boxart, count, follow_url = self._basic_game_parser()
+        share_link = self._share_parser()
 
-        return Game(game_name, desc, moddb_url, comment, follow_url, contact_url, None, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles, engine_name, engine_url, project, boxart)
+        return Game(game_name, desc, moddb_url, comment, follow_url, contact_url, share_link, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles, engine_name, engine_url, project, boxart)
 
     def parse_mod(self, moddb_url):
         self.url = moddb_url
@@ -169,6 +179,7 @@ class Reader():
 
         desc, publishers, rating, rank, release_date, contact_url, homepage, last_update, comment, articles, tags, style, suggestions, icon = self._general_parser()
         game_name, game_url, mod_name, count, follow_url = self._basic_mod_parser()
+        share_link = self._share_parser()
 
-        return Mod(mod_name, desc, moddb_url, comment, follow_url, contact_url, None, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles, game_name, game_url)
+        return Mod(mod_name, desc, moddb_url, comment, follow_url, contact_url, share_link, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles, game_name, game_url)
 
