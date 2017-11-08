@@ -1,1 +1,1 @@
-from .moddb_parser import Reader
+from moddb_reader.moddb_parser import Reader
