@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name = "moddb_reader",
-    version = "0.6",
+    version = "0.5",
     description = "A scrapper for ModDB Mod and Game pages",
     author = "Clement Julia",
     author_email = "clement.julia13@gmail.com",
