@@ -32,7 +32,7 @@ class Page():
         return self.name
 
 class Mod(Page):
-    def __init__(self, name, desc, url, comment, follow, contact, share_links, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles, game, game_url):
+    def __init__(self, url, desc, publishers, rating, rank, release_date, contact, homepage, last_update, comment, articles, tags, style, suggestions, icon, game, game_url, name, count, follow, share_links):
         #Inheritance
         Page.__init__(self, name, desc, url, comment, follow, contact, share_links, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles)
         
@@ -41,7 +41,7 @@ class Mod(Page):
         self.game_url = game_url
 
 class Game(Page):
-    def __init__(self, name, desc, url, comment, follow, contact, share_links, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles, engine, engine_url, project, boxart):
+    def __init__(self, url, desc, publishers, rating, rank, release_date, contact, homepage, last_update, comment, articles, tags, style, suggestions, icon, engine, engine_url, name, project, boxart, count, follow, share_links):
         #Inheritance
         Page.__init__(self, name, desc, url, comment, follow, contact, share_links, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles)
         
