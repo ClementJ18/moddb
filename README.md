@@ -1,5 +1,7 @@
 # ModDB Reader
 
+***LIBRARY UNDERGOING MASSIVE REFACTORING***
+
 A simple python scrapper to get some information from ModDB mod pages. Just supply an url to `parse_mod` or `parse_game` and watch the magic unfold.
 
 ## Example
