@@ -1,5 +1,5 @@
 class Page():
-    def __init__(self, name, desc, url, comment, follow, contact, share_links, rank, homepage, rating, last_update, release_date, publishers, icon, count, style, tags, suggestions, articles):
+    def __init__(self, *attrs):
         #Basic Info
         self.name = name
         self.desc = desc
