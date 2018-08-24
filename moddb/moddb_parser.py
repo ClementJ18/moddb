@@ -1,5 +1,4 @@
-#!/usr/bin/python3.6
-from moddb_reader.moddb_objects import *
+from .moddb_objects import *
 from bs4 import BeautifulSoup
 import requests
 
