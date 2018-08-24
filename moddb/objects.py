@@ -6,8 +6,6 @@ def search(self, url, *, type):
 def soup_page(self, url):
     pass
 
-
-
 class BaseFunctions:
     def __init__(self, **attrs):
         self.url = attrs.pop("url")
