@@ -1,5 +1,11 @@
 import enum
 
+class RequestMaker:
+    pass
+
+class Client:
+    pass
+
 class Game:
     pass
 
@@ -34,7 +40,13 @@ class Addon:
     pass
 
 class ThumbnailType(enum.Enum):
-    pass
+    mod = 0
+    game = 1
+    engine = 2
+    user = 3
+    group = 4
+    article = 5
+    review = 6
 
 class Thumbnail:
     pass
