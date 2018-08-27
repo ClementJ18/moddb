@@ -1,5 +1,17 @@
 import enum
 
+class SearchCategory(enum.Enum):
+    games = 0
+    mods = 1
+    addons = 2
+    files = 3
+    videos = 4
+    articles = 5
+    engines = 6
+    developers = 7
+    groups = 8
+    jobs = 9
+
 class Category(enum.Enum):
     mods = 0
     games = 1
@@ -9,6 +21,8 @@ class ArticleType(enum.Enum):
     news = 1
     features = 2
     tutorials = 4
+    blog = 8
+    headlines = 16
 
 class TeamSubscription(enum.Enum):
     invitation = 1
@@ -44,6 +58,7 @@ class ThumbnailType(enum.Enum):
     team = 7
     blog = 8
     addon = 9
+    job = 10
 
 class AddonCategory(enum.Enum):
     maps = 100
@@ -128,7 +143,6 @@ class Genre(enum.Enum):
     fighting = 20
     arcade = 39
     stealth = 43
-    adventure = 2
     platformer = 19
     point_and_click = 40
     visual_novel = 50
@@ -145,7 +159,7 @@ class Genre(enum.Enum):
     turn_based_tactics = 46
     tower_defense = 47
     grand_strategy = 49
-    4x = 48
+    fourx = 48
     moba = 52
     baseball = 13
     basketball = 17
@@ -154,7 +168,6 @@ class Genre(enum.Enum):
     hockey = 35
     soccer = 36
     wrestling = 37
-    sport = 26
     combat_sim = 24
     futuristic_sim = 25
     realistic_sim = 23
@@ -164,9 +177,8 @@ class Genre(enum.Enum):
     party = 29
     rhythm = 28
     virtual_life = 30
-    puzzle = 32
 
-class PlayerStyle(enum.Enum):
+class PlayerStyle(enum.IntFlag):
     singleplayer = 1
     multiplayer = 2
     coop = 4
