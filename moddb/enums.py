@@ -58,7 +58,8 @@ class ThumbnailType(enum.Enum):
     team = 7
     blog = 8
     addon = 9
-    job = 10
+    file = 10
+    job = 11
 
 class AddonCategory(enum.Enum):
     maps = 100

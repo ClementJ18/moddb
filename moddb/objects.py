@@ -4,8 +4,7 @@ import re
 import datetime
 import requests
 from bs4 import BeautifulSoup
-
-BASE_PATH = "https://www.moddb.com"
+import sys
 
 class Parser:
     def _page_parse(self, url, *, type=None):
@@ -22,12 +21,12 @@ class Page:
         self.url = attrs.pop("url")
 
     def get_comments(self, index : int):
-        r = requests.get(BASE_PATH + self.url + f"/page/{index}#comments")
+        r = requests.get(self.url + f"/page/{index}#comments")
         soup = BeautifulSoup(r.text, "html.parser")
 
         comments = {}
         for div in soup.find("div", class_="table tablecomments").find_all("div"):
-            if not div.find("div", class_="content") is None:
+            if div.find("div", class_="content") is not None:
                 comments.append(Comment.parse(div))
 
         return comments
@@ -56,7 +55,7 @@ class Article:
         self.type = attrs.pop("type")
 
     def get_author(self):
-        r = requests.get(BASE_PATH + self._author)
+        r = requests.get(self._author)
         soup = BeautifulSoup(r.text, "html.parser")
         return User.parse(soup)
 
@@ -84,14 +83,29 @@ class Addon:
 
 class Thumbnail:
     def __init__(self, **attrs):
-        pass
+        self.url = attrs.pop("url")
+        self.name = attrs.pop("name")
+        self.image = attrs.pop("image")
+        self.type = attrs.pop("type")
+
+    def __repr__(self):
+        return f"<Thumbnail name={self.name} type={self.type}>"
 
     @classmethod
-    def parse(cls, html):
-        pass
+    def parse(cls, html, type):
+        thumbnail = {}
+
+        thumbnail["url"] = html.a["href"]
+        thumbnail["name"] = html.a.string
+        thumbnail["type"] = ThumbnailType[type]
+        thumbnail["image"] = html.find("img", alt=thumbnail["name"])
+
+        return cls(**thumbnail)
 
     def parse_thumbnail(self):
-        pass
+        r = requests.get(self.url)
+        soup = BeautifulSoup(r.text, "html.parser")
+        return getattr(sys.modules[__name__], self.type.name.title()).parse(soup)
 
 class Comment:
     def __init__(self, **attrs):
@@ -112,7 +126,7 @@ class Comment:
         comment = {}
         div = html.find("div", class_="content")
         heading = div.find("span", class_="heading")
-        comment["author"] = BASE_PATH + heading.a["href"]
+        comment["author"] = heading.a["href"]
         comment["name"] = heading.a.string
         d = heading.time["datetime"]
         d = d[:-3] + d[-2:]
@@ -121,8 +135,8 @@ class Comment:
         actions = div.find("span", class_="actions").find_all("a")
         karma = div.find("span", class_="actions").span.string
         comment["karma"] = int(re.findall(r"[+-]?\d", karma)[0])
-        comment["upvote"] = BASE_PATH + actions[1]["href"]
-        comment["downvote"] = BASE_PATH + actions[2]["href"]
+        comment["upvote"] = actions[1]["href"]
+        comment["downvote"] = actions[2]["href"]
         position = html["class"] 
 
         if "reply1" in position:
@@ -133,6 +147,11 @@ class Comment:
             comment["position"] = 0
 
         return cls(**comment)
+
+    def get_author(self):
+        r = requests.get(self._author)
+        soup = BeautifulSoup(r.text, "html.parser")
+        return User.parse(soup)
 
 
 class User:
