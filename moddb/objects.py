@@ -7,8 +7,21 @@ from bs4 import BeautifulSoup
 import sys
 
 class Parser:
-    def _page_parse(self, url, *, type=None):
-        pass
+    def get_author(self):
+        r = requests.get(self._author)
+        soup = BeautifulSoup(r.text, "html.parser")
+        return User.parse(soup)
+
+    def get_comments(self, index : int):
+        r = requests.get(self.url + f"/page/{index}#comments")
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        comments = []
+        for div in soup.find("div", class_="table tablecomments").find_all("div"):
+            if div.find("div", class_="content") is not None:
+                comments.append(Comment.parse(div))
+
+        return comments
 
 class RequestMaker:
     pass
@@ -19,17 +32,38 @@ class Page:
         self.stats = Statistics.parse(self._html)
         self.style = Style.parse(self._html)
         self.url = attrs.pop("url")
+        self.files = []
+        self.comments = []
+
+        for file in self._html.parent.parent.parent.find("div", class_="inner").find_all("div")[2].find_all("div"):
+            if file.a.string is not None:
+                self.files.append(Thumbnail.parse(file, "file"))
+
+        for div in self._html.find("div", class_="table tablecomments").find_all("div"):
+            if div.find("div", class_="content") is not None:
+                self.comments.append(Comment.parse(div))
 
     def get_comments(self, index : int):
         r = requests.get(self.url + f"/page/{index}#comments")
         soup = BeautifulSoup(r.text, "html.parser")
 
-        comments = {}
+        comments = []
         for div in soup.find("div", class_="table tablecomments").find_all("div"):
             if div.find("div", class_="content") is not None:
                 comments.append(Comment.parse(div))
 
         return comments
+
+    def get_files(self, index : int):
+        r = requests.get(self.url + f"/downloads/page/{index}")
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        files = []
+        for file in soup.parent.parent.parent.find("div", class_="table").find_all("div")[2].find_all("div"):
+            if file.a.string is not None:
+                files.append(Thumbnail.parse(file, "file"))
+
+        return files
 
 class Game:
     pass
@@ -38,7 +72,59 @@ class Mod:
     pass
 
 class File:
-    pass
+    def __init__(self, **attrs):
+        self.name = attrs.pop("filename")
+        self.category = attrs.pop("category")
+        self.uploader = attrs.pop("uploader")
+        self._author = attrs.pop("author")
+        self.date = attrs.pop("date")
+        self.size = attrs.pop("size")
+        self.downloads = attrs.pop("downloads")
+        self.today = attrs.pop("today")
+        self.button = attrs.pop("button")
+        self.widget = attrs.pop("widget")
+        self.description = attrs.pop("description")
+        self.hash = attrs.pop("md5 hash")
+        self.preview = attrs.pop("preview")
+
+    def __repr__(self):
+        return f"<File name={self.name}>"
+
+    @classmethod
+    def parse(cls, html):
+        files_headings = ("Filename", "Size", "MD5 Hash")
+        info = html.find("div", class_="table tablemenu")
+        t = [t for t in info.find_all("h5") if t.string in files_headings]
+
+        file = {x.string.lower() : x.parent.span.string.strip() for x in info.find_all("h5") if x.string in files_headings}
+        file["downloads"] = info.find("h5", string="Downloads").parent.a.string
+
+
+        file["size"] = int(re.sub(r"[(),bytes]", "", file["size"].split(" ")[1]))
+        file["today"] = int(re.sub(r"[(),today]", "", file["downloads"].split(" ")[1]))
+        file["downloads"] = int(file["downloads"].split(" ")[0].replace(",", ""))
+
+        file["category"] = FileCategory(int(info.find("h5", string="Category").parent.a["href"][-1]))
+        uploader = info.find("h5", string="Uploader").parent.a
+        file["uploader"] = uploader.string
+        file["author"] = uploader["href"]
+
+        d = info.find("h5", string="Added").parent.span.time["datetime"]
+        d = d[:-3] + d[-2:]
+        file["date"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
+
+        file["button"] = info.find("h5", string="Embed Button").parent.span.input["value"]
+        file["widget"] = info.find("h5", string="Embed Widget").parent.span.input["value"]
+
+
+        file["description"] = html.find("p", id="downloadsummary").string
+        file["preview"] = html.find_all("img")[0]["src"]
+
+        return cls(**file)
+
+    def get_author(self):
+        pass
+
 
 class Media:
     pass
