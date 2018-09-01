@@ -127,7 +127,64 @@ class File:
 
 
 class Media:
-    pass
+    def __init__(self, **attrs):
+        self.name = attrs.pop("name")
+        self.type = attrs.pop("type")
+        self.url = attrs.pop("url")
+        self.duration = attrs.pop("duration", None)
+        self.size = attrs.pop("size", None)
+        self.views = attrs.pop("views")
+        self.today = attrs.pop("today")
+        self.filename = attrs.pop("filename", None)
+        self.submitter = attrs.pop("submitter")
+        self._author = attrs.pop("author")
+        self.description = attrs.pop("description")
+        self.date = attrs.pop("date")
+
+
+    @classmethod
+    def parse(cls, html):
+        media = {}
+        media_headings = ("Date", "By", "Duration", "Size", "Views", "Filename")
+        raw_media = {media.string.lower() : media.parent for media in html.find_all("h5") if media.string in media_headings}
+
+        d = raw_media["date"].span.time["datetime"]
+        d = d[:-3] + d[-2:]
+        media["date"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
+
+        media["author"] = raw_media["by"].span.a["href"]
+        media["submitter"] = raw_media["by"].span.a.string.strip()
+
+        if "duration" in raw_media:
+            duration = raw_media["duration"].span.time.string.strip().split(":")
+            media["duration"] = (int(duration[0]) * 60) + int(duration[1])
+
+        if "size" in raw_media:
+            media["size"] = tuple(raw_media["size"].span.string.strip().split("×"))
+
+        media["today"] = int(re.sub(r"[(),today]", "", raw_media["views"].span.a.string.split(" ")[1]))
+        media["views"] = int(raw_media["views"].span.a.string.split(" ")[0].replace(",", ""))
+
+        if "filename" in raw_media:
+            media["filename"] = raw_media["filename"].span.string.strip()
+
+        if "size" in media and "duration" in media:
+            media["type"] = MediaCategory.video
+            media["url"] = html.find("meta", property="og:image")["content"][:-4]
+        elif "size" in media:
+            media["type"] = MediaCategory.image
+            media["url"] = html.find("meta", property="og:image")["content"]
+        else:
+            media["type"] = MediaCategory.audio
+            media["url"] = html.find("video", id="mediaplayer").find("source")["src"]
+
+
+        media["description"] = html.find("meta", {"name":"description"})["content"]
+        media["name"] = html.find("meta", property="og:title")["content"]
+
+        return cls(**media)
+
+
 
 #article, blog, headlines
 class Article:

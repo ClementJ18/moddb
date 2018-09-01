@@ -17,6 +17,11 @@ class Category(enum.Enum):
     games = 1
     engines = 2
 
+class MediaCategory(enum.Enum):
+    video = 0
+    image = 1
+    audio = 3
+
 class ArticleType(enum.Enum):
     news = 1
     features = 2
