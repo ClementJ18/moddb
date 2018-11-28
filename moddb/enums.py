@@ -10,7 +10,8 @@ class SearchCategory(enum.Enum):
     engines = 6
     developers = 7
     groups = 8
-    jobs = 9
+    forum = 9
+    jobs = 10
 
 class Category(enum.Enum):
     mods = 0
@@ -29,7 +30,7 @@ class ArticleType(enum.Enum):
     blog = 8
     headlines = 16
 
-class TeamSubscription(enum.Enum):
+class Membership(enum.Enum):
     invitation = 1
     application = 2
     open_to_all = 3

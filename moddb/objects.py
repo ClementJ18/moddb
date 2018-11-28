@@ -26,7 +26,7 @@ class Parser:
 class RequestMaker:
     pass
 
-class Page:
+class Page(Parser):
     def __init__(self, **attrs):
         self._html = attrs.pop("html")
         self.stats = Statistics.parse(self._html)
@@ -42,17 +42,6 @@ class Page:
         for div in self._html.find("div", class_="table tablecomments").find_all("div"):
             if div.find("div", class_="content") is not None:
                 self.comments.append(Comment.parse(div))
-
-    def get_comments(self, index : int):
-        r = requests.get(self.url + f"/page/{index}#comments")
-        soup = BeautifulSoup(r.text, "html.parser")
-
-        comments = []
-        for div in soup.find("div", class_="table tablecomments").find_all("div"):
-            if div.find("div", class_="content") is not None:
-                comments.append(Comment.parse(div))
-
-        return comments
 
     def get_files(self, index : int):
         r = requests.get(self.url + f"/downloads/page/{index}")
@@ -71,7 +60,7 @@ class Game:
 class Mod:
     pass
 
-class File:
+class File(Parser):
     def __init__(self, **attrs):
         self.name = attrs.pop("filename")
         self.category = attrs.pop("category")
@@ -122,11 +111,8 @@ class File:
 
         return cls(**file)
 
-    def get_author(self):
-        pass
 
-
-class Media:
+class Media(Parser):
     def __init__(self, **attrs):
         self.name = attrs.pop("name")
         self.type = attrs.pop("type")
@@ -187,7 +173,7 @@ class Media:
 
 
 #article, blog, headlines
-class Article:
+class Article(Parser):
     def __init__(self, **attrs):
         self._author = attrs.pop("author")
         self.title = attrs.pop("title")
@@ -197,11 +183,6 @@ class Article:
         self.plaintext = self._plaintext(self.content)
         self.type = attrs.pop("type")
 
-    def get_author(self):
-        r = requests.get(self._author)
-        soup = BeautifulSoup(r.text, "html.parser")
-        return User.parse(soup)
-
     def _plaintext(self, html):
         pass
 
@@ -209,19 +190,19 @@ class Article:
     def parse(cls, html):
         pass
 
-class Engine:
+class Engine(Parser):
     pass
 
-class Team:
+class Team(Parser):
     pass
 
-class Group:
+class Group(Parser):
     pass
 
-class Job:
+class Job(Parser):
     pass
 
-class Addon:
+class Addon(Parser):
     pass
 
 class Thumbnail:
@@ -250,7 +231,7 @@ class Thumbnail:
         soup = BeautifulSoup(r.text, "html.parser")
         return getattr(sys.modules[__name__], self.type.name.title()).parse(soup)
 
-class Comment:
+class Comment(Parser):
     def __init__(self, **attrs):
         self.name = attrs.pop("name")
         self._author = attrs.pop("author")
@@ -291,14 +272,16 @@ class Comment:
 
         return cls(**comment)
 
-    def get_author(self):
-        r = requests.get(self._author)
-        soup = BeautifulSoup(r.text, "html.parser")
-        return User.parse(soup)
+    def get_comment(self):
+        raise NotImplementedError
 
 
-class User:
+class User(Parser):
     pass
+
+    def get_author(self):
+        raise NotImplementedError
+
 
 class Statistics:
     def __init__(self, **attrs):
@@ -339,11 +322,64 @@ class Statistics:
 #mod, game, user, addon, engine, company, group
 class Profile:
     def __init__(self, **attrs):
-        pass
+        for key, value in attrs.items():
+            setattr(self, key, value)
 
     @classmethod
     def parse(cls, html):
-        pass
+        page_type = SearchCategory[html.find("div", id="subheader").find("ul", class_="tabs").find("li", class_="on").a.string]
+        
+        profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
+        profile = {}
+
+        profile["contact"] = profile_raw.find("h5", string="Contact").parent.span.a["href"]
+        profile["follow"] = [x for x in profile_raw.find_all("h5") if x.string in ["Mod watch", "Game watch", "Group watch", "Engine watch"]][0]
+        share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
+        profile["share"] = {
+            "reddit": share[0]["href"],
+            "mail": share[1]["href"],
+            "twitter": share[2]["href"],
+            "facebook": share[3]["href"]
+        }
+
+        if page_type in [SearchCategory.developers, SearchCategory.groups]:
+            profile["private"] = profile_raw.find("h5", string="Privacy").parent.span.string.strip() != "Public"
+
+            membership = profile_raw.find("h5", string="Subscription").parent.span.string.strip()
+            if membership == "Open to all members":
+                profile["membership"] = Membership(3)
+            elif membership == "Must apply to join":
+                profile["membership"] = Membership(2)
+            else:
+                profile["membership"] = Membership(1)
+
+        if page_type in [SearchCategory.games, SearchCategory.mods]:
+            profile["icon"] = profile_raw.find("h5", string="Icon").parent.span.img["src"]
+
+        if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines]:
+            profile["team"] = [x.parent.a.string for x in profile_raw.find_all("h5") if x.string in ["Developer", "Publisher", "Developer & Publisher","Creator", "Company"]][0]
+            d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
+            profile["release"] = datetime.datetime.strptime(d, "%Y-%m-%d")
+
+        if page_type != SearchCategory.groups:
+            profile["homepage"] =  profile_raw.find("h5", string="Homepage").parent.span.a["href"]
+
+        if page_type == SearchCategory.games:
+            profile["engine"] = profile_raw.find("h5", string="Engine").parent.span.a["href"]
+            profile["engine_name"] = profile_raw.find("h5", string="Engine").parent.span.a.string
+
+        if page_type == SearchCategory.mods:
+            profile["game"] = profile_raw.find("h5", string="Game").parent.span.a["href"]
+            profile["game_name"] = profile_raw.find("h5", string="Game").parent.span.a.string
+
+        if page_type == SearchCategory.engines:
+            profile["license"] = License(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
+
+        if page_type in [SearchCategory.games, SearchCategory.engines]:
+            profile["platform"] = [x.string for x in profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")]
+
+
+        return cls(**profile)
 
 class Style:
     def __init__(self, **attrs):
@@ -363,3 +399,24 @@ class Style:
         styles["players"] = PlayerStyle(int(styles["players"])) 
 
         return cls(**styles)
+
+class Filter:
+    def __init__(self, **kwarg):
+        self.released = kwarg.get("released", None)
+        self.genre = kwarg.get("genre", None)
+
+    def set_genre(self, genre):
+        if isinstance(genre, Genre):
+            self.genre = genre.name
+        elif genre is None:
+            self.genre = genre
+        else:
+            raise ValueError("Must be Genre enum or None")
+
+    def set_theme(self, theme):
+        if isinstance(theme, Theme):
+            self.theme = theme.name
+        elif genre is None:
+            self.theme = genre
+        else:
+            raise ValueError("Must be Theme enum or None")
