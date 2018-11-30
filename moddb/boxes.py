@@ -1,8 +1,7 @@
 from .enums import *
+from .utils import *
 
 import requests
-import datetime
-import re
 import sys
 from bs4 import BeautifulSoup
 
@@ -25,20 +24,14 @@ class Statistics:
 
         misc = html.find_all("h5")
         stats = {stat.string.lower() : stat.parent.a.string.replace(",", "").replace(" members", "") for stat in misc if stat.string in titles}
-        
-        match = re.findall(r"\((\d*) .*\)", stats["visits"])
-        stats["today"] = match[0]
-        stats["visits"] = re.sub(r"\(.*\)", "", stats["visits"])
+
+        stats["visits"], stats["today"] = get_views(stats["visits"])
 
         rank = stats["rank"].split("of")
-        stats["rank"] = rank[0]
-        stats["total"] = rank[1]
+        stats["rank"] = rank[0].replace(",", "")
+        stats["total"] = rank[1].replace(",", "")
 
-        for item in misc:
-            if item.string == "Last Update":
-                d = item.parent.span.time["datetime"]
-                d = d[:-3] + d[-2:]
-                stats["updated"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
+        stats["updated"] = get_date(html.find("time", itemprop="dateModified")["datetime"])
 
         return cls(**stats)
 
@@ -82,8 +75,8 @@ class Profile:
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         profile = {}
 
-        profile["contact"] = profile_raw.find("h5", string="Contact").parent.span.a["href"]
-        profile["follow"] = [x for x in profile_raw.find_all("h5") if x.string in ["Mod watch", "Game watch", "Group watch", "Engine watch"]][0]
+        profile["contact"] = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
+        profile["follow"] = join([x.parent.span.a["href"] for x in profile_raw.find_all("h5") if x.string in ["Mod watch", "Game watch", "Group watch", "Engine watch"]][0])
         
         try:
             share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
@@ -120,12 +113,12 @@ class Profile:
             profile["homepage"] =  profile_raw.find("h5", string="Homepage").parent.span.a["href"]
 
         if page_type in [SearchCategory.games, SearchCategory.addons]:
-            url = profile_raw.find("h5", string="Engine").parent.span.a["href"]
+            url = join(profile_raw.find("h5", string="Engine").parent.span.a["href"])
             name = profile_raw.find("h5", string="Engine").parent.span.a.string
             profile["engine"] = Thumbnail(url=url, name=name, type=ThumbnailType.engine)
 
         if page_type == SearchCategory.mods:
-            url = profile_raw.find("h5", string="Game").parent.span.a["href"]
+            url = join(profile_raw.find("h5", string="Game").parent.span.a["href"])
             name = profile_raw.find("h5", string="Game").parent.span.a.string
             profile["game"] = Thumbnail(url=url, name=name, type=ThumbnailType.game)
 
@@ -133,7 +126,8 @@ class Profile:
             profile["license"] = License(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
 
         if page_type in [SearchCategory.games, SearchCategory.engines, SearchCategory.addons]:
-            profile["platform"] = [x.string for x in profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")]
+            platforms = profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")
+            profile["platform"] = [Thumbnail(name=x.string, url=join(x["href"]), type=ThumbnailType.platform) for x in platforms]
 
         return cls(**profile)
 
@@ -164,12 +158,12 @@ class Thumbnail:
         self.type = attrs.get("type")
 
     def __repr__(self):
-        return f"<Thumbnail name={self.name} type={self.type}>"
+        return f"<Thumbnail name={self.name} type={self.type.name}>"
 
     @classmethod
     def parse(cls, html, type):
         thumbnail = {
-            "url": html.a["href"],
+            "url": join(html.a["href"]),
             "name": html.a.string,
             "type": ThumbnailType[type],
             "image":html.find("img", alt=html.a.string)
@@ -203,13 +197,11 @@ class Comment():
         heading = div.find("span", class_="heading")
         
         #author
-        url = heading.a["href"]
+        url = join(heading.a["href"])
         name = heading.a.string
         comment["author"] = Thumbnail(url=url, name=name, type=ThumbnailType.user)
         
-        d = heading.time["datetime"]
-        d = d[:-3] + d[-2:]
-        comment["date"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
+        comment["date"] = get_date(heading.time["datetime"])
         comment["content"] = div.find("div", class_="comment").p.string
         actions = div.find("span", class_="actions").find_all("a")
         karma = div.find("span", class_="actions").span.string

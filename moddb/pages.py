@@ -1,67 +1,16 @@
 from .boxes import *
 
-import re
-import datetime
-import requests
-from bs4 import BeautifulSoup
-
-class Parser:
-    def get_author(self):
-        r = requests.get(self._author)
-        soup = BeautifulSoup(r.text, "html.parser")
-        return User.parse(soup)
-
-    def get_comments(self, index : int):
-        r = requests.get(self.url + f"/page/{index}#comments")
-        soup = BeautifulSoup(r.text, "html.parser")
-
-        comments = []
-        for div in soup.find("div", class_="table tablecomments").find_all("div"):
-            if div.find("div", class_="content") is not None:
-                comments.append(Comment.parse(div))
-
-        return comments
-
-class Page(Parser):
-    def __init__(self, **attrs):
-        self._html = attrs.get("html")
-        self.stats = Statistics.parse(self._html)
-        self.style = Style.parse(self._html)
-        self.url = attrs.get("url")
-        self.files = []
-        self.comments = []
-
-        for file in self._html.parent.parent.parent.find("div", class_="inner").find_all("div")[2].find_all("div"):
-            if file.a.string is not None:
-                self.files.append(Thumbnail.parse(file, "file"))
-
-        for div in self._html.find("div", class_="table tablecomments").find_all("div"):
-            if div.find("div", class_="content") is not None:
-                self.comments.append(Comment.parse(div))
-
-    def get_files(self, index : int):
-        r = requests.get(self.url + f"/downloads/page/{index}")
-        soup = BeautifulSoup(r.text, "html.parser")
-
-        files = []
-        for file in soup.parent.parent.parent.find("div", class_="table").find_all("div")[2].find_all("div"):
-            if file.a.string is not None:
-                files.append(Thumbnail.parse(file, "file"))
-
-        return files
-
 class Game:
     pass
 
 class Mod:
     pass
 
-class File(Parser):
+class File:
     def __init__(self, **attrs):
         self.name = attrs.get("filename")
-        self.category = attrs.get("category")
-        self.uploader = attrs.get("uploader")
-        self._author = attrs.get("author")
+        self.type = attrs.get("type")
+        self.author = attrs.get("author")
         self.date = attrs.get("date")
         self.size = attrs.get("size")
         self.downloads = attrs.get("downloads")
@@ -73,7 +22,7 @@ class File(Parser):
         self.preview = attrs.get("preview")
 
     def __repr__(self):
-        return f"<File name={self.name}>"
+        return f"<File name={self.name} type={self.type.name}>"
 
     @classmethod
     def parse(cls, html):
@@ -84,31 +33,25 @@ class File(Parser):
         file = {x.string.lower() : x.parent.span.string.strip() for x in info.find_all("h5") if x.string in files_headings}
         file["downloads"] = info.find("h5", string="Downloads").parent.a.string
 
-
         file["size"] = int(re.sub(r"[(),bytes]", "", file["size"].split(" ")[1]))
         file["today"] = int(re.sub(r"[(),today]", "", file["downloads"].split(" ")[1]))
         file["downloads"] = int(file["downloads"].split(" ")[0].replace(",", ""))
 
-        file["category"] = FileCategory(int(info.find("h5", string="Category").parent.a["href"][-1]))
+        file["type"] = FileCategory(int(info.find("h5", string="Category").parent.a["href"][-1]))
+        
         uploader = info.find("h5", string="Uploader").parent.a
-        file["uploader"] = uploader.string
-        file["author"] = uploader["href"]
+        file["author"] = Thumbnail(url=join(uploader["href"]), name=uploader.string, type=ThumbnailType.user)
 
-        d = info.find("h5", string="Added").parent.span.time["datetime"]
-        d = d[:-3] + d[-2:]
-        file["date"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
-
+        file["date"] = get_date(info.find("h5", string="Added").parent.span.time["datetime"])
         file["button"] = info.find("h5", string="Embed Button").parent.span.input["value"]
         file["widget"] = info.find("h5", string="Embed Widget").parent.span.input["value"]
-
 
         file["description"] = html.find("p", id="downloadsummary").string
         file["preview"] = html.find_all("img")[0]["src"]
 
         return cls(**file)
 
-
-class Media(Parser):
+class Media:
     def __init__(self, **attrs):
         self.name = attrs.get("name")
         self.type = attrs.get("type")
@@ -118,11 +61,12 @@ class Media(Parser):
         self.views = attrs.get("views")
         self.today = attrs.get("today")
         self.filename = attrs.get("filename", None)
-        self.submitter = attrs.get("submitter")
-        self._author = attrs.get("author")
+        self.author = attrs.get("author")
         self.description = attrs.get("description")
         self.date = attrs.get("date")
 
+    def __repr__(self):
+        return f"<Media name={self.name} type={self.type.name}>"
 
     @classmethod
     def parse(cls, html):
@@ -130,12 +74,11 @@ class Media(Parser):
         media_headings = ("Date", "By", "Duration", "Size", "Views", "Filename")
         raw_media = {media.string.lower() : media.parent for media in html.find_all("h5") if media.string in media_headings}
 
-        d = raw_media["date"].span.time["datetime"]
-        d = d[:-3] + d[-2:]
-        media["date"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
+        media["date"] = get_date(raw_media["date"].span.time["datetime"])
+        url = raw_media["by"].span.a["href"]
+        name = raw_media["by"].span.a.string.strip()
 
-        media["author"] = raw_media["by"].span.a["href"]
-        media["submitter"] = raw_media["by"].span.a.string.strip()
+        media["author"] = Thumbnail(url=url, name=name, type=ThumbnailType.user)
 
         if "duration" in raw_media:
             duration = raw_media["duration"].span.time.string.strip().split(":")
@@ -144,9 +87,7 @@ class Media(Parser):
         if "size" in raw_media:
             media["size"] = tuple(raw_media["size"].span.string.strip().split("×"))
 
-        matches = re.search(r"^([0-9,]*) \(([0-9,]*) today\)$", raw_media["views"])
-        media["views"] = int(matches.group(1).replace(",", ""))
-        media["today"] = int(matches.group(2).replace(",", ""))
+        media["views"], media["today"] = get_views(raw_media["views"])
 
         if "filename" in raw_media:
             media["filename"] = raw_media["filename"].span.string.strip()
@@ -161,16 +102,13 @@ class Media(Parser):
             media["type"] = MediaCategory.audio
             media["url"] = html.find("video", id="mediaplayer").find("source")["src"]
 
-
         media["description"] = html.find("meta", {"name":"description"})["content"]
         media["name"] = html.find("meta", property="og:title")["content"]
 
         return cls(**media)
 
-
-
 #article, blog, headlines
-class Article(Parser):
+class Article:
     def __init__(self, **attrs):
         self.author = attrs.get("author")
         self.title = attrs.get("title")
@@ -185,6 +123,9 @@ class Article(Parser):
         self.share = attrs.get("share")
         self.introduction = attrs.get("introdution")
         self.plaintext = attrs.get("plaintext")
+
+    def __repr__(self):
+        return f"<Article title={self.title} type={self.type.name}>"
 
     @classmethod
     def parse(cls, html):
@@ -203,10 +144,7 @@ class Article(Parser):
         article["report"] = raw.find("h5", string="Report").parent.span.a["href"]
         
         views_raw = raw.find("h5", string="Views").parent.span.a.string
-        matches = re.search(r"^([0-9,]*) \(([0-9,]*) today\)$", views_raw)
-        article["views"] = int(matches.group(1).replace(",", ""))
-        article["today"] = int(matches.group(2).replace(",", ""))
-
+        article["views"], article["today"] = get_views(views_raw)
         share = raw.find("h5", string="Share").parent.span.find_all("a")
         article["share"] = {
             "reddit": share[0]["href"],
@@ -218,36 +156,28 @@ class Article(Parser):
         article["title"] = html.find("span", itemprop="headline").string
         article["introdution"] = html.find("p", itemprop="description").string
         author = html.find("span", itemprop="author").span.a
-        article["author"] = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
+        article["author"] = Thumbnail(name=author.string, url=join(author["href"]), type=ThumbnailType.user)
 
-
-        d = html.find("time", itemprop="datePublished")["datetime"]
-        d = d[:-3] + d[-2:]
-        article["date"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
-
+        article["date"] = get_date(html.find("time", itemprop="datePublished")["datetime"])
         article["html"] = str(html.find("div", itemprop="articleBody"))
         article["plaintext"] = html.find("div", itemprop="articleBody").text
 
         return cls(**article)
 
-
-
-
-class Engine(Parser):
+class Engine:
     pass
 
-class Team(Parser):
+class Team:
     pass
 
-class Group(Parser):
+class Group:
     pass
 
-class Job(Parser):
+class Job:
     pass
 
-class Addon(Parser):
+class Addon:
     pass
 
-class User(Parser):
-    def get_author(self):
-        raise NotImplementedError
+class User:
+    pass
