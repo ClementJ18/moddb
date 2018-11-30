@@ -4,7 +4,6 @@ import re
 import datetime
 import requests
 from bs4 import BeautifulSoup
-import sys
 
 class Parser:
     def get_author(self):
@@ -25,10 +24,10 @@ class Parser:
 
 class Page(Parser):
     def __init__(self, **attrs):
-        self._html = attrs.pop("html")
+        self._html = attrs.get("html")
         self.stats = Statistics.parse(self._html)
         self.style = Style.parse(self._html)
-        self.url = attrs.pop("url")
+        self.url = attrs.get("url")
         self.files = []
         self.comments = []
 
@@ -59,19 +58,19 @@ class Mod:
 
 class File(Parser):
     def __init__(self, **attrs):
-        self.name = attrs.pop("filename")
-        self.category = attrs.pop("category")
-        self.uploader = attrs.pop("uploader")
-        self._author = attrs.pop("author")
-        self.date = attrs.pop("date")
-        self.size = attrs.pop("size")
-        self.downloads = attrs.pop("downloads")
-        self.today = attrs.pop("today")
-        self.button = attrs.pop("button")
-        self.widget = attrs.pop("widget")
-        self.description = attrs.pop("description")
-        self.hash = attrs.pop("md5 hash")
-        self.preview = attrs.pop("preview")
+        self.name = attrs.get("filename")
+        self.category = attrs.get("category")
+        self.uploader = attrs.get("uploader")
+        self._author = attrs.get("author")
+        self.date = attrs.get("date")
+        self.size = attrs.get("size")
+        self.downloads = attrs.get("downloads")
+        self.today = attrs.get("today")
+        self.button = attrs.get("button")
+        self.widget = attrs.get("widget")
+        self.description = attrs.get("description")
+        self.hash = attrs.get("md5 hash")
+        self.preview = attrs.get("preview")
 
     def __repr__(self):
         return f"<File name={self.name}>"
@@ -111,18 +110,18 @@ class File(Parser):
 
 class Media(Parser):
     def __init__(self, **attrs):
-        self.name = attrs.pop("name")
-        self.type = attrs.pop("type")
-        self.url = attrs.pop("url")
-        self.duration = attrs.pop("duration", None)
-        self.size = attrs.pop("size", None)
-        self.views = attrs.pop("views")
-        self.today = attrs.pop("today")
-        self.filename = attrs.pop("filename", None)
-        self.submitter = attrs.pop("submitter")
-        self._author = attrs.pop("author")
-        self.description = attrs.pop("description")
-        self.date = attrs.pop("date")
+        self.name = attrs.get("name")
+        self.type = attrs.get("type")
+        self.url = attrs.get("url")
+        self.duration = attrs.get("duration", None)
+        self.size = attrs.get("size", None)
+        self.views = attrs.get("views")
+        self.today = attrs.get("today")
+        self.filename = attrs.get("filename", None)
+        self.submitter = attrs.get("submitter")
+        self._author = attrs.get("author")
+        self.description = attrs.get("description")
+        self.date = attrs.get("date")
 
 
     @classmethod
@@ -145,8 +144,9 @@ class Media(Parser):
         if "size" in raw_media:
             media["size"] = tuple(raw_media["size"].span.string.strip().split("×"))
 
-        media["today"] = int(re.sub(r"[(),today]", "", raw_media["views"].span.a.string.split(" ")[1]))
-        media["views"] = int(raw_media["views"].span.a.string.split(" ")[0].replace(",", ""))
+        matches = re.search(r"^([0-9,]*) \(([0-9,]*) today\)$", raw_media["views"])
+        media["views"] = int(matches.group(1).replace(",", ""))
+        media["today"] = int(matches.group(2).replace(",", ""))
 
         if "filename" in raw_media:
             media["filename"] = raw_media["filename"].span.string.strip()
@@ -172,21 +172,66 @@ class Media(Parser):
 #article, blog, headlines
 class Article(Parser):
     def __init__(self, **attrs):
-        self._author = attrs.pop("author")
-        self.title = attrs.pop("title")
-        self.date = attrs.pop("date")
-        self.suggestions = attrs.pop("suggestions")
-        self.content = attrs.pop("content")
-        self.plaintext = self._plaintext(self.content)
-        self.type = attrs.pop("type")
-
-    def _plaintext(self, html):
-        pass
+        self.author = attrs.get("author")
+        self.title = attrs.get("title")
+        self.date = attrs.get("date")
+        self.html = attrs.get("html")
+        self.type = attrs.get("type")
+        self.profile = attrs.get("profile")
+        self.tags = attrs.get("tags")
+        self.report = attrs.get("report")
+        self.views = attrs.get("views")
+        self.today = attrs.get("today")
+        self.share = attrs.get("share")
+        self.introduction = attrs.get("introdution")
+        self.plaintext = attrs.get("plaintext")
 
     @classmethod
     def parse(cls, html):
-        news_raw = html.find("span", string="News").parent.parent.parent.find("div", class_="table tablemenu")
-        profile = Profile.parse(html)
+        article = {}
+        raw_type = html.find("h5", string="Browse").parent.span.a.string
+        article["type"] = ArticleType[raw_type.lower()]
+
+        try:
+            raw = html.find("span", string=raw_type[0:-1]).parent.parent.parent.find("div", class_="table tablemenu")
+        except AttributeError:
+            raw = html.find("span", string=raw_type).parent.parent.parent.find("div", class_="table tablemenu")
+
+        article["profile"] = Profile.parse(html)
+
+        article["tags"] = {x.string : x["href"] for x in raw.find("h5", string="Tags").parent.span.find_all("a") if x is not None}
+        article["report"] = raw.find("h5", string="Report").parent.span.a["href"]
+        
+        views_raw = raw.find("h5", string="Views").parent.span.a.string
+        matches = re.search(r"^([0-9,]*) \(([0-9,]*) today\)$", views_raw)
+        article["views"] = int(matches.group(1).replace(",", ""))
+        article["today"] = int(matches.group(2).replace(",", ""))
+
+        share = raw.find("h5", string="Share").parent.span.find_all("a")
+        article["share"] = {
+            "reddit": share[0]["href"],
+            "mail": share[1]["href"],
+            "twitter": share[2]["href"],
+            "facebook": share[3]["href"]
+        }
+
+        article["title"] = html.find("span", itemprop="headline").string
+        article["introdution"] = html.find("p", itemprop="description").string
+        author = html.find("span", itemprop="author").span.a
+        article["author"] = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
+
+
+        d = html.find("time", itemprop="datePublished")["datetime"]
+        d = d[:-3] + d[-2:]
+        article["date"] = datetime.datetime.strptime(d, '%Y-%m-%dT%H:%M:%S%z')
+
+        article["html"] = str(html.find("div", itemprop="articleBody"))
+        article["plaintext"] = html.find("div", itemprop="articleBody").text
+
+        return cls(**article)
+
+
+
 
 class Engine(Parser):
     pass
@@ -204,9 +249,5 @@ class Addon(Parser):
     pass
 
 class User(Parser):
-    pass
-
     def get_author(self):
         raise NotImplementedError
-
-
