@@ -21,7 +21,7 @@ class Category(enum.Enum):
 class MediaCategory(enum.Enum):
     video = 0
     image = 1
-    audio = 3
+    audio = 2
 
 class ArticleType(enum.Enum):
     news = 1

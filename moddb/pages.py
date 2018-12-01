@@ -44,6 +44,20 @@ class Mod:
         thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
         mod["articles"] = [Thumbnail(name=x.a["title"], url= join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
         mod["article"] = PartialArticle.parse(articles_raw)
+        mod["description"] = html.find("meta", itemprop="description")["content"]
+        mod["profile"] = str(html.find("div", id="profiledescription"))
+        mod["url"] = html.find("meta", property="og:url")["content"]
+
+        def get_type(img):
+            if img is None:
+                return 2
+            elif img["src"][-8:-5] == ".mp4":
+                return 0
+            elif img["src"].endswith(("png", "jpg")):
+                return 1
+
+        imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
+        mod["imagebox"] = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
 
         return cls(**mod)
 
