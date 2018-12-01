@@ -229,23 +229,3 @@ class Comment():
             comment["position"] = 0
 
         return cls(**comment)
-
-class PartialArticle:
-    def __init__(self, **attrs):
-        self.type = attrs.get("type")
-        self.date = attrs.get("date")
-        self.title = attrs.get("title")
-        self.content = attrs.get("content")
-        self.plaintext = attrs.get("plaintext")
-        self.url = attrs.get("url")
-
-    def __repr__(self):
-        return f"<PartialArticle title={self.title}>"
-
-    @classmethod
-    def parse(self, html):
-        article = {}
-        meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
-        
-        article["title"] = meta_raw.h4.a.string
-        article["url"] = join(meta_raw.h4.a["href"])
