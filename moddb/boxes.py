@@ -18,6 +18,9 @@ class Statistics:
         self.reviews = int(attrs.get("reviews"))
         self.mods = int(attrs.get("mods")) if "mods" in attrs else None
 
+    def __repr__(self):
+        return f"<Statistics rank={self.rank}/{self.total}>"
+
     @classmethod
     def parse(cls, html):
         titles = ("Rank", "Visits", "Files", "Articles", "Reviews", "Watchers", "Mods")
@@ -41,6 +44,7 @@ class Profile:
         self.contact = attrs.get("contact")
         self.follow = attrs.get("follow")
         self.share = attrs.get("share")
+        self.type = attrs.get("type")
 
         #developers, groups
         self.private = attrs.get("private", None)
@@ -68,6 +72,9 @@ class Profile:
         #games, engines
         self.platform = attrs.get("platform", None)
 
+    def __repr__(self):
+        return f"<Profile type={self.type.name}>"
+
     @classmethod
     def parse(cls, html):
         page_type = SearchCategory[html.find("div", id="subheader").find("ul", class_="tabs").find("li", class_="on").a.string]
@@ -75,6 +82,7 @@ class Profile:
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         profile = {}
 
+        profile["type"] = page_type
         profile["contact"] = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
         profile["follow"] = join([x.parent.span.a["href"] for x in profile_raw.find_all("h5") if x.string in ["Mod watch", "Game watch", "Group watch", "Engine watch"]][0])
         
@@ -136,6 +144,9 @@ class Style:
         self.genre = attrs.get("genre")
         self.theme = attrs.get("theme")
         self.players = attrs.get("players")
+
+    def __repr__(self):
+        return f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
 
     @classmethod
     def parse(cls, html):
@@ -218,3 +229,23 @@ class Comment():
             comment["position"] = 0
 
         return cls(**comment)
+
+class PartialArticle:
+    def __init__(self, **attrs):
+        self.type = attrs.get("type")
+        self.date = attrs.get("date")
+        self.title = attrs.get("title")
+        self.content = attrs.get("content")
+        self.plaintext = attrs.get("plaintext")
+        self.url = attrs.get("url")
+
+    def __repr__(self):
+        return f"<PartialArticle title={self.title}>"
+
+    @classmethod
+    def parse(self, html):
+        article = {}
+        meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
+        
+        article["title"] = meta_raw.h4.a.string
+        article["url"] = join(meta_raw.h4.a["href"])

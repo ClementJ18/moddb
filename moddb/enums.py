@@ -187,6 +187,15 @@ class Genre(enum.Enum):
     virtual_life = 30
 
 class PlayerStyle(enum.IntFlag):
+    def __repr__(self):
+        cls = self.__class__
+        if self._name_ is not None:
+            return self._name_
+        members, uncovered = enum._decompose(cls, self._value_)
+        return '|'.join([str(m._name_ or m._value_) for m in members])
+
+    __str__ = __repr__
+
     singleplayer = 1
     multiplayer = 2
     coop = 4

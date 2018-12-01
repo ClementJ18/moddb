@@ -4,7 +4,48 @@ class Game:
     pass
 
 class Mod:
-    pass
+    def __init__(self, **attrs):
+        for key, value in attrs.items():
+            setattr(self, key, value)
+
+    def __repr__(self):
+        return f"<Mod name={self.name}>"
+
+    @classmethod
+    def parse(cls, html):
+        mod = {}
+
+        mod["profile"] = Profile.parse(html)
+        mod["statistics"] = Statistics.parse(html)
+        mod["style"] = Style.parse(html)
+
+        raw_tags = html.find("span", string="Tags").parent.parent.parent.find("form", attrs={"name": "tagsform"}).find_all("div")
+        mod["tags"] = {tag.find("a").string : join(tag.find("a")["href"]) for tag in raw_tags}
+
+        mod["name"] = html.find("a", itemprop="mainEntityOfPage").string
+
+        suggestions_raw = html.find(string="You may also like").parent.parent.parent.parent.find_all(class_="row clear")
+        mod["suggestions"] = []
+        for x in suggestions_raw:
+            link = x.find("a",class_="heading")
+            image_url = link.parent.parent.find("img")["src"]
+            suggestion = Thumbnail(name=link.string, url=join(link["href"]), image=image_url, type=ThumbnailType.mod)
+            mod["suggestions"].append(suggestion)
+
+        files_raw = html.find(string="Files").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
+        mod["files"] = []
+        for x in files_raw:
+            link = x.find("div", class_="content").h4.a
+            image_url = link.parent.parent.parent.find("img")["src"]
+            file = Thumbnail(name=link.string, url=join(link["href"]), image=image_url, type=ThumbnailType.file)
+            mod["files"].append(file)
+
+        articles_raw = html.find("span", string="Articles").parent.parent.parent.find("div", class_="inner").div.find("div", class_="table")
+        thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
+        mod["articles"] = [Thumbnail(name=x.a["title"], url= join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
+        mod["article"] = PartialArticle.parse(articles_raw)
+
+        return cls(**mod)
 
 class File:
     def __init__(self, **attrs):
@@ -163,6 +204,39 @@ class Article:
         article["plaintext"] = html.find("div", itemprop="articleBody").text
 
         return cls(**article)
+
+class PartialArticle:
+    def __init__(self, **attrs):
+        self.type = attrs.get("type")
+        self.date = attrs.get("date")
+        self.title = attrs.get("title")
+        self.content = attrs.get("content")
+        self.plaintext = attrs.get("plaintext")
+        self.url = attrs.get("url")
+
+    def __repr__(self):
+        return f"<PartialArticle title={self.title}>"
+
+    @classmethod
+    def parse(cls, html):
+        article = {}
+        meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
+
+        article["title"] = meta_raw.h4.a.string
+        article["url"] = join(meta_raw.h4.a["href"])
+        article["date"] = get_date(meta_raw.find("time")["datetime"])
+        article["type"] = ArticleType[meta_raw.find("span", class_="subheading").text.strip().split(" ")[0].lower()]
+
+        content = html.find("div", class_="row rowcontent rowcontentnext clear")
+        article["content"] = str(content)
+        article["plaintext"] = content.text
+
+        return cls(**article)
+
+    def get_article(self):
+        r = requests.get(self.url)
+        soup = BeautifulSoup(r.text, "html.parser")
+        return Article.parse(soup)
 
 class Engine:
     pass
