@@ -61,6 +61,24 @@ class Mod:
 
         return cls(**mod)
 
+    def get_comments(self, index=0):
+        r = requests.get(f"{self.url}/page/{index+1}")
+        soup = BeautifulSoup(r.text, "html.parser")
+        comments_raw = soup.find("div", class_="table tablecomments").find_all("div")
+        comments = []
+        for raw in comments_raw:
+            class_ = raw.get("class", None)
+            if class_ and "row" in class_:
+                comment = Comment.parse(raw)
+                if comment.position == 1:
+                    comments[-1].child = comment
+                elif comment.position == 2:
+                    comments[-1].child.child = comment
+                else:
+                    comments.append(comment)
+
+        return comments
+
 class File:
     def __init__(self, **attrs):
         self.name = attrs.get("filename")

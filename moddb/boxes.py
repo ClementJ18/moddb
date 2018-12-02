@@ -197,6 +197,7 @@ class Comment():
         self.upvote = attrs.get("upvote")
         self.downvote = attrs.get("downvote")
         self.position = attrs.get("position")
+        self.child = None
 
     def __repr__(self):
         return f"<Comment author={self.name} position={self.position}>"
@@ -204,21 +205,16 @@ class Comment():
     @classmethod
     def parse(cls, html):
         comment = {}
-        div = html.find("div", class_="content")
-        heading = div.find("span", class_="heading")
-        
-        #author
-        url = join(heading.a["href"])
-        name = heading.a.string
-        comment["author"] = Thumbnail(url=url, name=name, type=ThumbnailType.user)
-        
-        comment["date"] = get_date(heading.time["datetime"])
-        comment["content"] = div.find("div", class_="comment").p.string
-        actions = div.find("span", class_="actions").find_all("a")
-        karma = div.find("span", class_="actions").span.string
-        comment["karma"] = int(re.findall(r"[+-]?\d", karma)[0])
-        comment["upvote"] = actions[1]["href"]
-        comment["downvote"] = actions[2]["href"]
+        author = html.find("a", class_="avatar")
+        comment["id"] = html["id"]
+        comment["author"] = Thumbnail(name=author["title"], url=join(author["href"]), image=author.img["src"], type=ThumbnailType.user)
+        comment["date"] = get_date(html.find("time")["datetime"])
+        comment["content"] = html.find("div", class_="comment").p.string
+        actions = html.find("span", class_="actions")
+        karma = actions.span.string
+        comment["karma"] = int(re.findall(r"[+-]?\d", karma)[0].replace(",", ""))
+        comment["upvote"] = actions.find_all("a")[1]["href"]
+        comment["downvote"] = actions.find_all("a")[2]["href"]
         position = html["class"] 
 
         if "reply1" in position:
