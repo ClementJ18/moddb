@@ -22,7 +22,6 @@ class ClientUser:
             "rememberme": 1
         }
 
-
         r = self.session.post("https://www.moddb.com/members/login/#membersform", data=payload)
         return r
 
