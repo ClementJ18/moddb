@@ -25,6 +25,8 @@ class Base:
 
 class Page(Base):
     def __init__(self, html, page_type):
+        self.name = html.find("a", itemprop="mainEntityOfPage").string
+
         #boxes
         self.profile = Profile(html)
         self.statistics = Statistics(html)
@@ -34,15 +36,32 @@ class Page(Base):
         #thumbnails
         self.suggestions = self._get_suggestions(html)
         self.files = self._get_files(html)
-        string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
-        articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="inner").div.find("div", class_="table")
-        thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-        self.articles = [Thumbnail(name=x.a["title"], url= join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
-        
-        #main page article
-        self.article = PartialArticle(articles_raw)
 
-        self.comments = self._get_comments(html)
+        articles_raw = None
+        try:
+            string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
+            articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="inner").div.find("div", class_="table")
+            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
+            self.articles = [Thumbnail(name=x.a["title"], url= join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
+        except AttributeError:
+            log.info("%s %s has no article suggestions", self.profile.type.name, self.name)
+            self.articles = []
+
+        #main page article
+        if articles_raw:
+            self.article = PartialArticle(articles_raw)
+        else:
+            self.article = None
+            log.info("%s %s has no front page article", self.profile.type.name, self.name)
+
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            self.comments = []
+            log.info("%s %s has no comments", self.profile.type.name, self.name)
+
+        raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+        self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
 
         #imagebox
         def get_type(img):
@@ -57,19 +76,30 @@ class Page(Base):
         self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
         
         #misc
-        self.embed = html.find("input", type='text', maxlength='500')["value"]
+        try:
+            self.embed = html.find("input", type="text", class_="text textembed")["value"]
+        except TypeError:
+            self.embed = str(html.find_all("textarea")[1].a)
+
         self.url = html.find("meta", property="og:url")["content"]
-        self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
-        self.name = html.find("a", itemprop="mainEntityOfPage").string
+        try:
+            self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
+        except AttributeError:
+            self.rating = 0.0
+            log.info("%s %s is not rated", self.profile.type.name, self.name)
+        
 
     def _get_suggestions(self, html):
-        suggestions_raw = html.find(string="You may also like").parent.parent.parent.parent.find_all(class_="row clear")
+        suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
         suggestions = []
         for x in suggestions_raw:
-            link = x.find("a",class_="heading")
-            image_url = link.parent.parent.find("img")["src"]
-            suggestion = Thumbnail(name=link.string, url=join(link["href"]), image=image_url, type=ThumbnailType.mod)
-            suggestions.append(suggestion)
+            try:
+                link = x.find("a", class_="image")
+                type = link["href"].split("/")[1].replace("s", "")
+                suggestion = Thumbnail(name=link["title"], url=join(link["href"]), image=link.img["src"], type=ThumbnailType[type])
+                suggestions.append(suggestion)
+            except (AttributeError, TypeError):
+                pass
 
         return suggestions
 
@@ -231,6 +261,7 @@ class Media(Base):
         name = raw_media["by"].span.a.string.strip()
 
         self.author = Thumbnail(url=url, name=name, type=ThumbnailType.user)
+        self.comments = self._get_comments(html)
 
         if "duration" in raw_media:
             duration = raw_media["duration"].span.time.string.strip().split(":")
@@ -267,6 +298,7 @@ class Article(Base):
     def __init__(self, html):
         raw_type = html.find("h5", string="Browse").parent.span.a.string
         self.type = ArticleType[raw_type.lower()]
+        self.comments = self._get_comments(html)
 
         try:
             raw = html.find("span", string=raw_type[0:-1]).parent.parent.parent.find("div", class_="table tablemenu")
@@ -334,4 +366,5 @@ class Job:
     pass
 
 class User:
-    pass
+    def __init__(self, html):
+        pass

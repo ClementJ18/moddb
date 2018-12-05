@@ -4,6 +4,8 @@ from .utils import *
 import requests
 import sys
 from bs4 import BeautifulSoup
+import logging
+log = logging.getLogger("moddb")
 
 class CommentsList(list):
     def __init__(self, *elements):
@@ -24,12 +26,12 @@ class Statistics:
     def __init__(self, html):
         titles = ("Files", "Articles", "Reviews", "Watchers", "Mods")
         misc = html.find_all("h5")
-        self.__dict__.update({stat.string.lower() : int(stat.parent.a.string.replace(",", "").replace(" members", "")) for stat in misc if stat.string in titles})
+        self.__dict__.update({stat.string.lower() : int(normalize(stat.parent.a.string)) for stat in misc if stat.string in titles})
 
-        visits = html.find("h5", string="Visits").parent.a.string.replace(",", "").replace(" members", "")
+        visits = normalize(html.find("h5", string="Visits").parent.a.string)
         self.visits, self.today = get_views(visits)
 
-        rank = html.find("h5", string="Rank").parent.a.string.replace(",", "").replace(" members", "").split("of")
+        rank = normalize(html.find("h5", string="Rank").parent.a.string).split("of")
         self.rank = int(rank[0].replace(",", ""))
         self.total = int(rank[1].replace(",", ""))
 
@@ -54,6 +56,7 @@ class Profile:
             "platform": []
             })
 
+        _name = html.find("a", itemprop="mainEntityOfPage").string
         page_type = SearchCategory[html.find("div", id="subheader").find("ul", class_="tabs").find("li", class_="on").a.string]
         
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
@@ -91,11 +94,18 @@ class Profile:
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons]:
             #ToDo: in the future support having different develope/publisher/creator/company
             self.developers = [x.parent.a.string for x in profile_raw.find_all("h5") if x.string in ["Developer", "Publisher", "Developer & Publisher","Creator", "Company"]][0]
-            d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
-            self.release = datetime.datetime.strptime(d, "%Y-%m-%d")
+            try:
+                d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
+                self.release = datetime.datetime.strptime(d, "%Y-%m-%d")
+            except KeyError:
+                log.info("%s %s has not been released", page_type.name, _name)
+                self.release = False
 
         if page_type != SearchCategory.groups:
-            self.homepage =  profile_raw.find("h5", string="Homepage").parent.span.a["href"]
+            try:
+                self.homepage =  profile_raw.find("h5", string="Homepage").parent.span.a["href"]
+            except AttributeError:
+                log.info("%s %s has no homepage", page_type.name, _name)
 
         if page_type in [SearchCategory.games, SearchCategory.addons]:
             url = join(profile_raw.find("h5", string="Engine").parent.span.a["href"])

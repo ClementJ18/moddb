@@ -19,3 +19,6 @@ def get_views(string):
 
 def join(path):
     return urljoin(BASE_URL, path)
+
+def normalize(string):
+    return string.replace(",", "").replace("members", "").replace("member", "")
