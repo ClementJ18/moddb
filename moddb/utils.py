@@ -1,6 +1,8 @@
 import datetime
 import re
 from urllib.parse import urljoin
+import requests
+from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.moddb.com"
 
@@ -17,6 +19,10 @@ def get_date(d):
 
     return datetime.datetime.strptime(d, '%Y-%m')
 
+def soup(url):
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
+    return soup
 
 def get_views(string):
     matches = re.search(r"^([0-9,]*) \(([0-9,]*) today\)$", string)

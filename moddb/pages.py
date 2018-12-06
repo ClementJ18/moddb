@@ -18,9 +18,7 @@ class Base:
         return comments
 
     def get_comments(self, index=1):
-        r = requests.get(f"{self.url}/page/{index}")
-        html = BeautifulSoup(r.text, "html.parser")
-        return self._get_comments(html)
+        return self._get_comments(soup(f"{self.url}/page/{index}"))
 
 
 class Page(Base):
@@ -107,8 +105,7 @@ class Page(Base):
         return files
 
     def get_reviews(self, index=1):
-        r = requests.get(f"{self.url}/reviews/page/{index}")
-        html = BeautifulSoup(r.text, "html.parser")
+        html = soup(f"{self.url}/reviews/page/{index}")
         table = html.find("div", id="articlesbrowse").find("div", class_="table")
         if len(table["class"]) > 1:
             return []
@@ -139,8 +136,7 @@ class Page(Base):
         return reviews
 
     def _get(self, url, type):
-        r = requests.get(url)
-        html = BeautifulSoup(r.text, "html.parser")
+        html = soup(url)
 
         table = html.find("div", class_="table")
         if len(table["class"]) > 1:
@@ -363,6 +359,8 @@ class User(Page):
     def __init__(self, html):
         self.profile = UserProfile(html)
 
+        self.stats = UserStatistics(html)
+
         self.url = html.find("meta", property="og:url")["content"]
         self.name = html.find("meta", property="og:title")["content"]
         self.description = html.find("div", id="profiledescription").p.string
@@ -374,20 +372,46 @@ class User(Page):
             log.info("User %s doesn't have any groups", self.name)
             self.groups = []
 
-        blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.parent.find("div", class_="table")
-        self.blog = PartialArticle(blogs_raw)
-        self.blogs = [Thumbnail(name=blog.a["title"], url=join(blog.a["href"]), type=ThumbnailType.blog) for blog in blogs_raw.find_all("div", recursive=False)[2:-2]]
+        blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.find("div", class_="table")
+        try:
+            blogs_raw = blogs_raw.find_all("div", recursive=False)
+            self.blog = Blog(heading=blogs_raw.pop(0), text=blogs_raw.pop(0))
+        except (TypeError, AttributeError):
+            self.blog = None
+            log.info("User %s has no front page blog", self.name)
 
-        imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
-        self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
-        
+        try:
+            blogs_raw = blogs_raw.find_all("div", recursive=False)
+            self.blogs = [Thumbnail(name=blog.a["title"], url=join(blog.a["href"]), type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
+        except (TypeError, AttributeError):
+            self.blogs = []
+            log.info("User %s has no blog suggestions", self.name)
+
+        try:
+            imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
+            self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
+        except AttributeError:
+            self.imagebox = []
+            log.info("User %s has no imagebox", self.name)
+
+        try:
+            friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
+            self.friends = [Thumbnail(name=friend.a["title"], url=join(friend.a["href"]), type=ThumbnailType.user) for friend in friends]
+        except AttributeError:
+            self.friends = []
+            log.info("User %s has no friends ;(", self.name)
+
+        try:
+            self.homepage =  html.find("h5", string="Homepage").parent.span.a["href"]
+        except AttributeError:
+            self.homepage = None
+            log.info("User %s has no homepage", self.name)
+
     def __repr__(self):
         return f"<User name={self.name} level={self.profile.level}>"
 
     def get_blogs(self, index=1):
-        r = requests.get(f"{self.url}/blogs/page/{index}")
-        html = BeautifulSoup(r.text, "html.parser")
-
+        html = soup(f"{self.url}/blogs/page/{index}")
         table = html.find("div", id="articlesbrowse").find("div", class_="table")
         if len(table["class"]) > 1:
             return []
@@ -412,6 +436,23 @@ class User(Page):
 
         return blogs
 
+    def get_user_comments(self, index=1):
+        html = soup(f"{self.url}/comments/page/{index}")
+        return self._get_comments(html)
+
+    def get_friends(self, index=1):
+        return self._get(f"{self.url}/friends/page/{index}", ThumbnailType.user)
+
+    def get_groups(self, index=1):
+        return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group)
+
+    def get_games(self, index=1):
+        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game)
+
+    def get_mods(self, index=1):
+        return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod)
+    
+
 class PartialArticle:
     def __init__(self, html):
         meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
@@ -432,6 +473,4 @@ class PartialArticle:
         return f"<PartialArticle title={self.title}>"
 
     def get_article(self):
-        r = requests.get(self.url)
-        html = BeautifulSoup(r.text, "html.parser")
-        return Article(html)
+        return Article(soup(self.url))

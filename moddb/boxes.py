@@ -1,9 +1,7 @@
 from .enums import *
 from .utils import *
 
-import requests
 import sys
-from bs4 import BeautifulSoup
 import logging
 log = logging.getLogger("moddb")
 
@@ -21,9 +19,8 @@ class CommentsList(list):
 
 class Statistics:
     def __init__(self, html):
-        titles = ("Files", "Articles", "Reviews", "Watchers", "Mods")
-        misc = html.find_all("h5")
-        self.__dict__.update({stat.string.lower() : int(normalize(stat.parent.a.string)) for stat in misc if stat.string in titles})
+        misc = html.find_all("h5", string=("Files", "Articles", "Reviews", "Watchers", "Mods"))
+        self.__dict__.update({stat.string.lower() : int(normalize(stat.parent.a.string)) for stat in misc})
 
         visits = normalize(html.find("h5", string="Visits").parent.a.string)
         self.visits, self.today = get_views(visits)
@@ -162,9 +159,7 @@ class Thumbnail:
         return f"<Thumbnail name={self.name} type={self.type.name}>"
 
     def parse(self):
-        r = requests.get(self.url)
-        soup = BeautifulSoup(r.text, "html.parser")
-        return getattr(sys.modules["moddb"], self.type.name.title())(soup)
+        return getattr(sys.modules["moddb"], self.type.name.title())(soup(self.url))
 
 class Comment:
     def __init__(self, html):
@@ -246,4 +241,30 @@ class UserProfile:
         self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
 
     def __repr__(self):
-        return f"<Profile type=user>" 
+        return f"<Profile type=user>"
+
+class UserStatistics:
+    def __init__(self, html):
+        def get(parent):
+            return parent.a.string.strip() if parent.a else parent.span.string.strip()
+
+        name = html.find("meta", property="og:title")["content"]
+        misc = html.find_all("h5", string=("Watchers", "Activity Points", "Comments", "Tags", "Site visits"))
+        self.__dict__.update({stat.string.lower() : int(normalize(get(stat.parent))) for stat in misc})
+
+        visits = normalize(html.find("h5", string="Visitors").parent.a.string)
+        self.visits, self.today = get_views(visits)
+
+        self.time = html.find("h5", string="Time Online").parent.span.string.strip()
+
+        try:
+            rank = normalize(html.find("h5", string="Rank").parent.span.string).split("of")
+            self.rank = int(rank[0].replace(",", ""))
+            self.total = int(rank[1].replace(",", ""))
+        except AttributeError:
+            self.rank = 0
+            self.total = 0
+            log.info("User %s has no rank", name)
+
+    def __repr__(self):
+        return f"<Statistics rank={self.rank}/{self.total}>"
