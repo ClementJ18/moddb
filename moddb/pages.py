@@ -407,6 +407,12 @@ class User(Page):
             self.homepage = None
             log.info("User %s has no homepage", self.name)
 
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            self.comments = []
+            log.info("User %s has no comments", self.name)
+
     def __repr__(self):
         return f"<User name={self.name} level={self.profile.level}>"
 
