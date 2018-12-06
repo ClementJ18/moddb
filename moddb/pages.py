@@ -40,7 +40,7 @@ class Page(Base):
         articles_raw = None
         try:
             string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
-            articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="inner").div.find("div", class_="table")
+            articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [Thumbnail(name=x.a["title"], url= join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
@@ -64,14 +64,6 @@ class Page(Base):
         self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
 
         #imagebox
-        def get_type(img):
-            if img is None:
-                return 2
-            elif img["src"][-8:-5] == ".mp4":
-                return 0
-            elif img["src"].endswith(("png", "jpg")):
-                return 1
-
         imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
         self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
         
@@ -117,11 +109,11 @@ class Page(Base):
     def get_reviews(self, index=1):
         r = requests.get(f"{self.url}/reviews/page/{index}")
         html = BeautifulSoup(r.text, "html.parser")
-        table = html.find("div", class_="table")
+        table = html.find("div", id="articlesbrowse").find("div", class_="table")
         if len(table["class"]) > 1:
             return []
 
-        objects_raw = table.find("div", class_="table").find_all("div", recursive=False)[2:]
+        raw_reviews = table.find_all("div", recursive=False)[2:]
         reviews = []
         e = 0
         for _ in range(len(raw_reviews)):
@@ -275,10 +267,10 @@ class Media(Base):
         if "filename" in raw_media:
             self.filename = raw_media["filename"].span.string.strip()
 
-        if "size" in media and "duration" in media:
+        if "size" in raw_media and "duration" in raw_media:
             self.type = MediaCategory.video
             self.url = html.find("meta", property="og:image")["content"][:-4]
-        elif "size" in media:
+        elif "size" in raw_media:
             self.type = MediaCategory.image
             self.url = html.find("meta", property="og:image")["content"]
         else:
@@ -299,6 +291,7 @@ class Article(Base):
         raw_type = html.find("h5", string="Browse").parent.span.a.string
         self.type = ArticleType[raw_type.lower()]
         self.comments = self._get_comments(html)
+        self.title = html.find("span", itemprop="headline").string
 
         try:
             raw = html.find("span", string=raw_type[0:-1]).parent.parent.parent.find("div", class_="table tablemenu")
@@ -307,7 +300,12 @@ class Article(Base):
 
         self.profile = Profile(html)
 
-        self.tags = {x.string : x["href"] for x in raw.find("h5", string="Tags").parent.span.find_all("a") if x is not None}
+        try:
+            self.tags = {x.string : x["href"] for x in raw.find("h5", string="Tags").parent.span.find_all("a") if x is not None}
+        except AttributeError:
+            self.tags = {}
+            log.info("Article %s has no tags", self.title)
+
         self.report = raw.find("h5", string="Report").parent.span.a["href"]
         
         views_raw = raw.find("h5", string="Views").parent.span.a.string
@@ -319,9 +317,8 @@ class Article(Base):
             "twitter": share[2]["href"],
             "facebook": share[3]["href"]
         }
-
-        self.title = html.find("span", itemprop="headline").string
-        self.introdution = html.find("p", itemprop="description").string
+        
+        self.introduction = html.find("p", itemprop="description").string
         author = html.find("span", itemprop="author").span.a
         self.author = Thumbnail(name=author.string, url=join(author["href"]), type=ThumbnailType.user)
 
@@ -331,6 +328,89 @@ class Article(Base):
 
     def __repr__(self):
         return f"<Article title={self.title} type={self.type.name}>"
+
+class Team:
+    pass
+
+class Group:
+    pass
+
+class Job:
+    pass
+
+class Blog(Base):
+    def __init__(self, **attrs):
+        heading = attrs.get("heading")
+        text = attrs.get("text")
+
+        author = heading.find("span", class_="subheading").a
+        self.author = Thumbnail(url=join(author["href"]), name=author.string, type=ThumbnailType.user)
+
+        self.date = get_date(heading.find("span", class_="date").time["datetime"])
+
+        title = heading.div.h4.a
+        self.title = title.string
+        self.url = join(title["href"])
+
+        self.html = str(text.content)
+        self.plaintext = text.text
+
+    def __repr__(self):
+        return f"<Blog title={self.title}>"
+
+
+class User(Page):
+    def __init__(self, html):
+        self.profile = UserProfile(html)
+
+        self.url = html.find("meta", property="og:url")["content"]
+        self.name = html.find("meta", property="og:title")["content"]
+        self.description = html.find("div", id="profiledescription").p.string
+
+        try:
+            groups_raw = html.find("span", string="Groups").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-2]
+            self.groups = [Thumbnail(name=div.a["title"], url=join(div.a["href"]), type=ThumbnailType.group) for div in groups_raw]
+        except AttributeError:
+            log.info("User %s doesn't have any groups", self.name)
+            self.groups = []
+
+        blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.parent.find("div", class_="table")
+        self.blog = PartialArticle(blogs_raw)
+        self.blogs = [Thumbnail(name=blog.a["title"], url=join(blog.a["href"]), type=ThumbnailType.blog) for blog in blogs_raw.find_all("div", recursive=False)[2:-2]]
+
+        imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
+        self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
+        
+    def __repr__(self):
+        return f"<User name={self.name} level={self.profile.level}>"
+
+    def get_blogs(self, index=1):
+        r = requests.get(f"{self.url}/blogs/page/{index}")
+        html = BeautifulSoup(r.text, "html.parser")
+
+        table = html.find("div", id="articlesbrowse").find("div", class_="table")
+        if len(table["class"]) > 1:
+            return []
+
+        raw_blogs = table.find_all("div", recursive=False)[2:]
+        blogs = []
+        e = 0
+        for _ in range(len(raw_blogs)):
+            try:
+                heading = raw_blogs[e]
+            except IndexError:
+                break
+
+            try:
+                text = raw_blogs[e+1]
+            except IndexError:
+                text = {"class": "None"}
+
+            blog_obj = Blog(heading=heading, text=text)
+            blogs.append(blog_obj)
+            e += 2
+
+        return blogs
 
 class PartialArticle:
     def __init__(self, html):
@@ -355,16 +435,3 @@ class PartialArticle:
         r = requests.get(self.url)
         html = BeautifulSoup(r.text, "html.parser")
         return Article(html)
-
-class Team:
-    pass
-
-class Group:
-    pass
-
-class Job:
-    pass
-
-class User:
-    def __init__(self, html):
-        pass

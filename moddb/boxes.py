@@ -8,9 +8,6 @@ import logging
 log = logging.getLogger("moddb")
 
 class CommentsList(list):
-    def __init__(self, *elements):
-        super().__init__(*elements)
-
     def flatten(self):
         top_list = []
         for comment in super().__iter__():
@@ -56,12 +53,15 @@ class Profile:
             "platform": []
             })
 
-        _name = html.find("a", itemprop="mainEntityOfPage").string
+
+        try:
+            _name = html.find("a", itemprop="mainEntityOfPage").string
+        except AttributeError:
+            _name = html.find("span", itemprop="headline").string
+            
         page_type = SearchCategory[html.find("div", id="subheader").find("ul", class_="tabs").find("li", class_="on").a.string]
         
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
-        profile = {}
-
         self.type = page_type
         self.contact = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
         self.follow = join([x.parent.span.a["href"] for x in profile_raw.find_all("h5") if x.string in ["Mod watch", "Game watch", "Group watch", "Engine watch"]][0])
@@ -96,7 +96,7 @@ class Profile:
             self.developers = [x.parent.a.string for x in profile_raw.find_all("h5") if x.string in ["Developer", "Publisher", "Developer & Publisher","Creator", "Company"]][0]
             try:
                 d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
-                self.release = datetime.datetime.strptime(d, "%Y-%m-%d")
+                self.release = get_date(d)
             except KeyError:
                 log.info("%s %s has not been released", page_type.name, _name)
                 self.release = False
@@ -224,9 +224,9 @@ class Review:
 class UserProfile:
     def __init__(self, html):
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
-        divs = profile_raw.find_all("div", class_="row clear", recursive=False)
+        level_raw = profile_raw.find("h5", string="Level").parent.span.div
+        name = html.find("meta", property="og:title")["content"]
 
-        level_raw = divs.find("h5", string="Level").parent.span.div
         self.level = int(level_raw.find("span", class_="level").string)
         self.progress = float("0." + level_raw.find("span", class_="info").strong.string.replace("%", ""))
         self.title = level_raw.find("span", class_="info").a.string
@@ -236,8 +236,14 @@ class UserProfile:
         last_online = profile_raw.find("h5", string="Last Online")
         self.last_online = get_date(last_online.parent.span.time["datetime"]) if last_online else None
 
-        self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
-        self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
-        self.url = join(profile_raw.find("h5", string="Location").parent.span.find_all("a")[-1]["href"])
-        self.follow = join(profile_raw.find("h5", string="Follow").parent.span.a["href"])
+        try:
+            self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
+        except AttributeError:
+            log.info("User %s has not publicized their gender", name)
+            self.gender = None        
 
+        self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
+        self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
+
+    def __repr__(self):
+        return f"<Profile type=user>" 
