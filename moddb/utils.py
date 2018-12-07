@@ -3,8 +3,11 @@ import re
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
+import logging
 
+LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
+SESSION = requests.Session()
 
 def get_date(d):
     try:
@@ -20,7 +23,9 @@ def get_date(d):
     return datetime.datetime.strptime(d, '%Y-%m')
 
 def soup(url):
-    r = requests.get(url)
+    cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
+    print(cookies)
+    r = SESSION.get(url, cookies=cookies)
     soup = BeautifulSoup(r.text, "html.parser")
     return soup
 
@@ -42,5 +47,5 @@ def get_type(img):
         return 2
     elif img["src"][-8:-5] == ".mp4":
         return 0
-    elif img["src"].endswith(("png", "jpg")):
+    else:
         return 1

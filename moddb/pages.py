@@ -1,12 +1,18 @@
 from .boxes import *
+from .enums import ThumbnailType, SearchCategory, FileCategory, MediaCategory, ArticleType
+from .utils import soup, join, LOGGER, get_type, get_date, get_views
+
+import re
+
+__all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
+           'Team', 'Group', 'Job', 'Blog', 'User', 'PartialArticle']
 
 class Base:
     def _get_comments(self, html):
         comments_raw = html.find("div", class_="table tablecomments").find_all("div", recursive=False)
         comments = CommentsList()
         for raw in comments_raw:
-            class_ = raw.get("class", None)
-            if "row" in class_:
+            if "row" in raw.get("class", None):
                 comment = Comment(raw)
                 if comment.position == 1:
                     comments[-1].children.append(comment)
@@ -19,7 +25,6 @@ class Base:
 
     def get_comments(self, index=1):
         return self._get_comments(soup(f"{self.url}/page/{index}"))
-
 
 class Page(Base):
     def __init__(self, html, page_type):
@@ -42,7 +47,7 @@ class Page(Base):
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [Thumbnail(name=x.a["title"], url= join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
-            log.info("%s %s has no article suggestions", self.profile.type.name, self.name)
+            LOGGER.info("%s %s has no article suggestions", self.profile.type.name, self.name)
             self.articles = []
 
         #main page article
@@ -50,13 +55,13 @@ class Page(Base):
             self.article = PartialArticle(articles_raw)
         else:
             self.article = None
-            log.info("%s %s has no front page article", self.profile.type.name, self.name)
+            LOGGER.info("%s %s has no front page article", self.profile.type.name, self.name)
 
         try:
             self.comments = self._get_comments(html)
         except AttributeError:
             self.comments = []
-            log.info("%s %s has no comments", self.profile.type.name, self.name)
+            LOGGER.info("%s %s has no comments", self.profile.type.name, self.name)
 
         raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
         self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
@@ -76,7 +81,7 @@ class Page(Base):
             self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
         except AttributeError:
             self.rating = 0.0
-            log.info("%s %s is not rated", self.profile.type.name, self.name)
+            LOGGER.info("%s %s is not rated", self.profile.type.name, self.name)
         
 
     def _get_suggestions(self, html):
@@ -85,8 +90,8 @@ class Page(Base):
         for x in suggestions_raw:
             try:
                 link = x.find("a", class_="image")
-                type = link["href"].split("/")[1].replace("s", "")
-                suggestion = Thumbnail(name=link["title"], url=join(link["href"]), image=link.img["src"], type=ThumbnailType[type])
+                suggestion_type = link["href"].split("/")[1].replace("s", "")
+                suggestion = Thumbnail(name=link["title"], url=join(link["href"]), image=link.img["src"], type=ThumbnailType[suggestion_type])
                 suggestions.append(suggestion)
             except (AttributeError, TypeError):
                 pass
@@ -135,7 +140,7 @@ class Page(Base):
 
         return reviews
 
-    def _get(self, url, type):
+    def _get(self, url, object_type):
         html = soup(url)
 
         table = html.find("div", class_="table")
@@ -145,7 +150,7 @@ class Page(Base):
         objects_raw = table.find_all("div", recursive=False)[1:]
         objects = []
         for obj in objects_raw:
-            thumbnail = Thumbnail(name=obj.a["title"], url=join(obj.a["href"]), image=obj.a.img["src"], type=type)
+            thumbnail = Thumbnail(name=obj.a["title"], url=join(obj.a["href"]), image=obj.a.img["src"], type=object_type)
             objects.append(thumbnail)
 
         return objects
@@ -300,7 +305,7 @@ class Article(Base):
             self.tags = {x.string : x["href"] for x in raw.find("h5", string="Tags").parent.span.find_all("a") if x is not None}
         except AttributeError:
             self.tags = {}
-            log.info("Article %s has no tags", self.title)
+            LOGGER.info("Article %s has no tags", self.title)
 
         self.report = raw.find("h5", string="Report").parent.span.a["href"]
         
@@ -369,7 +374,7 @@ class User(Page):
             groups_raw = html.find("span", string="Groups").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-2]
             self.groups = [Thumbnail(name=div.a["title"], url=join(div.a["href"]), type=ThumbnailType.group) for div in groups_raw]
         except AttributeError:
-            log.info("User %s doesn't have any groups", self.name)
+            LOGGER.info("User %s doesn't have any groups", self.name)
             self.groups = []
 
         blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.find("div", class_="table")
@@ -378,40 +383,40 @@ class User(Page):
             self.blog = Blog(heading=blogs_raw.pop(0), text=blogs_raw.pop(0))
         except (TypeError, AttributeError):
             self.blog = None
-            log.info("User %s has no front page blog", self.name)
+            LOGGER.info("User %s has no front page blog", self.name)
 
         try:
             blogs_raw = blogs_raw.find_all("div", recursive=False)
             self.blogs = [Thumbnail(name=blog.a["title"], url=join(blog.a["href"]), type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
         except (TypeError, AttributeError):
             self.blogs = []
-            log.info("User %s has no blog suggestions", self.name)
+            LOGGER.info("User %s has no blog suggestions", self.name)
 
         try:
             imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
             self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
         except AttributeError:
             self.imagebox = []
-            log.info("User %s has no imagebox", self.name)
+            LOGGER.info("User %s has no imagebox", self.name)
 
         try:
             friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
             self.friends = [Thumbnail(name=friend.a["title"], url=join(friend.a["href"]), type=ThumbnailType.user) for friend in friends]
         except AttributeError:
             self.friends = []
-            log.info("User %s has no friends ;(", self.name)
+            LOGGER.info("User %s has no friends ;(", self.name)
 
         try:
             self.homepage =  html.find("h5", string="Homepage").parent.span.a["href"]
         except AttributeError:
             self.homepage = None
-            log.info("User %s has no homepage", self.name)
+            LOGGER.info("User %s has no homepage", self.name)
 
         try:
             self.comments = self._get_comments(html)
         except AttributeError:
             self.comments = []
-            log.info("User %s has no comments", self.name)
+            LOGGER.info("User %s has no comments", self.name)
 
     def __repr__(self):
         return f"<User name={self.name} level={self.profile.level}>"

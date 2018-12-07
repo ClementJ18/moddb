@@ -1,9 +1,11 @@
-from .enums import *
-from .utils import *
+from .enums import ThumbnailType, SearchCategory, Membership, License, Genre, Theme, PlayerStyle
+from .utils import get_date, soup, get_views, join, normalize, LOGGER
 
 import sys
-import logging
-log = logging.getLogger("moddb")
+import re
+
+__all__ = ['CommentsList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
+           'Comment', 'Review', 'UserProfile', 'UserStatistics']
 
 class CommentsList(list):
     def flatten(self):
@@ -50,7 +52,6 @@ class Profile:
             "platform": []
             })
 
-
         try:
             _name = html.find("a", itemprop="mainEntityOfPage").string
         except AttributeError:
@@ -61,7 +62,7 @@ class Profile:
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         self.type = page_type
         self.contact = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
-        self.follow = join([x.parent.span.a["href"] for x in profile_raw.find_all("h5") if x.string in ["Mod watch", "Game watch", "Group watch", "Engine watch"]][0])
+        self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch"])[0]).parent.span.a["href"]
         
         try:
             share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
@@ -95,14 +96,14 @@ class Profile:
                 d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
                 self.release = get_date(d)
             except KeyError:
-                log.info("%s %s has not been released", page_type.name, _name)
+                LOGGER.info("%s %s has not been released", page_type.name, _name)
                 self.release = False
 
         if page_type != SearchCategory.groups:
             try:
                 self.homepage =  profile_raw.find("h5", string="Homepage").parent.span.a["href"]
             except AttributeError:
-                log.info("%s %s has no homepage", page_type.name, _name)
+                LOGGER.info("%s %s has no homepage", page_type.name, _name)
 
         if page_type in [SearchCategory.games, SearchCategory.addons]:
             url = join(profile_raw.find("h5", string="Engine").parent.span.a["href"])
@@ -234,7 +235,7 @@ class UserProfile:
         try:
             self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
         except AttributeError:
-            log.info("User %s has not publicized their gender", name)
+            LOGGER.info("User %s has not publicized their gender", name)
             self.gender = None        
 
         self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
@@ -264,7 +265,7 @@ class UserStatistics:
         except AttributeError:
             self.rank = 0
             self.total = 0
-            log.info("User %s has no rank", name)
+            LOGGER.info("User %s has no rank", name)
 
     def __repr__(self):
         return f"<Statistics rank={self.rank}/{self.total}>"
