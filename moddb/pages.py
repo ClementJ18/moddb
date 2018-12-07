@@ -23,6 +23,20 @@ class Base:
                     
         return comments
 
+    def _get_suggestions(self, html):
+        suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
+        suggestions = []
+        for x in suggestions_raw:
+            try:
+                link = x.find("a", class_="image")
+                suggestion_type = link["href"].split("/")[1].replace("s", "")
+                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
+                suggestions.append(suggestion)
+            except (AttributeError, TypeError):
+                pass
+
+        return suggestions
+
     def get_comments(self, index=1):
         return self._get_comments(soup(f"{self.url}/page/{index}"))
 
@@ -82,21 +96,6 @@ class Page(Base):
         except AttributeError:
             self.rating = 0.0
             LOGGER.info("%s %s is not rated", self.profile.type.name, self.name)
-        
-
-    def _get_suggestions(self, html):
-        suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
-        suggestions = []
-        for x in suggestions_raw:
-            try:
-                link = x.find("a", class_="image")
-                suggestion_type = link["href"].split("/")[1].replace("s", "")
-                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
-                suggestions.append(suggestion)
-            except (AttributeError, TypeError):
-                pass
-
-        return suggestions
 
     def _get_files(self, html):
         files_raw = html.find(string="Files").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
@@ -330,10 +329,65 @@ class Article(Base):
     def __repr__(self):
         return f"<Article title={self.title} type={self.type.name}>"
 
-class Team:
-    pass
+class Group(Base):
+    def __init__(self, html):
+        self.url = html.find("meta", property="og:url")["content"]
+        self.name = html.find("div", class_="title").h2.a.string
 
-class Group:
+        self.profile = Profile(html)
+        self.stats = Statistics(html)
+
+        raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+        self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+
+        #misc
+        try:
+            self.embed = html.find("input", type="text", class_="text textembed")["value"]
+        except TypeError:
+            self.embed = str(html.find_all("textarea")[1].a)
+
+        try:
+            imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
+            self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
+        except AttributeError:
+            self.imagebox = []
+            LOGGER.info("Group %s has no imagebox", self.name)
+
+        self.comment = self._get_comments(html)
+        self.suggestions = self._get_suggestions(html)
+
+        try:
+            articles_raw = html.find("span", string="Articles").parent.parent.parent.find("div", class_="table")
+            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear", recursive=False)
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
+        except AttributeError:
+            LOGGER.info("Group %s has no article suggestions", self.name)
+            self.articles = []
+
+        self.description = html.find("div", id="profiledescription").text
+
+    def __repr__(self):
+        return f"<Group name={self.name}>"
+
+    def get_articles(self, index=1):
+        return self._get(f"{self.url}/articles/page/{index}", ThumbnailType.article)
+
+    def get_members(self, index=1):
+        return self._get(f"{self.url}/members/page/{index}", ThumbnailType.user)
+
+    def get_files(self, index=1):
+        return self._get(f"{self.url}/downloads/page/{index}", ThumbnailType.file)
+
+    def get_images(self, index=1):
+        pass
+
+    def get_videos(self, index=1):
+        pass
+
+    def get_addons(self, index=1):
+        return self._get(f"{self.url}/addons/page/{index}", ThumbnailType.addon)
+
+class Team:
     pass
 
 class Job:

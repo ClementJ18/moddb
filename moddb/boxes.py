@@ -21,7 +21,7 @@ class CommentsList(list):
 
 class Statistics:
     def __init__(self, html):
-        misc = html.find_all("h5", string=("Files", "Articles", "Reviews", "Watchers", "Mods"))
+        misc = html.find_all("h5", string=("Files", "Articles", "Reviews", "Watchers", "Mods", "Addons", "Members"))
         self.__dict__.update({stat.string.lower() : int(normalize(stat.parent.a.string)) for stat in misc})
 
         visits = normalize(html.find("h5", string="Visits").parent.a.string)
@@ -31,7 +31,10 @@ class Statistics:
         self.rank = int(rank[0].replace(",", ""))
         self.total = int(rank[1].replace(",", ""))
 
-        self.updated = get_date(html.find("time", itemprop="dateModified")["datetime"])
+        try:
+            self.updated = get_date(html.find("time", itemprop="dateModified")["datetime"])
+        except TypeError:
+            self.updated = None
 
     def __repr__(self):
         return f"<Statistics rank={self.rank}/{self.total}>"
@@ -55,7 +58,10 @@ class Profile:
         try:
             _name = html.find("a", itemprop="mainEntityOfPage").string
         except AttributeError:
-            _name = html.find("span", itemprop="headline").string
+            try:
+                _name = html.find("span", itemprop="headline").string
+            except AttributeError:
+                _name = html.find("div", class_="title").h2.a.string
             
         page_type = SearchCategory[html.find("div", id="subheader").find("ul", class_="tabs").find("li", class_="on").a.string]
         
