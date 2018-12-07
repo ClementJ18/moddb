@@ -62,7 +62,7 @@ class Profile:
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         self.type = page_type
         self.contact = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
-        self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch"])[0]).parent.span.a["href"]
+        self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch"])[0].parent.span.a["href"])
         
         try:
             share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
@@ -90,8 +90,9 @@ class Profile:
             self.icon = profile_raw.find("h5", string="Icon").parent.span.img["src"]
 
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons]:
-            #ToDo: in the future support having different develope/publisher/creator/company
-            self.developers = [x.parent.a.string for x in profile_raw.find_all("h5") if x.string in ["Developer", "Publisher", "Developer & Publisher","Creator", "Company"]][0]
+            people = profile_raw.find_all("h5", string=["Developer", "Publisher", "Developer & Publisher","Creator", "Company"])
+            self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != creator else ThumbnailType.team) for x in people}            
+
             try:
                 d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
                 self.release = get_date(d)
@@ -106,13 +107,15 @@ class Profile:
                 LOGGER.info("%s %s has no homepage", page_type.name, _name)
 
         if page_type in [SearchCategory.games, SearchCategory.addons]:
-            url = join(profile_raw.find("h5", string="Engine").parent.span.a["href"])
-            name = profile_raw.find("h5", string="Engine").parent.span.a.string
+            engine = profile_raw.find("h5", string="Engine")
+            url = engine.parent.span.a["href"]
+            name = engine.parent.span.a.string
             self.engine = Thumbnail(url=url, name=name, type=ThumbnailType.engine)
 
         if page_type == SearchCategory.mods:
-            url = join(profile_raw.find("h5", string="Game").parent.span.a["href"])
-            name = profile_raw.find("h5", string="Game").parent.span.a.string
+            game = profile_raw.find("h5", string="Game")
+            url = game.parent.span.a["href"]
+            name = game.parent.span.a.string
             self.game = Thumbnail(url=url, name=name, type=ThumbnailType.game)
 
         if page_type == SearchCategory.engines:
@@ -120,7 +123,7 @@ class Profile:
 
         if page_type in [SearchCategory.games, SearchCategory.engines, SearchCategory.addons]:
             platforms = profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")
-            self.platforms = [Thumbnail(name=x.string, url=join(x["href"]), type=ThumbnailType.platform) for x in platforms]
+            self.platforms = [Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform) for x in platforms]
 
     def __repr__(self):
         return f"<Profile type={self.type.name}>"
@@ -151,7 +154,7 @@ class Style:
 
 class Thumbnail:
     def __init__(self, **attrs):
-        self.url = attrs.get("url")
+        self.url = join(attrs.get("url"))
         self.name = attrs.get("name")
         self.image = attrs.get("image", None)
         self.type = attrs.get("type")
@@ -166,7 +169,7 @@ class Comment:
     def __init__(self, html):
         author = html.find("a", class_="avatar")
         self.id = html["id"]
-        self.author = Thumbnail(name=author["title"], url=join(author["href"]), image=author.img["src"], type=ThumbnailType.user)
+        self.author = Thumbnail(name=author["title"], url=author["href"], image=author.img["src"], type=ThumbnailType.user)
         self.date = get_date(html.find("time")["datetime"])
         actions = html.find("span", class_="actions")
 
@@ -211,7 +214,7 @@ class Review:
         self.rating = int(review.span.string)
 
         author = review.div.a
-        self.author = Thumbnail(url=join(author["href"]), name=author.string.split(" ")[0], type=ThumbnailType.user)
+        self.author = Thumbnail(url=author["href"], name=author.string.split(" ")[0], type=ThumbnailType.user)
         self.date = get_date(review.div.span.time["datetime"])
 
     def __repr__(self):

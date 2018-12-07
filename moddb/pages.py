@@ -45,7 +45,7 @@ class Page(Base):
             string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
             articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-            self.articles = [Thumbnail(name=x.a["title"], url= join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("%s %s has no article suggestions", self.profile.type.name, self.name)
             self.articles = []
@@ -68,7 +68,7 @@ class Page(Base):
 
         #imagebox
         imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
-        self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
+        self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
         
         #misc
         try:
@@ -91,7 +91,7 @@ class Page(Base):
             try:
                 link = x.find("a", class_="image")
                 suggestion_type = link["href"].split("/")[1].replace("s", "")
-                suggestion = Thumbnail(name=link["title"], url=join(link["href"]), image=link.img["src"], type=ThumbnailType[suggestion_type])
+                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
                 suggestions.append(suggestion)
             except (AttributeError, TypeError):
                 pass
@@ -104,7 +104,7 @@ class Page(Base):
         for x in files_raw:
             link = x.find("div", class_="content").h4.a
             image_url = link.parent.parent.parent.find("img")["src"]
-            file = Thumbnail(name=link.string, url=join(link["href"]), image=image_url, type=ThumbnailType.file)
+            file = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.file)
             files.append(file)
 
         return files
@@ -150,7 +150,7 @@ class Page(Base):
         objects_raw = table.find_all("div", recursive=False)[1:]
         objects = []
         for obj in objects_raw:
-            thumbnail = Thumbnail(name=obj.a["title"], url=join(obj.a["href"]), image=obj.a.img["src"], type=object_type)
+            thumbnail = Thumbnail(name=obj.a["title"], url=obj.a["href"], image=obj.a.img["src"], type=object_type)
             objects.append(thumbnail)
 
         return objects
@@ -200,7 +200,7 @@ class Engine(Page):
         for x in games_raw:
             link = x.find("div", class_="content").h4.a
             image_url = link.parent.parent.parent.find("img")["src"]
-            game = Thumbnail(name=link.string, url=join(link["href"]), image=image_url, type=ThumbnailType.game)
+            game = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.game)
             games.append(game)
 
         return games
@@ -227,7 +227,7 @@ class File(Base):
         self.type = FileCategory(int(info.find("h5", string="Category").parent.a["href"][-1]))
         
         uploader = info.find("h5", string="Uploader").parent.a
-        self.author = Thumbnail(url=join(uploader["href"]), name=uploader.string, type=ThumbnailType.user)
+        self.author = Thumbnail(url=uploader["href"], name=uploader.string, type=ThumbnailType.user)
 
         self.date = get_date(info.find("h5", string="Added").parent.span.time["datetime"])
         self.button = info.find("h5", string="Embed Button").parent.span.input["value"]
@@ -321,7 +321,7 @@ class Article(Base):
         
         self.introduction = html.find("p", itemprop="description").string
         author = html.find("span", itemprop="author").span.a
-        self.author = Thumbnail(name=author.string, url=join(author["href"]), type=ThumbnailType.user)
+        self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
 
         self.date = get_date(html.find("time", itemprop="datePublished")["datetime"])
         self.html = str(html.find("div", itemprop="articleBody"))
@@ -345,7 +345,7 @@ class Blog(Base):
         text = attrs.get("text")
 
         author = heading.find("span", class_="subheading").a
-        self.author = Thumbnail(url=join(author["href"]), name=author.string, type=ThumbnailType.user)
+        self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.user)
 
         self.date = get_date(heading.find("span", class_="date").time["datetime"])
 
@@ -372,7 +372,7 @@ class User(Page):
 
         try:
             groups_raw = html.find("span", string="Groups").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-2]
-            self.groups = [Thumbnail(name=div.a["title"], url=join(div.a["href"]), type=ThumbnailType.group) for div in groups_raw]
+            self.groups = [Thumbnail(name=div.a["title"], url=div.a["href"], type=ThumbnailType.group) for div in groups_raw]
         except AttributeError:
             LOGGER.info("User %s doesn't have any groups", self.name)
             self.groups = []
@@ -387,21 +387,21 @@ class User(Page):
 
         try:
             blogs_raw = blogs_raw.find_all("div", recursive=False)
-            self.blogs = [Thumbnail(name=blog.a["title"], url=join(blog.a["href"]), type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
+            self.blogs = [Thumbnail(name=blog.a["title"], url=blog.a["href"], type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
         except (TypeError, AttributeError):
             self.blogs = []
             LOGGER.info("User %s has no blog suggestions", self.name)
 
         try:
             imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
-            self.imagebox = [Thumbnail(name=x.a["title"], url=join(x.a["href"]), image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
+            self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
         except AttributeError:
             self.imagebox = []
             LOGGER.info("User %s has no imagebox", self.name)
 
         try:
             friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
-            self.friends = [Thumbnail(name=friend.a["title"], url=join(friend.a["href"]), type=ThumbnailType.user) for friend in friends]
+            self.friends = [Thumbnail(name=friend.a["title"], url=friend.a["href"], type=ThumbnailType.user) for friend in friends]
         except AttributeError:
             self.friends = []
             LOGGER.info("User %s has no friends ;(", self.name)

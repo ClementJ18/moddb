@@ -1,6 +1,7 @@
-from typing import List, Union
+from typing import List
 from .enums import SearchCategory
 from .boxes import Thumbnail
+from .utils import soup, SESSION
 
 def search(self, query : str, category : SearchCategory, **filters) -> List[Thumbnail]:
     pass
@@ -10,11 +11,10 @@ def parse(self, url : str) -> object:
 
 
 def login(username, password):
-    r = requests.get("https://www.moddb.com/members/login")
-    soup = BeautifulSoup(r.text, "html.parser")
+    html = soup("https://www.moddb.com/members/login")
 
     payload = {
-        soup.find("input", id="membersusername")["name"] : username,
+        html.find("input", id="membersusername")["name"] : username,
         "password": password,
         "rememberme": 1
     }

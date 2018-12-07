@@ -24,10 +24,9 @@ def get_date(d):
 
 def soup(url):
     cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
-    print(cookies)
     r = SESSION.get(url, cookies=cookies)
-    soup = BeautifulSoup(r.text, "html.parser")
-    return soup
+    html = BeautifulSoup(r.text, "html.parser")
+    return html
 
 def get_views(string):
     matches = re.search(r"^([0-9,]*) \(([0-9,]*) today\)$", string)
