@@ -23,6 +23,32 @@ class Base:
                     
         return comments
 
+    def _get_blogs(self, index):
+        html = soup(f"{self.url}/blogs/page/{index}")
+        table = html.find("div", id="articlesbrowse").find("div", class_="table")
+        if len(table["class"]) > 1:
+            return []
+
+        raw_blogs = table.find_all("div", recursive=False)[2:]
+        blogs = []
+        e = 0
+        for _ in range(len(raw_blogs)):
+            try:
+                heading = raw_blogs[e]
+            except IndexError:
+                break
+
+            try:
+                text = raw_blogs[e+1]
+            except IndexError:
+                text = {"class": "None"}
+
+            blog_obj = Blog(heading=heading, text=text)
+            blogs.append(blog_obj)
+            e += 2
+
+        return blogs
+
     def _get_suggestions(self, html):
         suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
         suggestions = []
@@ -36,6 +62,17 @@ class Base:
                 pass
 
         return suggestions
+
+    def _get_games(self, html):
+        games_raw = html.find(string="Games").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
+        games = []
+        for x in games_raw:
+            link = x.find("div", class_="content").h4.a
+            image_url = link.parent.parent.parent.find("img")["src"]
+            game = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.game)
+            games.append(game)
+
+        return games
 
     def get_comments(self, index=1):
         return self._get_comments(soup(f"{self.url}/page/{index}"))
@@ -193,17 +230,6 @@ class Engine(Page):
 
         self.games = self._get_games(html)
 
-    def _get_games(self, html):
-        games_raw = html.find(string="Games").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
-        games = []
-        for x in games_raw:
-            link = x.find("div", class_="content").h4.a
-            image_url = link.parent.parent.parent.find("img")["src"]
-            game = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.game)
-            games.append(game)
-
-        return games
-
     def get_games(self, index=1):
         return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game)
 
@@ -344,17 +370,34 @@ class Group(Base):
         self.url = html.find("meta", property="og:url")["content"]
         self.name = html.find("div", class_="title").h2.a.string
 
-        self.profile = Profile(html)
-        self.stats = Statistics(html)
+        try:
+            self.profile = Profile(html)
+        except AttributeError:
+            LOGGER.info("Entity %s has no profile (private)", self.name)
+            self.profile = None
 
-        raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-        self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+        try:
+            self.stats = Statistics(html)
+        except AttributeError:
+            LOGGER.info("Entity %s has no stats (private)", self.name)
+            self.stats = None
+
+        try:
+            raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+            self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+        except AttributeError:
+            LOGGER.info("Entity %s has no tags (private)", self.name)
+            self.tags = {}
 
         #misc
         try:
             self.embed = html.find("input", type="text", class_="text textembed")["value"]
         except TypeError:
-            self.embed = str(html.find_all("textarea")[1].a)
+            try:
+                self.embed = str(html.find_all("textarea")[1].a)
+            except IndexError:
+                LOGGER.info("Group %s has no embed", self.name)
+                self.embed = None
 
         try:
             imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
@@ -405,8 +448,34 @@ class Group(Base):
     def get_addons(self, index=1):
         return self._get(f"{self.url}/addons/page/{index}", ThumbnailType.addon)
 
-class Team:
-    pass
+    def get_blogs(self, index=1):
+        return self._get_blogs(index)
+
+class Team(Group):
+    def __init__(self, html):
+        super().__init__(html)
+        try:
+            self.games = self._get_games(html)
+        except AttributeError:
+            LOGGER.info("Group %s has no games", self.name)
+            self.games = []
+
+        try:
+            self.engines = self._get_engines(html)
+        except AttributeError:
+            LOGGER.info("Group %s has no engines", self.name)
+            self.engines = []
+
+    def _get_engines(self, html):
+        engines_raw = html.find(string="Engines").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
+        engines = []
+        for x in engines_raw:
+            link = x.find("div", class_="content").h4.a
+            image_url = link.parent.parent.parent.find("img")["src"]
+            engine = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.engine)
+            engines.append(engine)
+
+        return engines
 
 class Job:
     pass
@@ -494,30 +563,7 @@ class User(Page):
         return f"<User name={self.name} level={self.profile.level}>"
 
     def get_blogs(self, index=1):
-        html = soup(f"{self.url}/blogs/page/{index}")
-        table = html.find("div", id="articlesbrowse").find("div", class_="table")
-        if len(table["class"]) > 1:
-            return []
-
-        raw_blogs = table.find_all("div", recursive=False)[2:]
-        blogs = []
-        e = 0
-        for _ in range(len(raw_blogs)):
-            try:
-                heading = raw_blogs[e]
-            except IndexError:
-                break
-
-            try:
-                text = raw_blogs[e+1]
-            except IndexError:
-                text = {"class": "None"}
-
-            blog_obj = Blog(heading=heading, text=text)
-            blogs.append(blog_obj)
-            e += 2
-
-        return blogs
+        return self._get_blogs(index)
 
     def get_user_comments(self, index=1):
         html = soup(f"{self.url}/comments/page/{index}")

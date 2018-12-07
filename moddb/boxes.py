@@ -97,7 +97,7 @@ class Profile:
 
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons]:
             people = profile_raw.find_all("h5", string=["Developer", "Publisher", "Developer & Publisher","Creator", "Company"])
-            self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != creator else ThumbnailType.team) for x in people}            
+            self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != "Creator" else ThumbnailType.user) for x in people}            
 
             try:
                 d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
