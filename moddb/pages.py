@@ -217,7 +217,11 @@ class File(Base):
         self.downloads = info.find("h5", string="Downloads").parent.a.string
         self.hash = file["md5 hash"]
         self.name = file["filename"]
-        self.comments = self._get_comments(html)
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            self.comments = []
+            LOGGER.info("File %s has no comments", self.name)
 
         self.size = int(re.sub(r"[(),bytes]", "", file["size"].split(" ")[1]))
         self.today = int(re.sub(r"[(),today]", "", self.downloads.split(" ")[1]))
@@ -249,11 +253,14 @@ class Media(Base):
         raw_media = {media.string.lower() : media.parent for media in html.find_all("h5") if media.string in media_headings}
 
         self.date = get_date(raw_media["date"].span.time["datetime"])
-        url = raw_media["by"].span.a["href"]
-        name = raw_media["by"].span.a.string.strip()
+        self.name = raw_media["by"].span.a.string.strip()
 
         self.author = Thumbnail(url=url, name=name, type=ThumbnailType.user)
-        self.comments = self._get_comments(html)
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            self.comments = []
+            LOGGER.info("Media %s has no comments", self.name)
 
         if "duration" in raw_media:
             duration = raw_media["duration"].span.time.string.strip().split(":")
@@ -278,8 +285,6 @@ class Media(Base):
             self.url = html.find("video", id="mediaplayer").find("source")["src"]
 
         self.description = html.find("meta", {"name":"description"})["content"]
-        self.name = html.find("meta", property="og:title")["content"]
-        self.url = html.find("meta", property="og:url")["content"]
 
 
     def __repr__(self):
@@ -290,8 +295,13 @@ class Article(Base):
     def __init__(self, html):
         raw_type = html.find("h5", string="Browse").parent.span.a.string
         self.type = ArticleType[raw_type.lower()]
-        self.comments = self._get_comments(html)
-        self.title = html.find("span", itemprop="headline").string
+        self.name = html.find("span", itemprop="headline").string
+
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            self.comments = []
+            LOGGER.info("Article %s has no comments", self.name)
 
         try:
             raw = html.find("span", string=raw_type[0:-1]).parent.parent.parent.find("div", class_="table tablemenu")
@@ -353,7 +363,12 @@ class Group(Base):
             self.imagebox = []
             LOGGER.info("Group %s has no imagebox", self.name)
 
-        self.comment = self._get_comments(html)
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            self.comments = []
+            LOGGER.info("Group %s has no comments", self.name)
+
         self.suggestions = self._get_suggestions(html)
 
         try:
@@ -364,7 +379,10 @@ class Group(Base):
             LOGGER.info("Group %s has no article suggestions", self.name)
             self.articles = []
 
-        self.description = html.find("div", id="profiledescription").text
+        try:
+            self.description = html.find("div", id="profiledescription").text
+        except AttributeError:
+            self.description = html.find("div", class_="column span-all").find("div", class_="tooltip").parent.text
 
     def __repr__(self):
         return f"<Group name={self.name}>"
