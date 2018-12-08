@@ -27,3 +27,6 @@ def login(username, password):
 
     browser.submit_form(form)
     sys.modules["moddb"].SESSION = browser.session
+
+    if not "freeman" in browser.session.cookies:
+        raise ValueError(f"Login failed for user {username}")
