@@ -30,3 +30,6 @@ def login(username, password):
 
     if not "freeman" in browser.session.cookies:
         raise ValueError(f"Login failed for user {username}")
+
+def logout():
+    sys.modules["moddb"].SESSION.cookies.clear()
