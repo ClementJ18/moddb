@@ -4,10 +4,10 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 import logging
+import sys
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
-SESSION = requests.Session()
 
 def get_date(d):
     try:
@@ -23,6 +23,7 @@ def get_date(d):
     return datetime.datetime.strptime(d, '%Y-%m')
 
 def soup(url):
+    SESSION = sys.modules["moddb"].SESSION
     cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
     r = SESSION.get(url, cookies=cookies)
     html = BeautifulSoup(r.text, "html.parser")

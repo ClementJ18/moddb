@@ -89,7 +89,11 @@ class Page(Base):
 
         #thumbnails
         self.suggestions = self._get_suggestions(html)
-        self.files = self._get_files(html)
+        try:
+            self.files = self._get_files(html)
+        except AttributeError:
+            LOGGER.info("%s %s has no files", self.profile.type.name, self.name)
+            self.files = []
 
         articles_raw = None
         try:
