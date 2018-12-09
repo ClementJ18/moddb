@@ -69,7 +69,7 @@ moddb.login("valid_username", "valid_password")
 ```
 
 The session the package uses will be updated and all further requests will now be made logged in as that user. The function will raise a ValueError if the login fails. You can also log out of the account to disable access to those restricted elements with the `logout` function:
-```
+```py
 import moddb
 moddb.logout()
 ```

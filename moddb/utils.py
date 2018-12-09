@@ -22,11 +22,13 @@ def get_date(d):
 
     return datetime.datetime.strptime(d, '%Y-%m')
 
-def soup(url):
+def soup(url, params={}):
     SESSION = sys.modules["moddb"].SESSION
     cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
-    r = SESSION.get(url, cookies=cookies)
+
+    r = SESSION.get(url, cookies=cookies, params=params)
     html = BeautifulSoup(r.text, "html.parser")
+    
     return html
 
 def get_views(string):
