@@ -1,16 +1,39 @@
-from .enums import SearchCategory
+from .enums import SearchCategory, ThumbnailType
 from .boxes import Thumbnail
-from .utils import soup
+from .utils import soup, LOGGER
 
+import re
 import sys
 from typing import List
 from robobrowser import RoboBrowser
+from collections import Counter
 
-def search(self, query : str, category : SearchCategory, **filters) -> List[Thumbnail]:
+def search(query : str, category : SearchCategory, **filters) -> List[Thumbnail]:
     pass
 
-def parse(self, url : str) -> object:
-    pass
+def parse(url : str, page_type : ThumbnailType = None) -> object:
+    regex = r"\/([a-z]+)\/"
+    html = soup(url)
+
+    type_mapping = {
+        "new": "article"
+    }
+
+    if page_type is None:
+        page_url = html.find("meta", property="og:url")["content"]
+        matches = re.findall(regex, page_url)
+        matches.reverse()
+        match = matches[0][0:-1] if matches[0].endswith("s") else matches[0]      
+
+        try:
+            page_type = ThumbnailType[match]
+        except KeyError:
+            page_type = ThumbnailType[type_mapping[match]]
+
+        LOGGER.info("%s is type %s", url, page_type)
+
+    model = getattr(sys.modules["moddb"], page_type.name.title())(html)
+    return model
 
 
 def login(username, password):

@@ -344,7 +344,7 @@ class Article(Base):
             self.tags = {x.string : x["href"] for x in raw.find("h5", string="Tags").parent.span.find_all("a") if x is not None}
         except AttributeError:
             self.tags = {}
-            LOGGER.info("Article %s has no tags", self.title)
+            LOGGER.info("Article %s has no tags", self.name)
 
         self.report = raw.find("h5", string="Report").parent.span.a["href"]
         
@@ -367,7 +367,7 @@ class Article(Base):
         self.plaintext = html.find("div", itemprop="articleBody").text
 
     def __repr__(self):
-        return f"<Article title={self.title} type={self.type.name}>"
+        return f"<Article title={self.name} type={self.type.name}>"
 
 class Group(Base):
     def __init__(self, html):
@@ -495,14 +495,14 @@ class Blog(Base):
         self.date = get_date(heading.find("span", class_="date").time["datetime"])
 
         title = heading.div.h4.a
-        self.title = title.string
+        self.name = title.string
         self.url = join(title["href"])
 
         self.html = str(text.content)
         self.plaintext = text.text
 
     def __repr__(self):
-        return f"<Blog title={self.title}>"
+        return f"<Blog title={self.name}>"
 
 
 class User(Page):
@@ -590,7 +590,7 @@ class PartialArticle:
     def __init__(self, html):
         meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
 
-        self.title = meta_raw.h4.a.string
+        self.name = meta_raw.h4.a.string
         self.url = join(meta_raw.h4.a["href"])
         self.date = get_date(meta_raw.find("time")["datetime"])
         try:
@@ -603,7 +603,7 @@ class PartialArticle:
         self.plaintext = content.text
 
     def __repr__(self):
-        return f"<PartialArticle title={self.title}>"
+        return f"<PartialArticle title={self.name}>"
 
     def get_article(self):
         return Article(soup(self.url))
