@@ -253,7 +253,7 @@ class FileCategory(enum.Enum):
     tutorials = 23
     other = 24
 
-class JobSkills(enum.Enum):
+class JobSkill(enum.Enum):
     artists = 1
     audio_or_music = 2
     human_resources = 3

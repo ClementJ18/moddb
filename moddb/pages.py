@@ -1,5 +1,5 @@
 from .boxes import *
-from .enums import ThumbnailType, SearchCategory, FileCategory, MediaCategory, ArticleType
+from .enums import ThumbnailType, SearchCategory, FileCategory, MediaCategory, ArticleType, JobSkill
 from .utils import soup, join, LOGGER, get_type, get_date, get_views
 
 import re
@@ -482,7 +482,27 @@ class Team(Group):
         return engines
 
 class Job:
-    pass
+    def __init__(self, html):
+        profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
+
+        author = profile_raw.find("h5", string="Author").parent.span.a
+        self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.user)
+
+        self.paid = profile_raw.find("h5", string="Paid").parent.a.string == "Yes"
+
+        tags = profile_raw.find("h5", string="Tags").parent.span.find_all("a")
+        self.tags = {x.string : join(x["href"]) for x in tags}
+
+        self.skill = JobSkill(int(profile_raw.find("h5", string="Skill").parent.span.a["href"][-1]))
+
+        self.location = profile_raw.find("h5", string="Location").parent.span.string.strip()
+
+        text_raw = html.find("div", id="readarticle")
+        self.name = text_raw.find("div", class_="title").find("span", class_="heading").string
+        self.text = text_raw.find("div", id="articlecontent").text
+
+        related = html.find("div", class_="tablerelated").find_all("a", class_="image")
+        self.related = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related]
 
 class Blog(Base):
     def __init__(self, **attrs):

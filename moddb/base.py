@@ -11,7 +11,7 @@ from collections import Counter
 def search(query : str, category : SearchCategory, **filters) -> List[Thumbnail]:
     pass
 
-def parse(url : str, page_type : ThumbnailType = None) -> object:
+def parse(url : str, *, page_type : ThumbnailType = None) -> object:
     regex = r"\/([a-z]+)\/"
     html = soup(url)
 
