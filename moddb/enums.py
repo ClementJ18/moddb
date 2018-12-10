@@ -202,13 +202,15 @@ class PlayerStyle(enum.IntFlag):
     coop = 4
     mmo = 8
 
-class DateAdded(enum.Enum):
-    singleplayer = 1
-    multiplayer = 2
-    coop = 4
-    mmo = 8
+class TimeFrame(enum.Enum):
+    day = 1
+    week = 2
+    month = 3
+    year = 4
+    more = 5
 
-class License(enum.Enum):
+
+class Licence(enum.Enum):
     bsd = 7
     commercial = 1
     creative_commons = 2

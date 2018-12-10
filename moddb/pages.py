@@ -79,6 +79,7 @@ class Base:
 
 class Page(Base):
     def __init__(self, html, page_type):
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         self.name = html.find("a", itemprop="mainEntityOfPage").string
 
         #boxes
@@ -239,6 +240,7 @@ class Engine(Page):
 
 class File(Base):
     def __init__(self, html):
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         files_headings = ("Filename", "Size", "MD5 Hash")
         info = html.find("div", class_="table tablemenu")
         t = [t for t in info.find_all("h5") if t.string in files_headings]
@@ -282,6 +284,7 @@ class Media(Base):
         media_headings = ("Date", "By", "Duration", "Size", "Views", "Filename")
         raw_media = {media.string.lower() : media.parent for media in html.find_all("h5") if media.string in media_headings}
 
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         self.date = get_date(raw_media["date"].span.time["datetime"])
         self.name = raw_media["by"].span.a.string.strip()
 
@@ -326,6 +329,7 @@ class Article(Base):
         raw_type = html.find("h5", string="Browse").parent.span.a.string
         self.type = ArticleType[raw_type.lower()]
         self.name = html.find("span", itemprop="headline").string
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
 
         try:
             self.comments = self._get_comments(html)
@@ -371,6 +375,7 @@ class Article(Base):
 
 class Group(Base):
     def __init__(self, html):
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         self.url = html.find("meta", property="og:url")["content"]
         self.name = html.find("div", class_="title").h2.a.string
 
@@ -485,6 +490,7 @@ class Job:
     def __init__(self, html):
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
 
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         author = profile_raw.find("h5", string="Author").parent.span.a
         self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.user)
 
@@ -506,6 +512,7 @@ class Job:
 
 class Blog(Base):
     def __init__(self, **attrs):
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         heading = attrs.get("heading")
         text = attrs.get("text")
 
@@ -528,7 +535,7 @@ class Blog(Base):
 class User(Page):
     def __init__(self, html):
         self.profile = UserProfile(html)
-
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         self.stats = UserStatistics(html)
 
         self.url = html.find("meta", property="og:url")["content"]
@@ -610,6 +617,7 @@ class PartialArticle:
     def __init__(self, html):
         meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
 
+        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         self.name = meta_raw.h4.a.string
         self.url = join(meta_raw.h4.a["href"])
         self.date = get_date(meta_raw.find("time")["datetime"])

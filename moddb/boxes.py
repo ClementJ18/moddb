@@ -1,4 +1,4 @@
-from .enums import ThumbnailType, SearchCategory, Membership, License, Genre, Theme, PlayerStyle
+from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, PlayerStyle
 from .utils import get_date, soup, get_views, join, normalize, LOGGER
 
 import sys
@@ -51,7 +51,7 @@ class Profile:
             "homepage": None,
             "game": None,
             "engine": None,
-            "license": None,
+            "licence": None,
             "platform": []
             })
 
@@ -125,7 +125,7 @@ class Profile:
             self.game = Thumbnail(url=url, name=name, type=ThumbnailType.game)
 
         if page_type == SearchCategory.engines:
-            self.license = License(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
+            self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
 
         if page_type in [SearchCategory.games, SearchCategory.engines, SearchCategory.addons]:
             platforms = profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")
