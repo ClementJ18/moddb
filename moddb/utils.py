@@ -28,7 +28,7 @@ def soup(url, params={}):
 
     r = SESSION.get(url, cookies=cookies, params=params)
     html = BeautifulSoup(r.text, "html.parser")
-    
+
     return html
 
 def get_views(string):
@@ -42,7 +42,7 @@ def join(path):
     return urljoin(BASE_URL, path)
 
 def normalize(string):
-    return string.replace(",", "").replace("members", "").replace("member", "")
+    return string.replace(",", "").replace("members", "").replace("member", "").strip()
 
 def get_type(img):
     if img is None:

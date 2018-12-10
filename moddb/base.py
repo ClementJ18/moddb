@@ -1,6 +1,6 @@
 from .enums import SearchCategory, ThumbnailType
 from .boxes import Thumbnail
-from .utils import soup, LOGGER
+from .utils import soup, LOGGER, normalize
 
 import re
 import sys
@@ -27,13 +27,14 @@ class Search:
         if self.page == 1:
             raise ValueError("Reached first page already")
 
-        return search(self.query, self.category, page=self.page-1, **self.filters)
+        return search(self.category, query=self.query, page=self.page-1, **self.filters)
 
     def __repr__(self):
         return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
 
-def search(query : str, category : SearchCategory, **filters) -> List[Thumbnail]:
+def search(category : SearchCategory, **filters) -> List[Thumbnail]:
     page = filters.pop('page', 1)
+    query = filters.pop("query", "")
     url = f"https://www.moddb.com/{category.name}/page/{page}"
     SESSION = sys.modules["moddb"].SESSION
     filter_parsed = {key : value.value for key, value in filters.items()}
@@ -44,7 +45,7 @@ def search(query : str, category : SearchCategory, **filters) -> List[Thumbnail]
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
     pages = len([x for x in html.find("div", class_="pages").children if x != "\n"])
     results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat) for x in search_raws]
-    results_max = int(html.find("h5", string=category.name.title()).parent.span.string.strip())
+    results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
 
     return Search(results=results, page_max=pages, page=page, filters=filters, 
                   category=category, query=query, results_max=results_max)
