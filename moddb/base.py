@@ -7,16 +7,47 @@ import sys
 from typing import List
 from robobrowser import RoboBrowser
 
+class Search:
+    def __init__(self, **kwargs):
+        self.results = kwargs.get("results")
+        self.category = kwargs.get("category")
+        self.filters = kwargs.get("filters")
+        self.page_max = kwargs.get("page_max")
+        self.page = kwargs.get("page")
+        self.query = kwargs.get("query")
+        self.results_max = kwargs.get("results_max")
+
+    def next_page(self):
+        if self.page == self.page_max:
+            raise ValueError("Reached last page already")
+
+        return search(self.query, self.category, page=self.page+1, **self.filters)
+
+    def previous_page(self):
+        if self.page == 1:
+            raise ValueError("Reached first page already")
+
+        return search(self.query, self.category, page=self.page-1, **self.filters)
+
+    def __repr__(self):
+        return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
+
 def search(query : str, category : SearchCategory, **filters) -> List[Thumbnail]:
-    url = f"https://www.moddb.com/{category.name}"
+    page = filters.pop('page', 1)
+    url = f"https://www.moddb.com/{category.name}/page/{page}"
     SESSION = sys.modules["moddb"].SESSION
     filter_parsed = {key : value.value for key, value in filters.items()}
-    html = soup(url, {"filter": "t", "kw": query, **filter_parsed})
     cat = ThumbnailType[category.name[0:-1]]
-    search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
 
-    return str(html)
-    return [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat) for x in search_raws]
+    html = soup(url, {"filter": "t", "kw": query, **filter_parsed})
+
+    search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
+    pages = len([x for x in html.find("div", class_="pages").children if x != "\n"])
+    results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat) for x in search_raws]
+    results_max = int(html.find("h5", string=category.name.title()).parent.span.string.strip())
+
+    return Search(results=results, page_max=pages, page=page, filters=filters, 
+                  category=category, query=query, results_max=results_max)
 
 def parse(url : str, *, page_type : ThumbnailType = None) -> object:
     regex = r"\/([a-z]+)\/"
