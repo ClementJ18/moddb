@@ -35,12 +35,15 @@ class Search:
 def search(category : SearchCategory, **filters) -> List[Thumbnail]:
     page = filters.pop('page', 1)
     query = filters.pop("query", "")
+    sort = filters.pop("sort", None)
+    sort = f"{sort[0]}-{'asc' if sort[1] else 'desc'}" if sort else ""
+    
     url = f"https://www.moddb.com/{category.name}/page/{page}"
     SESSION = sys.modules["moddb"].SESSION
     filter_parsed = {key : value.value for key, value in filters.items()}
     cat = ThumbnailType[category.name[0:-1]]
 
-    html = soup(url, {"filter": "t", "kw": query, **filter_parsed})
+    html = soup(url, {"filter": "t", "kw": query, "sort": sort, **filter_parsed})
 
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
     pages = len([x for x in html.find("div", class_="pages").children if x != "\n"])
