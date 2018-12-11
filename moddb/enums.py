@@ -4,7 +4,7 @@ class SearchCategory(enum.Enum):
     games = 0
     mods = 1
     addons = 2
-    files = 3
+    dowloads = 3
     videos = 4
     articles = 5
     engines = 6
@@ -12,11 +12,17 @@ class SearchCategory(enum.Enum):
     groups = 8
     forum = 9
     jobs = 10
+    images = 11
+    audio = 12
+    reviews = 13
+    headlines = 14
+    blogs = 15
 
 class Category(enum.Enum):
-    mods = 0
-    games = 1
-    engines = 2
+    mods = "mods"
+    games = "games"
+    engines = "engines"
+    downloads = "downloads"
 
 class MediaCategory(enum.Enum):
     video = 0
@@ -27,8 +33,6 @@ class ArticleType(enum.Enum):
     news = 1
     features = 2
     tutorials = 4
-    blog = 8
-    headlines = 16
 
 class Membership(enum.Enum):
     invitation = 1
@@ -208,7 +212,6 @@ class TimeFrame(enum.Enum):
     month = 3
     year = 4
     more = 5
-
 
 class Licence(enum.Enum):
     bsd = 7
