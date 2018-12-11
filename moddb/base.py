@@ -8,6 +8,51 @@ from typing import List
 from robobrowser import RoboBrowser
 
 class Search:
+    """Represents the search you just conducted through the library's search function. Can be used to navigate 
+    the search page efficiently.
+
+    Attributes
+    -----------
+    results : list[moddb.Thumbnail]
+        The list of results the search returned
+
+    category : moddb.ThumbnailType
+        The type results
+
+    filters : dict{str : moddb.Enum}
+        The dict of filters that was used to search for the results
+
+    page_max : int
+        The number of pages
+
+    page : int
+        The current page
+
+    query : str
+        The text query that was used in the search
+
+    results_max : int
+        The total number of results for this search
+
+    Methods
+    --------
+    next_page()
+        Returns a new search object with the next page of results, will raise ValueError 
+        if the last page is the current one
+
+    previous_page()
+        Returns a new search object with the previous page of results, will raise 
+        ValueError if the first page is the current one
+
+    to_page(page : int)
+        Returns a new search object with results to a specific page in the search results 
+        allowing for fast navigation. Will raise ValueError if you attempt to navigate out 
+        of bounds or to your current page.
+
+    resort(new_sort : tuple(str, str))
+        Allows you to sort the whole search by a new parameter. Returns a new search object.
+
+    """
     def __init__(self, **kwargs):
         self.results = kwargs.get("results")
         self.category = kwargs.get("category")
@@ -32,6 +77,9 @@ class Search:
     def to_page(self, page):
         if self.page == page:
             raise ValueError("You already are on this page")
+
+        if 1 > self.page > self.page_max:
+            raise ValueError(f"Please pick a page between 1 and {self.page_max}")
 
         return search(self.category, query=self.query, page=page, **self.filters)
 
@@ -240,6 +288,27 @@ def search(category : SearchCategory, **filters):
                   category=category, query=query, results_max=results_max)
 
 def parse(url : str, *, page_type : ThumbnailType = None):
+    """Parse a url and return the appropriate object. The function will attempt to figure out the page itself
+    from the url and the content of the page but ModDB is not always consistent with this. In which case
+    it is recommended to pass a moddb.Thumbnail enum to the `page_type` kwarg.
+
+    Parameters
+    ------------
+    url : str
+        The url to parse
+
+    page_type : Optional[moddb.ThumbnailType]
+        The type of the page you are parsing, used to decide which model to parse the html with
+        can be left blank to let the function take care of it but might not always lead to the
+        correct result.
+
+    Returns
+    --------
+    moddb.Model
+        The parsed page as the instance of the model the page represents, can be anything like
+        moddb.Mod or moddb.Game
+    """
+
     regex = r"\/([a-z]+)\/"
     html = soup(url)
 
@@ -265,6 +334,23 @@ def parse(url : str, *, page_type : ThumbnailType = None):
 
 
 def login(username, password):
+    """Login the user to moddb through the library, this allows user to see guest comments and see
+    private groups they are part of.
+
+    Parameters
+    -----------
+    username : str
+        The username of the user
+
+    password : str
+        The password associated to that username
+
+    Raises
+    -------
+    ValueError
+        The password or username was incorrect
+    """
+
     browser = RoboBrowser(history=True, parser='html.parser')
     browser.open('https://www.moddb.com/members/login')
     t = browser.find_all("form")[1].find_all("input", class_="text", type="text")
@@ -283,4 +369,7 @@ def login(username, password):
         raise ValueError(f"Login failed for user {username}")
 
 def logout():
+    """Logs the user out by clearing the cookies, all guest commnets will be hidden and all private groups
+    will be hidden once more
+    """
     sys.modules["moddb"].SESSION.cookies.clear()
