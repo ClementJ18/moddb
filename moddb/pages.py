@@ -1,5 +1,6 @@
 from .boxes import *
-from .enums import ThumbnailType, SearchCategory, FileCategory, MediaCategory, ArticleType, JobSkill
+# from .enums import ThumbnailType, SearchCategory, FileCategory, MediaCategory, ArticleType, JobSkill
+from .enums import *
 from .utils import soup, join, LOGGER, get_type, get_date, get_views
 
 import re
@@ -8,6 +9,9 @@ __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Team', 'Group', 'Job', 'Blog', 'User', 'PartialArticle']
 
 class Base:
+    """An abstract class that implements the methods used on nearly every page. In addition, it implements
+    some shared hidden methods."""
+    
     def _get_comments(self, html):
         comments_raw = html.find("div", class_="table tablecomments").find_all("div", recursive=False)
         comments = CommentsList()
@@ -79,7 +83,7 @@ class Base:
 
 class Page(Base):
     def __init__(self, html, page_type):
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         self.name = html.find("a", itemprop="mainEntityOfPage").string
 
         #boxes
@@ -101,7 +105,7 @@ class Page(Base):
             string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
             articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("%s %s has no article suggestions", self.profile.type.name, self.name)
             self.articles = []
@@ -240,7 +244,7 @@ class Engine(Page):
 
 class File(Base):
     def __init__(self, html):
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         files_headings = ("Filename", "Size", "MD5 Hash")
         info = html.find("div", class_="table tablemenu")
         t = [t for t in info.find_all("h5") if t.string in files_headings]
@@ -284,7 +288,7 @@ class Media(Base):
         media_headings = ("Date", "By", "Duration", "Size", "Views", "Filename")
         raw_media = {media.string.lower() : media.parent for media in html.find_all("h5") if media.string in media_headings}
 
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         self.date = get_date(raw_media["date"].span.time["datetime"])
         self.name = raw_media["by"].span.a.string.strip()
 
@@ -329,7 +333,7 @@ class Article(Base):
         raw_type = html.find("h5", string="Browse").parent.span.a.string
         self.type = ArticleType[raw_type.lower()]
         self.name = html.find("span", itemprop="headline").string
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
 
         try:
             self.comments = self._get_comments(html)
@@ -375,7 +379,7 @@ class Article(Base):
 
 class Group(Base):
     def __init__(self, html):
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         self.url = html.find("meta", property="og:url")["content"]
         self.name = html.find("div", class_="title").h2.a.string
 
@@ -490,7 +494,7 @@ class Job:
     def __init__(self, html):
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
 
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         author = profile_raw.find("h5", string="Author").parent.span.a
         self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.user)
 
@@ -512,7 +516,7 @@ class Job:
 
 class Blog(Base):
     def __init__(self, **attrs):
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         heading = attrs.get("heading")
         text = attrs.get("text")
 
@@ -535,7 +539,7 @@ class Blog(Base):
 class User(Page):
     def __init__(self, html):
         self.profile = UserProfile(html)
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         self.stats = UserStatistics(html)
 
         self.url = html.find("meta", property="og:url")["content"]
@@ -617,7 +621,6 @@ class PartialArticle:
     def __init__(self, html):
         meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
 
-        self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
         self.name = meta_raw.h4.a.string
         self.url = join(meta_raw.h4.a["href"])
         self.date = get_date(meta_raw.find("time")["datetime"])

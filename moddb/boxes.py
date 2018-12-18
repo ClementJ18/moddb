@@ -1,25 +1,21 @@
-from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, PlayerStyle
+from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, PlayerStyle, Scope
 from .utils import get_date, soup, get_views, join, normalize, LOGGER
 
 import sys
 import re
+from typing import List
 
 __all__ = ['CommentsList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
            'Comment', 'Review', 'UserProfile', 'UserStatistics']
 
-class CommentsList(list):
-    def flatten(self):
-        top_list = []
-        for comment in super().__iter__():
-            top_list.append(comment)
-            for child in comment.children:
-                top_list.append(child)
-                top_list.extend(child.children)
-
-        return top_list
-    
-
 class Statistics:
+    """The stats box, on pages that have one. This represents total stats and daily stats.
+    
+    Attributes
+    ----------
+
+
+    """
     def __init__(self, html):
         misc = html.find_all("h5", string=("Files", "Articles", "Reviews", "Watchers", "Mods", "Addons", "Members"))
         self.__dict__.update({stat.string.lower() : int(normalize(stat.parent.a.string)) for stat in misc})
@@ -136,17 +132,15 @@ class Profile:
 
 class Style:
     def __init__(self, html):
-        titles = ("Theme", "Genre", "Players")
-
-        misc = html.find_all("h5")
-        styles = {style.string.lower() : re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc if style.string in titles}
+        misc = html.find_all("h5", string=("Theme", "Genre", "Players"))
+        styles = {style.string.lower() : re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc}
 
         self.theme = Theme(int(styles["theme"]))
         self.genre = Genre(int(styles["genre"]))
         self.players = PlayerStyle(int(styles["theme"])) 
 
         try:
-            self.scope = html.find("h5", string="Project").parent.a["href"][-1]
+            self.scope = Scope(int(html.find("h5", string="Project").parent.a["href"][-1]))
         except AttributeError:
             self.scope = None
 
@@ -207,6 +201,38 @@ class Comment:
 
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
+
+class CommentsList(list):
+    """Represents a list of comments. Inherits and works like a regular list but has an 
+    additional method called 'flatten' used to get all the nested children in a list"""
+
+    def flatten(self) -> List[Comment]:
+        """Returns a 'flattened' list of comments where children of comments are added right
+        after the parent comment so:
+        
+        [ Comment1 ]
+           ├── Comment2
+           |    ├── Comment4
+           |    └── Comment5
+           └── Comment3
+
+        would become:
+
+        [Comment1, Comment2, Comment4, Comment5, Comment3]
+
+        Returns
+        --------
+        list[Comment]
+            The flattened list fo comments
+        """
+        top_list = []
+        for comment in super().__iter__():
+            top_list.append(comment)
+            for child in comment.children:
+                top_list.append(child)
+                top_list.extend(child.children)
+
+        return top_list
 
 class Review:
     def __init__(self, **attrs):

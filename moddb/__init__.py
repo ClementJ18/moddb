@@ -1,7 +1,7 @@
-from .base import search, parse, login
+from .base import search, parse, login, logout
 from .pages import *
-from .utils import LOGGER, BASE_URL, soup
-from .enums import SearchCategory
+from .utils import LOGGER, BASE_URL, soup, Object
+from .enums import *
 
 import requests
 SESSION = requests.Session()

@@ -19,6 +19,32 @@ import moddb
 mod = moddb.parse("http://www.moddb.com/mods/edain-mod", page_type=moddb.ThumbnailType.mod)
 print(mod.name) #Edain Mod
 ```
+## Searching
+The package supports searching moddb with an optional query, filters and to sort those results. Filters differ widely depending on which model is being searched therefore a good read of the documentation of the search function is recommended. The only required parameter of the search function is a valid moddb.SearchCategory as the first argument. All other arguments are optional. the `search` function returns a moddb.Search object. The most basic example is:
+```py
+from moddb import search, SearchCategory
+search = search(SearchCategory.mods)
+#returns a search objects with the results being a list of mod thumbnails
+```
+You can also search titles of the models with a string query.
+```py
+from moddb import search, SearchCategory
+search = search(SearchCategory.mods`, query="age of the ring")
+#returns a search objects with the results being a list of mod thumbnails which moddb has matched with the words age of the ring
+```
+Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod.
+```py
+from moddb import search, SearchCategory, Theme, Status
+search = search(SearchCategory.mods, theme=Theme.fantasy, released=Status.released)
+#returns a search objects with the results being a list of mod thumbnails of mods which have been released and are labelled as 
+#fantasy themed.
+```
+And finally, you can sort the results with the `sort` kwargs which expects a tuple with the first element being the sort category and the second being whether you want the sort to be ascending or descending.
+```py
+from moddb import search, SearchCategory, Sort
+search = search(SearchCategory.mods, sort=(Sort.rating, "asc"))
+#returns a search objects with the results being a list of mod thumbnails sorted by rating with highest rating first
+```
 
 ## Finished Models
 * Mod
@@ -32,16 +58,18 @@ print(mod.name) #Edain Mod
 * User
 * Team
 * Group
-
-## WIP Models
 * Job
-* Front Page
 * Search Page
 
+
+## WIP Models
+* Front Page
+
 ## Glossary
-* **Partial[Model]**: A version of the model which does not contain all the attributes of the full mode. Mainly because that model is being displayed as a preview in another page
+* **Partial[Model]**: A version of the model which does not contain all the attributes of the full mode. Mainly because that model is being displayed as a preview in another page. Not to confuse with Thumbnails, Thumbnails are only guaranteed to contain a name and url of the page.
 * **Boxes**: Containers present on pages, a **div** tag which contains information around a certain theme and as such have been grouped into Box Models of such.
 * **Pages**: Another name for Models.
+* **Thumbnails**: A very widely used model meant to represent models which are references but not expanded onto. Usually the model in question will only include a url and the name of the page. This is transformed into a thumbnail and the user can then parse it with the built-in method.
 
 ## Logging
 This package makes use of the powerful Python logging module. Whenever the scrapper is unable to find a specific field for a model, either because it does not exist or because the scrapper cannot see it with its current permissions, then it will log it as an info. All logs will be sent to the `moddb` logger, to have access to the stream of logs you can do things like:

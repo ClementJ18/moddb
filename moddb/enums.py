@@ -271,4 +271,10 @@ class JobSkill(enum.Enum):
     sales = 10
     web_or_other = 11
 
-
+class Sort(enum.Enum):
+    released = 0
+    id = 1
+    ranktoday = 2
+    visitstotal = 3
+    rating = 4
+    name = 5

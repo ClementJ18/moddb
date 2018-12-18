@@ -4,8 +4,10 @@ from .utils import soup, LOGGER, normalize
 
 import re
 import sys
-from typing import List
+from typing import Tuple
 from robobrowser import RoboBrowser
+
+__all__ = ["Search", "search", "parse", "login", "logout"]
 
 class Search:
     """Represents the search you just conducted through the library's search function. Can be used to navigate 
@@ -26,31 +28,13 @@ class Search:
         The number of pages
 
     page : int
-        The current page
+        The current page, range is 1-page_max included
 
     query : str
         The text query that was used in the search
 
     results_max : int
         The total number of results for this search
-
-    Methods
-    --------
-    next_page()
-        Returns a new search object with the next page of results, will raise ValueError 
-        if the last page is the current one
-
-    previous_page()
-        Returns a new search object with the previous page of results, will raise 
-        ValueError if the first page is the current one
-
-    to_page(page : int)
-        Returns a new search object with results to a specific page in the search results 
-        allowing for fast navigation. Will raise ValueError if you attempt to navigate out 
-        of bounds or to your current page.
-
-    resort(new_sort : tuple(str, str))
-        Allows you to sort the whole search by a new parameter. Returns a new search object.
 
     """
     def __init__(self, **kwargs):
@@ -62,34 +46,88 @@ class Search:
         self.query = kwargs.get("query")
         self.results_max = kwargs.get("results_max")
 
-    def next_page(self):
+    def next_page(self) -> 'Search':
+        """Returns a new search object with the next page of results, will raise ValueError 
+        if the last page is the current one
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            There is no next page
+        """
         if self.page == self.page_max:
             raise ValueError("Reached last page already")
 
         self.to_page(self.page+1)
 
-    def previous_page(self):
+    def previous_page(self) -> 'Search': 
+        """Returns a new search object with the previous page of results, will raise 
+        ValueError if the first page is the current one
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            There is no previous page
+        """
         if self.page == 1:
             raise ValueError("Reached first page already")
 
         return self.to_page(self.page-1)
 
-    def to_page(self, page):
-        if self.page == page:
-            raise ValueError("You already are on this page")
+    def to_page(self, page : range(0, 4)) -> 'Search': 
+        """Returns a new search object with results to a specific page in the search results 
+        allowing for fast navigation. Will raise ValueError if you attempt to navigate out 
+        of bounds.
+    
+        Parameters
+        -----------
+        page : int
+            A page number within the range 1 - page_max inclusive
 
-        if 1 > self.page > self.page_max:
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            This page does not exist
+        """
+        if page < 1 or page > self.page_max:
             raise ValueError(f"Please pick a page between 1 and {self.page_max}")
 
         return search(self.category, query=self.query, page=page, **self.filters)
 
-    def resort(self, new_sort):
+    def resort(self, new_sort : Tuple[str, str]) -> 'Search': 
+        """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
+
+        Parameters
+        -----------
+        new_sort : tuple[str, str]
+            The new sorting tuple to check by
+
+        Return
+        -------
+        moddb.Search
+            The new set of results with the updated sort order
+        """
         return search(self.category, query=self.query, page=1, sort=new_sort, **self.filters)
 
     def __repr__(self):
         return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
 
-def search(category : SearchCategory, **filters):
+def search(category : SearchCategory, **filters) -> Search: 
     """ Search ModDB.com for a certain type of models and return a list of thumbnails of that 
     model. This function was created to make full use of moddb's filter and sorting system as
     long as the appropriate parameters are passed. Because this function is a single one for every
@@ -112,7 +150,7 @@ def search(category : SearchCategory, **filters):
     (described later) and the second element being either "asc" or "desc" based on whether you want
     it sorted in ascendant or descandant order.
 
-    Fields:
+    Fields of moddb.Sort:
         released - when the object was released, asc is oldest, desc is most recent
         id - when it was added to moddb, asc is oldest, desc is most recent
         ranktoday - order by daily ranking, asc is highest ranked, desc is lowest rank
@@ -121,7 +159,7 @@ def search(category : SearchCategory, **filters):
         name - order alphabetically, asc is a-z, desc is z-a
         
 
-    Common Parameters
+    Parameters
     ------------------
     category : moddb.SearchCategory
         The model type that you want to search
@@ -267,27 +305,26 @@ def search(category : SearchCategory, **filters):
     query = filters.pop("query", None)
 
     sort = filters.pop("sort", None)
-    sort = f"{sort[0]}-{'asc' if sort[1] else 'desc'}" if sort else None
+    sort = f"{sort[0].name}-{'asc' if sort[1] else 'desc'}" if sort else None
 
     game = filters.pop("game", None)
     game = game.id if game else None
 
     url = f"https://www.moddb.com/{category.name}/page/{page}"
-    SESSION = sys.modules["moddb"].SESSION
     filter_parsed = {key : value.value for key, value in filters.items()}
     cat = ThumbnailType[category.name[0:-1]]
 
-    html = soup(url, {"filter": "t", "kw": query, "sort": sort, "game": game, **filter_parsed})
+    html = soup(url, params={"filter": "t", "kw": query, "sort": sort, "game": game, **filter_parsed})
 
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
     pages = len([x for x in html.find("div", class_="pages").children if x != "\n"])
-    results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, x.a.img["src"]) for x in search_raws]
+    results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"]) for x in search_raws]
     results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
 
     return Search(results=results, page_max=pages, page=page, filters=filters, 
                   category=category, query=query, results_max=results_max)
 
-def parse(url : str, *, page_type : ThumbnailType = None):
+def parse(url : str, *, page_type : ThumbnailType = None) -> "PageModel": 
     """Parse a url and return the appropriate object. The function will attempt to figure out the page itself
     from the url and the content of the page but ModDB is not always consistent with this. In which case
     it is recommended to pass a moddb.Thumbnail enum to the `page_type` kwarg.
@@ -333,7 +370,7 @@ def parse(url : str, *, page_type : ThumbnailType = None):
     return model
 
 
-def login(username, password):
+def login(username : str, password : str) -> None: 
     """Login the user to moddb through the library, this allows user to see guest comments and see
     private groups they are part of.
 
@@ -365,10 +402,10 @@ def login(username, password):
     browser.submit_form(form)
     sys.modules["moddb"].SESSION = browser.session
 
-    if not "freeman" in browser.session.cookies:
+    if "freeman" not in browser.session.cookies:
         raise ValueError(f"Login failed for user {username}")
 
-def logout():
+def logout() -> None: 
     """Logs the user out by clearing the cookies, all guest commnets will be hidden and all private groups
     will be hidden once more
     """
