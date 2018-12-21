@@ -1,9 +1,11 @@
 from .boxes import *
-# from .enums import ThumbnailType, SearchCategory, FileCategory, MediaCategory, ArticleType, JobSkill
 from .enums import *
 from .utils import soup, join, LOGGER, get_type, get_date, get_views
 
 import re
+import bs4
+from typing import Tuple
+
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Team', 'Group', 'Job', 'Blog', 'User', 'PartialArticle']
@@ -12,7 +14,15 @@ class Base:
     """An abstract class that implements the methods used on nearly every page. In addition, it implements
     some shared hidden methods."""
     
-    def _get_comments(self, html):
+    def _get_comments(self, html : bs4.BeautifulSoup) -> CommentsList:
+        """Extracts the comments from an html page and adds them to a CommentsList. In addition
+        this command also adds them to the comments children as need be.
+
+        Paramater
+        ----------
+        html : bs4.BeautifulSoup
+            The html 
+        """
         comments_raw = html.find("div", class_="table tablecomments").find_all("div", recursive=False)
         comments = CommentsList()
         for raw in comments_raw:
@@ -638,3 +648,194 @@ class PartialArticle:
 
     def get_article(self):
         return Article(soup(self.url))
+
+class FrontPage:
+    def __init__(self, html):
+        articles = html.find("span", string="Latest Articles").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"]) for x in articles]
+
+        mods = html.find("span", string="Popular Mods").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
+        self.mods = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.mod, image=x.a.img["src"]) for x in mods]
+
+        games = html.find("span", string="Popular Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
+        self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
+
+        # jobs = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
+        # self.jobs = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.job) for x in jobs]
+
+        files = html.find("span", string="Popular Files").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
+        self.files = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.file, image=x.a.img["src"]) for x in files]
+
+        self.poll = Poll(html.find("div", class_="poll"))
+
+    def __repr__(self):
+        return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)}>"
+
+class Poll(Base):
+    def __init__(self, html):
+        # self.url = html.form["action"]
+        # self.question = html.p.string
+        # self.hidden = html.form.input["value"]
+
+        # options = html.form.find_all("div", class_="baroption")
+        # self._options = [x.input["value"] for x in options]
+        # self.options = [x.label.string for x in options]
+
+        poll = html.find("div", class_="poll")
+        self.question = poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
+
+        author = poll.find("p", class_="question").find("a")
+        self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
+
+        self.total = int(re.search(r"([\d,]*) votes", poll.find("p", class_="question").text)[1].replace(",", ""))
+
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            LOGGER.info("Poll %s has no comments", question)
+            self.comments = []
+
+        percentage = poll.find_all("div", class_="barouter")
+        rest = poll.find_all("p")[1:]
+
+        self.options = []
+        for x in range(len(percentage)):
+            raw = percentage[x].div.string.replace('%', '').replace('\xa0', '')
+            percent = float(f"0.{raw}")
+            text = re.sub(r"\([\d,]* votes\)", '', rest[x].text)
+            votes = int(re.search(r"([\d,]*) votes", rest[x].span.string)[1].replace(',', ''))
+            self.options.append(Option(text=text, votes=votes, percent=percent))
+
+    def __repr__(self):
+        return f"<Poll question={self.question}>"
+
+class Option:
+    def __init__(self, **kwargs):
+        self.text = kwargs.get("text")
+        self.votes = kwargs.get("votes")
+        self.percent = kwargs.get("percent")
+
+    def vote(self):
+        pass
+
+    def __repr__(self):
+        return f"<Option text={self.text}>"
+
+class Search:
+    """Represents the search you just conducted through the library's search function. Can be used to navigate 
+    the search page efficiently.
+
+    Attributes
+    -----------
+    results : list[moddb.Thumbnail]
+        The list of results the search returned
+
+    category : moddb.ThumbnailType
+        The type results
+
+    filters : dict{str : moddb.Enum}
+        The dict of filters that was used to search for the results
+
+    page_max : int
+        The number of pages
+
+    page : int
+        The current page, range is 1-page_max included
+
+    query : str
+        The text query that was used in the search
+
+    results_max : int
+        The total number of results for this search
+
+    """
+    def __init__(self, **kwargs):
+        self.results = kwargs.get("results")
+        self.category = kwargs.get("category")
+        self.filters = kwargs.get("filters")
+        self.page_max = kwargs.get("page_max")
+        self.page = kwargs.get("page")
+        self.query = kwargs.get("query")
+        self.results_max = kwargs.get("results_max")
+
+    def next_page(self) -> 'Search':
+        """Returns a new search object with the next page of results, will raise ValueError 
+        if the last page is the current one
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            There is no next page
+        """
+        if self.page == self.page_max:
+            raise ValueError("Reached last page already")
+
+        self.to_page(self.page+1)
+
+    def previous_page(self) -> 'Search': 
+        """Returns a new search object with the previous page of results, will raise 
+        ValueError if the first page is the current one
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            There is no previous page
+        """
+        if self.page == 1:
+            raise ValueError("Reached first page already")
+
+        return self.to_page(self.page-1)
+
+    def to_page(self, page : range(0, 4)) -> 'Search': 
+        """Returns a new search object with results to a specific page in the search results 
+        allowing for fast navigation. Will raise ValueError if you attempt to navigate out 
+        of bounds.
+    
+        Parameters
+        -----------
+        page : int
+            A page number within the range 1 - page_max inclusive
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            This page does not exist
+        """
+        if page < 1 or page > self.page_max:
+            raise ValueError(f"Please pick a page between 1 and {self.page_max}")
+
+        return search(self.category, query=self.query, page=page, **self.filters)
+
+    def resort(self, new_sort : Tuple[str, str]) -> 'Search': 
+        """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
+
+        Parameters
+        -----------
+        new_sort : tuple[str, str]
+            The new sorting tuple to check by
+
+        Return
+        -------
+        moddb.Search
+            The new set of results with the updated sort order
+        """
+        return search(self.category, query=self.query, page=1, sort=new_sort, **self.filters)
+
+    def __repr__(self):
+        return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
+

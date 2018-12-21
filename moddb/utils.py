@@ -100,5 +100,6 @@ def get_type(img : Tag) -> int:
         return 1
         
 class Object:
+    """A dud objects that will transform every kwarg given into an attribute"""
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)

@@ -30,20 +30,22 @@ You can also search titles of the models with a string query.
 ```py
 from moddb import search, SearchCategory
 search = search(SearchCategory.mods`, query="age of the ring")
-#returns a search objects with the results being a list of mod thumbnails which moddb has matched with the words age of the ring
+#returns a search objects with the results being a list of mod thumbnails which 
+#moddb has matched with the words age of the ring
 ```
 Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod.
 ```py
 from moddb import search, SearchCategory, Theme, Status
 search = search(SearchCategory.mods, theme=Theme.fantasy, released=Status.released)
-#returns a search objects with the results being a list of mod thumbnails of mods which have been released and are labelled as 
-#fantasy themed.
+#returns a search objects with the results being a list of mod thumbnails of mods which have been 
+#released and are labelled as fantasy themed.
 ```
 And finally, you can sort the results with the `sort` kwargs which expects a tuple with the first element being the sort category and the second being whether you want the sort to be ascending or descending.
 ```py
 from moddb import search, SearchCategory, Sort
 search = search(SearchCategory.mods, sort=(Sort.rating, "asc"))
-#returns a search objects with the results being a list of mod thumbnails sorted by rating with highest rating first
+#returns a search objects with the results being a list of mod thumbnails sorted by rating with
+#highest rating first
 ```
 
 ## Finished Models
