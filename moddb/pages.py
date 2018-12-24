@@ -4,16 +4,19 @@ from .utils import soup, join, LOGGER, get_type, get_date, get_views
 
 import re
 import bs4
-from typing import Tuple
-
+from typing import List
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Team', 'Group', 'Job', 'Blog', 'User', 'PartialArticle']
 
 class Base:
     """An abstract class that implements the methods used on nearly every page. In addition, it implements
-    some shared hidden methods."""
-    
+    some shared hidden methods.
+    """
+    def __init__(self, html):
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
+        self.url = html.find("meta", property="og:rule")["content"]
+
     def _get_comments(self, html : bs4.BeautifulSoup) -> CommentsList:
         """Extracts the comments from an html page and adds them to a CommentsList. In addition
         this command also adds them to the comments children as need be.
@@ -21,23 +24,36 @@ class Base:
         Paramater
         ----------
         html : bs4.BeautifulSoup
-            The html 
+            The html containing the comments
         """
-        comments_raw = html.find("div", class_="table tablecomments").find_all("div", recursive=False)
+        comments_raw = html.find("div", class_="table tablecomments").find_all("div", class_="row", recursive=False)
         comments = CommentsList()
         for raw in comments_raw:
-            if "row" in raw.get("class", None):
-                comment = Comment(raw)
-                if comment.position == 1:
-                    comments[-1].children.append(comment)
-                elif comment.position == 2:
-                    comments[-1].children[-1].children.append(comment)
-                else:
-                    comments.append(comment)
+            comment = Comment(raw)
+            if comment.position == 1:
+                comments[-1].children.append(comment)
+            elif comment.position == 2:
+                comments[-1].children[-1].children.append(comment)
+            else:
+                comments.append(comment)
                     
         return comments
 
-    def _get_blogs(self, index):
+    def _get_blogs(self, index : int) -> List["Blog"]:
+        """Hidden method to get blogs of a model. We hide it because not every model that inherits from Base
+        has blogs but instead of making a second inheritance we just implement the top level command `get_blogs`
+        individually in each model that needs it and call this function.
+
+        Parameters
+        -----------
+        index : int
+            The page index you wish to get the blogs for, allows to hop around.
+
+        Returns
+        --------
+        List[moddb.Blog]
+            The list of blogs on this page. 
+        """
         html = soup(f"{self.url}/blogs/page/{index}")
         table = html.find("div", id="articlesbrowse").find("div", class_="table")
         if len(table["class"]) > 1:
@@ -63,7 +79,20 @@ class Base:
 
         return blogs
 
-    def _get_suggestions(self, html):
+    def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
+        """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
+        will be a list of Thumbnail objects that can be parsed individually.
+
+        Parameters
+        -----------
+        html : bs4.BeautifulSoup
+            The html page we are trying to parse the suggestions for
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of suggestions as thumbnails.
+        """
         suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
         suggestions = []
         for x in suggestions_raw:
@@ -77,7 +106,20 @@ class Base:
 
         return suggestions
 
-    def _get_games(self, html):
+    def _get_games(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
+        """Used both for Teams and Engines, returns a list of games  present on the page
+        as moddb.Thumbnail objects.
+
+        Parameters
+        ----------
+        html : bs4.BeautifulSoup
+            The html to extract the list of games from
+
+        Returns
+        -------
+        List[Thumbnail]
+            The list of games on the page as Thumbnail objects.
+        """
         games_raw = html.find(string="Games").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
         games = []
         for x in games_raw:
@@ -88,12 +130,77 @@ class Base:
 
         return games
 
-    def get_comments(self, index=1):
+    def get_comments(self, index : int = 1) -> CommentsList:
+        """Used to get comments on the model regardless of what page they may be present in. The function
+        itself simply relies on two other to make the request and parse the table.
+
+        Parameters
+        ----------
+        index : int 
+            The page of the model to ge tthe comments for.
+
+        Returns
+        --------
+        CommentsList
+            A subclass of list with the method flatten to retrieve all the children.
+
+        """
         return self._get_comments(soup(f"{self.url}/page/{index}"))
 
 class Page(Base):
-    def __init__(self, html, page_type):
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
+    """The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by
+    those classes.
+
+    Parameter
+    ----------
+    html : bs4.BeautifulSoup
+        The page to be parsed.
+
+    page_type : moddb.ThumbnailType
+        The type of pages, this is passed down be the base class to help with the parsing of pages.
+
+
+    Attributes
+    -----------
+    id : int
+        The id of the page
+    name : str
+        The name of the page
+    profile : moddb.Profile
+        The object with the content of the page's profile box.
+    statistics : moddb.Statistics
+        The object containg stat data on the page such as views, followers, ect...
+    style : moddb.Style
+        The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect...
+    suggestions : List[moddb.Thumbnail]
+        A list of thumbnail object representing moddb's suggestion of similar pages for the visiting user.
+    files : List[moddb.Thumbnail]
+        A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full
+        list either compare with statistics.files to see if the length of the list matches the number of files in the
+        stats or use get_files, although that will still not return the whole list if there are multiple pages of
+        files.
+    articles : List[moddb.Thumbnail]
+        A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long. 
+    article :  moddb.PartialArticle
+        A partial representation of the frong page article. This does not include things like comments or any
+        of the sideba elements found in a full article. Can be parsed to return the complete moddb.Article object.
+    comments : moddb.CommentList[moddb.Comment]
+        The list of comments present on this page.
+    tags : Dict{str : str}
+        A dict of key-values pair where the key is the name of the tag and the value is the url.
+    imagebox : List[moddb.Thumbnail]
+        A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
+        image box on the front page.
+    embed : str
+        The html necessary to embed the a widget of the page.
+    url : str
+        The url of the page
+    rating : float
+        A float out of ten representing the average rating for the page
+
+    """
+    def __init__(self, html : bs4.BeautifulSoup, page_type : ThumbnailType):
+        super().__init__(html)
         self.name = html.find("a", itemprop="mainEntityOfPage").string
 
         #boxes
@@ -146,14 +253,28 @@ class Page(Base):
         except TypeError:
             self.embed = str(html.find_all("textarea")[1].a)
 
-        self.url = html.find("meta", property="og:url")["content"]
         try:
             self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
         except AttributeError:
             self.rating = 0.0
             LOGGER.info("%s %s is not rated", self.profile.type.name, self.name)
 
-    def _get_files(self, html):
+        self.medias = self._get_media(2)
+
+    def _get_files(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
+        """Cache the files present on the page. Up to 5 files might be present
+
+        Parameters
+        -----------
+        html : bs4.BeautifulSoup
+            The page to cache the files from
+
+        Return
+        -------
+        List[moddb.Thumbnail]
+            The list of files
+        """
+
         files_raw = html.find(string="Files").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
         files = []
         for x in files_raw:
@@ -164,15 +285,35 @@ class Page(Base):
 
         return files
 
-    def get_reviews(self, index=1):
-        html = soup(f"{self.url}/reviews/page/{index}")
-        table = html.find("div", id="articlesbrowse").find("div", class_="table")
+    def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None) -> List[Review]:
+        """Get a page of reviews for the page. Each page will yield up to 10 reviews. 
+        Parameters
+        -----------
+        index : int
+            The page number to get the reviews from.
+        query : str
+            The string to look for in the review, optional.
+        rating : int
+            A number between 1 and 10 to get the ratings
+
+        Returns
+        --------
+        List[moddb.Review]
+            The list of article type thumbnails parsed from the page
+        """
+        params = {'filter': "t", 'kw': query, 'rating': rating}
+
+        html = soup(f"{self.url}/reviews/page/{index}", params=params)
+        table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         if len(table["class"]) > 1:
             return []
 
         raw_reviews = table.find_all("div", recursive=False)[2:]
         reviews = []
         e = 0
+        #This is very hacky because a page of reviews is actually a list of review titles and review contents
+        #I'm not fucking with you, its a list of divs which go [Div[Title of review one], Div[content of review one],
+        #Div[Title of review two], Div[content of review two]] It's dumb as fuck and I hate it.
         for _ in range(len(raw_reviews)):
             try:
                 review = raw_reviews[e]
@@ -182,6 +323,7 @@ class Page(Base):
             try:
                 text = raw_reviews[e+1]
             except IndexError:
+                #some reviews don't have text
                 text = {"class": "None"}
 
             if "rowcontentnext" in text["class"]:
@@ -195,10 +337,27 @@ class Page(Base):
 
         return reviews
 
-    def _get(self, url, object_type):
-        html = soup(url)
+    def _get(self, url : str, object_type : ThumbnailType, *, params : dict = {}) -> List[Thumbnail]:
+        """This function takes a list of thumbnails of `object_type` in html and returns
+        a list of moddb.Thumbnail of that object type.
 
+        Parameters
+        -----------
+        url : str
+            The url with the list
+        object_type : moddb.ThumbnailType
+            The type of objects to be expected. Easier to pass and hardcode then to guess
+        params : dict
+            A dictionnary of filters to pass on to the soup function used to filter the results.
+
+        Return
+        -------
+        List[moddb.Thumbnail]
+            The list of objects present on the page as a list of thumbnails.
+        """
+        html = soup(url, params=params)
         table = html.find("div", class_="table")
+        #if the table's class isn't exactly table then it's the wrong table and the list is actually empty
         if len(table["class"]) > 1:
             return []
 
@@ -210,51 +369,200 @@ class Page(Base):
 
         return objects
 
-    def get_articles(self, index=1):
-        return self._get(f"{self.url}/articles/page/{index}", ThumbnailType.article)
+    def get_articles(self, index : int = 1, *, query : str = None, category : ArticleType = None, 
+                     timeframe : TimeFrame = None) -> List[Thumbnail]:
+        """Get a page of articles for the page. Each page will yield up to 30 articles. 
+        Parameters
+        -----------
+        index : int
+            The page number to get the articles from.
+        query : str
+            The string query to search for in the article name, optional.
+        category : moddb.ArticleType
+            Type enum defining what the article is, optional
+        timeframe : moddb.TimeFrame
+            Time frame of when the article was added, optional
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of article type thumbnails parsed from the page
+        """
+        params = {
+            "filter": "t", 
+            "kw": query, 
+            "type": category.value if category else None, 
+            "timeframe": timeframe.value if timeframe else None
+        }
+
+        return self._get(f"{self.url}/articles/page/{index}", ThumbnailType.article, params=params)
         
-    def get_files(self, index=1):
-        return self._get(f"{self.url}/downloads/page/{index}", ThumbnailType.file)
+    def get_files(self, index : int = 1, *, query : str = None, category : FileCategory = None, 
+                  addon_type : AddonCategory = None, timeframe : TimeFrame = None) -> List[Thumbnail]:
+        """Get a page of files for the page. Each page will yield up to 30 files. 
+        Parameters
+        -----------
+        index : int
+            The page number to get the files from.
+        query : str
+            The string query to search for in the file name, optional.
+        category : moddb.FileCategory
+            Type enum defining what the file is, optional
+        addon_type : moddb.AddonCategory
+            Type enum defining what category the file is.
+        timeframe : moddb.TimeFrame
+            Time frame of when the file was added, optional
 
-    def get_images(self, index=1):
-        pass
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of file type thumbnails parsed from the page
+        """
+        params = {
+            "filter": "t", 
+            "kw": query, 
+            "category": category.value if category else None,
+            "categoryaddon": addon_type.value if addon_type else None,
+            "timeframe": timeframe.value if timeframe else None
+        }
 
-    def get_videos(self, index=1):
-        pass
+        return self._get(f"{self.url}/downloads/page/{index}", ThumbnailType.file, params=params)
 
-    def get_tutorials(self, index=1):
+    def _get_media(self, index):
+        html = soup(f"{self.url}/images")
+        script = html.find_all("script", text=True)[index]
+        regex = r'new Array\(0, "(\S*)", "(\S*)"'
+        matches = re.findall(regex, script.text)
+
+        name_finder = r"\/([a-z0-9-]*)#imagebox"
+        return [Thumbnail(name=re.search(name_finder, match[0])[1], url=match[0], type=ThumbnailType.media, image=match[1]) for match in matches]
+
+
+    def get_images(self) -> List[Thumbnail]:
+        """Get all the images a page has uploaded. Literally all of them. As thumbnails. ModDB's imagebox
+        caches all the urls for images on the page so this grabs them all. Lists might be long, but this 
+        is all the images. They can be invidually parsed to get full fledged media objects from them.
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of image type thumbnails parsed from the page
+        """
+        return self._get_media(1)
+        
+
+    def get_videos(self) -> List[Thumbnail]:
+        """Get all the videos a page has uploaded. Literally all of them. As thumbnails. ModDB's imagebox
+        caches all the urls for videos on the page so this grabs them all. Lists might be long, but this 
+        is all the videos. They can be invidually parsed to get full fledged media objects from them.
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of video type thumbnails parsed from the page
+        """
+        return self._get_media(2)
+
+    def get_tutorials(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of tutorial for the page. Each page will yield up to 30 tutorials. 
+        Parameters
+        -----------
+        index : int
+            The page number to get the tutorials from.
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of tutorial type thumbnails parsed from the page
+        """
         return self._get(f"{self.url}/tutorials/page/{index}", ThumbnailType.article)
 
-    def get_addons(self, index=1):
+    def get_addons(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of addons for the page. Each page will yield up to 30 addons. 
+        Parameters
+        -----------
+        index : int
+            The page number to get the addons from.
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of addon type thumbnails parsed from the page
+        """
         return self._get(f"{self.url}/addons/page/{index}", ThumbnailType.addon)
 
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
 class Mod(Page):
+    """Basically just a subclass of Page
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+    """
     def __init__(self, html):
         super().__init__(html, SearchCategory.mods)
 
 class Game(Page):
+    """A subclass of Page plus a method to get all the mods.
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+    """
     def __init__(self, html):
         super().__init__(html, SearchCategory.games)
 
-    def get_mods(self, index=1):
+    def get_mods(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of mods for the game. Each page will yield up to 30 mods. 
+        Parameters
+        -----------
+        index : int
+            The page number to get the mods from.
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of mods type thumbnails parsed from the game
+        """
         return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod)
 
 class Engine(Page):
+    """A subclass of Page, however, it does not have the files attribute or the get_files method
+    since engines can't have files.
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+    """
     def __init__(self, html):
         super().__init__(html, SearchCategory.engines)
         delattr(self, "files")
+        delattr(self, "get_files")
 
         self.games = self._get_games(html)
 
-    def get_games(self, index=1):
+    def get_games(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of games for the engine. Each page will yield up to 30 games. 
+        Parameters
+        -----------
+        index : int
+            The page number to get the games from.
+
+        Returns
+        --------
+        List[moddb.Thumbnail]
+            The list of games type thumbnails parsed from the game
+        """
         return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game)
 
 class File(Base):
     def __init__(self, html):
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
+        super().__init__(html)
         files_headings = ("Filename", "Size", "MD5 Hash")
         info = html.find("div", class_="table tablemenu")
         t = [t for t in info.find_all("h5") if t.string in files_headings]
@@ -284,7 +592,6 @@ class File(Base):
 
         self.description = html.find("p", id="downloadsummary").string
         self.preview = html.find_all("img")[0]["src"]
-        self.url = html.find("meta", property="og:url")["content"]
 
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.type.name}>"
@@ -295,14 +602,18 @@ class Addon(File):
 
 class Media(Base):
     def __init__(self, html):
+        super().__init__(html)
         media_headings = ("Date", "By", "Duration", "Size", "Views", "Filename")
         raw_media = {media.string.lower() : media.parent for media in html.find_all("h5") if media.string in media_headings}
 
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
+        
         self.date = get_date(raw_media["date"].span.time["datetime"])
-        self.name = raw_media["by"].span.a.string.strip()
+        # self.name = html.find("a", string="(view original)")["title"]
+        self.name = html.find("meta", itemprop="name")["content"]
 
-        self.author = Thumbnail(url=url, name=name, type=ThumbnailType.user)
+        author = raw_media["by"].span.a
+        self.author = Thumbnail(url=author["href"], name=author.string.strip(), type=ThumbnailType.user)
+
         try:
             self.comments = self._get_comments(html)
         except AttributeError:
@@ -316,7 +627,7 @@ class Media(Base):
         if "size" in raw_media:
             self.size = tuple(raw_media["size"].span.string.strip().split("×"))
 
-        self.views, self.today = get_views(raw_media["views"])
+        self.views, self.today = get_views(raw_media["views"].a.string)
 
         if "filename" in raw_media:
             self.filename = raw_media["filename"].span.string.strip()
@@ -343,7 +654,7 @@ class Article(Base):
         raw_type = html.find("h5", string="Browse").parent.span.a.string
         self.type = ArticleType[raw_type.lower()]
         self.name = html.find("span", itemprop="headline").string
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
+        super().__init__(html)
 
         try:
             self.comments = self._get_comments(html)
@@ -389,8 +700,7 @@ class Article(Base):
 
 class Group(Base):
     def __init__(self, html):
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
-        self.url = html.find("meta", property="og:url")["content"]
+        super().__init__(html)
         self.name = html.find("div", class_="title").h2.a.string
 
         try:
@@ -504,7 +814,7 @@ class Job:
     def __init__(self, html):
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
 
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
         author = profile_raw.find("h5", string="Author").parent.span.a
         self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.user)
 
@@ -526,7 +836,6 @@ class Job:
 
 class Blog(Base):
     def __init__(self, **attrs):
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         heading = attrs.get("heading")
         text = attrs.get("text")
 
@@ -548,11 +857,11 @@ class Blog(Base):
 
 class User(Page):
     def __init__(self, html):
+        super().__init__(html)
+
         self.profile = UserProfile(html)
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Follow")["href"])[1])
         self.stats = UserStatistics(html)
 
-        self.url = html.find("meta", property="og:url")["content"]
         self.name = html.find("meta", property="og:title")["content"]
         self.description = html.find("div", id="profiledescription").p.string
 
@@ -666,24 +975,25 @@ class FrontPage:
         files = html.find("span", string="Popular Files").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         self.files = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.file, image=x.a.img["src"]) for x in files]
 
-        self.poll = Poll(html.find("div", class_="poll"))
+        self.poll = Poll(soup(html.find("div", class_="poll").form["action"]))
 
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)}>"
 
+class Option:
+    def __init__(self, **kwargs):
+        self.text = kwargs.get("text")
+        self.votes = kwargs.get("votes")
+        self.percent = kwargs.get("percent")
+
+    def __repr__(self):
+        return f"<Option text={self.text}>"
+
 class Poll(Base):
     def __init__(self, html):
-        # self.url = html.form["action"]
-        # self.question = html.p.string
-        # self.hidden = html.form.input["value"]
-
-        # options = html.form.find_all("div", class_="baroption")
-        # self._options = [x.input["value"] for x in options]
-        # self.options = [x.label.string for x in options]
-
+        super().__init__(html)
         poll = html.find("div", class_="poll")
         self.question = poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
-
         author = poll.find("p", class_="question").find("a")
         self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
 
@@ -692,7 +1002,7 @@ class Poll(Base):
         try:
             self.comments = self._get_comments(html)
         except AttributeError:
-            LOGGER.info("Poll %s has no comments", question)
+            LOGGER.info("Poll %s has no comments", self.question)
             self.comments = []
 
         percentage = poll.find_all("div", class_="barouter")
@@ -708,134 +1018,4 @@ class Poll(Base):
 
     def __repr__(self):
         return f"<Poll question={self.question}>"
-
-class Option:
-    def __init__(self, **kwargs):
-        self.text = kwargs.get("text")
-        self.votes = kwargs.get("votes")
-        self.percent = kwargs.get("percent")
-
-    def vote(self):
-        pass
-
-    def __repr__(self):
-        return f"<Option text={self.text}>"
-
-class Search:
-    """Represents the search you just conducted through the library's search function. Can be used to navigate 
-    the search page efficiently.
-
-    Attributes
-    -----------
-    results : list[moddb.Thumbnail]
-        The list of results the search returned
-
-    category : moddb.ThumbnailType
-        The type results
-
-    filters : dict{str : moddb.Enum}
-        The dict of filters that was used to search for the results
-
-    page_max : int
-        The number of pages
-
-    page : int
-        The current page, range is 1-page_max included
-
-    query : str
-        The text query that was used in the search
-
-    results_max : int
-        The total number of results for this search
-
-    """
-    def __init__(self, **kwargs):
-        self.results = kwargs.get("results")
-        self.category = kwargs.get("category")
-        self.filters = kwargs.get("filters")
-        self.page_max = kwargs.get("page_max")
-        self.page = kwargs.get("page")
-        self.query = kwargs.get("query")
-        self.results_max = kwargs.get("results_max")
-
-    def next_page(self) -> 'Search':
-        """Returns a new search object with the next page of results, will raise ValueError 
-        if the last page is the current one
-
-        Returns
-        --------
-        moddb.Search
-            The new search objects containing a new set of results.
-
-        Raises
-        -------
-        ValueError
-            There is no next page
-        """
-        if self.page == self.page_max:
-            raise ValueError("Reached last page already")
-
-        self.to_page(self.page+1)
-
-    def previous_page(self) -> 'Search': 
-        """Returns a new search object with the previous page of results, will raise 
-        ValueError if the first page is the current one
-
-        Returns
-        --------
-        moddb.Search
-            The new search objects containing a new set of results.
-
-        Raises
-        -------
-        ValueError
-            There is no previous page
-        """
-        if self.page == 1:
-            raise ValueError("Reached first page already")
-
-        return self.to_page(self.page-1)
-
-    def to_page(self, page : range(0, 4)) -> 'Search': 
-        """Returns a new search object with results to a specific page in the search results 
-        allowing for fast navigation. Will raise ValueError if you attempt to navigate out 
-        of bounds.
-    
-        Parameters
-        -----------
-        page : int
-            A page number within the range 1 - page_max inclusive
-
-        Returns
-        --------
-        moddb.Search
-            The new search objects containing a new set of results.
-
-        Raises
-        -------
-        ValueError
-            This page does not exist
-        """
-        if page < 1 or page > self.page_max:
-            raise ValueError(f"Please pick a page between 1 and {self.page_max}")
-
-        return search(self.category, query=self.query, page=page, **self.filters)
-
-    def resort(self, new_sort : Tuple[str, str]) -> 'Search': 
-        """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
-
-        Parameters
-        -----------
-        new_sort : tuple[str, str]
-            The new sorting tuple to check by
-
-        Return
-        -------
-        moddb.Search
-            The new set of results with the updated sort order
-        """
-        return search(self.category, query=self.query, page=1, sort=new_sort, **self.filters)
-
-    def __repr__(self):
-        return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
 

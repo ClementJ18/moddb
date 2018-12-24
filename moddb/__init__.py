@@ -1,5 +1,4 @@
 from .base import search, parse, login, logout, front_page
-from .pages import *
 from .utils import LOGGER, BASE_URL, soup, Object
 from .enums import *
 

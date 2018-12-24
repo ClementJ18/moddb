@@ -1,13 +1,133 @@
-from .enums import SearchCategory, ThumbnailType
+from .enums import SearchCategory, ThumbnailType, Sort
 from .boxes import Thumbnail
 from .utils import soup, LOGGER, normalize
-from .pages import FrontPage, Search
+from .pages import FrontPage
 
 import re
 import sys
+from typing import Tuple
 from robobrowser import RoboBrowser
 
-__all__ = ["Search", "search", "parse", "login", "logout"]
+__all__ = ["Search", "search", "parse", "login", "logout", "front_page"]
+
+class Search:
+    """Represents the search you just conducted through the library's search function. Can be used to navigate 
+    the search page efficiently.
+
+    Attributes
+    -----------
+    results : list[moddb.Thumbnail]
+        The list of results the search returned
+
+    category : moddb.ThumbnailType
+        The type results
+
+    filters : dict{str : moddb.Enum}
+        The dict of filters that was used to search for the results
+
+    page_max : int
+        The number of pages
+
+    page : int
+        The current page, range is 1-page_max included
+
+    query : str
+        The text query that was used in the search
+
+    results_max : int
+        The total number of results for this search
+
+    """
+    def __init__(self, **kwargs):
+        self.results = kwargs.get("results")
+        self.category = kwargs.get("category")
+        self.filters = kwargs.get("filters")
+        self.page_max = kwargs.get("page_max")
+        self.page = kwargs.get("page")
+        self.query = kwargs.get("query")
+        self.results_max = kwargs.get("results_max")
+
+    def next_page(self) -> 'Search':
+        """Returns a new search object with the next page of results, will raise ValueError 
+        if the last page is the current one
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            There is no next page
+        """
+        if self.page == self.page_max:
+            raise ValueError("Reached last page already")
+
+        self.to_page(self.page+1)
+
+    def previous_page(self) -> 'Search': 
+        """Returns a new search object with the previous page of results, will raise 
+        ValueError if the first page is the current one
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            There is no previous page
+        """
+        if self.page == 1:
+            raise ValueError("Reached first page already")
+
+        return self.to_page(self.page-1)
+
+    def to_page(self, page : range(0, 4)) -> 'Search': 
+        """Returns a new search object with results to a specific page in the search results 
+        allowing for fast navigation. Will raise ValueError if you attempt to navigate out 
+        of bounds.
+    
+        Parameters
+        -----------
+        page : int
+            A page number within the range 1 - page_max inclusive
+
+        Returns
+        --------
+        moddb.Search
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            This page does not exist
+        """
+        if page < 1 or page > self.page_max:
+            raise ValueError(f"Please pick a page between 1 and {self.page_max}")
+
+        return search(self.category, query=self.query, page=page, **self.filters)
+
+    def resort(self, new_sort : Tuple[Sort, str]) -> 'Search': 
+        """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
+
+        Parameters
+        -----------
+        new_sort : tuple[moddb.Sort, str]
+            The new sorting tuple to check by
+
+        Return
+        -------
+        moddb.Search
+            The new set of results with the updated sort order
+        """
+        return search(self.category, query=self.query, page=1, sort=new_sort, **self.filters)
+
+    def __repr__(self):
+        return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
+
 
 def search(category : SearchCategory, **filters) -> Search: 
     """ Search ModDB.com for a certain type of models and return a list of thumbnails of that 
@@ -187,7 +307,7 @@ def search(category : SearchCategory, **filters) -> Search:
     query = filters.pop("query", None)
 
     sort = filters.pop("sort", None)
-    sort = f"{sort[0].name}-{'asc' if sort[1] else 'desc'}" if sort else None
+    sort = f"{sort[0].name}-{sort[1]}" if sort else None
 
     game = filters.pop("game", None)
     game = game.id if game else None
@@ -294,6 +414,13 @@ def logout() -> None:
     sys.modules["moddb"].SESSION.cookies.clear()
 
 def front_page() -> FrontPage:
-    """"""
+    """This returns a model representing the front page of moddb. May sound fancy but it is no more
+    than a collection of popular mods, files, games and articles. In addition jobs are listed (but
+    not linked so unparsable) and a poll.
+
+    Returns
+    moddb.FrontPage
+        The front page object.
+    """
     html = soup("https://www.moddb.com/")
     return FrontPage(html)
