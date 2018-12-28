@@ -332,7 +332,7 @@ class Page(Base):
         of the sideba elements found in a full article. Can be parsed to return the complete moddb.Article object.
     comments : moddb.CommentList[moddb.Comment]
         The list of comments present on this page.
-    tags : Dict{str : str}
+    tags : dict{str : str}
         A dict of key-values pair where the key is the name of the tag and the value is the url.
     imagebox : List[moddb.Thumbnail]
         A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
@@ -1299,7 +1299,34 @@ class PartialArticle:
         return Article(soup(self.url))
 
 class FrontPage:
+    """An object representing the front page of moddb. More of less just a long suggestion of the hottest mods,
+    games, articles and files of the moment
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    articles : List[Thumbnail]
+        A list of article like thumbnail objects representing the suggested
+        articles on the front page.
+    mods : List[Thumbnail]
+        A list of mod like thumbnail objects representing the suggested
+        mods on the front page.
+    games : List[Thumbnail]
+        A list of game like thumbnail objects representing the suggested
+        games on the front page.
+    files : List[Thumbnail]
+        A list of file like thumbnail objects representing the suggested
+        files on the front page.
+    poll : Poll
+        The current ongoing moddb poll. Currently cannot be voted on.
+
+    """
     def __init__(self, html):
+        #ToDo: add promoted content of slider
         articles = html.find("span", string="Latest Articles").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
         self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"]) for x in articles]
 
@@ -1309,6 +1336,7 @@ class FrontPage:
         games = html.find("span", string="Popular Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
 
+        #ToDo: prehaps url can be obtained from parsing the name and joining it with the the base url
         # jobs = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         # self.jobs = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.job) for x in jobs]
 
@@ -1318,9 +1346,21 @@ class FrontPage:
         self.poll = Poll(soup(html.find("div", class_="poll").form["action"]))
 
     def __repr__(self):
-        return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)}>"
+        return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
 
 class Option:
+    """Represents one of the choice from the poll they are attached to, should not be created
+    manually, prefer relying on the Poll.
+
+    Attributes
+    -----------
+    text : str
+        The option's text 
+    votes : int
+        The number of votes that have been cast on this option
+    percent : int
+        The percent of all votes that have been cast on this option
+    """
     def __init__(self, **kwargs):
         self.text = kwargs.get("text")
         self.votes = kwargs.get("votes")
@@ -1330,6 +1370,29 @@ class Option:
         return f"<Option text={self.text}>"
 
 class Poll(Base):
+    """Represents a poll available on the front page, more polls are available but most
+    won't have the possibility to vote since they lack the option id necessary to cast a 
+    vote even through manual post requests. I don't think it would have cost much to add that
+    into the poll page but for now it's like that. `vote` will raise an error if the user tries
+    to cast it from a poll which was not gotten from the front page.
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    question : str
+        The question of the poll
+    author : Thumbnail
+        A user like thumbnail of the user who posted the poll, usually ModDB staff
+    total : int
+        The total number of votes that have been cast
+    options : List[Option]
+        The list of available options for the poll
+    """
+    #ToDo: edit this to work both with /polls/ pages and the front page
     def __init__(self, html):
         super().__init__(html)
         poll = html.find("div", class_="poll")
@@ -1352,4 +1415,15 @@ class Poll(Base):
 
     def __repr__(self):
         return f"<Poll question={self.question}>"
+
+    def vote(self, option : Option):
+        """Vote for an option, if you are not logged in the vote will be cast as a guest. Currently
+        not implemented.
+
+        Parameters
+        ------------
+        option : Option
+            The option you desire to vote for.
+        """
+        raise NotImplementedError
 

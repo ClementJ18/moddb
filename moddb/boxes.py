@@ -169,6 +169,7 @@ class Thumbnail:
 class Comment:
     def __init__(self, html):
         #ToDo:need to include where (Thumbnail)
+        #ToDo: owner, creator, subscriber, staff flags?
         author = html.find("a", class_="avatar")
         self.id = html["id"]
         self.author = Thumbnail(name=author["title"], url=author["href"], image=author.img["src"], type=ThumbnailType.user)
