@@ -356,8 +356,7 @@ def parse(url : str, *, page_type : ThumbnailType = None) -> "PageModel":
     }
 
     if page_type is None:
-        page_url = html.find("meta", property="og:url")["content"]
-        matches = re.findall(regex, page_url)
+        matches = re.findall(regex, url)
         matches.reverse()
         match = matches[0][0:-1] if matches[0].endswith("s") else matches[0]      
 

@@ -5,7 +5,7 @@ import sys
 import re
 from typing import List
 
-__all__ = ['CommentsList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
+__all__ = ['CommentList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
            'Comment', 'Review', 'UserProfile', 'UserStatistics']
 
 class Statistics:
@@ -93,6 +93,7 @@ class Profile:
 
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons]:
             people = profile_raw.find_all("h5", string=["Developer", "Publisher", "Developer & Publisher","Creator", "Company"])
+            #todo: might need rework for team/users
             self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != "Creator" else ThumbnailType.user) for x in people}            
 
             try:
@@ -167,6 +168,7 @@ class Thumbnail:
 
 class Comment:
     def __init__(self, html):
+        #ToDo:need to include where (Thumbnail)
         author = html.find("a", class_="avatar")
         self.id = html["id"]
         self.author = Thumbnail(name=author["title"], url=author["href"], image=author.img["src"], type=ThumbnailType.user)
@@ -181,8 +183,12 @@ class Comment:
         else:
             self.position = 0
         self.children = []
-        self.content = html.find("div", class_="comment").p.string
 
+        try:
+            self.content = html.find("div", class_="comment").find("p").string
+        except AttributeError:
+            LOGGER.info("Comment %s by %s has no content, likely embed", self.id, self.author.name)
+            self.content = None
 
         try:
             karma = actions.span.string
@@ -202,7 +208,7 @@ class Comment:
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
 
-class CommentsList(list):
+class CommentList(list):
     """Represents a list of comments. Inherits and works like a regular list but has an 
     additional method called 'flatten' used to get all the nested children in a list"""
 
@@ -223,7 +229,7 @@ class CommentsList(list):
         Returns
         --------
         list[Comment]
-            The flattened list fo comments
+            The flattened list of comments
         """
         top_list = []
         for comment in super().__iter__():
@@ -256,7 +262,7 @@ class UserProfile:
     def __init__(self, html):
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         level_raw = profile_raw.find("h5", string="Level").parent.span.div
-        name = html.find("meta", property="og:title")["content"]
+        self.name = html.find("meta", property="og:title")["content"]
 
         self.level = int(level_raw.find("span", class_="level").string)
         self.progress = float("0." + level_raw.find("span", class_="info").strong.string.replace("%", ""))
@@ -277,7 +283,7 @@ class UserProfile:
         self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
 
     def __repr__(self):
-        return f"<Profile type=user>"
+        return f"<UserProfile name={self.name}>"
 
 class UserStatistics:
     def __init__(self, html):
@@ -303,4 +309,4 @@ class UserStatistics:
             LOGGER.info("User %s has no rank", name)
 
     def __repr__(self):
-        return f"<Statistics rank={self.rank}/{self.total}>"
+        return f"<UserStatistics rank={self.rank}/{self.total}>"

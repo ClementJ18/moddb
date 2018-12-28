@@ -103,3 +103,12 @@ The session the package uses will be updated and all further requests will now b
 import moddb
 moddb.logout()
 ```
+
+## Current :blobthonk:'s
+### Polls
+Polls can be parsed fine from any entry point as long as they contain a url, however the problem relies in allowing users to vote on those polls. Three things are required for a poll to be submitted:
+* the poll url: easily obtainable since it is either the url of the page or included in the form
+* the poll id: same, either it is included in the form as an hidden input or within the page's report button
+* the option ids: herein lies the issue, poll option ids are only available in the form of a poll, not the page itself.
+
+Only one poll can be present at a time on the forms and therefore for any poll that is not the currently used poll it would be impossible to vote on. At the moment the best entry point to the solution would be to get the poll, than return to the main page, check if the poll on the main page is the same and if it is then get all the option ids. Still, it feels like a waste to implement a method that would only be used for the latest poll. This is also only guaranteed if the user has not currently voted on the new poll as once voted on a poll form changes to simply a short summary of current poll stats. 

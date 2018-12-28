@@ -34,6 +34,43 @@ class ArticleType(enum.Enum):
     features = 2
     tutorials = 4
 
+class Difficulty(enum.Enum):
+    basic = 1
+    intermidiate = 2
+    advanced = 3
+
+class TutorialType(enum.Enum):
+    coding = 1
+    client_side_coding = 16
+    server_side_coding = 17
+    graphics = 2
+    ui_hud = 4
+    textures = 5
+    concept_art = 3
+    level_design = 23
+    mapping_technical = 6
+    level_design_theory = 24
+    modelling = 7
+    players_modelling = 8
+    weapons_modelling = 9
+    props_modelling = 19
+    animation = 10
+    skinning = 11
+    sound = 12
+    sound_effects = 13
+    voice_acting = 14
+    music = 25
+    general = 26
+    pr = 18
+    website = 21
+    design_concepts = 31
+    management = 15
+    starting_a_mod = 32
+    installers = 27
+    server_tools = 28
+    qa_testing = 29
+    
+
 class Membership(enum.Enum):
     invitation = 1
     application = 2
@@ -279,3 +316,6 @@ class Sort(enum.Enum):
     visitstotal = 3
     rating = 4
     name = 5
+
+    def str(self, order):
+        return f"{self.name}-{order}"
