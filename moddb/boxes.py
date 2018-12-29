@@ -9,12 +9,35 @@ __all__ = ['CommentList', 'Statistics', 'Profile', 'Style', 'Thumbnail',
            'Comment', 'Review', 'UserProfile', 'UserStatistics']
 
 class Statistics:
-    """The stats box, on pages that have one. This represents total stats and daily stats.
-    
+    """The stats box, on pages that have one. This represents total stats and daily stats in one
+    neat package.
+
     Attributes
     ----------
-
-
+    files : int
+        The number of files this page has uploaded
+    articles : int
+        The number of articles this page has uploaded
+    reviews : int
+        The number of reviews this page has been given
+    watchers : int
+        The number of people following this page
+    mods : int
+        The number of mods this page is related too (only applies to games, users and teams)
+    addons : int
+        The number of addons this page has uploaded
+    members : int
+        The number of members a group has (only applies to groups and teams)
+    visits : int
+        The total number of times this page has been viewed
+    today : int
+        The number of times this page has been viewed today
+    rank : int
+        The current rank of the page against all other pages of the same type
+    total : int
+        The maximum rank number
+    updated : datetime.datetime
+        The last tie this page was updated
     """
     def __init__(self, html):
         misc = html.find_all("h5", string=("Files", "Articles", "Reviews", "Watchers", "Mods", "Addons", "Members"))
@@ -37,6 +60,7 @@ class Statistics:
 
 #mod, game, user, addon, engine, company, group
 class Profile:
+    """"""
     def __init__(self, html):
         self.__dict__.update({
             "private": None,
@@ -242,6 +266,16 @@ class CommentList(list):
         return top_list
 
 class Review:
+    """Represents a review.
+
+    Searching
+    -----------
+    rating : int
+        A value from 1 to 10 denoting the rating number you're looking for
+
+    sitearea : Category
+        The type of model the rating is for (mod, engine, game)
+    """
     def __init__(self, **attrs):
         text = attrs.get("text")
         if text:

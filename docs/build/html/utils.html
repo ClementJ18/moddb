@@ -1,0 +1,195 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>moddb.utils module &#8212; moddb 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="moddb.enums module" href="enums.html" />
+    <link rel="prev" title="moddb.boxes module" href="boxes.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-moddb.utils">
+<span id="moddb-utils-module"></span><h1>moddb.utils module<a class="headerlink" href="#module-moddb.utils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="moddb.utils.Object">
+<em class="property">class </em><code class="descclassname">moddb.utils.</code><code class="descname">Object</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.utils.Object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A dud objects that will transform every kwarg given into an attribute</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="moddb.utils.get_date">
+<code class="descclassname">moddb.utils.</code><code class="descname">get_date</code><span class="sig-paren">(</span><em>d: str</em><span class="sig-paren">)</span> &#x2192; datetime.datetime<a class="headerlink" href="#moddb.utils.get_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper function that takes a ModDB string representation of time and returns an equivalent
+datetime.datetime object. This can range from a datetime with the full year to
+second to just a year and a month.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<em>str</em>) – String representation of a datetime</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The datetime object for the given string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">datetime.datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="moddb.utils.get_type">
+<code class="descclassname">moddb.utils.</code><code class="descname">get_type</code><span class="sig-paren">(</span><em>img: bs4.element.Tag</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#moddb.utils.get_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the type of the image through some very hacky stuff, might break</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="moddb.utils.get_views">
+<code class="descclassname">moddb.utils.</code><code class="descname">get_views</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; Tuple[int, int]<a class="headerlink" href="#moddb.utils.get_views" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper function that takes a string reresentation of total something and
+daily amount of that same thing and returns both as a tuple of ints.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>string</strong> (<em>str</em>) – The string containing the numbers both total and daily</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Tuple contains the total views (first element) and the daily views (second element)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Tuple[int, int]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="moddb.utils.join">
+<code class="descclassname">moddb.utils.</code><code class="descname">join</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#moddb.utils.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Joins a partial moddb string with the base url and returns the combined url</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="moddb.utils.normalize">
+<code class="descclassname">moddb.utils.</code><code class="descname">normalize</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#moddb.utils.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all extra fluff from a text to get the barebone content</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="moddb.utils.soup">
+<code class="descclassname">moddb.utils.</code><code class="descname">soup</code><span class="sig-paren">(</span><em>url: str</em>, <em>*</em>, <em>params: dict = {}</em><span class="sig-paren">)</span> &#x2192; bs4.BeautifulSoup<a class="headerlink" href="#moddb.utils.soup" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper function that takes a url and returns a beautiful soup objects. This is used to center
+the request making section of the library. Can also be passed a set of paramaters, used for sorting
+and filtering in the search function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>url</strong> (<em>str</em>) – The url to get</li>
+<li><strong>params</strong> (<em>dict</em>) – A dictionnary of filters and sorting key-valie pairs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bs4.BeautifulSoup</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">moddb</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="base.html">moddb.base module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">moddb.pages module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boxes.html">moddb.boxes module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">moddb.utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enums.html">moddb.enums module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="boxes.html" title="previous chapter">moddb.boxes module</a></li>
+      <li>Next: <a href="enums.html" title="next chapter">moddb.enums module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Clement Julia.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

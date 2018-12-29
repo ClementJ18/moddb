@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup, Tag
 from urllib.parse import urljoin
 
 LOGGER = logging.getLogger("moddb")
-BASE_URL = "https://www.moddb.com"
+BASE_URL = "https://www.com"
 
 def get_date(d : str) -> datetime.datetime:
     """A helper function that takes a ModDB string representation of time and returns an equivalent 
@@ -20,7 +20,7 @@ def get_date(d : str) -> datetime.datetime:
     d : str
         String representation of a datetime
 
-    Return
+    Returns
     -------
     datetime.datetime
         The datetime object for the given string
@@ -42,15 +42,15 @@ def soup(url : str, *, params : dict = {}) -> BeautifulSoup:
     the request making section of the library. Can also be passed a set of paramaters, used for sorting
     and filtering in the search function.
 
-    Paramaters
-    ----------
+    Parameters
+    -----------
     url : str
         The url to get
 
     params : dict
         A dictionnary of filters and sorting key-valie pairs.
 
-    Return
+    Returns
     -------
     bs4.BeautifulSoup
     """

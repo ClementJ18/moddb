@@ -7,14 +7,15 @@ import bs4
 from typing import List, Tuple
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
-           'Team', 'Group', 'Job', 'Blog', 'User', 'PartialArticle']
+           'Team', 'Group', 'Job', 'Blog', 'User', 'PartialArticle', 'FrontPage',
+           'Poll']
 
 class Base:
     """An abstract class that implements the methods used on nearly every page. In addition, it implements
     some shared hidden methods.
 
-    Paramater
-    ----------
+    Parameters
+    -----------
     html : bs4.BeautifulSoup
         The html containing the comments
 
@@ -26,10 +27,15 @@ class Base:
         The url of the page
     comments : CommentList
         The comments scrapped on this list in order.
+    report : str
+        URL to report the page
     """
     def __init__(self, html):
         self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
         self.url = html.find("meta", property="og:url")["content"]
+
+        #ToDo: check if works
+        self.report = html.find("h5", string="Report").parent.span.a["href"]
 
         try:
             self.comments = self._get_comments(html)
@@ -41,8 +47,8 @@ class Base:
         """Extracts the comments from an html page and adds them to a CommentList. In addition
         this command also adds them to the comments children as need be.
 
-        Paramater
-        ----------
+        Parameters
+        -----------
         html : bs4.BeautifulSoup
             The html containing the comments
         """
@@ -100,7 +106,7 @@ class Base:
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of suggestions as thumbnails.
         """
         suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
@@ -118,7 +124,7 @@ class Base:
 
     def _get_games(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
         """Used both for Teams and Engines, returns a list of games  present on the page
-        as moddb.Thumbnail objects.
+        as Thumbnail objects.
 
         Parameters
         ----------
@@ -148,9 +154,9 @@ class Base:
         html : bs4.BeautifulSoup
             The page to cache the files from
 
-        Return
+        Returns
         -------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of file like thumbnails
         """
 
@@ -164,38 +170,22 @@ class Base:
 
         return files
 
-    def get_comments(self, index : int = 1) -> CommentList:
-        """Used to get comments on the model regardless of what page they may be present in. The function
-        itself simply relies on two other to make the request and parse the table.
-
-        Parameters
-        ----------
-        index : int 
-            The page of the model to get the comments for.
-
-        Returns
-        --------
-        CommentList
-            A subclass of list with the method flatten to retrieve all the children.
-        """
-        return self._get_comments(soup(f"{self.url}/page/{index}"))
-
     def _get(self, url : str, object_type : ThumbnailType, *, params : dict = {}) -> List[Thumbnail]:
         """This function takes a list of thumbnails of `object_type` in html and returns
-        a list of moddb.Thumbnail of that object type.
+        a list of Thumbnail of that object type.
 
         Parameters
         -----------
         url : str
             The url with the list
-        object_type : moddb.ThumbnailType
+        object_type : ThumbnailType
             The type of objects to be expected. Easier to pass and hardcode then to guess
         params : dict
             A dictionnary of filters to pass on to the soup function used to filter the results.
 
-        Return
+        Returns
         -------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of objects present on the page as a list of thumbnails.
         """
         #ToDo: replace object_type by url parser that checks the url for the type
@@ -247,9 +237,9 @@ class Base:
         html : bs4.BeautifulSoup
             The page to cache the engines from
 
-        Return
+        Returns
         -------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of engine like thumbnail objects
         """
         engines_raw = html.find(string="Engines").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
@@ -261,6 +251,22 @@ class Base:
             engines.append(engine)
 
         return engines
+
+    def get_comments(self, index : int = 1) -> CommentList:
+        """Used to get comments on the model regardless of what page they may be present in. The function
+        itself simply relies on two other to make the request and parse the table.
+
+        Parameters
+        ----------
+        index : int 
+            The page of the model to get the comments for.
+
+        Returns
+        --------
+        CommentList
+            A subclass of list with the method flatten to retrieve all the children.
+        """
+        return self._get_comments(soup(f"{self.url}/page/{index}"))
 
 class GetGamesMetaClass:
     """Abstract class containing the get_games method"""
@@ -291,7 +297,7 @@ class GetModsMetaClass:
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of mods type thumbnails parsed from the game
         """
         return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod)
@@ -300,48 +306,46 @@ class Page(Base):
     """The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by
     those classes.
 
-    Parameter
-    ----------
+    Parameters
+    -----------
     html : bs4.BeautifulSoup
         The page to be parsed.
 
-    page_type : moddb.ThumbnailType
+    page_type : ThumbnailType
         The type of pages, this is passed down be the base class to help with the parsing of pages.
 
     Attributes
     -----------
     name : str
         The name of the page
-    profile : moddb.Profile
+    profile : Profile
         The object with the content of the page's profile box.
-    statistics : moddb.Statistics
+    statistics : Statistics
         The object containg stat data on the page such as views, followers, ect...
-    style : moddb.Style
+    style : Style
         The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect...
-    suggestions : List[moddb.Thumbnail]
+    suggestions : List[Thumbnail]
         A list of thumbnail object representing moddb's suggestion of similar pages for the visiting user.
-    files : List[moddb.Thumbnail]
+    files : List[Thumbnail]
         A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full
         list either compare with statistics.files to see if the length of the list matches the number of files in the
         stats or use get_files, although that will still not return the whole list if there are multiple pages of
         files.
-    articles : List[moddb.Thumbnail]
+    articles : List[Thumbnail]
         A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long. 
-    article :  moddb.PartialArticle
+    article :  PartialArticle
         A partial representation of the frong page article. This does not include things like comments or any
-        of the sideba elements found in a full article. Can be parsed to return the complete moddb.Article object.
-    comments : moddb.CommentList[moddb.Comment]
-        The list of comments present on this page.
+        of the sideba elements found in a full article. Can be parsed to return the complete Article object.
     tags : dict{str : str}
         A dict of key-values pair where the key is the name of the tag and the value is the url.
-    imagebox : List[moddb.Thumbnail]
+    imagebox : List[Thumbnail]
         A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
         image box on the front page.
     embed : str
         The html necessary to embed the a widget of the page.
     rating : float
         A float out of ten representing the average rating for the page
-    medias : List[moddb.Thumbnail]
+    medias : List[Thumbnail]
         list of thumbnails representing all the combined media objects of a page (videos and images)
 
     """
@@ -403,6 +407,7 @@ class Page(Base):
 
     def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, sort : Tuple[Sort, str] = None) -> List[Review]:
         """Get a page of reviews for the page. Each page will yield up to 10 reviews. 
+
         Parameters
         -----------
         index : int
@@ -411,12 +416,12 @@ class Page(Base):
             The string to look for in the review, optional.
         rating : int
             A number between 1 and 10 to get the ratings
-        sort : tuple[moddb.Sort, str]
+        sort : tuple[Sort, str]
             The sorting tuple to sort by
 
         Returns
         --------
-        List[moddb.Review]
+        List[Review]
             The list of article type thumbnails parsed from the page
         """
         params = {'filter': "t", 'kw': query, 'rating': rating, "sort": sort[0].str(sort[1]) if sort else None}
@@ -458,20 +463,21 @@ class Page(Base):
     def get_articles(self, index : int = 1, *, query : str = None, category : ArticleType = None, 
                      timeframe : TimeFrame = None) -> List[Thumbnail]:
         """Get a page of articles for the page. Each page will yield up to 30 articles. 
+
         Parameters
         -----------
         index : int
             The page number to get the articles from.
         query : str
             The string query to search for in the article name, optional.
-        category : moddb.ArticleType
+        category : ArticleType
             Type enum defining what the article is, optional
-        timeframe : moddb.TimeFrame
+        timeframe : TimeFrame
             Time frame of when the article was added, optional
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of article type thumbnails parsed from the page
         """
         params = {
@@ -486,22 +492,23 @@ class Page(Base):
     def get_files(self, index : int = 1, *, query : str = None, category : FileCategory = None, 
                   addon_type : AddonCategory = None, timeframe : TimeFrame = None) -> List[Thumbnail]:
         """Get a page of files for the page. Each page will yield up to 30 files. 
+
         Parameters
         -----------
         index : int
             The page number to get the files from.
         query : str
             The string query to search for in the file name, optional.
-        category : moddb.FileCategory
+        category : FileCategory
             Type enum defining what the file is, optional
-        addon_type : moddb.AddonCategory
+        addon_type : AddonCategory
             Type enum defining what category the file is.
-        timeframe : moddb.TimeFrame
+        timeframe : TimeFrame
             Time frame of when the file was added, optional
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of file type thumbnails parsed from the page
         """
         params = {
@@ -521,7 +528,7 @@ class Page(Base):
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of image type thumbnails parsed from the page
         """
         return self._get_media(1)
@@ -534,7 +541,7 @@ class Page(Base):
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of video type thumbnails parsed from the page
         """
         return self._get_media(2)
@@ -542,20 +549,21 @@ class Page(Base):
     def get_tutorials(self, index : int = 1, *, query : str = None, difficulty : Difficulty = None, 
                       tutorial_type : TutorialType = None) -> List[Thumbnail]:
         """Get a page of tutorial for the page. Each page will yield up to 30 tutorials. 
+
         Parameters
         -----------
         index : int
             The page number to get the tutorials from.
         query : str
             The string query to look for in the tutorial title, optional.
-        difficulty : moddb.Difficulty
+        difficulty : Difficulty
             Enum type representing the difficulty of the tutorial, optional.
-        tutorial_type : moddb.TutorialType
+        tutorial_type : TutorialType
             Enum type representing the theme/type/category of the tutorial, optional.
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of tutorial type thumbnails parsed from the page
         """
         params = {
@@ -569,22 +577,23 @@ class Page(Base):
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
                    timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
         """Get a page of addons for the page. Each page will yield up to 30 addons. 
+
         Parameters
         -----------
         index : int
             The page number to get the addons from.
         query : str
             The string query to search for in the addon name, optional.
-        addon_type : moddb.AddonCategory
+        addon_type : AddonCategory
             Type enum defining what category the file is.
-        timeframe : moddb.TimeFrame
+        timeframe : TimeFrame
             Time frame of when the file was added, optional
-        licence : moddb.Licence
+        licence : Licence
             The licence for the addon, optional
 
         Returns
         --------
-        List[moddb.Thumbnail]
+        List[Thumbnail]
             The list of addon type thumbnails parsed from the page
         """
         params = {
@@ -606,6 +615,37 @@ class Mod(Page):
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Searching
+    ----------
+    released : enums.Status
+        The status of the mod (released, unreleased)
+
+    genre : enums.Genre
+        The genre of the mod (fps, tower defense)
+
+    theme : enums.Theme
+        The theme of the mod (fantasy, action)
+
+    players : enums.PlayerStyle
+        Player styles of the mod (co-op, singleplayer)
+
+    timeframe : enums.TimeFrame
+        The time period this was released in (last 24hr, last week, last month)
+
+    game : Union[pages.Game, utils.Object]
+        An game object or an object with an id attribute which represents the
+        game the mod belongs to.
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **rating** - order by rating, asc is highest rating, desc is lowest rating
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+
     """
     def __init__(self, html):
         super().__init__(html, SearchCategory.mods)
@@ -617,6 +657,26 @@ class Game(Page, GetModsMetaClass):
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Searching
+    ----------
+    released : enums.Status
+        The status of the game (released, unreleased)
+
+    genre : enums.Genre
+        The genre of the game (fps, tower defense)
+
+    theme : enums.Theme
+        The theme of the game (fantasy, action)
+
+    indie : enums.Scope
+        Whether the game is triple AAA or indie
+
+    players : enums.PlayerStyle
+        Player styles of the game (co-op, singleplayer)
+
+    timeframe : enums.TimeFrame
+        The time period this was released in (last 24hr, last week, last month)
     """
     def __init__(self, html):
         super().__init__(html, SearchCategory.games)
@@ -629,6 +689,18 @@ class Engine(Page, GetGamesMetaClass):
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Searching
+    -----------
+    released : enums.Status
+        The status of the engine (released, unreleased)
+
+    licence : enums.Licence
+        The license of the engine
+
+    timeframe : enums.TimeFrame
+        The time period this was released in (last 24hr, last week, last month)
+
 
     Attributes
     -----------
@@ -659,6 +731,21 @@ class File(Base):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
+    Searching
+    ----------
+    category  : enums.FileCategory
+        The type of file (audio, video, demo, full version....)
+
+    categoryaddon : enums.AddonCategory
+        The type of addon (map, textures, ect...)
+
+    game : Union[pages.Game, utils.Object]
+        An game object or an object with an id attribute which represents the
+        game the addon belongs to.
+
+    timeframe : enums.TimeFrame
+        The time period this was released in (last 24hr, last week, last month)
+
     Attributes
     -----------
     hash : str
@@ -671,7 +758,7 @@ class File(Base):
         The number of downloads today
     downloads : int
         The total number of times this file has been downloaded
-    category : moddb.FileCategory
+    category : FileCategory
         The category of the file
     author : Thumbnail
         A user type thumbnail of the user who uploaded the file
@@ -719,17 +806,25 @@ class File(Base):
         return f"<{self.__class__.__name__} name={self.name} type={self.type.name}>"
 
 class Addon(File):
+    """Object representing an addon
+
+    """
     #ToDo: find difference between addon and file?
     def __init__(self, html):
         super().__init__(html)
 
 class Media(Base):
-    """Represents an image, audio file or video file on ModDB.
+    """Represents an image, audio file or video file on 
 
     Parameters
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Searching
+    -----------
+    sitearea : enums.Category
+        The type of model the media belongs to. Category.downloads is not valid for this.
 
     Attributes
     -----------
@@ -737,7 +832,7 @@ class Media(Base):
         The date the media was uploaded
     name : str
         The name of the media
-    author : moddb.Thumbnail
+    author : Thumbnail
         User type thumbnail of the media uploader
     duration : int
         Duration of the media in seconds, 0 if it's an image
@@ -751,7 +846,7 @@ class Media(Base):
         The name of the file for the media
     fileurl : str
         The url of the file for the media
-    category : moddb.MediaCategory
+    category : MediaCategory
         Whether the media is an image, a video or an audio
     description : str
         The description of the file as given by the file uploader.
@@ -806,19 +901,29 @@ class Article(Base):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
+    Searching
+    ----------
+    type : enums.ArticleType
+        Type of the article (news, feature)
+
+    timeframe : enums.TimeFrame
+        The time period this was released in (last 24hr, last week, last month)
+
+    game : Union[pages.Game, utils.Object]
+        An game object or an object with an id attribute which represents the
+        game the addon belongs to.
+
     Attributes
     -----------
-    category : moddb.ArticleType
+    category : ArticleType
         Whether this article is a news article, a tutorial or a feature
     name : str
         The name of the article
-    profile : moddb.Profile
+    profile : Profile
         The profile object of the moddb model the article is for (engine, game, mod...)
     tags : dict{str : str}
         A dictionary of tags with the tag names as the key and the url to the tag
         as the value.
-    report : str
-        the link to report the article
     views : int
         Total amount of times this article was viewed
     today : int
@@ -852,10 +957,7 @@ class Article(Base):
             self.tags = {x.string : x["href"] for x in raw.find("h5", string="Tags").parent.span.find_all("a") if x is not None}
         except AttributeError:
             self.tags = {}
-            LOGGER.info("Article %s has no tags", self.name)
-
-        #Todo: move to base?
-        self.report = raw.find("h5", string="Report").parent.span.a["href"]
+            LOGGER.info("Article %s has no tags", self.name)    
         
         views_raw = raw.find("h5", string="Views").parent.span.a.string
         self.views, self.today = get_views(views_raw)
@@ -872,14 +974,22 @@ class Article(Base):
         return f"<Article title={self.name} type={self.type.name}>"
 
 class Group(Page):
-    """This object represents the group model of moddb. Certain attributes can be None if the group
+    """This object represents the group model of  Certain attributes can be None if the group
     has been set to private. If you wish to see a group you have access to then you can login with the
-    moddb.login 
+    login 
 
     Parameters
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Searching
+    ----------
+    subscriptions : enums.Membership
+        The subscription system of the group (private, invitation)
+
+    category : enums.GroupCategory
+        The category of the group (funny, literature)
 
     Attributes
     -----------
@@ -887,9 +997,9 @@ class Group(Page):
         The name of the group
     private : bool
         Whether or not the group is private
-    profile : moddb.Profile
+    profile : Profile
         The profile object for the group
-    stats : moddb.Statistics
+    stats : Statistics
         The stats of the Group
     tags : dict{str, str}
         A dictionnary of tags where the key is the tag name and the value is the tag url
@@ -968,11 +1078,19 @@ class Group(Page):
 class Team(Group):
     """A team is a group of people, which are the author of a game, a mod or an engine. A group has members which all
     have rights on those page. Like a user but instead of a single person authoring various mods and games it's several.
-    
+
     Parameters
-    -----------
+    ------------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Searching
+    ----------
+    subscriptions : enums.Membership
+        The subscription system of the company (private, invitation)
+
+    category : enums.TeamCategory
+        What does the team do (publisher, developer)
 
     Attributes
     -----------
@@ -999,7 +1117,7 @@ class Team(Group):
             self.engines = []
 
 class Job:
-    """Model representing a job proposed on moddb.
+    """Model representing a job proposed on ModDB
     
     Parameters
     -----------
@@ -1030,6 +1148,7 @@ class Job:
     """
     #ToDo: can a job have comments
     #ToDo: look into this one again...
+    #ToDo: do jobs have search parameters?
     def __init__(self, html):
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
 
@@ -1056,7 +1175,14 @@ class Job:
         self.related = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related]
 
 class Blog(Base):
-    """"""
+    """Object used to represent a user blog.
+
+    Searching
+    ----------
+    timeframe : enums.TimeFrame
+        The time period this was released in (last 24hr, last week, last month)
+
+    """
     #ToDo: this one needs a second check, atm it's only meant to be parsed from the blog list
     #it probably has comments and stuff, idk just fuck my shit up fam
     def __init__(self, *, heading, text):
@@ -1078,7 +1204,7 @@ class Blog(Base):
 
 class User(Page, GetGamesMetaClass, GetModsMetaClass):
     """The object to represent an individual user on ModDB
-    
+
     Parameters
     -----------
     html : bs4.BeautifulSoup
@@ -1177,16 +1303,16 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         -----------
         index : int
             The page index you wish to get the blogs for, allows to hop around.
-        timeframe : moddb.Timeframe
+        timeframe : Timeframe
             The date the blog was added, optional
         query : str
             The string to look for in the blog title, optional.
-        sort : tuple[moddb.Sort, str]
+        sort : tuple[Sort, str]
             The sorting tuple to sort by
 
         Returns
         --------
-        List[moddb.Blog]
+        List[Blog]
             The list of blogs on this page. 
         """
         params = {
@@ -1299,7 +1425,7 @@ class PartialArticle:
         return Article(soup(self.url))
 
 class FrontPage:
-    """An object representing the front page of moddb. More of less just a long suggestion of the hottest mods,
+    """An object representing the front page of  More of less just a long suggestion of the hottest mods,
     games, articles and files of the moment
 
     Parameters
@@ -1354,6 +1480,8 @@ class Option:
 
     Attributes
     -----------
+    id : int
+        The id of the option, can be None and will be None in most cases.
     text : str
         The option's text 
     votes : int
@@ -1362,6 +1490,7 @@ class Option:
         The percent of all votes that have been cast on this option
     """
     def __init__(self, **kwargs):
+        self.id = kwargs.get("id", None)
         self.text = kwargs.get("text")
         self.votes = kwargs.get("votes")
         self.percent = kwargs.get("percent")
@@ -1391,6 +1520,8 @@ class Poll(Base):
         The total number of votes that have been cast
     options : List[Option]
         The list of available options for the poll
+    active : bool
+        Whether the poll can be voted on.
     """
     #ToDo: edit this to work both with /polls/ pages and the front page
     def __init__(self, html):
@@ -1413,17 +1544,35 @@ class Poll(Base):
             votes = int(re.search(r"([\d,]*) votes", rest[x].span.string)[1].replace(',', ''))
             self.options.append(Option(text=text, votes=votes, percent=percent))
 
+    def make_active(self):
+        """This expensive method will ping a json file located on the project repo which will be updated
+        every so often with some poll options then will attempt to figure out how far away the current poll
+        is from the closest poll stored in the json file and use that knowledge to manually increment/descrement
+        the option ids to the correct ones for the poll in order to allow voting for the poll. In order to do so,
+        each poll between this one and the closest one need to be parsed and the options need to be tallied up and
+        to the base options count until the current poll is reached. Then the options can be properly outfitted.
+        Then, once that is done, the poll will be set to active and voting will be allowed."""
+        raise NotImplementedError
+
     def __repr__(self):
         return f"<Poll question={self.question}>"
 
     def vote(self, option : Option):
         """Vote for an option, if you are not logged in the vote will be cast as a guest. Currently
-        not implemented.
+        not implemented. Polls can only be voted on if they have been obtained from the front page,
+        since only those polls contain the option ids neccessary to cast the vote. The simplest way 
+        to know if this poll can be voted on is to check the `active` parameters which is True if the
+        poll is currently open/active
 
         Parameters
         ------------
         option : Option
             The option you desire to vote for.
-        """
-        raise NotImplementedError
 
+        Raises
+        -------
+        AttributeError
+            The given option does not contain the required id attribute.
+        """
+        #check, does poll zero have option zero?
+        raise NotImplementedError
