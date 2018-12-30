@@ -1,0 +1,420 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>moddb.enums &#8212; moddb 1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for moddb.enums</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">enum</span>
+
+<div class="viewcode-block" id="SearchCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.SearchCategory">[docs]</a><span class="k">class</span> <span class="nc">SearchCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">games</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">mods</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">addons</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">dowloads</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">videos</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">articles</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">engines</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">developers</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">forum</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">jobs</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">images</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">audio</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">reviews</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">headlines</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">blogs</span> <span class="o">=</span> <span class="mi">15</span></div>
+
+<div class="viewcode-block" id="Category"><a class="viewcode-back" href="../../enums.html#moddb.enums.Category">[docs]</a><span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">mods</span> <span class="o">=</span> <span class="s2">&quot;mods&quot;</span>
+    <span class="n">games</span> <span class="o">=</span> <span class="s2">&quot;games&quot;</span>
+    <span class="n">engines</span> <span class="o">=</span> <span class="s2">&quot;engines&quot;</span>
+    <span class="n">downloads</span> <span class="o">=</span> <span class="s2">&quot;downloads&quot;</span></div>
+
+<div class="viewcode-block" id="MediaCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.MediaCategory">[docs]</a><span class="k">class</span> <span class="nc">MediaCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">video</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">audio</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+<div class="viewcode-block" id="ArticleType"><a class="viewcode-back" href="../../enums.html#moddb.enums.ArticleType">[docs]</a><span class="k">class</span> <span class="nc">ArticleType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">tutorials</span> <span class="o">=</span> <span class="mi">4</span></div>
+
+<div class="viewcode-block" id="Difficulty"><a class="viewcode-back" href="../../enums.html#moddb.enums.Difficulty">[docs]</a><span class="k">class</span> <span class="nc">Difficulty</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">basic</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">intermidiate</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">advanced</span> <span class="o">=</span> <span class="mi">3</span></div>
+
+<div class="viewcode-block" id="TutorialType"><a class="viewcode-back" href="../../enums.html#moddb.enums.TutorialType">[docs]</a><span class="k">class</span> <span class="nc">TutorialType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">coding</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">client_side_coding</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">server_side_coding</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">graphics</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">ui_hud</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">textures</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">concept_art</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">level_design</span> <span class="o">=</span> <span class="mi">23</span>
+    <span class="n">mapping_technical</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">level_design_theory</span> <span class="o">=</span> <span class="mi">24</span>
+    <span class="n">modelling</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">players_modelling</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">weapons_modelling</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">props_modelling</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">animation</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">skinning</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">sound</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">sound_effects</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">voice_acting</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">music</span> <span class="o">=</span> <span class="mi">25</span>
+    <span class="n">general</span> <span class="o">=</span> <span class="mi">26</span>
+    <span class="n">pr</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">website</span> <span class="o">=</span> <span class="mi">21</span>
+    <span class="n">design_concepts</span> <span class="o">=</span> <span class="mi">31</span>
+    <span class="n">management</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">starting_a_mod</span> <span class="o">=</span> <span class="mi">32</span>
+    <span class="n">installers</span> <span class="o">=</span> <span class="mi">27</span>
+    <span class="n">server_tools</span> <span class="o">=</span> <span class="mi">28</span>
+    <span class="n">qa_testing</span> <span class="o">=</span> <span class="mi">29</span></div>
+    
+
+<div class="viewcode-block" id="Membership"><a class="viewcode-back" href="../../enums.html#moddb.enums.Membership">[docs]</a><span class="k">class</span> <span class="nc">Membership</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">invitation</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">application</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">open_to_all</span> <span class="o">=</span> <span class="mi">3</span></div>
+
+<div class="viewcode-block" id="TeamCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.TeamCategory">[docs]</a><span class="k">class</span> <span class="nc">TeamCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">developer</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">publisher</span> <span class="o">=</span> <span class="mi">4</span></div>
+
+<div class="viewcode-block" id="GroupCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.GroupCategory">[docs]</a><span class="k">class</span> <span class="nc">GroupCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">official</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">arts_literature</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">developer_publisher</span> <span class="o">=</span> <span class="mi">99</span>
+    <span class="n">educational</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">entertainment_press</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">event</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">fans_clans</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">geographic</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">hardware_tech</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">hobbies_interests</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">web_community</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">other</span> <span class="o">=</span> <span class="mi">8</span></div>
+
+<div class="viewcode-block" id="ThumbnailType"><a class="viewcode-back" href="../../enums.html#moddb.enums.ThumbnailType">[docs]</a><span class="k">class</span> <span class="nc">ThumbnailType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">mod</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">game</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">engine</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">article</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">review</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">team</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">blog</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">addon</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">platform</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">media</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">company</span> <span class="o">=</span> <span class="n">team</span></div>
+
+<div class="viewcode-block" id="AddonCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.AddonCategory">[docs]</a><span class="k">class</span> <span class="nc">AddonCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">maps</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">models</span> <span class="o">=</span> <span class="mi">104</span>
+    <span class="n">skins</span> <span class="o">=</span> <span class="mi">110</span>
+    <span class="n">audio</span> <span class="o">=</span> <span class="mi">116</span>
+    <span class="n">graphics</span> <span class="o">=</span> <span class="mi">123</span>
+    <span class="n">multiplayer_map</span> <span class="o">=</span> <span class="mi">101</span>
+    <span class="n">singleplayer_map</span> <span class="o">=</span> <span class="mi">102</span>
+    <span class="n">prefabs</span> <span class="o">=</span> <span class="mi">103</span>
+    <span class="n">animal_model</span> <span class="o">=</span> <span class="mi">105</span>
+    <span class="n">players_model</span> <span class="o">=</span> <span class="mi">106</span>
+    <span class="n">prop_model</span> <span class="o">=</span> <span class="mi">132</span>
+    <span class="n">vehicle_model</span> <span class="o">=</span> <span class="mi">107</span>
+    <span class="n">weapons_model</span> <span class="o">=</span> <span class="mi">108</span>
+    <span class="n">models_pack</span> <span class="o">=</span> <span class="mi">131</span>
+    <span class="n">animal_skin</span> <span class="o">=</span> <span class="mi">111</span>
+    <span class="n">players_skin</span> <span class="o">=</span> <span class="mi">112</span>
+    <span class="n">prop_skin</span> <span class="o">=</span> <span class="mi">133</span>
+    <span class="n">vehicle_skin</span> <span class="o">=</span> <span class="mi">113</span>
+    <span class="n">weapons_skin</span> <span class="o">=</span> <span class="mi">114</span>
+    <span class="n">skin_pack</span> <span class="o">=</span> <span class="mi">134</span>
+    <span class="n">music</span> <span class="o">=</span> <span class="mi">117</span>
+    <span class="n">animal_audio</span> <span class="o">=</span> <span class="mi">135</span>
+    <span class="n">players_audio</span> <span class="o">=</span> <span class="mi">119</span>
+    <span class="n">vehicle_audio</span> <span class="o">=</span> <span class="mi">120</span>
+    <span class="n">weapons_audio</span> <span class="o">=</span> <span class="mi">121</span>
+    <span class="n">ambience_sounds</span> <span class="o">=</span> <span class="mi">137</span>
+    <span class="n">language_sounds</span> <span class="o">=</span> <span class="mi">138</span>
+    <span class="n">audio_pack</span> <span class="o">=</span> <span class="mi">118</span>
+    <span class="n">decals</span> <span class="o">=</span> <span class="mi">124</span>
+    <span class="n">effects_gfx</span> <span class="o">=</span> <span class="mi">136</span>
+    <span class="n">guis</span> <span class="o">=</span> <span class="mi">125</span>
+    <span class="n">huds</span> <span class="o">=</span> <span class="mi">126</span>
+    <span class="n">sprays</span> <span class="o">=</span> <span class="mi">127</span>
+    <span class="n">sprites</span> <span class="o">=</span> <span class="mi">128</span>
+    <span class="n">textures</span> <span class="o">=</span> <span class="mi">129</span></div>
+
+<div class="viewcode-block" id="Status"><a class="viewcode-back" href="../../enums.html#moddb.enums.Status">[docs]</a><span class="k">class</span> <span class="nc">Status</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">released</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">unreleased</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">early_access</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">coming_soon</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+<div class="viewcode-block" id="Theme"><a class="viewcode-back" href="../../enums.html#moddb.enums.Theme">[docs]</a><span class="k">class</span> <span class="nc">Theme</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">abstract</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">anime</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">antiquity</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">comedy</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">comic</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">education</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">fantasy</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">fighter</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">history</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">horror</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">mafia</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">medieval</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">movie</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">music</span> <span class="o">=</span> <span class="mi">21</span>
+    <span class="n">nature</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">noire</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">pirate</span> <span class="o">=</span> <span class="mi">22</span>
+    <span class="n">realism</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">sci_fi</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">survival</span> <span class="o">=</span> <span class="mi">23</span>
+    <span class="n">sport</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">war</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">western</span> <span class="o">=</span> <span class="mi">11</span></div>
+    
+<div class="viewcode-block" id="Genre"><a class="viewcode-back" href="../../enums.html#moddb.enums.Genre">[docs]</a><span class="k">class</span> <span class="nc">Genre</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">adventure</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">driving</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">rpg</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">strategy</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">sport</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">simulation</span> <span class="o">=</span> <span class="mi">22</span>
+    <span class="n">puzzle</span> <span class="o">=</span> <span class="mi">27</span>
+    <span class="n">first_person_shooter</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">third_person_shooter</span> <span class="o">=</span> <span class="mi">34</span>
+    <span class="n">tactical_shooter</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">fighting</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">arcade</span> <span class="o">=</span> <span class="mi">39</span>
+    <span class="n">stealth</span> <span class="o">=</span> <span class="mi">43</span>
+    <span class="n">platformer</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">point_and_click</span> <span class="o">=</span> <span class="mi">40</span>
+    <span class="n">visual_novel</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">racing</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">car_combat</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">role_playing</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">roguelike</span> <span class="o">=</span> <span class="mi">44</span>
+    <span class="n">hack_n_slash</span> <span class="o">=</span> <span class="mi">51</span>
+    <span class="n">party_based</span> <span class="o">=</span> <span class="mi">53</span>
+    <span class="n">real_time_strategy</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">real_time_shooter</span> <span class="o">=</span> <span class="mi">42</span>
+    <span class="n">real_time_tactics</span> <span class="o">=</span> <span class="mi">45</span>
+    <span class="n">turn_based_strategy</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">turn_based_tactics</span> <span class="o">=</span> <span class="mi">46</span>
+    <span class="n">tower_defense</span> <span class="o">=</span> <span class="mi">47</span>
+    <span class="n">grand_strategy</span> <span class="o">=</span> <span class="mi">49</span>
+    <span class="n">fourx</span> <span class="o">=</span> <span class="mi">48</span>
+    <span class="n">moba</span> <span class="o">=</span> <span class="mi">52</span>
+    <span class="n">baseball</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">basketball</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">football</span> <span class="o">=</span> <span class="mi">21</span>
+    <span class="n">golf</span> <span class="o">=</span> <span class="mi">33</span>
+    <span class="n">hockey</span> <span class="o">=</span> <span class="mi">35</span>
+    <span class="n">soccer</span> <span class="o">=</span> <span class="mi">36</span>
+    <span class="n">wrestling</span> <span class="o">=</span> <span class="mi">37</span>
+    <span class="n">combat_sim</span> <span class="o">=</span> <span class="mi">24</span>
+    <span class="n">futuristic_sim</span> <span class="o">=</span> <span class="mi">25</span>
+    <span class="n">realistic_sim</span> <span class="o">=</span> <span class="mi">23</span>
+    <span class="n">cinematic</span> <span class="o">=</span> <span class="mi">41</span>
+    <span class="n">educational</span> <span class="o">=</span> <span class="mi">38</span>
+    <span class="n">family</span> <span class="o">=</span> <span class="mi">31</span>
+    <span class="n">party</span> <span class="o">=</span> <span class="mi">29</span>
+    <span class="n">rhythm</span> <span class="o">=</span> <span class="mi">28</span>
+    <span class="n">virtual_life</span> <span class="o">=</span> <span class="mi">30</span></div>
+
+<div class="viewcode-block" id="PlayerStyle"><a class="viewcode-back" href="../../enums.html#moddb.enums.PlayerStyle">[docs]</a><span class="k">class</span> <span class="nc">PlayerStyle</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">IntFlag</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">cls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name_</span>
+        <span class="n">members</span><span class="p">,</span> <span class="n">uncovered</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">_decompose</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value_</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">_name_</span> <span class="ow">or</span> <span class="n">m</span><span class="o">.</span><span class="n">_value_</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">members</span><span class="p">])</span>
+
+    <span class="fm">__str__</span> <span class="o">=</span> <span class="fm">__repr__</span>
+
+    <span class="n">singleplayer</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">multiplayer</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">coop</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">mmo</span> <span class="o">=</span> <span class="mi">8</span></div>
+
+<div class="viewcode-block" id="TimeFrame"><a class="viewcode-back" href="../../enums.html#moddb.enums.TimeFrame">[docs]</a><span class="k">class</span> <span class="nc">TimeFrame</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">week</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">more</span> <span class="o">=</span> <span class="mi">5</span></div>
+
+<div class="viewcode-block" id="Licence"><a class="viewcode-back" href="../../enums.html#moddb.enums.Licence">[docs]</a><span class="k">class</span> <span class="nc">Licence</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">bsd</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">commercial</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">creative_commons</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">gpl</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">l_gpl</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">zlib</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">mit</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">proprietary</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">public_domain</span> <span class="o">=</span> <span class="mi">4</span></div>
+
+<div class="viewcode-block" id="Scope"><a class="viewcode-back" href="../../enums.html#moddb.enums.Scope">[docs]</a><span class="k">class</span> <span class="nc">Scope</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">aaa</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">indie</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+<div class="viewcode-block" id="FileCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.FileCategory">[docs]</a><span class="k">class</span> <span class="nc">FileCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">releases</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">full_version</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">demo</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">patch</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="mi">28</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">media</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">trailers</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">movies</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">music</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">audio</span> <span class="o">=</span> <span class="mi">25</span>
+    <span class="n">wallpapers</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">tools</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">audio_tool</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">archive_tool</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">graphics_tool</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">mapping_tool</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">modelling_tool</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">installer_tool</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">server_tool</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">plugin</span> <span class="o">=</span> <span class="mi">27</span>
+    <span class="n">ides</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">sdk</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">source_code</span> <span class="o">=</span> <span class="mi">26</span>
+    <span class="n">miscellaneous</span> <span class="o">=</span> <span class="mi">21</span>
+    <span class="n">guides</span> <span class="o">=</span> <span class="mi">22</span>
+    <span class="n">tutorials</span> <span class="o">=</span> <span class="mi">23</span>
+    <span class="n">other</span> <span class="o">=</span> <span class="mi">24</span></div>
+
+<div class="viewcode-block" id="JobSkill"><a class="viewcode-back" href="../../enums.html#moddb.enums.JobSkill">[docs]</a><span class="k">class</span> <span class="nc">JobSkill</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">artists</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">audio_or_music</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">human_resources</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">level_designers</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">management</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">marketing</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">programmers</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">public_relations</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">qa_or_testers</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">sales</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">web_or_other</span> <span class="o">=</span> <span class="mi">11</span></div>
+
+<div class="viewcode-block" id="Sort"><a class="viewcode-back" href="../../enums.html#moddb.enums.Sort">[docs]</a><span class="k">class</span> <span class="nc">Sort</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">released</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ranktoday</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">visitstotal</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">rating</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="mi">5</span>
+
+<div class="viewcode-block" id="Sort.str"><a class="viewcode-back" href="../../enums.html#moddb.enums.Sort.str">[docs]</a>    <span class="k">def</span> <span class="nf">str</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.name}</span><span class="s2">-</span><span class="si">{order}</span><span class="s2">&quot;</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">moddb</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../filtering&amp;sorting.html">Filtering and Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../base.html">Key Functions &amp; Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages.html">ModDB Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boxes.html">ModDB Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../enums.html">ModDB Enums</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Clement Julia.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

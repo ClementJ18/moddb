@@ -43,6 +43,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.coverage',
     'sphinx.ext.githubpages',
+    'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
 ]
 
@@ -179,7 +180,7 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
-napoleon_custom_sections = ["Sorting"]
+napoleon_custom_sections = ["Sorting", "Filtering"]
 napoelon_google_doctstring = False
 napoelon_numpy_doctstring = True
 

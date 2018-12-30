@@ -1,12 +1,12 @@
-from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, PlayerStyle, Scope
+from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, PlayerStyle, Scope, ArticleType
 from .utils import get_date, soup, get_views, join, normalize, LOGGER
 
 import sys
 import re
-from typing import List
+from typing import List, Any
 
 __all__ = ['CommentList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
-           'Comment', 'Review', 'UserProfile', 'UserStatistics']
+           'Comment', 'UserProfile', 'UserStatistics', 'PartialArticle', 'Option']
 
 class Statistics:
     """The stats box, on pages that have one. This represents total stats and daily stats in one
@@ -60,7 +60,51 @@ class Statistics:
 
 #mod, game, user, addon, engine, company, group
 class Profile:
-    """"""
+    """The profile object is used for several models and as such attribute vary based on which model
+    the profile is attached too. Profiles are only pressent on Mod, Game, User, Addon, Engine, Company
+    and Group pages.
+    
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    category : SearchCategory
+        The category of the page
+    contact : str
+        The url to contact the page owner
+    follow : str
+        The url to click to follow the mod
+    share : dict{str : str}
+        A dictionnary of share links with the place they will be shared as the key and the url
+        for sharing as the value.
+    private : bool
+        Exclusive to Group and Team, True if the group is private, else False
+    membership : Membership
+        Exclusive to Group and Team, represents the join procedure (invitation only, private, public)
+    icon : str
+        Exclusive to Game, Mod and Addon pages. URL of the icon image
+    developers : dict{str : Thumbnail}
+        Exclusive to Game, Mods, Engine and Addon pages. Dictionnary of user/team like thumbnails as 
+        values and the role of the user/team as the key (creator, publisher, developer, ect...)
+    release : datetime.datetime
+        Exclusive to Game, Mods, Engine and Addon pages. Datetime object of when the page was
+        released, can be None if the page hasn't seen a release yet.
+    homepage : str
+        Present on all pages but Group pages. URL to the page's homepage. Can be None
+    engine : Thumbnail
+        Exclusive to Game and Addon pages. Engine like thumbnails representing the engine the addon/game
+        was built for.
+    game : Thumbnail
+        Exclusive to Mod pages. Game like thumbnail representing the game the mod was built for.
+    licence : Licence
+        Exclusive to Engine pages. Object representing the licence the engine operates under.
+    platforms : List[Thumbnail]
+        Exclusive to Game, Engine and Addon pages. List of platform like thumbnails representing
+        the plaftorms the software was built for.
+    """
     def __init__(self, html):
         self.__dict__.update({
             "private": None,
@@ -86,7 +130,7 @@ class Profile:
         page_type = SearchCategory[html.find("div", id="subheader").find("ul", class_="tabs").find("li", class_="on").a.string]
         
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
-        self.type = page_type
+        self.category = page_type
         self.contact = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
         self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch"])[0].parent.span.a["href"])
         
@@ -99,6 +143,7 @@ class Profile:
                 "facebook": share[3]["href"]
             }
         except AttributeError:
+            #ToDo: log dis
             self.share = None
 
         if page_type in [SearchCategory.developers, SearchCategory.groups]:
@@ -117,7 +162,6 @@ class Profile:
 
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons]:
             people = profile_raw.find_all("h5", string=["Developer", "Publisher", "Developer & Publisher","Creator", "Company"])
-            #todo: might need rework for team/users
             self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != "Creator" else ThumbnailType.user) for x in people}            
 
             try:
@@ -125,7 +169,11 @@ class Profile:
                 self.release = get_date(d)
             except KeyError:
                 LOGGER.info("%s %s has not been released", page_type.name, _name)
-                self.release = False
+                self.release = None
+
+            if page_type != SearchCategory.mods:
+                platforms = profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")
+                self.platforms = [Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform) for x in platforms]
 
         if page_type != SearchCategory.groups:
             try:
@@ -147,15 +195,31 @@ class Profile:
 
         if page_type == SearchCategory.engines:
             self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
-
-        if page_type in [SearchCategory.games, SearchCategory.engines, SearchCategory.addons]:
-            platforms = profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")
-            self.platforms = [Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform) for x in platforms]
-
+            
     def __repr__(self):
         return f"<Profile type={self.type.name}>"
 
 class Style:
+    """Represents semantic information on the page's theme. 
+    
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    ----------
+    theme : Theme
+        fantasy, sci-fi, ect...
+    genre : Genre
+        fps, rpg, moba, ect...
+    players : PlayerStyle
+        Singplayer, multiplayer, ect...
+    scope : Scope
+        Triple A games or indie
+    boxart : str
+        URL of the boxart for the page.
+    """
     def __init__(self, html):
         misc = html.find_all("h5", string=("Theme", "Genre", "Players"))
         styles = {style.string.lower() : re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc}
@@ -178,24 +242,86 @@ class Style:
         return f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
 
 class Thumbnail:
+    """Thumbnail objects are minature version of ModDB models. They can be parsed to return the full
+    version of the model.
+    
+    Attributes
+    -----------
+    url : str
+        The url to the full model, mandatory attribute.
+    name : str
+        The name of the model
+    image : str
+        The optional thumbnail image of the model
+    type : ThumbnailType
+        The type of the resource, mandatory attribute
+
+    """
     def __init__(self, **attrs):
         self.url = join(attrs.get("url"))
-        self.name = attrs.get("name")
+        self.name = attrs.get("name", None)
         self.image = attrs.get("image", None)
         self.type = attrs.get("type")
 
     def __repr__(self):
         return f"<Thumbnail name={self.name} type={self.type.name}>"
 
-    def parse(self):
+    def parse(self) -> Any:
+        """Uses the Thumbnail's mandatory attributes to get the full html of the
+        model and parse them with the appropriate object.
+
+        Returns
+        --------
+        Any
+            The model that was parsed, can be any model from the list of the ThumbnailType
+            enum.
+        """
         return getattr(sys.modules["moddb"], self.type.name.title())(soup(self.url))
 
 class Comment:
+    """A moddb comment object.
+    
+    Parameters
+    -----------
+    html : bs4.Tag
+        The html to parse into the object. Must be the exact div of the comment.
+
+    Attributes
+    -----------
+    id : int
+        The ID of the comment
+    author : Thumbnail
+        A user like thumbnail of the user who posted the comment
+    date : datetime.datetime
+        Date and time of the comment creation
+    position : int
+        Ranging from 0-2 represents the nested level of the comment.
+    children : int
+        Comment object replying directly to this one. If the comment is
+        parsed on its own it will be null. It is only populated if originating
+        from a CommentList
+    content : str
+        Text of the comment can be none if the comment only contains embeds
+    embeds : list
+        List of urls that have been embeded
+    karma : int
+        The current karma count
+    upvote : str
+        Link to upvote the comment
+    downvote : str
+        Link to downvote the comment
+    approved : bool
+        Whether or not the comment is still waiting for admin approval and is visible to the guest users
+
+
+    """
     def __init__(self, html):
         #ToDo:need to include where (Thumbnail)
         #ToDo: owner, creator, subscriber, staff flags?
+        #ToDo: embeds
+        #ToDo: check for approved even when logged in
         author = html.find("a", class_="avatar")
-        self.id = html["id"]
+        self.id = html["id"] #ToDo: check if int
         self.author = Thumbnail(name=author["title"], url=author["href"], image=author.img["src"], type=ThumbnailType.user)
         self.date = get_date(html.find("time")["datetime"])
         actions = html.find("span", class_="actions")
@@ -242,15 +368,15 @@ class CommentList(list):
         after the parent comment so:
         
         [ Comment1 ]
-           ├── Comment2
-           |    ├── Comment4
-           |    └── Comment5
-           └── Comment3
+            ├── Comment2\n
+                ├── Comment3\n
+                └── Comment4\n
+            └── Comment5
 
         would become:
-
-        [Comment1, Comment2, Comment4, Comment5, Comment3]
-
+        
+        [Comment1, Comment2, Comment3, Comment4, Comment5]
+        
         Returns
         --------
         list[Comment]
@@ -265,35 +391,40 @@ class CommentList(list):
 
         return top_list
 
-class Review:
-    """Represents a review.
-
-    Searching
-    -----------
-    rating : int
-        A value from 1 to 10 denoting the rating number you're looking for
-
-    sitearea : Category
-        The type of model the rating is for (mod, engine, game)
-    """
-    def __init__(self, **attrs):
-        text = attrs.get("text")
-        if text:
-            self.text = text.text
-        else:
-            self.text = None
-
-        review = attrs.get("review")
-        self.rating = int(review.span.string)
-
-        author = review.div.a
-        self.author = Thumbnail(url=author["href"], name=author.string.split(" ")[0], type=ThumbnailType.user)
-        self.date = get_date(review.div.span.time["datetime"])
-
-    def __repr__(self):
-        return f"<Review author={self.author.name} rating={self.rating}>"
-
 class UserProfile:
+    """User profiles are separate entities because they share nothing with the other profile boxes. Where as all
+    other profile boxes share at least 4 attributes a user shares none.
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    name : str
+        Name of teh user
+    level : int
+        Current level
+    progress : float
+        Percentage progress to next level
+    title : str
+        User title
+    avatar : str
+        Url of the user avatar
+    online : bool
+        Whether or not the user is currently online
+    last_online :  datetime.datetime
+        None if the user is currently online
+    gender : str
+        Gender of the user, can be None
+    homepage : str
+        URL of the user's homepage
+    country : str
+        The user's chosen country
+    follow : str
+        Link to follow a user
+    """
     def __init__(self, html):
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         level_raw = profile_raw.find("h5", string="Level").parent.span.div
@@ -311,8 +442,14 @@ class UserProfile:
         try:
             self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
         except AttributeError:
-            LOGGER.info("User %s has not publicized their gender", name)
-            self.gender = None        
+            LOGGER.info("User %s has not publicized their gender", self.name)
+            self.gender = None  
+
+        try:
+            self.homepage =  html.find("h5", string="Homepage").parent.span.a["href"]
+        except AttributeError:
+            self.homepage = None
+            LOGGER.info("User %s has no homepage", self.name)      
 
         self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
         self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
@@ -321,17 +458,49 @@ class UserProfile:
         return f"<UserProfile name={self.name}>"
 
 class UserStatistics:
+    """Similarly, a user statistics shared no common ground with other stats and therefore there was a 
+    need for a separate object.
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    watchers : int
+        How many users are following this user
+    points : int
+        Activity points
+    comments : int
+        How many comments the user has made
+    tags : int
+        How many tags the user has created
+    visits : int
+        How many people have viewed this page
+    visits : int
+        /shrug
+    today : int
+        How many people have viewed this page today
+    time : int
+        How much time the user has spent online
+    rank : int
+        The user's current rank (compared to other users)
+    total : int
+        the maximum rank
+    """
     def __init__(self, html):
         def get(parent):
             return parent.a.string.strip() if parent.a else parent.span.string.strip()
 
         name = html.find("meta", property="og:title")["content"]
         misc = html.find_all("h5", string=("Watchers", "Activity Points", "Comments", "Tags", "Site visits"))
-        self.__dict__.update({stat.string.lower() : int(normalize(get(stat.parent))) for stat in misc})
+        self.__dict__.update({stat.string.lower().split(" ")[1] : int(normalize(get(stat.parent))) for stat in misc})
 
         visits = normalize(html.find("h5", string="Visitors").parent.a.string)
         self.visits, self.today = get_views(visits)
 
+        #ToDo: double check type
         self.time = html.find("h5", string="Time Online").parent.span.string.strip()
 
         try:
@@ -345,3 +514,81 @@ class UserStatistics:
 
     def __repr__(self):
         return f"<UserStatistics rank={self.rank}/{self.total}>"
+
+class PartialArticle:
+    """A partial article is an article object missing attributes due to being parsed from the front page
+    intead of from the article page itself. In general, it' is simple enough for previewing the article
+    but if you need a full article with comments, profile, ect... Then parse it with the method
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    name : str
+        Name of the articles
+    url : str
+        Link to the article
+    date : datetime.datetime
+        Date the article was published
+    type : ArticleType
+        Type of the article
+    content : str
+        html of the article content
+    plaintext : str 
+        plaintext of the article content (without html)
+    """
+    def __init__(self, html):
+        meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
+
+        self.name = meta_raw.h4.a.string
+        self.url = join(meta_raw.h4.a["href"])
+        self.date = get_date(meta_raw.find("time")["datetime"])
+        try:
+            self.type = ArticleType[meta_raw.find("span", class_="subheading").text.strip().split(" ")[0].lower()]
+        except KeyError:
+            self.type = ArticleType.news
+
+        content = html.find("div", class_="row rowcontent rowcontentnext clear")
+        self.content = str(content)
+        self.plaintext = content.text
+        #ToDo: check if intro possible
+
+    def __repr__(self):
+        return f"<PartialArticle title={self.name}>"
+
+    def get_article(self) -> 'Article':
+        """Returns the full article object of this article.
+
+        Returns
+        --------
+        Article
+            The complete article object
+        """
+        return getattr(sys.modules["moddb"], "Article")(soup(self.url))
+
+class Option:
+    """Represents one of the choice from the poll they are attached to, should not be created
+    manually, prefer relying on the Poll.
+
+    Attributes
+    -----------
+    id : int
+        The id of the option, can be None and will be None in most cases.
+    text : str
+        The option's text 
+    votes : int
+        The number of votes that have been cast on this option
+    percent : int
+        The percent of all votes that have been cast on this option
+    """
+    def __init__(self, **kwargs):
+        self.id = kwargs.get("id", None)
+        self.text = kwargs.get("text")
+        self.votes = kwargs.get("votes")
+        self.percent = kwargs.get("percent")
+
+    def __repr__(self):
+        return f"<Option text={self.text}>"

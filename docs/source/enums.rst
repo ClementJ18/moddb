@@ -1,5 +1,5 @@
-moddb.enums module
-===================
+ModDB Enums
+============
 
 .. automodule:: moddb.enums
     :members:

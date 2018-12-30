@@ -1,14 +1,16 @@
-from .boxes import *
-from .enums import *
-from .utils import soup, join, LOGGER, get_type, get_date, get_views
+from .boxes import CommentList, Comment, Thumbnail, UserProfile, UserStatistics, \
+                   Profile, Statistics, Style, PartialArticle, Option
+from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
+                   MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
+from .utils import soup, join, LOGGER, get_date, get_views, get_type
 
 import re
 import bs4
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
-           'Team', 'Group', 'Job', 'Blog', 'User', 'PartialArticle', 'FrontPage',
-           'Poll']
+           'Team', 'Group', 'Job', 'Blog', 'User', 'FrontPage', 'Review',
+           'Platform', 'Poll']
 
 class Base:
     """An abstract class that implements the methods used on nearly every page. In addition, it implements
@@ -405,7 +407,8 @@ class Page(Base):
 
         self.medias = self._get_media(2)
 
-    def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, sort : Tuple[Sort, str] = None) -> List[Review]:
+    def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, 
+                    sort : Tuple[str, Union['asc', 'desc']] = None) -> List['Review']:
         """Get a page of reviews for the page. Each page will yield up to 10 reviews. 
 
         Parameters
@@ -416,7 +419,7 @@ class Page(Base):
             The string to look for in the review, optional.
         rating : int
             A number between 1 and 10 to get the ratings
-        sort : tuple[Sort, str]
+        sort : Tuple[str, Union['asc', 'desc']]
             The sorting tuple to sort by
 
         Returns
@@ -608,6 +611,7 @@ class Page(Base):
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
+
 class Mod(Page):
     """Basically just a subclass of Page
 
@@ -616,23 +620,18 @@ class Mod(Page):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     ----------
     released : enums.Status
         The status of the mod (released, unreleased)
-
     genre : enums.Genre
         The genre of the mod (fps, tower defense)
-
     theme : enums.Theme
         The theme of the mod (fantasy, action)
-
     players : enums.PlayerStyle
         Player styles of the mod (co-op, singleplayer)
-
     timeframe : enums.TimeFrame
         The time period this was released in (last 24hr, last week, last month)
-
     game : Union[pages.Game, utils.Object]
         An game object or an object with an id attribute which represents the
         game the mod belongs to.
@@ -647,7 +646,7 @@ class Mod(Page):
         * **name** - order alphabetically, asc is a-z, desc is z-a
 
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.mods)
 
 class Game(Page, GetModsMetaClass):
@@ -658,27 +657,22 @@ class Game(Page, GetModsMetaClass):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     ----------
     released : enums.Status
         The status of the game (released, unreleased)
-
     genre : enums.Genre
         The genre of the game (fps, tower defense)
-
     theme : enums.Theme
         The theme of the game (fantasy, action)
-
     indie : enums.Scope
         Whether the game is triple AAA or indie
-
     players : enums.PlayerStyle
         Player styles of the game (co-op, singleplayer)
-
     timeframe : enums.TimeFrame
         The time period this was released in (last 24hr, last week, last month)
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.games)
 
 class Engine(Page, GetGamesMetaClass):
@@ -690,17 +684,14 @@ class Engine(Page, GetGamesMetaClass):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     -----------
     released : enums.Status
         The status of the engine (released, unreleased)
-
     licence : enums.Licence
         The license of the engine
-
     timeframe : enums.TimeFrame
         The time period this was released in (last 24hr, last week, last month)
-
 
     Attributes
     -----------
@@ -708,7 +699,7 @@ class Engine(Page, GetGamesMetaClass):
         A list of games suggested on the engine main page.
     """
     #ToDo: can engines have files?
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.engines)
         delattr(self, "files")
         delattr(self, "get_files")
@@ -731,18 +722,15 @@ class File(Base):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     ----------
     category  : enums.FileCategory
         The type of file (audio, video, demo, full version....)
-
     categoryaddon : enums.AddonCategory
         The type of addon (map, textures, ect...)
-
     game : Union[pages.Game, utils.Object]
         An game object or an object with an id attribute which represents the
         game the addon belongs to.
-
     timeframe : enums.TimeFrame
         The time period this was released in (last 24hr, last week, last month)
 
@@ -773,7 +761,7 @@ class File(Base):
     preview : str
         URL of the preview image for the file
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
         files_headings = ("Filename", "Size", "MD5 Hash")
         info = html.find("div", class_="table tablemenu").find_all("h5", string=files_headings)
@@ -810,7 +798,7 @@ class Addon(File):
 
     """
     #ToDo: find difference between addon and file?
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
 
 class Media(Base):
@@ -821,7 +809,7 @@ class Media(Base):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     -----------
     sitearea : enums.Category
         The type of model the media belongs to. Category.downloads is not valid for this.
@@ -851,7 +839,7 @@ class Media(Base):
     description : str
         The description of the file as given by the file uploader.
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
         medias = html.find_all("h5", string=("Date", "By", "Duration", "Size", "Views", "Filename"))
         raw_media = {media.string.lower() : media.parent for media in medias}
@@ -889,7 +877,6 @@ class Media(Base):
 
         self.description = html.find("meta", {"name":"description"})["content"]
 
-
     def __repr__(self):
         return f"<Media name={self.name} type={self.type.name}>"
 
@@ -901,14 +888,12 @@ class Article(Base):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     ----------
     type : enums.ArticleType
         Type of the article (news, feature)
-
     timeframe : enums.TimeFrame
         The time period this was released in (last 24hr, last week, last month)
-
     game : Union[pages.Game, utils.Object]
         An game object or an object with an id attribute which represents the
         game the addon belongs to.
@@ -939,7 +924,7 @@ class Article(Base):
     plaintext : str
         The article text without any html
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
 
         raw_type = html.find("h5", string="Browse").parent.span.a.string
@@ -983,11 +968,10 @@ class Group(Page):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     ----------
     subscriptions : enums.Membership
         The subscription system of the group (private, invitation)
-
     category : enums.GroupCategory
         The category of the group (funny, literature)
 
@@ -1017,7 +1001,7 @@ class Group(Page):
     description : str
         The plaintext description of the group
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         Base.__init__(self, html)
         self.name = html.find("div", class_="title").h2.a.string
         self.private = False
@@ -1084,11 +1068,10 @@ class Team(Group):
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
-    Searching
+    Filtering
     ----------
     subscriptions : enums.Membership
         The subscription system of the company (private, invitation)
-
     category : enums.TeamCategory
         What does the team do (publisher, developer)
 
@@ -1102,7 +1085,7 @@ class Team(Group):
     """
     #Todo: possibly need high level get_engines and get_games
     #Todo: teams can't author mods? might need different inheritance
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
         try:
             self.games = self._get_games(html)
@@ -1149,7 +1132,7 @@ class Job:
     #ToDo: can a job have comments
     #ToDo: look into this one again...
     #ToDo: do jobs have search parameters?
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
 
         self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
@@ -1177,7 +1160,7 @@ class Job:
 class Blog(Base):
     """Object used to represent a user blog.
 
-    Searching
+    Filtering
     ----------
     timeframe : enums.TimeFrame
         The time period this was released in (last 24hr, last week, last month)
@@ -1200,7 +1183,6 @@ class Blog(Base):
 
     def __repr__(self):
         return f"<Blog title={self.name}>"
-
 
 class User(Page, GetGamesMetaClass, GetModsMetaClass):
     """The object to represent an individual user on ModDB
@@ -1237,11 +1219,8 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
     friends : List[Thumnails]
         A list of user like thumbnails representing some of the friends shown on the user's front
         page
-    homepage : str
-        A url of the user's homepage.
-
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         #Todo: can users have engines?
         #ToDo: check for differences between a user page vs user page of logged in user
         super().__init__(html)
@@ -1285,18 +1264,11 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
             self.friends = []
             LOGGER.info("User %s has no friends ;(", self.name)
 
-        #Todo: redudant?
-        try:
-            self.homepage =  html.find("h5", string="Homepage").parent.span.a["href"]
-        except AttributeError:
-            self.homepage = None
-            LOGGER.info("User %s has no homepage", self.name)
-
     def __repr__(self):
         return f"<User name={self.name} level={self.profile.level}>"
 
     def get_blogs(self, index : int = 1, *, query : str = None, timeframe : TimeFrame = None, 
-                  sort : Tuple[str, Sort] = None) -> List["Blog"]:
+                  sort : Tuple[str, Union['asc', 'desc']] = None) -> List["Blog"]:
         """Search through a user's blogs one page at a time with certain filters.
 
         Parameters
@@ -1307,7 +1279,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
             The date the blog was added, optional
         query : str
             The string to look for in the blog title, optional.
-        sort : tuple[Sort, str]
+        sort : Tuple[str, Union['asc', 'desc']]
             The sorting tuple to sort by
 
         Returns
@@ -1368,61 +1340,6 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
             A list of team/group like thumbnails the user is part of
         """
         return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group)
-    
-
-class PartialArticle:
-    """A partial article is an article object missing attributes due to being parsed from the front page
-    intead of from the article page itself. In general, it' is simple enough for previewing the article
-    but if you need a full article with comments, profile, ect... Then parse it with the method
-
-    Parameters
-    -----------
-    html : bs4.BeautifulSoup
-        The html to parse. Allows for finer control.
-
-    Attributes
-    -----------
-    name : str
-        Name of the articles
-    url : str
-        Link to the article
-    date : datetime.datetime
-        Date the article was published
-    type : ArticleType
-        Type of the article
-    content : str
-        html of the article content
-    plaintext : str 
-        plaintext of the article content (without html)
-    """
-    def __init__(self, html):
-        meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
-
-        self.name = meta_raw.h4.a.string
-        self.url = join(meta_raw.h4.a["href"])
-        self.date = get_date(meta_raw.find("time")["datetime"])
-        try:
-            self.type = ArticleType[meta_raw.find("span", class_="subheading").text.strip().split(" ")[0].lower()]
-        except KeyError:
-            self.type = ArticleType.news
-
-        content = html.find("div", class_="row rowcontent rowcontentnext clear")
-        self.content = str(content)
-        self.plaintext = content.text
-        #ToDo: check if intro possible
-
-    def __repr__(self):
-        return f"<PartialArticle title={self.name}>"
-
-    def get_article(self) -> Article:
-        """Returns the full article object of this article.
-
-        Returns
-        --------
-        Article
-            The complete article object
-        """
-        return Article(soup(self.url))
 
 class FrontPage:
     """An object representing the front page of  More of less just a long suggestion of the hottest mods,
@@ -1451,7 +1368,7 @@ class FrontPage:
         The current ongoing moddb poll. Currently cannot be voted on.
 
     """
-    def __init__(self, html):
+    def __init__(self, html : bs4.BeautifulSoup):
         #ToDo: add promoted content of slider
         articles = html.find("span", string="Latest Articles").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
         self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"]) for x in articles]
@@ -1474,29 +1391,48 @@ class FrontPage:
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
 
-class Option:
-    """Represents one of the choice from the poll they are attached to, should not be created
-    manually, prefer relying on the Poll.
+class Platform:
+    #ToDo
+    pass
+
+class Review:
+    """Represents a review.
+
+    Filtering
+    -----------
+    rating : int
+        A value from 1 to 10 denoting the rating number you're looking for
+
+    sitearea : Category
+        The type of model the rating is for (mod, engine, game)
 
     Attributes
     -----------
-    id : int
-        The id of the option, can be None and will be None in most cases.
     text : str
-        The option's text 
-    votes : int
-        The number of votes that have been cast on this option
-    percent : int
-        The percent of all votes that have been cast on this option
+        The contents of the review. Can be none if the user hasn't left any
+    rating : int
+        An int out of 10 representing the rating left with this review.
+    author : Thumbnail
+        A user like thumbnail of the user who left the review
+    date : datetime.datetime
+        Date and time of the review creation
     """
-    def __init__(self, **kwargs):
-        self.id = kwargs.get("id", None)
-        self.text = kwargs.get("text")
-        self.votes = kwargs.get("votes")
-        self.percent = kwargs.get("percent")
+    def __init__(self, **attrs):
+        text = attrs.get("text")
+        if text:
+            self.text = text.text
+        else:
+            self.text = None
+
+        review = attrs.get("review")
+        self.rating = int(review.span.string)
+
+        author = review.div.a
+        self.author = Thumbnail(url=author["href"], name=author.string.split(" ")[0], type=ThumbnailType.user)
+        self.date = get_date(review.div.span.time["datetime"])
 
     def __repr__(self):
-        return f"<Option text={self.text}>"
+        return f"<Review author={self.author.name} rating={self.rating}>"
 
 class Poll(Base):
     """Represents a poll available on the front page, more polls are available but most

@@ -10,6 +10,7 @@ Welcome to moddb's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   filtering&sorting
    base
    pages
    boxes

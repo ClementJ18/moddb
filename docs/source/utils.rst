@@ -1,5 +1,5 @@
-moddb.utils module
-===================
+Utility Functions
+==================
 
 .. automodule:: moddb.utils
     :members:

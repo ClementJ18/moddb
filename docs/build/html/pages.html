@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>moddb.pages module &#8212; moddb 1.0 documentation</title>
+    <title>ModDB Pages &#8212; moddb 1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -16,8 +16,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="moddb.boxes module" href="boxes.html" />
-    <link rel="prev" title="moddb.base module" href="base.html" />
+    <link rel="next" title="ModDB Boxes" href="boxes.html" />
+    <link rel="prev" title="Key Functions &amp; Objects" href="base.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,33 +32,39 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-moddb.pages">
-<span id="moddb-pages-module"></span><h1>moddb.pages module<a class="headerlink" href="#module-moddb.pages" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+  <div class="section" id="moddb-pages">
+<h1>ModDB Pages<a class="headerlink" href="#moddb-pages" title="Permalink to this headline">¶</a></h1>
+<p>This documents the models representing full ModDB pages such as Mod, Game, Engines and more. These
+models often accept entire ModDB pages as arguments and can parse them very efficiently.</p>
+<span class="target" id="module-moddb.pages"></span><dl class="class">
 <dt id="moddb.pages.Mod">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Mod</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Mod" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Mod</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Mod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Mod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code></p>
 <p>Basically just a subclass of Page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><ul class="first last simple">
-<li><strong>released</strong> (<em>enums.Status</em>) – The status of the mod (released, unreleased)</li>
-<li><strong>genre</strong> (<em>enums.Genre</em>) – The genre of the mod (fps, tower defense)</li>
-<li><strong>theme</strong> (<em>enums.Theme</em>) – The theme of the mod (fantasy, action)</li>
-<li><strong>players</strong> (<em>enums.PlayerStyle</em>) – Player styles of the mod (co-op, singleplayer)</li>
-<li><strong>timeframe</strong> (<em>enums.TimeFrame</em>) – The time period this was released in (last 24hr, last week, last month)</li>
-<li><strong>game</strong> (<em>Union[pages.Game, utils.Object]</em>) – An game object or an object with an id attribute which represents the
-game the mod belongs to.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>released <span class="classifier-delimiter">:</span> <span class="classifier">enums.Status</span></dt>
+<dd>The status of the mod (released, unreleased)</dd>
+<dt>genre <span class="classifier-delimiter">:</span> <span class="classifier">enums.Genre</span></dt>
+<dd>The genre of the mod (fps, tower defense)</dd>
+<dt>theme <span class="classifier-delimiter">:</span> <span class="classifier">enums.Theme</span></dt>
+<dd>The theme of the mod (fantasy, action)</dd>
+<dt>players <span class="classifier-delimiter">:</span> <span class="classifier">enums.PlayerStyle</span></dt>
+<dd>Player styles of the mod (co-op, singleplayer)</dd>
+<dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
+<dd>The time period this was released in (last 24hr, last week, last month)</dd>
+<dt>game <span class="classifier-delimiter">:</span> <span class="classifier">Union[pages.Game, utils.Object]</span></dt>
+<dd>An game object or an object with an id attribute which represents the
+game the mod belongs to.</dd>
+</dl>
 <p class="rubric">Sorting</p>
 <ul class="simple">
 <li><strong>released</strong> - when the object was released, asc is oldest, desc is most recent</li>
@@ -178,7 +184,7 @@ of the sideba elements found in a full article. Can be parsed to return the comp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.PartialArticle" title="moddb.pages.PartialArticle">PartialArticle</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
 </tr>
 </tbody>
 </table>
@@ -315,28 +321,32 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Game">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Game</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Game" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Game</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Game"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Game" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetModsMetaClass</span></code></p>
 <p>A subclass of Page plus a method to get all the mods.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><ul class="first last simple">
-<li><strong>released</strong> (<em>enums.Status</em>) – The status of the game (released, unreleased)</li>
-<li><strong>genre</strong> (<em>enums.Genre</em>) – The genre of the game (fps, tower defense)</li>
-<li><strong>theme</strong> (<em>enums.Theme</em>) – The theme of the game (fantasy, action)</li>
-<li><strong>indie</strong> (<em>enums.Scope</em>) – Whether the game is triple AAA or indie</li>
-<li><strong>players</strong> (<em>enums.PlayerStyle</em>) – Player styles of the game (co-op, singleplayer)</li>
-<li><strong>timeframe</strong> (<em>enums.TimeFrame</em>) – The time period this was released in (last 24hr, last week, last month)</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>released <span class="classifier-delimiter">:</span> <span class="classifier">enums.Status</span></dt>
+<dd>The status of the game (released, unreleased)</dd>
+<dt>genre <span class="classifier-delimiter">:</span> <span class="classifier">enums.Genre</span></dt>
+<dd>The genre of the game (fps, tower defense)</dd>
+<dt>theme <span class="classifier-delimiter">:</span> <span class="classifier">enums.Theme</span></dt>
+<dd>The theme of the game (fantasy, action)</dd>
+<dt>indie <span class="classifier-delimiter">:</span> <span class="classifier">enums.Scope</span></dt>
+<dd>Whether the game is triple AAA or indie</dd>
+<dt>players <span class="classifier-delimiter">:</span> <span class="classifier">enums.PlayerStyle</span></dt>
+<dd>Player styles of the game (co-op, singleplayer)</dd>
+<dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
+<dd>The time period this was released in (last 24hr, last week, last month)</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.Game.name">
 <code class="descname">name</code><a class="headerlink" href="#moddb.pages.Game.name" title="Permalink to this definition">¶</a></dt>
@@ -447,7 +457,7 @@ of the sideba elements found in a full article. Can be parsed to return the comp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.PartialArticle" title="moddb.pages.PartialArticle">PartialArticle</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
 </tr>
 </tbody>
 </table>
@@ -584,7 +594,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Engine">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Engine</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Engine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Engine</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Engine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Engine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetGamesMetaClass</span></code></p>
 <p>A subclass of Page, however, it does not have the files attribute or the get_files method
 since engines can’t have files.</p>
@@ -592,18 +602,19 @@ since engines can’t have files.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><ul class="first last simple">
-<li><strong>released</strong> (<em>enums.Status</em>) – The status of the engine (released, unreleased)</li>
-<li><strong>licence</strong> (<em>enums.Licence</em>) – The license of the engine</li>
-<li><strong>timeframe</strong> (<em>enums.TimeFrame</em>) – The time period this was released in (last 24hr, last week, last month)</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>released <span class="classifier-delimiter">:</span> <span class="classifier">enums.Status</span></dt>
+<dd>The status of the engine (released, unreleased)</dd>
+<dt>licence <span class="classifier-delimiter">:</span> <span class="classifier">enums.Licence</span></dt>
+<dd>The license of the engine</dd>
+<dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
+<dd>The time period this was released in (last 24hr, last week, last month)</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.Engine.games">
 <code class="descname">games</code><a class="headerlink" href="#moddb.pages.Engine.games" title="Permalink to this definition">¶</a></dt>
@@ -728,7 +739,7 @@ of the sideba elements found in a full article. Can be parsed to return the comp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.PartialArticle" title="moddb.pages.PartialArticle">PartialArticle</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
 </tr>
 </tbody>
 </table>
@@ -865,7 +876,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.File">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">File</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.File" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">File</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#File"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.File" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>An oject representing a file on ModDB, a file is something posted by the page owner which is directly linked
 to the page. It is endorsed by the page owner and they should do everythign they can to make sure that it is safe.
@@ -876,20 +887,22 @@ mod whereas an addon could be something like a fan-made texture pack for the mod
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><ul class="first last simple">
-<li><strong>category</strong> (<em>enums.FileCategory</em>) – The type of file (audio, video, demo, full version….)</li>
-<li><strong>categoryaddon</strong> (<em>enums.AddonCategory</em>) – The type of addon (map, textures, ect…)</li>
-<li><strong>game</strong> (<em>Union[pages.Game, utils.Object]</em>) – An game object or an object with an id attribute which represents the
-game the addon belongs to.</li>
-<li><strong>timeframe</strong> (<em>enums.TimeFrame</em>) – The time period this was released in (last 24hr, last week, last month)</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>category <span class="classifier-delimiter">:</span> <span class="classifier">enums.FileCategory</span></dt>
+<dd>The type of file (audio, video, demo, full version….)</dd>
+<dt>categoryaddon <span class="classifier-delimiter">:</span> <span class="classifier">enums.AddonCategory</span></dt>
+<dd>The type of addon (map, textures, ect…)</dd>
+<dt>game <span class="classifier-delimiter">:</span> <span class="classifier">Union[pages.Game, utils.Object]</span></dt>
+<dd>An game object or an object with an id attribute which represents the
+game the addon belongs to.</dd>
+<dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
+<dd>The time period this was released in (last 24hr, last week, last month)</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.File.hash">
 <code class="descname">hash</code><a class="headerlink" href="#moddb.pages.File.hash" title="Permalink to this definition">¶</a></dt>
@@ -1118,7 +1131,7 @@ game the addon belongs to.</li>
 
 <dl class="class">
 <dt id="moddb.pages.Addon">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Addon</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Addon" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Addon</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Addon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Addon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#moddb.pages.File" title="moddb.pages.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.File</span></code></a></p>
 <p>Object representing an addon</p>
 <dl class="attribute">
@@ -1349,7 +1362,7 @@ game the addon belongs to.</li>
 
 <dl class="class">
 <dt id="moddb.pages.Media">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Media</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Media" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Media</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Media"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Media" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>Represents an image, audio file or video file on</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1358,10 +1371,13 @@ game the addon belongs to.</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><strong>sitearea</strong> (<em>enums.Category</em>) – The type of model the media belongs to. Category.downloads is not valid for this.</td>
-</tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>sitearea <span class="classifier-delimiter">:</span> <span class="classifier">enums.Category</span></dt>
+<dd>The type of model the media belongs to. Category.downloads is not valid for this.</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.Media.date">
 <code class="descname">date</code><a class="headerlink" href="#moddb.pages.Media.date" title="Permalink to this definition">¶</a></dt>
@@ -1576,26 +1592,27 @@ game the addon belongs to.</li>
 
 <dl class="class">
 <dt id="moddb.pages.Article">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Article</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Article" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Article</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Article"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Article" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>This object represents an news article, a tutorial or a feature.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><ul class="first last simple">
-<li><strong>type</strong> (<em>enums.ArticleType</em>) – Type of the article (news, feature)</li>
-<li><strong>timeframe</strong> (<em>enums.TimeFrame</em>) – The time period this was released in (last 24hr, last week, last month)</li>
-<li><strong>game</strong> (<em>Union[pages.Game, utils.Object]</em>) – An game object or an object with an id attribute which represents the
-game the addon belongs to.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>type <span class="classifier-delimiter">:</span> <span class="classifier">enums.ArticleType</span></dt>
+<dd>Type of the article (news, feature)</dd>
+<dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
+<dd>The time period this was released in (last 24hr, last week, last month)</dd>
+<dt>game <span class="classifier-delimiter">:</span> <span class="classifier">Union[pages.Game, utils.Object]</span></dt>
+<dd>An game object or an object with an id attribute which represents the
+game the addon belongs to.</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.Article.category">
 <code class="descname">category</code><a class="headerlink" href="#moddb.pages.Article.category" title="Permalink to this definition">¶</a></dt>
@@ -1811,7 +1828,7 @@ as the value.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Team">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Team</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Team" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Team</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Team"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Team" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#moddb.pages.Group" title="moddb.pages.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Group</span></code></a></p>
 <p>A team is a group of people, which are the author of a game, a mod or an engine. A group has members which all
 have rights on those page. Like a user but instead of a single person authoring various mods and games it’s several.</p>
@@ -1819,17 +1836,17 @@ have rights on those page. Like a user but instead of a single person authoring 
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><ul class="first last simple">
-<li><strong>subscriptions</strong> (<em>enums.Membership</em>) – The subscription system of the company (private, invitation)</li>
-<li><strong>category</strong> (<em>enums.TeamCategory</em>) – What does the team do (publisher, developer)</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>subscriptions <span class="classifier-delimiter">:</span> <span class="classifier">enums.Membership</span></dt>
+<dd>The subscription system of the company (private, invitation)</dd>
+<dt>category <span class="classifier-delimiter">:</span> <span class="classifier">enums.TeamCategory</span></dt>
+<dd>What does the team do (publisher, developer)</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.Team.games">
 <code class="descname">games</code><a class="headerlink" href="#moddb.pages.Team.games" title="Permalink to this definition">¶</a></dt>
@@ -2111,7 +2128,7 @@ of the sideba elements found in a full article. Can be parsed to return the comp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.PartialArticle" title="moddb.pages.PartialArticle">PartialArticle</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
 </tr>
 </tbody>
 </table>
@@ -2248,7 +2265,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Group">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code></p>
 <p>This object represents the group model of  Certain attributes can be None if the group
 has been set to private. If you wish to see a group you have access to then you can login with the
@@ -2257,17 +2274,17 @@ login</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Searching:</th><td class="field-body"><ul class="first last simple">
-<li><strong>subscriptions</strong> (<em>enums.Membership</em>) – The subscription system of the group (private, invitation)</li>
-<li><strong>category</strong> (<em>enums.GroupCategory</em>) – The category of the group (funny, literature)</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>subscriptions <span class="classifier-delimiter">:</span> <span class="classifier">enums.Membership</span></dt>
+<dd>The subscription system of the group (private, invitation)</dd>
+<dt>category <span class="classifier-delimiter">:</span> <span class="classifier">enums.GroupCategory</span></dt>
+<dd>The category of the group (funny, literature)</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.Group.name">
 <code class="descname">name</code><a class="headerlink" href="#moddb.pages.Group.name" title="Permalink to this definition">¶</a></dt>
@@ -2521,7 +2538,7 @@ of the sideba elements found in a full article. Can be parsed to return the comp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.PartialArticle" title="moddb.pages.PartialArticle">PartialArticle</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
 </tr>
 </tbody>
 </table>
@@ -2658,7 +2675,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Job">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Job"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Model representing a job proposed on ModDB</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2799,17 +2816,14 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Blog">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Blog</code><span class="sig-paren">(</span><em>*</em>, <em>heading</em>, <em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Blog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Blog</code><span class="sig-paren">(</span><em>*</em>, <em>heading</em>, <em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Blog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Blog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>Object used to represent a user blog.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Searching:</th><td class="field-body"><strong>timeframe</strong> (<em>enums.TimeFrame</em>) – The time period this was released in (last 24hr, last week, last month)</td>
-</tr>
-</tbody>
-</table>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
+<dd>The time period this was released in (last 24hr, last week, last month)</dd>
+</dl>
 <dl class="attribute">
 <dt id="moddb.pages.Blog.id">
 <code class="descname">id</code><a class="headerlink" href="#moddb.pages.Blog.id" title="Permalink to this definition">¶</a></dt>
@@ -2870,7 +2884,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.User">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">User</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">User</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#User"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetGamesMetaClass</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetModsMetaClass</span></code></p>
 <p>The object to represent an individual user on ModDB</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3015,20 +3029,6 @@ page</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.User.homepage">
-<code class="descname">homepage</code><a class="headerlink" href="#moddb.pages.User.homepage" title="Permalink to this definition">¶</a></dt>
-<dd><p>A url of the user’s homepage.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
 <dt>
 <code class="descname">name</code></dt>
 <dd><p>The name of the page</p>
@@ -3138,7 +3138,7 @@ of the sideba elements found in a full article. Can be parsed to return the comp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.PartialArticle" title="moddb.pages.PartialArticle">PartialArticle</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
 </tr>
 </tbody>
 </table>
@@ -3273,7 +3273,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_blogs">
-<code class="descname">get_blogs</code><span class="sig-paren">(</span><em>index: int = 1</em>, <em>*</em>, <em>query: str = None</em>, <em>timeframe: moddb.enums.TimeFrame = None</em>, <em>sort: Tuple[str</em>, <em>moddb.enums.Sort] = None</em><span class="sig-paren">)</span> &#x2192; List[moddb.pages.Blog]<a class="headerlink" href="#moddb.pages.User.get_blogs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_blogs</code><span class="sig-paren">(</span><em>index: int = 1</em>, <em>*</em>, <em>query: str = None</em>, <em>timeframe: moddb.enums.TimeFrame = None</em>, <em>sort: Tuple[str</em>, <em>Union[asc</em>, <em>desc]] = None</em><span class="sig-paren">)</span> &#x2192; List[Blog]<a class="reference internal" href="_modules/moddb/pages.html#User.get_blogs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_blogs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search through a user’s blogs one page at a time with certain filters.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3283,7 +3283,7 @@ image box on the front page.</p>
 <li><strong>index</strong> (<em>int</em>) – The page index you wish to get the blogs for, allows to hop around.</li>
 <li><strong>timeframe</strong> (<em>Timeframe</em>) – The date the blog was added, optional</li>
 <li><strong>query</strong> (<em>str</em>) – The string to look for in the blog title, optional.</li>
-<li><strong>sort</strong> (<em>tuple</em><em>[</em><a class="reference internal" href="enums.html#moddb.enums.Sort" title="moddb.enums.Sort"><em>Sort</em></a><em>, </em><em>str</em><em>]</em>) – The sorting tuple to sort by</li>
+<li><strong>sort</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>'asc'</em><em>, </em><em>'desc'</em><em>]</em><em>]</em>) – The sorting tuple to sort by</li>
 </ul>
 </td>
 </tr>
@@ -3299,7 +3299,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_friends">
-<code class="descname">get_friends</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; List[moddb.boxes.Thumbnail]<a class="headerlink" href="#moddb.pages.User.get_friends" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_friends</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; List[moddb.boxes.Thumbnail]<a class="reference internal" href="_modules/moddb/pages.html#User.get_friends"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_friends" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a page of the friends of the user</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3317,7 +3317,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_groups">
-<code class="descname">get_groups</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; List[moddb.boxes.Thumbnail]<a class="headerlink" href="#moddb.pages.User.get_groups" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_groups</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; List[moddb.boxes.Thumbnail]<a class="reference internal" href="_modules/moddb/pages.html#User.get_groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a page of the groups and teams a user is part of.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3335,7 +3335,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_user_comments">
-<code class="descname">get_user_comments</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; moddb.boxes.CommentList<a class="headerlink" href="#moddb.pages.User.get_user_comments" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_user_comments</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; moddb.boxes.CommentList<a class="reference internal" href="_modules/moddb/pages.html#User.get_user_comments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_user_comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a page of all the comments a user has posted.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3354,125 +3354,8 @@ image box on the front page.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="moddb.pages.PartialArticle">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">PartialArticle</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.PartialArticle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A partial article is an article object missing attributes due to being parsed from the front page
-intead of from the article page itself. In general, it’ is simple enough for previewing the article
-but if you need a full article with comments, profile, ect… Then parse it with the method</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
-</tr>
-</tbody>
-</table>
-<dl class="attribute">
-<dt id="moddb.pages.PartialArticle.name">
-<code class="descname">name</code><a class="headerlink" href="#moddb.pages.PartialArticle.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of the articles</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.PartialArticle.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.PartialArticle.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Link to the article</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.PartialArticle.date">
-<code class="descname">date</code><a class="headerlink" href="#moddb.pages.PartialArticle.date" title="Permalink to this definition">¶</a></dt>
-<dd><p>Date the article was published</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">datetime.datetime</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.PartialArticle.type">
-<code class="descname">type</code><a class="headerlink" href="#moddb.pages.PartialArticle.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type of the article</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="enums.html#moddb.enums.ArticleType" title="moddb.enums.ArticleType">ArticleType</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.PartialArticle.content">
-<code class="descname">content</code><a class="headerlink" href="#moddb.pages.PartialArticle.content" title="Permalink to this definition">¶</a></dt>
-<dd><p>html of the article content</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.PartialArticle.plaintext">
-<code class="descname">plaintext</code><a class="headerlink" href="#moddb.pages.PartialArticle.plaintext" title="Permalink to this definition">¶</a></dt>
-<dd><p>plaintext of the article content (without html)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="moddb.pages.PartialArticle.get_article">
-<code class="descname">get_article</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; moddb.pages.Article<a class="headerlink" href="#moddb.pages.PartialArticle.get_article" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the full article object of this article.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The complete article object</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.Article" title="moddb.pages.Article">Article</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="moddb.pages.FrontPage">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">FrontPage</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.FrontPage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">FrontPage</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#FrontPage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.FrontPage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>An object representing the front page of  More of less just a long suggestion of the hottest mods,
 games, articles and files of the moment</p>
@@ -3561,8 +3444,84 @@ files on the front page.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="moddb.pages.Review">
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Review</code><span class="sig-paren">(</span><em>**attrs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Review"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Review" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a review.</p>
+<p class="rubric">Filtering</p>
+<dl class="docutils">
+<dt>rating <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>A value from 1 to 10 denoting the rating number you’re looking for</dd>
+<dt>sitearea <span class="classifier-delimiter">:</span> <span class="classifier">Category</span></dt>
+<dd>The type of model the rating is for (mod, engine, game)</dd>
+</dl>
+<dl class="attribute">
+<dt id="moddb.pages.Review.text">
+<code class="descname">text</code><a class="headerlink" href="#moddb.pages.Review.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>The contents of the review. Can be none if the user hasn’t left any</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Review.rating">
+<code class="descname">rating</code><a class="headerlink" href="#moddb.pages.Review.rating" title="Permalink to this definition">¶</a></dt>
+<dd><p>An int out of 10 representing the rating left with this review.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Review.author">
+<code class="descname">author</code><a class="headerlink" href="#moddb.pages.Review.author" title="Permalink to this definition">¶</a></dt>
+<dd><p>A user like thumbnail of the user who left the review</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Review.date">
+<code class="descname">date</code><a class="headerlink" href="#moddb.pages.Review.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Date and time of the review creation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">datetime.datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="moddb.pages.Platform">
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Platform</code><a class="reference internal" href="_modules/moddb/pages.html#Platform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
 <dt id="moddb.pages.Poll">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Poll</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Poll" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Poll</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>Represents a poll available on the front page, more polls are available but most
 won’t have the possibility to vote since they lack the option id necessary to cast a
@@ -3627,7 +3586,7 @@ to cast it from a poll which was not gotten from the front page.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[Option]</td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Option" title="moddb.boxes.Option">Option</a>]</td>
 </tr>
 </tbody>
 </table>
@@ -3705,7 +3664,7 @@ to cast it from a poll which was not gotten from the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.Poll.make_active">
-<code class="descname">make_active</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Poll.make_active" title="Permalink to this definition">¶</a></dt>
+<code class="descname">make_active</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll.make_active"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll.make_active" title="Permalink to this definition">¶</a></dt>
 <dd><p>This expensive method will ping a json file located on the project repo which will be updated
 every so often with some poll options then will attempt to figure out how far away the current poll
 is from the closest poll stored in the json file and use that knowledge to manually increment/descrement
@@ -3717,7 +3676,7 @@ Then, once that is done, the poll will be set to active and voting will be allow
 
 <dl class="method">
 <dt id="moddb.pages.Poll.vote">
-<code class="descname">vote</code><span class="sig-paren">(</span><em>option: moddb.pages.Option</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Poll.vote" title="Permalink to this definition">¶</a></dt>
+<code class="descname">vote</code><span class="sig-paren">(</span><em>option: moddb.boxes.Option</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll.vote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll.vote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Vote for an option, if you are not logged in the vote will be cast as a guest. Currently
 not implemented. Polls can only be voted on if they have been obtained from the front page,
 since only those polls contain the option ids neccessary to cast the vote. The simplest way
@@ -3727,7 +3686,7 @@ poll is currently open/active</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>option</strong> (<em>Option</em>) – The option you desire to vote for.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>option</strong> (<a class="reference internal" href="boxes.html#moddb.boxes.Option" title="moddb.boxes.Option"><em>Option</em></a>) – The option you desire to vote for.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code> – The given option does not contain the required id attribute.</td>
 </tr>
@@ -3757,19 +3716,20 @@ poll is currently open/active</p>
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="base.html">moddb.base module</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">moddb.pages module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="boxes.html">moddb.boxes module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">moddb.utils module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="enums.html">moddb.enums module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filtering&amp;sorting.html">Filtering and Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.html">Key Functions &amp; Objects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ModDB Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boxes.html">ModDB Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enums.html">ModDB Enums</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="base.html" title="previous chapter">moddb.base module</a></li>
-      <li>Next: <a href="boxes.html" title="next chapter">moddb.boxes module</a></li>
+      <li>Previous: <a href="base.html" title="previous chapter">Key Functions &amp; Objects</a></li>
+      <li>Next: <a href="boxes.html" title="next chapter">ModDB Boxes</a></li>
   </ul></li>
 </ul>
 </div>
