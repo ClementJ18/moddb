@@ -164,7 +164,7 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, U
         The search object containing the current query settings (so at to be able to redo the search easily),
         pagination metadata and helper methods to navigate the list of results.
     """
-    sort = f"{sort[0].name}-{sort[1]}" if sort else None
+    sort = f"{sort[0]}-{sort[1]}" if sort else None
 
     game = filters.pop("game", None)
     game = game.id if game else None

@@ -12,6 +12,8 @@ __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Team', 'Group', 'Job', 'Blog', 'User', 'FrontPage', 'Review',
            'Platform', 'Poll']
 
+#ToDo: timeframe? could piggy back of get_date
+
 class Base:
     """An abstract class that implements the methods used on nearly every page. In addition, it implements
     some shared hidden methods.
@@ -352,6 +354,7 @@ class Page(Base):
 
     """
     def __init__(self, html : bs4.BeautifulSoup, page_type : ThumbnailType):
+        #ToDo: add status
         super().__init__(html)
         self.name = html.find("a", itemprop="mainEntityOfPage").string
 
@@ -798,6 +801,8 @@ class Addon(File):
 
     """
     #ToDo: find difference between addon and file?
+    #ToDo: make use of AddonCategory
+    #ToDo: make use of Licence
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
 
@@ -900,7 +905,7 @@ class Article(Base):
 
     Attributes
     -----------
-    category : ArticleType
+    type : ArticleType
         Whether this article is a news article, a tutorial or a feature
     name : str
         The name of the article
@@ -928,7 +933,7 @@ class Article(Base):
         super().__init__(html)
 
         raw_type = html.find("h5", string="Browse").parent.span.a.string
-        self.category = ArticleType[raw_type.lower()]
+        self.type = ArticleType[raw_type.lower()]
         self.name = html.find("span", itemprop="headline").string
 
         try:
@@ -1393,6 +1398,10 @@ class FrontPage:
 
 class Platform:
     #ToDo
+    pass
+
+class Tutorial:
+    #ToDo: check if unique or can be replaced with Article
     pass
 
 class Review:

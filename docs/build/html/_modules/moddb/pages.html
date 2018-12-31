@@ -45,6 +45,8 @@
            <span class="s1">&#39;Team&#39;</span><span class="p">,</span> <span class="s1">&#39;Group&#39;</span><span class="p">,</span> <span class="s1">&#39;Job&#39;</span><span class="p">,</span> <span class="s1">&#39;Blog&#39;</span><span class="p">,</span> <span class="s1">&#39;User&#39;</span><span class="p">,</span> <span class="s1">&#39;FrontPage&#39;</span><span class="p">,</span> <span class="s1">&#39;Review&#39;</span><span class="p">,</span>
            <span class="s1">&#39;Platform&#39;</span><span class="p">,</span> <span class="s1">&#39;Poll&#39;</span><span class="p">]</span>
 
+<span class="c1">#ToDo: timeframe? could piggy back of get_date</span>
+
 <span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;An abstract class that implements the methods used on nearly every page. In addition, it implements</span>
 <span class="sd">    some shared hidden methods.</span>
@@ -385,6 +387,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">page_type</span> <span class="p">:</span> <span class="n">ThumbnailType</span><span class="p">):</span>
+        <span class="c1">#ToDo: add status</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;mainEntityOfPage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
 
@@ -831,6 +834,8 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1">#ToDo: find difference between addon and file?</span>
+    <span class="c1">#ToDo: make use of AddonCategory</span>
+    <span class="c1">#ToDo: make use of Licence</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span></div>
 
@@ -933,7 +938,7 @@
 
 <span class="sd">    Attributes</span>
 <span class="sd">    -----------</span>
-<span class="sd">    category : ArticleType</span>
+<span class="sd">    type : ArticleType</span>
 <span class="sd">        Whether this article is a news article, a tutorial or a feature</span>
 <span class="sd">    name : str</span>
 <span class="sd">        The name of the article</span>
@@ -961,7 +966,7 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 
         <span class="n">raw_type</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Browse&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">string</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">ArticleType</span><span class="p">[</span><span class="n">raw_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">ArticleType</span><span class="p">[</span><span class="n">raw_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;headline&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
 
         <span class="k">try</span><span class="p">:</span>
@@ -1427,6 +1432,10 @@
 <div class="viewcode-block" id="Platform"><a class="viewcode-back" href="../../pages.html#moddb.pages.Platform">[docs]</a><span class="k">class</span> <span class="nc">Platform</span><span class="p">:</span>
     <span class="c1">#ToDo</span>
     <span class="k">pass</span></div>
+
+<span class="k">class</span> <span class="nc">Tutorial</span><span class="p">:</span>
+    <span class="c1">#ToDo: check if unique or can be replaced with Article</span>
+    <span class="k">pass</span>
 
 <div class="viewcode-block" id="Review"><a class="viewcode-back" href="../../pages.html#moddb.pages.Review">[docs]</a><span class="k">class</span> <span class="nc">Review</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Represents a review.</span>

@@ -1,3 +1,5 @@
+.. currentmodule:: moddb
+
 Utility Functions
 ==================
 

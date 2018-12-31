@@ -41,10 +41,31 @@ is displaying those results based on the ascending or descending value of
 a field.</p>
 <p>The documentation for filtering and sorting models is found within the
 documentation of the models themslves. E.g. To find the documentation
-for filtering and sorting a Mod page, look at the moddb.Mod documentation.</p>
+for filtering and sorting a Mod page, look at the <code class="xref py py-class docutils literal notranslate"><span class="pre">Mod</span></code> documentation.</p>
 <p>Filtering accepts any number of the arguments listed under the Filtering
 section of each model. Sorting accepts a single argument along with the
 value ‘desc’ or ‘asc’. You cannot sort by multiple arguments.</p>
+<p>For example let’s say we want to search for a mod, but we’re only interested
+in the most popular fantasy mods. In that case we’d want to filter by <cite>theme</cite> and
+sort by <cite>visittotal</cite> and <cite>asc</cite>. E.g</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">moddb</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">moddb</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="c1">#what we&#39;re searching for</span>
+            <span class="n">moddb</span><span class="o">.</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span>
+
+            <span class="c1">#a filter (there can be multiple)</span>
+            <span class="n">theme</span><span class="o">=</span><span class="n">moddb</span><span class="o">.</span><span class="n">Theme</span><span class="o">.</span><span class="n">fantasy</span><span class="p">,</span>
+
+            <span class="c1">#the sort tuple, there can only be one</span>
+            <span class="n">sort</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;visitsalltime&#39;</span><span class="p">,</span> <span class="s1">&#39;asc&#39;</span><span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>Simple as that, and the list of returned search results will be only the results
+which are themed Fantasy and will be sorted by all time popularity from highest
+to lowest. Each item that can be searched has its own documentation on filtering
+and sorting and if it doesn’t then open an issue on the Github repository of the
+project.</p>
 </div>
 
 

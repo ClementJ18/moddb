@@ -308,14 +308,3 @@ class JobSkill(enum.Enum):
     qa_or_testers = 9
     sales = 10
     web_or_other = 11
-
-class Sort(enum.Enum):
-    released = 0
-    id = 1
-    ranktoday = 2
-    visitstotal = 3
-    rating = 4
-    name = 5
-
-    def str(self, order):
-        return f"{self.name}-{order}"

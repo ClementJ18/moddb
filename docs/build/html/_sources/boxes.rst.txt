@@ -1,3 +1,5 @@
+.. currentmodule:: moddb
+
 ModDB Boxes
 ============
 A 'Box' is a div tag which resides on the page but does not encompass the page. It is often on

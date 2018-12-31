@@ -106,6 +106,7 @@ class Profile:
         the plaftorms the software was built for.
     """
     def __init__(self, html):
+        #ToDo: group category/team category
         self.__dict__.update({
             "private": None,
             "membership": None,

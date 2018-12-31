@@ -48,7 +48,7 @@ def soup(url : str, *, params : dict = {}) -> BeautifulSoup:
         The url to get
 
     params : dict
-        A dictionnary of filters and sorting key-valie pairs.
+        A dictionnary of filters and sorting key-value pairs.
 
     Returns
     -------
