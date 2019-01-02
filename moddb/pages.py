@@ -1,5 +1,5 @@
 from .boxes import CommentList, Comment, Thumbnail, UserProfile, UserStatistics, \
-                   Profile, Statistics, Style, PartialArticle, Option
+                   Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
 from .utils import soup, join, LOGGER, get_date, get_views, get_type
@@ -13,6 +13,7 @@ __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Platform', 'Poll']
 
 #ToDo: timeframe? could piggy back of get_date
+#ToDo: fix docs of params which classes don't init
 
 class Base:
     """An abstract class that implements the methods used on nearly every page. In addition, it implements
@@ -35,17 +36,30 @@ class Base:
         URL to report the page
     """
     def __init__(self, html):
-        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
+        #ToDo: add self name and overwrite where need be?
+        try:
+            self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
+        except TypeError:
+            self.id = None
+            LOGGER.info("%s %s has no id", self.__class__.__name__, self.name)
+
         self.url = html.find("meta", property="og:url")["content"]
 
         #ToDo: check if works
-        self.report = html.find("h5", string="Report").parent.span.a["href"]
+        try:
+            self.report = html.find("a", string="Report")["href"]
+        except TypeError:
+            self.report = None
+            LOGGER.info("%s %s cannot be reported", self.__class__.__name__, self.name)
 
         try:
             self.comments = self._get_comments(html)
         except AttributeError:
             self.comments = []
             LOGGER.info("%s %s has no comments", self.__class__.__name__, self.name)
+
+    def __repr__(self):
+        return f"<{self.__class__.__name__} name={self.name}>"
 
     def _get_comments(self, html : bs4.BeautifulSoup) -> CommentList:
         """Extracts the comments from an html page and adds them to a CommentList. In addition
@@ -306,6 +320,23 @@ class GetModsMetaClass:
         """
         return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod)
 
+class GetEnginesMetaClass:
+    """Abstract class containing the get_engines method"""
+    def get_engines(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of engines for the game. Each page will yield up to 30 engines. 
+        
+        Parameters
+        -----------
+        index : int
+            The page number to get the engines from.
+
+        Returns
+        --------
+        List[Thumbnail]
+            The list of engine type thumbnails parsed from the game
+        """
+        return self._get(f"{self.url}/engines/page/{index}", ThumbnailType.engine)
+
 class Page(Base):
     """The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by
     those classes.
@@ -355,8 +386,8 @@ class Page(Base):
     """
     def __init__(self, html : bs4.BeautifulSoup, page_type : ThumbnailType):
         #ToDo: add status
-        super().__init__(html)
         self.name = html.find("a", itemprop="mainEntityOfPage").string
+        super().__init__(html)
 
         #boxes
         self.profile = Profile(html)
@@ -369,7 +400,7 @@ class Page(Base):
         try:
             self.files = self._get_files(html)
         except AttributeError:
-            LOGGER.info("%s %s has no files", self.profile.type.name, self.name)
+            LOGGER.info("%s %s has no files", self.profile.category.name, self.name)
             self.files = []
 
         articles_raw = None
@@ -379,7 +410,7 @@ class Page(Base):
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
-            LOGGER.info("%s %s has no article suggestions", self.profile.type.name, self.name)
+            LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
             self.articles = []
 
         #main page article
@@ -387,7 +418,7 @@ class Page(Base):
             self.article = PartialArticle(articles_raw)
         else:
             self.article = None
-            LOGGER.info("%s %s has no front page article", self.profile.type.name, self.name)
+            LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
 
         raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
         self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
@@ -406,7 +437,7 @@ class Page(Base):
             self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
         except AttributeError:
             self.rating = 0.0
-            LOGGER.info("%s %s is not rated", self.profile.type.name, self.name)
+            LOGGER.info("%s %s is not rated", self.profile.category.name, self.name)
 
         self.medias = self._get_media(2)
 
@@ -765,14 +796,13 @@ class File(Base):
         URL of the preview image for the file
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        self.name = file["filename"]
         super().__init__(html)
         files_headings = ("Filename", "Size", "MD5 Hash")
         info = html.find("div", class_="table tablemenu").find_all("h5", string=files_headings)
 
         file = {x.string.lower() : x.parent.span.string.strip() for x in info}
         self.hash = file["md5 hash"]
-        self.name = file["filename"]
-
         self.size = int(re.sub(r"[(),bytes]", "", file["size"].split(" ")[1]))
 
         downloads = html.find("h5", string="Downloads").parent.a.string
@@ -845,12 +875,12 @@ class Media(Base):
         The description of the file as given by the file uploader.
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        self.name = html.find("meta", itemprop="name")["content"]
         super().__init__(html)
         medias = html.find_all("h5", string=("Date", "By", "Duration", "Size", "Views", "Filename"))
         raw_media = {media.string.lower() : media.parent for media in medias}
         
         self.date = get_date(raw_media["date"].span.time["datetime"])
-        self.name = html.find("meta", itemprop="name")["content"]
 
         author = raw_media["by"].span.a
         self.author = Thumbnail(url=author["href"], name=author.string.strip(), type=ThumbnailType.user)
@@ -930,11 +960,11 @@ class Article(Base):
         The article text without any html
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        self.name = html.find("span", itemprop="headline").string
         super().__init__(html)
 
         raw_type = html.find("h5", string="Browse").parent.span.a.string
         self.type = ArticleType[raw_type.lower()]
-        self.name = html.find("span", itemprop="headline").string
 
         try:
             raw = html.find("span", string=raw_type[0:-1]).parent.parent.parent.find("div", class_="table tablemenu")
@@ -1007,8 +1037,8 @@ class Group(Page):
         The plaintext description of the group
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        Base.__init__(self, html)
         self.name = html.find("div", class_="title").h2.a.string
+        Base.__init__(self, html)
         self.private = False
 
         try:
@@ -1207,8 +1237,6 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         Since user statistics have no overlap with regular statistic pages, they are a separate object type
         but server the same function of making the side box "Statistics" into an object, but exclusively for
         the user page.
-    name : str
-        Username of the user
     description : str
         Description written on the user profile
     groups : List[Thumbnail]
@@ -1218,9 +1246,6 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         The front page blog shown on the user page
     blogs : List[Thumbnail]
         A list of blog like thumbnails representing the blog suggestion of a user's frontpage
-    medias : List[Thumbnail]
-        A list of media like thumbnails representing all the videos and images posted by the user
-        on their account.
     friends : List[Thumnails]
         A list of user like thumbnails representing some of the friends shown on the user's front
         page
@@ -1232,8 +1257,6 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
 
         self.profile = UserProfile(html)
         self.stats = UserStatistics(html)
-
-        self.name = html.find("meta", property="og:title")["content"]
         self.description = html.find("div", id="profiledescription").p.string
 
         try:
@@ -1259,8 +1282,6 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         except (TypeError, AttributeError):
             self.blogs = []
             LOGGER.info("User %s has no blog suggestions", self.name)
-
-        self.medias = self._get_media(2)
 
         try:
             friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
@@ -1396,12 +1417,180 @@ class FrontPage:
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
 
-class Platform:
-    #ToDo
-    pass
+class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass):
+    """Represents the platform supporting the game/engines. Game and engines may have mutiple platforms.
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    name : str
+        The name of the platform
+    id : int
+        The moddb id of the platform
+    url : str
+        The url of the platform page
+    description : str
+        Description of the platform
+    company : Thumbnail
+        A team like thumbnail of the company.
+    homepage : str
+        Link to the homepage of the engine
+    date : datetime.datetime
+        Date the engine was published
+    stats : PlatformStatistics
+        Stat data on the platform
+    share : dict{str : str}
+        Share link of the platform with the name of the share as key and link of the share as url.
+    comments : CommentList
+        Comments on this page
+    games : List[Thumbnail]
+        A list of games suggested on the platform main page.
+    hardware : List[Thumbnail]
+        A list of hardware suggested on the platform main page.
+    software : List[Thumbnail]
+        A list of software suggested on the platform main page.
+    engines : List[Thumbnail]
+        A list of engines suggested on the platform main page.
+    mods : List[Thumbnail]
+        A list of mods suggested on the platform main page.
+    """
+    def __init__(self, html):
+        #test with all platforms
+        self.name = html.find("a", itemprop="mainEntityOfPage").string
+        
+        #ToDo: check if possible
+        self.id = None
+        
+        self.url = join(html.find("a", itemprop="mainEntityOfPage")["href"])
+        self.description = html.find("div", id="profiledescription").p.string
+
+        company = html.find("h5", string="Company").parent.span.a
+        self.company = Thumbnail(name=company.string, url=company["href"], type=ThumbnailType.team)
+
+        self.homepage = html.find("h5", string="Homepage").parent.span.a["href"]
+
+        self.date = get_date(html.find("time", itemprop="releaseDate")["datetime"])
+
+        self.stats = PlatformStatistics(html)
+
+        try:
+            share = html.find("h5", string="Share").parent.span.find_all("a")
+            self.share = {
+                "reddit": share[0]["href"],
+                "mail": share[1]["href"],
+                "twitter": share[2]["href"],
+                "facebook": share[3]["href"]
+            }
+        except AttributeError:
+            #ToDo: log dis
+            self.share = None
+
+        try:
+            self.comments = self._get_comments(html)
+        except AttributeError:
+            self.comments = []
+            LOGGER.info("%s %s has no comments", self.__class__.__name__, self.name)
+
+        hardware = html.find("span", string=" Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
+
+        software = html.find("span", string=" Software").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.software = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.software, image=x.a.img["src"]) for x in software]
+
+        engines = html.find("span", string=" Engines").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.engines = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.engine, image=x.a.img["src"]) for x in engines]
+
+        mods = html.find("span", string=" Mods").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.mods = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.mod, image=x.a.img["src"]) for x in mods]
+
+        games = html.find("span", string=" Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
+
+
+    def __repr__(self):
+        return f"<Platform name={self.name}>"
+
+    def get_hardware(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of hardware for the platform. Each page will yield up to 30 hardware.
+
+        Parameters
+        -----------
+        index : int
+            The page number to get the hardware for.
+
+        Returns
+        --------
+        List[Thumbnail]
+            List of hardware like thumbnails that can be parsed individually.
+        """
+        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.hardware)
+
+    def get_software(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of software for the platform. Each page will yield up to 30 software.
+
+        Parameters
+        -----------
+        index : int
+            The page number to get the software for.
+
+        Returns
+        --------
+        List[Thumbnail]
+            List of software like thumbnails that can be parsed individually.
+        """
+        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.software)
+
 
 class Tutorial:
     #ToDo: check if unique or can be replaced with Article
+    pass
+
+class Hardware(Base):
+    def __init__(self, html):
+        self.name = html.find("a", itemprop="mainEntityOfPage").string
+        super().__init__(html)
+        self.profile = Profile(html)
+
+        try:
+            self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
+        except AttributeError:
+            self.rating = 0.0
+            LOGGER.info("%s %s is not rated", self.profile.category.name, self.name)
+
+        hardware = html.find("span", string="Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
+
+        software = html.find("span", string="Software").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.software = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.software, image=x.a.img["src"]) for x in software]
+
+        games = html.find("span", string="Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
+
+        #ToDo: no mods?
+
+        articles_raw = None
+        try:
+            articles_raw = html.find("span", string="Related Articles").parent.parent.parent.find("div", class_="table")
+            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
+        except AttributeError:
+            LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
+            self.articles = []
+
+        #main page article
+        if articles_raw:
+            self.article = PartialArticle(articles_raw)
+        else:
+            self.article = None
+            LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
+
+
+class Software:
+    #ToDo
     pass
 
 class Review:
@@ -1470,9 +1659,10 @@ class Poll(Base):
     """
     #ToDo: edit this to work both with /polls/ pages and the front page
     def __init__(self, html):
+        self.question = poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
+        self.name = self.question
         super().__init__(html)
         poll = html.find("div", class_="poll")
-        self.question = poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
         author = poll.find("p", class_="question").find("a")
         self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
 

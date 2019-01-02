@@ -43,7 +43,7 @@
 
 <dl class="function">
 <dt id="moddb.utils.get_date">
-<code class="descclassname">moddb.utils.</code><code class="descname">get_date</code><span class="sig-paren">(</span><em>d: str</em><span class="sig-paren">)</span> &#x2192; datetime.datetime<a class="reference internal" href="_modules/moddb/utils.html#get_date"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.get_date" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.utils.</code><code class="descname">get_date</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/utils.html#get_date"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.get_date" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper function that takes a ModDB string representation of time and returns an equivalent
 datetime.datetime object. This can range from a datetime with the full year to
 second to just a year and a month.</p>
@@ -63,13 +63,21 @@ second to just a year and a month.</p>
 
 <dl class="function">
 <dt id="moddb.utils.get_type">
-<code class="descclassname">moddb.utils.</code><code class="descname">get_type</code><span class="sig-paren">(</span><em>img: bs4.element.Tag</em><span class="sig-paren">)</span> &#x2192; int<a class="reference internal" href="_modules/moddb/utils.html#get_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.get_type" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.utils.</code><code class="descname">get_type</code><span class="sig-paren">(</span><em>img</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/utils.html#get_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.get_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines the type of the image through some very hacky stuff, might break</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="moddb.utils.get_views">
-<code class="descclassname">moddb.utils.</code><code class="descname">get_views</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; Tuple[int, int]<a class="reference internal" href="_modules/moddb/utils.html#get_views"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.get_views" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.utils.</code><code class="descname">get_views</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/utils.html#get_views"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.get_views" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper function that takes a string reresentation of total something and
 daily amount of that same thing and returns both as a tuple of ints.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -88,19 +96,35 @@ daily amount of that same thing and returns both as a tuple of ints.</p>
 
 <dl class="function">
 <dt id="moddb.utils.join">
-<code class="descclassname">moddb.utils.</code><code class="descname">join</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="_modules/moddb/utils.html#join"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.join" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.utils.</code><code class="descname">join</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/utils.html#join"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Joins a partial moddb string with the base url and returns the combined url</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="moddb.utils.normalize">
-<code class="descclassname">moddb.utils.</code><code class="descname">normalize</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="_modules/moddb/utils.html#normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.normalize" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.utils.</code><code class="descname">normalize</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/utils.html#normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes all extra fluff from a text to get the barebone content</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="moddb.utils.soup">
-<code class="descclassname">moddb.utils.</code><code class="descname">soup</code><span class="sig-paren">(</span><em>url: str</em>, <em>*</em>, <em>params: dict = {}</em><span class="sig-paren">)</span> &#x2192; bs4.BeautifulSoup<a class="reference internal" href="_modules/moddb/utils.html#soup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.soup" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.utils.</code><code class="descname">soup</code><span class="sig-paren">(</span><em>url</em>, <em>*</em>, <em>params={}</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/utils.html#soup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.utils.soup" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper function that takes a url and returns a beautiful soup objects. This is used to center
 the request making section of the library. Can also be passed a set of paramaters, used for sorting
 and filtering in the search function.</p>

@@ -33,6 +33,91 @@
             
   <div class="section" id="welcome-to-moddb-s-documentation">
 <h1>Welcome to moddb’s documentation!<a class="headerlink" href="#welcome-to-moddb-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>The moddb python library is a module to scrape the ModDB.com website. The goal is to emulate
+the moddb website using function and OOP as if ModDB was simply an API. Ideally, in it’s finished
+state you should be able to pair with a web framework to perfectly emulate the website and all
+its features.</p>
+<div class="section" id="basic-utilization">
+<h2>Basic Utilization<a class="headerlink" href="#basic-utilization" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way to use this library is to simply pass a ModDB url to the parse function and let the magic happen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">moddb</span>
+<span class="n">mod</span> <span class="o">=</span> <span class="n">moddb</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;http://www.moddb.com/mods/edain-mod&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mod</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">#Edain Mod</span>
+</pre></div>
+</div>
+<p>The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">moddb</span>
+<span class="n">mod</span> <span class="o">=</span> <span class="n">moddb</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span>
+            <span class="s2">&quot;http://www.moddb.com/mods/edain-mod&quot;</span><span class="p">,</span>
+            <span class="n">page_type</span><span class="o">=</span><span class="n">moddb</span><span class="o">.</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">mod</span>
+         <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mod</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">#Edain Mod</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="searching">
+<h2>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h2>
+<p>The package supports searching moddb with an optional query, filters and to sort those results. Filters differ widely depending on which model is being searched therefore a good read of the documentation of the search function is recommended. The only required parameter of the search function is a valid moddb.SearchCategory as the first argument. All other arguments are optional. the <cite>search</cite> function returns a moddb.Search object. The most basic example is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">moddb</span> <span class="k">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">SearchCategory</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">)</span>
+<span class="c1">#returns a search objects with the results being a</span>
+<span class="c1">#list of mod thumbnails</span>
+</pre></div>
+</div>
+<p>You can also search titles of the models with a string query.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from moddb import search, SearchCategory
+search = search(SearchCategory.mods`, query=&quot;age of the ring&quot;)
+#returns a search objects with the results being a list of
+#mod thumbnails which moddb has matched with the words age of the ring
+</pre></div>
+</div>
+<p>Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">moddb</span> <span class="k">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="n">Theme</span><span class="p">,</span> <span class="n">Status</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span>
+      <span class="n">theme</span><span class="o">=</span><span class="n">Theme</span><span class="o">.</span><span class="n">fantasy</span><span class="p">,</span> <span class="n">released</span><span class="o">=</span><span class="n">Status</span><span class="o">.</span><span class="n">released</span>
+   <span class="p">)</span>
+<span class="c1">#returns a search objects with the results being a list of mod</span>
+<span class="c1">#thumbnails of mods which have been released and are labelled as</span>
+<span class="c1">#fantasy themed.</span>
+</pre></div>
+</div>
+<p>And finally, you can sort the results with the <cite>sort</cite> kwargs which expects a tuple with the first element being a sort category and the second being whether you want the sort to be ascending or descending.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">moddb</span> <span class="k">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="n">Sort</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="p">(</span><span class="n">Sort</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="s2">&quot;asc&quot;</span><span class="p">))</span>
+<span class="c1">#returns a search objects with the results being a list of mod</span>
+<span class="c1">#thumbnails sorted by rating with highest rating first</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h2>
+<p>This package makes use of the powerful Python logging module. Whenever the scrapper is unable to find a specific field for a model, either because it does not exist or because the scrapper cannot see it with its current permissions, then it will log it as an info. All logs will be sent to the <cite>moddb</cite> logger, to have access to the stream of logs you can do things like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;moddb&#39;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;moddb.log&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1">:</span><span class="si">%(levelname)s</span><span class="s1">:</span><span class="si">%(name)s</span><span class="s1">: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">))</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="account">
+<h2>Account<a class="headerlink" href="#account" title="Permalink to this headline">¶</a></h2>
+<p>This package allows users to login into ModDB in order to have access to additional information which Guest users (the account the package uses by default) cannot see such as Guest comments waiting for approval or private groups/members. In order to login simply use the built-in library method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">moddb</span>
+<span class="n">moddb</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;valid_username&quot;</span><span class="p">,</span> <span class="s2">&quot;valid_password&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The session the package uses will be updated and all further requests will now be made logged in as that user. The function will raise a ValueError if the login fails. You can also log out of the account to disable access to those restricted elements with the <cite>logout</cite> function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">moddb</span>
+<span class="n">moddb</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -43,6 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="enums.html">ModDB Enums</a></li>
 </ul>
+</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
