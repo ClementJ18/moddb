@@ -5,7 +5,7 @@ from .pages import FrontPage
 
 import re
 import sys
-from typing import Tuple, Union, Any
+from typing import Tuple, Any
 from robobrowser import RoboBrowser
 
 __all__ = ["Search", "search", "parse", "login", "logout", "front_page"]
@@ -110,12 +110,12 @@ class Search:
 
         return search(self.category, query=self.query, page=page, **self.filters)
 
-    def resort(self, new_sort : Tuple[str, Union['asc', 'desc']]) -> 'Search': 
+    def resort(self, new_sort : Tuple[str, str]) -> 'Search': 
         """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
 
         Parameters
         -----------
-        new_sort : Tuple[str, Union['asc', 'desc']]
+        new_sort : Tuple[str, str]
             The new sorting tuple to check by
 
         Returns
@@ -129,7 +129,7 @@ class Search:
         return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
 
 
-def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, Union['asc', 'desc']] = None,
+def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, str] = None,
            page : int = 1, **filters) -> Search: 
     """ Search for for a certain type of models and return a list of thumbnails of that 
     model. This function was created to make full use of moddb's filter and sorting system as
@@ -148,7 +148,7 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, U
     query : str
         String to search for in the model title
     
-    sort : Tuple[str, Union['asc', 'desc']]
+    sort : Tuple[str, str]
         The tuple to sort by, look at the models your are searching for documentation 
         on sorting.
 
@@ -264,8 +264,8 @@ def login(username : str, password : str):
         raise ValueError(f"Login failed for user {username}")
 
 def logout(): 
-    """Logs the user out by clearing the cookies, all guest commnets will be hidden and all private groups
-    will be hidden once more
+    """Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and 
+    all private groups will be hidden once more
     """
     sys.modules["moddb"].SESSION.cookies.clear()
 

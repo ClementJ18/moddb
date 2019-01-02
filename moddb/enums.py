@@ -17,6 +17,8 @@ class SearchCategory(enum.Enum):
     reviews = 13
     headlines = 14
     blogs = 15
+    hardware = 16
+    software = 17
 
 class Category(enum.Enum):
     mods = "mods"
@@ -109,6 +111,8 @@ class ThumbnailType(enum.Enum):
     job = 11
     platform = 12
     media = 13
+    software = 104
+    hardware = 15
     company = team
 
 class AddonCategory(enum.Enum):
@@ -308,3 +312,6 @@ class JobSkill(enum.Enum):
     qa_or_testers = 9
     sales = 10
     web_or_other = 11
+
+class HardwareCategory(enum.Enum):
+    headset = 1

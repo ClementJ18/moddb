@@ -38,7 +38,7 @@
 models often accept entire ModDB pages as arguments and can parse them very efficiently.</p>
 <span class="target" id="module-moddb.pages"></span><dl class="class">
 <dt id="moddb.pages.Mod">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Mod</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Mod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Mod" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Mod</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Mod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Mod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code></p>
 <p>Basically just a subclass of Page</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -321,7 +321,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Game">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Game</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Game"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Game" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Game</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Game"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Game" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetModsMetaClass</span></code></p>
 <p>A subclass of Page plus a method to get all the mods.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -594,7 +594,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Engine">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Engine</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Engine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Engine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Engine</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Engine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Engine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetGamesMetaClass</span></code></p>
 <p>A subclass of Page, however, it does not have the files attribute or the get_files method
 since engines can’t have files.</p>
@@ -876,7 +876,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.File">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">File</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#File"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.File" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">File</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#File"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.File" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>An oject representing a file on ModDB, a file is something posted by the page owner which is directly linked
 to the page. It is endorsed by the page owner and they should do everythign they can to make sure that it is safe.
@@ -1131,7 +1131,7 @@ game the addon belongs to.</dd>
 
 <dl class="class">
 <dt id="moddb.pages.Addon">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Addon</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Addon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Addon" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Addon</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Addon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Addon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#moddb.pages.File" title="moddb.pages.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.File</span></code></a></p>
 <p>Object representing an addon</p>
 <dl class="attribute">
@@ -1362,7 +1362,7 @@ game the addon belongs to.</dd>
 
 <dl class="class">
 <dt id="moddb.pages.Media">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Media</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Media"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Media" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Media</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Media"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Media" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>Represents an image, audio file or video file on</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1592,7 +1592,7 @@ game the addon belongs to.</dd>
 
 <dl class="class">
 <dt id="moddb.pages.Article">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Article</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Article"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Article" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Article</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Article"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Article" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code></p>
 <p>This object represents an news article, a tutorial or a feature.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1828,7 +1828,7 @@ as the value.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Team">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Team</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Team"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Team" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Team</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Team"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Team" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#moddb.pages.Group" title="moddb.pages.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Group</span></code></a></p>
 <p>A team is a group of people, which are the author of a game, a mod or an engine. A group has members which all
 have rights on those page. Like a user but instead of a single person authoring various mods and games it’s several.</p>
@@ -2265,7 +2265,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Group">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code></p>
 <p>This object represents the group model of  Certain attributes can be None if the group
 has been set to private. If you wish to see a group you have access to then you can login with the
@@ -2675,7 +2675,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Job">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Job"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Job"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Model representing a job proposed on ModDB</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2884,7 +2884,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.User">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">User</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#User"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">User</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#User"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Page</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetGamesMetaClass</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetModsMetaClass</span></code></p>
 <p>The object to represent an individual user on ModDB</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3273,7 +3273,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_blogs">
-<code class="descname">get_blogs</code><span class="sig-paren">(</span><em>index: int = 1</em>, <em>*</em>, <em>query: str = None</em>, <em>timeframe: moddb.enums.TimeFrame = None</em>, <em>sort: Tuple[str</em>, <em>Union[asc</em>, <em>desc]] = None</em><span class="sig-paren">)</span> &#x2192; List[Blog]<a class="reference internal" href="_modules/moddb/pages.html#User.get_blogs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_blogs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_blogs</code><span class="sig-paren">(</span><em>index=1</em>, <em>*</em>, <em>query=None</em>, <em>timeframe=None</em>, <em>sort=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#User.get_blogs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_blogs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search through a user’s blogs one page at a time with certain filters.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3299,7 +3299,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_friends">
-<code class="descname">get_friends</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; List[moddb.boxes.Thumbnail]<a class="reference internal" href="_modules/moddb/pages.html#User.get_friends"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_friends" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_friends</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#User.get_friends"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_friends" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a page of the friends of the user</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3317,7 +3317,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_groups">
-<code class="descname">get_groups</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; List[moddb.boxes.Thumbnail]<a class="reference internal" href="_modules/moddb/pages.html#User.get_groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_groups" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_groups</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#User.get_groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a page of the groups and teams a user is part of.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3335,7 +3335,7 @@ image box on the front page.</p>
 
 <dl class="method">
 <dt id="moddb.pages.User.get_user_comments">
-<code class="descname">get_user_comments</code><span class="sig-paren">(</span><em>index: int = 1</em><span class="sig-paren">)</span> &#x2192; moddb.boxes.CommentList<a class="reference internal" href="_modules/moddb/pages.html#User.get_user_comments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_user_comments" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_user_comments</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#User.get_user_comments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.User.get_user_comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a page of all the comments a user has posted.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3355,7 +3355,7 @@ image box on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.FrontPage">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">FrontPage</code><span class="sig-paren">(</span><em>html: bs4.BeautifulSoup</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#FrontPage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.FrontPage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">FrontPage</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#FrontPage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.FrontPage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>An object representing the front page of  More of less just a long suggestion of the hottest mods,
 games, articles and files of the moment</p>
@@ -3676,7 +3676,7 @@ Then, once that is done, the poll will be set to active and voting will be allow
 
 <dl class="method">
 <dt id="moddb.pages.Poll.vote">
-<code class="descname">vote</code><span class="sig-paren">(</span><em>option: moddb.boxes.Option</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll.vote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll.vote" title="Permalink to this definition">¶</a></dt>
+<code class="descname">vote</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll.vote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll.vote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Vote for an option, if you are not logged in the vote will be cast as a guest. Currently
 not implemented. Polls can only be voted on if they have been obtained from the front page,
 since only those polls contain the option ids neccessary to cast the vote. The simplest way

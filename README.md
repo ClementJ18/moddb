@@ -6,7 +6,7 @@ The goal of the library is to be able to navigate ModDB purely programmatically 
 
 This library is still quite young and therefore any PR or Issues are welcome to raise any questions or concern you may have. Once you can navigate the whole site programmatically I might look into making use of the login system too allow users to make POST requests.  
 
-## Basic Utilization
+## Basic Usage
 The simplest way to use this library is to simply pass a ModDB url to the parse function and let the magic happen.
 ```py
 import moddb
@@ -19,34 +19,9 @@ import moddb
 mod = moddb.parse("http://www.moddb.com/mods/edain-mod", page_type=moddb.ThumbnailType.mod)
 print(mod.name) #Edain Mod
 ```
-## Searching
-The package supports searching moddb with an optional query, filters and to sort those results. Filters differ widely depending on which model is being searched therefore a good read of the documentation of the search function is recommended. The only required parameter of the search function is a valid moddb.SearchCategory as the first argument. All other arguments are optional. the `search` function returns a moddb.Search object. The most basic example is:
-```py
-from moddb import search, SearchCategory
-search = search(SearchCategory.mods)
-#returns a search objects with the results being a list of mod thumbnails
-```
-You can also search titles of the models with a string query.
-```py
-from moddb import search, SearchCategory
-search = search(SearchCategory.mods`, query="age of the ring")
-#returns a search objects with the results being a list of mod thumbnails which 
-#moddb has matched with the words age of the ring
-```
-Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod.
-```py
-from moddb import search, SearchCategory, Theme, Status
-search = search(SearchCategory.mods, theme=Theme.fantasy, released=Status.released)
-#returns a search objects with the results being a list of mod thumbnails of mods which have been 
-#released and are labelled as fantasy themed.
-```
-And finally, you can sort the results with the `sort` kwargs which expects a tuple with the first element being the sort category and the second being whether you want the sort to be ascending or descending.
-```py
-from moddb import search, SearchCategory, Sort
-search = search(SearchCategory.mods, sort=(Sort.rating, "asc"))
-#returns a search objects with the results being a list of mod thumbnails sorted by rating with
-#highest rating first
-```
+
+## Advanced Usage
+Check out the [documentation](link.com.here) for more information
 
 ## Finished Models
 * Mod
@@ -62,47 +37,17 @@ search = search(SearchCategory.mods, sort=(Sort.rating, "asc"))
 * Group
 * Job
 * Search Page
-
-
-## WIP Models
 * Front Page
 
+## WIP Models
+* Platforms
+* Tutorial
+
 ## Glossary
-* **Partial[Model]**: A version of the model which does not contain all the attributes of the full mode. Mainly because that model is being displayed as a preview in another page. Not to confuse with Thumbnails, Thumbnails are only guaranteed to contain a name and url of the page.
+* **Partial[Model]**: A version of the model which does not contain all the attributes of the full model. Mainly because that model is being displayed as a preview in another page. Not to confuse with Thumbnails, Thumbnails are only guaranteed to contain a name and url of the page.
 * **Boxes**: Containers present on pages, a **div** tag which contains information around a certain theme and as such have been grouped into Box Models of such.
 * **Pages**: Another name for Models.
 * **Thumbnails**: A very widely used model meant to represent models which are references but not expanded onto. Usually the model in question will only include a url and the name of the page. This is transformed into a thumbnail and the user can then parse it with the built-in method.
-
-## Logging
-This package makes use of the powerful Python logging module. Whenever the scrapper is unable to find a specific field for a model, either because it does not exist or because the scrapper cannot see it with its current permissions, then it will log it as an info. All logs will be sent to the `moddb` logger, to have access to the stream of logs you can do things like:
-```py
-import logging
-
-logging.basicConfig(level=logging.INFO)
-```
-or
-```py
-import logging
-
-logger = logging.getLogger('moddb')
-logger.setLevel(logging.INFO)
-handler = logging.FileHandler(filename='moddb.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-logger.addHandler(handler)
-```
-
-## Account
-This package allows users to login into ModDB in order to have access to additional information which Guest users (the account the package uses by default) cannot see such as Guest comments waiting for approval or private groups/members. In order to login simply use the built-in library method
-```py
-import moddb
-moddb.login("valid_username", "valid_password")
-```
-
-The session the package uses will be updated and all further requests will now be made logged in as that user. The function will raise a ValueError if the login fails. You can also log out of the account to disable access to those restricted elements with the `logout` function:
-```py
-import moddb
-moddb.logout()
-```
 
 ## Current :blobthonk:'s
 ### Polls
@@ -111,4 +56,5 @@ Polls can be parsed fine from any entry point as long as they contain a url, how
 * the poll id: same, either it is included in the form as an hidden input or within the page's report button
 * the option ids: herein lies the issue, poll option ids are only available in the form of a poll, not the page itself.
 
-Only one poll can be present at a time on the forms and therefore for any poll that is not the currently used poll it would be impossible to vote on. At the moment the best entry point to the solution would be to get the poll, than return to the main page, check if the poll on the main page is the same and if it is then get all the option ids. Still, it feels like a waste to implement a method that would only be used for the latest poll. This is also only guaranteed if the user has not currently voted on the new poll as once voted on a poll form changes to simply a short summary of current poll stats. 
+Only one poll can be present at a time on the forms and therefore for any poll that is not the currently used poll it would be impossible to vote on. At the moment the best entry point to the solution would be to get the poll, than return to the main page, check if the poll on the main page is the same and if it is then get all the option ids. Still, it feels like a waste to implement a method that would only be used for the latest poll. This is also only guaranteed if the user has not currently voted on the new poll as once voted on a poll form changes to simply a short summary of current poll stats.
+ 

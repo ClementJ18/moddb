@@ -1,4 +1,5 @@
-from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, PlayerStyle, Scope, ArticleType
+from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, \
+                   PlayerStyle, Scope, ArticleType, HardwareCategory
 from .utils import get_date, soup, get_views, join, normalize, LOGGER
 
 import sys
@@ -37,8 +38,9 @@ class Statistics:
     total : int
         The maximum rank number
     updated : datetime.datetime
-        The last tie this page was updated
+        The last time this page was updated
     """
+    #ToDo: games stat?
     def __init__(self, html):
         misc = html.find_all("h5", string=("Files", "Articles", "Reviews", "Watchers", "Mods", "Addons", "Members"))
         self.__dict__.update({stat.string.lower() : int(normalize(stat.parent.a.string)) for stat in misc})
@@ -61,8 +63,8 @@ class Statistics:
 #mod, game, user, addon, engine, company, group
 class Profile:
     """The profile object is used for several models and as such attribute vary based on which model
-    the profile is attached too. Profiles are only pressent on Mod, Game, User, Addon, Engine, Company
-    and Group pages.
+    the profile is attached too. Profiles are only pressent on Mod, Game, User, Addon, Engine, Company,
+    Hardware, Software and Group pages.
     
     Parameters
     -----------
@@ -127,13 +129,17 @@ class Profile:
                 _name = html.find("span", itemprop="headline").string
             except AttributeError:
                 _name = html.find("div", class_="title").h2.a.string
-            
-        page_type = SearchCategory[html.find("div", id="subheader").find("ul", class_="tabs").find("li", class_="on").a.string]
+        
+        url = html.find("meta", property="og:url")["content"]
+        regex = r"\/([a-z]+)\/"
+        matches = re.findall(regex, url)
+        matches.reverse()
+        page_type = SearchCategory[matches[0][0:-1] if matches[0].endswith("s") else matches[0]]
         
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         self.category = page_type
         self.contact = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
-        self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch"])[0].parent.span.a["href"])
+        self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch", "Hardware watch"])[0].parent.span.a["href"])
         
         try:
             share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
@@ -161,7 +167,7 @@ class Profile:
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.addons]:
             self.icon = profile_raw.find("h5", string="Icon").parent.span.img["src"]
 
-        if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons]:
+        if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons, SearchCategory.hardware]:
             people = profile_raw.find_all("h5", string=["Developer", "Publisher", "Developer & Publisher","Creator", "Company"])
             self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != "Creator" else ThumbnailType.user) for x in people}            
 
@@ -173,7 +179,7 @@ class Profile:
                 self.release = None
 
             if page_type != SearchCategory.mods:
-                platforms = profile_raw.find("h5", string="Platforms").parent.span.span.find_all("a")
+                platforms = profile_raw.find("h5", string="Platforms").parent.span.find_all("a")
                 self.platforms = [Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform) for x in platforms]
 
         if page_type != SearchCategory.groups:
@@ -196,9 +202,12 @@ class Profile:
 
         if page_type == SearchCategory.engines:
             self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
+
+        if page_type == SearchCategory.hardware:
+            self.type = HardwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
             
     def __repr__(self):
-        return f"<Profile type={self.type.name}>"
+        return f"<Profile type={self.category.name}>"
 
 class Style:
     """Represents semantic information on the page's theme. 
@@ -515,6 +524,16 @@ class UserStatistics:
 
     def __repr__(self):
         return f"<UserStatistics rank={self.rank}/{self.total}>"
+
+class PlatformStatistics:
+    """Stats for platform pages."""
+    def __init__(self, html):
+        headings = ("Hardware", "Software", "Engines", "Games", "Mods")
+        html_headings = html.find_all("h5", string=headings)
+        self.__dict__.update({headings[html_headings.index(x)].lower() : int(normalize(x.parent.span.a.string)) for x in html_headings})
+
+    def __repr__(self):
+        return f"<PlatformStatistics>"
 
 class PartialArticle:
     """A partial article is an article object missing attributes due to being parsed from the front page

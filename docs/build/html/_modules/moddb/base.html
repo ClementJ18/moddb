@@ -38,7 +38,7 @@
 
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Any</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Any</span>
 <span class="kn">from</span> <span class="nn">robobrowser</span> <span class="k">import</span> <span class="n">RoboBrowser</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Search&quot;</span><span class="p">,</span> <span class="s2">&quot;search&quot;</span><span class="p">,</span> <span class="s2">&quot;parse&quot;</span><span class="p">,</span> <span class="s2">&quot;login&quot;</span><span class="p">,</span> <span class="s2">&quot;logout&quot;</span><span class="p">,</span> <span class="s2">&quot;front_page&quot;</span><span class="p">]</span>
@@ -143,12 +143,12 @@
 
         <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">category</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">filters</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Search.resort"><a class="viewcode-back" href="../../base.html#moddb.base.Search.resort">[docs]</a>    <span class="k">def</span> <span class="nf">resort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_sort</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;asc&#39;</span><span class="p">,</span> <span class="s1">&#39;desc&#39;</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="s1">&#39;Search&#39;</span><span class="p">:</span> 
+<div class="viewcode-block" id="Search.resort"><a class="viewcode-back" href="../../base.html#moddb.base.Search.resort">[docs]</a>    <span class="k">def</span> <span class="nf">resort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_sort</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s1">&#39;Search&#39;</span><span class="p">:</span> 
         <span class="sd">&quot;&quot;&quot;Allows you to sort the whole search by a new sorting parameters. Returns a new search object.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        -----------</span>
-<span class="sd">        new_sort : Tuple[str, Union[&#39;asc&#39;, &#39;desc&#39;]]</span>
+<span class="sd">        new_sort : Tuple[str, str]</span>
 <span class="sd">            The new sorting tuple to check by</span>
 
 <span class="sd">        Returns</span>
@@ -162,7 +162,7 @@
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Search results={len(self.results)}/</span><span class="si">{self.results_max}</span><span class="s2">, category=</span><span class="si">{self.category.name}</span><span class="s2"> pages=</span><span class="si">{self.page}</span><span class="s2">/</span><span class="si">{self.page_max}</span><span class="s2">&gt;&quot;</span></div>
 
 
-<div class="viewcode-block" id="search"><a class="viewcode-back" href="../../base.html#moddb.base.search">[docs]</a><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">category</span> <span class="p">:</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">query</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sort</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;asc&#39;</span><span class="p">,</span> <span class="s1">&#39;desc&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="search"><a class="viewcode-back" href="../../base.html#moddb.base.search">[docs]</a><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">category</span> <span class="p">:</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">query</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sort</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
            <span class="n">page</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">filters</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Search</span><span class="p">:</span> 
     <span class="sd">&quot;&quot;&quot; Search for for a certain type of models and return a list of thumbnails of that </span>
 <span class="sd">    model. This function was created to make full use of moddb&#39;s filter and sorting system as</span>
@@ -181,7 +181,7 @@
 <span class="sd">    query : str</span>
 <span class="sd">        String to search for in the model title</span>
 <span class="sd">    </span>
-<span class="sd">    sort : Tuple[str, Union[&#39;asc&#39;, &#39;desc&#39;]]</span>
+<span class="sd">    sort : Tuple[str, str]</span>
 <span class="sd">        The tuple to sort by, look at the models your are searching for documentation </span>
 <span class="sd">        on sorting.</span>
 
