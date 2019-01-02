@@ -143,7 +143,7 @@ the search page efficiently.</p>
 
 <dl class="method">
 <dt id="moddb.base.Search.next_page">
-<code class="descname">next_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#Search.next_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.next_page" title="Permalink to this definition">¶</a></dt>
+<code class="descname">next_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; moddb.base.Search<a class="reference internal" href="_modules/moddb/base.html#Search.next_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.next_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a new search object with the next page of results, will raise ValueError
 if the last page is the current one</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -162,7 +162,7 @@ if the last page is the current one</p>
 
 <dl class="method">
 <dt id="moddb.base.Search.previous_page">
-<code class="descname">previous_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#Search.previous_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.previous_page" title="Permalink to this definition">¶</a></dt>
+<code class="descname">previous_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; moddb.base.Search<a class="reference internal" href="_modules/moddb/base.html#Search.previous_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.previous_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a new search object with the previous page of results, will raise
 ValueError if the first page is the current one</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -181,13 +181,13 @@ ValueError if the first page is the current one</p>
 
 <dl class="method">
 <dt id="moddb.base.Search.resort">
-<code class="descname">resort</code><span class="sig-paren">(</span><em>new_sort</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#Search.resort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.resort" title="Permalink to this definition">¶</a></dt>
+<code class="descname">resort</code><span class="sig-paren">(</span><em>new_sort: Tuple[str, Union[asc, desc]]</em><span class="sig-paren">)</span> &#x2192; Search<a class="reference internal" href="_modules/moddb/base.html#Search.resort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.resort" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to sort the whole search by a new sorting parameters. Returns a new search object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_sort</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em>) – The new sorting tuple to check by</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_sort</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>'asc'</em><em>, </em><em>'desc'</em><em>]</em><em>]</em>) – The new sorting tuple to check by</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new set of results with the updated sort order</td>
 </tr>
@@ -199,7 +199,7 @@ ValueError if the first page is the current one</p>
 
 <dl class="method">
 <dt id="moddb.base.Search.to_page">
-<code class="descname">to_page</code><span class="sig-paren">(</span><em>page</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#Search.to_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.to_page" title="Permalink to this definition">¶</a></dt>
+<code class="descname">to_page</code><span class="sig-paren">(</span><em>page: int</em><span class="sig-paren">)</span> &#x2192; moddb.base.Search<a class="reference internal" href="_modules/moddb/base.html#Search.to_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.Search.to_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a new search object with results to a specific page in the search results
 allowing for fast navigation. Will raise ValueError if you attempt to navigate out
 of bounds.</p>
@@ -223,7 +223,7 @@ of bounds.</p>
 
 <dl class="function">
 <dt id="moddb.base.search">
-<code class="descclassname">moddb.base.</code><code class="descname">search</code><span class="sig-paren">(</span><em>category</em>, <em>*</em>, <em>query=None</em>, <em>sort=None</em>, <em>page=1</em>, <em>**filters</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.search" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.base.</code><code class="descname">search</code><span class="sig-paren">(</span><em>category: moddb.enums.SearchCategory</em>, <em>*</em>, <em>query: str = None</em>, <em>sort: Tuple[str</em>, <em>Union[asc</em>, <em>desc]] = None</em>, <em>page: int = 1</em>, <em>**filters</em><span class="sig-paren">)</span> &#x2192; moddb.base.Search<a class="reference internal" href="_modules/moddb/base.html#search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search for for a certain type of models and return a list of thumbnails of that
 model. This function was created to make full use of moddb’s filter and sorting system as
 long as the appropriate parameters are passed. Because this function is a single one for every
@@ -239,7 +239,7 @@ name and type of the object on which. Call the thumbnail’s parse method and it
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>category</strong> (<a class="reference internal" href="enums.html#moddb.enums.SearchCategory" title="moddb.enums.SearchCategory"><em>SearchCategory</em></a>) – The model type that you want to search</li>
 <li><strong>query</strong> (<em>str</em>) – String to search for in the model title</li>
-<li><strong>sort</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em>) – The tuple to sort by, look at the models your are searching for documentation
+<li><strong>sort</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>'asc'</em><em>, </em><em>'desc'</em><em>]</em><em>]</em>) – The tuple to sort by, look at the models your are searching for documentation
 on sorting.</li>
 <li><strong>page</strong> (<em>int</em>) – The page of results to get first</li>
 <li><strong>filters</strong> (<em>dict</em>) – Search filters</li>
@@ -259,7 +259,7 @@ pagination metadata and helper methods to navigate the list of results.</p>
 
 <dl class="function">
 <dt id="moddb.base.parse">
-<code class="descclassname">moddb.base.</code><code class="descname">parse</code><span class="sig-paren">(</span><em>url</em>, <em>*</em>, <em>page_type=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.parse" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.base.</code><code class="descname">parse</code><span class="sig-paren">(</span><em>url: str</em>, <em>*</em>, <em>page_type: moddb.enums.ThumbnailType = None</em><span class="sig-paren">)</span> &#x2192; Any<a class="reference internal" href="_modules/moddb/base.html#parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.parse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a url and return the appropriate object. The function will attempt to figure out the page itself
 from the url and the content of the page but ModDB is not always consistent with this. In which case
 it is recommended to pass a Thumbnail enum to the <cite>page_type</cite> kwarg.</p>
@@ -288,7 +288,7 @@ Mod or Game</p>
 
 <dl class="function">
 <dt id="moddb.base.login">
-<code class="descclassname">moddb.base.</code><code class="descname">login</code><span class="sig-paren">(</span><em>username</em>, <em>password</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#login"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.login" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.base.</code><code class="descname">login</code><span class="sig-paren">(</span><em>username: str</em>, <em>password: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#login"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.login" title="Permalink to this definition">¶</a></dt>
 <dd><p>Login the user to moddb through the library, this allows user to see guest comments and see
 private groups they are part of.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -317,7 +317,7 @@ will be hidden once more</p>
 
 <dl class="function">
 <dt id="moddb.base.front_page">
-<code class="descclassname">moddb.base.</code><code class="descname">front_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/base.html#front_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.front_page" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">moddb.base.</code><code class="descname">front_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; moddb.pages.FrontPage<a class="reference internal" href="_modules/moddb/base.html#front_page"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.base.front_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>This returns a model representing the front page of  May sound fancy but it is no more
 than a collection of popular mods, files, games and articles. In addition jobs are listed (but
 not linked so unparsable) and a poll.</p>

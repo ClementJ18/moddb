@@ -70,7 +70,7 @@
 <span class="sd">    total : int</span>
 <span class="sd">        The maximum rank number</span>
 <span class="sd">    updated : datetime.datetime</span>
-<span class="sd">        The last time this page was updated</span>
+<span class="sd">        The last tie this page was updated</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
         <span class="n">misc</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Files&quot;</span><span class="p">,</span> <span class="s2">&quot;Articles&quot;</span><span class="p">,</span> <span class="s2">&quot;Reviews&quot;</span><span class="p">,</span> <span class="s2">&quot;Watchers&quot;</span><span class="p">,</span> <span class="s2">&quot;Mods&quot;</span><span class="p">,</span> <span class="s2">&quot;Addons&quot;</span><span class="p">,</span> <span class="s2">&quot;Members&quot;</span><span class="p">))</span>
