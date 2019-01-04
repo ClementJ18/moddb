@@ -18,22 +18,16 @@ class Search:
     -----------
     results : List[Thumbnail]
         The list of results the search returned
-
     category : ThumbnailType
         The type results
-
     filters : dict{str : Enum}
         The dict of filters that was used to search for the results
-
     page_max : int
         The number of pages
-
     page : int
         The current page, range is 1-page_max included
-
     query : str
         The text query that was used in the search
-
     results_max : int
         The total number of results for this search
 
@@ -169,7 +163,7 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     game = filters.pop("game", None)
     game = game.id if game else None
 
-    url = f"https://www.com/{category.name}/page/{page}"
+    url = f"https://www.moddb.com/{category.name}/page/{page}"
     filter_parsed = {key : value.value for key, value in filters.items()}
     cat = ThumbnailType[category.name[0:-1]]
 
@@ -247,7 +241,7 @@ def login(username : str, password : str):
     """
 
     browser = RoboBrowser(history=True, parser='html.parser')
-    browser.open('https://www.com/members/login')
+    browser.open('https://www.moddb.com/members/login')
     t = browser.find_all("form")[1].find_all("input", class_="text", type="text")
     t.remove(browser.find("input", id="membersusername"))
     form = browser.get_form(attrs={"name": "membersform"})
@@ -280,5 +274,5 @@ def front_page() -> FrontPage:
         The front page object.
         
     """
-    html = soup("https://www.com/")
+    html = soup("https://www.moddb.com")
     return FrontPage(html)

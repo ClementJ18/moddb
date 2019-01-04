@@ -13,11 +13,10 @@ __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Platform', 'Poll']
 
 #ToDo: timeframe? could piggy back of get_date
-#ToDo: fix docs of params which classes don't init
 
 class Base:
-    """An abstract class that implements the methods used on nearly every page. In addition, it implements
-    some shared hidden methods.
+    """An abstract class that implements the attributes present on nearly every page. In addition, it implements
+    some shared hidden methods and the top level get_comments method.
 
     Parameters
     -----------
@@ -602,7 +601,7 @@ class Page(Base, SharedMethodsMetaClass):
         try:
             self.files = self._get_files(html)
         except AttributeError:
-            LOGGER.info("%s %s has no files", self.profile.category.name, self.name)
+            LOGGER.info("%s %s has no files", self.__class__.__name__, self.name)
             self.files = []
 
         articles_raw = None
@@ -622,8 +621,12 @@ class Page(Base, SharedMethodsMetaClass):
             self.article = None
             LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
 
-        raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-        self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+        try:
+            raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+            self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+        except AttributeError:
+            self.tags = {}
+            LOGGER.info("%s %s has no tags", self.__class__.__name__, self.name)
 
         #imagebox
         imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
@@ -831,12 +834,11 @@ class File(Base):
         URL of the preview image for the file
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        info = html.find("div", class_="table tablemenu").find_all("h5", string=("Filename", "Size", "MD5 Hash"))
+        file = {x.string.lower() : x.parent.span.string.strip() for x in info}
         self.name = file["filename"]
         super().__init__(html)
-        files_headings = ("Filename", "Size", "MD5 Hash")
-        info = html.find("div", class_="table tablemenu").find_all("h5", string=files_headings)
 
-        file = {x.string.lower() : x.parent.span.string.strip() for x in info}
         self.hash = file["md5 hash"]
         self.size = int(re.sub(r"[(),bytes]", "", file["size"].split(" ")[1]))
 
@@ -912,7 +914,6 @@ class Media(Base):
         The description of the file as given by the file uploader.
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        #ToDo
         self.name = html.find("meta", itemprop="name")["content"]
         super().__init__(html)
         medias = html.find_all("h5", string=("Date", "By", "Duration", "Size", "Views", "Filename"))
@@ -1014,10 +1015,11 @@ class Article(Base):
         self.profile = Profile(html)
 
         try:
-            self.tags = {x.string : x["href"] for x in raw.find("h5", string="Tags").parent.span.find_all("a") if x is not None}
+            raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+            self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
-            LOGGER.info("Article %s has no tags", self.name)    
+            LOGGER.info("%s %s has no tags", self.__class__.__name__, self.name) 
         
         views_raw = raw.find("h5", string="Views").parent.span.a.string
         self.views, self.today = get_views(views_raw)
@@ -1212,6 +1214,10 @@ class Job:
     #ToDo: look into this one again...
     #ToDo: do jobs have search parameters?
     def __init__(self, html : bs4.BeautifulSoup):
+        text_raw = html.find("div", id="readarticle")
+        self.name = text_raw.find("div", class_="title").find("span", class_="heading").string
+        self.text = text_raw.find("div", id="articlecontent").text
+
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
 
         self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
@@ -1222,16 +1228,16 @@ class Job:
 
         self.paid = profile_raw.find("h5", string="Paid").parent.a.string == "Yes"
 
-        tags = profile_raw.find("h5", string="Tags").parent.span.find_all("a")
-        self.tags = {x.string : join(x["href"]) for x in tags}
+        try:
+            raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+            self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+        except AttributeError:
+            self.tags = {}
+            LOGGER.info("%s %s has no tags", self.__class__.__name__, self.name)
 
         self.skill = JobSkill(int(profile_raw.find("h5", string="Skill").parent.span.a["href"][-1]))
 
         self.location = profile_raw.find("h5", string="Location").parent.span.string.strip()
-
-        text_raw = html.find("div", id="readarticle")
-        self.name = text_raw.find("div", class_="title").find("span", class_="heading").string
-        self.text = text_raw.find("div", id="articlecontent").text
 
         related = html.find("div", class_="tablerelated").find_all("a", class_="image")
         self.related = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related]
@@ -1281,7 +1287,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         for a user page.
     stats : UserStatistics
         Since user statistics have no overlap with regular statistic pages, they are a separate object type
-        but server the same function of making the side box "Statistics" into an object, but exclusively for
+        but serve the same function of making the side box "Statistics" into an object, but exclusively for
         the user page.
     description : str
         Description written on the user profile
@@ -1697,10 +1703,10 @@ class Poll(Base):
     """
     #ToDo: edit this to work both with /polls/ pages and the front page
     def __init__(self, html):
+        poll = html.find("div", class_="poll")
         self.question = poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
         self.name = self.question
         super().__init__(html)
-        poll = html.find("div", class_="poll")
         author = poll.find("p", class_="question").find("a")
         self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
 

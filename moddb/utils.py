@@ -9,7 +9,7 @@ from urllib.parse import urljoin
 import inspect
 
 LOGGER = logging.getLogger("moddb")
-BASE_URL = "https://www.com"
+BASE_URL = "https://www.moddb.com"
 
 def concat_docs(cls):
     """Does it look like I'm enjoying this?"""
@@ -142,3 +142,4 @@ class Object:
     """A dud objects that will transform every kwarg given into an attribute"""
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
+
