@@ -75,6 +75,62 @@ game the mod belongs to.</dd>
 <li><strong>name</strong> - order alphabetically, asc is a-z, desc is z-a</li>
 </ul>
 <dl class="attribute">
+<dt id="moddb.pages.Mod.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Mod.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Mod.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Mod.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Mod.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Mod.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Mod.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Mod.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="moddb.pages.Mod.name">
 <code class="descname">name</code><a class="headerlink" href="#moddb.pages.Mod.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the page</p>
@@ -261,62 +317,6 @@ image box on the front page.</p>
 </table>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="moddb.pages.Mod.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Mod.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Mod.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Mod.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Mod.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Mod.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Mod.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Mod.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -347,6 +347,62 @@ image box on the front page.</p>
 <dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
 <dd>The time period this was released in (last 24hr, last week, last month)</dd>
 </dl>
+<dl class="attribute">
+<dt id="moddb.pages.Game.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Game.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Game.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Game.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Game.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Game.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Game.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Game.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="moddb.pages.Game.name">
 <code class="descname">name</code><a class="headerlink" href="#moddb.pages.Game.name" title="Permalink to this definition">¶</a></dt>
@@ -534,62 +590,6 @@ image box on the front page.</p>
 </table>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="moddb.pages.Game.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Game.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Game.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Game.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Game.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Game.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Game.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Game.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -616,14 +616,56 @@ since engines can’t have files.</p>
 <dd>The time period this was released in (last 24hr, last week, last month)</dd>
 </dl>
 <dl class="attribute">
-<dt id="moddb.pages.Engine.games">
-<code class="descname">games</code><a class="headerlink" href="#moddb.pages.Engine.games" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of games suggested on the engine main page.</p>
+<dt id="moddb.pages.Engine.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Engine.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Engine.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Engine.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Engine.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Engine.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Engine.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Engine.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
 </tr>
 </tbody>
 </table>
@@ -817,56 +859,14 @@ image box on the front page.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.Engine.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Engine.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
+<dt id="moddb.pages.Engine.games">
+<code class="descname">games</code><a class="headerlink" href="#moddb.pages.Engine.games" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of games suggested on the engine main page.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Engine.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Engine.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Engine.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Engine.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Engine.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Engine.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
 </tr>
 </tbody>
 </table>
@@ -903,6 +903,62 @@ game the addon belongs to.</dd>
 <dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
 <dd>The time period this was released in (last 24hr, last week, last month)</dd>
 </dl>
+<dl class="attribute">
+<dt id="moddb.pages.File.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.File.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.File.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.File.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.File.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.File.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.File.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.File.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="moddb.pages.File.hash">
 <code class="descname">hash</code><a class="headerlink" href="#moddb.pages.File.hash" title="Permalink to this definition">¶</a></dt>
@@ -1071,9 +1127,16 @@ game the addon belongs to.</dd>
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="moddb.pages.Addon">
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Addon</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Addon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Addon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#moddb.pages.File" title="moddb.pages.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.File</span></code></a></p>
+<p>Object representing an addon</p>
 <dl class="attribute">
-<dt id="moddb.pages.File.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.File.id" title="Permalink to this definition">¶</a></dt>
+<dt id="moddb.pages.Addon.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Addon.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The id of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1086,8 +1149,8 @@ game the addon belongs to.</dd>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.File.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.File.url" title="Permalink to this definition">¶</a></dt>
+<dt id="moddb.pages.Addon.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Addon.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The url of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1100,8 +1163,8 @@ game the addon belongs to.</dd>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.File.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.File.comments" title="Permalink to this definition">¶</a></dt>
+<dt id="moddb.pages.Addon.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Addon.comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>The comments scrapped on this list in order.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1114,8 +1177,8 @@ game the addon belongs to.</dd>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.File.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.File.report" title="Permalink to this definition">¶</a></dt>
+<dt id="moddb.pages.Addon.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Addon.report" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL to report the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1127,13 +1190,62 @@ game the addon belongs to.</dd>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt>
+<code class="descname">id</code></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
-<dl class="class">
-<dt id="moddb.pages.Addon">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Addon</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Addon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Addon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#moddb.pages.File" title="moddb.pages.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.File</span></code></a></p>
-<p>Object representing an addon</p>
+<dl class="attribute">
+<dt>
+<code class="descname">url</code></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">comments</code></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">report</code></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="moddb.pages.Addon.hash">
 <code class="descname">hash</code><a class="headerlink" href="#moddb.pages.Addon.hash" title="Permalink to this definition">¶</a></dt>
@@ -1302,62 +1414,6 @@ game the addon belongs to.</dd>
 </table>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="moddb.pages.Addon.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Addon.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Addon.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Addon.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Addon.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Addon.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Addon.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Addon.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -1378,6 +1434,62 @@ game the addon belongs to.</dd>
 <dt>sitearea <span class="classifier-delimiter">:</span> <span class="classifier">enums.Category</span></dt>
 <dd>The type of model the media belongs to. Category.downloads is not valid for this.</dd>
 </dl>
+<dl class="attribute">
+<dt id="moddb.pages.Media.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Media.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Media.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Media.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Media.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Media.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Media.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Media.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="moddb.pages.Media.date">
 <code class="descname">date</code><a class="headerlink" href="#moddb.pages.Media.date" title="Permalink to this definition">¶</a></dt>
@@ -1532,62 +1644,6 @@ game the addon belongs to.</dd>
 </table>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="moddb.pages.Media.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Media.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Media.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Media.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Media.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Media.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Media.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Media.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -1613,6 +1669,62 @@ game the addon belongs to.</dd>
 <dd>An game object or an object with an id attribute which represents the
 game the addon belongs to.</dd>
 </dl>
+<dl class="attribute">
+<dt id="moddb.pages.Article.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Article.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Article.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Article.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Article.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Article.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Article.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Article.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="moddb.pages.Article.type">
 <code class="descname">type</code><a class="headerlink" href="#moddb.pages.Article.type" title="Permalink to this definition">¶</a></dt>
@@ -1768,62 +1880,6 @@ as the value.</p>
 </table>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="moddb.pages.Article.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Article.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Article.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Article.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Article.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Article.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Article.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Article.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -1848,28 +1904,112 @@ have rights on those page. Like a user but instead of a single person authoring 
 <dd>What does the team do (publisher, developer)</dd>
 </dl>
 <dl class="attribute">
-<dt id="moddb.pages.Team.games">
-<code class="descname">games</code><a class="headerlink" href="#moddb.pages.Team.games" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of game like thumbnails that the team has authored.</p>
+<dt id="moddb.pages.Team.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Team.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.Team.engines">
-<code class="descname">engines</code><a class="headerlink" href="#moddb.pages.Team.engines" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of engine like objects that the team has authored.</p>
+<dt id="moddb.pages.Team.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Team.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Team.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Team.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Team.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Team.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">id</code></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">url</code></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">comments</code></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">report</code></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
 </tr>
 </tbody>
 </table>
@@ -2019,65 +2159,9 @@ by the group</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt>
-<code class="descname">name</code></dt>
-<dd><p>The name of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">profile</code></dt>
-<dd><p>The object with the content of the page’s profile box.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Profile" title="moddb.boxes.Profile">Profile</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.statistics">
-<code class="descname">statistics</code><a class="headerlink" href="#moddb.pages.Team.statistics" title="Permalink to this definition">¶</a></dt>
-<dd><p>The object containg stat data on the page such as views, followers, ect…</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Statistics" title="moddb.boxes.Statistics">Statistics</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.style">
-<code class="descname">style</code><a class="headerlink" href="#moddb.pages.Team.style" title="Permalink to this definition">¶</a></dt>
-<dd><p>The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect…</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Style" title="moddb.boxes.Style">Style</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">suggestions</code></dt>
-<dd><p>A list of thumbnail object representing moddb’s suggestion of similar pages for the visiting user.</p>
+<dt id="moddb.pages.Team.games">
+<code class="descname">games</code><a class="headerlink" href="#moddb.pages.Team.games" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of game like thumbnails that the team has authored.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2089,173 +2173,14 @@ by the group</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.Team.files">
-<code class="descname">files</code><a class="headerlink" href="#moddb.pages.Team.files" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full
-list either compare with statistics.files to see if the length of the list matches the number of files in the
-stats or use get_files, although that will still not return the whole list if there are multiple pages of
-files.</p>
+<dt id="moddb.pages.Team.engines">
+<code class="descname">engines</code><a class="headerlink" href="#moddb.pages.Team.engines" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of engine like objects that the team has authored.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">articles</code></dt>
-<dd><p>A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.article">
-<code class="descname">article</code><a class="headerlink" href="#moddb.pages.Team.article" title="Permalink to this definition">¶</a></dt>
-<dd><p>A partial representation of the frong page article. This does not include things like comments or any
-of the sideba elements found in a full article. Can be parsed to return the complete Article object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">tags</code></dt>
-<dd><p>A dict of key-values pair where the key is the name of the tag and the value is the url.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict{str : str}</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.imagebox">
-<code class="descname">imagebox</code><a class="headerlink" href="#moddb.pages.Team.imagebox" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
-image box on the front page.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">embed</code></dt>
-<dd><p>The html necessary to embed the a widget of the page.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.rating">
-<code class="descname">rating</code><a class="headerlink" href="#moddb.pages.Team.rating" title="Permalink to this definition">¶</a></dt>
-<dd><p>A float out of ten representing the average rating for the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">medias</code></dt>
-<dd><p>list of thumbnails representing all the combined media objects of a page (videos and images)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Team.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Team.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Team.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Team.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Team.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
 </tr>
 </tbody>
 </table>
@@ -2285,6 +2210,62 @@ login</p>
 <dt>category <span class="classifier-delimiter">:</span> <span class="classifier">enums.GroupCategory</span></dt>
 <dd>The category of the group (funny, literature)</dd>
 </dl>
+<dl class="attribute">
+<dt id="moddb.pages.Group.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Group.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Group.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Group.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Group.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Group.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Group.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Group.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="moddb.pages.Group.name">
 <code class="descname">name</code><a class="headerlink" href="#moddb.pages.Group.name" title="Permalink to this definition">¶</a></dt>
@@ -2418,249 +2399,6 @@ by the group</p>
 <dt id="moddb.pages.Group.description">
 <code class="descname">description</code><a class="headerlink" href="#moddb.pages.Group.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The plaintext description of the group</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">name</code></dt>
-<dd><p>The name of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">profile</code></dt>
-<dd><p>The object with the content of the page’s profile box.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Profile" title="moddb.boxes.Profile">Profile</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.statistics">
-<code class="descname">statistics</code><a class="headerlink" href="#moddb.pages.Group.statistics" title="Permalink to this definition">¶</a></dt>
-<dd><p>The object containg stat data on the page such as views, followers, ect…</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Statistics" title="moddb.boxes.Statistics">Statistics</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.style">
-<code class="descname">style</code><a class="headerlink" href="#moddb.pages.Group.style" title="Permalink to this definition">¶</a></dt>
-<dd><p>The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect…</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Style" title="moddb.boxes.Style">Style</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">suggestions</code></dt>
-<dd><p>A list of thumbnail object representing moddb’s suggestion of similar pages for the visiting user.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.files">
-<code class="descname">files</code><a class="headerlink" href="#moddb.pages.Group.files" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full
-list either compare with statistics.files to see if the length of the list matches the number of files in the
-stats or use get_files, although that will still not return the whole list if there are multiple pages of
-files.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">articles</code></dt>
-<dd><p>A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.article">
-<code class="descname">article</code><a class="headerlink" href="#moddb.pages.Group.article" title="Permalink to this definition">¶</a></dt>
-<dd><p>A partial representation of the frong page article. This does not include things like comments or any
-of the sideba elements found in a full article. Can be parsed to return the complete Article object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.PartialArticle" title="moddb.boxes.PartialArticle">PartialArticle</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">tags</code></dt>
-<dd><p>A dict of key-values pair where the key is the name of the tag and the value is the url.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict{str : str}</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.imagebox">
-<code class="descname">imagebox</code><a class="headerlink" href="#moddb.pages.Group.imagebox" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
-image box on the front page.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">embed</code></dt>
-<dd><p>The html necessary to embed the a widget of the page.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.rating">
-<code class="descname">rating</code><a class="headerlink" href="#moddb.pages.Group.rating" title="Permalink to this definition">¶</a></dt>
-<dd><p>A float out of ten representing the average rating for the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">medias</code></dt>
-<dd><p>list of thumbnails representing all the combined media objects of a page (videos and images)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Group.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Group.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Group.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Group.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Group.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2824,62 +2562,6 @@ image box on the front page.</p>
 <dt>timeframe <span class="classifier-delimiter">:</span> <span class="classifier">enums.TimeFrame</span></dt>
 <dd>The time period this was released in (last 24hr, last week, last month)</dd>
 </dl>
-<dl class="attribute">
-<dt id="moddb.pages.Blog.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Blog.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Blog.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Blog.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Blog.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Blog.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Blog.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Blog.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -2896,32 +2578,56 @@ image box on the front page.</p>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="moddb.pages.User.profile">
-<code class="descname">profile</code><a class="headerlink" href="#moddb.pages.User.profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Since user profile boxes have no overlap with other profiles, they are a separate object type
-but serve the same function of making the side box “Profile” into an object, except exclusively
-for a user page.</p>
+<dt id="moddb.pages.User.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.User.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.UserProfile" title="moddb.boxes.UserProfile">UserProfile</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.User.stats">
-<code class="descname">stats</code><a class="headerlink" href="#moddb.pages.User.stats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Since user statistics have no overlap with regular statistic pages, they are a separate object type
-but server the same function of making the side box “Statistics” into an object, but exclusively for
-the user page.</p>
+<dt id="moddb.pages.User.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.User.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.UserStatistics" title="moddb.boxes.UserStatistics">UserStatistics</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.User.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.User.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.User.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.User.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
 </tr>
 </tbody>
 </table>
@@ -2930,107 +2636,6 @@ the user page.</p>
 <dl class="attribute">
 <dt id="moddb.pages.User.name">
 <code class="descname">name</code><a class="headerlink" href="#moddb.pages.User.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Username of the user</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.User.description">
-<code class="descname">description</code><a class="headerlink" href="#moddb.pages.User.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>Description written on the user profile</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.User.groups">
-<code class="descname">groups</code><a class="headerlink" href="#moddb.pages.User.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of group/team like thumbnail objects representing both the Teams the user is part of and the
-Groups the user is part of.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.User.blog">
-<code class="descname">blog</code><a class="headerlink" href="#moddb.pages.User.blog" title="Permalink to this definition">¶</a></dt>
-<dd><p>The front page blog shown on the user page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.Blog" title="moddb.pages.Blog">Blog</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.User.blogs">
-<code class="descname">blogs</code><a class="headerlink" href="#moddb.pages.User.blogs" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of blog like thumbnails representing the blog suggestion of a user’s frontpage</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.User.medias">
-<code class="descname">medias</code><a class="headerlink" href="#moddb.pages.User.medias" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of media like thumbnails representing all the videos and images posted by the user
-on their account.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.User.friends">
-<code class="descname">friends</code><a class="headerlink" href="#moddb.pages.User.friends" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of user like thumbnails representing some of the friends shown on the user’s front
-page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[Thumnails]</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt>
-<code class="descname">name</code></dt>
 <dd><p>The name of the page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3043,8 +2648,8 @@ page</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt>
-<code class="descname">profile</code></dt>
+<dt id="moddb.pages.User.profile">
+<code class="descname">profile</code><a class="headerlink" href="#moddb.pages.User.profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The object with the content of the page’s profile box.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3202,8 +2807,8 @@ image box on the front page.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt>
-<code class="descname">medias</code></dt>
+<dt id="moddb.pages.User.medias">
+<code class="descname">medias</code><a class="headerlink" href="#moddb.pages.User.medias" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of thumbnails representing all the combined media objects of a page (videos and images)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3216,23 +2821,41 @@ image box on the front page.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.User.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.User.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
+<dt>
+<code class="descname">profile</code></dt>
+<dd><p>Since user profile boxes have no overlap with other profiles, they are a separate object type
+but serve the same function of making the side box “Profile” into an object, except exclusively
+for a user page.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.UserProfile" title="moddb.boxes.UserProfile">UserProfile</a></td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.User.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.User.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
+<dt id="moddb.pages.User.stats">
+<code class="descname">stats</code><a class="headerlink" href="#moddb.pages.User.stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Since user statistics have no overlap with regular statistic pages, they are a separate object type
+but server the same function of making the side box “Statistics” into an object, but exclusively for
+the user page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.UserStatistics" title="moddb.boxes.UserStatistics">UserStatistics</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.User.description">
+<code class="descname">description</code><a class="headerlink" href="#moddb.pages.User.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description written on the user profile</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3244,28 +2867,58 @@ image box on the front page.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.User.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.User.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
+<dt id="moddb.pages.User.groups">
+<code class="descname">groups</code><a class="headerlink" href="#moddb.pages.User.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of group/team like thumbnail objects representing both the Teams the user is part of and the
+Groups the user is part of.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="moddb.pages.User.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.User.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
+<dt id="moddb.pages.User.blog">
+<code class="descname">blog</code><a class="headerlink" href="#moddb.pages.User.blog" title="Permalink to this definition">¶</a></dt>
+<dd><p>The front page blog shown on the user page</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#moddb.pages.Blog" title="moddb.pages.Blog">Blog</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.User.blogs">
+<code class="descname">blogs</code><a class="headerlink" href="#moddb.pages.User.blogs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of blog like thumbnails representing the blog suggestion of a user’s frontpage</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.User.friends">
+<code class="descname">friends</code><a class="headerlink" href="#moddb.pages.User.friends" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of user like thumbnails representing some of the friends shown on the user’s front
+page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[Thumnails]</td>
 </tr>
 </tbody>
 </table>
@@ -3283,7 +2936,7 @@ image box on the front page.</p>
 <li><strong>index</strong> (<em>int</em>) – The page index you wish to get the blogs for, allows to hop around.</li>
 <li><strong>timeframe</strong> (<em>Timeframe</em>) – The date the blog was added, optional</li>
 <li><strong>query</strong> (<em>str</em>) – The string to look for in the blog title, optional.</li>
-<li><strong>sort</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>'asc'</em><em>, </em><em>'desc'</em><em>]</em><em>]</em>) – The sorting tuple to sort by</li>
+<li><strong>sort</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em>) – The sorting tuple to sort by</li>
 </ul>
 </td>
 </tr>
@@ -3515,8 +3168,227 @@ files on the front page.</p>
 
 <dl class="class">
 <dt id="moddb.pages.Platform">
-<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Platform</code><a class="reference internal" href="_modules/moddb/pages.html#Platform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Platform" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Platform</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Platform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.Base</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetModsMetaClass</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetGamesMetaClass</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.GetEnginesMetaClass</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">moddb.pages.SoftwareHardwareMetaClass</span></code></p>
+<p>Represents the platform supporting the game/engines. Game and engines may have mutiple platforms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>html</strong> (<em>bs4.BeautifulSoup</em>) – The html to parse. Allows for finer control.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="moddb.pages.Platform.name">
+<code class="descname">name</code><a class="headerlink" href="#moddb.pages.Platform.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the platform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Platform.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The moddb id of the platform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Platform.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the platform page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.description">
+<code class="descname">description</code><a class="headerlink" href="#moddb.pages.Platform.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the platform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.company">
+<code class="descname">company</code><a class="headerlink" href="#moddb.pages.Platform.company" title="Permalink to this definition">¶</a></dt>
+<dd><p>A team like thumbnail of the company.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.homepage">
+<code class="descname">homepage</code><a class="headerlink" href="#moddb.pages.Platform.homepage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link to the homepage of the engine</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.date">
+<code class="descname">date</code><a class="headerlink" href="#moddb.pages.Platform.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Date the engine was published</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">datetime.datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.stats">
+<code class="descname">stats</code><a class="headerlink" href="#moddb.pages.Platform.stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stat data on the platform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">PlatformStatistics</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.share">
+<code class="descname">share</code><a class="headerlink" href="#moddb.pages.Platform.share" title="Permalink to this definition">¶</a></dt>
+<dd><p>Share link of the platform with the name of the share as key and link of the share as url.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict{str : str}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Platform.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comments on this page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.games">
+<code class="descname">games</code><a class="headerlink" href="#moddb.pages.Platform.games" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of games suggested on the platform main page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.hardware">
+<code class="descname">hardware</code><a class="headerlink" href="#moddb.pages.Platform.hardware" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of hardware suggested on the platform main page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.software">
+<code class="descname">software</code><a class="headerlink" href="#moddb.pages.Platform.software" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of software suggested on the platform main page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.engines">
+<code class="descname">engines</code><a class="headerlink" href="#moddb.pages.Platform.engines" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of engines suggested on the platform main page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Platform.mods">
+<code class="descname">mods</code><a class="headerlink" href="#moddb.pages.Platform.mods" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of mods suggested on the platform main page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -3536,6 +3408,62 @@ to cast it from a poll which was not gotten from the front page.</p>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="moddb.pages.Poll.id">
+<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Poll.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Poll.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Poll.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Poll.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Poll.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Poll.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Poll.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="moddb.pages.Poll.question">
 <code class="descname">question</code><a class="headerlink" href="#moddb.pages.Poll.question" title="Permalink to this definition">¶</a></dt>
@@ -3601,62 +3529,6 @@ to cast it from a poll which was not gotten from the front page.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Poll.id">
-<code class="descname">id</code><a class="headerlink" href="#moddb.pages.Poll.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Poll.url">
-<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Poll.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The url of the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Poll.comments">
-<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Poll.comments" title="Permalink to this definition">¶</a></dt>
-<dd><p>The comments scrapped on this list in order.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="moddb.pages.Poll.report">
-<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Poll.report" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL to report the page</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
 </tr>
 </tbody>
 </table>

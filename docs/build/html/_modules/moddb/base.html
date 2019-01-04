@@ -297,8 +297,8 @@
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Login failed for user </span><span class="si">{username}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="logout"><a class="viewcode-back" href="../../base.html#moddb.base.logout">[docs]</a><span class="k">def</span> <span class="nf">logout</span><span class="p">():</span> 
-    <span class="sd">&quot;&quot;&quot;Logs the user out by clearing the cookies, all guest commnets will be hidden and all private groups</span>
-<span class="sd">    will be hidden once more</span>
+    <span class="sd">&quot;&quot;&quot;Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and </span>
+<span class="sd">    all private groups will be hidden once more</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s2">&quot;moddb&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">SESSION</span><span class="o">.</span><span class="n">cookies</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 

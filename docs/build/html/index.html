@@ -37,15 +37,15 @@
 the moddb website using function and OOP as if ModDB was simply an API. Ideally, in it’s finished
 state you should be able to pair with a web framework to perfectly emulate the website and all
 its features.</p>
-<div class="section" id="basic-utilization">
-<h2>Basic Utilization<a class="headerlink" href="#basic-utilization" title="Permalink to this headline">¶</a></h2>
-<p>The simplest way to use this library is to simply pass a ModDB url to the parse function and let the magic happen.</p>
+<div class="section" id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way to use this library is to simply pass a ModDB url to the parse function and let the magic happen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">moddb</span>
 <span class="n">mod</span> <span class="o">=</span> <span class="n">moddb</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;http://www.moddb.com/mods/edain-mod&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mod</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">#Edain Mod</span>
 </pre></div>
 </div>
-<p>The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function.</p>
+<p>The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">moddb</span>
 <span class="n">mod</span> <span class="o">=</span> <span class="n">moddb</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span>
             <span class="s2">&quot;http://www.moddb.com/mods/edain-mod&quot;</span><span class="p">,</span>
@@ -64,14 +64,14 @@ its features.</p>
 <span class="c1">#list of mod thumbnails</span>
 </pre></div>
 </div>
-<p>You can also search titles of the models with a string query.</p>
+<p>You can also search titles of the models with a string query:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from moddb import search, SearchCategory
 search = search(SearchCategory.mods`, query=&quot;age of the ring&quot;)
 #returns a search objects with the results being a list of
 #mod thumbnails which moddb has matched with the words age of the ring
 </pre></div>
 </div>
-<p>Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod.</p>
+<p>Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">moddb</span> <span class="k">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="n">Theme</span><span class="p">,</span> <span class="n">Status</span>
 <span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span>
       <span class="n">theme</span><span class="o">=</span><span class="n">Theme</span><span class="o">.</span><span class="n">fantasy</span><span class="p">,</span> <span class="n">released</span><span class="o">=</span><span class="n">Status</span><span class="o">.</span><span class="n">released</span>
@@ -81,7 +81,7 @@ search = search(SearchCategory.mods`, query=&quot;age of the ring&quot;)
 <span class="c1">#fantasy themed.</span>
 </pre></div>
 </div>
-<p>And finally, you can sort the results with the <cite>sort</cite> kwargs which expects a tuple with the first element being a sort category and the second being whether you want the sort to be ascending or descending.</p>
+<p>And finally, you can sort the results with the <cite>sort</cite> kwargs which expects a tuple with the first element being a sort category and the second being whether you want the sort to be ascending or descending:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">moddb</span> <span class="k">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="n">Sort</span>
 <span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="p">(</span><span class="n">Sort</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="s2">&quot;asc&quot;</span><span class="p">))</span>
 <span class="c1">#returns a search objects with the results being a list of mod</span>

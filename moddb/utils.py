@@ -6,9 +6,48 @@ import requests
 from typing import Tuple
 from bs4 import BeautifulSoup, Tag
 from urllib.parse import urljoin
+import inspect
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.com"
+
+def concat_docs(cls):
+    """Does it look like I'm enjoying this?"""
+    attributes = []
+
+    def get_docs(parent):
+        nonlocal attributes
+        if parent.__name__ == 'object':
+            return
+
+        docs = parent.__doc__.splitlines()
+        if "    Attributes" in docs:
+            attributes = docs[docs.index("    Attributes") + 2:] + attributes
+
+        source = inspect.getsource(parent.__init__)
+        source = source[source.index('):'):]
+
+        if 'super().__init__' in source:
+            get_docs(parent.__base__)
+        elif '__init__' in source:
+            get_docs(parent.__base__.__base__)            
+
+    get_docs(cls)
+    original = cls.__doc__.splitlines()
+    if not "    Attributes" in original:
+            original.append("    Attributes")
+            original.append("    -----------")
+
+    final = original[:original.index("    Attributes") + 2]
+    final.extend([x for x in attributes if x.strip()])
+    cls.__doc__ = "\n".join(final)
+
+    return cls
+
+def get_tags(html):
+    """Helper function to return the tags found on a page"""
+    #ToDo
+    pass
 
 def get_date(d : str) -> datetime.datetime:
     """A helper function that takes a ModDB string representation of time and returns an equivalent 

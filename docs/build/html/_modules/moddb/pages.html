@@ -32,10 +32,10 @@
             
   <h1>Source code for moddb.pages</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">.boxes</span> <span class="k">import</span> <span class="n">CommentList</span><span class="p">,</span> <span class="n">Comment</span><span class="p">,</span> <span class="n">Thumbnail</span><span class="p">,</span> <span class="n">UserProfile</span><span class="p">,</span> <span class="n">UserStatistics</span><span class="p">,</span> \
-                   <span class="n">Profile</span><span class="p">,</span> <span class="n">Statistics</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">PartialArticle</span><span class="p">,</span> <span class="n">Option</span>
+                   <span class="n">Profile</span><span class="p">,</span> <span class="n">Statistics</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">PartialArticle</span><span class="p">,</span> <span class="n">Option</span><span class="p">,</span> <span class="n">PlatformStatistics</span>
 <span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">ThumbnailType</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="n">TimeFrame</span><span class="p">,</span> <span class="n">FileCategory</span><span class="p">,</span> <span class="n">AddonCategory</span><span class="p">,</span> \
                    <span class="n">MediaCategory</span><span class="p">,</span> <span class="n">JobSkill</span><span class="p">,</span> <span class="n">ArticleType</span><span class="p">,</span> <span class="n">Difficulty</span><span class="p">,</span> <span class="n">TutorialType</span><span class="p">,</span> <span class="n">Licence</span>
-<span class="kn">from</span> <span class="nn">.utils</span> <span class="k">import</span> <span class="n">soup</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">get_date</span><span class="p">,</span> <span class="n">get_views</span><span class="p">,</span> <span class="n">get_type</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="k">import</span> <span class="n">soup</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">get_date</span><span class="p">,</span> <span class="n">get_views</span><span class="p">,</span> <span class="n">get_type</span><span class="p">,</span> <span class="n">concat_docs</span>
 
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">bs4</span>
@@ -46,6 +46,7 @@
            <span class="s1">&#39;Platform&#39;</span><span class="p">,</span> <span class="s1">&#39;Poll&#39;</span><span class="p">]</span>
 
 <span class="c1">#ToDo: timeframe? could piggy back of get_date</span>
+<span class="c1">#ToDo: fix docs of params which classes don&#39;t init</span>
 
 <span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;An abstract class that implements the methods used on nearly every page. In addition, it implements</span>
@@ -68,17 +69,27 @@
 <span class="sd">        URL to report the page</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;siteareaid=(\d*)&quot;</span><span class="p">,</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Report&quot;</span><span class="p">)[</span><span class="s2">&quot;href&quot;</span><span class="p">])[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;mainEntityOfPage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;siteareaid=(\d*)&quot;</span><span class="p">,</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Report&quot;</span><span class="p">)[</span><span class="s2">&quot;href&quot;</span><span class="p">])[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no id&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="nb">property</span><span class="o">=</span><span class="s2">&quot;og:url&quot;</span><span class="p">)[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span>
 
         <span class="c1">#ToDo: check if works</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">report</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Report&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
-
         <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_comments</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no comments&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Report&quot;</span><span class="p">)[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> cannot be reported&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_comments</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s2"> name=</span><span class="si">{self.name}</span><span class="s2">&gt;&quot;</span>
 
     <span class="k">def</span> <span class="nf">_get_comments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CommentList</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Extracts the comments from an html page and adds them to a CommentList. In addition</span>
@@ -240,7 +251,7 @@
 
         <span class="k">return</span> <span class="n">objects</span>
 
-    <span class="k">def</span> <span class="nf">_get_media</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
+    <span class="k">def</span> <span class="nf">_get_media</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Hidden method used to parse media content from the page. Since the only difference is that pages </span>
 <span class="sd">        with videos have one extra script that tells the window not do any sort of video playing assistance.</span>
 <span class="sd">        Also used to cached all media on a page.</span>
@@ -257,7 +268,6 @@
 <span class="sd">            List of media like thumbnails that can be parsed individually. Can be a very long list.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1">#ToDo: check if filters affect the imagebox</span>
-        <span class="n">html</span> <span class="o">=</span> <span class="n">soup</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/images&quot;</span><span class="p">)</span>
         <span class="n">script</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;script&quot;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="n">index</span><span class="p">]</span>
         <span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;new Array\(0, &quot;(\S*)&quot;, &quot;(\S*)&quot;&#39;</span>
         <span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">script</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -339,110 +349,26 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/mods/page/</span><span class="si">{index}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ThumbnailType</span><span class="o">.</span><span class="n">mod</span><span class="p">)</span>
 
-<span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by</span>
-<span class="sd">    those classes.</span>
+<span class="k">class</span> <span class="nc">GetEnginesMetaClass</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Abstract class containing the get_engines method&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">get_engines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Get a page of engines for the game. Each page will yield up to 30 engines. </span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">            The page number to get the engines from.</span>
 
-<span class="sd">    Parameters</span>
-<span class="sd">    -----------</span>
-<span class="sd">    html : bs4.BeautifulSoup</span>
-<span class="sd">        The page to be parsed.</span>
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        List[Thumbnail]</span>
+<span class="sd">            The list of engine type thumbnails parsed from the game</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/engines/page/</span><span class="si">{index}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ThumbnailType</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
 
-<span class="sd">    page_type : ThumbnailType</span>
-<span class="sd">        The type of pages, this is passed down be the base class to help with the parsing of pages.</span>
-
-<span class="sd">    Attributes</span>
-<span class="sd">    -----------</span>
-<span class="sd">    name : str</span>
-<span class="sd">        The name of the page</span>
-<span class="sd">    profile : Profile</span>
-<span class="sd">        The object with the content of the page&#39;s profile box.</span>
-<span class="sd">    statistics : Statistics</span>
-<span class="sd">        The object containg stat data on the page such as views, followers, ect...</span>
-<span class="sd">    style : Style</span>
-<span class="sd">        The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect...</span>
-<span class="sd">    suggestions : List[Thumbnail]</span>
-<span class="sd">        A list of thumbnail object representing moddb&#39;s suggestion of similar pages for the visiting user.</span>
-<span class="sd">    files : List[Thumbnail]</span>
-<span class="sd">        A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full</span>
-<span class="sd">        list either compare with statistics.files to see if the length of the list matches the number of files in the</span>
-<span class="sd">        stats or use get_files, although that will still not return the whole list if there are multiple pages of</span>
-<span class="sd">        files.</span>
-<span class="sd">    articles : List[Thumbnail]</span>
-<span class="sd">        A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long. </span>
-<span class="sd">    article :  PartialArticle</span>
-<span class="sd">        A partial representation of the frong page article. This does not include things like comments or any</span>
-<span class="sd">        of the sideba elements found in a full article. Can be parsed to return the complete Article object.</span>
-<span class="sd">    tags : dict{str : str}</span>
-<span class="sd">        A dict of key-values pair where the key is the name of the tag and the value is the url.</span>
-<span class="sd">    imagebox : List[Thumbnail]</span>
-<span class="sd">        A list of Thumbnail objects representing the image, videos and audio clips that are presented in the</span>
-<span class="sd">        image box on the front page.</span>
-<span class="sd">    embed : str</span>
-<span class="sd">        The html necessary to embed the a widget of the page.</span>
-<span class="sd">    rating : float</span>
-<span class="sd">        A float out of ten representing the average rating for the page</span>
-<span class="sd">    medias : List[Thumbnail]</span>
-<span class="sd">        list of thumbnails representing all the combined media objects of a page (videos and images)</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">page_type</span> <span class="p">:</span> <span class="n">ThumbnailType</span><span class="p">):</span>
-        <span class="c1">#ToDo: add status</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;mainEntityOfPage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
-
-        <span class="c1">#boxes</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">statistics</span> <span class="o">=</span> <span class="n">Statistics</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">page_type</span> <span class="o">!=</span> <span class="n">SearchCategory</span><span class="o">.</span><span class="n">engines</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-
-        <span class="c1">#thumbnails</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">suggestions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_suggestions</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no files&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
-
-        <span class="n">articles_raw</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Articles&quot;</span> <span class="k">if</span> <span class="n">page_type</span> <span class="o">==</span> <span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span> <span class="k">else</span> <span class="s2">&quot;Related Articles&quot;</span>
-            <span class="n">articles_raw</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="n">string</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
-            <span class="n">thumbnails</span> <span class="o">=</span> <span class="n">articles_raw</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;row rowcontent clear&quot;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">articles</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">article</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">thumbnails</span><span class="p">]</span>
-        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no article suggestions&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">articles</span> <span class="o">=</span> <span class="p">[]</span>
-
-        <span class="c1">#main page article</span>
-        <span class="k">if</span> <span class="n">articles_raw</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="n">PartialArticle</span><span class="p">(</span><span class="n">articles_raw</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no front page article&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-        <span class="n">raw_tags</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsform&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">string</span> <span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_tags</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">string</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
-
-        <span class="c1">#imagebox</span>
-        <span class="n">imagebox</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;imagebox&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">imagebox</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="p">(</span><span class="n">get_type</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">)))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">imagebox</span><span class="p">]</span>
-        
-        <span class="c1">#misc</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">embed</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;text textembed&quot;</span><span class="p">)[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span>
-        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">embed</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;textarea&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
-
-        <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;score&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;ratingValue&quot;</span><span class="p">)[</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
-        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="mf">0.0</span>
-            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> is not rated&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">medias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
+<span class="k">class</span> <span class="nc">SharedMethodsMetaClass</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Abstract class that implements a certain amount of top level methods shared between Pages</span>
+<span class="sd">    and Hardware&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">get_reviews</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">query</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">rating</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
                     <span class="n">sort</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;asc&#39;</span><span class="p">,</span> <span class="s1">&#39;desc&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;Review&#39;</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Get a page of reviews for the page. Each page will yield up to 10 reviews. </span>
@@ -570,7 +496,8 @@
 <span class="sd">        List[Thumbnail]</span>
 <span class="sd">            The list of image type thumbnails parsed from the page</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="n">soup</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/images&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="n">html</span><span class="p">)</span>
         
 
     <span class="k">def</span> <span class="nf">get_videos</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
@@ -583,7 +510,8 @@
 <span class="sd">        List[Thumbnail]</span>
 <span class="sd">            The list of video type thumbnails parsed from the page</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="n">soup</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/videos&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="n">html</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">get_tutorials</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">query</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">difficulty</span> <span class="p">:</span> <span class="n">Difficulty</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
                       <span class="n">tutorial_type</span> <span class="p">:</span> <span class="n">TutorialType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
@@ -612,6 +540,141 @@
             <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="n">difficulty</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="n">difficulty</span> <span class="k">else</span> <span class="kc">None</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/tutorials/page/</span><span class="si">{index}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ThumbnailType</span><span class="o">.</span><span class="n">article</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">SoftwareHardwareMetaClass</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Abstrac class implementing get_software and get_hardware&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">get_hardware</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Get a page of hardware for the platform. Each page will yield up to 30 hardware.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">            The page number to get the hardware for.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        List[Thumbnail]</span>
+<span class="sd">            List of hardware like thumbnails that can be parsed individually.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/games/page/</span><span class="si">{index}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ThumbnailType</span><span class="o">.</span><span class="n">hardware</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_software</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Get a page of software for the platform. Each page will yield up to 30 software.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">            The page number to get the software for.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        List[Thumbnail]</span>
+<span class="sd">            List of software like thumbnails that can be parsed individually.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/games/page/</span><span class="si">{index}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ThumbnailType</span><span class="o">.</span><span class="n">software</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">Base</span><span class="p">,</span> <span class="n">SharedMethodsMetaClass</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by</span>
+<span class="sd">    those classes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    html : bs4.BeautifulSoup</span>
+<span class="sd">        The page to be parsed.</span>
+
+<span class="sd">    page_type : ThumbnailType</span>
+<span class="sd">        The type of pages, this is passed down be the base class to help with the parsing of pages.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    -----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        The name of the page</span>
+<span class="sd">    profile : Profile</span>
+<span class="sd">        The object with the content of the page&#39;s profile box.</span>
+<span class="sd">    statistics : Statistics</span>
+<span class="sd">        The object containg stat data on the page such as views, followers, ect...</span>
+<span class="sd">    style : Style</span>
+<span class="sd">        The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect...</span>
+<span class="sd">    suggestions : List[Thumbnail]</span>
+<span class="sd">        A list of thumbnail object representing moddb&#39;s suggestion of similar pages for the visiting user.</span>
+<span class="sd">    files : List[Thumbnail]</span>
+<span class="sd">        A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full</span>
+<span class="sd">        list either compare with statistics.files to see if the length of the list matches the number of files in the</span>
+<span class="sd">        stats or use get_files, although that will still not return the whole list if there are multiple pages of</span>
+<span class="sd">        files.</span>
+<span class="sd">    articles : List[Thumbnail]</span>
+<span class="sd">        A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long. </span>
+<span class="sd">    article :  PartialArticle</span>
+<span class="sd">        A partial representation of the frong page article. This does not include things like comments or any</span>
+<span class="sd">        of the sideba elements found in a full article. Can be parsed to return the complete Article object.</span>
+<span class="sd">    tags : dict{str : str}</span>
+<span class="sd">        A dict of key-values pair where the key is the name of the tag and the value is the url.</span>
+<span class="sd">    imagebox : List[Thumbnail]</span>
+<span class="sd">        A list of Thumbnail objects representing the image, videos and audio clips that are presented in the</span>
+<span class="sd">        image box on the front page.</span>
+<span class="sd">    embed : str</span>
+<span class="sd">        The html necessary to embed the a widget of the page.</span>
+<span class="sd">    rating : float</span>
+<span class="sd">        A float out of ten representing the average rating for the page</span>
+<span class="sd">    medias : List[Thumbnail]</span>
+<span class="sd">        list of thumbnails representing all the combined media objects of a page (videos and images)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">page_type</span> <span class="p">:</span> <span class="n">ThumbnailType</span><span class="p">):</span>
+        <span class="c1">#ToDo: add status</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+        <span class="c1">#boxes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">statistics</span> <span class="o">=</span> <span class="n">Statistics</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">page_type</span> <span class="o">!=</span> <span class="n">SearchCategory</span><span class="o">.</span><span class="n">engines</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+        <span class="c1">#thumbnails</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suggestions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_suggestions</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no files&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">articles_raw</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Articles&quot;</span> <span class="k">if</span> <span class="n">page_type</span> <span class="o">==</span> <span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span> <span class="k">else</span> <span class="s2">&quot;Related Articles&quot;</span>
+            <span class="n">articles_raw</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="n">string</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
+            <span class="n">thumbnails</span> <span class="o">=</span> <span class="n">articles_raw</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;row rowcontent clear&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">articles</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">article</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">thumbnails</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no article suggestions&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">articles</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1">#main page article</span>
+        <span class="k">if</span> <span class="n">articles_raw</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="n">PartialArticle</span><span class="p">(</span><span class="n">articles_raw</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no front page article&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="n">raw_tags</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsform&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">string</span> <span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_tags</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">string</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+
+        <span class="c1">#imagebox</span>
+        <span class="n">imagebox</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;imagebox&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">imagebox</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="p">(</span><span class="n">get_type</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">)))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">imagebox</span><span class="p">]</span>
+        
+        <span class="c1">#misc</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">embed</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;text textembed&quot;</span><span class="p">)[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">embed</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;textarea&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;score&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;ratingValue&quot;</span><span class="p">)[</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> is not rated&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">medias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="n">html</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">get_addons</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">query</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">addon_type</span> <span class="p">:</span> <span class="n">AddonCategory</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">timeframe</span> <span class="p">:</span> <span class="n">TimeFrame</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">licence</span> <span class="p">:</span> <span class="n">Licence</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Thumbnail</span><span class="p">]:</span>
@@ -647,8 +710,8 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s2"> name=</span><span class="si">{self.name}</span><span class="s2">&gt;&quot;</span>
 
-
-<div class="viewcode-block" id="Mod"><a class="viewcode-back" href="../../pages.html#moddb.pages.Mod">[docs]</a><span class="k">class</span> <span class="nc">Mod</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+<div class="viewcode-block" id="Mod"><a class="viewcode-back" href="../../pages.html#moddb.pages.Mod">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Mod</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Basically just a subclass of Page</span>
 
 <span class="sd">    Parameters</span>
@@ -685,7 +748,8 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Game"><a class="viewcode-back" href="../../pages.html#moddb.pages.Game">[docs]</a><span class="k">class</span> <span class="nc">Game</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">GetModsMetaClass</span><span class="p">):</span>
+<div class="viewcode-block" id="Game"><a class="viewcode-back" href="../../pages.html#moddb.pages.Game">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Game</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">GetModsMetaClass</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A subclass of Page plus a method to get all the mods.</span>
 
 <span class="sd">    Parameters</span>
@@ -711,7 +775,8 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="o">.</span><span class="n">games</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Engine"><a class="viewcode-back" href="../../pages.html#moddb.pages.Engine">[docs]</a><span class="k">class</span> <span class="nc">Engine</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">GetGamesMetaClass</span><span class="p">):</span>
+<div class="viewcode-block" id="Engine"><a class="viewcode-back" href="../../pages.html#moddb.pages.Engine">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Engine</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">GetGamesMetaClass</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A subclass of Page, however, it does not have the files attribute or the get_files method</span>
 <span class="sd">    since engines can&#39;t have files.</span>
 
@@ -746,7 +811,8 @@
             <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Engine </span><span class="si">%s</span><span class="s2"> has no games&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">games</span> <span class="o">=</span> <span class="p">[]</span></div>
 
-<div class="viewcode-block" id="File"><a class="viewcode-back" href="../../pages.html#moddb.pages.File">[docs]</a><span class="k">class</span> <span class="nc">File</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<div class="viewcode-block" id="File"><a class="viewcode-back" href="../../pages.html#moddb.pages.File">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">File</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An oject representing a file on ModDB, a file is something posted by the page owner which is directly linked </span>
 <span class="sd">    to the page. It is endorsed by the page owner and they should do everythign they can to make sure that it is safe.</span>
 <span class="sd">    As compared to an addon that may be added by fans to the page and that are files meant to work with the page but</span>
@@ -798,14 +864,13 @@
 <span class="sd">        URL of the preview image for the file</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
         <span class="n">files_headings</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Filename&quot;</span><span class="p">,</span> <span class="s2">&quot;Size&quot;</span><span class="p">,</span> <span class="s2">&quot;MD5 Hash&quot;</span><span class="p">)</span>
         <span class="n">info</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table tablemenu&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="n">files_headings</span><span class="p">)</span>
 
         <span class="n">file</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">info</span><span class="p">}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hash</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;md5 hash&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span>
-
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[(),bytes]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
 
         <span class="n">downloads</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Downloads&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">string</span>
@@ -829,7 +894,8 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s2"> name=</span><span class="si">{self.name}</span><span class="s2"> type=</span><span class="si">{self.type.name}</span><span class="s2">&gt;&quot;</span></div>
 
-<div class="viewcode-block" id="Addon"><a class="viewcode-back" href="../../pages.html#moddb.pages.Addon">[docs]</a><span class="k">class</span> <span class="nc">Addon</span><span class="p">(</span><span class="n">File</span><span class="p">):</span>
+<div class="viewcode-block" id="Addon"><a class="viewcode-back" href="../../pages.html#moddb.pages.Addon">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Addon</span><span class="p">(</span><span class="n">File</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Object representing an addon</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -839,7 +905,8 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Media"><a class="viewcode-back" href="../../pages.html#moddb.pages.Media">[docs]</a><span class="k">class</span> <span class="nc">Media</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<div class="viewcode-block" id="Media"><a class="viewcode-back" href="../../pages.html#moddb.pages.Media">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Media</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents an image, audio file or video file on </span>
 
 <span class="sd">    Parameters</span>
@@ -878,12 +945,13 @@
 <span class="sd">        The description of the file as given by the file uploader.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
+        <span class="c1">#ToDo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
         <span class="n">medias</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;By&quot;</span><span class="p">,</span> <span class="s2">&quot;Duration&quot;</span><span class="p">,</span> <span class="s2">&quot;Size&quot;</span><span class="p">,</span> <span class="s2">&quot;Views&quot;</span><span class="p">,</span> <span class="s2">&quot;Filename&quot;</span><span class="p">))</span>
         <span class="n">raw_media</span> <span class="o">=</span> <span class="p">{</span><span class="n">media</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="p">:</span> <span class="n">media</span><span class="o">.</span><span class="n">parent</span> <span class="k">for</span> <span class="n">media</span> <span class="ow">in</span> <span class="n">medias</span><span class="p">}</span>
         
         <span class="bp">self</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">get_date</span><span class="p">(</span><span class="n">raw_media</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="s2">&quot;datetime&quot;</span><span class="p">])</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span>
 
         <span class="n">author</span> <span class="o">=</span> <span class="n">raw_media</span><span class="p">[</span><span class="s2">&quot;by&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">a</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">Thumbnail</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">author</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">author</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
@@ -918,7 +986,8 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Media name=</span><span class="si">{self.name}</span><span class="s2"> type=</span><span class="si">{self.type.name}</span><span class="s2">&gt;&quot;</span></div>
 
-<div class="viewcode-block" id="Article"><a class="viewcode-back" href="../../pages.html#moddb.pages.Article">[docs]</a><span class="k">class</span> <span class="nc">Article</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<div class="viewcode-block" id="Article"><a class="viewcode-back" href="../../pages.html#moddb.pages.Article">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Article</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This object represents an news article, a tutorial or a feature.</span>
 
 <span class="sd">    Parameters</span>
@@ -963,11 +1032,12 @@
 <span class="sd">        The article text without any html</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
+        <span class="c1">#ToDo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;headline&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 
         <span class="n">raw_type</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Browse&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">string</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">ArticleType</span><span class="p">[</span><span class="n">raw_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;headline&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
 
         <span class="k">try</span><span class="p">:</span>
             <span class="n">raw</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="n">raw_type</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table tablemenu&quot;</span><span class="p">)</span>
@@ -996,7 +1066,8 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Article title=</span><span class="si">{self.name}</span><span class="s2"> type=</span><span class="si">{self.type.name}</span><span class="s2">&gt;&quot;</span></div>
 
-<div class="viewcode-block" id="Group"><a class="viewcode-back" href="../../pages.html#moddb.pages.Group">[docs]</a><span class="k">class</span> <span class="nc">Group</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+<div class="viewcode-block" id="Group"><a class="viewcode-back" href="../../pages.html#moddb.pages.Group">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Group</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This object represents the group model of  Certain attributes can be None if the group</span>
 <span class="sd">    has been set to private. If you wish to see a group you have access to then you can login with the</span>
 <span class="sd">    login </span>
@@ -1040,8 +1111,9 @@
 <span class="sd">        The plaintext description of the group</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">):</span>
-        <span class="n">Base</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+        <span class="c1">#ToDo</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">h2</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">string</span>
+        <span class="n">Base</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">private</span> <span class="o">=</span> <span class="kc">False</span>
 
         <span class="k">try</span><span class="p">:</span>
@@ -1088,7 +1160,7 @@
         <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;column span-all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;tooltip&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">text</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">medias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">medias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="n">html</span><span class="p">)</span>
 
         <span class="c1">#ToDo: add:</span>
         <span class="c1">#   - font page article</span>
@@ -1097,7 +1169,8 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Group name=</span><span class="si">{self.name}</span><span class="s2">&gt;&quot;</span></div>
 
-<div class="viewcode-block" id="Team"><a class="viewcode-back" href="../../pages.html#moddb.pages.Team">[docs]</a><span class="k">class</span> <span class="nc">Team</span><span class="p">(</span><span class="n">Group</span><span class="p">):</span>
+<div class="viewcode-block" id="Team"><a class="viewcode-back" href="../../pages.html#moddb.pages.Team">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Team</span><span class="p">(</span><span class="n">Group</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A team is a group of people, which are the author of a game, a mod or an engine. A group has members which all</span>
 <span class="sd">    have rights on those page. Like a user but instead of a single person authoring various mods and games it&#39;s several.</span>
 
@@ -1137,7 +1210,8 @@
             <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Group </span><span class="si">%s</span><span class="s2"> has no engines&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">engines</span> <span class="o">=</span> <span class="p">[]</span></div>
 
-<div class="viewcode-block" id="Job"><a class="viewcode-back" href="../../pages.html#moddb.pages.Job">[docs]</a><span class="k">class</span> <span class="nc">Job</span><span class="p">:</span>
+<div class="viewcode-block" id="Job"><a class="viewcode-back" href="../../pages.html#moddb.pages.Job">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Job</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Model representing a job proposed on ModDB</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -1195,7 +1269,8 @@
         <span class="n">related</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;tablerelated&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">related</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">team</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">related</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="Blog"><a class="viewcode-back" href="../../pages.html#moddb.pages.Blog">[docs]</a><span class="k">class</span> <span class="nc">Blog</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<div class="viewcode-block" id="Blog"><a class="viewcode-back" href="../../pages.html#moddb.pages.Blog">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Blog</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Object used to represent a user blog.</span>
 
 <span class="sd">    Filtering</span>
@@ -1222,7 +1297,8 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Blog title=</span><span class="si">{self.name}</span><span class="s2">&gt;&quot;</span></div>
 
-<div class="viewcode-block" id="User"><a class="viewcode-back" href="../../pages.html#moddb.pages.User">[docs]</a><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">GetGamesMetaClass</span><span class="p">,</span> <span class="n">GetModsMetaClass</span><span class="p">):</span>
+<div class="viewcode-block" id="User"><a class="viewcode-back" href="../../pages.html#moddb.pages.User">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">GetGamesMetaClass</span><span class="p">,</span> <span class="n">GetModsMetaClass</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The object to represent an individual user on ModDB</span>
 
 <span class="sd">    Parameters</span>
@@ -1240,8 +1316,6 @@
 <span class="sd">        Since user statistics have no overlap with regular statistic pages, they are a separate object type</span>
 <span class="sd">        but server the same function of making the side box &quot;Statistics&quot; into an object, but exclusively for</span>
 <span class="sd">        the user page.</span>
-<span class="sd">    name : str</span>
-<span class="sd">        Username of the user</span>
 <span class="sd">    description : str</span>
 <span class="sd">        Description written on the user profile</span>
 <span class="sd">    groups : List[Thumbnail]</span>
@@ -1251,9 +1325,6 @@
 <span class="sd">        The front page blog shown on the user page</span>
 <span class="sd">    blogs : List[Thumbnail]</span>
 <span class="sd">        A list of blog like thumbnails representing the blog suggestion of a user&#39;s frontpage</span>
-<span class="sd">    medias : List[Thumbnail]</span>
-<span class="sd">        A list of media like thumbnails representing all the videos and images posted by the user</span>
-<span class="sd">        on their account.</span>
 <span class="sd">    friends : List[Thumnails]</span>
 <span class="sd">        A list of user like thumbnails representing some of the friends shown on the user&#39;s front</span>
 <span class="sd">        page</span>
@@ -1265,8 +1336,6 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">UserProfile</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="n">UserStatistics</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="nb">property</span><span class="o">=</span><span class="s2">&quot;og:title&quot;</span><span class="p">)[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;profiledescription&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">string</span>
 
         <span class="k">try</span><span class="p">:</span>
@@ -1293,8 +1362,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">blogs</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;User </span><span class="si">%s</span><span class="s2"> has no blog suggestions&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">medias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
         <span class="k">try</span><span class="p">:</span>
             <span class="n">friends</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table tablerelated&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">friends</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">friend</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">friend</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">user</span><span class="p">)</span> <span class="k">for</span> <span class="n">friend</span> <span class="ow">in</span> <span class="n">friends</span><span class="p">]</span>
@@ -1306,7 +1373,7 @@
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;User name=</span><span class="si">{self.name}</span><span class="s2"> level=</span><span class="si">{self.profile.level}</span><span class="s2">&gt;&quot;</span>
 
 <div class="viewcode-block" id="User.get_blogs"><a class="viewcode-back" href="../../pages.html#moddb.pages.User.get_blogs">[docs]</a>    <span class="k">def</span> <span class="nf">get_blogs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">query</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">timeframe</span> <span class="p">:</span> <span class="n">TimeFrame</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
-                  <span class="n">sort</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;asc&#39;</span><span class="p">,</span> <span class="s1">&#39;desc&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Blog&quot;</span><span class="p">]:</span>
+                  <span class="n">sort</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Blog&quot;</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Search through a user&#39;s blogs one page at a time with certain filters.</span>
 
 <span class="sd">        Parameters</span>
@@ -1317,7 +1384,7 @@
 <span class="sd">            The date the blog was added, optional</span>
 <span class="sd">        query : str</span>
 <span class="sd">            The string to look for in the blog title, optional.</span>
-<span class="sd">        sort : Tuple[str, Union[&#39;asc&#39;, &#39;desc&#39;]]</span>
+<span class="sd">        sort : Tuple[str, str]</span>
 <span class="sd">            The sorting tuple to sort by</span>
 
 <span class="sd">        Returns</span>
@@ -1379,7 +1446,8 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.url}</span><span class="s2">/groups/page/</span><span class="si">{index}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ThumbnailType</span><span class="o">.</span><span class="n">group</span><span class="p">)</span></div></div>
 
-<div class="viewcode-block" id="FrontPage"><a class="viewcode-back" href="../../pages.html#moddb.pages.FrontPage">[docs]</a><span class="k">class</span> <span class="nc">FrontPage</span><span class="p">:</span>
+<div class="viewcode-block" id="FrontPage"><a class="viewcode-back" href="../../pages.html#moddb.pages.FrontPage">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">FrontPage</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;An object representing the front page of  More of less just a long suggestion of the hottest mods,</span>
 <span class="sd">    games, articles and files of the moment</span>
 
@@ -1429,15 +1497,173 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}&gt;&quot;</span></div>
 
-<div class="viewcode-block" id="Platform"><a class="viewcode-back" href="../../pages.html#moddb.pages.Platform">[docs]</a><span class="k">class</span> <span class="nc">Platform</span><span class="p">:</span>
-    <span class="c1">#ToDo</span>
-    <span class="k">pass</span></div>
+<div class="viewcode-block" id="Platform"><a class="viewcode-back" href="../../pages.html#moddb.pages.Platform">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Platform</span><span class="p">(</span><span class="n">Base</span><span class="p">,</span> <span class="n">GetModsMetaClass</span><span class="p">,</span> <span class="n">GetGamesMetaClass</span><span class="p">,</span> <span class="n">GetEnginesMetaClass</span><span class="p">,</span> <span class="n">SoftwareHardwareMetaClass</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents the platform supporting the game/engines. Game and engines may have mutiple platforms.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    html : bs4.BeautifulSoup</span>
+<span class="sd">        The html to parse. Allows for finer control.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    -----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        The name of the platform</span>
+<span class="sd">    id : int</span>
+<span class="sd">        The moddb id of the platform</span>
+<span class="sd">    url : str</span>
+<span class="sd">        The url of the platform page</span>
+<span class="sd">    description : str</span>
+<span class="sd">        Description of the platform</span>
+<span class="sd">    company : Thumbnail</span>
+<span class="sd">        A team like thumbnail of the company.</span>
+<span class="sd">    homepage : str</span>
+<span class="sd">        Link to the homepage of the engine</span>
+<span class="sd">    date : datetime.datetime</span>
+<span class="sd">        Date the engine was published</span>
+<span class="sd">    stats : PlatformStatistics</span>
+<span class="sd">        Stat data on the platform</span>
+<span class="sd">    share : dict{str : str}</span>
+<span class="sd">        Share link of the platform with the name of the share as key and link of the share as url.</span>
+<span class="sd">    comments : CommentList</span>
+<span class="sd">        Comments on this page</span>
+<span class="sd">    games : List[Thumbnail]</span>
+<span class="sd">        A list of games suggested on the platform main page.</span>
+<span class="sd">    hardware : List[Thumbnail]</span>
+<span class="sd">        A list of hardware suggested on the platform main page.</span>
+<span class="sd">    software : List[Thumbnail]</span>
+<span class="sd">        A list of software suggested on the platform main page.</span>
+<span class="sd">    engines : List[Thumbnail]</span>
+<span class="sd">        A list of engines suggested on the platform main page.</span>
+<span class="sd">    mods : List[Thumbnail]</span>
+<span class="sd">        A list of mods suggested on the platform main page.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
+        <span class="c1">#test with all platforms</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;mainEntityOfPage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
+        
+        <span class="c1">#ToDo: check if possible</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="kc">None</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;mainEntityOfPage&quot;</span><span class="p">)[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;profiledescription&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">string</span>
+
+        <span class="n">company</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Company&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">a</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">company</span> <span class="o">=</span> <span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">company</span><span class="o">.</span><span class="n">string</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">company</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">team</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">homepage</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Homepage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">get_date</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;releaseDate&quot;</span><span class="p">)[</span><span class="s2">&quot;datetime&quot;</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="n">PlatformStatistics</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">share</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h5&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Share&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">share</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;reddit&quot;</span><span class="p">:</span> <span class="n">share</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;href&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;mail&quot;</span><span class="p">:</span> <span class="n">share</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;href&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;twitter&quot;</span><span class="p">:</span> <span class="n">share</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;href&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;facebook&quot;</span><span class="p">:</span> <span class="n">share</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="c1">#ToDo: log dis</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">share</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_comments</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        
+        <span class="n">hardware</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot; Hardware&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardware</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">hardware</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hardware</span><span class="p">]</span>
+
+        <span class="n">software</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot; Software&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">software</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">software</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">software</span><span class="p">]</span>
+
+        <span class="n">engines</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot; Engines&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">engines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">engine</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">engines</span><span class="p">]</span>
+
+        <span class="n">mods</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot; Mods&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mods</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">mod</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mods</span><span class="p">]</span>
+
+        <span class="n">games</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot; Games&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">games</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">game</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">games</span><span class="p">]</span>
+
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Platform name=</span><span class="si">{self.name}</span><span class="s2">&gt;&quot;</span></div>
 
 <span class="k">class</span> <span class="nc">Tutorial</span><span class="p">:</span>
     <span class="c1">#ToDo: check if unique or can be replaced with Article</span>
     <span class="k">pass</span>
 
-<div class="viewcode-block" id="Review"><a class="viewcode-back" href="../../pages.html#moddb.pages.Review">[docs]</a><span class="k">class</span> <span class="nc">Review</span><span class="p">:</span>
+<span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Hardware</span><span class="p">(</span><span class="n">Base</span><span class="p">,</span> <span class="n">GetGamesMetaClass</span><span class="p">,</span> <span class="n">SharedMethodsMetaClass</span><span class="p">,</span> <span class="n">SoftwareHardwareMetaClass</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A moddb.hardware&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;profiledescription&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">string</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="n">Statistics</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;score&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="n">itemprop</span><span class="o">=</span><span class="s2">&quot;ratingValue&quot;</span><span class="p">)[</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> is not rated&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="n">hardware</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Hardware&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardware</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">hardware</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hardware</span><span class="p">]</span>
+
+        <span class="n">software</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Software&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">software</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">software</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">software</span><span class="p">]</span>
+
+        <span class="n">games</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Games&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">games</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">game</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">games</span><span class="p">]</span>
+
+        <span class="c1">#ToDo: no mods?</span>
+
+        <span class="n">articles_raw</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">articles_raw</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Related Articles&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
+            <span class="n">thumbnails</span> <span class="o">=</span> <span class="n">articles_raw</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;row rowcontent clear&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">articles</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">img</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">article</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">thumbnails</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no article suggestions&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">articles</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1">#main page article</span>
+        <span class="k">if</span> <span class="n">articles_raw</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="n">PartialArticle</span><span class="p">(</span><span class="n">articles_raw</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> has no front page article&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">raw_tags</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsform&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">string</span> <span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_tags</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">string</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hardware </span><span class="si">%s</span><span class="s2"> has no tags&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> 
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">medias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_media</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="n">html</span><span class="p">)</span>
+
+        <span class="n">history</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;History&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">hardware</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">history</span><span class="p">]</span>
+
+        <span class="n">recommended</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Recommended&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recommended</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">hardware</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">recommended</span><span class="p">]</span>
+
+        <span class="n">suggestions</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;You may also like&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suggestions</span> <span class="o">=</span> <span class="p">[</span><span class="n">Thumbnail</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">hardware</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">suggestions</span><span class="p">]</span>
+
+<span class="c1">#combine with software?</span>
+<span class="k">class</span> <span class="nc">Software</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="c1">#ToDo</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Review"><a class="viewcode-back" href="../../pages.html#moddb.pages.Review">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Review</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Represents a review.</span>
 
 <span class="sd">    Filtering</span>
@@ -1476,7 +1702,8 @@
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Review author=</span><span class="si">{self.author.name}</span><span class="s2"> rating=</span><span class="si">{self.rating}</span><span class="s2">&gt;&quot;</span></div>
 
-<div class="viewcode-block" id="Poll"><a class="viewcode-back" href="../../pages.html#moddb.pages.Poll">[docs]</a><span class="k">class</span> <span class="nc">Poll</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<div class="viewcode-block" id="Poll"><a class="viewcode-back" href="../../pages.html#moddb.pages.Poll">[docs]</a><span class="nd">@concat_docs</span>
+<span class="k">class</span> <span class="nc">Poll</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents a poll available on the front page, more polls are available but most</span>
 <span class="sd">    won&#39;t have the possibility to vote since they lack the option id necessary to cast a </span>
 <span class="sd">    vote even through manual post requests. I don&#39;t think it would have cost much to add that</span>
@@ -1503,9 +1730,10 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1">#ToDo: edit this to work both with /polls/ pages and the front page</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">question</span> <span class="o">=</span> <span class="n">poll</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;normalcorner&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;heading&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">question</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
         <span class="n">poll</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;poll&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">question</span> <span class="o">=</span> <span class="n">poll</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;normalcorner&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;heading&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
         <span class="n">author</span> <span class="o">=</span> <span class="n">poll</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;question&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">Thumbnail</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">author</span><span class="o">.</span><span class="n">string</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">author</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">ThumbnailType</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
 

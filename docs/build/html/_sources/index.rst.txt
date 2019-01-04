@@ -11,19 +11,16 @@ the moddb website using function and OOP as if ModDB was simply an API. Ideally,
 state you should be able to pair with a web framework to perfectly emulate the website and all
 its features.
 
-Basic Utilization
-------------------
+Basic Usage
+------------
 
-The simplest way to use this library is to simply pass a ModDB url to the parse function and let the magic happen.
-:: 
+The simplest way to use this library is to simply pass a ModDB url to the parse function and let the magic happen:: 
 
    import moddb
    mod = moddb.parse("http://www.moddb.com/mods/edain-mod")
    print(mod.name) #Edain Mod
 
-The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function.
-
-:: 
+The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function:: 
 
    import moddb
    mod = moddb.parse(
@@ -35,26 +32,21 @@ The library tries to get the type of the url you are passing on its own but due 
 Searching
 ----------
 
-The package supports searching moddb with an optional query, filters and to sort those results. Filters differ widely depending on which model is being searched therefore a good read of the documentation of the search function is recommended. The only required parameter of the search function is a valid moddb.SearchCategory as the first argument. All other arguments are optional. the `search` function returns a moddb.Search object. The most basic example is:
-:: 
+The package supports searching moddb with an optional query, filters and to sort those results. Filters differ widely depending on which model is being searched therefore a good read of the documentation of the search function is recommended. The only required parameter of the search function is a valid moddb.SearchCategory as the first argument. All other arguments are optional. the `search` function returns a moddb.Search object. The most basic example is:: 
 
    from moddb import search, SearchCategory
    search = search(SearchCategory.mods)
    #returns a search objects with the results being a 
    #list of mod thumbnails
 
-You can also search titles of the models with a string query.
-
-:: 
+You can also search titles of the models with a string query:: 
 
    from moddb import search, SearchCategory
    search = search(SearchCategory.mods`, query="age of the ring")
    #returns a search objects with the results being a list of 
    #mod thumbnails which moddb has matched with the words age of the ring
 
-Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod.
-
-::
+Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod::
 
    from moddb import search, SearchCategory, Theme, Status
    search = search(SearchCategory.mods, 
@@ -64,9 +56,7 @@ Many additional filters are available and listed in the documentation, each filt
    #thumbnails of mods which have been released and are labelled as 
    #fantasy themed.
 
-And finally, you can sort the results with the `sort` kwargs which expects a tuple with the first element being a sort category and the second being whether you want the sort to be ascending or descending.
-
-::
+And finally, you can sort the results with the `sort` kwargs which expects a tuple with the first element being a sort category and the second being whether you want the sort to be ascending or descending::
 
    from moddb import search, SearchCategory, Sort
    search = search(SearchCategory.mods, sort=(Sort.rating, "asc"))

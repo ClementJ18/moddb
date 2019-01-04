@@ -109,19 +109,6 @@ class Profile:
     """
     def __init__(self, html):
         #ToDo: group category/team category
-        self.__dict__.update({
-            "private": None,
-            "membership": None,
-            "icon": None,
-            "developers": None,
-            "release": None,
-            "homepage": None,
-            "game": None,
-            "engine": None,
-            "licence": None,
-            "platform": []
-            })
-
         try:
             _name = html.find("a", itemprop="mainEntityOfPage").string
         except AttributeError:
@@ -241,12 +228,12 @@ class Style:
         try:
             self.scope = Scope(int(html.find("h5", string="Project").parent.a["href"][-1]))
         except AttributeError:
-            self.scope = None
+            LOGGER.info("Has no scope")
 
         try:
             self.boxart = html.find("h5", string="Boxart").parent.span.a.img["src"]
         except AttributeError:
-            self.boxart = None
+            LOGGER.info("Has no boxart")
 
     def __repr__(self):
         return f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"

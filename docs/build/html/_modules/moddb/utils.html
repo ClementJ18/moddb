@@ -39,9 +39,48 @@
 <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Tuple</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">Tag</span>
 <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urljoin</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
 
 <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;moddb&quot;</span><span class="p">)</span>
 <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.com&quot;</span>
+
+<div class="viewcode-block" id="concat_docs"><a class="viewcode-back" href="../../utils.html#moddb.utils.concat_docs">[docs]</a><span class="k">def</span> <span class="nf">concat_docs</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Does it look like I&#39;m enjoying this?&quot;&quot;&quot;</span>
+    <span class="n">attributes</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">get_docs</span><span class="p">(</span><span class="n">parent</span><span class="p">):</span>
+        <span class="k">nonlocal</span> <span class="n">attributes</span>
+        <span class="k">if</span> <span class="n">parent</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;object&#39;</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">docs</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s2">&quot;    Attributes&quot;</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="n">docs</span><span class="p">[</span><span class="n">docs</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;    Attributes&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">attributes</span>
+
+        <span class="n">source</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getsource</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="fm">__init__</span><span class="p">)</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="n">source</span><span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;):&#39;</span><span class="p">):]</span>
+
+        <span class="k">if</span> <span class="s1">&#39;super().__init__&#39;</span> <span class="ow">in</span> <span class="n">source</span><span class="p">:</span>
+            <span class="n">get_docs</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">__base__</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;__init__&#39;</span> <span class="ow">in</span> <span class="n">source</span><span class="p">:</span>
+            <span class="n">get_docs</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">__base__</span><span class="o">.</span><span class="n">__base__</span><span class="p">)</span>            
+
+    <span class="n">get_docs</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="n">original</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="s2">&quot;    Attributes&quot;</span> <span class="ow">in</span> <span class="n">original</span><span class="p">:</span>
+            <span class="n">original</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;    Attributes&quot;</span><span class="p">)</span>
+            <span class="n">original</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;    -----------&quot;</span><span class="p">)</span>
+
+    <span class="n">final</span> <span class="o">=</span> <span class="n">original</span><span class="p">[:</span><span class="n">original</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;    Attributes&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">final</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">attributes</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()])</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="bp">cls</span></div>
+
+<div class="viewcode-block" id="get_tags"><a class="viewcode-back" href="../../utils.html#moddb.utils.get_tags">[docs]</a><span class="k">def</span> <span class="nf">get_tags</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper function to return the tags found on a page&quot;&quot;&quot;</span>
+    <span class="c1">#ToDo</span>
+    <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="get_date"><a class="viewcode-back" href="../../utils.html#moddb.utils.get_date">[docs]</a><span class="k">def</span> <span class="nf">get_date</span><span class="p">(</span><span class="n">d</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A helper function that takes a ModDB string representation of time and returns an equivalent </span>

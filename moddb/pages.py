@@ -2,7 +2,7 @@ from .boxes import CommentList, Comment, Thumbnail, UserProfile, UserStatistics,
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
-from .utils import soup, join, LOGGER, get_date, get_views, get_type
+from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs
 
 import re
 import bs4
@@ -36,7 +36,8 @@ class Base:
         URL to report the page
     """
     def __init__(self, html):
-        #ToDo: add self name and overwrite where need be?
+        self.name = getattr(self, "name", None) or html.find("a", itemprop="mainEntityOfPage").string
+
         try:
             self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
         except TypeError:
@@ -52,11 +53,7 @@ class Base:
             self.report = None
             LOGGER.info("%s %s cannot be reported", self.__class__.__name__, self.name)
 
-        try:
-            self.comments = self._get_comments(html)
-        except AttributeError:
-            self.comments = []
-            LOGGER.info("%s %s has no comments", self.__class__.__name__, self.name)
+        self.comments = self._get_comments(html)
 
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
@@ -221,7 +218,7 @@ class Base:
 
         return objects
 
-    def _get_media(self, index : int) -> List[Thumbnail]:
+    def _get_media(self, index : int, *, html) -> List[Thumbnail]:
         """Hidden method used to parse media content from the page. Since the only difference is that pages 
         with videos have one extra script that tells the window not do any sort of video playing assistance.
         Also used to cached all media on a page.
@@ -238,7 +235,6 @@ class Base:
             List of media like thumbnails that can be parsed individually. Can be a very long list.
         """
         #ToDo: check if filters affect the imagebox
-        html = soup(f"{self.url}/images")
         script = html.find_all("script", text=True)[index]
         regex = r'new Array\(0, "(\S*)", "(\S*)"'
         matches = re.findall(regex, script.text)
@@ -337,110 +333,9 @@ class GetEnginesMetaClass:
         """
         return self._get(f"{self.url}/engines/page/{index}", ThumbnailType.engine)
 
-class Page(Base):
-    """The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by
-    those classes.
-
-    Parameters
-    -----------
-    html : bs4.BeautifulSoup
-        The page to be parsed.
-
-    page_type : ThumbnailType
-        The type of pages, this is passed down be the base class to help with the parsing of pages.
-
-    Attributes
-    -----------
-    name : str
-        The name of the page
-    profile : Profile
-        The object with the content of the page's profile box.
-    statistics : Statistics
-        The object containg stat data on the page such as views, followers, ect...
-    style : Style
-        The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect...
-    suggestions : List[Thumbnail]
-        A list of thumbnail object representing moddb's suggestion of similar pages for the visiting user.
-    files : List[Thumbnail]
-        A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full
-        list either compare with statistics.files to see if the length of the list matches the number of files in the
-        stats or use get_files, although that will still not return the whole list if there are multiple pages of
-        files.
-    articles : List[Thumbnail]
-        A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long. 
-    article :  PartialArticle
-        A partial representation of the frong page article. This does not include things like comments or any
-        of the sideba elements found in a full article. Can be parsed to return the complete Article object.
-    tags : dict{str : str}
-        A dict of key-values pair where the key is the name of the tag and the value is the url.
-    imagebox : List[Thumbnail]
-        A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
-        image box on the front page.
-    embed : str
-        The html necessary to embed the a widget of the page.
-    rating : float
-        A float out of ten representing the average rating for the page
-    medias : List[Thumbnail]
-        list of thumbnails representing all the combined media objects of a page (videos and images)
-
-    """
-    def __init__(self, html : bs4.BeautifulSoup, page_type : ThumbnailType):
-        #ToDo: add status
-        self.name = html.find("a", itemprop="mainEntityOfPage").string
-        super().__init__(html)
-
-        #boxes
-        self.profile = Profile(html)
-        self.statistics = Statistics(html)
-        if page_type != SearchCategory.engines:
-            self.style = Style(html)
-
-        #thumbnails
-        self.suggestions = self._get_suggestions(html)
-        try:
-            self.files = self._get_files(html)
-        except AttributeError:
-            LOGGER.info("%s %s has no files", self.profile.category.name, self.name)
-            self.files = []
-
-        articles_raw = None
-        try:
-            string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
-            articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
-            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
-        except AttributeError:
-            LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
-            self.articles = []
-
-        #main page article
-        if articles_raw:
-            self.article = PartialArticle(articles_raw)
-        else:
-            self.article = None
-            LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
-
-        raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-        self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
-
-        #imagebox
-        imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
-        self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
-        
-        #misc
-        try:
-            self.embed = html.find("input", type="text", class_="text textembed")["value"]
-        except TypeError:
-            self.embed = str(html.find_all("textarea")[1].a)
-
-        try:
-            self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
-        except AttributeError:
-            self.rating = 0.0
-            LOGGER.info("%s %s is not rated", self.profile.category.name, self.name)
-
-        self.medias = self._get_media(2)
-
+class SharedMethodsMetaClass:
+    """Abstract class that implements a certain amount of top level methods shared between Pages
+    and Hardware"""
     def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, 
                     sort : Tuple[str, Union['asc', 'desc']] = None) -> List['Review']:
         """Get a page of reviews for the page. Each page will yield up to 10 reviews. 
@@ -568,7 +463,8 @@ class Page(Base):
         List[Thumbnail]
             The list of image type thumbnails parsed from the page
         """
-        return self._get_media(1)
+        html = soup(f"{self.url}/images")
+        return self._get_media(1, html=html)
         
 
     def get_videos(self) -> List[Thumbnail]:
@@ -581,7 +477,8 @@ class Page(Base):
         List[Thumbnail]
             The list of video type thumbnails parsed from the page
         """
-        return self._get_media(2)
+        html = soup(f"{self.url}/videos")
+        return self._get_media(2, html=html)
 
     def get_tutorials(self, index : int = 1, *, query : str = None, difficulty : Difficulty = None, 
                       tutorial_type : TutorialType = None) -> List[Thumbnail]:
@@ -610,6 +507,141 @@ class Page(Base):
             "meta": difficulty.value if difficulty else None
         }
         return self._get(f"{self.url}/tutorials/page/{index}", ThumbnailType.article, params=params)
+
+class SoftwareHardwareMetaClass:
+    """Abstrac class implementing get_software and get_hardware"""
+    def get_hardware(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of hardware for the platform. Each page will yield up to 30 hardware.
+
+        Parameters
+        -----------
+        index : int
+            The page number to get the hardware for.
+
+        Returns
+        --------
+        List[Thumbnail]
+            List of hardware like thumbnails that can be parsed individually.
+        """
+        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.hardware)
+
+    def get_software(self, index : int = 1) -> List[Thumbnail]:
+        """Get a page of software for the platform. Each page will yield up to 30 software.
+
+        Parameters
+        -----------
+        index : int
+            The page number to get the software for.
+
+        Returns
+        --------
+        List[Thumbnail]
+            List of software like thumbnails that can be parsed individually.
+        """
+        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.software)
+
+class Page(Base, SharedMethodsMetaClass):
+    """The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by
+    those classes.
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The page to be parsed.
+
+    page_type : ThumbnailType
+        The type of pages, this is passed down be the base class to help with the parsing of pages.
+
+    Attributes
+    -----------
+    name : str
+        The name of the page
+    profile : Profile
+        The object with the content of the page's profile box.
+    statistics : Statistics
+        The object containg stat data on the page such as views, followers, ect...
+    style : Style
+        The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect...
+    suggestions : List[Thumbnail]
+        A list of thumbnail object representing moddb's suggestion of similar pages for the visiting user.
+    files : List[Thumbnail]
+        A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full
+        list either compare with statistics.files to see if the length of the list matches the number of files in the
+        stats or use get_files, although that will still not return the whole list if there are multiple pages of
+        files.
+    articles : List[Thumbnail]
+        A list of thumbnail objects representing articles present on the page. Usually 3 or 4 articles long. 
+    article :  PartialArticle
+        A partial representation of the frong page article. This does not include things like comments or any
+        of the sideba elements found in a full article. Can be parsed to return the complete Article object.
+    tags : dict{str : str}
+        A dict of key-values pair where the key is the name of the tag and the value is the url.
+    imagebox : List[Thumbnail]
+        A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
+        image box on the front page.
+    embed : str
+        The html necessary to embed the a widget of the page.
+    rating : float
+        A float out of ten representing the average rating for the page
+    medias : List[Thumbnail]
+        list of thumbnails representing all the combined media objects of a page (videos and images)
+
+    """
+    def __init__(self, html : bs4.BeautifulSoup, page_type : ThumbnailType):
+        #ToDo: add status
+        super().__init__(html)
+
+        #boxes
+        self.profile = Profile(html)
+        self.statistics = Statistics(html)
+        if page_type != SearchCategory.engines:
+            self.style = Style(html)
+
+        #thumbnails
+        self.suggestions = self._get_suggestions(html)
+        try:
+            self.files = self._get_files(html)
+        except AttributeError:
+            LOGGER.info("%s %s has no files", self.profile.category.name, self.name)
+            self.files = []
+
+        articles_raw = None
+        try:
+            string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
+            articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
+            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
+        except AttributeError:
+            LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
+            self.articles = []
+
+        #main page article
+        if articles_raw:
+            self.article = PartialArticle(articles_raw)
+        else:
+            self.article = None
+            LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
+
+        raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+        self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+
+        #imagebox
+        imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
+        self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
+        
+        #misc
+        try:
+            self.embed = html.find("input", type="text", class_="text textembed")["value"]
+        except TypeError:
+            self.embed = str(html.find_all("textarea")[1].a)
+
+        try:
+            self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
+        except AttributeError:
+            self.rating = 0.0
+            LOGGER.info("%s %s is not rated", self.profile.category.name, self.name)
+
+        self.medias = self._get_media(2, html=html)
 
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
                    timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
@@ -645,7 +677,7 @@ class Page(Base):
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
-
+@concat_docs
 class Mod(Page):
     """Basically just a subclass of Page
 
@@ -683,6 +715,7 @@ class Mod(Page):
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.mods)
 
+@concat_docs
 class Game(Page, GetModsMetaClass):
     """A subclass of Page plus a method to get all the mods.
 
@@ -709,6 +742,7 @@ class Game(Page, GetModsMetaClass):
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.games)
 
+@concat_docs
 class Engine(Page, GetGamesMetaClass):
     """A subclass of Page, however, it does not have the files attribute or the get_files method
     since engines can't have files.
@@ -744,6 +778,7 @@ class Engine(Page, GetGamesMetaClass):
             LOGGER.info("Engine %s has no games", self.name)
             self.games = []
 
+@concat_docs
 class File(Base):
     """An oject representing a file on ModDB, a file is something posted by the page owner which is directly linked 
     to the page. It is endorsed by the page owner and they should do everythign they can to make sure that it is safe.
@@ -826,6 +861,7 @@ class File(Base):
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.type.name}>"
 
+@concat_docs
 class Addon(File):
     """Object representing an addon
 
@@ -836,6 +872,7 @@ class Addon(File):
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
 
+@concat_docs
 class Media(Base):
     """Represents an image, audio file or video file on 
 
@@ -875,6 +912,7 @@ class Media(Base):
         The description of the file as given by the file uploader.
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        #ToDo
         self.name = html.find("meta", itemprop="name")["content"]
         super().__init__(html)
         medias = html.find_all("h5", string=("Date", "By", "Duration", "Size", "Views", "Filename"))
@@ -915,6 +953,7 @@ class Media(Base):
     def __repr__(self):
         return f"<Media name={self.name} type={self.type.name}>"
 
+@concat_docs
 class Article(Base):
     """This object represents an news article, a tutorial or a feature.
 
@@ -960,6 +999,7 @@ class Article(Base):
         The article text without any html
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        #ToDo
         self.name = html.find("span", itemprop="headline").string
         super().__init__(html)
 
@@ -993,6 +1033,7 @@ class Article(Base):
     def __repr__(self):
         return f"<Article title={self.name} type={self.type.name}>"
 
+@concat_docs
 class Group(Page):
     """This object represents the group model of  Certain attributes can be None if the group
     has been set to private. If you wish to see a group you have access to then you can login with the
@@ -1037,6 +1078,7 @@ class Group(Page):
         The plaintext description of the group
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        #ToDo
         self.name = html.find("div", class_="title").h2.a.string
         Base.__init__(self, html)
         self.private = False
@@ -1085,7 +1127,7 @@ class Group(Page):
         except AttributeError:
             self.description = html.find("div", class_="column span-all").find("div", class_="tooltip").parent.text
 
-        self.medias = self._get_media(2)
+        self.medias = self._get_media(2, html=html)
 
         #ToDo: add:
         #   - font page article
@@ -1094,6 +1136,7 @@ class Group(Page):
     def __repr__(self):
         return f"<Group name={self.name}>"
 
+@concat_docs
 class Team(Group):
     """A team is a group of people, which are the author of a game, a mod or an engine. A group has members which all
     have rights on those page. Like a user but instead of a single person authoring various mods and games it's several.
@@ -1134,6 +1177,7 @@ class Team(Group):
             LOGGER.info("Group %s has no engines", self.name)
             self.engines = []
 
+@concat_docs
 class Job:
     """Model representing a job proposed on ModDB
     
@@ -1192,6 +1236,7 @@ class Job:
         related = html.find("div", class_="tablerelated").find_all("a", class_="image")
         self.related = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related]
 
+@concat_docs
 class Blog(Base):
     """Object used to represent a user blog.
 
@@ -1219,6 +1264,7 @@ class Blog(Base):
     def __repr__(self):
         return f"<Blog title={self.name}>"
 
+@concat_docs
 class User(Page, GetGamesMetaClass, GetModsMetaClass):
     """The object to represent an individual user on ModDB
 
@@ -1294,7 +1340,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         return f"<User name={self.name} level={self.profile.level}>"
 
     def get_blogs(self, index : int = 1, *, query : str = None, timeframe : TimeFrame = None, 
-                  sort : Tuple[str, Union['asc', 'desc']] = None) -> List["Blog"]:
+                  sort : Tuple[str, str] = None) -> List["Blog"]:
         """Search through a user's blogs one page at a time with certain filters.
 
         Parameters
@@ -1305,7 +1351,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
             The date the blog was added, optional
         query : str
             The string to look for in the blog title, optional.
-        sort : Tuple[str, Union['asc', 'desc']]
+        sort : Tuple[str, str]
             The sorting tuple to sort by
 
         Returns
@@ -1367,6 +1413,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         """
         return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group)
 
+@concat_docs
 class FrontPage:
     """An object representing the front page of  More of less just a long suggestion of the hottest mods,
     games, articles and files of the moment
@@ -1417,7 +1464,8 @@ class FrontPage:
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
 
-class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass):
+@concat_docs
+class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, SoftwareHardwareMetaClass):
     """Represents the platform supporting the game/engines. Game and engines may have mutiple platforms.
 
     Parameters
@@ -1489,12 +1537,8 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass):
             #ToDo: log dis
             self.share = None
 
-        try:
-            self.comments = self._get_comments(html)
-        except AttributeError:
-            self.comments = []
-            LOGGER.info("%s %s has no comments", self.__class__.__name__, self.name)
-
+        self.comments = self._get_comments(html)
+        
         hardware = html.find("span", string=" Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
         self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
 
@@ -1514,46 +1558,18 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass):
     def __repr__(self):
         return f"<Platform name={self.name}>"
 
-    def get_hardware(self, index : int = 1) -> List[Thumbnail]:
-        """Get a page of hardware for the platform. Each page will yield up to 30 hardware.
-
-        Parameters
-        -----------
-        index : int
-            The page number to get the hardware for.
-
-        Returns
-        --------
-        List[Thumbnail]
-            List of hardware like thumbnails that can be parsed individually.
-        """
-        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.hardware)
-
-    def get_software(self, index : int = 1) -> List[Thumbnail]:
-        """Get a page of software for the platform. Each page will yield up to 30 software.
-
-        Parameters
-        -----------
-        index : int
-            The page number to get the software for.
-
-        Returns
-        --------
-        List[Thumbnail]
-            List of software like thumbnails that can be parsed individually.
-        """
-        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.software)
-
-
 class Tutorial:
     #ToDo: check if unique or can be replaced with Article
     pass
 
-class Hardware(Base):
+@concat_docs
+class Hardware(Base, GetGamesMetaClass, SharedMethodsMetaClass, SoftwareHardwareMetaClass):
+    """A moddb.hardware"""
     def __init__(self, html):
-        self.name = html.find("a", itemprop="mainEntityOfPage").string
         super().__init__(html)
+        self.description = html.find("div", id="profiledescription").p.string
         self.profile = Profile(html)
+        self.stats = Statistics(html)
 
         try:
             self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
@@ -1588,11 +1604,32 @@ class Hardware(Base):
             self.article = None
             LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
 
+        try:
+            raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+            self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
+        except AttributeError:
+            self.tags = {}
+            LOGGER.info("Hardware %s has no tags", self.name) 
 
-class Software:
+        self.medias = self._get_media(1, html=html)
+
+        history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
+        self.history = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in history]
+
+        recommended = html.find("span", string="Recommended").parent.parent.parent.find_all("a", class_="image")
+        self.recommended = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in recommended]
+
+        suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all("a", class_="image")
+        self.suggestions = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in suggestions]
+
+#combine with software?
+class Software(Base):
     #ToDo
-    pass
+    def __init__(self, html):
+        super().__init__(html)
 
+
+@concat_docs
 class Review:
     """Represents a review.
 
@@ -1632,6 +1669,7 @@ class Review:
     def __repr__(self):
         return f"<Review author={self.author.name} rating={self.rating}>"
 
+@concat_docs
 class Poll(Base):
     """Represents a poll available on the front page, more polls are available but most
     won't have the possibility to vote since they lack the option id necessary to cast a 
