@@ -2,7 +2,8 @@ from .boxes import CommentList, Comment, Thumbnail, UserProfile, UserStatistics,
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
-from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs
+from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, json_file \
+                   request
 
 import re
 import bs4
@@ -10,7 +11,7 @@ from typing import List, Tuple, Union
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Team', 'Group', 'Job', 'Blog', 'User', 'FrontPage', 'Review',
-           'Platform', 'Poll']
+           'Platform', 'Poll', 'Software', 'Hardware']
 
 #ToDo: timeframe? could piggy back of get_date
 
@@ -1701,7 +1702,6 @@ class Poll(Base):
     active : bool
         Whether the poll can be voted on.
     """
-    #ToDo: edit this to work both with /polls/ pages and the front page
     def __init__(self, html):
         poll = html.find("div", class_="poll")
         self.question = poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
@@ -1714,6 +1714,7 @@ class Poll(Base):
 
         percentage = poll.find_all("div", class_="barouter")
         rest = poll.find_all("p")[1:]
+        self.active = False
 
         self.options = []
         for x in range(len(percentage)):
@@ -1723,15 +1724,28 @@ class Poll(Base):
             votes = int(re.search(r"([\d,]*) votes", rest[x].span.string)[1].replace(',', ''))
             self.options.append(Option(text=text, votes=votes, percent=percent))
 
-    def make_active(self):
-        """This expensive method will ping a json file located on the project repo which will be updated
-        every so often with some poll options then will attempt to figure out how far away the current poll
-        is from the closest poll stored in the json file and use that knowledge to manually increment/descrement
-        the option ids to the correct ones for the poll in order to allow voting for the poll. In order to do so,
-        each poll between this one and the closest one need to be parsed and the options need to be tallied up and
-        to the base options count until the current poll is reached. Then the options can be properly outfitted.
-        Then, once that is done, the poll will be set to active and voting will be allowed."""
-        raise NotImplementedError
+    def make_active(self, path = None):
+        """This method attempts to make the poll active by checking the cached polls on the 
+        github repository. If the poll exists it get the ids of the options and set them as such
+        then it will set the poll as active allowing users to vote on it.
+
+        Parameters
+        -----------
+        path : str
+            An optional path to a json file generated with poll.py
+        """
+        cache = polls_json_file(path)
+
+        try:
+            options = cache[self.id]
+        except KeyError:
+            raise KeyError("This poll has not been cached")
+
+        for option in options:
+            index = options.index(option)
+            self.options[index].id = option
+
+        self.active = True
 
     def __repr__(self):
         return f"<Poll question={self.question}>"
@@ -1750,8 +1764,10 @@ class Poll(Base):
 
         Raises
         -------
-        AttributeError
-            The given option does not contain the required id attribute.
+        ValueError
+            This poll is not active.
         """
-        #check, does poll zero have option zero?
-        raise NotImplementedError
+        if not self.active:
+            raise ValueError("This poll is not active")
+
+        r = request(self.url, params={"data": {"poll": self.id, "option": option.id}}, post=True)

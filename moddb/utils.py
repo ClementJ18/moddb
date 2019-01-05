@@ -3,6 +3,7 @@ import sys
 import logging
 import datetime
 import requests
+import json
 from typing import Tuple
 from bs4 import BeautifulSoup, Tag
 from urllib.parse import urljoin
@@ -76,6 +77,17 @@ def get_date(d : str) -> datetime.datetime:
 
     return datetime.datetime.strptime(d, '%Y-%m')
 
+def request(url, params, post=False):
+    SESSION = sys.modules["moddb"].SESSION
+    cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
+
+    if post:
+        r = SESSION.post(url, data=params.get("data", {}), cookies=cookies)
+    else:
+        r = SESSION.get(url, cookies=cookies, params=params)
+
+    return r
+
 def soup(url : str, *, params : dict = {}) -> BeautifulSoup:
     """A helper function that takes a url and returns a beautiful soup objects. This is used to center
     the request making section of the library. Can also be passed a set of paramaters, used for sorting
@@ -93,10 +105,7 @@ def soup(url : str, *, params : dict = {}) -> BeautifulSoup:
     -------
     bs4.BeautifulSoup
     """
-    SESSION = sys.modules["moddb"].SESSION
-    cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
-
-    r = SESSION.get(url, cookies=cookies, params=params)
+    r = request(url, params)
     html = BeautifulSoup(r.text, "html.parser")
 
     return html
@@ -137,9 +146,17 @@ def get_type(img : Tag) -> int:
         return 0
     else:
         return 1
+
+def polls_json_file(path):
+    if path:
+        with open(path, "r") as f:
+            return json.load(f)
+
+    r = request.get("https://github.com/ClementJ18/moddb_reader/polls.json")
+    return r.json()
+ 
         
 class Object:
     """A dud objects that will transform every kwarg given into an attribute"""
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
-
