@@ -51,22 +51,16 @@
 <span class="sd">    -----------</span>
 <span class="sd">    results : List[Thumbnail]</span>
 <span class="sd">        The list of results the search returned</span>
-
 <span class="sd">    category : ThumbnailType</span>
 <span class="sd">        The type results</span>
-
 <span class="sd">    filters : dict{str : Enum}</span>
 <span class="sd">        The dict of filters that was used to search for the results</span>
-
 <span class="sd">    page_max : int</span>
 <span class="sd">        The number of pages</span>
-
 <span class="sd">    page : int</span>
 <span class="sd">        The current page, range is 1-page_max included</span>
-
 <span class="sd">    query : str</span>
 <span class="sd">        The text query that was used in the search</span>
-
 <span class="sd">    results_max : int</span>
 <span class="sd">        The total number of results for this search</span>
 
@@ -202,7 +196,7 @@
     <span class="n">game</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;game&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
     <span class="n">game</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="n">game</span> <span class="k">else</span> <span class="kc">None</span>
 
-    <span class="n">url</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;https://www.com/</span><span class="si">{category.name}</span><span class="s2">/page/</span><span class="si">{page}</span><span class="s2">&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;https://www.moddb.com/</span><span class="si">{category.name}</span><span class="s2">/page/</span><span class="si">{page}</span><span class="s2">&quot;</span>
     <span class="n">filter_parsed</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span> <span class="p">:</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">filters</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
     <span class="n">cat</span> <span class="o">=</span> <span class="n">ThumbnailType</span><span class="p">[</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
 
@@ -280,7 +274,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">browser</span> <span class="o">=</span> <span class="n">RoboBrowser</span><span class="p">(</span><span class="n">history</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
-    <span class="n">browser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://www.com/members/login&#39;</span><span class="p">)</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://www.moddb.com/members/login&#39;</span><span class="p">)</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;membersusername&quot;</span><span class="p">))</span>
     <span class="n">form</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">get_form</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;membersform&quot;</span><span class="p">})</span>
@@ -313,7 +307,7 @@
 <span class="sd">        The front page object.</span>
 <span class="sd">        </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">html</span> <span class="o">=</span> <span class="n">soup</span><span class="p">(</span><span class="s2">&quot;https://www.com/&quot;</span><span class="p">)</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">soup</span><span class="p">(</span><span class="s2">&quot;https://www.moddb.com&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">FrontPage</span><span class="p">(</span><span class="n">html</span><span class="p">)</span></div>
 </pre></div>
 

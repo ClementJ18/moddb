@@ -3,6 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. currentmodule:: moddb
+
+
 Welcome to moddb's documentation!
 =================================
 
@@ -42,7 +45,7 @@ The package supports searching moddb with an optional query, filters and to sort
 You can also search titles of the models with a string query:: 
 
    from moddb import search, SearchCategory
-   search = search(SearchCategory.mods`, query="age of the ring")
+   search = search(SearchCategory.mods, query="age of the ring")
    #returns a search objects with the results being a list of 
    #mod thumbnails which moddb has matched with the words age of the ring
 
@@ -56,10 +59,10 @@ Many additional filters are available and listed in the documentation, each filt
    #thumbnails of mods which have been released and are labelled as 
    #fantasy themed.
 
-And finally, you can sort the results with the `sort` kwargs which expects a tuple with the first element being a sort category and the second being whether you want the sort to be ascending or descending::
+And finally, you can sort the results with the `sort` kwargs which expects a tuple with the first element being a sort category which is valid for the model you're sorting for and the second being whether you want the sort to be ascending or descending::
 
    from moddb import search, SearchCategory, Sort
-   search = search(SearchCategory.mods, sort=(Sort.rating, "asc"))
+   search = search(SearchCategory.mods, sort=("rating", "asc"))
    #returns a search objects with the results being a list of mod 
    #thumbnails sorted by rating with highest rating first
 
@@ -103,6 +106,8 @@ The session the package uses will be updated and all further requests will now b
    boxes
    utils
    enums
+
+   
 
 Indices and tables
 ==================

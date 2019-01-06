@@ -1,4 +1,4 @@
-.. currentmodule:: moddb
+.. currentmodule:: moddb.enums
 
 ModDB Enums
 ============
@@ -10,5 +10,4 @@ values are necessary for the filtering.
 .. automodule:: moddb.enums
     :members:
     :undoc-members:
-    :show-inheritance:
     :inherited-members:

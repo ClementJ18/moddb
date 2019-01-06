@@ -1,4 +1,4 @@
-.. currentmodule:: moddb
+.. currentmodule:: moddb.pages
 
 ModDB Pages
 ============
@@ -8,5 +8,4 @@ models often accept entire ModDB pages as arguments and can parse them very effi
 .. automodule:: moddb.pages
     :members:
     :undoc-members:
-    :show-inheritance:
     

@@ -1,4 +1,4 @@
-.. currentmodule:: moddb
+.. currentmodule:: moddb.utils
 
 Utility Functions
 ==================
@@ -6,5 +6,4 @@ Utility Functions
 .. automodule:: moddb.utils
     :members:
     :undoc-members:
-    :show-inheritance:
     :inherited-members:

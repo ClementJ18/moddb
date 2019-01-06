@@ -16,7 +16,7 @@ pages = page_total - cache.pop("pages", 0)
 
 #get last registered option id
 try:
-    last_id = cache[list(cache.keys())[-1]][-1] + 1
+    last_id = cache[max(list(cache.keys()))][-1] + 1
 except IndexError:
     last_id = 0
 

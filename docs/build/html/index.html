@@ -65,10 +65,10 @@ its features.</p>
 </pre></div>
 </div>
 <p>You can also search titles of the models with a string query:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from moddb import search, SearchCategory
-search = search(SearchCategory.mods`, query=&quot;age of the ring&quot;)
-#returns a search objects with the results being a list of
-#mod thumbnails which moddb has matched with the words age of the ring
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">moddb</span> <span class="k">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">SearchCategory</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;age of the ring&quot;</span><span class="p">)</span>
+<span class="c1">#returns a search objects with the results being a list of</span>
+<span class="c1">#mod thumbnails which moddb has matched with the words age of the ring</span>
 </pre></div>
 </div>
 <p>Many additional filters are available and listed in the documentation, each filter kwarg will expected a specific enum. The only exception is the game filters which expects either a game object or a moddb.Object with an id attribute. For example if we want to search for a released fantasy mod:</p>
@@ -81,9 +81,9 @@ search = search(SearchCategory.mods`, query=&quot;age of the ring&quot;)
 <span class="c1">#fantasy themed.</span>
 </pre></div>
 </div>
-<p>And finally, you can sort the results with the <cite>sort</cite> kwargs which expects a tuple with the first element being a sort category and the second being whether you want the sort to be ascending or descending:</p>
+<p>And finally, you can sort the results with the <cite>sort</cite> kwargs which expects a tuple with the first element being a sort category which is valid for the model you’re sorting for and the second being whether you want the sort to be ascending or descending:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">moddb</span> <span class="k">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="n">Sort</span>
-<span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="p">(</span><span class="n">Sort</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="s2">&quot;asc&quot;</span><span class="p">))</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">SearchCategory</span><span class="o">.</span><span class="n">mods</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span> <span class="s2">&quot;asc&quot;</span><span class="p">))</span>
 <span class="c1">#returns a search objects with the results being a list of mod</span>
 <span class="c1">#thumbnails sorted by rating with highest rating first</span>
 </pre></div>

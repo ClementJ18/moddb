@@ -2,7 +2,7 @@ from .boxes import CommentList, Comment, Thumbnail, UserProfile, UserStatistics,
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
-from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, json_file \
+from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, polls_json_file, \
                    request
 
 import re
@@ -337,7 +337,7 @@ class SharedMethodsMetaClass:
     """Abstract class that implements a certain amount of top level methods shared between Pages
     and Hardware"""
     def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, 
-                    sort : Tuple[str, Union['asc', 'desc']] = None) -> List['Review']:
+                    sort : Tuple[str, str] = None) -> List['Review']:
         """Get a page of reviews for the page. Each page will yield up to 10 reviews. 
 
         Parameters
@@ -348,7 +348,7 @@ class SharedMethodsMetaClass:
             The string to look for in the review, optional.
         rating : int
             A number between 1 and 10 to get the ratings
-        sort : Tuple[str, Union['asc', 'desc']]
+        sort : Tuple[str, str]
             The sorting tuple to sort by
 
         Returns
@@ -508,7 +508,7 @@ class SharedMethodsMetaClass:
         }
         return self._get(f"{self.url}/tutorials/page/{index}", ThumbnailType.article, params=params)
 
-class SoftwareHardwareMetaClass:
+class GetSoftwareHardwareMetaClass:
     """Abstrac class implementing get_software and get_hardware"""
     def get_hardware(self, index : int = 1) -> List[Thumbnail]:
         """Get a page of hardware for the platform. Each page will yield up to 30 hardware.
@@ -1472,7 +1472,7 @@ class FrontPage:
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
 
 @concat_docs
-class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, SoftwareHardwareMetaClass):
+class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, GetSoftwareHardwareMetaClass):
     """Represents the platform supporting the game/engines. Game and engines may have mutiple platforms.
 
     Parameters
@@ -1570,7 +1570,7 @@ class Tutorial:
     pass
 
 @concat_docs
-class Hardware(Base, GetGamesMetaClass, SharedMethodsMetaClass, SoftwareHardwareMetaClass):
+class Hardware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSoftwareHardwareMetaClass):
     """A moddb.hardware"""
     def __init__(self, html):
         super().__init__(html)

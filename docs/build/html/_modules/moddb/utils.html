@@ -36,13 +36,14 @@
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Tuple</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">Tag</span>
 <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urljoin</span>
 <span class="kn">import</span> <span class="nn">inspect</span>
 
 <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;moddb&quot;</span><span class="p">)</span>
-<span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.com&quot;</span>
+<span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.moddb.com&quot;</span>
 
 <div class="viewcode-block" id="concat_docs"><a class="viewcode-back" href="../../utils.html#moddb.utils.concat_docs">[docs]</a><span class="k">def</span> <span class="nf">concat_docs</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Does it look like I&#39;m enjoying this?&quot;&quot;&quot;</span>
@@ -109,6 +110,18 @@
 
     <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m&#39;</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="request"><a class="viewcode-back" href="../../utils.html#moddb.utils.request">[docs]</a><span class="k">def</span> <span class="nf">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper function to make get/post requests with the current SESSION object.&quot;&quot;&quot;</span>
+    <span class="n">SESSION</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s2">&quot;moddb&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">SESSION</span>
+    <span class="n">cookies</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">dict_from_cookiejar</span><span class="p">(</span><span class="n">SESSION</span><span class="o">.</span><span class="n">cookies</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">post</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">SESSION</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="p">{}),</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">SESSION</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">r</span></div>
+
 <div class="viewcode-block" id="soup"><a class="viewcode-back" href="../../utils.html#moddb.utils.soup">[docs]</a><span class="k">def</span> <span class="nf">soup</span><span class="p">(</span><span class="n">url</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">params</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">-&gt;</span> <span class="n">BeautifulSoup</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A helper function that takes a url and returns a beautiful soup objects. This is used to center</span>
 <span class="sd">    the request making section of the library. Can also be passed a set of paramaters, used for sorting</span>
@@ -126,10 +139,7 @@
 <span class="sd">    -------</span>
 <span class="sd">    bs4.BeautifulSoup</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">SESSION</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s2">&quot;moddb&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">SESSION</span>
-    <span class="n">cookies</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">dict_from_cookiejar</span><span class="p">(</span><span class="n">SESSION</span><span class="o">.</span><span class="n">cookies</span><span class="p">)</span>
-
-    <span class="n">r</span> <span class="o">=</span> <span class="n">SESSION</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
     <span class="n">html</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">html</span></div>
@@ -170,6 +180,15 @@
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="polls_json_file"><a class="viewcode-back" href="../../utils.html#moddb.utils.polls_json_file">[docs]</a><span class="k">def</span> <span class="nf">polls_json_file</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">path</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+    <span class="n">r</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://github.com/ClementJ18/moddb_reader/polls.json&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span></div>
+ 
         
 <div class="viewcode-block" id="Object"><a class="viewcode-back" href="../../utils.html#moddb.utils.Object">[docs]</a><span class="k">class</span> <span class="nc">Object</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A dud objects that will transform every kwarg given into an attribute&quot;&quot;&quot;</span>

@@ -77,7 +77,8 @@ def get_date(d : str) -> datetime.datetime:
 
     return datetime.datetime.strptime(d, '%Y-%m')
 
-def request(url, params, post=False):
+def request(url, *, params, post=False):
+    """Helper function to make get/post requests with the current SESSION object."""
     SESSION = sys.modules["moddb"].SESSION
     cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
 
@@ -105,7 +106,7 @@ def soup(url : str, *, params : dict = {}) -> BeautifulSoup:
     -------
     bs4.BeautifulSoup
     """
-    r = request(url, params)
+    r = request(url, params=params)
     html = BeautifulSoup(r.text, "html.parser")
 
     return html

@@ -1,4 +1,4 @@
-.. currentmodule:: moddb
+.. currentmodule:: moddb.base
 
 Key Functions & Objects
 ========================
@@ -9,5 +9,4 @@ models yourself.
 .. automodule:: moddb.base
     :members:
     :undoc-members:
-    :show-inheritance:
     :inherited-members:
