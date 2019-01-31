@@ -121,7 +121,7 @@ class Profile:
         regex = r"\/([a-z]+)\/"
         matches = re.findall(regex, url)
         matches.reverse()
-        page_type = SearchCategory[matches[0][0:-1] if matches[0].endswith("s") else matches[0]]
+        page_type = SearchCategory[matches[0] if matches[0].endswith("s") else matches[0]+"s"]
         
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         self.category = page_type

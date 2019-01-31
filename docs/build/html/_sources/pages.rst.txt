@@ -8,4 +8,5 @@ models often accept entire ModDB pages as arguments and can parse them very effi
 .. automodule:: moddb.pages
     :members:
     :undoc-members:
+    :inherited-members:
     

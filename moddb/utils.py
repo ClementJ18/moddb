@@ -146,16 +146,7 @@ def get_type(img : Tag) -> int:
     elif img["src"][-8:-5] == ".mp4":
         return 0
     else:
-        return 1
-
-def polls_json_file(path):
-    if path:
-        with open(path, "r") as f:
-            return json.load(f)
-
-    r = request.get("https://github.com/ClementJ18/moddb_reader/polls.json")
-    return r.json()
- 
+        return 1 
         
 class Object:
     """A dud objects that will transform every kwarg given into an attribute"""

@@ -1,5 +1,6 @@
 from moddb import soup
 from moddb.pages import Poll
+from moddb.utils import join
 import json
 
 """A version of the json file this script creates is cached on the repository, prioritize 
@@ -17,20 +18,22 @@ pages = page_total - cache.pop("pages", 0)
 #get last registered option id
 try:
     last_id = cache[max(list(cache.keys()))][-1] + 1
-except IndexError:
+except ValueError:
     last_id = 0
 
 #iterate through pages from highest page number to lowest
 #+2 because we want to iterate over the last page we iterated over in case there are new polls on it.
-for page_num in reversed(range(1, pages + 2)):
+for page_num in reversed(range(1, pages + 1)):
+    print(f"page: {page_num}")
 
     #get the page
     html = soup(f"https://www.moddb.com/polls/page/{page_num}")
     polls = html.find("div", class_="table").find_all("div", recursive=False)[1:]
 
     #iterate through all the polls present
-    for poll in polls:
-        poll = Poll(soup(poll.a["href"]))
+    for poll in reversed(polls):
+        poll = Poll(soup(join(poll.a["href"])))
+        print(f"    poll:{poll.id}")
 
         #if the poll has already been cached then we skip it
         if str(poll.id) in cache:

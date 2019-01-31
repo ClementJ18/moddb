@@ -57,4 +57,6 @@ Polls can be parsed fine from any entry point as long as they contain a url, how
 * the option ids: herein lies the issue, poll option ids are only available in the form of a poll, not the page itself.
 
 Only one poll can be present at a time on the forms and therefore for any poll that is not the currently used poll it would be impossible to vote on. At the moment the best entry point to the solution would be to get the poll, than return to the main page, check if the poll on the main page is the same and if it is then get all the option ids. Still, it feels like a waste to implement a method that would only be used for the latest poll. This is also only guaranteed if the user has not currently voted on the new poll as once voted on a poll form changes to simply a short summary of current poll stats.
+
+In addition, I considered manually rebuilding the poll options by incrementing the ids but it appears that there are missing polls and therefore polls ids won't follow each other numerically. So long story short: there is no way to allow voting on polls at the moment.
  

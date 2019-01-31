@@ -2,8 +2,7 @@ from .boxes import CommentList, Comment, Thumbnail, UserProfile, UserStatistics,
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
-from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, polls_json_file, \
-                   request
+from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, request
 
 import re
 import bs4
@@ -36,7 +35,11 @@ class Base:
         URL to report the page
     """
     def __init__(self, html):
-        self.name = getattr(self, "name", None) or html.find("a", itemprop="mainEntityOfPage").string
+        if not getattr(self, "name", None):
+            try:
+                self.name = html.find("a", itemprop="mainEntityOfPage").string
+            except AttributeError:
+                self.name = html.find("meta", property="og:title")["content"]
 
         try:
             self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
@@ -203,7 +206,6 @@ class Base:
         List[Thumbnail]
             The list of objects present on the page as a list of thumbnails.
         """
-        #ToDo: replace object_type by url parser that checks the url for the type
         html = soup(url, params=params)
         table = html.find("div", class_="table")
         #if the table's class isn't exactly table then it's the wrong table and the list is actually empty
@@ -587,7 +589,7 @@ class Page(Base, SharedMethodsMetaClass):
         list of thumbnails representing all the combined media objects of a page (videos and images)
 
     """
-    def __init__(self, html : bs4.BeautifulSoup, page_type : ThumbnailType):
+    def __init__(self, html : bs4.BeautifulSoup, page_type : SearchCategory):
         #ToDo: add status
         super().__init__(html)
 
@@ -1678,11 +1680,7 @@ class Review:
 
 @concat_docs
 class Poll(Base):
-    """Represents a poll available on the front page, more polls are available but most
-    won't have the possibility to vote since they lack the option id necessary to cast a 
-    vote even through manual post requests. I don't think it would have cost much to add that
-    into the poll page but for now it's like that. `vote` will raise an error if the user tries
-    to cast it from a poll which was not gotten from the front page.
+    """Represents a poll. Cannot be voted for due to restrictions implemented by the website.
 
     Parameters
     -----------
@@ -1699,8 +1697,6 @@ class Poll(Base):
         The total number of votes that have been cast
     options : List[Option]
         The list of available options for the poll
-    active : bool
-        Whether the poll can be voted on.
     """
     def __init__(self, html):
         poll = html.find("div", class_="poll")
@@ -1714,60 +1710,14 @@ class Poll(Base):
 
         percentage = poll.find_all("div", class_="barouter")
         rest = poll.find_all("p")[1:]
-        self.active = False
 
         self.options = []
         for x in range(len(percentage)):
             raw = percentage[x].div.string.replace('%', '').replace('\xa0', '')
             percent = float(f"0.{raw}")
-            text = re.sub(r"\([\d,]* votes\)", '', rest[x].text)
-            votes = int(re.search(r"([\d,]*) votes", rest[x].span.string)[1].replace(',', ''))
+            text = re.sub(r"\([\d,]* vote(s)?\)", '', rest[x].text)
+            votes = int(re.search(r"([\d,]*) vote(s)?", rest[x].span.string)[1].replace(',', ''))
             self.options.append(Option(text=text, votes=votes, percent=percent))
-
-    def make_active(self, path = None):
-        """This method attempts to make the poll active by checking the cached polls on the 
-        github repository. If the poll exists it get the ids of the options and set them as such
-        then it will set the poll as active allowing users to vote on it.
-
-        Parameters
-        -----------
-        path : str
-            An optional path to a json file generated with poll.py
-        """
-        cache = polls_json_file(path)
-
-        try:
-            options = cache[self.id]
-        except KeyError:
-            raise KeyError("This poll has not been cached")
-
-        for option in options:
-            index = options.index(option)
-            self.options[index].id = option
-
-        self.active = True
 
     def __repr__(self):
         return f"<Poll question={self.question}>"
-
-    def vote(self, option : Option):
-        """Vote for an option, if you are not logged in the vote will be cast as a guest. Currently
-        not implemented. Polls can only be voted on if they have been obtained from the front page,
-        since only those polls contain the option ids neccessary to cast the vote. The simplest way 
-        to know if this poll can be voted on is to check the `active` parameters which is True if the
-        poll is currently open/active
-
-        Parameters
-        ------------
-        option : Option
-            The option you desire to vote for.
-
-        Raises
-        -------
-        ValueError
-            This poll is not active.
-        """
-        if not self.active:
-            raise ValueError("This poll is not active")
-
-        r = request(self.url, params={"data": {"poll": self.id, "option": option.id}}, post=True)

@@ -9,3 +9,4 @@ be returned as individual objects, they are mostly used as attributes of Pages.
 .. automodule:: moddb.boxes
     :members:
     :undoc-members:
+    :inherited-members:
