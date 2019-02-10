@@ -49,9 +49,8 @@ class Base:
 
         self.url = html.find("meta", property="og:url")["content"]
 
-        #ToDo: check if works
         try:
-            self.report = html.find("a", string="Report")["href"]
+            self.report = join(html.find("a", string="Report")["href"])
         except TypeError:
             self.report = None
             LOGGER.info("%s %s cannot be reported", self.__class__.__name__, self.name)
@@ -236,7 +235,6 @@ class Base:
         List[Thumbnail]
             List of media like thumbnails that can be parsed individually. Can be a very long list.
         """
-        #ToDo: check if filters affect the imagebox
         script = html.find_all("script", text=True)[index]
         regex = r'new Array\(0, "(\S*)", "(\S*)"'
         matches = re.findall(regex, script.text)
@@ -633,7 +631,7 @@ class Page(Base, SharedMethodsMetaClass):
 
         #imagebox
         imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
-        self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox]
+        self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
         
         #misc
         try:
@@ -729,6 +727,7 @@ class Game(Page, GetModsMetaClass):
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+    
 
     Filtering
     ----------
@@ -1542,8 +1541,8 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
                 "twitter": share[2]["href"],
                 "facebook": share[3]["href"]
             }
-        except AttributeError:
-            #ToDo: log dis
+        except (AttributeError, IndexError):
+            LOGGER.info("Something funky about share box of platform %s", self.name)
             self.share = None
 
         self.comments = self._get_comments(html)
@@ -1571,12 +1570,15 @@ class Tutorial:
     #ToDo: check if unique or can be replaced with Article
     pass
 
-@concat_docs
-class Hardware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSoftwareHardwareMetaClass):
+class HardwareAndSoftware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSoftwareHardwareMetaClass):
     """A moddb.hardware"""
     def __init__(self, html):
         super().__init__(html)
-        self.description = html.find("div", id="profiledescription").p.string
+        try:
+            self.description = html.find("div", id="profiledescription").p.string
+        except AttributeError:
+            self.description = html.find("p", itemprop="description").string
+
         self.profile = Profile(html)
         self.stats = Statistics(html)
 
@@ -1585,17 +1587,6 @@ class Hardware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSoftwareHardw
         except AttributeError:
             self.rating = 0.0
             LOGGER.info("%s %s is not rated", self.profile.category.name, self.name)
-
-        hardware = html.find("span", string="Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
-
-        software = html.find("span", string="Software").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.software = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.software, image=x.a.img["src"]) for x in software]
-
-        games = html.find("span", string="Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
-
-        #ToDo: no mods?
 
         articles_raw = None
         try:
@@ -1622,18 +1613,34 @@ class Hardware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSoftwareHardw
 
         self.medias = self._get_media(1, html=html)
 
+        t = ThumbnailType[self.profile.category.name[:-1]]
+        suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all("a", class_="image")
+        self.suggestions = [Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions]
+
+@concat_docs
+class Hardware(HardwareAndSoftware):
+    """Represents a moddb Hardware page"""
+    def __init__(self, html):
+        super().__init__(html)
+        hardware = html.find("span", string="Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
+
+        software = html.find("span", string="Software").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.software = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.software, image=x.a.img["src"]) for x in software]
+
+        games = html.find("span", string="Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+        self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
+
         history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
         self.history = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in history]
 
         recommended = html.find("span", string="Recommended").parent.parent.parent.find_all("a", class_="image")
         self.recommended = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in recommended]
 
-        suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all("a", class_="image")
-        self.suggestions = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in suggestions]
 
-#combine with software?
-class Software(Base):
-    #ToDo
+@concat_docs
+class Software(HardwareAndSoftware):
+    """Represents a moddb Software page"""
     def __init__(self, html):
         super().__init__(html)
 

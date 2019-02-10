@@ -1,10 +1,11 @@
 from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, \
-                   PlayerStyle, Scope, ArticleType, HardwareCategory
+                   PlayerStyle, Scope, ArticleType, HardwareCategory, Status, SoftwareCategory
 from .utils import get_date, soup, get_views, join, normalize, LOGGER
 
 import sys
 import re
 from typing import List, Any
+import datetime
 
 __all__ = ['CommentList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
            'Comment', 'UserProfile', 'UserStatistics', 'PartialArticle', 'Option']
@@ -106,6 +107,9 @@ class Profile:
     platforms : List[Thumbnail]
         Exclusive to Game, Engine and Addon pages. List of platform like thumbnails representing
         the plaftorms the software was built for.
+    status : Status
+        Exclusive to Games, Mods, Addons, Engines, Hardware .Whether the thing is released, unreleased, ect...
+
     """
     def __init__(self, html):
         #ToDo: group category/team category
@@ -126,7 +130,7 @@ class Profile:
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         self.category = page_type
         self.contact = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
-        self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch", "Hardware watch"])[0].parent.span.a["href"])
+        self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch", "Hardware watch", "Software watch"])[0].parent.span.a["href"])
         
         try:
             share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
@@ -136,8 +140,8 @@ class Profile:
                 "twitter": share[2]["href"],
                 "facebook": share[3]["href"]
             }
-        except AttributeError:
-            #ToDo: log dis
+        except (AttributeError, IndexError):
+            LOGGER.info("Something funky about share box of %s %s", page_type.name, _name)
             self.share = None
 
         if page_type in [SearchCategory.developers, SearchCategory.groups]:
@@ -154,16 +158,25 @@ class Profile:
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.addons]:
             self.icon = profile_raw.find("h5", string="Icon").parent.span.img["src"]
 
-        if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons, SearchCategory.hardware]:
+        if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons, SearchCategory.hardwares, SearchCategory.softwares]:
             people = profile_raw.find_all("h5", string=["Developer", "Publisher", "Developer & Publisher","Creator", "Company"])
             self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != "Creator" else ThumbnailType.user) for x in people}            
 
             try:
-                d = profile_raw.find("h5", string="Release date").parent.span.time["datetime"]
-                self.release = get_date(d)
+                d = profile_raw.find("h5", string="Release date").parent.span.time
+                self.release = get_date(d["datetime"])
             except KeyError:
                 LOGGER.info("%s %s has not been released", page_type.name, _name)
                 self.release = None
+
+            if "Coming" in d.string:
+                self.status = Status.coming_soon
+            elif "Early" in d.string:
+                self.status = Status.early_access
+            elif "Released" in d.string:
+                self.status = Status.released
+            else:
+                self.status = Status.unreleased
 
             if page_type != SearchCategory.mods:
                 platforms = profile_raw.find("h5", string="Platforms").parent.span.find_all("a")
@@ -190,8 +203,11 @@ class Profile:
         if page_type == SearchCategory.engines:
             self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
 
-        if page_type == SearchCategory.hardware:
+        if page_type == SearchCategory.hardwares:
             self.type = HardwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
+
+        if page_type == SearchCategory.softwares:
+            self.type = SoftwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
             
     def __repr__(self):
         return f"<Profile type={self.category.name}>"

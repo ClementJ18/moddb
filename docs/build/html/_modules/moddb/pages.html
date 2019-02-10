@@ -35,8 +35,7 @@
                    <span class="n">Profile</span><span class="p">,</span> <span class="n">Statistics</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">PartialArticle</span><span class="p">,</span> <span class="n">Option</span><span class="p">,</span> <span class="n">PlatformStatistics</span>
 <span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">ThumbnailType</span><span class="p">,</span> <span class="n">SearchCategory</span><span class="p">,</span> <span class="n">TimeFrame</span><span class="p">,</span> <span class="n">FileCategory</span><span class="p">,</span> <span class="n">AddonCategory</span><span class="p">,</span> \
                    <span class="n">MediaCategory</span><span class="p">,</span> <span class="n">JobSkill</span><span class="p">,</span> <span class="n">ArticleType</span><span class="p">,</span> <span class="n">Difficulty</span><span class="p">,</span> <span class="n">TutorialType</span><span class="p">,</span> <span class="n">Licence</span>
-<span class="kn">from</span> <span class="nn">.utils</span> <span class="k">import</span> <span class="n">soup</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">get_date</span><span class="p">,</span> <span class="n">get_views</span><span class="p">,</span> <span class="n">get_type</span><span class="p">,</span> <span class="n">concat_docs</span><span class="p">,</span> <span class="n">polls_json_file</span><span class="p">,</span> \
-                   <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="k">import</span> <span class="n">soup</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">get_date</span><span class="p">,</span> <span class="n">get_views</span><span class="p">,</span> <span class="n">get_type</span><span class="p">,</span> <span class="n">concat_docs</span><span class="p">,</span> <span class="n">request</span>
 
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">bs4</span>
@@ -240,7 +239,6 @@
 <span class="sd">        List[Thumbnail]</span>
 <span class="sd">            The list of objects present on the page as a list of thumbnails.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1">#ToDo: replace object_type by url parser that checks the url for the type</span>
         <span class="n">html</span> <span class="o">=</span> <span class="n">soup</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
         <span class="n">table</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
         <span class="c1">#if the table&#39;s class isn&#39;t exactly table then it&#39;s the wrong table and the list is actually empty</span>
@@ -624,7 +622,7 @@
 <span class="sd">        list of thumbnails representing all the combined media objects of a page (videos and images)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">page_type</span> <span class="p">:</span> <span class="n">ThumbnailType</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span> <span class="p">:</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">page_type</span> <span class="p">:</span> <span class="n">SearchCategory</span><span class="p">):</span>
         <span class="c1">#ToDo: add status</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 
@@ -764,6 +762,7 @@
 <span class="sd">    -----------</span>
 <span class="sd">    html : bs4.BeautifulSoup</span>
 <span class="sd">        The html to parse. Allows for finer control.</span>
+<span class="sd">    </span>
 
 <span class="sd">    Filtering</span>
 <span class="sd">    ----------</span>
@@ -1715,11 +1714,7 @@
 
 <div class="viewcode-block" id="Poll"><a class="viewcode-back" href="../../pages.html#moddb.pages.Poll">[docs]</a><span class="nd">@concat_docs</span>
 <span class="k">class</span> <span class="nc">Poll</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Represents a poll available on the front page, more polls are available but most</span>
-<span class="sd">    won&#39;t have the possibility to vote since they lack the option id necessary to cast a </span>
-<span class="sd">    vote even through manual post requests. I don&#39;t think it would have cost much to add that</span>
-<span class="sd">    into the poll page but for now it&#39;s like that. `vote` will raise an error if the user tries</span>
-<span class="sd">    to cast it from a poll which was not gotten from the front page.</span>
+    <span class="sd">&quot;&quot;&quot;Represents a poll. Cannot be voted for due to restrictions implemented by the website.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    -----------</span>
@@ -1736,8 +1731,6 @@
 <span class="sd">        The total number of votes that have been cast</span>
 <span class="sd">    options : List[Option]</span>
 <span class="sd">        The list of available options for the poll</span>
-<span class="sd">    active : bool</span>
-<span class="sd">        Whether the poll can be voted on.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
         <span class="n">poll</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;poll&quot;</span><span class="p">)</span>
@@ -1751,7 +1744,6 @@
 
         <span class="n">percentage</span> <span class="o">=</span> <span class="n">poll</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;barouter&quot;</span><span class="p">)</span>
         <span class="n">rest</span> <span class="o">=</span> <span class="n">poll</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">False</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">percentage</span><span class="p">)):</span>
@@ -1761,53 +1753,8 @@
             <span class="n">votes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;([\d,]*) vote(s)?&quot;</span><span class="p">,</span> <span class="n">rest</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">string</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Option</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">votes</span><span class="o">=</span><span class="n">votes</span><span class="p">,</span> <span class="n">percent</span><span class="o">=</span><span class="n">percent</span><span class="p">))</span>
 
-<div class="viewcode-block" id="Poll.make_active"><a class="viewcode-back" href="../../pages.html#moddb.pages.Poll.make_active">[docs]</a>    <span class="k">def</span> <span class="nf">make_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;This method attempts to make the poll active by checking the cached polls on the </span>
-<span class="sd">        github repository. If the poll exists it get the ids of the options and set them as such</span>
-<span class="sd">        then it will set the poll as active allowing users to vote on it.</span>
-
-<span class="sd">        Parameters</span>
-<span class="sd">        -----------</span>
-<span class="sd">        path : str</span>
-<span class="sd">            An optional path to a json file generated with poll.py</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">cache</span> <span class="o">=</span> <span class="n">polls_json_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">options</span> <span class="o">=</span> <span class="n">cache</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)]</span>
-        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;This poll has not been cached&quot;</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
-            <span class="n">index</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">option</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span></div>
-
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Poll question=</span><span class="si">{self.question}</span><span class="s2">&gt;&quot;</span>
-
-<div class="viewcode-block" id="Poll.vote"><a class="viewcode-back" href="../../pages.html#moddb.pages.Poll.vote">[docs]</a>    <span class="k">def</span> <span class="nf">vote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">option</span> <span class="p">:</span> <span class="n">Option</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Vote for an option, if you are not logged in the vote will be cast as a guest. Currently</span>
-<span class="sd">        not implemented. Polls can only be voted on if they have been obtained from the front page,</span>
-<span class="sd">        since only those polls contain the option ids neccessary to cast the vote. The simplest way </span>
-<span class="sd">        to know if this poll can be voted on is to check the `active` parameters which is True if the</span>
-<span class="sd">        poll is currently open/active</span>
-
-<span class="sd">        Parameters</span>
-<span class="sd">        ------------</span>
-<span class="sd">        option : Option</span>
-<span class="sd">            The option you desire to vote for.</span>
-
-<span class="sd">        Raises</span>
-<span class="sd">        -------</span>
-<span class="sd">        ValueError</span>
-<span class="sd">            This poll is not active.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This poll is not active&quot;</span><span class="p">)</span>
-
-        <span class="n">r</span> <span class="o">=</span> <span class="n">request</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;poll&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;option&quot;</span><span class="p">:</span> <span class="n">option</span><span class="o">.</span><span class="n">id</span><span class="p">}},</span> <span class="n">post</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;&lt;Poll question=</span><span class="si">{self.question}</span><span class="s2">&gt;&quot;</span></div>
 </pre></div>
 
           </div>

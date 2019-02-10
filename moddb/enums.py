@@ -17,8 +17,8 @@ class SearchCategory(enum.Enum):
     reviews = 13
     headlines = 14
     blogs = 15
-    hardware = 16
-    software = 17
+    hardwares = 16
+    softwares = 17
 
 class Category(enum.Enum):
     mods = "mods"
@@ -315,3 +315,36 @@ class JobSkill(enum.Enum):
 
 class HardwareCategory(enum.Enum):
     headset = 1
+    haptics = 2
+    controller = 3
+    video = 4
+    sound = 5
+
+class SoftwareCategory(enum.Enum):
+    commerical = 1
+    architecture = 7
+    retail = 8
+    tours = 9
+    communication = 2
+    browser = 10
+    social_networking = 11
+    development = 3
+    editor = 12
+    sdk = 13
+    educational = 4
+    sub_educational = 14
+    environment_mapping = 15
+    medical = 16
+    simulation = 17
+    entertainment = 5
+    adult = 18
+    books = 19
+    games = 27
+    movies = 20
+    music = 26
+    sport = 21
+    media = 6
+    audio_recording_editing = 22
+    video_capture_editing = 23
+    motion_capture = 24
+    graphics_editing = 25

@@ -4777,11 +4777,7 @@ itself simply relies on two other to make the request and parse the table.</p>
 <dl class="class">
 <dt id="moddb.pages.Poll">
 <em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Poll</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents a poll available on the front page, more polls are available but most
-won’t have the possibility to vote since they lack the option id necessary to cast a
-vote even through manual post requests. I don’t think it would have cost much to add that
-into the poll page but for now it’s like that. <cite>vote</cite> will raise an error if the user tries
-to cast it from a poll which was not gotten from the front page.</p>
+<dd><p>Represents a poll. Cannot be voted for due to restrictions implemented by the website.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4902,20 +4898,6 @@ to cast it from a poll which was not gotten from the front page.</p>
 </table>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="moddb.pages.Poll.active">
-<code class="descname">active</code><a class="headerlink" href="#moddb.pages.Poll.active" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether the poll can be voted on.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="method">
 <dt id="moddb.pages.Poll.get_comments">
 <code class="descname">get_comments</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Poll.get_comments" title="Permalink to this definition">¶</a></dt>
@@ -4930,42 +4912,6 @@ itself simply relies on two other to make the request and parse the table.</p>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A subclass of list with the method flatten to retrieve all the children.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="moddb.pages.Poll.make_active">
-<code class="descname">make_active</code><span class="sig-paren">(</span><em>path=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll.make_active"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll.make_active" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method attempts to make the poll active by checking the cached polls on the
-github repository. If the poll exists it get the ids of the options and set them as such
-then it will set the poll as active allowing users to vote on it.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – An optional path to a json file generated with poll.py</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="moddb.pages.Poll.vote">
-<code class="descname">vote</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Poll.vote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Poll.vote" title="Permalink to this definition">¶</a></dt>
-<dd><p>Vote for an option, if you are not logged in the vote will be cast as a guest. Currently
-not implemented. Polls can only be voted on if they have been obtained from the front page,
-since only those polls contain the option ids neccessary to cast the vote. The simplest way
-to know if this poll can be voted on is to check the <cite>active</cite> parameters which is True if the
-poll is currently open/active</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>option</strong> (<a class="reference internal" href="boxes.html#moddb.boxes.Option" title="moddb.boxes.Option"><em>Option</em></a>) – The option you desire to vote for.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – This poll is not active.</td>
 </tr>
 </tbody>
 </table>
