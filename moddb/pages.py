@@ -842,8 +842,8 @@ class File(Base):
         URL of the preview image for the file
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        info = html.find("div", class_="table tablemenu").find_all("h5", string=("Filename", "Size", "MD5 Hash"))
-        file = {x.string.lower() : x.parent.span.string.strip() for x in info}
+        info = html.find("div", class_="table tablemenu")
+        file = {x.string.lower() : x.parent.span.string.strip() for x in info.find_all("h5", string=("Filename", "Size", "MD5 Hash"))}
         self.name = file["filename"]
         super().__init__(html)
 
