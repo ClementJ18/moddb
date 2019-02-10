@@ -185,6 +185,7 @@ class Theme(enum.Enum):
     
 class Genre(enum.Enum):
     action = 1
+    sub_adventure = 2
     adventure = 5
     driving = 6
     rpg = 10

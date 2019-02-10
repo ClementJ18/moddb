@@ -630,9 +630,13 @@ class Page(Base, SharedMethodsMetaClass):
             LOGGER.info("%s %s has no tags", self.__class__.__name__, self.name)
 
         #imagebox
-        imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
-        self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
-        
+        try:
+            imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
+            self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
+        except AttributeError:
+            LOGGER.info("%s %s has no images", self.__class__.__name__, self.name)
+            self.imagebox = []
+
         #misc
         try:
             self.embed = html.find("input", type="text", class_="text textembed")["value"]
@@ -775,13 +779,15 @@ class Engine(Page, GetGamesMetaClass):
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.engines)
         delattr(self, "files")
-        delattr(self, "get_files")
 
         try:
             self.games = self._get_games(html)
         except AttributeError:
             LOGGER.info("Engine %s has no games", self.name)
             self.games = []
+
+    def get_files(*args, **kwargs):
+        pass
 
 @concat_docs
 class File(Base):
