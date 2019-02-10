@@ -103,7 +103,7 @@ class Profile:
     game : Thumbnail
         Exclusive to Mod pages. Game like thumbnail representing the game the mod was built for.
     licence : Licence
-        Exclusive to Engine pages. Object representing the licence the engine operates under.
+        Exclusive to Engine and Addon pages. Object representing the licence the engine operates under.
     platforms : List[Thumbnail]
         Exclusive to Game, Engine and Addon pages. List of platform like thumbnails representing
         the plaftorms the software was built for.
@@ -200,7 +200,7 @@ class Profile:
             name = game.parent.span.a.string
             self.game = Thumbnail(url=url, name=name, type=ThumbnailType.game)
 
-        if page_type == SearchCategory.engines:
+        if page_type in [SearchCategory.engines, SearchCategory.addons]:
             self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
 
         if page_type == SearchCategory.hardwares:
@@ -208,6 +208,9 @@ class Profile:
 
         if page_type == SearchCategory.softwares:
             self.type = SoftwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
+
+        if page_type == SearchCategory.addons:
+            self.type = AddonCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
             
     def __repr__(self):
         return f"<Profile type={self.category.name}>"

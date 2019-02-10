@@ -78,3 +78,47 @@ class TestGets(unittest.TestCase):
             print(url)
             soup = moddb.utils.soup(url)
             moddb.pages.File(soup)
+
+    def test_get_addons(self):
+        urls = [
+            "https://www.moddb.com/games/grand-theft-auto-san-andreas/addons/superman-sa-beta-v10",
+            "https://www.moddb.com/mods/brutal-doom/addons/project-brutality",
+            "https://www.moddb.com/games/sudoku-e-sport-world-cup-2017/addons/collector-files",
+            "https://www.moddb.com/addons/hl2dm-20b",
+            "https://www.moddb.com/mods/call-of-chernobyl/addons/doctorx-dynamic-faction-relations",
+            "https://www.moddb.com/mods/call-of-chernobyl/addons/arsenal-overhaul",
+            "https://www.moddb.com/games/cc-generals-zero-hour/addons/usa-challenge",
+            "https://www.moddb.com/games/axis-allies/addons/simple-vanilla-sai-buff"
+        ]
+
+        for url in urls:
+            print(url)
+            soup = moddb.utils.soup(url)
+            moddb.pages.Addon(soup)
+
+    def test_get_medias(self):
+        urls = [
+            "https://www.moddb.com/mods/third-age-total-war/videos/rohan7",
+            "https://www.moddb.com/games/erie/videos/pewdiepie-approved",
+            "https://www.moddb.com/games/the-last-tinker-city-of-colors/videos/movie-max-1",
+            "https://www.moddb.com/games/dawns-light/videos/movie-max-1",
+            "https://www.moddb.com/mods/doom-exp/videos/doom-exp-15g-flamethrower",
+            "https://www.moddb.com/mods/saxondragon/videos/prophesy-of-pendor-39-official-trailer",
+            "https://www.moddb.com/mods/extreme-vs-full-boost-mod/images/new-dlc-released",
+            "https://www.moddb.com/mods/third-age-total-war/images/the-gates-of-argonath",
+            "https://www.moddb.com/games/panoramical/images/screenshot2",
+            "https://www.moddb.com/games/grave-matters/images/image-3",
+            "https://www.moddb.com/mods/calradia-1417/images/new-khergit-heavy-armor1",
+            "https://www.moddb.com/mods/calradia-1417/images/new-khergit-armors-will-be-included-in-the-next-patch",
+            "https://www.moddb.com/mods/tiberium-essence/videos/vlado32-fields-of-green",
+            "https://www.moddb.com/mods/goldeneye-source/videos/podcast-17-v41-interview-with-ges",
+            "https://www.moddb.com/mods/tiberium-essence/videos/vlado32-fields-of-green",
+            "https://www.moddb.com/mods/goldeneye-source/videos/podcast-17-v41-interview-with-ges",
+            "https://www.moddb.com/mods/war-of-the-gods-wrath-of-egypt/videos/the-mummy-returns-complete-score-23-leaving-clues-sandcastles",
+            "https://www.moddb.com/mods/recovered-operations/videos/recoil-tension"
+        ]
+
+        for url in urls:
+            print(url)
+            soup = moddb.utils.soup(url)
+            moddb.pages.Media(soup)

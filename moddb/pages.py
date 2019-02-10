@@ -866,7 +866,7 @@ class File(Base):
         self.description = html.find("p", id="downloadsummary").string
 
         #Todo: can this be a media object?
-        self.preview = html.find_all("img")[0]["src"]
+        self.preview = html.find_all("img", src=True)[0]["src"]
 
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.type.name}>"
@@ -877,8 +877,6 @@ class Addon(File):
 
     """
     #ToDo: find difference between addon and file?
-    #ToDo: make use of AddonCategory
-    #ToDo: make use of Licence
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
 
@@ -922,7 +920,11 @@ class Media(Base):
         The description of the file as given by the file uploader.
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        self.name = html.find("meta", itemprop="name")["content"]
+        try:
+            self.name = html.find("meta", itemprop="name")["content"]
+        except TypeError:
+            self.name = html.find("img", id="mediaimage")["title"]
+            
         super().__init__(html)
         medias = html.find_all("h5", string=("Date", "By", "Duration", "Size", "Views", "Filename"))
         raw_media = {media.string.lower() : media.parent for media in medias}
