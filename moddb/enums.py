@@ -19,6 +19,10 @@ class SearchCategory(enum.Enum):
     blogs = 15
     hardwares = 16
     softwares = 17
+    members = 18
+    news = articles
+    tutorials = articles
+    companys = developers
 
 class Category(enum.Enum):
     mods = "mods"
@@ -100,7 +104,7 @@ class ThumbnailType(enum.Enum):
     mod = 0
     game = 1
     engine = 2
-    user = 3
+    member = 3
     group = 4
     article = 5
     review = 6

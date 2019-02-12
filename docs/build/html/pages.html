@@ -1335,7 +1335,7 @@ itself simply relies on two other to make the request and parse the table.</p>
 
 <dl class="method">
 <dt id="moddb.pages.Engine.get_files">
-<code class="descname">get_files</code><span class="sig-paren">(</span><em>index=1</em>, <em>*</em>, <em>query=None</em>, <em>category=None</em>, <em>addon_type=None</em>, <em>timeframe=None</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Engine.get_files" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_files</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Engine.get_files"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Engine.get_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a page of files for the page. Each page will yield up to 30 files.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2403,7 +2403,8 @@ game the addon belongs to.</dd>
 <dl class="attribute">
 <dt id="moddb.pages.Article.profile">
 <code class="descname">profile</code><a class="headerlink" href="#moddb.pages.Article.profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>The profile object of the moddb model the article is for (engine, game, mod…)</p>
+<dd><p>The profile object of the moddb model the article is for (engine, game, mod…). Can be none if it is not
+rattached to anything, such as for site news.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4922,7 +4923,88 @@ itself simply relies on two other to make the request and parse the table.</p>
 <dl class="class">
 <dt id="moddb.pages.Software">
 <em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Software</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Software"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Software" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
+<dd><p>Represents a moddb Software page
+.. attribute:: id</p>
+<blockquote>
+<div><p>The id of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="attribute">
+<dt id="moddb.pages.Software.url">
+<code class="descname">url</code><a class="headerlink" href="#moddb.pages.Software.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The url of the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Software.comments">
+<code class="descname">comments</code><a class="headerlink" href="#moddb.pages.Software.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comments scrapped on this list in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="boxes.html#moddb.boxes.CommentList" title="moddb.boxes.CommentList">CommentList</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="moddb.pages.Software.report">
+<code class="descname">report</code><a class="headerlink" href="#moddb.pages.Software.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to report the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_articles">
+<code class="descname">get_articles</code><span class="sig-paren">(</span><em>index=1</em>, <em>*</em>, <em>query=None</em>, <em>category=None</em>, <em>timeframe=None</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_articles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a page of articles for the page. Each page will yield up to 30 articles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The page number to get the articles from.</li>
+<li><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – The string query to search for in the article name, optional.</li>
+<li><strong>category</strong> (<a class="reference internal" href="enums.html#moddb.enums.ArticleType" title="moddb.enums.ArticleType"><em>ArticleType</em></a>) – Type enum defining what the article is, optional</li>
+<li><strong>timeframe</strong> (<a class="reference internal" href="enums.html#moddb.enums.TimeFrame" title="moddb.enums.TimeFrame"><em>TimeFrame</em></a>) – Time frame of when the article was added, optional</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The list of article type thumbnails parsed from the page</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="moddb.pages.Software.get_comments">
 <code class="descname">get_comments</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to get comments on the model regardless of what page they may be present in. The function
@@ -4941,12 +5023,181 @@ itself simply relies on two other to make the request and parse the table.</p>
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="moddb.pages.Software.get_files">
+<code class="descname">get_files</code><span class="sig-paren">(</span><em>index=1</em>, <em>*</em>, <em>query=None</em>, <em>category=None</em>, <em>addon_type=None</em>, <em>timeframe=None</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a page of files for the page. Each page will yield up to 30 files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The page number to get the files from.</li>
+<li><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – The string query to search for in the file name, optional.</li>
+<li><strong>category</strong> (<a class="reference internal" href="enums.html#moddb.enums.FileCategory" title="moddb.enums.FileCategory"><em>FileCategory</em></a>) – Type enum defining what the file is, optional</li>
+<li><strong>addon_type</strong> (<a class="reference internal" href="enums.html#moddb.enums.AddonCategory" title="moddb.enums.AddonCategory"><em>AddonCategory</em></a>) – Type enum defining what category the file is.</li>
+<li><strong>timeframe</strong> (<a class="reference internal" href="enums.html#moddb.enums.TimeFrame" title="moddb.enums.TimeFrame"><em>TimeFrame</em></a>) – Time frame of when the file was added, optional</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The list of file type thumbnails parsed from the page</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_games">
+<code class="descname">get_games</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_games" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a page of games for the model. Each page will yield up to 30 games.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The page number to get the games for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of game like thumbnails that can be parsed individually.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_hardware">
+<code class="descname">get_hardware</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_hardware" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a page of hardware for the platform. Each page will yield up to 30 hardware.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The page number to get the hardware for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of hardware like thumbnails that can be parsed individually.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_images">
+<code class="descname">get_images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the images a page has uploaded. Literally all of them. As thumbnails. ModDB’s imagebox
+caches all the urls for images on the page so this grabs them all. Lists might be long, but this
+is all the images. They can be invidually parsed to get full fledged media objects from them.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The list of image type thumbnails parsed from the page</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_reviews">
+<code class="descname">get_reviews</code><span class="sig-paren">(</span><em>index=1</em>, <em>*</em>, <em>query=None</em>, <em>rating=None</em>, <em>sort=None</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_reviews" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a page of reviews for the page. Each page will yield up to 10 reviews.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The page number to get the reviews from.</li>
+<li><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – The string to look for in the review, optional.</li>
+<li><strong>rating</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – A number between 1 and 10 to get the ratings</li>
+<li><strong>sort</strong> (<em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>]</em>) – The sorting tuple to sort by</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The list of article type thumbnails parsed from the page</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List[<a class="reference internal" href="#moddb.pages.Review" title="moddb.pages.Review">Review</a>]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_software">
+<code class="descname">get_software</code><span class="sig-paren">(</span><em>index=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_software" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a page of software for the platform. Each page will yield up to 30 software.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The page number to get the software for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of software like thumbnails that can be parsed individually.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_tutorials">
+<code class="descname">get_tutorials</code><span class="sig-paren">(</span><em>index=1</em>, <em>*</em>, <em>query=None</em>, <em>difficulty=None</em>, <em>tutorial_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_tutorials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a page of tutorial for the page. Each page will yield up to 30 tutorials.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The page number to get the tutorials from.</li>
+<li><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – The string query to look for in the tutorial title, optional.</li>
+<li><strong>difficulty</strong> (<a class="reference internal" href="enums.html#moddb.enums.Difficulty" title="moddb.enums.Difficulty"><em>Difficulty</em></a>) – Enum type representing the difficulty of the tutorial, optional.</li>
+<li><strong>tutorial_type</strong> (<a class="reference internal" href="enums.html#moddb.enums.TutorialType" title="moddb.enums.TutorialType"><em>TutorialType</em></a>) – Enum type representing the theme/type/category of the tutorial, optional.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The list of tutorial type thumbnails parsed from the page</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="moddb.pages.Software.get_videos">
+<code class="descname">get_videos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moddb.pages.Software.get_videos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the videos a page has uploaded. Literally all of them. As thumbnails. ModDB’s imagebox
+caches all the urls for videos on the page so this grabs them all. Lists might be long, but this
+is all the videos. They can be invidually parsed to get full fledged media objects from them.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The list of video type thumbnails parsed from the page</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="boxes.html#moddb.boxes.Thumbnail" title="moddb.boxes.Thumbnail">Thumbnail</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="moddb.pages.Hardware">
 <em class="property">class </em><code class="descclassname">moddb.pages.</code><code class="descname">Hardware</code><span class="sig-paren">(</span><em>html</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moddb/pages.html#Hardware"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moddb.pages.Hardware" title="Permalink to this definition">¶</a></dt>
-<dd><p>A moddb.hardware
+<dd><p>Represents a moddb Hardware page
 .. attribute:: id</p>
 <blockquote>
 <div><p>The id of the page</p>

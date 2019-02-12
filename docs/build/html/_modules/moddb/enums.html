@@ -50,8 +50,10 @@
     <span class="n">reviews</span> <span class="o">=</span> <span class="mi">13</span>
     <span class="n">headlines</span> <span class="o">=</span> <span class="mi">14</span>
     <span class="n">blogs</span> <span class="o">=</span> <span class="mi">15</span>
-    <span class="n">hardware</span> <span class="o">=</span> <span class="mi">16</span>
-    <span class="n">software</span> <span class="o">=</span> <span class="mi">17</span></div>
+    <span class="n">hardwares</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">softwares</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="n">articles</span>
+    <span class="n">tutorials</span> <span class="o">=</span> <span class="n">articles</span></div>
 
 <div class="viewcode-block" id="Category"><a class="viewcode-back" href="../../enums.html#moddb.enums.Category">[docs]</a><span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
     <span class="n">mods</span> <span class="o">=</span> <span class="s2">&quot;mods&quot;</span>
@@ -218,6 +220,7 @@
     
 <div class="viewcode-block" id="Genre"><a class="viewcode-back" href="../../enums.html#moddb.enums.Genre">[docs]</a><span class="k">class</span> <span class="nc">Genre</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
     <span class="n">action</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">sub_adventure</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">adventure</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="n">driving</span> <span class="o">=</span> <span class="mi">6</span>
     <span class="n">rpg</span> <span class="o">=</span> <span class="mi">10</span>
@@ -347,7 +350,40 @@
     <span class="n">web_or_other</span> <span class="o">=</span> <span class="mi">11</span></div>
 
 <div class="viewcode-block" id="HardwareCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.HardwareCategory">[docs]</a><span class="k">class</span> <span class="nc">HardwareCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="n">headset</span> <span class="o">=</span> <span class="mi">1</span></div>
+    <span class="n">headset</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">haptics</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">controller</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">video</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">sound</span> <span class="o">=</span> <span class="mi">5</span></div>
+
+<div class="viewcode-block" id="SoftwareCategory"><a class="viewcode-back" href="../../enums.html#moddb.enums.SoftwareCategory">[docs]</a><span class="k">class</span> <span class="nc">SoftwareCategory</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">commerical</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">architecture</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">retail</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">tours</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">communication</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">browser</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">social_networking</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">development</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">editor</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">sdk</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">educational</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">sub_educational</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">environment_mapping</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">medical</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">simulation</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">entertainment</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">adult</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">books</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">games</span> <span class="o">=</span> <span class="mi">27</span>
+    <span class="n">movies</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">music</span> <span class="o">=</span> <span class="mi">26</span>
+    <span class="n">sport</span> <span class="o">=</span> <span class="mi">21</span>
+    <span class="n">media</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">audio_recording_editing</span> <span class="o">=</span> <span class="mi">22</span>
+    <span class="n">video_capture_editing</span> <span class="o">=</span> <span class="mi">23</span>
+    <span class="n">motion_capture</span> <span class="o">=</span> <span class="mi">24</span>
+    <span class="n">graphics_editing</span> <span class="o">=</span> <span class="mi">25</span></div>
 </pre></div>
 
           </div>

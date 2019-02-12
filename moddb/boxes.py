@@ -8,7 +8,7 @@ from typing import List, Any
 import datetime
 
 __all__ = ['CommentList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
-           'Comment', 'UserProfile', 'UserStatistics', 'PartialArticle', 'Option']
+           'Comment', 'MemberProfile', 'MemberStatistics', 'PartialArticle', 'Option']
 
 class Statistics:
     """The stats box, on pages that have one. This represents total stats and daily stats in one
@@ -25,7 +25,7 @@ class Statistics:
     watchers : int
         The number of people following this page
     mods : int
-        The number of mods this page is related too (only applies to games, users and teams)
+        The number of mods this page is related too (only applies to games, members and teams)
     addons : int
         The number of addons this page has uploaded
     members : int
@@ -61,10 +61,10 @@ class Statistics:
     def __repr__(self):
         return f"<Statistics rank={self.rank}/{self.total}>"
 
-#mod, game, user, addon, engine, company, group
+#mod, game, member, addon, engine, company, group
 class Profile:
     """The profile object is used for several models and as such attribute vary based on which model
-    the profile is attached too. Profiles are only pressent on Mod, Game, User, Addon, Engine, Company,
+    the profile is attached too. Profiles are only pressent on Mod, Game, Member, Addon, Engine, Company,
     Hardware, Software and Group pages.
     
     Parameters
@@ -90,8 +90,8 @@ class Profile:
     icon : str
         Exclusive to Game, Mod and Addon pages. URL of the icon image
     developers : dict{str : Thumbnail}
-        Exclusive to Game, Mods, Engine and Addon pages. Dictionnary of user/team like thumbnails as 
-        values and the role of the user/team as the key (creator, publisher, developer, ect...)
+        Exclusive to Game, Mods, Engine and Addon pages. Dictionnary of member/team like thumbnails as 
+        values and the role of the member/team as the key (creator, publisher, developer, ect...)
     release : datetime.datetime
         Exclusive to Game, Mods, Engine and Addon pages. Datetime object of when the page was
         released, can be None if the page hasn't seen a release yet.
@@ -120,8 +120,11 @@ class Profile:
                 _name = html.find("span", itemprop="headline").string
             except AttributeError:
                 _name = html.find("div", class_="title").h2.a.string
-        
-        url = html.find("meta", property="og:url")["content"]
+        try:
+            url = html.find("meta", property="og:url")["content"]
+        except TypeError:
+            url = join(html.find("a", string=self.name)["href"])
+            
         regex = r"\/([a-z]+)\/"
         matches = re.findall(regex, url)
         matches.reverse()
@@ -160,7 +163,7 @@ class Profile:
 
         if page_type in [SearchCategory.games, SearchCategory.mods, SearchCategory.engines, SearchCategory.addons, SearchCategory.hardwares, SearchCategory.softwares]:
             people = profile_raw.find_all("h5", string=["Developer", "Publisher", "Developer & Publisher","Creator", "Company"])
-            self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != "Creator" else ThumbnailType.user) for x in people}            
+            self.developers = {x.string.lower() : Thumbnail(url=x.parent.a["href"], name=x.parent.a.string, type=ThumbnailType.team if x.string != "Creator" else ThumbnailType.member) for x in people}            
 
             try:
                 d = profile_raw.find("h5", string="Release date").parent.span.time
@@ -307,7 +310,7 @@ class Comment:
     id : int
         The ID of the comment
     author : Thumbnail
-        A user like thumbnail of the user who posted the comment
+        A member like thumbnail of the member who posted the comment
     date : datetime.datetime
         Date and time of the comment creation
     position : int
@@ -327,7 +330,7 @@ class Comment:
     downvote : str
         Link to downvote the comment
     approved : bool
-        Whether or not the comment is still waiting for admin approval and is visible to the guest users
+        Whether or not the comment is still waiting for admin approval and is visible to the guest members
 
 
     """
@@ -338,7 +341,7 @@ class Comment:
         #ToDo: check for approved even when logged in
         author = html.find("a", class_="avatar")
         self.id = html["id"] #ToDo: check if int
-        self.author = Thumbnail(name=author["title"], url=author["href"], image=author.img["src"], type=ThumbnailType.user)
+        self.author = Thumbnail(name=author["title"], url=author["href"], image=author.img["src"], type=ThumbnailType.member)
         self.date = get_date(html.find("time")["datetime"])
         actions = html.find("span", class_="actions")
 
@@ -407,9 +410,9 @@ class CommentList(list):
 
         return top_list
 
-class UserProfile:
-    """User profiles are separate entities because they share nothing with the other profile boxes. Where as all
-    other profile boxes share at least 4 attributes a user shares none.
+class MemberProfile:
+    """Member profiles are separate entities because they share nothing with the other profile boxes. Where as all
+    other profile boxes share at least 4 attributes a member shares none.
 
     Parameters
     -----------
@@ -419,27 +422,27 @@ class UserProfile:
     Attributes
     -----------
     name : str
-        Name of teh user
+        Name of teh member
     level : int
         Current level
     progress : float
         Percentage progress to next level
     title : str
-        User title
+        Member title
     avatar : str
-        Url of the user avatar
+        Url of the member avatar
     online : bool
-        Whether or not the user is currently online
+        Whether or not the member is currently online
     last_online :  datetime.datetime
-        None if the user is currently online
+        None if the member is currently online
     gender : str
-        Gender of the user, can be None
+        Gender of the member, can be None
     homepage : str
-        URL of the user's homepage
+        URL of the member's homepage
     country : str
-        The user's chosen country
+        The member's chosen country
     follow : str
-        Link to follow a user
+        Link to follow a member
     """
     def __init__(self, html):
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
@@ -458,23 +461,23 @@ class UserProfile:
         try:
             self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
         except AttributeError:
-            LOGGER.info("User %s has not publicized their gender", self.name)
+            LOGGER.info("Member %s has not publicized their gender", self.name)
             self.gender = None  
 
         try:
             self.homepage =  html.find("h5", string="Homepage").parent.span.a["href"]
         except AttributeError:
             self.homepage = None
-            LOGGER.info("User %s has no homepage", self.name)      
+            LOGGER.info("Member %s has no homepage", self.name)      
 
         self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
         self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
 
     def __repr__(self):
-        return f"<UserProfile name={self.name}>"
+        return f"<MemberProfile name={self.name}>"
 
-class UserStatistics:
-    """Similarly, a user statistics shared no common ground with other stats and therefore there was a 
+class MemberStatistics:
+    """Similarly, a member statistics shared no common ground with other stats and therefore there was a 
     need for a separate object.
 
     Parameters
@@ -485,13 +488,13 @@ class UserStatistics:
     Attributes
     -----------
     watchers : int
-        How many users are following this user
+        How many members are following this member
     points : int
         Activity points
     comments : int
-        How many comments the user has made
+        How many comments the member has made
     tags : int
-        How many tags the user has created
+        How many tags the member has created
     visits : int
         How many people have viewed this page
     visits : int
@@ -499,9 +502,9 @@ class UserStatistics:
     today : int
         How many people have viewed this page today
     time : int
-        How much time the user has spent online
+        How much time the member has spent online
     rank : int
-        The user's current rank (compared to other users)
+        The member's current rank (compared to other members)
     total : int
         the maximum rank
     """
@@ -526,10 +529,10 @@ class UserStatistics:
         except AttributeError:
             self.rank = 0
             self.total = 0
-            LOGGER.info("User %s has no rank", name)
+            LOGGER.info("Member %s has no rank", name)
 
     def __repr__(self):
-        return f"<UserStatistics rank={self.rank}/{self.total}>"
+        return f"<MemberStatistics rank={self.rank}/{self.total}>"
 
 class PlatformStatistics:
     """Stats for platform pages."""

@@ -1,4 +1,4 @@
-from .boxes import CommentList, Comment, Thumbnail, UserProfile, UserStatistics, \
+from .boxes import CommentList, Comment, Thumbnail, MemberProfile, MemberStatistics, \
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
@@ -9,7 +9,7 @@ import bs4
 from typing import List, Tuple, Union
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
-           'Team', 'Group', 'Job', 'Blog', 'User', 'FrontPage', 'Review',
+           'Team', 'Group', 'Job', 'Blog', 'Member', 'FrontPage', 'Review',
            'Platform', 'Poll', 'Software', 'Hardware']
 
 #ToDo: timeframe? could piggy back of get_date
@@ -47,7 +47,10 @@ class Base:
             self.id = None
             LOGGER.info("%s %s has no id", self.__class__.__name__, self.name)
 
-        self.url = html.find("meta", property="og:url")["content"]
+        try:
+            self.url = html.find("meta", property="og:url")["content"]
+        except TypeError:
+            self.url = join(html.find("a", string=self.name)["href"])
 
         try:
             self.report = join(html.find("a", string="Report")["href"])
@@ -498,7 +501,7 @@ class SharedMethodsMetaClass:
         Returns
         --------
         List[Thumbnail]
-            The list of tutorial type thumbnails parsed from the page
+            The list of article type thumbnails parsed from the page
         """
         params = {
             "filter": "t", 
@@ -541,7 +544,7 @@ class GetSoftwareHardwareMetaClass:
         return self._get(f"{self.url}/games/page/{index}", ThumbnailType.software)
 
 class Page(Base, SharedMethodsMetaClass):
-    """The common class representing the page for either a Mod, Game, Engine or a User. Mostly used to be inherited by
+    """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
     those classes.
 
     Parameters
@@ -563,7 +566,7 @@ class Page(Base, SharedMethodsMetaClass):
     style : Style
         The object containing data relevant to the type of the game. Multiplayer, singleplayer, ect...
     suggestions : List[Thumbnail]
-        A list of thumbnail object representing moddb's suggestion of similar pages for the visiting user.
+        A list of thumbnail object representing moddb's suggestion of similar pages for the visiting member.
     files : List[Thumbnail]
         A list of thumbnails representing a possible partial list of all the files. To get a guaranteed full
         list either compare with statistics.files to see if the length of the list matches the number of files in the
@@ -829,7 +832,7 @@ class File(Base):
     category : FileCategory
         The category of the file
     author : Thumbnail
-        A user type thumbnail of the user who uploaded the file
+        A member type thumbnail of the member who uploaded the file
     date : datetime.datetime
         The date the file was uploaded
     button : str
@@ -857,7 +860,7 @@ class File(Base):
         self.category = FileCategory(int(info.find("h5", string="Category").parent.a["href"][-1]))
         
         uploader = info.find("h5", string="Uploader").parent.a
-        self.author = Thumbnail(url=uploader["href"], name=uploader.string, type=ThumbnailType.user)
+        self.author = Thumbnail(url=uploader["href"], name=uploader.string, type=ThumbnailType.member)
 
         self.date = get_date(info.find("h5", string="Added").parent.span.time["datetime"])
         self.button = info.find("h5", string="Embed Button").parent.span.input["value"]
@@ -901,7 +904,7 @@ class Media(Base):
     name : str
         The name of the media
     author : Thumbnail
-        User type thumbnail of the media uploader
+        Member type thumbnail of the media uploader
     duration : int
         Duration of the media in seconds, 0 if it's an image
     size : int
@@ -932,7 +935,7 @@ class Media(Base):
         self.date = get_date(raw_media["date"].span.time["datetime"])
 
         author = raw_media["by"].span.a
-        self.author = Thumbnail(url=author["href"], name=author.string.strip(), type=ThumbnailType.user)
+        self.author = Thumbnail(url=author["href"], name=author.string.strip(), type=ThumbnailType.member)
 
         #ToDo: consider possibility of hour long videos, maybe longer
         if "duration" in raw_media:
@@ -990,7 +993,8 @@ class Article(Base):
     name : str
         The name of the article
     profile : Profile
-        The profile object of the moddb model the article is for (engine, game, mod...)
+        The profile object of the moddb model the article is for (engine, game, mod...). Can be none if it is not
+        rattached to anything, such as for site news.
     tags : dict{str : str}
         A dictionary of tags with the tag names as the key and the url to the tag
         as the value.
@@ -1001,7 +1005,7 @@ class Article(Base):
     intro : int
         The intro/teaser paragraph of the article
     author : Thumbnail
-        A user type thumbnail of the user who published the article
+        A member type thumbnail of the member who published the article
     date : datetime.datetime
         The date the article was published
     html : str
@@ -1022,7 +1026,11 @@ class Article(Base):
         except AttributeError:
             raw = html.find("span", string=raw_type).parent.parent.parent.find("div", class_="table tablemenu")
 
-        self.profile = Profile(html)
+        try:
+            self.profile = Profile(html)
+        except AttributeError:
+            LOGGER.info("%s has no profile", self.name)
+            self.profile = None
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
@@ -1036,7 +1044,7 @@ class Article(Base):
         
         self.intro = html.find("p", itemprop="description").string
         author = html.find("span", itemprop="author").span.a
-        self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
+        self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.member)
 
         self.date = get_date(html.find("time", itemprop="datePublished")["datetime"])
         self.html = str(html.find("div", itemprop="articleBody"))
@@ -1082,7 +1090,7 @@ class Group(Page):
         clips that a group has published.
     suggestions : List[Thumbnail]
         A list of group like thumbnail objects representing the suggestions made by moddb to
-        users visiting this group
+        members visiting this group
     articles : List[Thumbnail]
         A list of article like thumbnail objects representing some of the articles published
         by the group
@@ -1145,13 +1153,45 @@ class Group(Page):
         #   - font page article
         #   - group category
 
+    def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
+        """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
+        will be a list of Thumbnail objects that can be parsed individually.
+
+        Parameters
+        -----------
+        html : bs4.BeautifulSoup
+            The html page we are trying to parse the suggestions for
+
+        Returns
+        --------
+        List[Thumbnail]
+            The list of suggestions as thumbnails.
+        """
+        try:
+            suggestions_raw = html.find("span", string=("You may also like", "Popular Articles")).parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
+        except AttributeError:
+            LOGGER.info("Group %s has no sidebar suggestions", self.name)
+            return []
+
+        suggestions = []
+        for x in suggestions_raw:
+            try:
+                link = x.find("a", class_="image")
+                suggestion_type = link["href"].split("/")[1].replace("s", "")
+                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
+                suggestions.append(suggestion)
+            except (AttributeError, TypeError):
+                pass
+
+        return suggestions
+
     def __repr__(self):
         return f"<Group name={self.name}>"
 
 @concat_docs
-class Team(Group):
+class Team(Group, GetEnginesMetaClass, GetGamesMetaClass, GetModsMetaClass, GetSoftwareHardwareMetaClass):
     """A team is a group of people, which are the author of a game, a mod or an engine. A group has members which all
-    have rights on those page. Like a user but instead of a single person authoring various mods and games it's several.
+    have rights on those page. Like a member but instead of a single person authoring various mods and games it's several.
 
     Parameters
     ------------
@@ -1180,14 +1220,20 @@ class Team(Group):
         try:
             self.games = self._get_games(html)
         except AttributeError:
-            LOGGER.info("Group %s has no games", self.name)
+            LOGGER.info("Team %s has no games", self.name)
             self.games = []
 
         try:
             self.engines = self._get_engines(html)
         except AttributeError:
-            LOGGER.info("Group %s has no engines", self.name)
+            LOGGER.info("Team %s has no engines", self.name)
             self.engines = []
+        try:
+            mods = html.find("span", string="Popular Mods").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
+            self.mods = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.mod, image=x.a.img["src"]) for x in mods]
+        except AttributeError:
+            LOGGER.info("Team %s has no mods", self.name)
+            self.mods = []
 
 @concat_docs
 class Job:
@@ -1203,7 +1249,7 @@ class Job:
     id : int
         id of the job
     author : Thumbnail
-        A user like thumbnail representing the poster of the job
+        A member like thumbnail representing the poster of the job. Can be none if they desire to remain private.
     paid : bool
         Whether or not the job is paid
     tags : dict{str : str}
@@ -1220,9 +1266,6 @@ class Job:
         A list of team like thumbnails of companies related to the job poster
 
     """
-    #ToDo: can a job have comments
-    #ToDo: look into this one again...
-    #ToDo: do jobs have search parameters?
     def __init__(self, html : bs4.BeautifulSoup):
         text_raw = html.find("div", id="readarticle")
         self.name = text_raw.find("div", class_="title").find("span", class_="heading").string
@@ -1231,10 +1274,14 @@ class Job:
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
 
         self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
-        author = profile_raw.find("h5", string="Author").parent.span.a
 
         #ToDo: can author be team
-        self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.user)
+        try:
+            author = profile_raw.find("h5", string="Author").parent.span.a
+            self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
+        except AttributeError:
+            LOGGER.info("Job %s has no author", self.name)
+            self.author = None
 
         self.paid = profile_raw.find("h5", string="Paid").parent.a.string == "Yes"
 
@@ -1249,12 +1296,16 @@ class Job:
 
         self.location = profile_raw.find("h5", string="Location").parent.span.string.strip()
 
-        related = html.find("div", class_="tablerelated").find_all("a", class_="image")
-        self.related = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related]
+        try:
+            related = html.find("div", class_="tablerelated").find_all("a", class_="image")
+            self.related = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related]
+        except AttributeError:
+            LOGGER.info("Job %s has no related companies", self.name)
+            self.related = []
 
 @concat_docs
 class Blog(Base):
-    """Object used to represent a user blog.
+    """Object used to represent a member blog.
 
     Filtering
     ----------
@@ -1266,7 +1317,7 @@ class Blog(Base):
     #it probably has comments and stuff, idk just fuck my shit up fam
     def __init__(self, *, heading, text):
         author = heading.find("span", class_="subheading").a
-        self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.user)
+        self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
 
         self.date = get_date(heading.find("span", class_="date").time["datetime"])
 
@@ -1281,8 +1332,8 @@ class Blog(Base):
         return f"<Blog title={self.name}>"
 
 @concat_docs
-class User(Page, GetGamesMetaClass, GetModsMetaClass):
-    """The object to represent an individual user on ModDB
+class Member(Page, GetGamesMetaClass, GetModsMetaClass):
+    """The object to represent an individual member on ModDB
 
     Parameters
     -----------
@@ -1291,34 +1342,34 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
 
     Attributes
     -----------
-    profile : UserProfile
-        Since user profile boxes have no overlap with other profiles, they are a separate object type
+    profile : MemberProfile
+        Since member profile boxes have no overlap with other profiles, they are a separate object type
         but serve the same function of making the side box "Profile" into an object, except exclusively
-        for a user page.
-    stats : UserStatistics
-        Since user statistics have no overlap with regular statistic pages, they are a separate object type
+        for a member page.
+    stats : MemberStatistics
+        Since member statistics have no overlap with regular statistic pages, they are a separate object type
         but serve the same function of making the side box "Statistics" into an object, but exclusively for
-        the user page.
+        the member page.
     description : str
-        Description written on the user profile
+        Description written on the member profile
     groups : List[Thumbnail]
-        A list of group/team like thumbnail objects representing both the Teams the user is part of and the
-        Groups the user is part of.
+        A list of group/team like thumbnail objects representing both the Teams the member is part of and the
+        Groups the member is part of.
     blog : Blog
-        The front page blog shown on the user page
+        The front page blog shown on the member page
     blogs : List[Thumbnail]
-        A list of blog like thumbnails representing the blog suggestion of a user's frontpage
+        A list of blog like thumbnails representing the blog suggestion of a member's frontpage
     friends : List[Thumnails]
-        A list of user like thumbnails representing some of the friends shown on the user's front
+        A list of member like thumbnails representing some of the friends shown on the member's front
         page
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        #Todo: can users have engines?
-        #ToDo: check for differences between a user page vs user page of logged in user
-        super().__init__(html)
+        #Todo: can members have engines?
+        #ToDo: check for differences between a member page vs member page of logged in member
+        super().__init__(html, SearchCategory.members)
 
-        self.profile = UserProfile(html)
-        self.stats = UserStatistics(html)
+        self.profile = MemberProfile(html)
+        self.stats = MemberStatistics(html)
         self.description = html.find("div", id="profiledescription").p.string
 
         try:
@@ -1326,7 +1377,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
             groups_raw = html.find("span", string="Groups").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-2]
             self.groups = [Thumbnail(name=div.a["title"], url=div.a["href"], type=ThumbnailType.group) for div in groups_raw]
         except AttributeError:
-            LOGGER.info("User %s doesn't have any groups", self.name)
+            LOGGER.info("Member %s doesn't have any groups", self.name)
             self.groups = []
 
         #Todo: still works?
@@ -1336,28 +1387,28 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
             self.blog = Blog(heading=blogs_raw.pop(0), text=blogs_raw.pop(0))
         except (TypeError, AttributeError):
             self.blog = None
-            LOGGER.info("User %s has no front page blog", self.name)
+            LOGGER.info("Member %s has no front page blog", self.name)
 
         try:
             blogs_raw = blogs_raw.find_all("div", recursive=False)
             self.blogs = [Thumbnail(name=blog.a["title"], url=blog.a["href"], type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
         except (TypeError, AttributeError):
             self.blogs = []
-            LOGGER.info("User %s has no blog suggestions", self.name)
+            LOGGER.info("Member %s has no blog suggestions", self.name)
 
         try:
             friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
-            self.friends = [Thumbnail(name=friend.a["title"], url=friend.a["href"], type=ThumbnailType.user) for friend in friends]
+            self.friends = [Thumbnail(name=friend.a["title"], url=friend.a["href"], type=ThumbnailType.member) for friend in friends]
         except AttributeError:
             self.friends = []
-            LOGGER.info("User %s has no friends ;(", self.name)
+            LOGGER.info("Member %s has no friends ;(", self.name)
 
     def __repr__(self):
-        return f"<User name={self.name} level={self.profile.level}>"
+        return f"<Member name={self.name} level={self.profile.level}>"
 
     def get_blogs(self, index : int = 1, *, query : str = None, timeframe : TimeFrame = None, 
                   sort : Tuple[str, str] = None) -> List["Blog"]:
-        """Search through a user's blogs one page at a time with certain filters.
+        """Search through a member's blogs one page at a time with certain filters.
 
         Parameters
         -----------
@@ -1382,8 +1433,8 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         }
         return self._get_blogs(index, params=params)
 
-    def get_user_comments(self, index : int = 1) -> CommentList:
-        """Gets a page of all the comments a user has posted.
+    def get_member_comments(self, index : int = 1) -> CommentList:
+        """Gets a page of all the comments a member has posted.
         
         Parameters
         -----------
@@ -1400,7 +1451,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         return self._get_comments(html)
 
     def get_friends(self, index : int = 1) -> List[Thumbnail]:
-        """Get a page of the friends of the user
+        """Get a page of the friends of the member
     
         Parameters
         -----------
@@ -1410,12 +1461,12 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         Returns
         --------
         List[Thumbnails]
-            A list of user like thumbnails of the user's friends
+            A list of member like thumbnails of the member's friends
         """
-        return self._get(f"{self.url}/friends/page/{index}", ThumbnailType.user)
+        return self._get(f"{self.url}/friends/page/{index}", ThumbnailType.member)
 
     def get_groups(self, index : int = 1) -> List[Thumbnail]:
-        """Get a page of the groups and teams a user is part of.
+        """Get a page of the groups and teams a member is part of.
         
         Parameters
         -----------
@@ -1425,7 +1476,7 @@ class User(Page, GetGamesMetaClass, GetModsMetaClass):
         Returns
         --------
         List[Thumbnails]
-            A list of team/group like thumbnails the user is part of
+            A list of team/group like thumbnails the member is part of
         """
         return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group)
 
@@ -1528,7 +1579,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
         
         #ToDo: check if possible
         self.id = None
-        
+
         self.url = join(html.find("a", itemprop="mainEntityOfPage")["href"])
         self.description = html.find("div", id="profiledescription").p.string
 
@@ -1573,10 +1624,6 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
 
     def __repr__(self):
         return f"<Platform name={self.name}>"
-
-class Tutorial:
-    #ToDo: check if unique or can be replaced with Article
-    pass
 
 class HardwareAndSoftware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSoftwareHardwareMetaClass):
     """A moddb.hardware"""
@@ -1668,11 +1715,11 @@ class Review:
     Attributes
     -----------
     text : str
-        The contents of the review. Can be none if the user hasn't left any
+        The contents of the review. Can be none if the member hasn't left any
     rating : int
         An int out of 10 representing the rating left with this review.
     author : Thumbnail
-        A user like thumbnail of the user who left the review
+        A member like thumbnail of the member who left the review
     date : datetime.datetime
         Date and time of the review creation
     """
@@ -1687,7 +1734,7 @@ class Review:
         self.rating = int(review.span.string)
 
         author = review.div.a
-        self.author = Thumbnail(url=author["href"], name=author.string.split(" ")[0], type=ThumbnailType.user)
+        self.author = Thumbnail(url=author["href"], name=author.string.split(" ")[0], type=ThumbnailType.member)
         self.date = get_date(review.div.span.time["datetime"])
 
     def __repr__(self):
@@ -1707,7 +1754,7 @@ class Poll(Base):
     question : str
         The question of the poll
     author : Thumbnail
-        A user like thumbnail of the user who posted the poll, usually ModDB staff
+        A member like thumbnail of the member who posted the poll, usually ModDB staff
     total : int
         The total number of votes that have been cast
     options : List[Option]
@@ -1719,7 +1766,7 @@ class Poll(Base):
         self.name = self.question
         super().__init__(html)
         author = poll.find("p", class_="question").find("a")
-        self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.user)
+        self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.member)
 
         self.total = int(re.search(r"([\d,]*) votes", poll.find("p", class_="question").text)[1].replace(",", ""))
 
