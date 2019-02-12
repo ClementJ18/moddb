@@ -132,7 +132,7 @@ class Profile:
         
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         self.category = page_type
-        self.contact = join(profile_raw.find("h5", string="Contact").parent.span.a["href"])
+        self.contact = join(html.find("h5", string="Contact").parent.span.a["href"])
         self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch", "Hardware watch", "Software watch"])[0].parent.span.a["href"])
         
         try:
@@ -187,7 +187,7 @@ class Profile:
 
         if page_type != SearchCategory.groups:
             try:
-                self.homepage =  profile_raw.find("h5", string="Homepage").parent.span.a["href"]
+                self.homepage =  html.find("h5", string="Homepage").parent.span.a["href"]
             except AttributeError:
                 LOGGER.info("%s %s has no homepage", page_type.name, _name)
 
@@ -489,7 +489,7 @@ class MemberStatistics:
     -----------
     watchers : int
         How many members are following this member
-    points : int
+    acivity_points : int
         Activity points
     comments : int
         How many comments the member has made
@@ -497,8 +497,8 @@ class MemberStatistics:
         How many tags the member has created
     visits : int
         How many people have viewed this page
-    visits : int
-        /shrug
+    site_visits : int
+        How many time this user has visited the site
     today : int
         How many people have viewed this page today
     time : int
@@ -514,7 +514,7 @@ class MemberStatistics:
 
         name = html.find("meta", property="og:title")["content"]
         misc = html.find_all("h5", string=("Watchers", "Activity Points", "Comments", "Tags", "Site visits"))
-        self.__dict__.update({stat.string.lower().split(" ")[1] : int(normalize(get(stat.parent))) for stat in misc})
+        self.__dict__.update({stat.string.lower().replace(" ", "_") : int(normalize(get(stat.parent))) for stat in misc})
 
         visits = normalize(html.find("h5", string="Visitors").parent.a.string)
         self.visits, self.today = get_views(visits)

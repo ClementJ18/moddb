@@ -595,13 +595,21 @@ class Page(Base, SharedMethodsMetaClass):
         super().__init__(html)
 
         #boxes
-        self.profile = Profile(html)
-        self.statistics = Statistics(html)
-        if page_type != SearchCategory.engines:
-            self.style = Style(html)
+        if page_type != SearchCategory.members:
+            self.profile = Profile(html)
+            self.statistics = Statistics(html)
+            if page_type != SearchCategory.engines:
+                self.style = Style(html)
 
-        #thumbnails
-        self.suggestions = self._get_suggestions(html)
+            #thumbnails
+            self.suggestions = self._get_suggestions(html)
+
+            #misc
+            try:
+                self.embed = html.find("input", type="text", class_="text textembed")["value"]
+            except TypeError:
+                self.embed = str(html.find_all("textarea")[1].a)
+       
         try:
             self.files = self._get_files(html)
         except AttributeError:
@@ -615,7 +623,7 @@ class Page(Base, SharedMethodsMetaClass):
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
-            LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
+            LOGGER.info("%s %s has no article suggestions", self.__class__.__name__, self.name)
             self.articles = []
 
         #main page article
@@ -623,7 +631,7 @@ class Page(Base, SharedMethodsMetaClass):
             self.article = PartialArticle(articles_raw)
         else:
             self.article = None
-            LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
+            LOGGER.info("%s %s has no front page article", self.__class__.__name__, self.name)
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
@@ -640,17 +648,11 @@ class Page(Base, SharedMethodsMetaClass):
             LOGGER.info("%s %s has no images", self.__class__.__name__, self.name)
             self.imagebox = []
 
-        #misc
-        try:
-            self.embed = html.find("input", type="text", class_="text textembed")["value"]
-        except TypeError:
-            self.embed = str(html.find_all("textarea")[1].a)
-
         try:
             self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
         except AttributeError:
             self.rating = 0.0
-            LOGGER.info("%s %s is not rated", self.profile.category.name, self.name)
+            LOGGER.info("%s %s is not rated", self.__class__.__name__, self.name)
 
         self.medias = self._get_media(2, html=html)
 
@@ -1367,10 +1369,23 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
         #Todo: can members have engines?
         #ToDo: check for differences between a member page vs member page of logged in member
         super().__init__(html, SearchCategory.members)
+        try:
+            self.profile = MemberProfile(html)
+        except AttributeError:
+            LOGGER.info("Member %s has no profile (private)", self.name)
+            self.profile = None
 
-        self.profile = MemberProfile(html)
-        self.stats = MemberStatistics(html)
-        self.description = html.find("div", id="profiledescription").p.string
+        try:
+            self.stats = MemberStatistics(html)
+        except  AttributeError:
+            LOGGER.info("Member %s has no stats (private)", self.name)
+            self.stats = None
+
+        try:
+            self.description = html.find("div", id="profiledescription").p.string
+        except AttributeError:
+            LOGGER.info("Member %s has no description", self.name)
+            self.description = None
 
         try:
             #ToDo: don't hardcode thumbnails type, piggy back off url
@@ -1380,17 +1395,15 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             LOGGER.info("Member %s doesn't have any groups", self.name)
             self.groups = []
 
-        #Todo: still works?
-        blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.find("div", class_="table")
         try:
-            blogs_raw = blogs_raw.find_all("div", recursive=False)
+            blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
             self.blog = Blog(heading=blogs_raw.pop(0), text=blogs_raw.pop(0))
         except (TypeError, AttributeError):
             self.blog = None
             LOGGER.info("Member %s has no front page blog", self.name)
 
         try:
-            blogs_raw = blogs_raw.find_all("div", recursive=False)
+            blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
             self.blogs = [Thumbnail(name=blog.a["title"], url=blog.a["href"], type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
         except (TypeError, AttributeError):
             self.blogs = []
