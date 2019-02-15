@@ -1594,10 +1594,17 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
         self.id = None
 
         self.url = join(html.find("a", itemprop="mainEntityOfPage")["href"])
-        self.description = html.find("div", id="profiledescription").p.string
+        try:
+            self.description = html.find("div", id="profiledescription").p.string
+        except AttributeError:
+            self.description = html.find("p", itemprop="description").string
 
-        company = html.find("h5", string="Company").parent.span.a
-        self.company = Thumbnail(name=company.string, url=company["href"], type=ThumbnailType.team)
+        try:
+            company = html.find("h5", string="Company").parent.span.a
+            self.company = Thumbnail(name=company.string, url=company["href"], type=ThumbnailType.team)
+        except AttributeError:
+            LOGGER.info("Platform %s has no company", self.name)
+            self.company = None
 
         self.homepage = html.find("h5", string="Homepage").parent.span.a["href"]
 
@@ -1681,30 +1688,53 @@ class HardwareAndSoftware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSo
 
         self.medias = self._get_media(1, html=html)
 
-        t = ThumbnailType[self.profile.category.name[:-1]]
-        suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all("a", class_="image")
-        self.suggestions = [Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions]
+        try:
+            t = ThumbnailType[self.__class__.__name__.lower()]
+            suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all("a", class_="image")
+            self.suggestions = [Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions]
+        except AttributeError:
+            LOGGER.info("%s %s has no suggestions", self.__class__.__name__, self.name)
 
 @concat_docs
 class Hardware(HardwareAndSoftware):
     """Represents a moddb Hardware page"""
     def __init__(self, html):
         super().__init__(html)
-        hardware = html.find("span", string="Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
 
-        software = html.find("span", string="Software").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.software = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.software, image=x.a.img["src"]) for x in software]
+        try:
+            hardware = html.find("span", string="Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+            self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
+        except AttributeError:
+            LOGGER.info("Hardware %s has no hardware", self.name)
+            self.hardware = []
 
-        games = html.find("span", string="Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
+        try:
+            software = html.find("span", string="Software").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+            self.software = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.software, image=x.a.img["src"]) for x in software]
+        except AttributeError:
+            LOGGER.info("Hardware %s has no software", self.name)
+            self.software = []
 
-        history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
-        self.history = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in history]
+        try:
+            games = html.find("span", string="Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
+            self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
+        except AttributeError:
+            LOGGER.info("Hardware %s has no games", self.name)
+            self.games = []
 
-        recommended = html.find("span", string="Recommended").parent.parent.parent.find_all("a", class_="image")
-        self.recommended = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in recommended]
+        try:
+            history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
+            self.history = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in history]
+        except AttributeError:
+            LOGGER.info("Harware %s has no history", self.name)
+            self.history = []
 
+        try:
+            recommended = html.find("span", string="Recommended").parent.parent.parent.find_all("a", class_="image")
+            self.recommended = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in recommended]
+        except AttributeError:
+            LOGGER.info("Hardware %s has no recommended", self.name)
+            self.recommended = []
 
 @concat_docs
 class Software(HardwareAndSoftware):

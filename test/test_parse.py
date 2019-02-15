@@ -241,7 +241,7 @@ class TestParsers(unittest.TestCase):
             moddb.pages.Hardware(soup)
 
     def test_parse_software(self):
-        url = [
+        urls = [
             "https://www.moddb.com/software/project-neptune-vr",
             "https://www.moddb.com/software/kinecttovr",
             "https://www.moddb.com/software/harfang-3d",
