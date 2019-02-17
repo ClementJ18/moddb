@@ -12,7 +12,6 @@ class TestMod(unittest.TestCase):
         for addon in addons:
             addon.parse()
 
-
     def test_get_articles(self):
         articles = self.mod.get_articles()
         self.mod.get_articles(4)
@@ -32,3 +31,27 @@ class TestMod(unittest.TestCase):
 
         for file in files:
             file.parse()
+
+    def test_get_images(self):
+        images = self.mod.get_images()
+
+        for image in images[:10]:
+            image.parse()
+
+    def test_get_reviews(self):
+        self.mod.get_reviews()
+        self.mod.get_reviews(3)
+
+    def test_get_tutorials(self):
+        tutorials = self.mod.get_tutorials()
+        self.mod.get_tutorials(3)
+        self.mod.get_tutorials(difficulty=moddb.Difficulty.basic)
+
+        for tutorial in tutorials:
+            tutorial.parse()
+
+    def test_get_videos(self):
+        videos = self.mod.get_videos()
+
+        for video in videos:
+            video.parse()
