@@ -85,36 +85,6 @@ class Base:
                     
         return comments
 
-    def _get_blogs(self, index : int = 1, *, params={}) -> List["Blog"]:
-        """Hidden method to get blogs of a model. We hide it because not every model that inherits from Base
-        has blogs but instead of making a second inheritance we just implement the top level command `get_blogs`
-        individually in each model that needs it and call this function."""
-
-        html = soup(f"{self.url}/blogs/page/{index}", params=params)
-        table = html.find("div", id="articlesbrowse").find("div", class_="table")
-        if len(table["class"]) > 1:
-            return []
-
-        raw_blogs = table.find_all("div", recursive=False)[2:]
-        blogs = []
-        e = 0
-        for _ in range(len(raw_blogs)):
-            try:
-                heading = raw_blogs[e]
-            except IndexError:
-                break
-
-            try:
-                text = raw_blogs[e+1]
-            except IndexError:
-                text = {"class": "None"}
-
-            blog_obj = Blog(heading=heading, text=text)
-            blogs.append(blog_obj)
-            e += 2
-
-        return blogs
-
     def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
         """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
         will be a list of Thumbnail objects that can be parsed individually.
@@ -363,7 +333,7 @@ class SharedMethodsMetaClass:
 
         html = soup(f"{self.url}/reviews/page/{index}", params=params)
         table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
-        if len(table["class"]) > 1:
+        if table is None:
             return []
 
         raw_reviews = table.find_all("div", recursive=False)[2:]
@@ -847,6 +817,9 @@ class File(Base):
         URL of the preview image for the file
     """
     def __init__(self, html : bs4.BeautifulSoup):
+        if html.find("span", string="File Deleted", class_="heading"):
+            raise ValueError("This file has been removed")
+
         info = html.find("div", class_="table tablemenu")
         file = {x.string.lower() : x.parent.span.string.strip() for x in info.find_all("h5", string=("Filename", "Size", "MD5 Hash"))}
         self.name = file["filename"]
@@ -1404,7 +1377,7 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
 
         try:
             blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
-            self.blogs = [Thumbnail(name=blog.a["title"], url=blog.a["href"], type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
+            self.blogs = [Thumbnail(name=blog.a.string, url=blog.a["href"], type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
         except (TypeError, AttributeError):
             self.blogs = []
             LOGGER.info("Member %s has no blog suggestions", self.name)
@@ -1444,7 +1417,31 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             "kw": query,
             "timeframe": timeframe.value if timeframe else None
         }
-        return self._get_blogs(index, params=params)
+
+        html = soup(f"{self.url}/blogs/page/{index}", params=params)
+        table = html.find("div", id="articlesbrowse").find("div", class_="table")
+        if len(table["class"]) > 1:
+            return []
+
+        raw_blogs = table.find_all("div", recursive=False)[2:]
+        blogs = []
+        e = 0
+        for _ in range(len(raw_blogs)):
+            try:
+                heading = raw_blogs[e]
+            except IndexError:
+                break
+
+            try:
+                text = raw_blogs[e+1]
+            except IndexError:
+                text = {"class": None}
+
+            blog_obj = Blog(heading=heading, text=text)
+            blogs.append(blog_obj)
+            e += 2
+
+        return blogs
 
     def get_member_comments(self, index : int = 1) -> CommentList:
         """Gets a page of all the comments a member has posted.

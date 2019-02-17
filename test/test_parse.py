@@ -9,6 +9,13 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 class TestParsers(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.mods = []
+        cls.games = []
+        cls.engines = []
+        cls.members = []
+
     def test_parse_mods(self):
         urls = [
             "https://www.moddb.com/mods/edain-mod",
@@ -24,7 +31,7 @@ class TestParsers(unittest.TestCase):
         for url in urls:
             print(url)
             soup = moddb.utils.soup(url)
-            moddb.pages.Mod(soup)
+            self.mods.append(moddb.pages.Mod(soup))
 
     def test_parse_games(self):
         urls = [
@@ -42,7 +49,7 @@ class TestParsers(unittest.TestCase):
         for url in urls:
             print(url)
             soup = moddb.utils.soup(url)
-            moddb.pages.Game(soup)
+            self.games.append(moddb.pages.Game(soup))
 
     def test_parse_engines(self):
         urls = [
@@ -59,7 +66,7 @@ class TestParsers(unittest.TestCase):
         for url in urls:
             print(url)
             soup = moddb.utils.soup(url)
-            moddb.pages.Engine(soup)
+            self.engines.append(moddb.pages.Engine(soup))
 
     def test_parse_files(self):
         urls = [
@@ -77,7 +84,10 @@ class TestParsers(unittest.TestCase):
         for url in urls:
             print(url)
             soup = moddb.utils.soup(url)
-            moddb.pages.File(soup)
+            try:
+                moddb.pages.File(soup)
+            except ValueError as e:
+                print(e)
 
     def test_parse_addons(self):
         urls = [
@@ -206,7 +216,7 @@ class TestParsers(unittest.TestCase):
         for url in urls:
             print(url)
             soup = moddb.utils.soup(url)
-            moddb.pages.Member(soup)
+            self.members.append(moddb.pages.Member(soup))
 
     def test_parse_front_page(self):
         moddb.front_page()
@@ -272,7 +282,19 @@ class TestParsers(unittest.TestCase):
             moddb.pages.Poll(soup)
 
     def test_parse_reviews(self):
-        pass
+        for mod in self.mods:
+            print(mod.url)
+            mod.get_reviews()
+
+        for game in self.games:
+            print(game.url)
+            game.get_reviews()
+
+        for engine in self.engines:
+            print(engine.url)
+            engine.get_reviews()
 
     def test_parse_blogs(self):
-        pass
+        for member in self.members:
+            print(member.url)
+            member.get_blogs()
