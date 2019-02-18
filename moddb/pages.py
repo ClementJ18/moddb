@@ -847,7 +847,7 @@ class File(Base):
         self.preview = html.find_all("img", src=True)[0]["src"]
 
     def __repr__(self):
-        return f"<{self.__class__.__name__} name={self.name} type={self.type.name}>"
+        return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
 
 @concat_docs
 class Addon(File):

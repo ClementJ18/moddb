@@ -1,43 +1,64 @@
 import unittest
 import moddb
 
-import logging
-logger = logging.getLogger('moddb')
-logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename='moddb.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-logger.addHandler(handler)
-
 class TestGame(unittest.TestCase):
-    def test_parse(self):
-        self.games = []
-        urls = [
-            "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king",
-            "https://www.moddb.com/games/mount-blade-warband",
-            "https://www.moddb.com/games/minecraft",
-            "https://www.moddb.com/games/half-life-2",
-            "https://www.moddb.com/games/tetrifights",
-            "https://www.moddb.com/games/malison-the-beginning-of-the-end",
-            "https://www.moddb.com/games/chains-of-fate",
-            "https://www.moddb.com/games/fatal-offensive-14",
-            "https://www.moddb.com/games/krunkerio",
-            "https://www.moddb.com/games/polygons-royal"
-        ]
+    def setUp(self):
+        self.game = moddb.pages.Game(moddb.soup(getattr(self, "url", "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king")))
 
-        for url in urls:
-            soup = moddb.soup(url)
-            self.games.append(moddb.Game(soup))
+    def test_get_addons(self):
+        addons = self.game.get_addons()
+        self.game.get_addons(2)
+        self.game.get_addons(licence=moddb.Licence.public_domain)
+        for addon in addons:
+            addon.parse()
 
-    def test_gets(self):
-        teams_users = []
-        
-        for game in self.games:
-            game.get_comments()
-            game.get_mods()
-            game.get_addons()
-            game.get_reviews()
-            game.get_articles()
-            game.get_files()
-            game.get_images()
-            game.get_videos()
-            game.get_tutorials()
+    def test_get_articles(self):
+        articles = self.game.get_articles()
+        self.game.get_articles(4)
+        self.game.get_articles(category=moddb.ArticleType.news)
+
+        for article in articles:
+            article.parse()
+
+    def test_get_comments(self):
+        self.game.get_comments()
+        self.game.get_comments(4)
+
+    def test_get_files(self):
+        files = self.game.get_files()
+        self.game.get_files(4)
+        self.game.get_files(category=moddb.FileCategory.demo)
+
+        for file in files:
+            file.parse()
+
+    def test_get_images(self):
+        images = self.game.get_images()
+
+        for image in images[:10]:
+            image.parse()
+
+    def test_get_mods(self):
+        mods = self.game.get_mods()
+        self.game.get_mods(3)
+
+        for mod in mods:
+            mod.parse()
+
+    def test_get_reviews(self):
+        self.game.get_reviews()
+        self.game.get_reviews(3)
+
+    def test_get_tutorials(self):
+        tutorials = self.game.get_tutorials()
+        self.game.get_tutorials(3)
+        self.game.get_tutorials(difficulty=moddb.Difficulty.basic)
+
+        for tutorial in tutorials:
+            tutorial.parse()
+
+    def test_get_videos(self):
+        videos = self.game.get_videos()
+
+        for video in videos:
+            video.parse()
