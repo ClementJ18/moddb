@@ -1,13 +1,22 @@
 import unittest
 
-from test.test_game import TestGame
 from test.test_mod import TestMod
+from test.test_game import TestGame
 from test.test_engine import TestEngine
 from test.test_file import TestFile
 from test.test_addon import TestAddon
 from test.test_media import TestMedia
 from test.test_article import TestArticle
 from test.test_group import TestGroup
+from test.test_team import TestTeam
+from test.test_job import TestJob
+from test.test_member import TestMember
+from test.test_platform import TestPlatform
+from test.test_software import TestSoftware
+from test.test_hardware import TestHardware
+from test.test_poll import TestPoll
+from test.test_frontpage import TestFrontPage
+
 
 loader = unittest.TestLoader()
 suite  = unittest.TestSuite()
@@ -149,6 +158,103 @@ for url in group_urls:
     TestGroup.url = url
     suite.addTests(loader.loadTestsFromTestCase(TestGroup))
 
+team_urls = [
+    "https://www.moddb.com/company/wallace2anjos",
+    "https://www.moddb.com/company/valve",
+    "https://www.moddb.com/company/draignet",
+    "https://www.moddb.com/company/left-4-dead-mods",
+    "https://www.moddb.com/company/taleworlds",
+    "https://www.moddb.com/company/belaruso500",
+    "https://www.moddb.com/company/v1-infinity"
+]
+
+for url in team_urls:
+    TestTeam.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestTeam))
+
+job_urls = [
+    "https://www.moddb.com/jobs/programmer-enviro-artist-audio-specialist-needed-to-expand-our-launched-game",
+    "https://www.moddb.com/jobs/looking-for-3d-modeller-for-fast-past-shooting-game1",
+    "https://www.moddb.com/jobs/revshareroyalty-3d-character-artist",
+    "https://www.moddb.com/jobs/seeking-2d-uiux-artist-3d-weapon-modler-character-animator",
+    "https://www.moddb.com/jobs/2d-top-down-shooter-artistanimator",
+    "https://www.moddb.com/jobs/player-modeler-modeler1"
+] 
+
+for url in team_urls:
+    TestJob.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestJob))
+
+member_urls = [
+    "https://www.moddb.com/members/mladen1996",
+    "https://www.moddb.com/members/na3703168",
+    "https://www.moddb.com/members/barneypan",
+    "https://www.moddb.com/members/officialnecro",
+    "https://www.moddb.com/members/yizhang",
+    "https://www.moddb.com/members/thibault60",
+    "https://www.moddb.com/members/intense",
+    "https://www.moddb.com/members/hunter",
+    "https://www.moddb.com/members/upstart",
+]
+
+for url in member_urls:
+    TestMember.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestMember))
+
+platform_urls = [
+    "https://www.moddb.com/platforms/pc",
+    "https://www.moddb.com/platforms/mac",
+    "https://www.moddb.com/platforms/mac",
+    "https://www.moddb.com/platforms/mac",
+    "https://www.moddb.com/platforms/ar"
+]
+
+for url in platform_urls:
+    TestPlatform.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestPlatform))
+
+hardware_urls = [
+    "https://www.moddb.com/hardware/htc-vive",
+    "https://www.moddb.com/hardware/jaunt-vr",
+    "https://www.moddb.com/hardware/the-free-space-omni",
+    "https://www.moddb.com/hardware/sprintr",
+    "https://www.moddb.com/hardware/osvr",
+    "https://www.moddb.com/hardware/oculus-rift"
+]
+
+for url in hardware_urls:
+    TestHardware.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestHardware))
+
+software_urls = [
+    "https://www.moddb.com/software/project-neptune-vr",
+    "https://www.moddb.com/software/kinecttovr",
+    "https://www.moddb.com/software/harfang-3d",
+    "https://www.moddb.com/software/tilt-brush",
+    "https://www.moddb.com/software/virtual-desktop",
+    "https://www.moddb.com/software/project-neptune-vr",
+    "https://www.moddb.com/software/geovisionary"
+]
+
+for url in software_urls:
+    TestSoftware.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestSoftware))
+
+poll_urls = [
+    "https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods",
+    "https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most",
+    "https://www.moddb.com/polls/default-v5-theme-should-be",
+    "https://www.moddb.com/polls/what-is-your-plan-for-2017",
+    "https://www.moddb.com/polls/should-moddb-focus-on-mods-only",
+    "https://www.moddb.com/polls/prices-in-game-profiles"
+]
+
+for url in poll_urls:
+    TestPoll.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestPoll))
+
+suite.addTests(loader.loadTestsFromTestCase(TestFrontPage))
 
 runner = unittest.TextTestRunner(verbosity=3)
 result = runner.run(suite)
+

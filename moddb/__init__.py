@@ -2,7 +2,8 @@ from .base import search, parse, login, logout, front_page
 from .utils import LOGGER, BASE_URL, soup, Object
 from .enums import *
 from .pages import *
-#ToDo: clean up enums
+#remove get_files from Engine
+#remove get_reviews from Group, Company
 
 import requests
 SESSION = requests.Session()

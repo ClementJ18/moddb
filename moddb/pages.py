@@ -1400,7 +1400,7 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
         -----------
         index : int
             The page index you wish to get the blogs for, allows to hop around.
-        timeframe : Timeframe
+        timeframe : TimeFrame
             The date the blog was added, optional
         query : str
             The string to look for in the blog title, optional.
@@ -1470,7 +1470,7 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
 
         Returns
         --------
-        List[Thumbnails]
+        List[Thumbnail]
             A list of member like thumbnails of the member's friends
         """
         return self._get(f"{self.url}/friends/page/{index}", ThumbnailType.member)
@@ -1485,7 +1485,7 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
 
         Returns
         --------
-        List[Thumbnails]
+        List[Thumbnail]
             A list of team/group like thumbnails the member is part of
         """
         return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group)
@@ -1643,7 +1643,29 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
         return f"<Platform name={self.name}>"
 
 class HardwareAndSoftware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSoftwareHardwareMetaClass):
-    """A moddb.hardware"""
+    """Shared class for Hardware and Software
+
+    Attributes
+    -----------
+    description : str
+        Description of the page
+    profile : Profile
+        The page's profile
+    stats : Statistics
+        The page's stats
+    rating : float
+        The rating of the item
+    articles : List[Thumbnail]
+        List of article type thumbnails from the recommended articles
+    article : PartialArticle
+        The partial article presented on the front page
+    tags : Dict{str : str}
+        Dict of tags with the name as the key and the url as the value
+    medias : List[Thumbnail]
+        list of thumbnails representing all the combined media objects of a page (videos and images)
+    suggestions : List[Thumbnail]
+        list of suggested software/hardware type thumbnails 
+    """
     def __init__(self, html):
         super().__init__(html)
         try:
@@ -1694,7 +1716,8 @@ class HardwareAndSoftware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSo
 
 @concat_docs
 class Hardware(HardwareAndSoftware):
-    """Represents a moddb Hardware page"""
+    """Represents a moddb Hardware page
+    """
     def __init__(self, html):
         super().__init__(html)
 
@@ -1735,7 +1758,8 @@ class Hardware(HardwareAndSoftware):
 
 @concat_docs
 class Software(HardwareAndSoftware):
-    """Represents a moddb Software page"""
+    """Represents a moddb Software page
+    """
     def __init__(self, html):
         super().__init__(html)
 
