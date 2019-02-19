@@ -1717,6 +1717,19 @@ class HardwareAndSoftware(Base, GetGamesMetaClass, SharedMethodsMetaClass, GetSo
 @concat_docs
 class Hardware(HardwareAndSoftware):
     """Represents a moddb Hardware page
+
+    Attributes
+    -----------
+    hardware : List[Thumbnail]
+        A list of hardware suggested on the hardware main page.
+    software : List[Thumbnail]
+        A list of software suggested on the hardware main page.
+    games : List[Thumbnail]
+        A list of games suggested on the hardware main page.
+    history : List[Thumbnail]
+        A list of previous iterations of the hardware
+    recommended : List[Thumbnail]
+        A list of recommended hardwares.
     """
     def __init__(self, html):
         super().__init__(html)
