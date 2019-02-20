@@ -771,7 +771,7 @@ class Engine(Page, GetGamesMetaClass):
             self.games = []
 
     def get_files(*args, **kwargs):
-        pass
+        return []
 
 @concat_docs
 class File(Base):
@@ -841,7 +841,10 @@ class File(Base):
         self.today = int(re.sub(r"[(),today]", "", downloads.split(" ")[1]))
         self.downloads = int(downloads.split(" ")[0].replace(",", ""))
 
-        self.category = FileCategory(int(info.find("h5", string="Category").parent.a["href"].split("=")[-1]))
+        try:
+            self.category = FileCategory(int(info.find("h5", string="Category").parent.a["href"].split("=")[-1]))
+        except ValueError:
+            self.category = AddonCategory(int(info.find("h5", string="Category").parent.a["href"].split("=")[-1]))
         
         uploader = info.find("h5", string="Uploader").parent.a
         self.author = Thumbnail(url=uploader["href"], name=uploader.string, type=ThumbnailType.member)
@@ -1287,6 +1290,9 @@ class Job:
         except AttributeError:
             LOGGER.info("Job %s has no related companies", self.name)
             self.related = []
+
+    def __repr__(self):
+        return f"<Job name={self.name}>"
 
 @concat_docs
 class Blog(Base):

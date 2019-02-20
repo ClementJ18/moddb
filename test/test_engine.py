@@ -24,14 +24,6 @@ class TestEngine(unittest.TestCase):
         self.engine.get_comments()
         self.engine.get_comments(4)
 
-    def test_get_files(self):
-        files = self.engine.get_files()
-        self.engine.get_files(4)
-        self.engine.get_files(category=moddb.FileCategory.demo)
-
-        for file in files:
-            file.parse()
-
     def test_get_games(self):
         games = self.engine.get_games()
         self.engine.get_games(3)

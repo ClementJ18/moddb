@@ -181,7 +181,7 @@ job_urls = [
     "https://www.moddb.com/jobs/player-modeler-modeler1"
 ] 
 
-for url in team_urls:
+for url in job_urls:
     TestJob.url = url
     suite.addTests(loader.loadTestsFromTestCase(TestJob))
 
@@ -257,4 +257,5 @@ suite.addTests(loader.loadTestsFromTestCase(TestFrontPage))
 
 runner = unittest.TextTestRunner(verbosity=3)
 result = runner.run(suite)
+# result = suite.debug()
 

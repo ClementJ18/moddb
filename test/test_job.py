@@ -6,4 +6,4 @@ class TestJob(unittest.TestCase):
         self.job = moddb.pages.Job(moddb.soup(getattr(self, "url", "https://www.moddb.com/jobs/programmer-enviro-artist-audio-specialist-needed-to-expand-our-launched-game")))
 
     def test_author_parse(self):
-        self.job.author.parse
+        self.job.author.parse()

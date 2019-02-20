@@ -204,16 +204,16 @@ class Profile:
             self.game = Thumbnail(url=url, name=name, type=ThumbnailType.game)
 
         if page_type in [SearchCategory.engines, SearchCategory.addons]:
-            self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"][-1]))
+            self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"].split("=")[-1]))
 
         if page_type == SearchCategory.hardwares:
-            self.type = HardwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
+            self.type = HardwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
 
         if page_type == SearchCategory.softwares:
-            self.type = SoftwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
+            self.type = SoftwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
 
         if page_type == SearchCategory.addons:
-            self.type = AddonCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"][-1]))
+            self.type = AddonCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
             
     def __repr__(self):
         return f"<Profile type={self.category.name}>"
