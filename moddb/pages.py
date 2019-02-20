@@ -1656,7 +1656,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
     def __repr__(self):
         return f"<Platform name={self.name}>"
 
-class HardwareAndSoftware(Base, SharedMethodsMetaClass, GetSoftwareHardwareMetaClass):
+class HardwareAndSoftware(Base, SharedMethodsMetaClass):
     """Shared class for Hardware and Software
 
     Attributes
@@ -1729,7 +1729,7 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass, GetSoftwareHardwareMetaC
             LOGGER.info("%s %s has no suggestions", self.__class__.__name__, self.name)
 
 @concat_docs
-class Hardware(HardwareAndSoftware, GetGamesMetaClass):
+class Hardware(HardwareAndSoftware, GetGamesMetaClass, GetSoftwareHardwareMetaClass):
     """Represents a moddb Hardware page
 
     Attributes

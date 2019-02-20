@@ -25,13 +25,6 @@ class TestSoftware(unittest.TestCase):
         for file in files:
             file.parse()
 
-    def test_get_hardware(self):
-        hardwares = self.software.get_hardware()
-        self.software.get_hardware(3)
-
-        for hardware in hardwares:
-            hardware.parse()
-
     def test_get_images(self):
         images = self.software.get_images()
 
@@ -41,13 +34,6 @@ class TestSoftware(unittest.TestCase):
     def test_get_reviews(self):
         self.software.get_reviews()
         self.software.get_reviews(3)
-
-    def test_get_software(self):
-        softwares = self.software.get_software()
-        self.software.get_software(3)
-
-        for software in softwares:
-            software.parse() 
 
     def test_get_tutorials(self):
         tutorials = self.software.get_tutorials()
