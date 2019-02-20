@@ -3,7 +3,7 @@ import moddb
 
 class TestEngine(unittest.TestCase):
     def setUp(self):
-        self.engine = moddb.pages.Game(moddb.soup(getattr(self, "url", "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king")))
+        self.engine = moddb.pages.Engine(moddb.soup(getattr(self, "url", "https://www.moddb.com/engines/sage-strategy-action-game-engine")))
 
     def test_get_addons(self):
         addons = self.engine.get_addons()

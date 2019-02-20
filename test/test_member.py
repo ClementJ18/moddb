@@ -46,14 +46,14 @@ class TestMember(unittest.TestCase):
 
     def test_get_games(self):
         games = self.member.get_games()
-        self.engine.get_games(3)
+        self.member.get_games(3)
 
         for game in games:
             game.parse()
 
     def test_get_groups(self):
         groups = self.member.get_groups()
-        self.engine.get_groups(3)
+        self.member.get_groups(3)
 
         for group in groups:
             group.parse()
@@ -66,7 +66,7 @@ class TestMember(unittest.TestCase):
 
     def test_get_mods(self):
         mods = self.member.get_mods()
-        self.game.get_mods(3)
+        self.member.get_mods(3)
 
         for mod in mods:
             mod.parse()

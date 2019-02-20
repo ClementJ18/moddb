@@ -50,7 +50,7 @@ class TestTeam(unittest.TestCase):
         hardwares = self.team.get_hardware()
         self.team.get_hardware(3)
 
-        for hardware in harwares:
+        for hardware in hardwares:
             hardware.parse()
 
     def test_get_images(self):

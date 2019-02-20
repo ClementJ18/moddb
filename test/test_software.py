@@ -25,13 +25,6 @@ class TestSoftware(unittest.TestCase):
         for file in files:
             file.parse()
 
-    def test_get_games(self):
-        games = self.software.get_games()
-        self.software.get_games(3)
-
-        for game in games:
-            game.parse()
-
     def test_get_hardware(self):
         hardwares = self.software.get_hardware()
         self.software.get_hardware(3)
