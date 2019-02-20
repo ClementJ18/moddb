@@ -184,7 +184,6 @@ epub_exclude_files = ['search.html']
 
 # -- Extension configuration -------------------------------------------------
 napoelon_google_doctstring = False
-napoelon_numpy_doctstring = True
 napoleon_custom_sections = ["Sorting", "Filtering"]
 
 # -- Options for intersphinx extension ---------------------------------------

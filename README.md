@@ -1,6 +1,6 @@
 # ModDB Reader
 
-**This library is still WIP, the original library was very limited and just bad overall. I'm rewriting this entirely to be more object oriented in design and to allow to scrap the full site as objects.**
+**Library is approaching stable state. A release can be expected within the next few months if all goes well.**
 
 The goal of the library is to be able to navigate ModDB purely programmatically through scraping and parsing of the various models present on the website. This is based off a command of my bot which can parse either a game or a mod, this command gave birth to the original library which was extremely limited in its abilities and only able to parse a few pages with inconsistencies. This library is a much more mature and professional attempt at the whole idea, adding on a much deeper understanding of OOP.
 
@@ -21,7 +21,7 @@ print(mod.name) #Edain Mod
 ```
 
 ## Advanced Usage
-Check out the [documentation](link.com.here) for more information
+Check out the [documentation](https://moddb.readthedocs.io) for more information
 
 ## Finished Models
 * Mod
@@ -38,10 +38,11 @@ Check out the [documentation](link.com.here) for more information
 * Job
 * Search Page
 * Front Page
+* Platforms
+* Software
+* HardwAre
 
 ## WIP Models
-* Platforms
-* Tutorial
 
 ## Glossary
 * **Partial[Model]**: A version of the model which does not contain all the attributes of the full model. Mainly because that model is being displayed as a preview in another page. Not to confuse with Thumbnails, Thumbnails are only guaranteed to contain a name and url of the page.
