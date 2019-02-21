@@ -1,7 +1,7 @@
 from .enums import SearchCategory, ThumbnailType
 from .boxes import Thumbnail
 from .utils import soup, LOGGER, normalize
-from .pages import FrontPage
+from .pages import FrontPage, Member
 
 import re
 import sys
@@ -122,6 +122,11 @@ class Search:
     def __repr__(self):
         return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
 
+    def __iter__(self):
+        return self.results.__iter__()
+
+    def __getitem__(self, key):
+        return self.results[key]
 
 def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, str] = None,
            page : int = 1, **filters) -> Search: 
@@ -222,7 +227,7 @@ def parse(url : str, *, page_type : ThumbnailType = None) -> Any:
     return model
 
 
-def login(username : str, password : str): 
+def login(username : str, password : str) -> Member: 
     """Login the user to moddb through the library, this allows user to see guest comments and see
     private groups they are part of.
 
@@ -238,6 +243,11 @@ def login(username : str, password : str):
     -------
     ValueError
         The password or username was incorrect
+
+    Returns
+    --------
+    Member
+        The member you are logged in as
     """
 
     browser = RoboBrowser(history=True, parser='html.parser')
@@ -256,6 +266,8 @@ def login(username : str, password : str):
 
     if "freeman" not in browser.session.cookies:
         raise ValueError(f"Login failed for user {username}")
+
+    return Member(soup(f"https://www.moddb.com/members/{username}"))
 
 def logout(): 
     """Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and 

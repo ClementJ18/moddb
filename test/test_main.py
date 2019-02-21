@@ -1,4 +1,5 @@
 import unittest
+import moddb
 
 from test.test_mod import TestMod
 from test.test_game import TestGame
@@ -15,7 +16,7 @@ from test.test_platform import TestPlatform
 from test.test_software import TestSoftware
 from test.test_hardware import TestHardware
 from test.test_poll import TestPoll
-from test.test_frontpage import TestFrontPage
+from test.test_frontpage import TestFrontPage, TestSearch, TestParse, TestLogin
 
 
 loader = unittest.TestLoader()
@@ -254,6 +255,41 @@ for url in poll_urls:
     suite.addTests(loader.loadTestsFromTestCase(TestPoll))
 
 suite.addTests(loader.loadTestsFromTestCase(TestFrontPage))
+suite.addTests(loader.loadTestsFromTestCase(TestLogin))
+
+test_urls = [
+    "https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods",
+    "https://www.moddb.com/software/harfang-3d",
+    "https://www.moddb.com/hardware/sprintr",
+    "https://www.moddb.com/platforms/linux",
+    "https://www.moddb.com/members/officialnecro",
+    "https://www.moddb.com/jobs/looking-for-3d-modeller-for-fast-past-shooting-game1",
+    "https://www.moddb.com/company/draignet",
+    "https://www.moddb.com/groups/tanks",
+    "https://www.moddb.com/news/the-challenge-of-adblock",
+    "https://www.moddb.com/games/grave-matters/images/image-3",
+    "https://www.moddb.com/addons/hl2dm-20b",
+    "https://www.moddb.com/games/grofast-industries/downloads/linux-offline-version",
+    "https://www.moddb.com/engines/unity",
+    "https://www.moddb.com/games/battle-for-middle-earth-ii",
+    "https://www.moddb.com/mods/edain-mod",
+]
+
+for url in test_urls:
+    TestParse.url = url
+    suite.addTests(loader.loadTestsFromTestCase(TestParse))
+
+queries = [
+    ("edain mod", moddb.SearchCategory.mods),
+    ("battle for middle earth", moddb.SearchCategory.games),
+    ("tanks", moddb.SearchCategory.groups)
+]
+
+for query in queries:
+    TestSearch.query = query[0]
+    TestSearch.category = query[1]
+    suite.addTests(loader.loadTestsFromTestCase(TestSearch))
+
 
 runner = unittest.TextTestRunner(verbosity=3)
 result = runner.run(suite)
