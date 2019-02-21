@@ -261,7 +261,9 @@ class Base:
 
 class GetGamesMetaClass:
     """Abstract class containing the get_games method"""
-    def get_games(self, index : int = 1) -> List[Thumbnail]:
+    def get_games(self, index : int = 1, *,  query : str = None, status : Status = None,
+        genre : Genre = None, theme : Theme = None, scope : Scope = None, players : PlayerStyle None,
+        timeframe : TimeFrame = None) -> List[Thumbnail]:
         """Get a page of games for the model. Each page will yield up to 30 games.
 
         Parameters
@@ -274,11 +276,22 @@ class GetGamesMetaClass:
         List[Thumbnail]
             List of game like thumbnails that can be parsed individually.
         """
-        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game)
+        params = {
+            "filter": "t",
+            "kw": query ,
+            "released": status.value if status else None,
+            "genre": genre.value if genre else None,
+            "theme": theme.value if theme else None,
+            "indie": scope.value if scope else None,
+            "players": players.value if players else None,
+            "timeframe": timeframe.value if timeframe else None
+        }
+
+        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game, params=params)
 
 class GetModsMetaClass:
     """Abstract class containing the get_mod method"""
-    def get_mods(self, index : int = 1) -> List[Thumbnail]:
+    def get_mods(self, index : int = 1, *, ) -> List[Thumbnail]:
         """Get a page of mods for the game. Each page will yield up to 30 mods. 
         
         Parameters

@@ -8,6 +8,33 @@
 
 Welcome to moddb's documentation!
 =================================
+.. image:: https://readthedocs.org/projects/moddb/badge/?version=latest
+   :target: https://moddb.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+   :target: https://opensource.org/licenses/MIT
+   :alt: Licence: MIT
+
+.. image:: https://img.shields.io/github/issues/ClementJ18/moddb.svg
+   :target: https://github.com/ClementJ18/moddb/issues
+   :alt: Open Issues
+
+.. image:: https://img.shields.io/github/issues-pr/ClementJ18/moddb.svg
+   :target: https://github.com/ClementJ18/moddb/pulls
+   :alt: Open PRs
+
+.. image:: https://img.shields.io/github/release/ClementJ18/moddb.svg
+   :alt: Latest Release
+
+.. image:: https://img.shields.io/github/stars/ClementJ18/moddb.svg?label=Stars&style=social 
+   :target: https://github.com/ClementJ18/moddb
+
+.. image:: https://img.shields.io/discord/389039439487434752.svg
+   :target: https://discord.gg/sce7jmB
+
+.. image:: https://img.shields.io/github/commits-since/ClementJ18/moddb/latest.svg
+    :target: https://github.com/ClementJ18/moddb/releases/latest
 
 The moddb python library is a module to scrape the ModDB.com website. The goal is to emulate
 the moddb website using function and OOP as if ModDB was simply an API. Ideally, in it's finished
