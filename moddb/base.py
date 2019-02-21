@@ -58,7 +58,7 @@ class Search:
         if self.page == self.page_max:
             raise ValueError("Reached last page already")
 
-        self.to_page(self.page+1)
+        return self.to_page(self.page+1)
 
     def previous_page(self) -> 'Search': 
         """Returns a new search object with the previous page of results, will raise 
@@ -175,7 +175,13 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     html = soup(url, params={"filter": "t", "kw": query, "sort": sort, "game": game, **filter_parsed})
 
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
-    pages = len([x for x in html.find("div", class_="pages").children if x != "\n"])
+    
+    try:
+        pages = int(html.find("div", class_="pages").find_all("a")[-1].string)
+    except AttributeError:
+        LOGGER.info("Search query %s has less than 30 results (only one page)", url)
+        pages = 1
+
     results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"]) for x in search_raws]
     results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
 
