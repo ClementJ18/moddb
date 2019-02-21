@@ -31,7 +31,7 @@ Welcome to moddb's documentation!
    :target: https://github.com/ClementJ18/moddb
 
 .. image:: https://img.shields.io/discord/389039439487434752.svg
-   :target: https://discord.gg/sce7jmB
+   :target: https://discord.gg/8HMcxp
 
 .. image:: https://img.shields.io/github/commits-since/ClementJ18/moddb/latest.svg
     :target: https://github.com/ClementJ18/moddb/releases/latest
