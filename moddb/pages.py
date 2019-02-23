@@ -1,8 +1,9 @@
 from .boxes import CommentList, Comment, Thumbnail, MemberProfile, MemberStatistics, \
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
-                   MediaCategory, JobSkill, ArticleType, Difficulty, TutorialType, Licence
-from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, request
+                   MediaCategory, JobSkill, ArticleCategory, Difficulty, TutorialCategory, Licence, \
+                   Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre
+from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, Object
 
 import re
 import bs4
@@ -262,14 +263,30 @@ class Base:
 class GetGamesMetaClass:
     """Abstract class containing the get_games method"""
     def get_games(self, index : int = 1, *,  query : str = None, status : Status = None,
-        genre : Genre = None, theme : Theme = None, scope : Scope = None, players : PlayerStyle None,
-        timeframe : TimeFrame = None) -> List[Thumbnail]:
+        genre : Genre = None, theme : Theme = None, scope : Scope = None, players : PlayerStyle = None,
+        timeframe : TimeFrame = None, sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of games for the model. Each page will yield up to 30 games.
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the games for.
+        query : Optional[str]
+            The text to look for in the game names.
+        status : Optional[Status]
+            The status of the game (unreleased, released, early access, ect...)
+        genre : Optional[Genre]
+            The genre of the game (fps, tower defense)
+        theme : Optional[Theme]
+            The theme of the game (fantasy, action)
+        scope : Optional[Scope]
+            The scope of the game (AAA, indie)
+        players : Optional[PlayerStyle]
+            Player styles of the game (co-op, singleplayer)
+        timeframe : Optional[TimeFrame]
+            The time period this was released in (last 24hr, last week, last month)
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
 
         Returns
         --------
@@ -278,75 +295,133 @@ class GetGamesMetaClass:
         """
         params = {
             "filter": "t",
-            "kw": query ,
+            "kw": query,
             "released": status.value if status else None,
             "genre": genre.value if genre else None,
             "theme": theme.value if theme else None,
             "indie": scope.value if scope else None,
             "players": players.value if players else None,
-            "timeframe": timeframe.value if timeframe else None
+            "timeframe": timeframe.value if timeframe else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
         return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game, params=params)
 
 class GetModsMetaClass:
     """Abstract class containing the get_mod method"""
-    def get_mods(self, index : int = 1, *, ) -> List[Thumbnail]:
+    def get_mods(self, index : int = 1, *,  query : str = None, status : Status = None,
+        genre : Genre = None, theme : Theme = None, players : PlayerStyle = None,
+        timeframe : TimeFrame = None, game : Union['Game', Object] = None,
+        sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of mods for the game. Each page will yield up to 30 mods. 
         
         Parameters
         -----------
         index : int
             The page number to get the mods from.
+        query : Optional[str]
+            The text to look for in the mod names.
+        status : Optional[Status]
+            The status of the mod (unreleased, released, early access, ect...)
+        genre : Optional[Genre]
+            The genre of the mod (fps, tower defense)
+        theme : Optional[Theme]
+            The theme of the mod (fantasy, action)
+        players : Optional[PlayerStyle]
+            Player styles of the mod (co-op, singleplayer)
+        timeframe : Optional[TimeFrame]
+            The time period this was released in (last 24hr, last week, last month)
+        game : Union[mod, Object]
+            An mod object or an object with an id attribute which represents the
+            mod the mod belongs to.
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
 
         Returns
         --------
         List[Thumbnail]
             The list of mods type thumbnails parsed from the game
         """
-        return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod)
+        params = {
+            "filter": "t",
+            "kw": query,
+            "released": status.value if status else None,
+            "genre": genre.value if genre else None,
+            "theme": theme.value if theme else None,
+            "players": players.value if players else None,
+            "timeframe": timeframe.value if timeframe else None,
+            "game": game.id if game else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
+        }
+
+        return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod, params=params)
 
 class GetEnginesMetaClass:
     """Abstract class containing the get_engines method"""
-    def get_engines(self, index : int = 1) -> List[Thumbnail]:
+    def get_engines(self, index : int = 1, *, query : str = None, status : Status = None, 
+        licence : Licence = None, timeframe : TimeFrame = None,
+        sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of engines for the game. Each page will yield up to 30 engines. 
         
         Parameters
         -----------
         index : int
             The page number to get the engines from.
-
+        query : Optional[str]
+            The text to look for in the engine names.
+        status : Optional[Status]
+            The status of the game (unreleased, released, early access, ect...)
+        licence : Optional[Licence]
+            The licence of the engine (open source, proprietary, ect...)
+        timeframe : Optional[TimeFrame]
+            The time period this was released in (last 24hr, last week, last month)
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
         Returns
         --------
         List[Thumbnail]
             The list of engine type thumbnails parsed from the game
         """
-        return self._get(f"{self.url}/engines/page/{index}", ThumbnailType.engine)
+        params = {
+            "filter": "t",
+            "kw": query,
+            "released": status.value if status else None,
+            "licence": licence.value if licence else None,
+            "timeframe": timeframe.value if timeframe else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
+        }
+
+        return self._get(f"{self.url}/engines/page/{index}", ThumbnailType.engine, params=params)
 
 class SharedMethodsMetaClass:
     """Abstract class that implements a certain amount of top level methods shared between Pages
     and Hardware"""
     def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, 
-                    sort : Tuple[str, str] = None) -> List['Review']:
+        sort : Tuple[str, str] = None) -> List['Review']:
         """Get a page of reviews for the page. Each page will yield up to 10 reviews. 
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the reviews from.
-        query : str
+        query : Optional[str]
             The string to look for in the review, optional.
-        rating : int
+        rating : Optiona[int]
             A number between 1 and 10 to get the ratings
-        sort : Tuple[str, str]
-            The sorting tuple to sort by
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
 
         Returns
         --------
         List[Review]
-            The list of article type thumbnails parsed from the page
+            The list of reviews parsed from the page
         """
-        params = {'filter': "t", 'kw': query, 'rating': rating, "sort": sort[0].str(sort[1]) if sort else None}
+        params = {
+            'filter': "t", 
+            'kw': query, 
+            'rating': rating, 
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
+        }
 
         html = soup(f"{self.url}/reviews/page/{index}", params=params)
         try:
@@ -372,7 +447,7 @@ class SharedMethodsMetaClass:
             try:
                 text = raw_reviews[e+1]
             except IndexError:
-                #some reviews don't have text, as long as you don't give lower than a three
+                #some reviews don't have text, it's optional as long as you don't give lower than a three
                 text = {"class": "None"}
 
             if "rowcontentnext" in text["class"]:
@@ -386,20 +461,22 @@ class SharedMethodsMetaClass:
 
         return reviews
 
-    def get_articles(self, index : int = 1, *, query : str = None, category : ArticleType = None, 
-                     timeframe : TimeFrame = None) -> List[Thumbnail]:
+    def get_articles(self, index : int = 1, *, query : str = None, category : ArticleCategory = None, 
+        timeframe : TimeFrame = None, sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of articles for the page. Each page will yield up to 30 articles. 
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the articles from.
-        query : str
+        query : Optional[str]
             The string query to search for in the article name, optional.
-        category : ArticleType
+        category : Optional[ArticleCategory]
             Type enum defining what the article is, optional
-        timeframe : TimeFrame
-            Time frame of when the article was added, optional
+        timeframe : Optional[TimeFrame]
+            The time period this was released in (last 24hr, last week, last month)
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
 
         Returns
         --------
@@ -410,27 +487,31 @@ class SharedMethodsMetaClass:
             "filter": "t", 
             "kw": query, 
             "type": category.value if category else None, 
-            "timeframe": timeframe.value if timeframe else None
+            "timeframe": timeframe.value if timeframe else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
         return self._get(f"{self.url}/articles/page/{index}", ThumbnailType.article, params=params)
         
     def get_files(self, index : int = 1, *, query : str = None, category : FileCategory = None, 
-                  addon_type : AddonCategory = None, timeframe : TimeFrame = None) -> List[Thumbnail]:
+        addon_type : AddonCategory = None, timeframe : TimeFrame = None,
+        sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of files for the page. Each page will yield up to 30 files. 
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the files from.
-        query : str
+        query : Optional[str]
             The string query to search for in the file name, optional.
-        category : FileCategory
+        category : [FileCategory]
             Type enum defining what the file is, optional
-        addon_type : AddonCategory
+        addon_type : Optional[AddonCategory]
             Type enum defining what category the file is.
-        timeframe : TimeFrame
-            Time frame of when the file was added, optional
+        timeframe : Optional[TimeFrame]
+            The time period this was released in (last 24hr, last week, last month)
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
 
         Returns
         --------
@@ -442,7 +523,8 @@ class SharedMethodsMetaClass:
             "kw": query, 
             "category": category.value if category else None,
             "categoryaddon": addon_type.value if addon_type else None,
-            "timeframe": timeframe.value if timeframe else None
+            "timeframe": timeframe.value if timeframe else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
         return self._get(f"{self.url}/downloads/page/{index}", ThumbnailType.file, params=params)
@@ -475,7 +557,7 @@ class SharedMethodsMetaClass:
         return self._get_media(2, html=html)
 
     def get_tutorials(self, index : int = 1, *, query : str = None, difficulty : Difficulty = None, 
-                      tutorial_type : TutorialType = None) -> List[Thumbnail]:
+        tutorial_type : TutorialCategory = None, sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of tutorial for the page. Each page will yield up to 30 tutorials. 
 
         Parameters
@@ -486,8 +568,10 @@ class SharedMethodsMetaClass:
             The string query to look for in the tutorial title, optional.
         difficulty : Difficulty
             Enum type representing the difficulty of the tutorial, optional.
-        tutorial_type : TutorialType
+        tutorial_type : TutorialCategory
             Enum type representing the theme/type/category of the tutorial, optional.
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
 
         Returns
         --------
@@ -498,41 +582,85 @@ class SharedMethodsMetaClass:
             "filter": "t", 
             "kw": query, 
             "subtype": tutorial_type.value if tutorial_type else None, 
-            "meta": difficulty.value if difficulty else None
+            "meta": difficulty.value if difficulty else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
+
         return self._get(f"{self.url}/tutorials/page/{index}", ThumbnailType.article, params=params)
 
 class GetSoftwareHardwareMetaClass:
     """Abstrac class implementing get_software and get_hardware"""
-    def get_hardware(self, index : int = 1) -> List[Thumbnail]:
+    def get_hardware(self, index : int = 1, *, query : str = None, status : Status = None,
+        category : HardwareCategory = None, timeframe : TimeFrame = None,
+        sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of hardware for the platform. Each page will yield up to 30 hardware.
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the hardware for.
+        query : Optional[str]
+            The text to look for in the hardware's names
+        status : Optional[Status]
+            Status of the hardware (released, unreleased, early access...)
+        category : Optional[HardwareCategory]
+            Category of the hardware (headset, controller, ect...)
+        timeframe : Optional[TimeFrame]
+            The time period this was released in (last 24hr, last week, last month)
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by
 
         Returns
         --------
         List[Thumbnail]
             List of hardware like thumbnails that can be parsed individually.
         """
-        return self._get(f"{self.url}/hardware/page/{index}", ThumbnailType.hardware)
+        params = {
+            "filter": "t", 
+            "kw": query, 
+            "released": status.value if status else None,
+            "category": category.value if category else None,
+            "timeframe": timeframe.value if timeframe else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
+        }
 
-    def get_software(self, index : int = 1) -> List[Thumbnail]:
+        return self._get(f"{self.url}/hardware/page/{index}", ThumbnailType.hardware, params=params)
+
+    def get_software(self, index : int = 1, *, query : str = None, status : Status = None,
+        category : SoftwareCategory = None, timeframe : TimeFrame = None,
+        sort : Tuple[str, str] = None) -> List[Thumbnail]:
         """Get a page of software for the platform. Each page will yield up to 30 software.
 
         Parameters
         -----------
         index : int
             The page number to get the software for.
+        query : Optional[str]
+            The text to look for in the hardware's names
+        status : Optional[Status]
+            Status of the hardware (released, unreleased, early access...)
+        category : Optional[SoftwareCategory]
+            Category of the hardware (headset, controller, ect...)
+        timeframe : Optional[TimeFrame]
+            The time period this was released in (last 24hr, last week, last month)
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by
 
         Returns
         --------
         List[Thumbnail]
             List of software like thumbnails that can be parsed individually.
         """
-        return self._get(f"{self.url}/software/page/{index}", ThumbnailType.software)
+        params = {
+            "filter": "t", 
+            "kw": query, 
+            "released": status.value if status else None,
+            "category": category.value if category else None,
+            "timeframe": timeframe.value if timeframe else None,
+            "sort": f'{sort[0]}-{sort[1]}' if sort else None
+        }
+
+        return self._get(f"{self.url}/software/page/{index}", ThumbnailType.software, params=params)
 
 class Page(Base, SharedMethodsMetaClass):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
@@ -544,7 +672,7 @@ class Page(Base, SharedMethodsMetaClass):
         The page to be parsed.
 
     page_type : ThumbnailType
-        The type of pages, this is passed down be the base class to help with the parsing of pages.
+        The type of pages, this is passed down be the base class to help with the parsing of 
 
     Attributes
     -----------
@@ -649,7 +777,7 @@ class Page(Base, SharedMethodsMetaClass):
         self.medias = self._get_media(2, html=html)
 
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
-                   timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
+        timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
         """Get a page of addons for the page. Each page will yield up to 30 addons. 
 
         Parameters
@@ -693,17 +821,17 @@ class Mod(Page):
 
     Filtering
     ----------
-    released : enums.Status
+    released : Status
         The status of the mod (released, unreleased)
-    genre : enums.Genre
+    genre : Genre
         The genre of the mod (fps, tower defense)
-    theme : enums.Theme
+    theme : Theme
         The theme of the mod (fantasy, action)
-    players : enums.PlayerStyle
+    players : PlayerStyle
         Player styles of the mod (co-op, singleplayer)
-    timeframe : enums.TimeFrame
+    timeframe : TimeFrame
         The time period this was released in (last 24hr, last week, last month)
-    game : Union[pages.Game, utils.Object]
+    game : Union[Game, Object]
         An game object or an object with an id attribute which represents the
         game the mod belongs to.
 
@@ -715,6 +843,8 @@ class Mod(Page):
         * **visitstotal** - order by most views, asc is highest views, desc is lowest views
         * **rating** - order by rating, asc is highest rating, desc is lowest rating
         * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **game** - order by game???
+        * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
 
     """
     def __init__(self, html : bs4.BeautifulSoup):
@@ -732,18 +862,28 @@ class Game(Page, GetModsMetaClass):
 
     Filtering
     ----------
-    released : enums.Status
+    released : Status
         The status of the game (released, unreleased)
-    genre : enums.Genre
+    genre : Genre
         The genre of the game (fps, tower defense)
-    theme : enums.Theme
+    theme : Theme
         The theme of the game (fantasy, action)
-    indie : enums.Scope
+    indie : Scope
         Whether the game is triple AAA or indie
-    players : enums.PlayerStyle
+    players : PlayerStyle
         Player styles of the game (co-op, singleplayer)
-    timeframe : enums.TimeFrame
+    timeframe : TimeFrame
         The time period this was released in (last 24hr, last week, last month)
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **rating** - order by rating, asc is highest rating, desc is lowest rating
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
     """
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.games)
@@ -760,12 +900,22 @@ class Engine(Page, GetGamesMetaClass):
 
     Filtering
     -----------
-    released : enums.Status
+    released : Status
         The status of the engine (released, unreleased)
-    licence : enums.Licence
+    licence : Licence
         The license of the engine
-    timeframe : enums.TimeFrame
+    timeframe : TimeFrame
         The time period this was released in (last 24hr, last week, last month)
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **rating** - order by rating, asc is highest rating, desc is lowest rating
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
 
     Attributes
     -----------
@@ -801,15 +951,25 @@ class File(Base):
 
     Filtering
     ----------
-    category  : enums.FileCategory
+    category  : FileCategory
         The type of file (audio, video, demo, full version....)
-    categoryaddon : enums.AddonCategory
+    categoryaddon : AddonCategory
         The type of addon (map, textures, ect...)
-    game : Union[pages.Game, utils.Object]
+    game : Union[Game, Object]
         An game object or an object with an id attribute which represents the
-        game the addon belongs to.
-    timeframe : enums.TimeFrame
+        game the file belongs to.
+    timeframe : TimeFrame
         The time period this was released in (last 24hr, last week, last month)
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **rating** - order by rating, asc is highest rating, desc is lowest rating
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **date** - order by upload date, asc is most recent first, desc is oldest first
 
     Attributes
     -----------
@@ -877,6 +1037,34 @@ class File(Base):
 @concat_docs
 class Addon(File):
     """Object representing an addon
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Filtering
+    ----------
+    categoryaddon : AddonCategory
+        The type of addon (map, textures, ect...)
+    licence : Licence
+        The licence of the addon
+    game : Union[Game, Object]
+        An game object or an object with an id attribute which represents the
+        game the addon belongs to.
+    timeframe : TimeFrame
+        The time period this was released in (last 24hr, last week, last month)
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **rating** - order by rating, asc is highest rating, desc is lowest rating
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **licence** - order based on licence
+        * **date** - order by upload date, asc is most recent first, desc is oldest first
+
 
     """
     #ToDo: find difference between addon and file?
@@ -894,8 +1082,18 @@ class Media(Base):
 
     Filtering
     -----------
-    sitearea : enums.Category
+    sitearea : Category
         The type of model the media belongs to. Category.downloads is not valid for this.
+
+    Sorting
+    --------
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **id** - order by upload date, asc is most recent first, desc is oldest first
+
+        Exclusive to videos and audios
+        * **duration** - order by duration, asc is shortest to longest, desc is longest first
 
     Attributes
     -----------
@@ -978,17 +1176,30 @@ class Article(Base):
 
     Filtering
     ----------
-    type : enums.ArticleType
+    type : ArticleCategory
         Type of the article (news, feature)
-    timeframe : enums.TimeFrame
+    timeframe : TimeFrame
         The time period this was released in (last 24hr, last week, last month)
-    game : Union[pages.Game, utils.Object]
+    game : Union[Game, Object]
         An game object or an object with an id attribute which represents the
-        game the addon belongs to.
+        game the article belongs to.
+
+    Sorting
+    --------
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **dateup** - order by article date, asc is most recent first, desc is oldest first
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **member** - order by member???
+        * **date** - order by upload date, asc is most recent first, desc is oldest first
+
+        Exclusive to tutorials
+        * **meta** - sort by difficulty, asc is most difficult, desc is least difficult
+        * **subtype** - sort by the area the tutorial covers
 
     Attributes
     -----------
-    type : ArticleType
+    category : ArticleCategory
         Whether this article is a news article, a tutorial or a feature
     name : str
         The name of the article
@@ -1014,12 +1225,12 @@ class Article(Base):
         The article text without any html
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        #ToDo
+        #ToDo: tutorial type
         self.name = html.find("span", itemprop="headline").string
         super().__init__(html)
 
         raw_type = html.find("h5", string="Browse").parent.span.a.string
-        self.type = ArticleType[raw_type.lower()]
+        self.category = ArticleCategory[raw_type.lower()]
 
         try:
             raw = html.find("span", string=raw_type[0:-1]).parent.parent.parent.find("div", class_="table tablemenu")
@@ -1066,10 +1277,18 @@ class Group(Page):
 
     Filtering
     ----------
-    subscriptions : enums.Membership
+    subscriptions : Membership
         The subscription system of the group (private, invitation)
-    category : enums.GroupCategory
+    category : GroupCategory
         The category of the group (funny, literature)
+
+    Sorting
+    --------
+        * **id** - order group by date, asc is most recent first, desc is oldest first
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **membercount** - order by number of members, asc is most members first, desc is lest member first
 
     Attributes
     -----------
@@ -1200,10 +1419,19 @@ class Team(Group, GetEnginesMetaClass, GetGamesMetaClass, GetModsMetaClass, GetS
 
     Filtering
     ----------
-    subscriptions : enums.Membership
+    subscriptions : Membership
         The subscription system of the company (private, invitation)
-    category : enums.TeamCategory
+    category : TeamCategory
         What does the team do (publisher, developer)
+
+    Sorting
+    --------
+        * **id** - order by creation, desc is most recent first, asc is oldest first
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **game** - order by game???
+        * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
 
     Attributes
     -----------
@@ -1243,6 +1471,20 @@ class Job:
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Filtering
+    ----------
+    skill : JobSkill
+        The job skill looked for
+    earn : bool
+        Whether or not the job is paid
+
+    Sorting
+    --------
+        * **location** - order by the location of the job
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **skill** - order by the skill required
+        * **id** - order by upload date, asc is most recent, desc is oldest first
 
     Attributes
     -----------
@@ -1313,8 +1555,17 @@ class Blog(Base):
 
     Filtering
     ----------
-    timeframe : enums.TimeFrame
+    timeframe : TimeFrame
         The time period this was released in (last 24hr, last week, last month)
+
+    Sorting
+    --------
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **dateup** - order by blog date, asc is most recent first, desc is oldest first
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **member** - order by member???
+        * **date** - order by upload date, asc is most recent first, desc is oldest first
 
     """
     #ToDo: this one needs a second check, atm it's only meant to be parsed from the blog list
@@ -1343,6 +1594,12 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Sorting
+    --------
+    * **username** - sort alphabetically by username, asc is z-a and desc is a-z
+    * **id** - sort by member creation date, asc is most recent, desc is oldest
+    * **online** - sort by last online, asc is most recently seen online and desc is least recently
 
     Attributes
     -----------
@@ -1444,7 +1701,8 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
         params = {
             "filter": "t",
             "kw": query,
-            "timeframe": timeframe.value if timeframe else None
+            "timeframe": timeframe.value if timeframe else None,
+            "sort": f"{sort[0]}-{sort[1]}" if sort else None
         }
 
         html = soup(f"{self.url}/blogs/page/{index}", params=params)
@@ -1476,13 +1734,15 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
 
         return blogs
 
-    def get_member_comments(self, index : int = 1) -> CommentList:
+    def get_member_comments(self, index : int = 1, *, show_deleted : bool = False) -> CommentList:
         """Gets a page of all the comments a member has posted.
         
         Parameters
         -----------
         index : int
             The page number to get the comments from.
+        show_deleted : Optional[bool]
+            Pass true to show deleted user comments
 
         Returns
         --------
@@ -1490,7 +1750,11 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             A list of comments.
 
         """
-        html = soup(f"{self.url}/comments/page/{index}")
+        params = {
+            "deleted" : "t" if show_deleted else None
+        }
+
+        html = soup(f"{self.url}/comments/page/{index}", params=params)
         return self._get_comments(html)
 
     def get_friends(self, index : int = 1) -> List[Thumbnail]:

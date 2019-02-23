@@ -422,7 +422,7 @@ class MemberProfile:
     Attributes
     -----------
     name : str
-        Name of teh member
+        Name of the member
     level : int
         Current level
     progress : float
@@ -471,7 +471,12 @@ class MemberProfile:
             LOGGER.info("Member %s has no homepage", self.name)      
 
         self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
-        self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
+
+        try:
+            self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
+        except AttributeError:
+            LOGGER.info("Can't watch yourself, narcissist...")
+            self.follow = None
 
     def __repr__(self):
         return f"<MemberProfile name={self.name}>"
