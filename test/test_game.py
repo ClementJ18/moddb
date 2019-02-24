@@ -15,7 +15,7 @@ class TestGame(unittest.TestCase):
     def test_get_articles(self):
         articles = self.game.get_articles()
         self.game.get_articles(4)
-        self.game.get_articles(category=moddb.ArticleType.news)
+        self.game.get_articles(category=moddb.ArticleCategory.news)
 
         for article in articles:
             article.parse()

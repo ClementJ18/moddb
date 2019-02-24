@@ -1,5 +1,6 @@
 import unittest
 import moddb
+import logging
 
 from test.test_mod import TestMod
 from test.test_game import TestGame
@@ -16,11 +17,18 @@ from test.test_platform import TestPlatform
 from test.test_software import TestSoftware
 from test.test_hardware import TestHardware
 from test.test_poll import TestPoll
-from test.test_frontpage import TestFrontPage, TestSearch, TestParse, TestLogin
+from test.test_base import TestFrontPage, TestSearch, TestParse, TestLogin
 
+logger = logging.getLogger('moddb')
+logger.setLevel(logging.DEBUG)
+handler = logging.FileHandler(filename='moddb.log', encoding='utf-8', mode='w')
+handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+logger.addHandler(handler)
 
 loader = unittest.TestLoader()
 suite  = unittest.TestSuite()
+
+
 
 mod_urls = [
     "https://www.moddb.com/mods/edain-mod",

@@ -15,7 +15,7 @@ class TestMember(unittest.TestCase):
     def test_get_articles(self):
         articles = self.member.get_articles()
         self.member.get_articles(4)
-        self.member.get_articles(category=moddb.ArticleType.news)
+        self.member.get_articles(category=moddb.ArticleCategory.news)
 
         for article in articles:
             article.parse()

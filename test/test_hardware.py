@@ -8,7 +8,7 @@ class TestHardware(unittest.TestCase):
     def test_get_articles(self):
         articles = self.hardware.get_articles()
         self.hardware.get_articles(4)
-        self.hardware.get_articles(category=moddb.ArticleType.news)
+        self.hardware.get_articles(category=moddb.ArticleCategory.news)
 
         for article in articles:
             article.parse()

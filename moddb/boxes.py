@@ -1,5 +1,5 @@
 from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, \
-                   PlayerStyle, Scope, ArticleType, HardwareCategory, Status, SoftwareCategory
+                   PlayerStyle, Scope, ArticleCategory, HardwareCategory, Status, SoftwareCategory
 from .utils import get_date, soup, get_views, join, normalize, LOGGER
 
 import sys
@@ -567,7 +567,7 @@ class PartialArticle:
         Link to the article
     date : datetime.datetime
         Date the article was published
-    type : ArticleType
+    type : ArticleCategory
         Type of the article
     content : str
         html of the article content
@@ -581,9 +581,9 @@ class PartialArticle:
         self.url = join(meta_raw.h4.a["href"])
         self.date = get_date(meta_raw.find("time")["datetime"])
         try:
-            self.type = ArticleType[meta_raw.find("span", class_="subheading").text.strip().split(" ")[0].lower()]
+            self.type = ArticleCategory[meta_raw.find("span", class_="subheading").text.strip().split(" ")[0].lower()]
         except KeyError:
-            self.type = ArticleType.news
+            self.type = ArticleCategory.news
 
         content = html.find("div", class_="row rowcontent rowcontentnext clear")
         self.content = str(content)

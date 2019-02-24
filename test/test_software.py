@@ -8,7 +8,7 @@ class TestSoftware(unittest.TestCase):
     def test_get_articles(self):
         articles = self.software.get_articles()
         self.software.get_articles(4)
-        self.software.get_articles(category=moddb.ArticleType.news)
+        self.software.get_articles(category=moddb.ArticleCategory.news)
 
         for article in articles:
             article.parse()

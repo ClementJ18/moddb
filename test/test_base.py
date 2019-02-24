@@ -50,3 +50,6 @@ class TestLogin(unittest.TestCase):
     def test_fake_login(self):
         with self.assertRaises(ValueError):
             moddb.login("tico", "ticoisgod")
+
+    def tearDown(self):
+        moddb.SESSION.close()
