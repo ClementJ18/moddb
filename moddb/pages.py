@@ -741,7 +741,7 @@ class Page(Base, SharedMethodsMetaClass):
             string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
             articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("%s %s has no article suggestions", self.__class__.__name__, self.name)
             self.articles = []
@@ -1223,6 +1223,8 @@ class Article(Base):
         The html of the article
     plaintext : str
         The article text without any html
+    summary : str
+        plaintext intro to the article
     """
     def __init__(self, html : bs4.BeautifulSoup):
         #ToDo: tutorial type
@@ -1260,6 +1262,8 @@ class Article(Base):
         self.date = get_date(html.find("time", itemprop="datePublished")["datetime"])
         self.html = str(html.find("div", itemprop="articleBody"))
         self.plaintext = html.find("div", itemprop="articleBody").text
+
+        self.summary = html.find("p", class_="introductiontext").string
 
     def __repr__(self):
         return f"<Article title={self.name} type={self.type.name}>"
@@ -1356,7 +1360,7 @@ class Group(Page):
         try:
             articles_raw = html.find("span", string="Articles").parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear", recursive=False)
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], summary=x.find("p").string, type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("Group %s has no article suggestions", self.name)
             self.articles = []
@@ -1818,7 +1822,7 @@ class FrontPage:
     def __init__(self, html : bs4.BeautifulSoup):
         #ToDo: add promoted content of slider
         articles = html.find("span", string="Latest Articles").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"]) for x in articles]
+        self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"], summary=x.find("p").string) for x in articles]
 
         mods = html.find("span", string="Popular Mods").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         self.mods = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.mod, image=x.a.img["src"]) for x in mods]
@@ -1983,7 +1987,7 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass):
         try:
             articles_raw = html.find("span", string="Related Articles").parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
             self.articles = []

@@ -272,6 +272,8 @@ class Thumbnail:
         The name of the model
     image : str
         The optional thumbnail image of the model
+    summary : str
+        Optional bit of fluff
     type : ThumbnailType
         The type of the resource, mandatory attribute
 
@@ -280,6 +282,7 @@ class Thumbnail:
         self.url = join(attrs.get("url"))
         self.name = attrs.get("name", None)
         self.image = attrs.get("image", None)
+        self.summary = attrs.get("summary", None)
         self.type = attrs.get("type")
 
     def __repr__(self):
@@ -588,7 +591,6 @@ class PartialArticle:
         content = html.find("div", class_="row rowcontent rowcontentnext clear")
         self.content = str(content)
         self.plaintext = content.text
-        #ToDo: check if intro possible
 
     def __repr__(self):
         return f"<PartialArticle title={self.name}>"

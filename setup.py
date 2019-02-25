@@ -7,5 +7,5 @@ setup(name = "moddb",
     description = "A scrapper for ModDB Mod and Game pages",
     author = "Clement Julia",
     author_email = "clement.julia13@gmail.com",
-    url = "https://github.com/ClementJ18/moddb_reader",
+    url = "https://github.com/ClementJ18/moddb",
     packages = ["moddb"])
