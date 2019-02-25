@@ -1,11 +1,12 @@
 from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, \
-                   PlayerStyle, Scope, ArticleCategory, HardwareCategory, Status, SoftwareCategory
-from .utils import get_date, soup, get_views, join, normalize, LOGGER
+                   PlayerStyle, Scope, ArticleCategory, HardwareCategory, Status, \
+                   SoftwareCategory, AddonCategory, GroupCategory, TeamCategory
+from .utils import get_date, soup, get_views, join, normalize, LOGGER, time_mapping
 
-import sys
 import re
-from typing import List, Any
+import sys
 import datetime
+from typing import List, Any
 
 __all__ = ['CommentList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
            'Comment', 'MemberProfile', 'MemberStatistics', 'PartialArticle', 'Option']
@@ -41,7 +42,6 @@ class Statistics:
     updated : datetime.datetime
         The last time this page was updated
     """
-    #ToDo: games stat?
     def __init__(self, html):
         misc = html.find_all("h5", string=("Files", "Articles", "Reviews", "Watchers", "Mods", "Addons", "Members"))
         self.__dict__.update({stat.string.lower() : int(normalize(stat.parent.a.string)) for stat in misc})
@@ -74,8 +74,9 @@ class Profile:
 
     Attributes
     -----------
-    category : SearchCategory
-        The category of the page
+    category : Union[AddonCategory, HardwareCategory, SoftwareCategory, TeamCategory, GroupCategory]
+        The category the page falls under within the context of what the page is. E.g the page is an Addon category
+        will be an AddonCategory enum
     contact : str
         The url to contact the page owner
     follow : str
@@ -112,7 +113,6 @@ class Profile:
 
     """
     def __init__(self, html):
-        #ToDo: group category/team category
         try:
             _name = html.find("a", itemprop="mainEntityOfPage").string
         except AttributeError:
@@ -131,7 +131,6 @@ class Profile:
         page_type = SearchCategory[matches[0] if matches[0].endswith("s") else matches[0]+"s"]
         
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
-        self.category = page_type
         self.contact = join(html.find("h5", string="Contact").parent.span.a["href"])
         self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch", "Hardware watch", "Software watch"])[0].parent.span.a["href"])
         
@@ -207,16 +206,27 @@ class Profile:
             self.licence = Licence(int(profile_raw.find("h5", string="Licence").parent.span.a["href"].split("=")[-1]))
 
         if page_type == SearchCategory.hardwares:
-            self.type = HardwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
+            self.category = HardwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
 
         if page_type == SearchCategory.softwares:
-            self.type = SoftwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
+            self.category = SoftwareCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
 
         if page_type == SearchCategory.addons:
-            self.type = AddonCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
-            
+            self.category = AddonCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
+        
+        if page_type == SearchCategory.companys:
+            category = html.find("h3").string.strip().lower()
+            try:
+                self.category = TeamCategory[category]
+            except KeyError:
+                self.category = TeamCategory(7)
+
+        if page_type == SearchCategory.groups:
+            category = html.find("h3").string.strip().lower().replace(" & ", "_")
+            self.category = GroupCategory[category]
+
     def __repr__(self):
-        return f"<Profile type={self.category.name}>"
+        return f"<Profile category={self.category.name}>"
 
 class Style:
     """Represents semantic information on the page's theme. 
@@ -334,16 +344,19 @@ class Comment:
         Link to downvote the comment
     approved : bool
         Whether or not the comment is still waiting for admin approval and is visible to the guest members
-
+    developer : bool
+        Whether or not the comment was posted one of the page creators
+    staff : bool
+        Wether or not the comment was posted by one of moddb's staff members
+    subscriber : bool
+        Whether or not the comment was posted by a moddb subscriber
+    guest : bool
+        Whether or not the comment was posted by a guest user
 
     """
     def __init__(self, html):
-        #ToDo:need to include where (Thumbnail)
-        #ToDo: owner, creator, subscriber, staff flags?
-        #ToDo: embeds
-        #ToDo: check for approved even when logged in
         author = html.find("a", class_="avatar")
-        self.id = html["id"] #ToDo: check if int
+        self.id = int(html["id"])
         self.author = Thumbnail(name=author["title"], url=author["href"], image=author.img["src"], type=ThumbnailType.member)
         self.date = get_date(html.find("time")["datetime"])
         actions = html.find("span", class_="actions")
@@ -377,6 +390,13 @@ class Comment:
         except IndexError:
             self.downvote = None
             self.approved = True
+
+        self.developer = bool(html.find("span", class_="developer"))
+        self.staff = bool(html.find("span", class_="staff"))
+        self.subscriber = bool(html.find("span", class_="subscriber"))
+        self.guest = self.author.name.lower() == "guest"
+
+        self.embeds = [x["src"] for x in html.find_all("iframe")]
 
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
@@ -415,7 +435,7 @@ class CommentList(list):
 
 class MemberProfile:
     """Member profiles are separate entities because they share nothing with the other profile boxes. Where as all
-    other profile boxes share at least 4 attributes a member shares none.
+    other profile boxes share at least 4 attributes, a member shares none.
 
     Parameters
     -----------
@@ -437,7 +457,7 @@ class MemberProfile:
     online : bool
         Whether or not the member is currently online
     last_online :  datetime.datetime
-        None if the member is currently online
+        None if the member is currently online, datetime the user was last seen online
     gender : str
         Gender of the member, can be None
     homepage : str
@@ -510,7 +530,7 @@ class MemberStatistics:
     today : int
         How many people have viewed this page today
     time : int
-        How much time the member has spent online
+        How many seconds the member has spent online
     rank : int
         The member's current rank (compared to other members)
     total : int
@@ -527,8 +547,8 @@ class MemberStatistics:
         visits = normalize(html.find("h5", string="Visitors").parent.a.string)
         self.visits, self.today = get_views(visits)
 
-        #ToDo: double check type
-        self.time = html.find("h5", string="Time Online").parent.span.string.strip()
+        time, mapping = html.find("h5", string="Time Online").parent.span.string.strip().split(" ")
+        self.time = time_mapping[mapping.replace('s', '')] * int(time)
 
         try:
             rank = normalize(html.find("h5", string="Rank").parent.span.string).split("of")

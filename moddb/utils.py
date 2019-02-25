@@ -3,7 +3,6 @@ import sys
 import logging
 import datetime
 import requests
-import json
 from typing import Tuple
 from bs4 import BeautifulSoup, Tag
 from urllib.parse import urljoin
@@ -36,8 +35,8 @@ def concat_docs(cls):
     get_docs(cls)
     original = cls.__doc__.splitlines()
     if not "    Attributes" in original:
-            original.append("    Attributes")
-            original.append("    -----------")
+        original.append("    Attributes")
+        original.append("    -----------")
 
     final = original[:original.index("    Attributes") + 2]
     final.extend([x for x in attributes if x.strip()])
@@ -155,3 +154,13 @@ class Object:
     """A dud objects that will transform every kwarg given into an attribute"""
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
+
+time_mapping = {
+    "year" : 125798400,
+    "month": 2419200,
+    "week": 604800,
+    "day": 86400,
+    "hour": 3600,
+    "minute": 60,
+    "econd": 1
+}

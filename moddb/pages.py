@@ -8,13 +8,12 @@ from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_doc
 import re
 import bs4
 import json
+import datetime
 from typing import List, Tuple, Union
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Team', 'Group', 'Job', 'Blog', 'Member', 'FrontPage', 'Review',
            'Platform', 'Poll', 'Software', 'Hardware']
-
-#ToDo: timeframe? could piggy back of get_date
 
 class Base:
     """An abstract class that implements the attributes present on nearly every page. In addition, it implements
@@ -680,7 +679,7 @@ class Page(Base, SharedMethodsMetaClass):
         The name of the page
     profile : Profile
         The object with the content of the page's profile box.
-    statistics : Statistics
+    stats : Statistics
         The object containg stat data on the page such as views, followers, ect...
     style : Style
         The object containing data relevant to the type of the page, not valid for Engines. Multiplayer, singleplayer,
@@ -711,13 +710,12 @@ class Page(Base, SharedMethodsMetaClass):
 
     """
     def __init__(self, html : bs4.BeautifulSoup, page_type : SearchCategory):
-        #ToDo: add status
         super().__init__(html)
 
         #boxes
         if page_type != SearchCategory.members:
             self.profile = Profile(html)
-            self.statistics = Statistics(html)
+            self.stats = Statistics(html)
             if page_type != SearchCategory.engines:
                 self.style = Style(html)
 
@@ -890,8 +888,7 @@ class Game(Page, GetModsMetaClass):
 
 @concat_docs
 class Engine(Page, GetGamesMetaClass):
-    """A subclass of Page, however, it does not have the files attribute or the get_files method
-    since engines can't have files.
+    """A subclass of Page, however, it does not have the files attribute
 
     Parameters
     -----------
@@ -922,7 +919,6 @@ class Engine(Page, GetGamesMetaClass):
     games : List[Thumbnail]
         A list of games suggested on the engine main page.
     """
-    #ToDo: can engines have files?
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.engines)
         delattr(self, "files")
@@ -932,9 +928,6 @@ class Engine(Page, GetGamesMetaClass):
         except AttributeError:
             LOGGER.info("Engine %s has no games", self.name)
             self.games = []
-
-    def get_files(*args, **kwargs):
-        return []
 
 @concat_docs
 class File(Base):
@@ -1028,7 +1021,6 @@ class File(Base):
 
         self.description = html.find("p", id="downloadsummary").string
 
-        #Todo: can this be a media object?
         self.preview = html.find_all("img", src=True)[0]["src"]
 
     def __repr__(self):
@@ -1103,7 +1095,7 @@ class Media(Base):
         The name of the media
     author : Thumbnail
         Member type thumbnail of the media uploader
-    duration : int
+    duration : datetime.timedelta
         Duration of the media in seconds, 0 if it's an image
     size : int
         Size of the files in bytes
@@ -1135,10 +1127,11 @@ class Media(Base):
         author = raw_media["by"].span.a
         self.author = Thumbnail(url=author["href"], name=author.string.strip(), type=ThumbnailType.member)
 
-        #ToDo: consider possibility of hour long videos, maybe longer
         if "duration" in raw_media:
             duration = raw_media["duration"].span.time.string.strip().split(":")
-            self.duration = (int(duration[0]) * 60) + int(duration[1])
+            duration.reverse()
+            times = ["seconds", "minutes", "hours"]
+            self.duration = datetime.timedelta(**{times[duration.index(x)] : int(x) for x in duration})
         else:
             self.duration = 0
 
@@ -1321,7 +1314,6 @@ class Group(Page):
         The plaintext description of the group
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        #ToDo
         self.name = html.find("div", class_="title").h2.a.string
         Base.__init__(self, html)
         self.private = False
@@ -1371,10 +1363,6 @@ class Group(Page):
             self.description = html.find("div", class_="column span-all").find("div", class_="tooltip").parent.text
 
         self.medias = self._get_media(2, html=html)
-
-        #ToDo: add:
-        #   - font page article
-        #   - group category
 
     def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
         """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
@@ -1522,7 +1510,6 @@ class Job:
 
         self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
 
-        #ToDo: can author be team
         try:
             author = profile_raw.find("h5", string="Author").parent.span.a
             self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
@@ -1572,8 +1559,6 @@ class Blog(Base):
         * **date** - order by upload date, asc is most recent first, desc is oldest first
 
     """
-    #ToDo: this one needs a second check, atm it's only meant to be parsed from the blog list
-    #it probably has comments and stuff, idk just fuck my shit up fam
     def __init__(self, *, heading, text):
         author = heading.find("span", class_="subheading").a
         self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
@@ -1629,8 +1614,6 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
         page
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        #Todo: can members have engines?
-        #ToDo: check for differences between a member page vs member page of logged in member
         super().__init__(html, SearchCategory.members)
         try:
             self.profile = MemberProfile(html)
@@ -1651,7 +1634,6 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             self.description = None
 
         try:
-            #ToDo: don't hardcode thumbnails type, piggy back off url
             groups_raw = html.find("span", string="Groups").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-2]
             self.groups = [Thumbnail(name=div.a["title"], url=div.a["href"], type=ThumbnailType.group) for div in groups_raw]
         except AttributeError:
@@ -1830,9 +1812,8 @@ class FrontPage:
         games = html.find("span", string="Popular Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
 
-        #ToDo: prehaps url can be obtained from parsing the name and joining it with the the base url
-        # jobs = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
-        # self.jobs = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.job) for x in jobs]
+        jobs = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
+        self.jobs = [Thumbnail(name=x.find("a").string, url=join(x.find("a")["href"]), type=ThumbnailType.job) for x in jobs]
 
         files = html.find("span", string="Popular Files").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         self.files = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.file, image=x.a.img["src"]) for x in files]
@@ -1885,10 +1866,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
         A list of mods suggested on the platform main page.
     """
     def __init__(self, html):
-        #test with all platforms
         self.name = html.find("a", itemprop="mainEntityOfPage").string
-        
-        #ToDo: check if possible
         self.id = None
 
         self.url = join(html.find("a", itemprop="mainEntityOfPage")["href"])
@@ -1992,7 +1970,6 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass):
             LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
             self.articles = []
 
-        #main page article
         if articles_raw:
             self.article = PartialArticle(articles_raw)
         else:
