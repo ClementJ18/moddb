@@ -3,7 +3,7 @@ from .boxes import CommentList, Comment, Thumbnail, MemberProfile, MemberStatist
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleCategory, Difficulty, TutorialCategory, Licence, \
                    Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre
-from .utils import soup, join, LOGGER, get_date, get_views, get_type, concat_docs, Object
+from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object
 
 import re
 import bs4
@@ -179,7 +179,7 @@ class Base:
         List[Thumbnail]
             The list of objects present on the page as a list of thumbnails.
         """
-        html = soup(url, params=params)
+        html = get_page(url, params=params)
         try:
             table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         except AttributeError:
@@ -191,7 +191,16 @@ class Base:
         objects_raw = table.find_all("div", recursive=False)[1:]
         objects = []
         for obj in objects_raw:
-            thumbnail = Thumbnail(name=obj.a["title"], url=obj.a["href"], image=obj.a.img["src"], type=object_type)
+            date = obj.find("time")
+            summary = obj.find("p")
+            thumbnail = Thumbnail(
+                name=obj.a["title"], 
+                url=obj.a["href"], 
+                image=obj.a.img["src"], 
+                type=object_type, 
+                summary=summary.string if summary else None, 
+                date=get_date(date["datetime"]) if date else None
+            )
             objects.append(thumbnail)
 
         return objects
@@ -257,7 +266,7 @@ class Base:
         CommentList
             A subclass of list with the method flatten to retrieve all the children.
         """
-        return self._get_comments(soup(f"{self.url}/page/{index}"))
+        return self._get_comments(get_page(f"{self.url}/page/{index}"))
 
 class GetGamesMetaClass:
     """Abstract class containing the get_games method"""
@@ -422,7 +431,7 @@ class SharedMethodsMetaClass:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        html = soup(f"{self.url}/reviews/page/{index}", params=params)
+        html = get_page(f"{self.url}/reviews/page/{index}", params=params)
         try:
             table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         except AttributeError:
@@ -538,7 +547,7 @@ class SharedMethodsMetaClass:
         List[Thumbnail]
             The list of image type thumbnails parsed from the page
         """
-        html = soup(f"{self.url}/images")
+        html = get_page(f"{self.url}/images")
         return self._get_media(1, html=html)
         
 
@@ -552,7 +561,7 @@ class SharedMethodsMetaClass:
         List[Thumbnail]
             The list of video type thumbnails parsed from the page
         """
-        html = soup(f"{self.url}/videos")
+        html = get_page(f"{self.url}/videos")
         return self._get_media(2, html=html)
 
     def get_tutorials(self, index : int = 1, *, query : str = None, difficulty : Difficulty = None, 
@@ -739,7 +748,7 @@ class Page(Base, SharedMethodsMetaClass):
             string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
             articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, date=x.find("time")["datetime"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("%s %s has no article suggestions", self.__class__.__name__, self.name)
             self.articles = []
@@ -1169,7 +1178,7 @@ class Article(Base):
 
     Filtering
     ----------
-    type : ArticleCategory
+    category : ArticleCategory
         Type of the article (news, feature)
     timeframe : TimeFrame
         The time period this was released in (last 24hr, last week, last month)
@@ -1259,7 +1268,7 @@ class Article(Base):
         self.summary = html.find("p", class_="introductiontext").string
 
     def __repr__(self):
-        return f"<Article title={self.name} type={self.type.name}>"
+        return f"<Article title={self.name} type={self.category.name}>"
 
 @concat_docs
 class Group(Page):
@@ -1352,7 +1361,7 @@ class Group(Page):
         try:
             articles_raw = html.find("span", string="Articles").parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear", recursive=False)
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], summary=x.find("p").string, type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], summary=x.find("p").string, date=x.find("time")["datetime"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("Group %s has no article suggestions", self.name)
             self.articles = []
@@ -1363,6 +1372,9 @@ class Group(Page):
             self.description = html.find("div", class_="column span-all").find("div", class_="tooltip").parent.text
 
         self.medias = self._get_media(2, html=html)
+
+    def get_reviews(*args, **kwargs):
+        raise AttributeError(f"{self.__class__.__name__} has no 'get_reviews' attribute")
 
     def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
         """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
@@ -1691,7 +1703,7 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             "sort": f"{sort[0]}-{sort[1]}" if sort else None
         }
 
-        html = soup(f"{self.url}/blogs/page/{index}", params=params)
+        html = get_page(f"{self.url}/blogs/page/{index}", params=params)
         try:
             table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         except AttributeError:
@@ -1736,11 +1748,12 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             A list of comments.
 
         """
+        #TODO: add where the comments come from
         params = {
             "deleted" : "t" if show_deleted else None
         }
 
-        html = soup(f"{self.url}/comments/page/{index}", params=params)
+        html = get_page(f"{self.url}/comments/page/{index}", params=params)
         return self._get_comments(html)
 
     def get_friends(self, index : int = 1) -> List[Thumbnail]:
@@ -1804,7 +1817,7 @@ class FrontPage:
     def __init__(self, html : bs4.BeautifulSoup):
         #ToDo: add promoted content of slider
         articles = html.find("span", string="Latest Articles").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
-        self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"], summary=x.find("p").string) for x in articles]
+        self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"], summary=x.find("p").string, date=x.find("time")["datetime"]) for x in articles]
 
         mods = html.find("span", string="Popular Mods").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         self.mods = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.mod, image=x.a.img["src"]) for x in mods]
@@ -1818,7 +1831,7 @@ class FrontPage:
         files = html.find("span", string="Popular Files").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
         self.files = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.file, image=x.a.img["src"]) for x in files]
 
-        self.poll = Poll(soup(html.find("div", class_="poll").form["action"]))
+        self.poll = Poll(get_page(html.find("div", class_="poll").form["action"]))
 
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
@@ -1965,7 +1978,7 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass):
         try:
             articles_raw = html.find("span", string="Related Articles").parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
-            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, type=ThumbnailType.article) for x in thumbnails]
+            self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, date=x.find("time")["datetime"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
             LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
             self.articles = []

@@ -1,15 +1,17 @@
 from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Theme, \
                    PlayerStyle, Scope, ArticleCategory, HardwareCategory, Status, \
                    SoftwareCategory, AddonCategory, GroupCategory, TeamCategory
-from .utils import get_date, soup, get_views, join, normalize, LOGGER, time_mapping
+from .utils import get_date, get_page, get_views, join, normalize, LOGGER, time_mapping, \
+                   get_type_from
 
 import re
 import sys
 import datetime
 from typing import List, Any
 
-__all__ = ['CommentList', 'Statistics', 'Profile', 'Style', 'Thumbnail', 
-           'Comment', 'MemberProfile', 'MemberStatistics', 'PartialArticle', 'Option']
+__all__ = ['Statistics', 'Profile', 'Style', 'Thumbnail', 
+           'Comment', 'CommentList', 'MemberProfile', 'MemberStatistics', 'PlatformStatistics', 
+           'PartialArticle', 'Option']
 
 class Statistics:
     """The stats box, on pages that have one. This represents total stats and daily stats in one
@@ -214,7 +216,7 @@ class Profile:
         if page_type == SearchCategory.addons:
             self.category = AddonCategory(int(profile_raw.find("h5", string="Category").parent.span.a["href"].split("=")[-1]))
         
-        if page_type == SearchCategory.companys:
+        if page_type == SearchCategory.developers:
             category = html.find("h3").string.strip().lower()
             try:
                 self.category = TeamCategory[category]
@@ -284,6 +286,8 @@ class Thumbnail:
         The optional thumbnail image of the model
     summary : str
         Optional bit of fluff
+    date : datetime.datetime
+        A date related to this timestamp if it exists. Can be None
     type : ThumbnailType
         The type of the resource, mandatory attribute
 
@@ -293,6 +297,7 @@ class Thumbnail:
         self.name = attrs.get("name", None)
         self.image = attrs.get("image", None)
         self.summary = attrs.get("summary", None)
+        self.date = attrs.get("date", None)
         self.type = attrs.get("type")
 
     def __repr__(self):
@@ -308,7 +313,7 @@ class Thumbnail:
             The model that was parsed, can be any model from the list of the ThumbnailType
             enum.
         """
-        return getattr(sys.modules["moddb"], self.type.name.title())(soup(self.url))
+        return getattr(sys.modules["moddb"], self.type.name.title())(get_page(self.url))
 
 class Comment:
     """A moddb comment object.
@@ -352,7 +357,10 @@ class Comment:
         Whether or not the comment was posted by a moddb subscriber
     guest : bool
         Whether or not the comment was posted by a guest user
-
+    location : Thumbnail
+        Thumbnail of the place the comment is, only available when getting comments from get_member_comments. This
+        thumbnail does not guarantee that you will find the command if you parse it, since the url does not
+        contain the page number.
     """
     def __init__(self, html):
         author = html.find("a", class_="avatar")
@@ -397,6 +405,12 @@ class Comment:
         self.guest = self.author.name.lower() == "guest"
 
         self.embeds = [x["src"] for x in html.find_all("iframe")]
+
+        self.location = html.find("a", class_="related")
+        if self.location is not None:
+            url = join(self.location["href"])
+            page_type = get_type_from(url)
+            self.location = Thumbnail(name=self.location.string, url=url, type=page_type)
 
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
@@ -623,7 +637,7 @@ class PartialArticle:
         Article
             The complete article object
         """
-        return getattr(sys.modules["moddb"], "Article")(soup(self.url))
+        return getattr(sys.modules["moddb"], "Article")(get_page(self.url))
 
 class Option:
     """Represents one of the choice from the poll they are attached to, should not be created

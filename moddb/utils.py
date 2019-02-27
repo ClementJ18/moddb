@@ -1,3 +1,5 @@
+from .enums import ThumbnailType
+
 import re
 import sys
 import logging
@@ -45,7 +47,7 @@ def concat_docs(cls):
     return cls
 
 def get_tags(html):
-    """Helper function to return the tags found on a page"""
+    """Helper function to return the tags found on a page. Not implemented"""
     #ToDo
     pass
 
@@ -76,10 +78,28 @@ def get_date(d : str) -> datetime.datetime:
 
     return datetime.datetime.strptime(d, '%Y-%m')
 
-def request(url, *, params = {}, post=False):
-    """Helper function to make get/post requests with the current SESSION object."""
+def request(url, *, params = {}, post = False):
+    """Helper function to make get/post requests with the current SESSION object.
+
+    Parameters
+    -----------
+    url : str
+        url to get
+    params : dict
+        A dict of paramaters to be passed along
+    post : bool
+        Whether or not this a post request
+
+    Return
+    -------
+    requests.Response
+        The returned response object
+
+    """
     SESSION = sys.modules["moddb"].SESSION
     cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
+    if "query" in params:
+        params["query"] = params["query"].replace(" ", "+")
 
     if post:
         r = SESSION.post(url, data=params.get("data", {}), cookies=cookies)
@@ -88,7 +108,14 @@ def request(url, *, params = {}, post=False):
 
     return r
 
-def soup(url : str, *, params : dict = {}) -> BeautifulSoup:
+def soup(html : str) -> BeautifulSoup:
+    """Simple helper function that takes a string representation of an html page and
+    returns a beautiful soup object"""
+    
+    soup = BeautifulSoup(html, "html.parser")
+    return soup
+
+def get_page(url : str, *, params : dict = {}):
     """A helper function that takes a url and returns a beautiful soup objects. This is used to center
     the request making section of the library. Can also be passed a set of paramaters, used for sorting
     and filtering in the search function.
@@ -105,13 +132,8 @@ def soup(url : str, *, params : dict = {}) -> BeautifulSoup:
     -------
     bs4.BeautifulSoup
     """
-    if "query" in params:
-        params["query"] = params["query"].replace(" ", "+")
-        
     r = request(url, params=params)
-    html = BeautifulSoup(r.text, "html.parser")
-
-    return html
+    return soup(r.text)
 
 def get_views(string : str) -> Tuple[int, int]:
     """A helper function that takes a string reresentation of total something and
@@ -134,7 +156,19 @@ def get_views(string : str) -> Tuple[int, int]:
     return views, today
 
 def join(path : str) -> str:
-    """Joins a partial moddb string with the base url and returns the combined url"""
+    """Joins a partial moddb url with the base url and returns the combined url
+    
+    Parameters
+    -----------
+    path : str
+        the url to join
+
+    Return
+    -------
+    str
+        The full url.
+
+    """
     return urljoin(BASE_URL, path)
 
 def normalize(string : str) -> str:
@@ -149,6 +183,38 @@ def get_type(img : Tag) -> int:
         return 0
     else:
         return 1 
+
+def get_type_from(url):
+    """Get the page type based on a url.
+
+    Parameters
+    -----------
+    url : str
+        The url to get 
+
+    Return
+    -------
+    ThumbnailType
+        The type of the page
+    """
+    regex = r"\/([a-z]+)\/"
+    type_mapping = {
+        "new": "article",
+        "feature": "article",
+        "download": "file"
+    }
+
+    matches = re.findall(regex, url)
+    matches.reverse()
+    match = matches[0][0:-1] if matches[0].endswith("s") else matches[0]      
+
+    try:
+        page_type = ThumbnailType[match]
+    except KeyError:
+        page_type = ThumbnailType[type_mapping[match]]
+
+    LOGGER.info("%s is type %s", url, page_type)
+    return page_type
         
 class Object:
     """A dud objects that will transform every kwarg given into an attribute"""

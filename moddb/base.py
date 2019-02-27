@@ -1,6 +1,6 @@
 from .enums import SearchCategory, ThumbnailType
 from .boxes import Thumbnail
-from .utils import soup, LOGGER, normalize
+from .utils import get_page, LOGGER, normalize, get_type_from
 from .pages import FrontPage, Member
 
 import re
@@ -172,7 +172,7 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     filter_parsed = {key : value.value for key, value in filters.items()}
     cat = ThumbnailType[category.name[0:-1]]
 
-    html = soup(url, params={"filter": "t", "kw": query, "sort": sort, "game": game, **filter_parsed})
+    html = get_page(url, params={"filter": "t", "kw": query, "sort": sort, "game": game, **filter_parsed})
 
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
     
@@ -210,24 +210,8 @@ def parse(url : str, *, page_type : ThumbnailType = None) -> Any:
         Mod or Game
     """
 
-    regex = r"\/([a-z]+)\/"
-    html = soup(url)
-
-    type_mapping = {
-        "new": "article"
-    }
-
-    if page_type is None:
-        matches = re.findall(regex, url)
-        matches.reverse()
-        match = matches[0][0:-1] if matches[0].endswith("s") else matches[0]      
-
-        try:
-            page_type = ThumbnailType[match]
-        except KeyError:
-            page_type = ThumbnailType[type_mapping[match]]
-
-        LOGGER.info("%s is type %s", url, page_type)
+    html = get_page(url)
+    page_type = get_type_from(url)
 
     model = getattr(sys.modules["moddb"], page_type.name.title())(html)
     return model
@@ -273,7 +257,7 @@ def login(username : str, password : str) -> Member:
     if "freeman" not in browser.session.cookies:
         raise ValueError(f"Login failed for user {username}")
 
-    return Member(soup(f"https://www.moddb.com/members/{username}"))
+    return Member(get_page(f"https://www.moddb.com/members/{username}"))
 
 def logout(): 
     """Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and 
@@ -292,5 +276,5 @@ def front_page() -> FrontPage:
         The front page object.
         
     """
-    html = soup("https://www.moddb.com")
+    html = get_page("https://www.moddb.com")
     return FrontPage(html)

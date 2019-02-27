@@ -1,8 +1,7 @@
 from .base import search, parse, login, logout, front_page
-from .utils import LOGGER, BASE_URL, soup, Object
+from .utils import LOGGER, BASE_URL, soup, request, get_page, Object
 from .enums import *
 from .pages import *
-#remove get_files from Engine
 #remove get_reviews from Group, Company
 
 import requests

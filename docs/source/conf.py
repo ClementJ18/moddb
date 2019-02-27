@@ -191,5 +191,5 @@ napoleon_custom_sections = ["Filtering", "Sorting"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
 
-autodoc_default_flags = ["members"]
+autodoc_default_flags = ['members']
 autosummary_generate = True

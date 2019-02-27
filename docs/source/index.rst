@@ -41,6 +41,10 @@ the moddb website using function and OOP as if ModDB was simply an API. Ideally,
 state you should be able to pair with a web framework to perfectly emulate the website and all
 its features.
 
+.. contents:: Table of Contents
+   :local:
+   :backlinks: none
+
 Basic Usage
 ------------
 
@@ -58,6 +62,22 @@ The library tries to get the type of the url you are passing on its own but due 
                page_type=moddb.ThumbnailType.mod
             )
    print(mod.name) #Edain Mod
+
+Advanced Usage
+---------------
+Of course, relying on the library isn't always what we want, you'd be forced to use requests plus nothing's perfect and errors might occur. In some cases, you might benefit from having a finer control upon the process, in which case, it is good to know that you can easily do this with few additional imports. Given you suddenly want to use something like aiohttp to get the pages you could easily do something like this:: 
+
+   import aiohttp
+
+   async def get_page():
+      async with aiohttp.ClientSession() as session:
+         async with session.get("http://www.moddb.com/mods/edain-mod") as response:
+            soup = moddb.soup(await r.text())
+
+   return moddb.Mod(soup)
+
+This would return a mod object, with you only having to import the bit you want to change from the original library, in that case aiohttp. This is not fully supported for all things however, for example trying to get the articles for that mod page you would be forced to completly parse the result page on your own or be forced to use requests.
+
 
 Searching
 ----------
