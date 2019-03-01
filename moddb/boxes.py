@@ -379,7 +379,7 @@ class Comment:
         self.children = []
 
         try:
-            self.content = html.find("div", class_="comment").find("p").string
+            self.content = html.find("div", class_="comment").text
         except AttributeError:
             LOGGER.info("Comment %s by %s has no content, likely embed", self.id, self.author.name)
             self.content = None

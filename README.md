@@ -22,6 +22,7 @@ print(mod.name) #Edain Mod
 
 ## Advanced Usage
 Check out the [documentation](https://moddb.readthedocs.io) for more information
+[Support](https://discord.gg/Ape8bZt)
 
 ## Finished Models
 * Mod

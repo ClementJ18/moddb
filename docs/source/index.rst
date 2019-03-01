@@ -31,7 +31,7 @@ Welcome to moddb's documentation!
    :target: https://github.com/ClementJ18/moddb
 
 .. image:: https://img.shields.io/discord/389039439487434752.svg
-   :target: https://discord.gg/8HMcxp
+   :target: https://discord.gg/Ape8bZt
 
 .. image:: https://img.shields.io/github/commits-since/ClementJ18/moddb/latest.svg
     :target: https://github.com/ClementJ18/moddb/releases/latest
@@ -74,7 +74,7 @@ Of course, relying on the library isn't always what we want, you'd be forced to 
          async with session.get("http://www.moddb.com/mods/edain-mod") as response:
             soup = moddb.soup(await r.text())
 
-   return moddb.Mod(soup)
+      return moddb.Mod(soup)
 
 This would return a mod object, with you only having to import the bit you want to change from the original library, in that case aiohttp. This is not fully supported for all things however, for example trying to get the articles for that mod page you would be forced to completly parse the result page on your own or be forced to use requests.
 
@@ -148,6 +148,7 @@ The session the package uses will be updated and all further requests will now b
    :caption: Contents:
 
    filtering&sorting
+   snippets
    base
    pages
    boxes

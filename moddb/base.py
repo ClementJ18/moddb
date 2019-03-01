@@ -30,6 +30,9 @@ class Search:
         The text query that was used in the search
     results_max : int
         The total number of results for this search
+    filters : dict
+        Dictionnary of filters used to keep the query list persistent, can also be
+        unpacked and passed to the search function.
 
     """
     def __init__(self, **kwargs):
@@ -40,6 +43,7 @@ class Search:
         self.page = kwargs.get("page")
         self.query = kwargs.get("query")
         self.results_max = kwargs.get("results_max")
+        self.sort = kwargs.get("sort")
 
     def next_page(self) -> 'Search':
         """Returns a new search object with the next page of results, will raise ValueError 
@@ -102,7 +106,7 @@ class Search:
         if page < 1 or page > self.page_max:
             raise ValueError(f"Please pick a page between 1 and {self.page_max}")
 
-        return search(self.category, query=self.query, page=page, **self.filters)
+        return search(self.category, query=self.query, page=page, sort=self.sort, **self.filters)
 
     def resort(self, new_sort : Tuple[str, str]) -> 'Search': 
         """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
@@ -163,30 +167,29 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
         The search object containing the current query settings (so at to be able to redo the search easily),
         pagination metadata and helper methods to navigate the list of results.
     """
-    sort = f"{sort[0]}-{sort[1]}" if sort else None
+    sort_ready = f"{sort[0]}-{sort[1]}" if sort else None
 
-    game = filters.pop("game", None)
+    game = filters.get("game", None)
     game = game.id if game else None
 
     url = f"https://www.moddb.com/{category.name}/page/{page}"
-    filter_parsed = {key : value.value for key, value in filters.items()}
+    filter_parsed = {key : value.value for key, value in filters.items() if hasattr(value, "value")}
     cat = ThumbnailType[category.name[0:-1]]
 
-    html = get_page(url, params={"filter": "t", "kw": query, "sort": sort, "game": game, **filter_parsed})
+    html = get_page(url, params={"filter": "t", "kw": query, "sort": sort_ready, "game": game, **filter_parsed})
 
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
     
     try:
-        pages = int(html.find("div", class_="pages").find_all("a")[-1].string)
+        pages = int(html.find("div", class_="pages").find_all()[-1].string)
     except AttributeError:
         LOGGER.info("Search query %s has less than 30 results (only one page)", url)
         pages = 1
 
     results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"]) for x in search_raws]
     results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
-
     return Search(results=results, page_max=pages, page=page, filters=filters, 
-                  category=category, query=query, results_max=results_max)
+                  category=category, query=query, results_max=results_max, sort=sort)
 
 def parse(url : str, *, page_type : ThumbnailType = None) -> Any: 
     """Parse a url and return the appropriate object. The function will attempt to figure out the page itself
