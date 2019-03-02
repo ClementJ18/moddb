@@ -359,7 +359,7 @@ class Comment:
         Whether or not the comment was posted by a guest user
     location : Thumbnail
         Thumbnail of the place the comment is, only available when getting comments from get_member_comments. This
-        thumbnail does not guarantee that you will find the command if you parse it, since the url does not
+        thumbnail does not guarantee that you will find the comment if you parse it, since the url does not
         contain the page number.
     """
     def __init__(self, html):
@@ -577,7 +577,26 @@ class MemberStatistics:
         return f"<MemberStatistics rank={self.rank}/{self.total}>"
 
 class PlatformStatistics:
-    """Stats for platform pages."""
+    """Stats for platform pages.
+    
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to parse. Allows for finer control.
+
+    Attributes
+    -----------
+    hardware : int
+        Number of harware created for this platform
+    software : int
+        Number of software created for this platform
+    engines : int
+        Number of engines created for this platform
+    games : int
+        Number of games created for this platform
+    mods : int
+        Number of mods created for this platform
+    """
     def __init__(self, html):
         headings = ("Hardware", "Software", "Engines", "Games", "Mods")
         html_headings = html.find_all("h5", string=headings)
