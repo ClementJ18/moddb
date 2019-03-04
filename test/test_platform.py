@@ -3,7 +3,7 @@ import moddb
 
 class TestPlatform(unittest.TestCase):
     def setUp(self):
-        self.platform = moddb.pages.Platform(moddb.soup(getattr(self, "url", "https://www.moddb.com/platforms/pc")))
+        self.platform = moddb.pages.Platform(moddb.get_page(getattr(self, "url", "https://www.moddb.com/platforms/pc")))
 
     def test_get_comments(self):
         self.platform.get_comments()

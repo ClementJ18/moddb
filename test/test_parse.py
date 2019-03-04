@@ -30,7 +30,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             self.mods.append(moddb.pages.Mod(soup))
 
     def test_parse_games(self):
@@ -48,7 +48,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             self.games.append(moddb.pages.Game(soup))
 
     def test_parse_engines(self):
@@ -65,7 +65,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             self.engines.append(moddb.pages.Engine(soup))
 
     def test_parse_files(self):
@@ -83,7 +83,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             try:
                 moddb.pages.File(soup)
             except ValueError as e:
@@ -103,7 +103,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Addon(soup)
 
     def test_parse_medias(self):
@@ -130,7 +130,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Media(soup)
 
     def test_parse_articles(self):
@@ -148,7 +148,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Article(soup)  
 
     def test_parse_groups(self):
@@ -166,7 +166,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Group(soup)
 
     def test_parse_teams(self):
@@ -182,7 +182,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Team(soup) 
 
     def test_parse_jobs(self):
@@ -197,7 +197,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Job(soup)
 
     def test_parse_members(self):
@@ -215,7 +215,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             self.members.append(moddb.pages.Member(soup))
 
     def test_parse_front_page(self):
@@ -232,7 +232,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Platform(soup)
 
     def test_parse_hardware(self):
@@ -247,7 +247,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Hardware(soup)
 
     def test_parse_software(self):
@@ -263,7 +263,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Software(soup)
 
     def test_parse_polls(self):
@@ -278,7 +278,7 @@ class TestParsers(unittest.TestCase):
 
         for url in urls:
             print(url)
-            soup = moddb.utils.soup(url)
+            soup = moddb.utils.get_page(url)
             moddb.pages.Poll(soup)
 
     def test_parse_reviews(self):

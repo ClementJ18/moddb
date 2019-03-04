@@ -3,7 +3,7 @@ import moddb
 
 class TestMember(unittest.TestCase):
     def setUp(self):
-        self.member = moddb.pages.Member(moddb.soup(getattr(self, "url", "https://www.moddb.com/members/mladen1996")))
+        self.member = moddb.pages.Member(moddb.get_page(getattr(self, "url", "https://www.moddb.com/members/mladen1996")))
 
     def test_get_addons(self):
         addons = self.member.get_addons()

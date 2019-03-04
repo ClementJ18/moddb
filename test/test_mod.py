@@ -3,7 +3,7 @@ import moddb
 
 class TestMod(unittest.TestCase):
     def setUp(self):
-        self.mod = moddb.pages.Mod(moddb.soup(getattr(self, "url", "https://www.moddb.com/mods/edain-mod")))
+        self.mod = moddb.pages.Mod(moddb.get_page(getattr(self, "url", "https://www.moddb.com/mods/edain-mod")))
 
     def test_get_addons(self):
         addons = self.mod.get_addons()

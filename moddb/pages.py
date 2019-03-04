@@ -28,6 +28,9 @@ class Base:
     -----------
     id : int
         The id of the page
+    name_id : str
+        The name_id of the member, cannot be changed, it's a mix of the original username lowercased with
+        spaces removed and shortened.
     url : str
         The url of the page
     comments : CommentList
@@ -52,6 +55,8 @@ class Base:
             self.url = html.find("meta", property="og:url")["content"]
         except TypeError:
             self.url = join(html.find("a", string=self.name)["href"])
+
+        self.name_id = self.url.split("/")[0]
 
         try:
             self.report = join(html.find("a", string="Report")["href"])
@@ -716,7 +721,12 @@ class Page(Base, SharedMethodsMetaClass):
         A float out of ten representing the average rating for the page
     medias : List[Thumbnail]
         list of thumbnails representing all the combined media objects of a page (videos and images)
-
+    summary : str
+        Short description of the page, in plaintext.
+    description : str
+        The full description of the page, contains html
+    plaintext : str
+        Plaintext version of the full description
     """
     def __init__(self, html : bs4.BeautifulSoup, page_type : SearchCategory):
         super().__init__(html)
@@ -782,6 +792,22 @@ class Page(Base, SharedMethodsMetaClass):
             LOGGER.info("%s %s is not rated", self.__class__.__name__, self.name)
 
         self.medias = self._get_media(2, html=html)
+
+        try:
+            self.summary = html.find("meta", itemprop="description")["content"]
+        except TypeError:
+            self.summary = None
+            LOGGER.info("%s %s has no summary", self.__class__.__name__, self.name)
+            
+        self.description = str(html.find("div", id="profiledescription"))
+
+        try:
+            self.description = str(html.find("div", id="profiledescription"))
+            self.plaintext = html.find("div", id="profiledescription").text
+        except AttributeError:
+            LOGGER.info("%s %s has no extended description")
+            self.description = None
+            self.plaintext = None
 
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
         timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
@@ -1494,6 +1520,9 @@ class Job:
     -----------
     id : int
         id of the job
+    name_id : str
+        The name_id of the member, cannot be changed, it's a mix of the original username lowercased with
+        spaces removed and shortened.
     author : Thumbnail
         A member like thumbnail representing the poster of the job. Can be none if they desire to remain private.
     paid : bool
@@ -1516,6 +1545,7 @@ class Job:
         breadcrumb = json.loads(html.find("script", type="application/ld+json").string)["itemListElement"][-1]["Item"]
         self.name = breadcrumb["name"]
         self.url = breadcrumb["@id"]
+        self.name_id = self.url.split("/")[0]
         self.text = html.find("div", id="articlecontent").text
 
         profile_raw = html.find("span", string="Jobs").parent.parent.parent.find("div", class_="table tablemenu")
@@ -1570,6 +1600,12 @@ class Blog(Base):
         * **member** - order by member???
         * **date** - order by upload date, asc is most recent first, desc is oldest first
 
+    Attributes
+    -----------
+    name_id : str
+        The name_id of the member, cannot be changed, it's a mix of the original username lowercased with
+        spaces removed and shortened.
+
     """
     def __init__(self, *, heading, text):
         author = heading.find("span", class_="subheading").a
@@ -1580,6 +1616,7 @@ class Blog(Base):
         title = heading.div.h4.a
         self.name = title.string
         self.url = join(title["href"])
+        self.name_id = self.url.split("/")[0]
 
         self.html = str(text.content)
         self.plaintext = text.text
@@ -1849,6 +1886,9 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
     -----------
     name : str
         The name of the platform
+    name_id : str
+        The name_id of the member, cannot be changed, it's a mix of the original username lowercased with
+        spaces removed and shortened.
     id : int
         The moddb id of the platform
     url : str
@@ -1883,6 +1923,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
         self.id = None
 
         self.url = join(html.find("a", itemprop="mainEntityOfPage")["href"])
+        self.name_id = self.url.split("/")[0]
         try:
             self.description = html.find("div", id="profiledescription").p.string
         except AttributeError:

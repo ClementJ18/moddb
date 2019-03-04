@@ -3,7 +3,7 @@ import moddb
 
 class TestHardware(unittest.TestCase):
     def setUp(self):
-        self.hardware = moddb.pages.Hardware(moddb.soup(getattr(self, "url", "https://www.moddb.com/hardware/htc-vive")))
+        self.hardware = moddb.pages.Hardware(moddb.get_page(getattr(self, "url", "https://www.moddb.com/hardware/htc-vive")))
 
     def test_get_articles(self):
         articles = self.hardware.get_articles()

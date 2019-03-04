@@ -3,7 +3,7 @@ import moddb
 
 class TestTeam(unittest.TestCase):
     def setUp(self):
-        self.team = moddb.pages.Team(moddb.soup(getattr(self, "url", "https://www.moddb.com/company/edainmod-dev-team")))
+        self.team = moddb.pages.Team(moddb.get_page(getattr(self, "url", "https://www.moddb.com/company/edainmod-dev-team")))
 
     def test_get_addons(self):
         addons = self.team.get_addons()

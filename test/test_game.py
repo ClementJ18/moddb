@@ -3,7 +3,7 @@ import moddb
 
 class TestGame(unittest.TestCase):
     def setUp(self):
-        self.game = moddb.pages.Game(moddb.soup(getattr(self, "url", "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king")))
+        self.game = moddb.pages.Game(moddb.get_page(getattr(self, "url", "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king")))
 
     def test_get_addons(self):
         addons = self.game.get_addons()
