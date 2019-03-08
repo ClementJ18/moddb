@@ -2,8 +2,9 @@ from .boxes import CommentList, Comment, Thumbnail, MemberProfile, MemberStatist
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleCategory, Difficulty, TutorialCategory, Licence, \
-                   Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre
-from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object
+                   Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre, \
+                   Membership, GroupCategory
+from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object, request
 
 import re
 import bs4
@@ -49,7 +50,7 @@ class Base:
             self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
         except TypeError:
             self.id = None
-            LOGGER.info("%s %s has no id", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no id", self.__class__.__name__, self.name)
 
         try:
             self.url = html.find("meta", property="og:url")["content"]
@@ -62,7 +63,7 @@ class Base:
             self.report = join(html.find("a", string="Report")["href"])
         except TypeError:
             self.report = None
-            LOGGER.info("%s %s cannot be reported", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' cannot be reported", self.__class__.__name__, self.name)
 
         self.comments = self._get_comments(html)
 
@@ -750,17 +751,17 @@ class Page(Base, SharedMethodsMetaClass):
         try:
             self.files = self._get_files(html)
         except AttributeError:
-            LOGGER.info("%s %s has no files", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no files", self.__class__.__name__, self.name)
             self.files = []
 
         articles_raw = None
         try:
-            string = "Articles" if page_type == SearchCategory.mods else "Related Articles"
-            articles_raw = html.find("span", string=string).parent.parent.parent.find("div", class_="table")
+            raw = html.find("span", string="Articles") or html.find("span", string="Related Articles")
+            articles_raw = raw.parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, date=x.find("time")["datetime"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
-            LOGGER.info("%s %s has no article suggestions", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no article suggestions", self.__class__.__name__, self.name)
             self.articles = []
 
         #main page article
@@ -768,28 +769,28 @@ class Page(Base, SharedMethodsMetaClass):
             self.article = PartialArticle(articles_raw)
         else:
             self.article = None
-            LOGGER.info("%s %s has no front page article", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no front page article", self.__class__.__name__, self.name)
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
             self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
-            LOGGER.info("%s %s has no tags", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
 
         #imagebox
         try:
             imagebox = html.find("ul", id="imagebox").find_all("li")[1:-2]
             self.imagebox = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], type=ThumbnailType(get_type(x.a.img))) for x in imagebox if x.a]
         except (AttributeError, TypeError):
-            LOGGER.info("%s %s has no images", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no images", self.__class__.__name__, self.name)
             self.imagebox = []
 
         try:
             self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
         except AttributeError:
             self.rating = 0.0
-            LOGGER.info("%s %s is not rated", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' is not rated", self.__class__.__name__, self.name)
 
         self.medias = self._get_media(2, html=html)
 
@@ -797,7 +798,7 @@ class Page(Base, SharedMethodsMetaClass):
             self.summary = html.find("meta", itemprop="description")["content"]
         except TypeError:
             self.summary = None
-            LOGGER.info("%s %s has no summary", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no summary", self.__class__.__name__, self.name)
             
         self.description = str(html.find("div", id="profiledescription"))
 
@@ -805,7 +806,7 @@ class Page(Base, SharedMethodsMetaClass):
             self.description = str(html.find("div", id="profiledescription"))
             self.plaintext = html.find("div", id="profiledescription").text
         except AttributeError:
-            LOGGER.info("%s %s has no extended description")
+            LOGGER.info("'%s' '%s' has no extended description")
             self.description = None
             self.plaintext = None
 
@@ -961,7 +962,7 @@ class Engine(Page, GetGamesMetaClass):
         try:
             self.games = self._get_games(html)
         except AttributeError:
-            LOGGER.info("Engine %s has no games", self.name)
+            LOGGER.info("Engine '%s' has no games", self.name)
             self.games = []
 
 @concat_docs
@@ -1001,10 +1002,12 @@ class File(Base):
 
     Attributes
     -----------
+    filename : str
+        The name of the file
     hash : str
         The MD5 hash of the file
     name : str
-        The name of the file
+        The name of the page
     size : int
         the file size in bytes
     today : int
@@ -1032,7 +1035,8 @@ class File(Base):
 
         info = html.find("div", class_="table tablemenu")
         file = {x.string.lower() : x.parent.span.string.strip() for x in info.find_all("h5", string=("Filename", "Size", "MD5 Hash"))}
-        self.name = file["filename"]
+        self.name = html.find("a", title="Report").parent.parent.find("span", class_="heading").string
+        self.filename = file["filename"]
         super().__init__(html)
 
         self.hash = file["md5 hash"]
@@ -1061,9 +1065,31 @@ class File(Base):
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
 
+    def save(self, path = None): 
+        """Save the file to a location.
+
+        Parameters
+        -----------
+        path : Optional[str]
+            Path to the location you wish to save the file at. If none is provided
+            it will save in the current working directory.
+
+        """
+        download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
+        mirror = join(download.find("a", string=f"download {self.name}")["href"])
+        file = request(mirror)
+        path = f"{path}/{self.filename}" if path else self.filename
+        with open(path, "wb") as f:
+            f.write(file.content)
+
 @concat_docs
 class Addon(File):
-    """Object representing an addon
+    """Object representing an addon. Seemingly the only difference between an addon and a file is in
+    the semantics. A file often represents something official released by the page, e.g. the mod installation
+    or an official guide where as addons are often fan made and might not be directly endorsed by the page owners
+    even if it is allowed. They literally add on to the page's content without becoming part of it. There is a slight
+    difference in their profiles but nothing beyond that.
+
     Parameters
     -----------
     html : bs4.BeautifulSoup
@@ -1094,7 +1120,6 @@ class Addon(File):
 
 
     """
-    #ToDo: find difference between addon and file?
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
 
@@ -1253,10 +1278,17 @@ class Article(Base):
         The article text without any html
     summary : str
         plaintext intro to the article
+    tutorial_category : TutorialCategory
+        If the article category is tutorial, this represents the area the tutorial covers, else it is None
+    difficulty : Difficulty
+        If the article category is tutorial, this represents how hard the tutorial is.
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        #ToDo: tutorial type
-        self.name = html.find("span", itemprop="headline").string
+        try:
+            self.name = html.find("span", itemprop="headline").string
+        except AttributeError:
+            self.name = html.find("span", itemprop="heading").string
+
         super().__init__(html)
 
         raw_type = html.find("h5", string="Browse").parent.span.a.string
@@ -1270,7 +1302,7 @@ class Article(Base):
         try:
             self.profile = Profile(html)
         except AttributeError:
-            LOGGER.info("%s has no profile", self.name)
+            LOGGER.info("'%s' has no profile", self.name)
             self.profile = None
 
         try:
@@ -1278,7 +1310,7 @@ class Article(Base):
             self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
-            LOGGER.info("%s %s has no tags", self.__class__.__name__, self.name) 
+            LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name) 
         
         views_raw = raw.find("h5", string="Views").parent.span.a.string
         self.views, self.today = get_views(views_raw)
@@ -1292,6 +1324,11 @@ class Article(Base):
         self.plaintext = html.find("div", itemprop="articleBody").text
 
         self.summary = html.find("p", class_="introductiontext").string
+
+        if self.category == ArticleCategory.tutorials:
+            cat = html.find("span", itemprop="proficiencyLevel").nextSibling.strip()
+            self.tutorial_category = TutorialCategory[cat.replace("/", "_").replace(" ", "_").lower()]
+            self.difficulty = Difficulty[html.find("span", itemprop="proficiencyLevel").string.lower()]
 
     def __repr__(self):
         return f"<Article title={self.name} type={self.category.name}>"
@@ -1356,21 +1393,21 @@ class Group(Page):
         try:
             self.profile = Profile(html)
         except AttributeError:
-            LOGGER.info("Entity %s has no profile (private)", self.name)
+            LOGGER.info("Entity '%s' has no profile (private)", self.name)
             self.profile = None
             self.private = True
 
         try:
             self.stats = Statistics(html)
         except AttributeError:
-            LOGGER.info("Entity %s has no stats (private)", self.name)
+            LOGGER.info("Entity '%s' has no stats (private)", self.name)
             self.stats = None
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
             self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
-            LOGGER.info("Entity %s has no tags (private)", self.name)
+            LOGGER.info("Entity '%s' has no tags (private)", self.name)
             self.tags = {}
 
         try:
@@ -1379,7 +1416,7 @@ class Group(Page):
             try:
                 self.embed = str(html.find_all("textarea")[1].a)
             except IndexError:
-                LOGGER.info("Group %s has no embed", self.name)
+                LOGGER.info("Group '%s' has no embed", self.name)
                 self.embed = None
 
         self.suggestions = self._get_suggestions(html)
@@ -1389,7 +1426,7 @@ class Group(Page):
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear", recursive=False)
             self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"], summary=x.find("p").string, date=x.find("time")["datetime"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
-            LOGGER.info("Group %s has no article suggestions", self.name)
+            LOGGER.info("Group '%s' has no article suggestions", self.name)
             self.articles = []
 
         try:
@@ -1419,7 +1456,7 @@ class Group(Page):
         try:
             suggestions_raw = html.find("span", string=("You may also like", "Popular Articles")).parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
         except AttributeError:
-            LOGGER.info("Group %s has no sidebar suggestions", self.name)
+            LOGGER.info("Group '%s' has no sidebar suggestions", self.name)
             return []
 
         suggestions = []
@@ -1471,26 +1508,24 @@ class Team(Group, GetEnginesMetaClass, GetGamesMetaClass, GetModsMetaClass, GetS
         A list of engine like objects that the team has authored.     
 
     """
-    #Todo: possibly need high level get_engines and get_games
-    #Todo: teams can't author mods? might need different inheritance
     def __init__(self, html : bs4.BeautifulSoup):
         super().__init__(html)
         try:
             self.games = self._get_games(html)
         except AttributeError:
-            LOGGER.info("Team %s has no games", self.name)
+            LOGGER.info("Team '%s' has no games", self.name)
             self.games = []
 
         try:
             self.engines = self._get_engines(html)
         except AttributeError:
-            LOGGER.info("Team %s has no engines", self.name)
+            LOGGER.info("Team '%s' has no engines", self.name)
             self.engines = []
         try:
             mods = html.find("span", string="Popular Mods").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[1:]
             self.mods = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.mod, image=x.a.img["src"]) for x in mods]
         except AttributeError:
-            LOGGER.info("Team %s has no mods", self.name)
+            LOGGER.info("Team '%s' has no mods", self.name)
             self.mods = []
 
 @concat_docs
@@ -1556,7 +1591,7 @@ class Job:
             author = profile_raw.find("h5", string="Author").parent.span.a
             self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
         except AttributeError:
-            LOGGER.info("Job %s has no author", self.name)
+            LOGGER.info("Job '%s' has no author", self.name)
             self.author = None
 
         self.paid = profile_raw.find("h5", string="Paid").parent.a.string == "Yes"
@@ -1566,7 +1601,7 @@ class Job:
             self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
-            LOGGER.info("%s %s has no tags", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
 
         self.skill = JobSkill(int(profile_raw.find("h5", string="Skill").parent.span.a["href"][-1]))
 
@@ -1576,7 +1611,7 @@ class Job:
             related = html.find("div", class_="tablerelated").find_all("a", class_="image")
             self.related = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related]
         except AttributeError:
-            LOGGER.info("Job %s has no related companies", self.name)
+            LOGGER.info("Job '%s' has no related companies", self.name)
             self.related = []
 
     def __repr__(self):
@@ -1667,26 +1702,26 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
         try:
             self.profile = MemberProfile(html)
         except AttributeError:
-            LOGGER.info("Member %s has no profile (private)", self.name)
+            LOGGER.info("Member '%s' has no profile (private)", self.name)
             self.profile = None
 
         try:
             self.stats = MemberStatistics(html)
         except  AttributeError:
-            LOGGER.info("Member %s has no stats (private)", self.name)
+            LOGGER.info("Member '%s' has no stats (private)", self.name)
             self.stats = None
 
         try:
             self.description = html.find("div", id="profiledescription").p.string
         except AttributeError:
-            LOGGER.info("Member %s has no description", self.name)
+            LOGGER.info("Member '%s' has no description", self.name)
             self.description = None
 
         try:
             groups_raw = html.find("span", string="Groups").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-2]
             self.groups = [Thumbnail(name=div.a["title"], url=div.a["href"], type=ThumbnailType.group) for div in groups_raw]
         except AttributeError:
-            LOGGER.info("Member %s doesn't have any groups", self.name)
+            LOGGER.info("Member '%s' doesn't have any groups", self.name)
             self.groups = []
 
         try:
@@ -1694,21 +1729,21 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             self.blog = Blog(heading=blogs_raw.pop(0), text=blogs_raw.pop(0))
         except (TypeError, AttributeError):
             self.blog = None
-            LOGGER.info("Member %s has no front page blog", self.name)
+            LOGGER.info("Member '%s' has no front page blog", self.name)
 
         try:
             blogs_raw = html.find("span", string="My Blogs").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
             self.blogs = [Thumbnail(name=blog.a.string, url=blog.a["href"], type=ThumbnailType.blog) for blog in blogs_raw[:-2]]
         except (TypeError, AttributeError):
             self.blogs = []
-            LOGGER.info("Member %s has no blog suggestions", self.name)
+            LOGGER.info("Member '%s' has no blog suggestions", self.name)
 
         try:
             friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
             self.friends = [Thumbnail(name=friend.a["title"], url=friend.a["href"], type=ThumbnailType.member) for friend in friends]
         except AttributeError:
             self.friends = []
-            LOGGER.info("Member %s has no friends ;(", self.name)
+            LOGGER.info("Member '%s' has no friends ;(", self.name)
 
     def __repr__(self):
         return f"<Member name={self.name} level={self.profile.level}>"
@@ -1777,7 +1812,8 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
         index : int
             The page number to get the comments from.
         show_deleted : Optional[bool]
-            Pass true to show deleted user comments
+            Pass true to show deleted user comments. Only works if it is a page
+            you have permissions on.
 
         Returns
         --------
@@ -1785,7 +1821,6 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
             A list of comments.
 
         """
-        #TODO: add where the comments come from
         params = {
             "deleted" : "t" if show_deleted else None
         }
@@ -1793,35 +1828,56 @@ class Member(Page, GetGamesMetaClass, GetModsMetaClass):
         html = get_page(f"{self.url}/comments/page/{index}", params=params)
         return self._get_comments(html)
 
-    def get_friends(self, index : int = 1) -> List[Thumbnail]:
+    def get_friends(self, index : int = 1, *, username : str = None) -> List[Thumbnail]:
         """Get a page of the friends of the member
     
         Parameters
         -----------
         index : int
             The page number to get the friends from.
+        username : Optional[str]
+            The username of the user you are looking for
 
         Returns
         --------
         List[Thumbnail]
             A list of member like thumbnails of the member's friends
         """
-        return self._get(f"{self.url}/friends/page/{index}", ThumbnailType.member)
+        params = {
+            "filter": "t",
+            "username": username
+        }
 
-    def get_groups(self, index : int = 1) -> List[Thumbnail]:
+        return self._get(f"{self.url}/friends/page/{index}", ThumbnailType.member, params=params)
+
+    def get_groups(self, index : int = 1, *, query : str = None, subscription : Membership = None,
+        category : GroupCategory = None) -> List[Thumbnail]:
         """Get a page of the groups and teams a member is part of.
         
         Parameters
         -----------
         index : int
             The page number to get the friends from.
+        query : Optional[str]
+            The text to look for in the group's name
+        subscription : Optional[Membership]
+            The membership rules
+        category : Optional[GroupCategory]
+            The category of groups to search for
 
         Returns
         --------
         List[Thumbnail]
             A list of team/group like thumbnails the member is part of
         """
-        return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group)
+        params = {
+            "filter": "t",
+            "kw": query,
+            "subscription": subscription.value if subscription else None,
+            "category": category.value if category else None
+        }
+
+        return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group, params=params)
 
 @concat_docs
 class FrontPage:
@@ -1933,7 +1989,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
             company = html.find("h5", string="Company").parent.span.a
             self.company = Thumbnail(name=company.string, url=company["href"], type=ThumbnailType.team)
         except AttributeError:
-            LOGGER.info("Platform %s has no company", self.name)
+            LOGGER.info("Platform '%s' has no company", self.name)
             self.company = None
 
         self.homepage = html.find("h5", string="Homepage").parent.span.a["href"]
@@ -1951,7 +2007,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
                 "facebook": share[3]["href"]
             }
         except (AttributeError, IndexError):
-            LOGGER.info("Something funky about share box of platform %s", self.name)
+            LOGGER.info("Something funky about share box of platform '%s'", self.name)
             self.share = None
 
         self.comments = self._get_comments(html)
@@ -2013,7 +2069,7 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass):
             self.rating = float(html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"])
         except AttributeError:
             self.rating = 0.0
-            LOGGER.info("%s %s is not rated", self.profile.category.name, self.name)
+            LOGGER.info("'%s' '%s' is not rated", self.profile.category.name, self.name)
 
         articles_raw = None
         try:
@@ -2021,21 +2077,21 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass):
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], image=x.a.img["src"] if x.a.img else None, summary=x.find("p").string, date=x.find("time")["datetime"], type=ThumbnailType.article) for x in thumbnails]
         except AttributeError:
-            LOGGER.info("%s %s has no article suggestions", self.profile.category.name, self.name)
+            LOGGER.info("'%s' '%s' has no article suggestions", self.profile.category.name, self.name)
             self.articles = []
 
         if articles_raw:
             self.article = PartialArticle(articles_raw)
         else:
             self.article = None
-            LOGGER.info("%s %s has no front page article", self.profile.category.name, self.name)
+            LOGGER.info("'%s' '%s' has no front page article", self.profile.category.name, self.name)
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
             self.tags = {x.string : join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
-            LOGGER.info("Hardware %s has no tags", self.name) 
+            LOGGER.info("Hardware '%s' has no tags", self.name) 
 
         self.medias = self._get_media(1, html=html)
 
@@ -2044,7 +2100,7 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass):
             suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all("a", class_="image")
             self.suggestions = [Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions]
         except AttributeError:
-            LOGGER.info("%s %s has no suggestions", self.__class__.__name__, self.name)
+            LOGGER.info("'%s' '%s' has no suggestions", self.__class__.__name__, self.name)
 
 @concat_docs
 class Hardware(HardwareAndSoftware, GetGamesMetaClass, GetSoftwareHardwareMetaClass):
@@ -2070,35 +2126,35 @@ class Hardware(HardwareAndSoftware, GetGamesMetaClass, GetSoftwareHardwareMetaCl
             hardware = html.find("span", string="Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
             self.hardware = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.hardware, image=x.a.img["src"]) for x in hardware]
         except AttributeError:
-            LOGGER.info("Hardware %s has no hardware", self.name)
+            LOGGER.info("Hardware '%s' has no hardware", self.name)
             self.hardware = []
 
         try:
             software = html.find("span", string="Software").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
             self.software = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.software, image=x.a.img["src"]) for x in software]
         except AttributeError:
-            LOGGER.info("Hardware %s has no software", self.name)
+            LOGGER.info("Hardware '%s' has no software", self.name)
             self.software = []
 
         try:
             games = html.find("span", string="Games").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
             self.games = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.game, image=x.a.img["src"]) for x in games]
         except AttributeError:
-            LOGGER.info("Hardware %s has no games", self.name)
+            LOGGER.info("Hardware '%s' has no games", self.name)
             self.games = []
 
         try:
             history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
             self.history = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in history]
         except AttributeError:
-            LOGGER.info("Harware %s has no history", self.name)
+            LOGGER.info("Harware '%s' has no history", self.name)
             self.history = []
 
         try:
             recommended = html.find("span", string="Recommended").parent.parent.parent.find_all("a", class_="image")
             self.recommended = [Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.hardware, image=x.img["src"]) for x in recommended]
         except AttributeError:
-            LOGGER.info("Hardware %s has no recommended", self.name)
+            LOGGER.info("Hardware '%s' has no recommended", self.name)
             self.recommended = []
 
 @concat_docs

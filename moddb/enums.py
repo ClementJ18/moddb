@@ -5,7 +5,7 @@ class SearchCategory(enum.Enum):
     games = 0
     mods = 1
     addons = 2
-    dowloads = 3
+    downloads = 3
     videos = 4
     articles = 5
     engines = 6
@@ -48,7 +48,7 @@ class ArticleCategory(enum.Enum):
 class Difficulty(enum.Enum):
     """Difficulty of the tutorial"""
     basic = 1
-    intermidiate = 2
+    intermediate = 2
     advanced = 3
 
 class TutorialCategory(enum.Enum):
