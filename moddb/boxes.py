@@ -9,9 +9,8 @@ import sys
 import datetime
 from typing import List, Any
 
-__all__ = ['Statistics', 'Profile', 'Style', 'Thumbnail', 
-           'Comment', 'CommentList', 'MemberProfile', 'MemberStatistics', 'PlatformStatistics', 
-           'PartialArticle', 'Option']
+__all__ = ['Statistics', 'Profile', 'Style', 'Thumbnail', 'Comment', 'CommentList', 'MemberProfile', 
+           'MemberStatistics', 'PlatformStatistics', 'PartialArticle', 'Option']
 
 class Statistics:
     """The stats box, on pages that have one. This represents total stats and daily stats in one

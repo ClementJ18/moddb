@@ -4,7 +4,8 @@ from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, Addon
                    MediaCategory, JobSkill, ArticleCategory, Difficulty, TutorialCategory, Licence, \
                    Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre, \
                    Membership, GroupCategory
-from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object, request
+from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object, request, \
+                   get_type_from
 
 import re
 import bs4
@@ -1891,6 +1892,10 @@ class FrontPage:
 
     Attributes
     -----------
+    slider : List[Thumnail]
+        A list of object like thumbnails presented by the slider present on
+        the front page, this is a catered list of promoted content, can contain
+        any type of object.
     articles : List[Thumbnail]
         A list of article like thumbnail objects representing the suggested
         articles on the front page.
@@ -1909,6 +1914,32 @@ class FrontPage:
     """
     def __init__(self, html : bs4.BeautifulSoup):
         #ToDo: add promoted content of slider
+        slider = html.find("div", class_="rotatorholder").find_all("div", class_="rotatorbox")
+        self.slider = []
+        for x in slider:
+            name = x.a.find("h2")
+            summary = x.a.find("p")
+
+            image = re.search(r'\((.*)\)', x["style"])
+            if image:
+                image = image.group(1)
+            else:
+                try:
+                    image = x["data-bg"]
+                except KeyError:
+                    image = None
+
+            thumbnail = Thumbnail(
+                name=name.string if name else None, 
+                url=x.a["href"], 
+                summary=summary.string if summary else None, 
+                image=image, 
+                type=get_type_from(x.a["href"])
+            )
+
+            self.slider.append(thumbnail)
+
+
         articles = html.find("span", string="Latest Articles").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
         self.articles = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.article, image=x.a.img["src"], summary=x.find("p").string, date=x.find("time")["datetime"]) for x in articles]
 
