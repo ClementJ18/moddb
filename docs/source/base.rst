@@ -14,7 +14,6 @@ Search
 -------
 .. autoclass:: moddb.base.Search
     :members:
-    :undoc-members:
     :inherited-members:
 
 search

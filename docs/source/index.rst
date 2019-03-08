@@ -78,6 +78,8 @@ Of course, relying on the library isn't always what we want, you'd be forced to 
 
 This would return a mod object, with you only having to import the bit you want to change from the original library, in that case aiohttp. This is not fully supported for all things however, for example trying to get the articles for that mod page you would be forced to completly parse the result page on your own or be forced to use requests.
 
+See more snippets there: :ref:`snippets-ref`.
+
 
 Searching
 ----------
@@ -154,12 +156,3 @@ The session the package uses will be updated and all further requests will now b
    boxes
    utils
    enums
-
-   
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

@@ -11,7 +11,6 @@ Object
 -------
 .. autoclass:: moddb.utils.Object
     :members:
-    :undoc-members:
     :inherited-members:
     
 

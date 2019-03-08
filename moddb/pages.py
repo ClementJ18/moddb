@@ -1438,6 +1438,7 @@ class Group(Page):
         self.medias = self._get_media(2, html=html)
 
     def get_reviews(*args, **kwargs):
+        """"""
         raise AttributeError(f"{self.__class__.__name__} has no 'get_reviews' attribute")
 
     def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
@@ -1913,7 +1914,6 @@ class FrontPage:
 
     """
     def __init__(self, html : bs4.BeautifulSoup):
-        #ToDo: add promoted content of slider
         slider = html.find("div", class_="rotatorholder").find_all("div", class_="rotatorbox")
         self.slider = []
         for x in slider:
