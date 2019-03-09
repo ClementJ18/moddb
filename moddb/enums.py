@@ -33,6 +33,13 @@ class Category(enum.Enum):
     engines = "engines"
     downloads = "downloads"
 
+class RSSType(enum.Enum):
+    """Enum to define the type of RSS you want to get from this page"""
+    articles = 0
+    downloads = 1
+    images = 2
+    videos = 3
+
 class MediaCategory(enum.Enum):
     """What category a media object is, use for read purposes."""
     video = 0

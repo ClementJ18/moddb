@@ -3,7 +3,7 @@ from .boxes import CommentList, Comment, Thumbnail, MemberProfile, MemberStatist
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleCategory, Difficulty, TutorialCategory, Licence, \
                    Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre, \
-                   Membership, GroupCategory
+                   Membership, GroupCategory, RSSType
 from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object, request, \
                    get_type_from
 
@@ -58,7 +58,7 @@ class Base:
         except TypeError:
             self.url = join(html.find("a", string=self.name)["href"])
 
-        self.name_id = self.url.split("/")[0]
+        self.name_id = self.url.split("/")[-1]
 
         try:
             self.report = join(html.find("a", string="Report")["href"])
@@ -732,6 +732,7 @@ class Page(Base, SharedMethodsMetaClass):
     """
     def __init__(self, html : bs4.BeautifulSoup, page_type : SearchCategory):
         super().__init__(html)
+        self._type = page_type
 
         #boxes
         if page_type != SearchCategory.members:
@@ -810,6 +811,21 @@ class Page(Base, SharedMethodsMetaClass):
             LOGGER.info("'%s' '%s' has no extended description")
             self.description = None
             self.plaintext = None
+
+    def rss(self, type : RSSType):
+        """Get the RSS feed url for the page depending on which feed type you want
+
+        Parameters
+        -----------
+        type : RSSType
+            The type of feed you desire to get
+
+        Returns
+        --------
+        str
+            URL for the feed type
+        """
+        return f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
 
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
         timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:

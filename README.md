@@ -1,5 +1,5 @@
 # ModDB Reader
-**Library is approaching stable state. A release can be expected within the next few months if all goes well.**
+**Library is now stable**
 
 The goal of the library is to be able to navigate ModDB purely programmatically through scraping and parsing of the various models present on the website. This is based off a command of my bot which can parse either a game or a mod, this command gave birth to the original library which was extremely limited in its abilities and only able to parse a few pages with inconsistencies. This library is a much more mature and professional attempt at the whole idea, adding on a much deeper understanding of OOP.
 
@@ -24,26 +24,24 @@ Check out the [documentation](https://moddb.readthedocs.io) for more information
 
 [Support](https://discord.gg/Ape8bZt)
 
-## Finished Models
-* Mod
-* Game  
-* Engine
-* File
-* Media
-* Addon
-* Article
-* Blog
-* User
-* Team
-* Group
-* Job
-* Search Page
-* Front Page
-* Platforms
-* Software
-* HardwAre
-
-## WIP Models
+## Models
+* [x] Mod
+* [x] Game  
+* [x] Engine
+* [x] File
+* [x] Media
+* [x] Addon
+* [x] Article
+* [x] Blog
+* [x] User
+* [x] Team
+* [x] Group
+* [x] Job
+* [x] Search Page
+* [x] Front Page
+* [x] Platforms
+* [x] Software
+* [x] HardwAre
 
 ## Glossary
 * **Partial[Model]**: A version of the model which does not contain all the attributes of the full model. Mainly because that model is being displayed as a preview in another page. Not to confuse with Thumbnails, Thumbnails are only guaranteed to contain a name and url of the page.
