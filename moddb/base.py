@@ -1,4 +1,4 @@
-from .enums import SearchCategory, ThumbnailType
+from .enums import SearchCategory, ThumbnailType, RSSType
 from .boxes import Thumbnail
 from .utils import get_page, LOGGER, normalize, get_type_from
 from .pages import FrontPage, Member
@@ -281,3 +281,18 @@ def front_page() -> FrontPage:
     """
     html = get_page("https://www.moddb.com")
     return FrontPage(html)
+
+def rss(type : RSSType):
+    """Get the RSS feed url for the entire site depending on which feed type you want
+
+    Parameters
+    -----------
+    type : RSSType
+        The type of feed you desire to get
+
+    Returns
+    --------
+    str
+        URL for the feed type
+    """
+    return f'https://rss.moddb.com/{type.name}/feed/rss.xml'  

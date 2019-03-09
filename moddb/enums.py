@@ -39,6 +39,12 @@ class RSSType(enum.Enum):
     downloads = 1
     images = 2
     videos = 3
+    tutorials = 4
+    reviews = 5
+    addons = 6
+    blogs = 7
+    headlines = 8
+
 
 class MediaCategory(enum.Enum):
     """What category a media object is, use for read purposes."""

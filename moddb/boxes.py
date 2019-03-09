@@ -62,7 +62,6 @@ class Statistics:
     def __repr__(self):
         return f"<Statistics rank={self.rank}/{self.total}>"
 
-#mod, game, member, addon, engine, company, group
 class Profile:
     """The profile object is used for several models and as such attribute vary based on which model
     the profile is attached too. Profiles are only pressent on Mod, Game, Member, Addon, Engine, Company,
