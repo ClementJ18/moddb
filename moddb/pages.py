@@ -677,7 +677,23 @@ class GetSoftwareHardwareMetaClass:
 
         return self._get(f"{self.url}/software/page/{index}", ThumbnailType.software, params=params)
 
-class Page(Base, SharedMethodsMetaClass):
+class RSSFeedMetaClass:
+    def rss(self, type : RSSType):
+        """Get the RSS feed url for the page depending on which feed type you want
+
+        Parameters
+        -----------
+        type : RSSType
+            The type of feed you desire to get
+
+        Returns
+        --------
+        str
+            URL for the feed type
+        """
+        return f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
+
+class Page(Base, SharedMethodsMetaClass, RSSFeedMetaClass):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
     those classes.
 
@@ -811,21 +827,6 @@ class Page(Base, SharedMethodsMetaClass):
             LOGGER.info("'%s' '%s' has no extended description")
             self.description = None
             self.plaintext = None
-
-    def rss(self, type : RSSType):
-        """Get the RSS feed url for the page depending on which feed type you want
-
-        Parameters
-        -----------
-        type : RSSType
-            The type of feed you desire to get
-
-        Returns
-        --------
-        str
-            URL for the feed type
-        """
-        return f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
 
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
         timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
@@ -2078,7 +2079,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
     def __repr__(self):
         return f"<Platform name={self.name}>"
 
-class HardwareAndSoftware(Base, SharedMethodsMetaClass):
+class HardwareAndSoftware(Base, SharedMethodsMetaClass, RSSFeedMetaClass):
     """Shared class for Hardware and Software
 
     Attributes
@@ -2168,6 +2169,7 @@ class Hardware(HardwareAndSoftware, GetGamesMetaClass, GetSoftwareHardwareMetaCl
     """
     def __init__(self, html):
         super().__init__(html)
+        self._type = SearchCategory.hardwares
 
         try:
             hardware = html.find("span", string="Hardware").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)[:-1]
@@ -2210,6 +2212,7 @@ class Software(HardwareAndSoftware):
     """
     def __init__(self, html):
         super().__init__(html)
+        self._type = SearchCategory.softwares
 
 
 @concat_docs
