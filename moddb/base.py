@@ -20,7 +20,7 @@ class Search:
         The list of results the search returned
     category : ThumbnailType
         The type results
-    filters : dict{str : Enum}
+    filters : Dict[str : Enum]
         The dict of filters that was used to search for the results
     page_max : int
         The number of pages

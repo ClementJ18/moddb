@@ -64,7 +64,7 @@ class Statistics:
 
 class Profile:
     """The profile object is used for several models and as such attribute vary based on which model
-    the profile is attached too. Profiles are only pressent on Mod, Game, Member, Addon, Engine, Company,
+    the profile is attached too. Profiles are only present on Mod, Game, Member, Addon, Engine, Company,
     Hardware, Software and Group pages.
     
     Parameters
@@ -74,9 +74,10 @@ class Profile:
 
     Attributes
     -----------
-    category : Union[AddonCategory, HardwareCategory, SoftwareCategory, TeamCategory, GroupCategory]
+    category : Union[AddonCategory, HardwareCategory, SoftwareCategory, TeamCategory, GroupCategory, SearchCategory]
         The category the page falls under within the context of what the page is. E.g the page is an Addon category
-        will be an AddonCategory enum
+        will be an AddonCategory enum. If the category of the page doesn't fall under any of the above mentionned
+        the attribute will be of type SearchCategory.
     contact : str
         The url to contact the page owner
     follow : str
@@ -130,6 +131,7 @@ class Profile:
         matches.reverse()
         page_type = SearchCategory[matches[0] if matches[0].endswith("s") else matches[0]+"s"]
         
+        self.category = page_type
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find("div", class_="table tablemenu")
         self.contact = join(html.find("h5", string="Contact").parent.span.a["href"])
         self.follow = join(profile_raw.find_all("h5", string=["Mod watch", "Game watch", "Group watch", "Engine watch", "Hardware watch", "Software watch"])[0].parent.span.a["href"])

@@ -145,6 +145,19 @@ The session the package uses will be updated and all further requests will now b
    import moddb
    moddb.logout()
 
+Installing
+------------
+This package is not available on Pypi but can still be installed using pip if you also have git installed. Else you will have to download the repository and instal using the setup.py script located at root. To install with pip:: 
+
+    pip install -U git+git://github.com/ClementJ18/moddb.git@v0.2
+
+Uninstalling
+-------------
+To uninstall the package:: 
+
+    pip uninstall moddb
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

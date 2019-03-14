@@ -6,4 +6,4 @@ from .pages import *
 import requests
 SESSION = requests.Session()
 
-__version__ = "0.0.2"
+__version__ = "0.2"

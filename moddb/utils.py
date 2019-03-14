@@ -46,11 +46,6 @@ def concat_docs(cls):
 
     return cls
 
-def get_tags(html):
-    """Helper function to return the tags found on a page. Not implemented"""
-    #ToDo
-    pass
-
 def get_date(d : str) -> datetime.datetime:
     """A helper function that takes a ModDB string representation of time and returns an equivalent 
     datetime.datetime object. This can range from a datetime with the full year to
