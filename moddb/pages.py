@@ -17,7 +17,7 @@ __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
            'Team', 'Group', 'Job', 'Blog', 'Member', 'FrontPage', 'Review',
            'Platform', 'Poll', 'Software', 'Hardware']
 
-class Base:
+class BaseMetaClass:
     """An abstract class that implements the attributes present on nearly every page. In addition, it implements
     some shared hidden methods and the top level get_comments method.
 
@@ -93,81 +93,6 @@ class Base:
                     
         return comments
 
-    def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
-        """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
-        will be a list of Thumbnail objects that can be parsed individually.
-
-        Parameters
-        -----------
-        html : bs4.BeautifulSoup
-            The html page we are trying to parse the suggestions for
-
-        Returns
-        --------
-        List[Thumbnail]
-            The list of suggestions as thumbnails.
-        """
-        suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
-        suggestions = []
-        for x in suggestions_raw:
-            try:
-                link = x.find("a", class_="image")
-                suggestion_type = link["href"].split("/")[1].replace("s", "")
-                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
-                suggestions.append(suggestion)
-            except (AttributeError, TypeError):
-                pass
-
-        return suggestions
-
-    def _get_games(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
-        """Used both for Teams and Engines, returns a list of games  present on the page
-        as Thumbnail objects.
-
-        Parameters
-        ----------
-        html : bs4.BeautifulSoup
-            The html to extract the list of games from
-
-        Returns
-        -------
-        List[Thumbnail]
-            The list of games on the page as Thumbnail objects.
-        """
-        games_raw = html.find(string="Games").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
-        games = []
-        for x in games_raw:
-            link = x.find("div", class_="content").h4.a
-            image_url = link.parent.parent.parent.find("img")["src"]
-            game = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.game)
-            games.append(game)
-
-        return games
-
-    def _get_files(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
-        """Cache the files present on the page. Up to 5 files might be present
-
-        Parameters
-        -----------
-        html : bs4.BeautifulSoup
-            The page to cache the files from
-
-        Returns
-        -------
-        List[Thumbnail]
-            The list of file like thumbnails
-        """
-
-        files_raw = html.find(string="Files").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
-        files = []
-        for x in files_raw:
-            link = x.find("div", class_="content").h4.a
-            image_url = link.parent.parent.parent.find("img")["src"]
-            file = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.file)
-            files.append(file)
-
-        return files
-
     def _get(self, url : str, object_type : ThumbnailType, *, params : dict = {}) -> List[Thumbnail]:
         """This function takes a list of thumbnails of `object_type` in html and returns
         a list of Thumbnail of that object type.
@@ -235,30 +160,6 @@ class Base:
         name_finder = r"\/([a-z0-9-]*)#imagebox"
         return [Thumbnail(name=re.search(name_finder, match[0])[1], url=match[0], type=ThumbnailType.media, image=match[1]) for match in matches]
 
-    def _get_engines(self, html):
-        """Hidden method to get the engines showed currently on the page as a list of engine like thumbnails. Takes
-        an entire page of html and sorts it out
-
-        Parameters
-        -----------
-        html : bs4.BeautifulSoup
-            The page to cache the engines from
-
-        Returns
-        -------
-        List[Thumbnail]
-            The list of engine like thumbnail objects
-        """
-        engines_raw = html.find(string="Engines").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
-        engines = []
-        for x in engines_raw:
-            link = x.find("div", class_="content").h4.a
-            image_url = link.parent.parent.parent.find("img")["src"]
-            engine = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.engine)
-            engines.append(engine)
-
-        return engines
-
     def get_comments(self, index : int = 1) -> CommentList:
         """Used to get comments on the model regardless of what page they may be present in. The function
         itself simply relies on two other to make the request and parse the table.
@@ -275,7 +176,7 @@ class Base:
         """
         return self._get_comments(get_page(f"{self.url}/page/{index}"))
 
-class GetGamesMetaClass:
+class GetGamesMixin:
     """Abstract class containing the get_games method"""
     def get_games(self, index : int = 1, *,  query : str = None, status : Status = None,
         genre : Genre = None, theme : Theme = None, scope : Scope = None, players : PlayerStyle = None,
@@ -322,7 +223,7 @@ class GetGamesMetaClass:
 
         return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game, params=params)
 
-class GetModsMetaClass:
+class GetModsMixin:
     """Abstract class containing the get_mod method"""
     def get_mods(self, index : int = 1, *,  query : str = None, status : Status = None,
         genre : Genre = None, theme : Theme = None, players : PlayerStyle = None,
@@ -371,7 +272,7 @@ class GetModsMetaClass:
 
         return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod, params=params)
 
-class GetEnginesMetaClass:
+class GetEnginesMixin:
     """Abstract class containing the get_engines method"""
     def get_engines(self, index : int = 1, *, query : str = None, status : Status = None, 
         licence : Licence = None, timeframe : TimeFrame = None,
@@ -408,7 +309,7 @@ class GetEnginesMetaClass:
 
         return self._get(f"{self.url}/engines/page/{index}", ThumbnailType.engine, params=params)
 
-class SharedMethodsMetaClass:
+class SharedMethodsMixin:
     """Abstract class that implements a certain amount of top level methods shared between Pages
     and Hardware"""
     def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, 
@@ -603,7 +504,7 @@ class SharedMethodsMetaClass:
 
         return self._get(f"{self.url}/tutorials/page/{index}", ThumbnailType.article, params=params)
 
-class GetSoftwareHardwareMetaClass:
+class GetSoftwareHardwareMixin:
     """Abstrac class implementing get_software and get_hardware"""
     def get_hardware(self, index : int = 1, *, query : str = None, status : Status = None,
         category : HardwareCategory = None, timeframe : TimeFrame = None,
@@ -677,7 +578,7 @@ class GetSoftwareHardwareMetaClass:
 
         return self._get(f"{self.url}/software/page/{index}", ThumbnailType.software, params=params)
 
-class RSSFeedMetaClass:
+class RSSFeedMixin:
     def rss(self, type : RSSType):
         """Get the RSS feed url for the page depending on which feed type you want
 
@@ -693,7 +594,7 @@ class RSSFeedMetaClass:
         """
         return f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
 
-class Page(Base, SharedMethodsMetaClass, RSSFeedMetaClass):
+class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
     those classes.
 
@@ -828,6 +729,105 @@ class Page(Base, SharedMethodsMetaClass, RSSFeedMetaClass):
             self.description = None
             self.plaintext = None
 
+    def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
+        """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
+        will be a list of Thumbnail objects that can be parsed individually.
+
+        Parameters
+        -----------
+        html : bs4.BeautifulSoup
+            The html page we are trying to parse the suggestions for
+
+        Returns
+        --------
+        List[Thumbnail]
+            The list of suggestions as thumbnails.
+        """
+        suggestions_raw = html.find("span", string="You may also like").parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
+        suggestions = []
+        for x in suggestions_raw:
+            try:
+                link = x.find("a", class_="image")
+                suggestion_type = link["href"].split("/")[1].replace("s", "")
+                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
+                suggestions.append(suggestion)
+            except (AttributeError, TypeError):
+                pass
+
+        return suggestions
+
+    def _get_games(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
+        """Used both for Teams and Engines, returns a list of games  present on the page
+        as Thumbnail objects.
+
+        Parameters
+        ----------
+        html : bs4.BeautifulSoup
+            The html to extract the list of games from
+
+        Returns
+        -------
+        List[Thumbnail]
+            The list of games on the page as Thumbnail objects.
+        """
+        games_raw = html.find(string="Games").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
+        games = []
+        for x in games_raw:
+            link = x.find("div", class_="content").h4.a
+            image_url = link.parent.parent.parent.find("img")["src"]
+            game = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.game)
+            games.append(game)
+
+        return games
+
+    def _get_files(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
+        """Cache the files present on the page. Up to 5 files might be present
+
+        Parameters
+        -----------
+        html : bs4.BeautifulSoup
+            The page to cache the files from
+
+        Returns
+        -------
+        List[Thumbnail]
+            The list of file like thumbnails
+        """
+
+        files_raw = html.find(string="Files").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
+        files = []
+        for x in files_raw:
+            link = x.find("div", class_="content").h4.a
+            image_url = link.parent.parent.parent.find("img")["src"]
+            file = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.file)
+            files.append(file)
+
+        return files
+
+    def _get_engines(self, html):
+        """Hidden method to get the engines showed currently on the page as a list of engine like thumbnails. Takes
+        an entire page of html and sorts it out
+
+        Parameters
+        -----------
+        html : bs4.BeautifulSoup
+            The page to cache the engines from
+
+        Returns
+        -------
+        List[Thumbnail]
+            The list of engine like thumbnail objects
+        """
+        engines_raw = html.find(string="Engines").parent.parent.parent.parent.find_all(class_="row rowcontent clear")
+        engines = []
+        for x in engines_raw:
+            link = x.find("div", class_="content").h4.a
+            image_url = link.parent.parent.parent.find("img")["src"]
+            engine = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.engine)
+            engines.append(engine)
+
+        return engines
+
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
         timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
         """Get a page of addons for the page. Each page will yield up to 30 addons. 
@@ -863,7 +863,7 @@ class Page(Base, SharedMethodsMetaClass, RSSFeedMetaClass):
         return f"<{self.__class__.__name__} name={self.name}>"
 
 @concat_docs
-class Mod(Page):
+class Mod(PageMetaClass):
     """Basically just a subclass of Page
 
     Parameters
@@ -903,7 +903,7 @@ class Mod(Page):
         super().__init__(html, SearchCategory.mods)
 
 @concat_docs
-class Game(Page, GetModsMetaClass):
+class Game(PageMetaClass, GetModsMixin):
     """A subclass of Page plus a method to get all the mods.
 
     Parameters
@@ -941,7 +941,7 @@ class Game(Page, GetModsMetaClass):
         super().__init__(html, SearchCategory.games)
 
 @concat_docs
-class Engine(Page, GetGamesMetaClass):
+class Engine(PageMetaClass, GetGamesMixin):
     """A subclass of Page, however, it does not have the files attribute
 
     Parameters
@@ -984,7 +984,7 @@ class Engine(Page, GetGamesMetaClass):
             self.games = []
 
 @concat_docs
-class File(Base):
+class File(BaseMetaClass):
     """An oject representing a file on ModDB, a file is something posted by the page owner which is directly linked 
     to the page. It is endorsed by the page owner and they should do everythign they can to make sure that it is safe.
     As compared to an addon that may be added by fans to the page and that are files meant to work with the page but
@@ -1142,7 +1142,7 @@ class Addon(File):
         super().__init__(html)
 
 @concat_docs
-class Media(Base):
+class Media(BaseMetaClass):
     """Represents an image, audio file or video file on 
 
     Parameters
@@ -1237,7 +1237,7 @@ class Media(Base):
         return f"<Media name={self.name} type={self.type.name}>"
 
 @concat_docs
-class Article(Base):
+class Article(BaseMetaClass):
     """This object represents an news article, a tutorial or a feature.
 
     Parameters
@@ -1352,7 +1352,7 @@ class Article(Base):
         return f"<Article title={self.name} type={self.category.name}>"
 
 @concat_docs
-class Group(Page):
+class Group(PageMetaClass):
     """This object represents the group model of  Certain attributes can be None if the group
     has been set to private. If you wish to see a group you have access to then you can login with the
     login 
@@ -1405,7 +1405,7 @@ class Group(Page):
     """
     def __init__(self, html : bs4.BeautifulSoup):
         self.name = html.find("div", class_="title").h2.a.string
-        Base.__init__(self, html)
+        BaseMetaClass.__init__(self, html)
         self.private = False
 
         try:
@@ -1460,7 +1460,7 @@ class Group(Page):
 
     def _get_suggestions(self, html : bs4.BeautifulSoup) -> List[Thumbnail]:
         """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
-        will be a list of Thumbnail objects that can be parsed individually.
+        will be a list of Thumbnail objects that can be parsed individually. Slightly modified to fit a group
 
         Parameters
         -----------
@@ -1494,7 +1494,7 @@ class Group(Page):
         return f"<Group name={self.name}>"
 
 @concat_docs
-class Team(Group, GetEnginesMetaClass, GetGamesMetaClass, GetModsMetaClass, GetSoftwareHardwareMetaClass):
+class Team(Group, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetSoftwareHardwareMixin):
     """A team is a group of people, which are the author of a game, a mod or an engine. A group has members which all
     have rights on those page. Like a member but instead of a single person authoring various mods and games it's several.
 
@@ -1637,7 +1637,7 @@ class Job:
         return f"<Job name={self.name}>"
 
 @concat_docs
-class Blog(Base):
+class Blog(BaseMetaClass):
     """Object used to represent a member blog.
 
     Filtering
@@ -1679,7 +1679,7 @@ class Blog(Base):
         return f"<Blog title={self.name}>"
 
 @concat_docs
-class Member(Page, GetGamesMetaClass, GetModsMetaClass):
+class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
     """The object to represent an individual member on ModDB
 
     Parameters
@@ -1978,7 +1978,7 @@ class FrontPage:
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
 
 @concat_docs
-class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, GetSoftwareHardwareMetaClass):
+class Platform(BaseMetaClass, GetModsMixin, GetGamesMixin, GetEnginesMixin, GetSoftwareHardwareMixin):
     """Represents the platform supporting the game/engines. Game and engines may have mutiple platforms.
 
     Parameters
@@ -2079,7 +2079,7 @@ class Platform(Base, GetModsMetaClass, GetGamesMetaClass, GetEnginesMetaClass, G
     def __repr__(self):
         return f"<Platform name={self.name}>"
 
-class HardwareAndSoftware(Base, SharedMethodsMetaClass, RSSFeedMetaClass):
+class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
     """Shared class for Hardware and Software
 
     Attributes
@@ -2151,7 +2151,7 @@ class HardwareAndSoftware(Base, SharedMethodsMetaClass, RSSFeedMetaClass):
             LOGGER.info("'%s' '%s' has no suggestions", self.__class__.__name__, self.name)
 
 @concat_docs
-class Hardware(HardwareAndSoftware, GetGamesMetaClass, GetSoftwareHardwareMetaClass):
+class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetSoftwareHardwareMixin):
     """Represents a moddb Hardware page
 
     Attributes
@@ -2207,7 +2207,7 @@ class Hardware(HardwareAndSoftware, GetGamesMetaClass, GetSoftwareHardwareMetaCl
             self.recommended = []
 
 @concat_docs
-class Software(HardwareAndSoftware):
+class Software(HardwareSoftwareMetaClass):
     """Represents a moddb Software page
     """
     def __init__(self, html):
@@ -2256,7 +2256,7 @@ class Review:
         return f"<Review author={self.author.name} rating={self.rating}>"
 
 @concat_docs
-class Poll(Base):
+class Poll(BaseMetaClass):
     """Represents a poll. Cannot be voted for due to restrictions implemented by the website.
 
     Parameters
