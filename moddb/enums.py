@@ -44,6 +44,7 @@ class RSSType(enum.Enum):
     addons = 6
     blogs = 7
     headlines = 8
+    jobs = 9
 
 
 class MediaCategory(enum.Enum):
