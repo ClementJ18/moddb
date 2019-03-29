@@ -196,7 +196,10 @@ def get_type_from(url):
     type_mapping = {
         "new": "article",
         "feature": "article",
-        "download": "file"
+        "download": "file",
+        "image": "media",
+        "audio": " media",
+        "video": "media"
     }
 
     matches = re.findall(regex, url)

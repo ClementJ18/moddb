@@ -22,10 +22,6 @@ get_page
 ---------
 .. autofunction:: moddb.utils.get_page
 
-get_tags
----------
-.. autofunction:: moddb.utils.get_tags
-
 get_type_from
 ---------------
 .. autofunction:: moddb.utils.get_type_from

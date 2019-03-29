@@ -2,7 +2,7 @@ from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Th
                    PlayerStyle, Scope, ArticleCategory, HardwareCategory, Status, \
                    SoftwareCategory, AddonCategory, GroupCategory, TeamCategory
 from .utils import get_date, get_page, get_views, join, normalize, LOGGER, time_mapping, \
-                   get_type_from
+                   get_type_from, concat_docs
 
 import re
 import sys
@@ -314,6 +314,38 @@ class Thumbnail:
             enum.
         """
         return getattr(sys.modules["moddb"], self.type.name.title())(get_page(self.url))
+
+@concat_docs
+class Update(Thumbnail):
+    """An update object. Which is basically just a fancy thumbnail with a couple extra attributes and 
+    methods.
+
+    Attributes
+    -----------
+    updates : List[Thumbnail]
+        A list of thumbnail objects of the things thave have been posted (new files, new images)
+    """
+
+    def __init__(self, **attrs):
+        super().__init__(**attrs)
+
+        self.updates = attrs.get("updates")
+        self._unfollow_url = join(attrs.get("unfollow"))
+        self._clear_url = join(attrs.get("clear"))
+        self._client = attrs.get("client")
+
+    def __repr__(self):
+        return f"<Update name={self.name} type={self.type.name} updates={len(self.updates)}>"
+
+    def clear(self):
+        """Clears all updates"""
+        self._client._request("post", self._clear_url)
+
+    def unfollow(self):
+        """Unfollows the update object. This will clear the updates"""
+        self._client._request("post", self._unfollow_url)
+
+
 
 class Comment:
     """A moddb comment object.

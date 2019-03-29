@@ -67,6 +67,7 @@ Advanced Usage
 ---------------
 Of course, relying on the library isn't always what we want, you'd be forced to use requests plus nothing's perfect and errors might occur. In some cases, you might benefit from having a finer control upon the process, in which case, it is good to know that you can easily do this with few additional imports. Given you suddenly want to use something like aiohttp to get the pages you could easily do something like this:: 
 
+   import moddb
    import aiohttp
 
    async def get_page():
@@ -167,5 +168,6 @@ To uninstall the package::
    base
    pages
    boxes
+   client
    utils
    enums
