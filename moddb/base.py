@@ -1,6 +1,6 @@
 from .enums import SearchCategory, ThumbnailType, RSSType
 from .boxes import Thumbnail
-from .utils import get_page, LOGGER, normalize, get_type_from
+from .utils import get_page, LOGGER, normalize, get_type_from, BASE_URL
 from .pages import FrontPage, Member
 
 import re
@@ -172,7 +172,7 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     game = filters.get("game", None)
     game = game.id if game else None
 
-    url = f"https://www.moddb.com/{category.name}/page/{page}"
+    url = f"{BASE_URL}/{category.name}/page/{page}"
     filter_parsed = {key : value.value for key, value in filters.items() if hasattr(value, "value")}
     cat = ThumbnailType[category.name[0:-1]]
 
@@ -244,7 +244,7 @@ def login(username : str, password : str) -> Member:
     """
 
     browser = RoboBrowser(history=True, parser='html.parser')
-    browser.open('https://www.moddb.com/members/login')
+    browser.open(f'{BASE_URL}/members/login')
     t = browser.find_all("form")[1].find_all("input", class_="text", type="text")
     t.remove(browser.find("input", id="membersusername"))
     form = browser.get_form(attrs={"name": "membersform"})
@@ -260,7 +260,7 @@ def login(username : str, password : str) -> Member:
     if "freeman" not in browser.session.cookies:
         raise ValueError(f"Login failed for user {username}")
 
-    return Member(get_page(f"https://www.moddb.com/members/{username}"))
+    return Member(get_page(f"{BASE_URL}/members/{username}"))
 
 def logout(): 
     """Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and 
@@ -279,7 +279,7 @@ def front_page() -> FrontPage:
         The front page object.
         
     """
-    html = get_page("https://www.moddb.com")
+    html = get_page(BASE_URL)
     return FrontPage(html)
 
 def rss(type : RSSType):
