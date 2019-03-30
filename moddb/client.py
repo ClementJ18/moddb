@@ -43,12 +43,6 @@ class Client:
 
         self.member = Member(get_page(f"{BASE_URL}/members/{username}"))
 
-    def logout(self): 
-        """Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and 
-        all private groups will be hidden once more
-        """
-        self._session.cookies.clear()
-
     def _request(self, method, url, **kwargs):
         route = getattr(requests, method)
         cookies = cookies = requests.utils.dict_from_cookiejar(self._session.cookies)
@@ -67,8 +61,12 @@ class Client:
         html = soup(r.text)
         updates = []
         
-        objects_raw = html.find("div", class_="table").find_all("div", recursive=False)
-        for update in objects_raw[:-1]:
+        strings = ("Mods Watch", "Members Watch", "Engines Watch", "Groups Watch", "Games Watch")
+        raw = html.find_all("span", string=strings)
+        objects = [e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False) for e in raw]
+
+        objects_raw = [item for sublist in objects for item in sublist[:-1]]
+        for update in objects_raw:
             thumbnail = update.find("a")
             url = thumbnail["href"]
             title = thumbnail["title"]
