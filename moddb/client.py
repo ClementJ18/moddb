@@ -84,3 +84,13 @@ class Client:
             ))
 
         return updates
+
+    def tracking(self, page):
+        """Follow/unfollow this page."""
+        if not hasattr(page, "profile"):
+            raise TypeError("Excepted a page type that can be tracked")
+
+        if not hasattr(page.profile, "follow"):
+            raise TypeError("Excepted a page type that can be tracked")
+
+        self._request("post", page.profile.follow)
