@@ -403,3 +403,10 @@ class SoftwareCategory(enum.Enum):
     graphics_editing = 25
     music = 26
     games = 27
+
+class WatchType(enum.Enum):
+    mod = 0
+    game = 1
+    engine = 2
+    group = 3
+    member = 4

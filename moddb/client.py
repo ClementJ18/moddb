@@ -1,9 +1,10 @@
 import requests
 from robobrowser import RoboBrowser
 
-from .utils import soup, get_type_from, get_date, BASE_URL, get_page
+from .utils import soup, get_type_from, get_date, BASE_URL
 from .boxes import Update, Thumbnail
 from .pages import Member
+from .enums import ThumbnailType
 
 class Client:
     """Login the user to moddb through the library, this allows user to see guest comments and see
@@ -41,7 +42,7 @@ class Client:
         if "freeman" not in browser.session.cookies:
             raise ValueError(f"Login failed for user {username}")
 
-        self.member = Member(get_page(f"{BASE_URL}/members/{username}"))
+        self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username}").text))
 
     def _request(self, method, url, **kwargs):
         route = getattr(requests, method)
@@ -57,7 +58,7 @@ class Client:
         List[Update]
             List of updates (thumbnail like objects with extra methods)
         """
-        r = self._request("get", "https://www.moddb.com/messages/updates")
+        r = self._request("get", f"{BASE_URL}/messages/updates")
         html = soup(r.text)
         updates = []
         
@@ -88,9 +89,18 @@ class Client:
     def tracking(self, page):
         """Follow/unfollow this page."""
         if not hasattr(page, "profile"):
-            raise TypeError("Excepted a page type that can be tracked")
+            raise TypeError("Expected a page type that can be tracked")
 
         if not hasattr(page.profile, "follow"):
-            raise TypeError("Excepted a page type that can be tracked")
+            raise TypeError("Expected a page type that can be tracked")
 
         self._request("post", page.profile.follow)
+
+    def get_watched(self, type, page=0):
+        """"""
+        url = f"{BASE_URL}/messages/watching/{type.value}s/page/{page}"
+        html = soup(self._request(url).text)
+
+        results_raw = html.find("div", class_="table").find_all("div", recursive=False)[1:]
+        results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=ThumbnailType[type.value], image=x.a.img["src"]) for x in results_raw]
+
