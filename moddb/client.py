@@ -89,7 +89,13 @@ class Client:
         return updates
 
     def tracking(self, page):
-        """Follow/unfollow this page."""
+        """Follow/unfollow this page.
+        
+        Parameters
+        -----------
+        page : Union[Mod, Game, Engine, Group, Member]
+
+        """
         if not hasattr(page, "profile"):
             raise TypeError("Expected a page type that can be tracked")
 
