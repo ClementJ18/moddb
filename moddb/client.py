@@ -94,6 +94,7 @@ class Client:
         Parameters
         -----------
         page : Union[Mod, Game, Engine, Group, Member]
+            The page you wish to watch/unwatch
 
         """
         if not hasattr(page, "profile"):
