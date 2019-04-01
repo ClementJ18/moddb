@@ -10,3 +10,4 @@ values are necessary for the filtering.
 .. automodule:: moddb.enums
     :members:
     :inherited-members:
+    :undoc-members:
