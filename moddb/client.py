@@ -122,9 +122,10 @@ class Client:
             List of watched things
 
         """
-        url = f"{BASE_URL}/messages/watching/{type.value}s/page/{page}"
-        html = soup(self._request(url).text)
+        url = f"{BASE_URL}/messages/watching/{type.name}s/page/{page}"
+        html = soup(self._request("get", url).text)
 
         results_raw = html.find("div", class_="table").find_all("div", recursive=False)[1:]
-        results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=ThumbnailType[type.value], image=x.a.img["src"]) for x in results_raw]
+        results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=ThumbnailType[type.name], image=x.a.img["src"]) for x in results_raw]
 
+        return results
