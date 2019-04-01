@@ -45,6 +45,8 @@ class Client:
         self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username}").text))
 
     def _request(self, method, url, **kwargs):
+        """Making sure we do our request with the cookies from this client rather than the cookies
+        of the library."""
         route = getattr(requests, method)
         cookies = cookies = requests.utils.dict_from_cookiejar(self._session.cookies)
         r = route(url, cookies=cookies, **kwargs)
@@ -96,8 +98,23 @@ class Client:
 
         self._request("post", page.profile.follow)
 
-    def get_watched(self, type, page=0):
-        """"""
+    def get_watched(self, type, page=1):
+        """Get a list of thumbnails of watched items based on the type parameters. Eventually, you'll also be
+        able to paginate your mods. 
+
+        Parameters
+        -----------
+        type : WatchType
+            The type of watched thing you wanna get (mod, games, engines)
+        page : int
+            The page number you want to get
+
+        Returns
+        --------
+        List[Thumbnail]
+            List of watched things
+
+        """
         url = f"{BASE_URL}/messages/watching/{type.value}s/page/{page}"
         html = soup(self._request(url).text)
 
