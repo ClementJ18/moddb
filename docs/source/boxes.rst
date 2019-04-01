@@ -45,6 +45,13 @@ Thumbnail
     :inherited-members:
     
 
+Update
+-----------
+.. autoclass:: moddb.boxes.Update
+    :members:
+    :inherited-members:
+    
+
 Comment
 --------
 .. autoclass:: moddb.boxes.Comment

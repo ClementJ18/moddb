@@ -45,6 +45,9 @@ class RSSType(enum.Enum):
     blogs = 7
     headlines = 8
     jobs = 9
+    news = 10
+    audio = 11
+    poll = 12
 
 
 class MediaCategory(enum.Enum):
@@ -111,7 +114,7 @@ class TeamCategory(enum.IntFlag):
         if self._name_ is not None:
             return self._name_
         members, uncovered = enum._decompose(cls, self._value_)
-        return '|'.join([str(m._name_ or m._value_) for m in members])
+        return ' & '.join([str(m._name_ or m._value_) for m in members])
 
     __str__ = __repr__
 
@@ -400,3 +403,10 @@ class SoftwareCategory(enum.Enum):
     graphics_editing = 25
     music = 26
     games = 27
+
+class WatchType(enum.Enum):
+    mod = 0
+    game = 1
+    engine = 2
+    group = 3
+    member = 4
