@@ -1,3 +1,4 @@
+import sys
 import requests
 from robobrowser import RoboBrowser
 
@@ -43,6 +44,17 @@ class Client:
             raise ValueError(f"Login failed for user {username}")
 
         self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username}").text))
+
+    def __repr__(self):
+        return repr(self.member)
+
+    def __enter__(self):
+        self._fake_session = sys.modules["moddb"].SESSION
+        sys.modules["moddb"].SESSION = self._session
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.modules["moddb"].SESSION = self._fake_session
+        delattr(self, "_fake_session")
 
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
