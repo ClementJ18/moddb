@@ -3,8 +3,8 @@ import requests
 from robobrowser import RoboBrowser
 
 from .utils import soup, get_type_from, get_date, BASE_URL
-from .boxes import Update, Thumbnail
-from .pages import Member
+from .boxes import Update, Thumbnail, Comment
+from .pages import Mod, Member, Game, Engine, Group
 from .enums import ThumbnailType
 
 class Client:
@@ -141,3 +141,29 @@ class Client:
         results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=ThumbnailType[type.name], image=x.a.img["src"]) for x in results_raw]
 
         return results
+
+    def like_comment(self, comment):
+        """Like a comment, if the comment has already been liked nothing will happen.
+
+        Parameters
+        -----------
+        comment : Comment
+            The comment to like
+        """
+        if not isinstance(comment, Comment):
+            raise TypeError("Argument must be a Comment object")
+
+        self._request("post", comment.upvote)
+
+    def dislike_comment(self, comment):
+        """Dislike a comment, if the comment has already been disliked nothing will happen.
+
+        Parameters
+        -----------
+        comment : Comment
+            The comment to dislike
+        """
+        if not isinstance(comment, Comment):
+            raise TypeError("Argument must be a Comment object")
+
+        self._request("post", comment.downvote)

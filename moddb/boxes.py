@@ -419,8 +419,8 @@ class Comment:
         try:
             karma = actions.span.string
             self.karma = int(re.findall(r"[+-]?\d", karma)[0].replace(",", ""))
-            self.upvote = actions.find_all("a")[1]["href"]
-            self.downvote = actions.find_all("a")[2]["href"]
+            self.upvote = join(actions.find_all("a")[1]["href"])
+            self.downvote = join(actions.find_all("a")[2]["href"])
             self.approved = True
         except AttributeError:
             self.karma = 0
