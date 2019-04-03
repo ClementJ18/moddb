@@ -244,7 +244,7 @@ class Client:
         Returns
         --------
         bool
-            True if the company has been successfully joined, False if the company has been
+            True if the group/team has been successfully joined, False if the group/team has been
             successfully left.
 
         """
@@ -254,3 +254,33 @@ class Client:
         )
 
         return "successfully joined" in r.json()["text"]
+
+    def report(self, page):
+        """Report a page. This can take any attribute that has an id and url attribute.
+
+        Parameters
+        -----------
+        page : Any
+            The page to report
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to report the page
+
+        Returns
+        --------
+        bool
+            True if the page has been successfully reported
+        """
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data = {
+                "ajax": "t",
+                "action": "report",
+                "sitearea": page.url.split("/")[-2],
+                "siteareaid": page.id
+            },
+            allow_redirects=False
+        )
+
+        return not "already reported this content" in r.json()["text"]
