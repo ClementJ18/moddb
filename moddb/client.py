@@ -1,11 +1,15 @@
 import sys
+import json
 import requests
 from robobrowser import RoboBrowser
 
 from .utils import soup, get_type_from, get_date, BASE_URL
-from .boxes import Update, Thumbnail, Comment
-from .pages import Mod, Member, Game, Engine, Group
+from .boxes import Update, Thumbnail
+from .pages import Member
 from .enums import ThumbnailType
+
+class ModdbException(Exception):
+    pass
 
 class Client:
     """Login the user to moddb through the library, this allows user to see guest comments and see
@@ -62,6 +66,16 @@ class Client:
         route = getattr(requests, method)
         cookies = cookies = requests.utils.dict_from_cookiejar(self._session.cookies)
         r = route(url, cookies=cookies, **kwargs)
+        return self._proccess_response(r)
+
+    def _proccess_response(self, r):
+        try:
+            text = r.json()
+            if text.get("error", False):
+                raise ModdbException(text["text"])
+        except json.decoder.JSONDecodeError:
+            pass
+
         return r
 
     def get_updates(self):
@@ -83,47 +97,26 @@ class Client:
         objects_raw = [item for sublist in objects for item in sublist[:-1]]
         for update in objects_raw:
             thumbnail = update.find("a")
-            url = thumbnail["href"]
-            title = thumbnail["title"]
-            image = thumbnail.img["src"]
-            page_type = get_type_from(url)
             unfollow = update.find("a", title="Stop Watching")["href"]
             clear = update.find("a", title="Clear")["href"]
             updates_raw = update.find("p").find_all("a")
 
             updates.append(Update(
-                name=title, url=url, type=page_type, image=image, 
-                client=self, unfollow=unfollow, clear=clear,
+                name=thumbnail["title"], url=thumbnail["href"], type=thumbnail["href"], 
+                image=thumbnail.img["src"], client=self, unfollow=unfollow, clear=clear,
                 updates = [Thumbnail(name=x.string, url=x["href"], type=get_type_from(x["href"])) for x in updates_raw],
                 date = get_date(update.find("time")["datetime"])
             ))
 
         return updates
 
-    def tracking(self, page):
-        """Follow/unfollow this page.
-        
-        Parameters
-        -----------
-        page : Union[Mod, Game, Engine, Group, Member]
-            The page you wish to watch/unwatch
-
-        """
-        if not hasattr(page, "profile"):
-            raise TypeError("Expected a page type that can be tracked")
-
-        if not hasattr(page.profile, "follow"):
-            raise TypeError("Expected a page type that can be tracked")
-
-        self._request("post", page.profile.follow)
-
-    def get_watched(self, type, page=1):
+    def get_watched(self, category, page=1):
         """Get a list of thumbnails of watched items based on the type parameters. Eventually, you'll also be
         able to paginate your mods. 
 
         Parameters
         -----------
-        type : WatchType
+        category : WatchType
             The type of watched thing you wanna get (mod, games, engines)
         page : int
             The page number you want to get
@@ -134,13 +127,43 @@ class Client:
             List of watched things
 
         """
-        url = f"{BASE_URL}/messages/watching/{type.name}s/page/{page}"
+        url = f"{BASE_URL}/messages/watching/{category.name}s/page/{page}"
         html = soup(self._request("get", url).text)
 
         results_raw = html.find("div", class_="table").find_all("div", recursive=False)[1:]
-        results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=ThumbnailType[type.name], image=x.a.img["src"]) for x in results_raw]
+        results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=ThumbnailType[category.name], image=x.a.img["src"]) for x in results_raw]
 
         return results
+
+    def tracking(self, page):
+        """Follow/unfollow this page.
+        
+        Parameters
+        -----------
+        page : Union[Mod, Game, Engine, Group, Member]
+            The page you wish to watch/unwatch
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to follow/unfollow the page
+
+        Returns
+        --------
+        bool
+            True if the page has been successfully followed, False if it has been successfully unfollowed
+        """
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data = {
+                "ajax": "t",
+                "action": "watch",
+                "sitearea": page.url.split("/")[-2],
+                "siteareaid": page.id
+            },
+            allow_redirects=False
+        )
+
+        return "be notified" in r.json()["text"]
 
     def like_comment(self, comment):
         """Like a comment, if the comment has already been liked nothing will happen.
@@ -149,11 +172,28 @@ class Client:
         -----------
         comment : Comment
             The comment to like
-        """
-        if not isinstance(comment, Comment):
-            raise TypeError("Argument must be a Comment object")
 
-        self._request("post", comment.upvote)
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to like the comment
+
+        Returns
+        --------
+        bool
+            True if the comment has been successfully liked
+        """
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data = {
+                "ajax": "t",
+                "action": "karmagood",
+                "sitearea": "comment",
+                "siteareaid": comment.id
+            },
+            allow_redirects=False
+        )
+
+        return "successfully issued" in r.json()["text"]
 
     def dislike_comment(self, comment):
         """Dislike a comment, if the comment has already been disliked nothing will happen.
@@ -162,8 +202,55 @@ class Client:
         -----------
         comment : Comment
             The comment to dislike
-        """
-        if not isinstance(comment, Comment):
-            raise TypeError("Argument must be a Comment object")
 
-        self._request("post", comment.downvote)
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to dislike the comment
+
+        Returns
+        --------
+        bool
+            True if comment has been successfully disliked.
+        """
+        if not hasattr(comment, "downvote"):
+            raise TypeError("Argument must be a Comment-like object")
+
+        r= self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data = {
+                "ajax": "t",
+                "action": "karmabad",
+                "sitearea": "comment",
+                "siteareaid": comment.id
+            },
+            allow_redirects=False
+        )
+
+        return "successfully issued" in r.json()["text"]
+
+    def membership(self, page):
+        """Join/leave a team
+
+        Parameters
+        -----------
+        page : Union[Group, Team]
+            The team/group you want to join. Will not work if you don't have permissions
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to join/leave the group/team
+
+        Returns
+        --------
+        bool
+            True if the company has been successfully joined, False if the company has been
+            successfully left.
+
+        """
+        r = self._request("post", f"{BASE_URL}/groups/ajax/members/change/{page.id}",
+            data = {"ajax": "t"},
+            allow_redirects=False
+        )
+
+        return "successfully joined" in r.json()["text"]
