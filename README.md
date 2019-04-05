@@ -56,6 +56,11 @@ pip uninstall moddb
 * [x] Platforms
 * [x] Software
 * [x] HardwAre
+* [x] Updates
+
+Maybe
+* [ ] Messages
+* [ ] Threads
 
 ## Glossary
 * **Partial[Model]**: A version of the model which does not contain all the attributes of the full model. Mainly because that model is being displayed as a preview in another page. Not to confuse with Thumbnails, Thumbnails are only guaranteed to contain a name and url of the page.
