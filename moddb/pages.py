@@ -798,7 +798,11 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
         files = []
         for x in files_raw:
             link = x.find("div", class_="content").h4.a
-            image_url = link.parent.parent.parent.find("img")["src"]
+            try:
+                image_url = link.parent.parent.parent.find("img")["src"]
+            except TypeError:
+                image_url = None
+                
             file = Thumbnail(name=link.string, url=link["href"], image=image_url, type=ThumbnailType.file)
             files.append(file)
 

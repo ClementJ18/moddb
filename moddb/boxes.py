@@ -338,12 +338,38 @@ class Update(Thumbnail):
         return f"<Update name={self.name} type={self.type.name} updates={len(self.updates)}>"
 
     def clear(self):
-        """Clears all updates"""
-        self._client._request("post", self._clear_url)
+        """Clears all updates
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to clear the updates for this page
+
+        Returns
+        --------
+        bool
+            True if the updates were successfully cleared
+        """
+        r = self._client._request("post", self._clear_url)
+
+        return "successfully removed" in r.json()["text"]
 
     def unfollow(self):
-        """Unfollows the update object. This will clear the updates"""
-        self._client._request("post", self._unfollow_url)
+        """Unfollows the page. This will also clear the updates
+        
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to unfollow this page
+
+        Returns
+        --------
+        bool
+            True if the page was successfully unfollowed
+        """
+        r = self._client._request("post", self._unfollow_url)
+
+        return "no longer watching" in r.json()["text"]
 
 
 
