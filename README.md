@@ -28,7 +28,7 @@ Check out the [documentation](https://moddb.readthedocs.io) for more information
 This package is not available on Pypi but can still be installed using pip if you also have git installed. Else you will have to download the repository and instal using the setup.py script located at root. To install with pip
 
 ```
-pip install -U git+git://github.com/ClementJ18/moddb.git@v0.4
+pip install -U git+git://github.com/ClementJ18/moddb.git@v0.5
 ```
 
 ## Uninstalling
@@ -57,6 +57,7 @@ pip uninstall moddb
 * [x] Software
 * [x] HardwAre
 * [x] Updates
+* [x] Friend Requests
 
 Maybe
 * [ ] Messages
