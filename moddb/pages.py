@@ -5,12 +5,13 @@ from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, Addon
                    Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre, \
                    Membership, GroupCategory, RSSType
 from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object, request, \
-                   get_type_from
+                   get_type_from, request
 
 import re
 import bs4
 import json
 import datetime
+import feedparser
 from typing import List, Tuple, Union
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
@@ -579,20 +580,28 @@ class GetSoftwareHardwareMixin:
         return self._get(f"{self.url}/software/page/{index}", ThumbnailType.software, params=params)
 
 class RSSFeedMixin:
-    def rss(self, type : RSSType):
+    def rss(self, type : RSSType, *, parse_feed = False):
         """Get the RSS feed url for the page depending on which feed type you want
 
         Parameters
         -----------
         type : RSSType
             The type of feed you desire to get
+        parse_feed : Optional[bool]:
+            Set to true if you want the library to parse the rss feed for you and return the entries as a dict
+            rather than returning the url for the rss feed.
 
         Returns
         --------
         str
             URL for the feed type
         """
-        return f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
+        url = f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
+        
+        if parse_feed:
+            return feedparser.parse(request(url).text)
+
+        return url 
 
 class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by

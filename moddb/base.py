@@ -1,10 +1,11 @@
 from .enums import SearchCategory, ThumbnailType, RSSType
 from .boxes import Thumbnail
-from .utils import get_page, LOGGER, normalize, get_type_from, BASE_URL
+from .utils import get_page, LOGGER, normalize, get_type_from, BASE_URL, request
 from .pages import FrontPage, Member
 
 import re
 import sys
+import feedparser
 from typing import Tuple, Any
 from robobrowser import RoboBrowser
 
@@ -282,17 +283,24 @@ def front_page() -> FrontPage:
     html = get_page(BASE_URL)
     return FrontPage(html)
 
-def rss(type : RSSType):
+def rss(type : RSSType, *, parse_feed = False):
     """Get the RSS feed url for the entire site depending on which feed type you want
 
     Parameters
     -----------
     type : RSSType
         The type of feed you desire to get
+    parse_feed : Optional[bool]:
+        Set to true if you want the library to parse the rss feed for you and return the entries as a dict
+        rather than returning the url for the rss feed.
 
     Returns
     --------
-    str
+    Union[str, dict]
         URL for the feed type
     """
-    return f'https://rss.moddb.com/{type.name}/feed/rss.xml'  
+    url = f'https://rss.moddb.com/{type.name}/feed/rss.xml'
+    if parse_feed:
+        return feedparser.parse(request(url).text)
+
+    return url

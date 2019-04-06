@@ -44,9 +44,9 @@ class RSSType(enum.Enum):
     addons = 6
     blogs = 7
     headlines = 8
-    jobs = 9
-    news = 10
-    audio = 11
+    news = 9
+    audio = 10
+    jobs = 11
     poll = 12
 
 
