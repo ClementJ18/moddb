@@ -2,8 +2,9 @@
 
 from setuptools import setup
 
-setup(name = "moddb",
-    version = "0.4",
+setup(
+    name = "moddb",
+    version = "0.5",
     description = "A scrapper for ModDB Mod and Game pages",
     author = "Clement Julia",
     author_email = "clement.julia13@gmail.com",
@@ -12,6 +13,7 @@ setup(name = "moddb",
     install_requires=[
         'beautifulsoup4 == 4.6.3',
         'requests>=2.20.0',
-        'robobrowser == 0.5.3'
+        'robobrowser == 0.5.3',
+        'feedparser == 5.2.1',
       ]
     )
