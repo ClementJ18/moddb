@@ -111,6 +111,13 @@ class Client:
         return updates
 
     def get_friend_requests(self):
+        """Get the current friend requests the user has.
+        
+        Returns
+        --------
+        List[Request]
+            List of requests (thumbnail like objects with extra methods)
+        """
         r = self._request("get", f"{BASE_URL}/messages/updates")
         html = soup(r.text)
         requests = []
