@@ -4,7 +4,7 @@ import requests
 from robobrowser import RoboBrowser
 
 from .utils import soup, get_type_from, get_date, BASE_URL
-from .boxes import Update, Thumbnail
+from .boxes import Update, Thumbnail, Request
 from .pages import Member
 from .enums import ThumbnailType
 
@@ -105,10 +105,30 @@ class Client:
                 name=thumbnail["title"], url=thumbnail["href"], type=get_type_from(thumbnail["href"]), 
                 image=thumbnail.img["src"], client=self, unfollow=unfollow, clear=clear,
                 updates = [Thumbnail(name=x.string, url=x["href"], type=get_type_from(x["href"])) for x in updates_raw],
-                date = get_date(update.find("time")["datetime"])
+                date=get_date(update.find("time")["datetime"])
             ))
 
         return updates
+
+    def get_friend_requests(self):
+        r = self._request("get", f"{BASE_URL}/messages/updates")
+        html = soup(r.text)
+        requests = []
+        raw = html.find("span", string="Friend Requests")
+        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
+
+        for request in raw_requests[:-1]:
+            thumbnail = request.find("a")
+            accept = request.find("a", title="Accept")["href"]
+            decline = request.find("a", title="Decline")["href"]
+
+            requests.append(Request(
+                name=thumbnail["title"], url=thumbnail["href"], type=get_type_from(thumbnail["href"]), 
+                image=thumbnail.img["src"], client=self, accept=accept, decline=decline,
+                date=get_date(request.find("time")["datetime"])
+            ))
+
+        return requests
 
     def get_watched(self, category, page=1):
         """Get a list of thumbnails of watched items based on the type parameters. Eventually, you'll also be
@@ -308,10 +328,9 @@ class Client:
             allow_redirects=False
         )
 
-        return "no longer friend with this member" in r.json()["text"]
+        return "no longer friends with this member" in r.json()["text"]
 
-
-    def friend(self, user):
+    def send_request(self, member):
         """Send a friend request to a user. You will not instantly become friends with them,
         they will have to accept the friend request you sent them first.
         
@@ -330,7 +349,7 @@ class Client:
         bool
             True if the user was succesfully sent a friend request
         """
-        r = self._request("post", f"{BASE_URL}/members/ajax/friends/add/{user.id}",
+        r = self._request("post", f"{BASE_URL}/members/ajax/friends/add/{member.id}",
             data = {"ajax": "t"},
             allow_redirects=False
         )

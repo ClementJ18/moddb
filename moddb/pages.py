@@ -49,7 +49,7 @@ class BaseMetaClass:
                 self.name = html.find("meta", property="og:title")["content"]
 
         try:
-            self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
+            self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", class_="reporticon")["href"])[1])
         except TypeError:
             self.id = None
             LOGGER.info("'%s' '%s' has no id", self.__class__.__name__, self.name)

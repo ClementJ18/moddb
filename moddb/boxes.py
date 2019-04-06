@@ -350,7 +350,7 @@ class Update(Thumbnail):
         bool
             True if the updates were successfully cleared
         """
-        r = self._client._request("post", self._clear_url)
+        r = self._client._request("post", self._clear_url, data = {"ajax": "t"})
 
         return "successfully removed" in r.json()["text"]
 
@@ -367,11 +367,56 @@ class Update(Thumbnail):
         bool
             True if the page was successfully unfollowed
         """
-        r = self._client._request("post", self._unfollow_url)
+        r = self._client._request("post", self._unfollow_url, data = {"ajax": "t"})
 
         return "no longer watching" in r.json()["text"]
 
+@concat_docs
+class Request(Thumbnail):
+    """A thumbnail with two extra methods used to clear and accept requests."""
+    def __init__(self, **attrs):
+        super().__init__(**attrs)
 
+        self._decline = join(attrs.get("decline"))
+        self._accept = join(attrs.get("accept"))
+        self._client = attrs.get("client")
+
+    def accept(self):
+        """Accept the friend request.
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to accept the request
+
+        Returns
+        --------
+        bool
+            True if the request was successfully accepted
+        """
+        r = self._client._request("post", self._accept, data = {"ajax": "t"})
+
+        return "now friends with" in r.json()["text"]
+
+    def decline(self):
+        """Decline the friend request
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to decline the request
+
+        Returns
+        --------
+        bool
+            True if the page was successfully declined
+        """
+        r = self._client._request("post", self._decline, data = {"ajax": "t"})
+
+        return "successfully removed" in r.json()["text"]
+
+    def __repr__(self):
+        return f"<Request from={self.name}>"
 
 class Comment:
     """A moddb comment object.
