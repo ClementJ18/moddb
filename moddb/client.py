@@ -102,7 +102,7 @@ class Client:
             updates_raw = update.find("p").find_all("a")
 
             updates.append(Update(
-                name=thumbnail["title"], url=thumbnail["href"], type=thumbnail["href"], 
+                name=thumbnail["title"], url=thumbnail["href"], type=get_type_from(thumbnail["href"]), 
                 image=thumbnail.img["src"], client=self, unfollow=unfollow, clear=clear,
                 updates = [Thumbnail(name=x.string, url=x["href"], type=get_type_from(x["href"])) for x in updates_raw],
                 date = get_date(update.find("time")["datetime"])
@@ -284,3 +284,55 @@ class Client:
         )
 
         return not "already reported this content" in r.json()["text"]
+
+    def unfriend(self, member):
+        """Unfriend this member if you are friends with them.
+        
+        Parameters
+        -----------
+        member : Member
+            The member you wish to unfriend
+
+        Raises
+        -------
+        ModdbException
+            An error has occured trying to unfriend this user
+
+        Returns
+        --------
+        bool
+            True if the user was succesfully unfriended
+        """
+        r = self._request("post", f"{BASE_URL}/members/ajax/friends/delete/{member.id}",
+            data = {"ajax": "t"},
+            allow_redirects=False
+        )
+
+        return "no longer friend with this member" in r.json()["text"]
+
+
+    def friend(self, user):
+        """Send a friend request to a user. You will not instantly become friends with them,
+        they will have to accept the friend request you sent them first.
+        
+        Parameters
+        -----------
+        member : Member
+            The member you wish to send a friend request to
+
+        Raises
+        -------
+        ModdbException
+            An error has occured trying to send a friend request to that user
+
+        Returns
+        --------
+        bool
+            True if the user was succesfully sent a friend request
+        """
+        r = self._request("post", f"{BASE_URL}/members/ajax/friends/add/{user.id}",
+            data = {"ajax": "t"},
+            allow_redirects=False
+        )
+
+        return "friend request has been sent" in r.json()["text"]
