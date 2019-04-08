@@ -101,6 +101,7 @@ def request(url, *, params = {}, post = False):
     else:
         r = SESSION.get(url, cookies=cookies, params=params)
 
+    r.raise_for_status()
     return r
 
 def soup(html : str) -> BeautifulSoup:

@@ -1,6 +1,7 @@
 import sys
 import json
 import requests
+from typing import Union, Any
 from robobrowser import RoboBrowser
 
 from .utils import soup, get_type_from, get_date, BASE_URL
@@ -29,7 +30,7 @@ class Client:
         The password or username was incorrect
     """
 
-    def __init__(self, username, password):
+    def __init__(self, username : str, password : str):
         browser = RoboBrowser(history=True, parser='html.parser')
         browser.open(f'{BASE_URL}/members/login')
         t = browser.find_all("form")[1].find_all("input", class_="text", type="text")
@@ -69,12 +70,13 @@ class Client:
         return self._proccess_response(r)
 
     def _proccess_response(self, r):
+        #if we're making an ajax request we'll get a json response that we decode and check for errors
         try:
             text = r.json()
             if text.get("error", False):
                 raise ModdbException(text["text"])
         except json.decoder.JSONDecodeError:
-            pass
+            r.raise_for_status()
 
         return r
 
@@ -84,7 +86,7 @@ class Client:
         Returns
         --------
         List[Update]
-            List of updates (thumbnail like objects with extra methods)
+            List of updates (thumbnail like objects with extra methods and an extra attribute)
         """
         r = self._request("get", f"{BASE_URL}/messages/updates")
         html = soup(r.text)
@@ -137,7 +139,7 @@ class Client:
 
         return requests
 
-    def get_watched(self, category, page=1):
+    def get_watched(self, category :  'WatchType', page : int = 1):
         """Get a list of thumbnails of watched items based on the type parameters. Eventually, you'll also be
         able to paginate your mods. 
 
@@ -162,7 +164,7 @@ class Client:
 
         return results
 
-    def tracking(self, page):
+    def tracking(self, page : Union['Mod', 'Game', 'Engine', 'Group', 'Member']):
         """Follow/unfollow this page.
         
         Parameters
@@ -192,7 +194,7 @@ class Client:
 
         return "be notified" in r.json()["text"]
 
-    def like_comment(self, comment):
+    def like_comment(self, comment : 'Comment'):
         """Like a comment, if the comment has already been liked nothing will happen.
 
         Parameters
@@ -222,7 +224,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def dislike_comment(self, comment):
+    def dislike_comment(self, comment : 'Comment'):
         """Dislike a comment, if the comment has already been disliked nothing will happen.
 
         Parameters
@@ -255,7 +257,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def membership(self, page):
+    def membership(self, page : Union['Group', 'Team']):
         """Join/leave a team
 
         Parameters
@@ -282,7 +284,7 @@ class Client:
 
         return "successfully joined" in r.json()["text"]
 
-    def report(self, page):
+    def report(self, page : Any):
         """Report a page. This can take any attribute that has an id and url attribute.
 
         Parameters
@@ -312,7 +314,7 @@ class Client:
 
         return not "already reported this content" in r.json()["text"]
 
-    def unfriend(self, member):
+    def unfriend(self, member : 'Member'):
         """Unfriend this member if you are friends with them.
         
         Parameters
@@ -337,7 +339,7 @@ class Client:
 
         return "no longer friends with this member" in r.json()["text"]
 
-    def send_request(self, member):
+    def send_request(self, member :  'Member'):
         """Send a friend request to a user. You will not instantly become friends with them,
         they will have to accept the friend request you sent them first.
         
