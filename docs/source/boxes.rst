@@ -52,6 +52,14 @@ Update
     :inherited-members:
     
 
+Request
+-----------
+.. autoclass:: moddb.boxes.Request
+    :members:
+    :inherited-members:
+    
+
+
 Comment
 --------
 .. autoclass:: moddb.boxes.Comment
