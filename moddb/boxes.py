@@ -82,7 +82,7 @@ class Profile:
         The url to contact the page owner
     follow : str
         The url to click to follow the mod
-    share : dict{str : str}
+    share : dict
         A dictionnary of share links with the place they will be shared as the key and the url
         for sharing as the value.
     private : bool
@@ -91,7 +91,7 @@ class Profile:
         Exclusive to Group and Team, represents the join procedure (invitation only, private, public)
     icon : str
         Exclusive to Game, Mod and Addon pages. URL of the icon image
-    developers : dict{str : Thumbnail}
+    developers : dict
         Exclusive to Game, Mods, Engine and Addon pages. Dictionnary of member/team like thumbnails as 
         values and the role of the member/team as the key (creator, publisher, developer, ect...)
     release : datetime.datetime
@@ -517,6 +517,34 @@ class Comment:
 
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
+
+class MissingComment:
+    """An object to represent a missing comment. This used in the cases where a parent comment with
+    children is deleted so that the children may still be accessible, missing comment will have the 
+    same attributes as a :class:`.Comment` but they will all be equal to None or False apart from children
+    and the comment position, which will have the children of the comment that was deleted attached to it."""
+
+    def __init__(self, position):
+        self.id = None
+        self.author = None
+        self.date = None
+        self.position = position
+        self.content = None
+        self.karma = 0
+        self.upvote = None
+        self.downvote = None
+        self.approved = False
+        self.children = []
+
+        self.developer = False
+        self.staff = False
+        self.subscriber = False
+        self.guest = False
+        self.embeds = []
+        self.location = None 
+
+    def __repr__(self):
+        return f"<MissingComment position={self.position}>"
 
 class CommentList(list):
     """Represents a list of comments. Inherits and works like a regular list but has an 

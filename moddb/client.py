@@ -5,9 +5,9 @@ from typing import Union, Any
 from robobrowser import RoboBrowser
 
 from .utils import soup, get_type_from, get_date, BASE_URL
-from .boxes import Update, Thumbnail, Request
-from .pages import Member
-from .enums import ThumbnailType
+from .boxes import Update, Thumbnail, Request, Comment
+from .pages import Member, Group, Mod, Game, Engine, Team
+from .enums import ThumbnailType, WatchType
 
 class ModdbException(Exception):
     pass
@@ -139,7 +139,7 @@ class Client:
 
         return requests
 
-    def get_watched(self, category :  'WatchType', page : int = 1):
+    def get_watched(self, category :  WatchType, page : int = 1):
         """Get a list of thumbnails of watched items based on the type parameters. Eventually, you'll also be
         able to paginate your mods. 
 
@@ -164,7 +164,7 @@ class Client:
 
         return results
 
-    def tracking(self, page : Union['Mod', 'Game', 'Engine', 'Group', 'Member']):
+    def tracking(self, page : Union[Mod, Game, Engine, Group, Member]):
         """Follow/unfollow this page.
         
         Parameters
@@ -194,7 +194,7 @@ class Client:
 
         return "be notified" in r.json()["text"]
 
-    def like_comment(self, comment : 'Comment'):
+    def like_comment(self, comment : Comment):
         """Like a comment, if the comment has already been liked nothing will happen.
 
         Parameters
@@ -224,7 +224,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def dislike_comment(self, comment : 'Comment'):
+    def dislike_comment(self, comment : Comment):
         """Dislike a comment, if the comment has already been disliked nothing will happen.
 
         Parameters
@@ -257,7 +257,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def membership(self, page : Union['Group', 'Team']):
+    def membership(self, page : Union[Group, Team]):
         """Join/leave a team
 
         Parameters
@@ -314,7 +314,7 @@ class Client:
 
         return not "already reported this content" in r.json()["text"]
 
-    def unfriend(self, member : 'Member'):
+    def unfriend(self, member : Member):
         """Unfriend this member if you are friends with them.
         
         Parameters
@@ -339,7 +339,7 @@ class Client:
 
         return "no longer friends with this member" in r.json()["text"]
 
-    def send_request(self, member :  'Member'):
+    def send_request(self, member :  Member):
         """Send a friend request to a user. You will not instantly become friends with them,
         they will have to accept the friend request you sent them first.
         

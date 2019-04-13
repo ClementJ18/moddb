@@ -1,5 +1,6 @@
 from .boxes import CommentList, Comment, Thumbnail, MemberProfile, MemberStatistics, \
-                   Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics
+                   Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics, \
+                   MissingComment
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleCategory, Difficulty, TutorialCategory, Licence, \
                    Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre, \
@@ -86,9 +87,17 @@ class BaseMetaClass:
         for raw in comments_raw:
             comment = Comment(raw)
             if comment.position == 1:
-                comments[-1].children.append(comment)
+                try:
+                    comments[-1].children.append(comment)
+                except IndexError:
+                    comment[-1].append(MissingComment(0))
+                    comments[-1].children.append(comment)
             elif comment.position == 2:
-                comments[-1].children[-1].children.append(comment)
+                try:
+                    comments[-1].children[-1].children.append(comment)
+                except IndexError:
+                    comments[-1].children.append(MissingComment(1))
+                    comments[-1].children[-1].children.append(comment)
             else:
                 comments.append(comment)
                     
@@ -886,17 +895,17 @@ class Mod(PageMetaClass):
 
     Filtering
     ----------
-    released : Status
+    released : :class:`.Status`
         The status of the mod (released, unreleased)
-    genre : Genre
+    genre : :class:`.Genre`
         The genre of the mod (fps, tower defense)
-    theme : Theme
+    theme : :class:`.Theme`
         The theme of the mod (fantasy, action)
-    players : PlayerStyle
+    players : :class:`.PlayerStyle`
         Player styles of the mod (co-op, singleplayer)
-    timeframe : TimeFrame
+    timeframe : :class:`.TimeFrame`
         The time period this was released in (last 24hr, last week, last month)
-    game : Union[Game, Object]
+    game : Union[:class:`.Game`, :class:`.Object`]
         An game object or an object with an id attribute which represents the
         game the mod belongs to.
 
@@ -927,17 +936,17 @@ class Game(PageMetaClass, GetModsMixin):
 
     Filtering
     ----------
-    released : Status
+    released : :class:`.Status`
         The status of the game (released, unreleased)
-    genre : Genre
+    genre : :class:`.Genre`
         The genre of the game (fps, tower defense)
-    theme : Theme
+    theme : :class:`.Theme`
         The theme of the game (fantasy, action)
-    indie : Scope
+    indie : :class:`.Scope`
         Whether the game is triple AAA or indie
-    players : PlayerStyle
+    players : :class:`.PlayerStyle`
         Player styles of the game (co-op, singleplayer)
-    timeframe : TimeFrame
+    timeframe : :class:`.TimeFrame`
         The time period this was released in (last 24hr, last week, last month)
 
     Sorting
@@ -964,11 +973,11 @@ class Engine(PageMetaClass, GetGamesMixin):
 
     Filtering
     -----------
-    released : Status
+    released : :class:`.Status`
         The status of the engine (released, unreleased)
-    licence : Licence
+    licence : :class:`.Licence`
         The license of the engine
-    timeframe : TimeFrame
+    timeframe : :class:`.TimeFrame`
         The time period this was released in (last 24hr, last week, last month)
 
     Sorting
@@ -1011,14 +1020,14 @@ class File(BaseMetaClass):
 
     Filtering
     ----------
-    category  : FileCategory
+    category  : :class:`.FileCategory`
         The type of file (audio, video, demo, full version....)
-    categoryaddon : AddonCategory
+    categoryaddon : :class:`.AddonCategory`
         The type of addon (map, textures, ect...)
-    game : Union[Game, Object]
+    game : Union[:class:`.Game`, :class:`.Object`]
         An game object or an object with an id attribute which represents the
         game the file belongs to.
-    timeframe : TimeFrame
+    timeframe : :class:`.TimeFrame`
         The time period this was released in (last 24hr, last week, last month)
 
     Sorting
@@ -1128,14 +1137,14 @@ class Addon(File):
 
     Filtering
     ----------
-    categoryaddon : AddonCategory
+    categoryaddon : :class:`.AddonCategory`
         The type of addon (map, textures, ect...)
-    licence : Licence
+    licence : :class:`.Licence`
         The licence of the addon
-    game : Union[Game, Object]
+    game : Union[:class:`.Game`, :class:`.Object`]
         An game object or an object with an id attribute which represents the
         game the addon belongs to.
-    timeframe : TimeFrame
+    timeframe : :class:`.TimeFrame`
         The time period this was released in (last 24hr, last week, last month)
 
     Sorting
@@ -1165,7 +1174,7 @@ class Media(BaseMetaClass):
 
     Filtering
     -----------
-    sitearea : Category
+    sitearea : :class:`.Category`
         The type of model the media belongs to. Category.downloads is not valid for this.
 
     Sorting
@@ -1260,11 +1269,11 @@ class Article(BaseMetaClass):
 
     Filtering
     ----------
-    category : ArticleCategory
+    category : :class:`.ArticleCategory`
         Type of the article (news, feature)
-    timeframe : TimeFrame
+    timeframe : :class:`.TimeFrame`
         The time period this was released in (last 24hr, last week, last month)
-    game : Union[Game, Object]
+    game : Union[:class:`.Game`, :class:`.Object`]
         An game object or an object with an id attribute which represents the
         game the article belongs to.
 
@@ -1377,9 +1386,9 @@ class Group(PageMetaClass):
 
     Filtering
     ----------
-    subscriptions : Membership
+    subscriptions : :class:`.Membership`
         The subscription system of the group (private, invitation)
-    category : GroupCategory
+    category : :class:`.GroupCategory`
         The category of the group (funny, literature)
 
     Sorting
@@ -1518,9 +1527,9 @@ class Team(Group, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetSoftwareHardw
 
     Filtering
     ----------
-    subscriptions : Membership
+    subscriptions : :class:`.Membership`
         The subscription system of the company (private, invitation)
-    category : TeamCategory
+    category : :class:`.TeamCategory`
         What does the team do (publisher, developer)
 
     Sorting
@@ -1571,9 +1580,9 @@ class Job:
 
     Filtering
     ----------
-    skill : JobSkill
+    skill : :class:`.JobSkill`
         The job skill looked for
-    earn : bool
+    earn : :class:`.bool`
         Whether or not the job is paid
 
     Sorting
@@ -1655,7 +1664,7 @@ class Blog(BaseMetaClass):
 
     Filtering
     ----------
-    timeframe : TimeFrame
+    timeframe : :class:`.TimeFrame`
         The time period this was released in (last 24hr, last week, last month)
 
     Sorting
@@ -1999,6 +2008,19 @@ class Platform(BaseMetaClass, GetModsMixin, GetGamesMixin, GetEnginesMixin, GetS
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
 
+    Filtering
+    ----------
+    released : :class:`.Status`
+        Current status of release (unreleased, early access, ect...)
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **porder** - what plaform it's on???
+        * **company** - company that made it in alphabetical order
+
+
     Attributes
     -----------
     name : str
@@ -2167,6 +2189,31 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin)
 class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetSoftwareHardwareMixin):
     """Represents a moddb Hardware page
 
+    Parameters
+    -----------
+    html : BeautifulSoup
+        The html file to parse, allows for finer control
+
+    Filtering
+    ----------
+    released : :class:`.Status`
+        Release status of the hardware (released, unreleased, early access)
+    category : :class:`.HardwareCategory`
+        Category of the hardware
+    timeframe : :class:`.TimeFrame`
+        How long ago the hardware was released
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **rating** - order by rating, asc is highest rating, desc is lowest rating
+        * **category** - sort alphebatically by hardwarecategory
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
+
     Attributes
     -----------
     hardware : List[Thumbnail]
@@ -2222,6 +2269,32 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetSoftwareHardwareMixi
 @concat_docs
 class Software(HardwareSoftwareMetaClass):
     """Represents a moddb Software page
+
+    Parameters
+    -----------
+    html : BeautifulSoup
+        The html file to parse, allows for finer control
+
+    Filtering
+    ----------
+    released : :class:`.Status`
+        Release status of the software (released, unreleased, early access)
+    category : :class:`.SoftwareCategory`
+        Category of the software
+    timeframe : :class:`.TimeFrame`
+        How long ago the software was released
+
+    Sorting
+    --------
+        * **released** - when the object was released, asc is oldest, desc is most recent
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
+        * **ranktoday** - order by daily ranking, asc is highest ranked, desc is lowest rank
+        * **visitstotal** - order by most views, asc is highest views, desc is lowest views
+        * **rating** - order by rating, asc is highest rating, desc is lowest rating
+        * **category** - sort alphebatically by softwarecategory
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
+
     """
     def __init__(self, html):
         super().__init__(html)
@@ -2236,9 +2309,16 @@ class Review:
     -----------
     rating : int
         A value from 1 to 10 denoting the rating number you're looking for
-
     sitearea : Category
         The type of model the rating is for (mod, engine, game)
+
+    Sorting
+    --------
+        * **ratingalt** - rating number, desc is biggest to lowest, asc is lowest to biggest
+        * **memberipid** - sort reviewer account age, asc is oldest reviewer first
+        * **positive** - how many people agree with it, desc is most to least people agreeing
+        * **negative** - how many people disagree with it, desc is most to least people disagreeing
+        * **id** - when it was added to moddb, asc is oldest, desc is most recent
 
     Attributes
     -----------
@@ -2276,6 +2356,17 @@ class Poll(BaseMetaClass):
     -----------
     html : bs4.BeautifulSoup
         The html to parse. Allows for finer control.
+
+    Filtering
+    ----------
+        month
+        year
+
+    Sorting
+    --------
+        * **totalvotes** - how many people voted on the poll, desc is most to least
+        * **name** - sort the poll alphabetically by name, asc is a-z
+        * **date** - when it was added to moddb, asc is oldest, desc is most recent
 
     Attributes
     -----------
