@@ -148,17 +148,13 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     ------------
     category : SearchCategory
         The model type that you want to search
-
     query : str
         String to search for in the model title
-    
     sort : Tuple[str, str]
         The tuple to sort by, look at the models your are searching for documentation 
         on sorting.
-
     page : int
         The page of results to get first
-
     filters : dict
         Search filters
 
@@ -177,7 +173,14 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     filter_parsed = {key : value.value for key, value in filters.items() if hasattr(value, "value")}
     cat = ThumbnailType[category.name[0:-1]]
 
-    html = get_page(url, params={"filter": "t", "kw": query, "sort": sort_ready, "game": game, **filter_parsed})
+    html = get_page(url, params={
+        "filter": "t", 
+        "kw": query, 
+        "sort": sort_ready, 
+        "game": game, 
+        "year": filters.get("years", None), 
+        **filter_parsed
+    })
 
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
     
@@ -186,6 +189,8 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     except AttributeError:
         LOGGER.info("Search query %s has less than 30 results (only one page)", url)
         pages = 1
+
+    page = int(html.find("span", class_="current").string)
 
     results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"]) for x in search_raws]
     results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
@@ -201,7 +206,6 @@ def parse(url : str, *, page_type : ThumbnailType = None) -> Any:
     ------------
     url : str
         The url to parse
-
     page_type : Optional[ThumbnailType]
         The type of the page you are parsing, used to decide which model to parse the html with
         can be left blank to let the function take care of it but might not always lead to the
@@ -229,7 +233,6 @@ def login(username : str, password : str) -> Member:
     -----------
     username : str
         The username of the user
-
     password : str
         The password associated to that username
 

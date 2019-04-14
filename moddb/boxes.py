@@ -548,7 +548,18 @@ class MissingComment:
 
 class CommentList(list):
     """Represents a list of comments. Inherits and works like a regular list but has an 
-    additional method called 'flatten' used to get all the nested children in a list"""
+    additional method called 'flatten' used to get all the nested children in a list
+
+    Attributes
+    -----------
+    page : int
+        The page of comments this page represents
+    max_page : int
+        The maximum amount of comment pages available
+    """
+
+    def __repr__(self):
+        return f"<CommentList pages={self.page}/{self.max_page}>"
 
     def flatten(self) -> List[Comment]:
         """Returns a 'flattened' list of comments where children of comments are added right

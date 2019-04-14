@@ -83,7 +83,15 @@ class BaseMetaClass:
             The html containing the comments
         """
         comments_raw = html.find_all("div", class_="row", id=True)
+
         comments = CommentList()
+        try:
+            comments.max_page = int(html.find("div", class_="pages").find_all()[-1].string)
+        except AttributeError:
+            LOGGER.info("%s has less than 30 comments (only one page)", self.name)
+            comments.max_page = 1
+
+        comments.page = int(html.find("span", class_="current").string)
         for raw in comments_raw:
             comment = Comment(raw)
             if comment.position == 1:
@@ -2359,8 +2367,11 @@ class Poll(BaseMetaClass):
 
     Filtering
     ----------
-        month
-        year
+        month : Month
+            The month the poll you're looking for should be from
+        year : int
+            A int representing a year between 2002 and now. Anything below or above 2002 will
+            always return zero results.
 
     Sorting
     --------
