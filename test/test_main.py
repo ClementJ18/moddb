@@ -18,6 +18,7 @@ from test.test_software import TestSoftware
 from test.test_hardware import TestHardware
 from test.test_poll import TestPoll
 from test.test_base import TestFrontPage, TestSearch, TestParse, TestLogin
+from test.test_client import TestClient
 
 logger = logging.getLogger('moddb')
 logger.setLevel(logging.DEBUG)
@@ -298,6 +299,7 @@ for query in queries:
     TestSearch.category = query[1]
     suite.addTests(loader.loadTestsFromTestCase(TestSearch))
 
+suite.addTests(loader.loadTestsFromTestCase(TestClient))
 
 runner = unittest.TextTestRunner(verbosity=3)
 result = runner.run(suite)

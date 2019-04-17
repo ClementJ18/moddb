@@ -6,6 +6,7 @@ from .utils import get_date, get_page, get_views, join, normalize, LOGGER, time_
 
 import re
 import sys
+import abc
 import datetime
 from typing import List, Any
 
@@ -546,7 +547,7 @@ class MissingComment:
     def __repr__(self):
         return f"<MissingComment position={self.position}>"
 
-class CommentList(list):
+class CommentList(abc.MutableSequence):
     """Represents a list of comments. Inherits and works like a regular list but has an 
     additional method called 'flatten' used to get all the nested children in a list
 
@@ -557,9 +558,16 @@ class CommentList(list):
     max_page : int
         The maximum amount of comment pages available
     """
+    def __init__(self, comments, page, max_page):
+        self._comments = comments
+        self.page = page
+        self.max_page = max_page
+
+    def __getitem__(self, element):
+        return self._comments[element]
 
     def __repr__(self):
-        return f"<CommentList pages={self.page}/{self.max_page}>"
+        return f"<CommentList page={self.page}/{self.max_page} comments={self._comments}>"
 
     def flatten(self) -> List[Comment]:
         """Returns a 'flattened' list of comments where children of comments are added right
@@ -581,7 +589,7 @@ class CommentList(list):
             The flattened list of comments
         """
         top_list = []
-        for comment in super().__iter__():
+        for comment in self._comments:
             top_list.append(comment)
             for child in comment.children:
                 top_list.append(child)

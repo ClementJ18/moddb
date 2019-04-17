@@ -28,6 +28,11 @@ class Client:
     -------
     ValueError
         The password or username was incorrect
+
+    Attributes
+    ----------
+    member : Member
+        The member objects this client instance represents
     """
 
     def __init__(self, username : str, password : str):

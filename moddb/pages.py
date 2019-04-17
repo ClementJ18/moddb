@@ -82,16 +82,16 @@ class BaseMetaClass:
         html : bs4.BeautifulSoup
             The html containing the comments
         """
-        comments_raw = html.find_all("div", class_="row", id=True)
-
-        comments = CommentList()
         try:
-            comments.max_page = int(html.find("div", class_="pages").find_all()[-1].string)
+            max_page = int(html.find("div", class_="pages").find_all()[-1].string)
         except AttributeError:
             LOGGER.info("%s has less than 30 comments (only one page)", self.name)
-            comments.max_page = 1
+            max_page = 1
 
-        comments.page = int(html.find("span", class_="current").string)
+        page = int(html.find("span", class_="current").string)
+
+        comments = []
+        comments_raw = html.find_all("div", class_="row", id=True)
         for raw in comments_raw:
             comment = Comment(raw)
             if comment.position == 1:
@@ -109,7 +109,7 @@ class BaseMetaClass:
             else:
                 comments.append(comment)
                     
-        return comments
+        return CommentList(comments, page, max_page)
 
     def _get(self, url : str, object_type : ThumbnailType, *, params : dict = {}) -> List[Thumbnail]:
         """This function takes a list of thumbnails of `object_type` in html and returns
