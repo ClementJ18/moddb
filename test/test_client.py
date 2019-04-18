@@ -2,17 +2,20 @@ import unittest
 import moddb
 import random
 
-from test.test_config import username, password
+from test.test_config import username, password, sender_username, sender_password
 
 class TestClient(unittest.TestCase):
     def setUp(self):
         self.client = moddb.Client(username, password)
+        self.sender = moddb.Client(sender_username, sender_password)
 
-    def test_gets(self):
-        self.client.get_updates()
-        self.client.get_friend_requests()
-        for key, value in moddb.WatchType.__members__:
+    def test_get_watched(self):
+        for _, value in moddb.WatchType.__members__:
             self.client.get_watched(value)
+
+    def test_get_updates(self):
+        updates = self.client.get_updates()
+        random.choice(updates).clear()
 
     def test_posts(self):
         urls = [
@@ -38,7 +41,7 @@ class TestClient(unittest.TestCase):
             self.client.tracking(e) #follow
             self.client.tracking(e) #unfollow
 
-            comment = random.choice(e.get_comments().flatten())
+            comment = random.choice(e.comments.flatten())
             self.client.like_comment(comment)
             self.client.dislike_comment(comment)
 
@@ -46,4 +49,13 @@ class TestClient(unittest.TestCase):
                 self.client.membership(e) #join
                 self.client.membership(e) #leave
 
+    def test_friends(self):
+        self.sender.send_request(self.client.member)
+        request = moddb.utils.get(self.client.get_friend_requests(), name=self.sender.member.username)
+        request.decline()
 
+        self.sender.send_request(self.client.member)
+        request = moddb.utils.get(self.client.get_friend_requests(), name=self.sender.member.username)
+        request.accept()
+
+        self.client.unfriend(self.sender.member)
