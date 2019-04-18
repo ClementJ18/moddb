@@ -250,7 +250,7 @@ class Client:
         if not hasattr(comment, "downvote"):
             raise TypeError("Argument must be a Comment-like object")
 
-        r= self._request("post", f"{BASE_URL}/messages/ajax/action/",
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
             data = {
                 "ajax": "t",
                 "action": "karmabad",
