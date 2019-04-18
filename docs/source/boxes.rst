@@ -67,7 +67,7 @@ Comment
     
 
 MissingComment
---------
+---------------
 .. autoclass:: moddb.boxes.MissingComment
     :members:
     :inherited-members:

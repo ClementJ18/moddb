@@ -6,14 +6,15 @@ from .pages import FrontPage, Member
 import re
 import sys
 import feedparser
+import collections
 from typing import Tuple, Any
 from robobrowser import RoboBrowser
 
 __all__ = ["Search", "search", "parse", "login", "logout", "front_page"]
 
-class Search:
+class Search(collections.abc.MutalbleSequence):
     """Represents the search you just conducted through the library's search function. Can be used to navigate 
-    the search page efficiently.
+    the search page efficiently. Behaves like a list.
 
     Attributes
     -----------
@@ -23,10 +24,10 @@ class Search:
         The type results
     filters : Dict[str : Enum]
         The dict of filters that was used to search for the results
-    page_max : int
+    max_page : int
         The number of pages
     page : int
-        The current page, range is 1-page_max included
+        The current page, range is 1-max_page included
     query : str
         The text query that was used in the search
     results_max : int
@@ -34,13 +35,12 @@ class Search:
     filters : dict
         Dictionnary of filters used to keep the query list persistent, can also be
         unpacked and passed to the search function.
-
     """
     def __init__(self, **kwargs):
         self.results = kwargs.get("results")
         self.category = kwargs.get("category")
         self.filters = kwargs.get("filters")
-        self.page_max = kwargs.get("page_max")
+        self.max_page = kwargs.get("max_page")
         self.page = kwargs.get("page")
         self.query = kwargs.get("query")
         self.results_max = kwargs.get("results_max")
@@ -60,7 +60,7 @@ class Search:
         ValueError
             There is no next page
         """
-        if self.page == self.page_max:
+        if self.page == self.max_page:
             raise ValueError("Reached last page already")
 
         return self.to_page(self.page+1)
@@ -92,7 +92,7 @@ class Search:
         Parameters
         -----------
         page : int
-            A page number within the range 1 - page_max inclusive
+            A page number within the range 1 - max_page inclusive
 
         Returns
         --------
@@ -104,8 +104,8 @@ class Search:
         ValueError
             This page does not exist
         """
-        if page < 1 or page > self.page_max:
-            raise ValueError(f"Please pick a page between 1 and {self.page_max}")
+        if page < 1 or page > self.max_page:
+            raise ValueError(f"Please pick a page between 1 and {self.max_page}")
 
         return search(self.category, query=self.query, page=page, sort=self.sort, **self.filters)
 
@@ -125,13 +125,32 @@ class Search:
         return search(self.category, query=self.query, page=1, sort=new_sort, **self.filters)
 
     def __repr__(self):
-        return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.page_max}>"
+        return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.max_page}>"
 
-    def __iter__(self):
-        return self.results.__iter__()
+    def __getitem__(self, element):
+        return self.results.__getitem__(element)
 
-    def __getitem__(self, key):
-        return self.results[key]
+    def __delitem__(self, element):
+        self.results.__delitem__(element)
+
+    def __len__(self):
+        return self.results.__len__()
+
+    def __setitem__(self, key, value):
+        self.results.__setitem__(key, value)
+
+    def insert(self, index, value):
+        self.results.insert(index, value)
+
+    def __add__(self, sequence):
+        if not isinstance(sequence, Search):
+            raise TypeError(f'can only concatenate Search (not "{sequence.__class__.__name__}") to Search')
+
+        return Search(
+            self.results + sequence.results, 
+            max([self.page, sequence.page]), 
+            max([self.max_page, sequence.max_page])
+        )
 
 def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, str] = None,
            page : int = 1, **filters) -> Search: 
@@ -194,22 +213,20 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
 
     results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"]) for x in search_raws]
     results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
-    return Search(results=results, page_max=pages, page=page, filters=filters, 
+    return Search(results=results, max_page=pages, page=page, filters=filters, 
                   category=category, query=query, results_max=results_max, sort=sort)
 
 def parse(url : str, *, page_type : ThumbnailType = None) -> Any: 
-    """Parse a url and return the appropriate object. The function will attempt to figure out the page itself
-    from the url and the content of the page but ModDB is not always consistent with this. In which case
-    it is recommended to pass a Thumbnail enum to the `page_type` kwarg.
+    """Parse a url and return the appropriate object.
 
     Parameters
     ------------
     url : str
         The url to parse
     page_type : Optional[ThumbnailType]
-        The type of the page you are parsing, used to decide which model to parse the html with
-        can be left blank to let the function take care of it but might not always lead to the
-        correct result.
+        An optional argument which allows to specify a different model to be used to parse this page. In 
+        general there is no reason to touch this but in case an error happens or you wish to force 
+        something to happen out of the regular behavior the option is there.
 
     Returns
     --------
@@ -219,7 +236,7 @@ def parse(url : str, *, page_type : ThumbnailType = None) -> Any:
     """
 
     html = get_page(url)
-    page_type = get_type_from(url)
+    page_type = page_type or get_type_from(url)
 
     model = getattr(sys.modules["moddb"], page_type.name.title())(html)
     return model

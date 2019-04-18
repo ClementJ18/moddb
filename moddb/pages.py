@@ -774,8 +774,8 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
         for x in suggestions_raw:
             try:
                 link = x.find("a", class_="image")
-                suggestion_type = link["href"].split("/")[1].replace("s", "")
-                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
+                suggestion_type = get_type_from(link["href"])
+                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=suggestion_type)
                 suggestions.append(suggestion)
             except (AttributeError, TypeError):
                 pass

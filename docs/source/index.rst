@@ -29,12 +29,15 @@ Welcome to moddb's documentation!
 
 .. image:: https://img.shields.io/github/stars/ClementJ18/moddb.svg?label=Stars&style=social 
    :target: https://github.com/ClementJ18/moddb
+   :alt: Stars
 
 .. image:: https://img.shields.io/discord/389039439487434752.svg
    :target: https://discord.gg/Ape8bZt
+   :alt: Discord Link
 
 .. image:: https://img.shields.io/github/commits-since/ClementJ18/moddb/latest.svg
     :target: https://github.com/ClementJ18/moddb/releases/latest
+    :alt: Commits Since
 
 The moddb python library is a module to scrape the ModDB.com website. The goal is to emulate
 the moddb website using function and OOP as if ModDB was simply an API. Ideally, in it's finished

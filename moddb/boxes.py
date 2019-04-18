@@ -6,7 +6,7 @@ from .utils import get_date, get_page, get_views, join, normalize, LOGGER, time_
 
 import re
 import sys
-import abc
+import collections
 import datetime
 from typing import List, Any
 
@@ -547,9 +547,9 @@ class MissingComment:
     def __repr__(self):
         return f"<MissingComment position={self.position}>"
 
-class CommentList(abc.MutableSequence):
-    """Represents a list of comments. Inherits and works like a regular list but has an 
-    additional method called 'flatten' used to get all the nested children in a list
+class CommentList(collections.abc.MutableSequence):
+    """Represents a list of comments. Inherits from :class: `.collections.abc.MutableSequence`
+    but has an additional method called 'flatten' used to get all the nested children in a list
 
     Attributes
     -----------
@@ -564,10 +564,32 @@ class CommentList(abc.MutableSequence):
         self.max_page = max_page
 
     def __getitem__(self, element):
-        return self._comments[element]
+        return self._comments.__getitem__(element)
+
+    def __delitem__(self, element):
+        self._comments.__delitem__(element)
+
+    def __len__(self):
+        return self._comments.__len__()
+
+    def __setitem__(self, key, value):
+        self._comments.__setitem__(key, value)
+
+    def insert(self, index, value):
+        self._comments.insert(index, value)
 
     def __repr__(self):
         return f"<CommentList page={self.page}/{self.max_page} comments={self._comments}>"
+
+    def __add__(self, sequence):
+        if not isinstance(sequence, CommentList):
+            raise TypeError(f'can only concatenate CommentList (not "{sequence.__class__.__name__}") to CommentList')
+
+        return CommentList(
+            self._comments + sequence._comments, 
+            max([self.page, sequence.page]), 
+            max([self.max_page, sequence.max_page])
+        )
 
     def flatten(self) -> List[Comment]:
         """Returns a 'flattened' list of comments where children of comments are added right
