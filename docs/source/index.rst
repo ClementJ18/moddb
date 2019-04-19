@@ -174,3 +174,4 @@ To uninstall the package::
    client
    utils
    enums
+   errors

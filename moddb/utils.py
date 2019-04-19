@@ -197,6 +197,7 @@ def get_type_from(url):
     type_mapping = {
         "new": "article",
         "feature": "article",
+        "tutorial": "article",
         "download": "file",
         "image": "media",
         "audio": " media",

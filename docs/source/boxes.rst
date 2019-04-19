@@ -17,6 +17,13 @@ CommentList
     :inherited-members:
     
 
+ResultList
+------------
+.. autoclass:: moddb.boxes.ResultList
+    :members:
+    :inherited-members:
+    
+
 Statistics
 -----------
 .. autoclass:: moddb.boxes.Statistics

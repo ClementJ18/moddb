@@ -8,9 +8,7 @@ from .utils import soup, get_type_from, get_date, BASE_URL
 from .boxes import Update, Thumbnail, Request, Comment
 from .pages import Member, Group, Mod, Game, Engine, Team
 from .enums import ThumbnailType, WatchType
-
-class ModdbException(Exception):
-    pass
+from .errors import ModdbException
 
 class Client:
     """Login the user to moddb through the library, this allows user to see guest comments and see

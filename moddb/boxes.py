@@ -7,11 +7,11 @@ from .utils import get_date, get_page, get_views, join, normalize, LOGGER, time_
 import re
 import sys
 import collections
-import datetime
-from typing import List, Any
+from typing import List, Any, Tuple, Union
 
 __all__ = ['Statistics', 'Profile', 'Style', 'Thumbnail', 'Comment', 'CommentList', 'MemberProfile', 
-           'MemberStatistics', 'PlatformStatistics', 'PartialArticle', 'Option']
+           'MemberStatistics', 'PlatformStatistics', 'PartialArticle', 'Option', 'ResultList',
+           'Request', 'Update', 'MissingComment']
 
 class Statistics:
     """The stats box, on pages that have one. This represents total stats and daily stats in one
@@ -547,78 +547,6 @@ class MissingComment:
     def __repr__(self):
         return f"<MissingComment position={self.position}>"
 
-class CommentList(collections.abc.MutableSequence):
-    """Represents a list of comments. Inherits from :class: `.collections.abc.MutableSequence`
-    but has an additional method called 'flatten' used to get all the nested children in a list
-
-    Attributes
-    -----------
-    page : int
-        The page of comments this page represents
-    max_page : int
-        The maximum amount of comment pages available
-    """
-    def __init__(self, comments, page, max_page):
-        self._comments = comments
-        self.page = page
-        self.max_page = max_page
-
-    def __getitem__(self, element):
-        return self._comments.__getitem__(element)
-
-    def __delitem__(self, element):
-        self._comments.__delitem__(element)
-
-    def __len__(self):
-        return self._comments.__len__()
-
-    def __setitem__(self, key, value):
-        self._comments.__setitem__(key, value)
-
-    def insert(self, index, value):
-        self._comments.insert(index, value)
-
-    def __repr__(self):
-        return f"<CommentList page={self.page}/{self.max_page} comments={self._comments}>"
-
-    def __add__(self, sequence):
-        if not isinstance(sequence, CommentList):
-            raise TypeError(f'can only concatenate CommentList (not "{sequence.__class__.__name__}") to CommentList')
-
-        return CommentList(
-            self._comments + sequence._comments, 
-            max([self.page, sequence.page]), 
-            max([self.max_page, sequence.max_page])
-        )
-
-    def flatten(self) -> List[Comment]:
-        """Returns a 'flattened' list of comments where children of comments are added right
-        after the parent comment so:
-        
-        [ Comment1 ]
-            ├── Comment2\n
-                ├── Comment3\n
-                └── Comment4\n
-            └── Comment5
-
-        would become:
-        
-        [Comment1, Comment2, Comment3, Comment4, Comment5]
-        
-        Returns
-        --------
-        list[Comment]
-            The flattened list of comments
-        """
-        top_list = []
-        for comment in self._comments:
-            top_list.append(comment)
-            for child in comment.children:
-                top_list.append(child)
-                top_list.extend(child.children)
-
-        return top_list
-
 class MemberProfile:
     """Member profiles are separate entities because they share nothing with the other profile boxes. Where as all
     other profile boxes share at least 4 attributes, a member shares none.
@@ -853,3 +781,174 @@ class Option:
 
     def __repr__(self):
         return f"<Option text={self.text}>"
+
+class ModDBList(collections.abc.MutableSequence):
+    """Base List type for the lib
+
+    Attributes
+    -----------
+    page : int
+        The page of results this page represents
+    max_page : int
+        The maximum amount of result pages available
+    """
+    def __init__(self, **kwargs):
+        self._results = kwargs.get("results")
+        self._params = kwargs.get("params", {})
+        self._url = kwargs.get("url")
+        self._action = kwargs.get("action")
+        self.max_page = kwargs.get("max_page")
+        self.page = kwargs.get("page")
+
+    def next_page(self) -> Union['ResultList', 'CommentList']:
+        """Returns the next page of results as either a CommentList if you are retriving comments or
+        as a ResultList if it's literally anything else.
+
+        Returns
+        --------
+        Union[ResultList, CommentList]
+            The new search objects containing a new set of results.
+
+        Raises
+        -------
+        ValueError
+            There is no next page
+        """
+        if self.page == self.max_page:
+            raise ValueError("Reached last page already")
+
+        return self.to_page(self.page+1)
+
+    def previous_page(self) -> Union['ResultList', 'CommentList']: 
+        """Returns the previous page of results as either a CommentList if you are retriving comments or
+        as a ResultList if it's literally anything else.
+
+        Returns
+        --------
+        Union[ResultList, CommentList]
+            The new list-like object of results.
+
+        Raises
+        -------
+        ValueError
+            There is no previous page
+        """
+        if self.page == 1:
+            raise ValueError("Reached first page already")
+
+        return self.to_page(self.page-1)
+
+    def to_page(self, page : int) -> Union['ResultList', 'CommentList']: 
+        """Returns the desired page of results as either a CommentList if you are retriving comments or
+        as a ResultList if it's literally anything else.
+    
+        Parameters
+        -----------
+        page : int
+            A page number within the range 1 - max_page inclusive
+
+        Returns
+        --------
+        Union[ResultList, CommentList]
+            The new list-like object of results.
+
+        Raises
+        -------
+        ValueError
+            This page does not exist
+        """
+        if page < 1 or page > self.max_page:
+            raise ValueError(f"Please pick a page between 1 and {self.max_page}")
+
+        new_url = self._url.replace(self._url.split("/")[-1], str(page))
+        return self._action(new_url, params=self._params)
+
+    def __repr__(self):
+        return f"<{self.__class__.__name__} pages={self.page}/{self.max_page}, results=[{self._results}]>"
+
+    def __getitem__(self, element):
+        return self._results.__getitem__(element)
+
+    def __delitem__(self, element):
+        self._results.__delitem__(element)
+
+    def __len__(self):
+        return self._results.__len__()
+
+    def __setitem__(self, key, value):
+        self._results.__setitem__(key, value)
+
+    def insert(self, index, value):
+        self._results.insert(index, value)
+
+class ResultList(ModDBList):
+    """Represents a list of result gotten from one of the many get methods the library uses. This is returned 
+    over a regular list because it has additional methods that allow for easily go through all the results. In
+    the same way that the moddb site works, you don't have to re-run the query manually to get the next page,
+    you simply click a button, same here, you don't have to recall the base get method, simply use on of the 
+    methods here to traverse the results. This emulates a list and will behave like one, so you
+    can use any of the regular list operators in addition to the methods defined below
+
+    Attributes
+    -----------
+    page : int
+        The page of results this page represents
+    max_page : int
+        The maximum amount of result pages available
+    """
+
+    def resort(self, new_sort : Tuple[str, str]) -> 'ResultList': 
+        """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
+
+        Parameters
+        -----------
+        new_sort : Tuple[str, str]
+            The new sorting tuple to check by
+
+        Returns
+        -------
+        ResultList
+            The new set of results with the updated sort order
+        """
+        self._params["sort"] = f"{new_sort[0]}-{new_sort[1]}"
+        return self._action(self._url, params=self._params)
+
+class CommentList(ModDBList):
+    """Represents a list of comments. This emulates a list and will behave like one, so you
+    can use any of the regular list operators in addition to the methods defined below.
+    
+    Attributes
+    -----------
+    page : int
+        The page of comments this page represents
+    max_page : int
+        The maximum amount of comment pages available
+    """
+
+    def flatten(self) -> List[Comment]:
+        """Returns a 'flattened' list of comments where children of comments are added right
+        after the parent comment so:
+        
+        [ Comment1 ]
+            ├── Comment2\n
+                ├── Comment3\n
+                └── Comment4\n
+            └── Comment5
+
+        would become:
+        
+        [Comment1, Comment2, Comment3, Comment4, Comment5]
+        
+        Returns
+        --------
+        List[Comment]
+            The flattened list of comments
+        """
+        top_list = []
+        for comment in self._results:
+            top_list.append(comment)
+            for child in comment.children:
+                top_list.append(child)
+                top_list.extend(child.children)
+
+        return top_list

@@ -12,7 +12,7 @@ from robobrowser import RoboBrowser
 
 __all__ = ["Search", "search", "parse", "login", "logout", "front_page"]
 
-class Search(collections.abc.MutalbleSequence):
+class Search(collections.abc.MutableSequence):
     """Represents the search you just conducted through the library's search function. Can be used to navigate 
     the search page efficiently. Behaves like a list.
 
@@ -146,11 +146,7 @@ class Search(collections.abc.MutalbleSequence):
         if not isinstance(sequence, Search):
             raise TypeError(f'can only concatenate Search (not "{sequence.__class__.__name__}") to Search')
 
-        return Search(
-            self.results + sequence.results, 
-            max([self.page, sequence.page]), 
-            max([self.max_page, sequence.max_page])
-        )
+        return self.results + sequence.results
 
 def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, str] = None,
            page : int = 1, **filters) -> Search: 
