@@ -191,6 +191,7 @@ class Profile:
             try:
                 self.homepage =  html.find("h5", string="Homepage").parent.span.a["href"]
             except AttributeError:
+                self.homepage = None
                 LOGGER.info("%s %s has no homepage", page_type.name, _name)
 
         if page_type in [SearchCategory.games, SearchCategory.addons]:

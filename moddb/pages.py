@@ -6,7 +6,7 @@ from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, Addon
                    Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre, \
                    Membership, GroupCategory, RSSType
 from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object, request, \
-                   get_type_from
+                   get_type_from, get_page_number
 
 import re
 import bs4
@@ -85,13 +85,7 @@ class BaseMetaClass:
             Dud to allow function with the result list object. So far, there doesn't seem
             to be a way to filter comments in any way.
         """
-        try:
-            max_page = int(html.find("div", class_="pages").find_all()[-1].string)
-        except AttributeError:
-            LOGGER.info("%s has less than 30 comments (only one page)", self.name)
-            max_page = 1
-
-        page = int(html.find("span", class_="current").string)
+        page, max_page = get_page_number(html)
 
         comments = []
         comments_raw = html.find_all("div", class_="row", id=True)
@@ -162,13 +156,7 @@ class BaseMetaClass:
             )
             objects.append(thumbnail)
 
-        try:
-            max_page = int(html.find("div", class_="pages").find_all()[-1].string)
-        except AttributeError:
-            LOGGER.info("%s has less than 30 resuts (only one page)", self.name)
-            max_page = 1
-
-        page = int(html.find("span", class_="current").string)
+        page, max_page = get_page_number(html)
 
         return ResultList(results=objects, params=params, url=url, action=self._get, page=page, max_page=max_page)
 
@@ -410,13 +398,7 @@ class SharedMethodsMixin:
             reviews.append(review_obj)
             e += 1
 
-        try:
-            max_page = int(html.find("div", class_="pages").find_all()[-1].string)
-        except AttributeError:
-            LOGGER.info("%s has less than 30 reviews (only one page)", self.name)
-            max_page = 1
-
-        page = int(html.find("span", class_="current").string)
+        page, max_page = get_page_number(html)
 
         return ResultList(
             results=reviews,
@@ -1886,13 +1868,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
             blogs.append(blog_obj)
             e += 2
 
-        try:
-            max_page = int(html.find("div", class_="pages").find_all()[-1].string)
-        except AttributeError:
-            LOGGER.info("%s has less than 30 blogs (only one page)", self.name)
-            max_page = 1
-
-        page = int(html.find("span", class_="current").string)
+        page, max_page = get_page_number(html)
 
         return ResultList(
             results=blogs,
