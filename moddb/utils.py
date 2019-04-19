@@ -217,6 +217,18 @@ def get_type_from(url):
     return page_type
 
 def get_page_number(html):
+    """Central function for retriving the page numbers of result pages
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to get the page numbers from
+
+    Returns
+    --------
+    Tuple[int, int]
+        The page and max_page
+    """
     try:
         max_page = int(html.find("div", class_="pages").find_all()[-1].string)
     except AttributeError:
