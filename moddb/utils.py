@@ -217,7 +217,7 @@ def get_type_from(url):
     return page_type
 
 def get_page_number(html):
-    """Central function for retriving the page numbers of result pages
+    """Central function for retrieving the page numbers of result pages
 
     Parameters
     -----------

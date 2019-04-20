@@ -107,7 +107,7 @@ class BaseMetaClass:
             results=comments, 
             page=page,
             max_page=max_page,
-            action=self._get_comments,
+            action=self._get_comments_from_url,
             url=f"{self.url}/page/{page}",
         )
 
@@ -155,7 +155,14 @@ class BaseMetaClass:
 
         page, max_page = get_page_number(html)
 
-        return ResultList(results=objects, params=params, url=url, action=self._get, page=page, max_page=max_page)
+        return ResultList(
+            results=objects, 
+            params=params, 
+            url=url, 
+            action=self._get, 
+            page=page, 
+            max_page=max_page
+        )
 
     def _get_media(self, index : int, *, html) -> List[Thumbnail]:
         """Hidden method used to parse media content from the page. Since the only difference is that pages 
@@ -179,6 +186,10 @@ class BaseMetaClass:
 
         name_finder = r"\/([a-z0-9-]*)#imagebox"
         return [Thumbnail(name=re.search(name_finder, match[0])[1], url=match[0], type=ThumbnailType.media, image=match[1]) for match in matches]
+
+    def _get_comments_from_url(self, url):
+        """Extra method so we can get comments from a ResultList"""
+        return self._get_comments(get_page(url))
 
     def get_comments(self, index : int = 1) -> CommentList:
         """Used to get comments on the model regardless of what page they may be present in. The function
