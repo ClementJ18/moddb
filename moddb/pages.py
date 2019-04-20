@@ -1,12 +1,12 @@
 from .boxes import CommentList, Comment, Thumbnail, MemberProfile, MemberStatistics, \
                    Profile, Statistics, Style, PartialArticle, Option, PlatformStatistics, \
-                   MissingComment
+                   MissingComment, ResultList
 from .enums import ThumbnailType, SearchCategory, TimeFrame, FileCategory, AddonCategory, \
                    MediaCategory, JobSkill, ArticleCategory, Difficulty, TutorialCategory, Licence, \
                    Status, PlayerStyle, Scope, Theme, HardwareCategory, SoftwareCategory, Genre, \
                    Membership, GroupCategory, RSSType
 from .utils import get_page, join, LOGGER, get_date, get_views, get_type, concat_docs, Object, request, \
-                   get_type_from, request
+                   get_type_from, get_page_number
 
 import re
 import bs4
@@ -37,7 +37,7 @@ class BaseMetaClass:
         spaces removed and shortened.
     url : str
         The url of the page
-    comments : CommentList
+    comments : CommentList[Comment]
         The comments scrapped on this list in order.
     report : str
         URL to report the page
@@ -75,15 +75,17 @@ class BaseMetaClass:
 
     def _get_comments(self, html : bs4.BeautifulSoup) -> CommentList:
         """Extracts the comments from an html page and adds them to a CommentList. In addition
-        this command also adds them to the comments children as need be.
+        this method also adds them to the comments children as need be.
 
         Parameters
         -----------
         html : bs4.BeautifulSoup
             The html containing the comments
         """
+        page, max_page = get_page_number(html)
+
+        comments = []
         comments_raw = html.find_all("div", class_="row", id=True)
-        comments = CommentList()
         for raw in comments_raw:
             comment = Comment(raw)
             if comment.position == 1:
@@ -101,9 +103,15 @@ class BaseMetaClass:
             else:
                 comments.append(comment)
                     
-        return comments
+        return CommentList(
+            results=comments, 
+            page=page,
+            max_page=max_page,
+            action=self._get_comments_from_url,
+            url=f"{self.url}/page/{page}",
+        )
 
-    def _get(self, url : str, object_type : ThumbnailType, *, params : dict = {}) -> List[Thumbnail]:
+    def _get(self, url : str, *, params : dict = {}) -> ResultList:
         """This function takes a list of thumbnails of `object_type` in html and returns
         a list of Thumbnail of that object type.
 
@@ -139,13 +147,22 @@ class BaseMetaClass:
                 name=obj.a["title"], 
                 url=obj.a["href"], 
                 image=obj.a.img["src"], 
-                type=object_type, 
+                type=get_type_from(join(obj.a["href"])), 
                 summary=summary.string if summary else None, 
                 date=get_date(date["datetime"]) if date else None
             )
             objects.append(thumbnail)
 
-        return objects
+        page, max_page = get_page_number(html)
+
+        return ResultList(
+            results=objects, 
+            params=params, 
+            url=url, 
+            action=self._get, 
+            page=page, 
+            max_page=max_page
+        )
 
     def _get_media(self, index : int, *, html) -> List[Thumbnail]:
         """Hidden method used to parse media content from the page. Since the only difference is that pages 
@@ -170,6 +187,10 @@ class BaseMetaClass:
         name_finder = r"\/([a-z0-9-]*)#imagebox"
         return [Thumbnail(name=re.search(name_finder, match[0])[1], url=match[0], type=ThumbnailType.media, image=match[1]) for match in matches]
 
+    def _get_comments_from_url(self, url):
+        """Extra method so we can get comments from a ResultList"""
+        return self._get_comments(get_page(url))
+
     def get_comments(self, index : int = 1) -> CommentList:
         """Used to get comments on the model regardless of what page they may be present in. The function
         itself simply relies on two other to make the request and parse the table.
@@ -181,8 +202,8 @@ class BaseMetaClass:
 
         Returns
         --------
-        CommentList
-            A subclass of list with the method flatten to retrieve all the children.
+        CommentList[Comment]
+            A list-like object containing the comments and additional methods
         """
         return self._get_comments(get_page(f"{self.url}/page/{index}"))
 
@@ -190,7 +211,7 @@ class GetGamesMixin:
     """Abstract class containing the get_games method"""
     def get_games(self, index : int = 1, *,  query : str = None, status : Status = None,
         genre : Genre = None, theme : Theme = None, scope : Scope = None, players : PlayerStyle = None,
-        timeframe : TimeFrame = None, sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        timeframe : TimeFrame = None, sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of games for the model. Each page will yield up to 30 games.
 
         Parameters
@@ -216,7 +237,7 @@ class GetGamesMixin:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             List of game like thumbnails that can be parsed individually.
         """
         params = {
@@ -231,14 +252,14 @@ class GetGamesMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/games/page/{index}", ThumbnailType.game, params=params)
+        return self._get(f"{self.url}/games/page/{index}", params=params)
 
 class GetModsMixin:
     """Abstract class containing the get_mod method"""
     def get_mods(self, index : int = 1, *,  query : str = None, status : Status = None,
         genre : Genre = None, theme : Theme = None, players : PlayerStyle = None,
         timeframe : TimeFrame = None, game : Union['Game', Object] = None,
-        sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of mods for the game. Each page will yield up to 30 mods. 
         
         Parameters
@@ -265,7 +286,7 @@ class GetModsMixin:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             The list of mods type thumbnails parsed from the game
         """
         params = {
@@ -280,13 +301,13 @@ class GetModsMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/mods/page/{index}", ThumbnailType.mod, params=params)
+        return self._get(f"{self.url}/mods/page/{index}", params=params)
 
 class GetEnginesMixin:
     """Abstract class containing the get_engines method"""
     def get_engines(self, index : int = 1, *, query : str = None, status : Status = None, 
         licence : Licence = None, timeframe : TimeFrame = None,
-        sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of engines for the game. Each page will yield up to 30 engines. 
         
         Parameters
@@ -305,7 +326,7 @@ class GetEnginesMixin:
             The sorting tuple to sort by the results
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             The list of engine type thumbnails parsed from the game
         """
         params = {
@@ -317,13 +338,13 @@ class GetEnginesMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/engines/page/{index}", ThumbnailType.engine, params=params)
+        return self._get(f"{self.url}/engines/page/{index}", params=params)
 
 class SharedMethodsMixin:
     """Abstract class that implements a certain amount of top level methods shared between Pages
     and Hardware"""
     def get_reviews(self, index : int = 1, *, query : str = None, rating : int = None, 
-        sort : Tuple[str, str] = None) -> List['Review']:
+        sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of reviews for the page. Each page will yield up to 10 reviews. 
 
         Parameters
@@ -339,7 +360,7 @@ class SharedMethodsMixin:
 
         Returns
         --------
-        List[Review]
+        ResultList[Thumbnail]
             The list of reviews parsed from the page
         """
         params = {
@@ -385,10 +406,23 @@ class SharedMethodsMixin:
             reviews.append(review_obj)
             e += 1
 
-        return reviews
+        page, max_page = get_page_number(html)
+
+        return ResultList(
+            results=reviews,
+            params={
+                'query': query, 
+                'rating': rating, 
+                'sort': sort
+            },
+            action=self.get_reviews,
+            url=f"{self.url}/reviews/page/{index}",
+            page=page,
+            max_page=max_page
+        )
 
     def get_articles(self, index : int = 1, *, query : str = None, category : ArticleCategory = None, 
-        timeframe : TimeFrame = None, sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        timeframe : TimeFrame = None, sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of articles for the page. Each page will yield up to 30 articles. 
 
         Parameters
@@ -406,7 +440,7 @@ class SharedMethodsMixin:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             The list of article type thumbnails parsed from the page
         """
         params = {
@@ -417,11 +451,11 @@ class SharedMethodsMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/articles/page/{index}", ThumbnailType.article, params=params)
+        return self._get(f"{self.url}/articles/page/{index}", params=params)
         
     def get_files(self, index : int = 1, *, query : str = None, category : FileCategory = None, 
         addon_type : AddonCategory = None, timeframe : TimeFrame = None,
-        sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of files for the page. Each page will yield up to 30 files. 
 
         Parameters
@@ -441,7 +475,7 @@ class SharedMethodsMixin:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             The list of file type thumbnails parsed from the page
         """
         params = {
@@ -453,7 +487,7 @@ class SharedMethodsMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/downloads/page/{index}", ThumbnailType.file, params=params)
+        return self._get(f"{self.url}/downloads/page/{index}", params=params)
 
     def get_images(self) -> List[Thumbnail]:
         """Get all the images a page has uploaded. Literally all of them. As thumbnails. ModDB's imagebox
@@ -483,7 +517,7 @@ class SharedMethodsMixin:
         return self._get_media(2, html=html)
 
     def get_tutorials(self, index : int = 1, *, query : str = None, difficulty : Difficulty = None, 
-        tutorial_type : TutorialCategory = None, sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        tutorial_type : TutorialCategory = None, sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of tutorial for the page. Each page will yield up to 30 tutorials. 
 
         Parameters
@@ -501,7 +535,7 @@ class SharedMethodsMixin:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             The list of article type thumbnails parsed from the page
         """
         params = {
@@ -512,13 +546,13 @@ class SharedMethodsMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/tutorials/page/{index}", ThumbnailType.article, params=params)
+        return self._get(f"{self.url}/tutorials/page/{index}", params=params)
 
 class GetSoftwareHardwareMixin:
     """Abstrac class implementing get_software and get_hardware"""
     def get_hardware(self, index : int = 1, *, query : str = None, status : Status = None,
         category : HardwareCategory = None, timeframe : TimeFrame = None,
-        sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of hardware for the platform. Each page will yield up to 30 hardware.
 
         Parameters
@@ -538,7 +572,7 @@ class GetSoftwareHardwareMixin:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             List of hardware like thumbnails that can be parsed individually.
         """
         params = {
@@ -550,11 +584,11 @@ class GetSoftwareHardwareMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/hardware/page/{index}", ThumbnailType.hardware, params=params)
+        return self._get(f"{self.url}/hardware/page/{index}", params=params)
 
     def get_software(self, index : int = 1, *, query : str = None, status : Status = None,
         category : SoftwareCategory = None, timeframe : TimeFrame = None,
-        sort : Tuple[str, str] = None) -> List[Thumbnail]:
+        sort : Tuple[str, str] = None) -> ResultList:
         """Get a page of software for the platform. Each page will yield up to 30 software.
 
         Parameters
@@ -574,7 +608,7 @@ class GetSoftwareHardwareMixin:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             List of software like thumbnails that can be parsed individually.
         """
         params = {
@@ -586,7 +620,7 @@ class GetSoftwareHardwareMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        return self._get(f"{self.url}/software/page/{index}", ThumbnailType.software, params=params)
+        return self._get(f"{self.url}/software/page/{index}", params=params)
 
 class RSSFeedMixin:
     def rss(self, type : RSSType, *, parse_feed = False):
@@ -766,8 +800,8 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
         for x in suggestions_raw:
             try:
                 link = x.find("a", class_="image")
-                suggestion_type = link["href"].split("/")[1].replace("s", "")
-                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=ThumbnailType[suggestion_type])
+                suggestion_type = get_type_from(link["href"])
+                suggestion = Thumbnail(name=link["title"], url=link["href"], image=link.img["src"], type=suggestion_type)
                 suggestions.append(suggestion)
             except (AttributeError, TypeError):
                 pass
@@ -851,7 +885,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
         return engines
 
     def get_addons(self, index : int = 1, *, query : str = None, addon_type : AddonCategory = None,
-        timeframe : TimeFrame = None, licence : Licence = None) -> List[Thumbnail]:
+        timeframe : TimeFrame = None, licence : Licence = None) -> ResultList:
         """Get a page of addons for the page. Each page will yield up to 30 addons. 
 
         Parameters
@@ -869,7 +903,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             The list of addon type thumbnails parsed from the page
         """
         params = {
@@ -879,7 +913,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
             "timeframe": timeframe.value if timeframe else None,
             "licence": licence.value if licence else None
         }
-        return self._get(f"{self.url}/addons/page/{index}", ThumbnailType.addon, params=params)
+        return self._get(f"{self.url}/addons/page/{index}", params=params)
 
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
@@ -1160,8 +1194,7 @@ class Addon(File):
 
 
     """
-    def __init__(self, html : bs4.BeautifulSoup):
-        super().__init__(html)
+    pass
 
 @concat_docs
 class Media(BaseMetaClass):
@@ -1476,7 +1509,7 @@ class Group(PageMetaClass):
 
         self.medias = self._get_media(2, html=html)
 
-    def get_reviews(*args, **kwargs):
+    def get_reviews(self, *args, **kwargs):
         """"""
         raise AttributeError(f"{self.__class__.__name__} has no 'get_reviews' attribute")
 
@@ -1790,7 +1823,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
         return f"<Member name={self.name} level={self.profile.level}>"
 
     def get_blogs(self, index : int = 1, *, query : str = None, timeframe : TimeFrame = None, 
-                  sort : Tuple[str, str] = None) -> List["Blog"]:
+                  sort : Tuple[str, str] = None) -> ResultList:
         """Search through a member's blogs one page at a time with certain filters.
 
         Parameters
@@ -1806,7 +1839,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
 
         Returns
         --------
-        List[Blog]
+        ResultList[Blog]
             The list of blogs on this page. 
         """
         params = {
@@ -1843,7 +1876,20 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
             blogs.append(blog_obj)
             e += 2
 
-        return blogs
+        page, max_page = get_page_number(html)
+
+        return ResultList(
+            results=blogs,
+            params={
+                "query": query,
+                "timeframe": timeframe,
+                "sort": sort
+            },
+            url=f"{self.url}/blogs/page/{index}",
+            action=self.get_blogs,
+            page=page,
+            max_page=max_page
+        )
 
     def get_member_comments(self, index : int = 1, *, show_deleted : bool = False) -> CommentList:
         """Gets a page of all the comments a member has posted.
@@ -1858,8 +1904,8 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
 
         Returns
         --------
-        CommentList
-            A list of comments.
+        CommentList[Comment]
+            A list of the comments made by the user.
 
         """
         params = {
@@ -1869,7 +1915,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
         html = get_page(f"{self.url}/comments/page/{index}", params=params)
         return self._get_comments(html)
 
-    def get_friends(self, index : int = 1, *, username : str = None) -> List[Thumbnail]:
+    def get_friends(self, index : int = 1, *, username : str = None) -> ResultList:
         """Get a page of the friends of the member
     
         Parameters
@@ -1881,7 +1927,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             A list of member like thumbnails of the member's friends
         """
         params = {
@@ -1889,10 +1935,10 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
             "username": username
         }
 
-        return self._get(f"{self.url}/friends/page/{index}", ThumbnailType.member, params=params)
+        return self._get(f"{self.url}/friends/page/{index}", params=params)
 
     def get_groups(self, index : int = 1, *, query : str = None, subscription : Membership = None,
-        category : GroupCategory = None) -> List[Thumbnail]:
+        category : GroupCategory = None) -> ResultList:
         """Get a page of the groups and teams a member is part of.
         
         Parameters
@@ -1908,7 +1954,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             A list of team/group like thumbnails the member is part of
         """
         params = {
@@ -1918,7 +1964,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
             "category": category.value if category else None
         }
 
-        return self._get(f"{self.url}/groups/page/{index}", ThumbnailType.group, params=params)
+        return self._get(f"{self.url}/groups/page/{index}", params=params)
 
 @concat_docs
 class FrontPage:
@@ -2044,7 +2090,7 @@ class Platform(BaseMetaClass, GetModsMixin, GetGamesMixin, GetEnginesMixin, GetS
         Stat data on the platform
     share : dict{str : str}
         Share link of the platform with the name of the share as key and link of the share as url.
-    comments : CommentList
+    comments : CommentList[Comment]
         Comments on this page
     games : List[Thumbnail]
         A list of games suggested on the platform main page.
@@ -2359,8 +2405,11 @@ class Poll(BaseMetaClass):
 
     Filtering
     ----------
-        month
-        year
+        month : Month
+            The month the poll you're looking for should be from
+        year : int
+            A int representing a year between 2002 and now. Anything below or above 2002 will
+            always return zero results.
 
     Sorting
     --------
@@ -2393,11 +2442,11 @@ class Poll(BaseMetaClass):
         rest = poll.find_all("p")[1:]
 
         self.options = []
-        for x in range(len(percentage)):
-            raw = percentage[x].div.string.replace('%', '').replace('\xa0', '')
+        for index, _ in enumerate(percentage):
+            raw = percentage[index].div.string.replace('%', '').replace('\xa0', '')
             percent = float(f"0.{raw}")
-            text = re.sub(r"\([\d,]* vote(s)?\)", '', rest[x].text)
-            votes = int(re.search(r"([\d,]*) vote(s)?", rest[x].span.string)[1].replace(',', ''))
+            text = re.sub(r"\([\d,]* vote(s)?\)", '', rest[index].text)
+            votes = int(re.search(r"([\d,]*) vote(s)?", rest[index].span.string)[1].replace(',', ''))
             self.options.append(Option(text=text, votes=votes, percent=percent))
 
     def __repr__(self):

@@ -29,12 +29,15 @@ Welcome to moddb's documentation!
 
 .. image:: https://img.shields.io/github/stars/ClementJ18/moddb.svg?label=Stars&style=social 
    :target: https://github.com/ClementJ18/moddb
+   :alt: Stars
 
 .. image:: https://img.shields.io/discord/389039439487434752.svg
    :target: https://discord.gg/Ape8bZt
+   :alt: Discord Link
 
 .. image:: https://img.shields.io/github/commits-since/ClementJ18/moddb/latest.svg
     :target: https://github.com/ClementJ18/moddb/releases/latest
+    :alt: Commits Since
 
 The moddb python library is a module to scrape the ModDB.com website. The goal is to emulate
 the moddb website using function and OOP as if ModDB was simply an API. Ideally, in it's finished
@@ -150,7 +153,7 @@ Installing
 ------------
 This package is not available on Pypi but can still be installed using pip if you also have git installed. Else you will have to download the repository and instal using the setup.py script located at root. To install with pip:: 
 
-    pip install -U git+git://github.com/ClementJ18/moddb.git@v0.5
+    pip install -U git+git://github.com/ClementJ18/moddb.git@v0.6
 
 Uninstalling
 -------------
@@ -171,3 +174,5 @@ To uninstall the package::
    client
    utils
    enums
+   errors
+   changelog

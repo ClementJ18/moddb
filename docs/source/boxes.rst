@@ -17,6 +17,13 @@ CommentList
     :inherited-members:
     
 
+ResultList
+------------
+.. autoclass:: moddb.boxes.ResultList
+    :members:
+    :inherited-members:
+    
+
 Statistics
 -----------
 .. autoclass:: moddb.boxes.Statistics
@@ -59,10 +66,16 @@ Request
     :inherited-members:
     
 
-
 Comment
 --------
 .. autoclass:: moddb.boxes.Comment
+    :members:
+    :inherited-members:
+    
+
+MissingComment
+---------------
+.. autoclass:: moddb.boxes.MissingComment
     :members:
     :inherited-members:
     

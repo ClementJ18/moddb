@@ -197,6 +197,7 @@ def get_type_from(url):
     type_mapping = {
         "new": "article",
         "feature": "article",
+        "tutorial": "article",
         "download": "file",
         "image": "media",
         "audio": " media",
@@ -214,6 +215,33 @@ def get_type_from(url):
 
     LOGGER.info("%s is type %s", url, page_type)
     return page_type
+
+def get_page_number(html):
+    """Central function for retrieving the page numbers of result pages
+
+    Parameters
+    -----------
+    html : bs4.BeautifulSoup
+        The html to get the page numbers from
+
+    Returns
+    --------
+    Tuple[int, int]
+        The page and max_page
+    """
+    try:
+        max_page = int(html.find("div", class_="pages").find_all()[-1].string)
+    except AttributeError:
+        LOGGER.info("Has less than 30 comments (only one page)")
+        max_page = 1
+
+    try:
+        page = int(html.find("span", class_="current").string)
+    except AttributeError:
+        LOGGER.info("Has less than 30 results (only one page)")
+        page = 1
+
+    return page, max_page
         
 class Object:
     """A dud objects that will transform every kwarg given into an attribute"""
