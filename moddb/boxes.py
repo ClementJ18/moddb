@@ -914,7 +914,7 @@ class ModDBList(collections.abc.MutableSequence):
         return list(toolz.unique(results, key=key_check))
 
     def __repr__(self):
-        return f"<{self.__class__.__name__} pages={self.page}/{self.max_page}, results=[{self._results}]>"
+        return f"<{self.__class__.__name__} pages={self.page}/{self.max_page}, results={self._results}>"
 
     def __getitem__(self, element):
         return self._results.__getitem__(element)

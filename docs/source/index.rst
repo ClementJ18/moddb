@@ -175,3 +175,4 @@ To uninstall the package::
    utils
    enums
    errors
+   changelog
