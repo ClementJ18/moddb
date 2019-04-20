@@ -5,6 +5,7 @@ from .pages import FrontPage, Member
 
 import re
 import sys
+import toolz
 import feedparser
 import collections
 from typing import Tuple, Any
@@ -145,7 +146,7 @@ class Search(collections.abc.MutableSequence):
             else:
                 results.extend(search)
 
-        return results
+        return list(toolz.unique(results, key=lambda element: element.name))
 
     def __repr__(self):
         return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.max_page}>"

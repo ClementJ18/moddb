@@ -15,5 +15,6 @@ setup(
         'requests>=2.20.0',
         'robobrowser == 0.5.3',
         'feedparser == 5.2.1',
+        'toolz == 0.9.0',
       ]
     )

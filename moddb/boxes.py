@@ -6,6 +6,7 @@ from .utils import get_date, get_page, get_views, join, normalize, LOGGER, time_
 
 import re
 import sys
+import toolz
 import collections
 from typing import List, Any, Tuple, Union
 
@@ -904,7 +905,13 @@ class ModDBList(collections.abc.MutableSequence):
             else:
                 results.extend(search)
 
-        return results
+        def key_check(element):
+            if isinstance(element, Comment):
+                return element.id
+            else:
+                return element.name
+
+        return list(toolz.unique(results, key=key_check))
 
     def __repr__(self):
         return f"<{self.__class__.__name__} pages={self.page}/{self.max_page}, results=[{self._results}]>"
