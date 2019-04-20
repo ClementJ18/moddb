@@ -792,6 +792,18 @@ class ModDBList(collections.abc.MutableSequence):
         The page of results this page represents
     max_page : int
         The maximum amount of result pages available
+    _results : list
+        The list of results this object emulates
+    _params : dict
+        the dict of pre-processed params (filters, query & sort) that lead to this
+        result list, can be unprocessed params in some occasions
+    _url : str
+        The url to getting this list of results, also contains what page the list of
+        results is from
+    _action : callable
+        The callable that is used when methods such as next_page or previous_page are
+        used to get another set of results. Must be able to take a positional argument `url`
+        and a keyword argument `params`.
     """
     def __init__(self, **kwargs):
         self._results = kwargs.get("results")
@@ -800,6 +812,13 @@ class ModDBList(collections.abc.MutableSequence):
         self._action = kwargs.get("action")
         self.max_page = kwargs.get("max_page")
         self.page = kwargs.get("page")
+
+    def _do_action(self, url, params={}):
+        if params:
+            return self._action(url, params=params)
+
+        return self._action(url)
+
 
     def next_page(self) -> Union['ResultList', 'CommentList']:
         """Returns the next page of results as either a CommentList if you are retriving comments or
@@ -862,7 +881,30 @@ class ModDBList(collections.abc.MutableSequence):
             raise ValueError(f"Please pick a page between 1 and {self.max_page}")
 
         new_url = self._url.replace(self._url.split("/")[-1], str(page))
-        return self._action(new_url, params=self._params)
+        return self._do_action(new_url, params=self._params)
+
+    def get_all_results(self):
+        """An expensive methods that iterates over every page of the result query and returns all
+        the results. This may return more results than you expected if new page have fit the criteria
+        while iterating. 
+
+        Returns
+        --------
+        List[Any]
+            The list of things you were searching for
+        """
+        search = self.to_page(1)
+        results = list(search)
+
+        while True:
+            try:
+                search = search.next_page()
+            except ValueError:
+                break
+            else:
+                results.extend(search)
+
+        return results
 
     def __repr__(self):
         return f"<{self.__class__.__name__} pages={self.page}/{self.max_page}, results=[{self._results}]>"
@@ -912,7 +954,7 @@ class ResultList(ModDBList):
             The new set of results with the updated sort order
         """
         self._params["sort"] = f"{new_sort[0]}-{new_sort[1]}"
-        return self._action(self._url, params=self._params)
+        return self._do_action(self._url, params=self._params)
 
 class CommentList(ModDBList):
     """Represents a list of comments. This emulates a list and will behave like one, so you

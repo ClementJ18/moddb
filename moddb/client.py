@@ -4,8 +4,8 @@ import requests
 from typing import Union, Any
 from robobrowser import RoboBrowser
 
-from .utils import soup, get_type_from, get_date, BASE_URL
-from .boxes import Update, Thumbnail, Request, Comment
+from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number
+from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member, Group, Mod, Game, Engine, Team
 from .enums import ThumbnailType, WatchType
 from .errors import ModdbException
@@ -155,7 +155,7 @@ class Client:
 
         Returns
         --------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             List of watched things
 
         """
@@ -165,7 +165,15 @@ class Client:
         results_raw = html.find("div", class_="table").find_all("div", recursive=False)[1:]
         results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=ThumbnailType[category.name], image=x.a.img["src"]) for x in results_raw]
 
-        return results
+        page, max_page = get_page_number(html)
+
+        return ResultList(
+            results=results,
+            url=url,
+            action=self.get_watched,
+            page=page,
+            max_page=max_page
+        )
 
     def tracking(self, page : Union[Mod, Game, Engine, Group, Member]):
         """Follow/unfollow this page.

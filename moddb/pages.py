@@ -73,7 +73,7 @@ class BaseMetaClass:
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
-    def _get_comments(self, html : bs4.BeautifulSoup, *, params = {}) -> CommentList:
+    def _get_comments(self, html : bs4.BeautifulSoup) -> CommentList:
         """Extracts the comments from an html page and adds them to a CommentList. In addition
         this method also adds them to the comments children as need be.
 
@@ -81,9 +81,6 @@ class BaseMetaClass:
         -----------
         html : bs4.BeautifulSoup
             The html containing the comments
-        params : dict
-            Dud to allow function with the result list object. So far, there doesn't seem
-            to be a way to filter comments in any way.
         """
         page, max_page = get_page_number(html)
 
@@ -2434,11 +2431,11 @@ class Poll(BaseMetaClass):
         rest = poll.find_all("p")[1:]
 
         self.options = []
-        for x in range(len(percentage)):
-            raw = percentage[x].div.string.replace('%', '').replace('\xa0', '')
+        for index, _ in enumerate(percentage):
+            raw = percentage[index].div.string.replace('%', '').replace('\xa0', '')
             percent = float(f"0.{raw}")
-            text = re.sub(r"\([\d,]* vote(s)?\)", '', rest[x].text)
-            votes = int(re.search(r"([\d,]*) vote(s)?", rest[x].span.string)[1].replace(',', ''))
+            text = re.sub(r"\([\d,]* vote(s)?\)", '', rest[index].text)
+            votes = int(re.search(r"([\d,]*) vote(s)?", rest[index].span.string)[1].replace(',', ''))
             self.options.append(Option(text=text, votes=votes, percent=percent))
 
     def __repr__(self):

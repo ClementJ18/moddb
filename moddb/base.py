@@ -124,6 +124,29 @@ class Search(collections.abc.MutableSequence):
         """
         return search(self.category, query=self.query, page=1, sort=new_sort, **self.filters)
 
+    def get_all_results(self):
+        """An expensive methods that iterates over every page of the search and returns all
+        the results. This may return more results than you expected if new page have fit the criteria
+        while iterating. 
+
+        Returns
+        --------
+        List[Thumbnail]
+            The list of things you were searching for
+        """
+        search = self.to_page(1)
+        results = list(search)
+
+        while True:
+            try:
+                search = search.next_page()
+            except ValueError:
+                break
+            else:
+                results.extend(search)
+
+        return results
+
     def __repr__(self):
         return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.max_page}>"
 
