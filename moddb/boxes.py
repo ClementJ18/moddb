@@ -2,7 +2,7 @@ from .enums import ThumbnailType, SearchCategory, Membership, Licence, Genre, Th
                    PlayerStyle, Scope, ArticleCategory, HardwareCategory, Status, \
                    SoftwareCategory, AddonCategory, GroupCategory, TeamCategory
 from .utils import get_date, get_page, get_views, join, normalize, LOGGER, time_mapping, \
-                   get_type_from, concat_docs
+                   get_type_from, concat_docs, get
 
 import re
 import sys
@@ -485,6 +485,9 @@ class Comment:
         self.children = []
 
         try:
+            links = html.find("div", class_="comment").find_all("a")
+            for link in links:
+                link.string = link["href"]
             self.content = html.find("div", class_="comment").text
         except AttributeError:
             LOGGER.info("Comment %s by %s has no content, likely embed", self.id, self.author.name)
@@ -891,7 +894,7 @@ class ModDBList(collections.abc.MutableSequence):
 
         Returns
         --------
-        List[Any]
+        Union[CommentList[Any], ResultList[Any]]
             The list of things you were searching for
         """
         search = self.to_page(1)
@@ -911,7 +914,8 @@ class ModDBList(collections.abc.MutableSequence):
             else:
                 return element.name
 
-        return list(toolz.unique(results, key=key_check))
+        search._results = list(toolz.unique(results, key=key_check))
+        return search
 
     def __repr__(self):
         return f"<{self.__class__.__name__} pages={self.page}/{self.max_page}, results={self._results}>"
@@ -963,6 +967,10 @@ class ResultList(ModDBList):
         self._params["sort"] = f"{new_sort[0]}-{new_sort[1]}"
         return self._do_action(self._url, params=self._params)
 
+    def __contains__(self, element):
+        return bool(get(self._results, name=element.name))
+
+
 class CommentList(ModDBList):
     """Represents a list of comments. This emulates a list and will behave like one, so you
     can use any of the regular list operators in addition to the methods defined below.
@@ -974,6 +982,9 @@ class CommentList(ModDBList):
     max_page : int
         The maximum amount of comment pages available
     """
+
+    def __contains__(self, element):
+        return bool(get(self._results, id=element.id))
 
     def flatten(self) -> List[Comment]:
         """Returns a 'flattened' list of comments where children of comments are added right

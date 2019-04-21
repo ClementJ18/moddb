@@ -8,6 +8,17 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.7
+-----
+Bug Fixes
+###########
+* Links in comment content are now properly displayed as links rather than simply the domain name
+* Changed get_all_results to return either ResultList or CommentList to allow for comment flattening
+
+New Features
+##############
+
+
 v0.6
 -----
 Bug Fixes

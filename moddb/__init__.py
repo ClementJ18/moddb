@@ -7,4 +7,4 @@ from .client import Client
 import requests
 SESSION = requests.Session()
 
-__version__ = "0.6"
+__version__ = "0.7"
