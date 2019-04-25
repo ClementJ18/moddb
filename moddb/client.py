@@ -1,14 +1,16 @@
 import sys
 import json
+import time
 import requests
 from typing import Union, Any
 from robobrowser import RoboBrowser
 
-from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number
+from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number, generate_hash, get
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member, Group, Mod, Game, Engine, Team
 from .enums import ThumbnailType, WatchType
 from .errors import ModdbException
+from .base import parse
 
 class Client:
     """Login the user to moddb through the library, this allows user to see guest comments and see
@@ -52,9 +54,10 @@ class Client:
             raise ValueError(f"Login failed for user {username}")
 
         self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username}").text))
+        self._last_comment_time = 0
 
     def __repr__(self):
-        return repr(self.member)
+        return f"<Client username={self.member.name} level={self.member.stats.level}>"
 
     def __enter__(self):
         self._fake_session = sys.modules["moddb"].SESSION
@@ -375,3 +378,151 @@ class Client:
         )
 
         return "friend request has been sent" in r.json()["text"]
+
+    def add_comment(self, page, text, *, comment = None):
+        """Add a comment to a page.
+
+        Parameters
+        -----------
+        page : Any
+            Must be a moddb.page, the page you wish to add the comment to.
+        test : str
+            The content of the comment you wish to post
+        comment : Optional[Comment] 
+            If you wish to reply to another comment you must provide the comment
+            object for it there.
+
+        Returns
+        --------
+        Any
+            The page's updated object containing the new comment and any other new data that 
+            has been posted since then
+        """
+        if self._last_comment_time + 60 > time.time():
+            raise ModdbException("You must wait at least one minute between each comment")
+
+        r = self._request("post", page.url,
+            data = {
+                "formhash": generate_hash(),
+                "replyid": comment.id if comment else 0,
+                "page": 1,
+                "summary": text,
+                "comment": "Save comment"
+            }
+        )
+
+        self._last_comment_time = time.time()
+
+        return page.__class__(soup(r.text))
+
+    def _comment_state_update(self, comment):
+        if comment is None:
+            raise ModdbException("This comment no longer exists or is no longer on the page it was initially retrieved from.")
+
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data = {
+                "ajax": "t",
+                "action": "delete",
+                "sitearea": "comment",
+                "siteareaid": comment.id,
+                "hash": comment._hash
+            },
+            allow_redirects=False
+        )
+
+        return r
+
+    def delete_comment(self, comment):
+        """This will delete the supplied comment provided you have the correct permissions.
+        This is an expensive request because if how moddb works. It needs to make two requests
+        in order to get the correct hash to delete the comment. In addition, it may fail if the
+        comment has changed location (page number) from what the object says. It is recommended
+        to use a newly created comment object that is less than 30 minutes old.
+
+        Parameters
+        -----------
+        comment : Comment
+            The comment to delete
+
+        Raises
+        -------
+        ModdbException
+            An error occured while trying to delete the comment
+
+        Returns
+        --------
+        bool
+            True if the comment was successfully deleted
+        """
+        with self:
+            page = parse(comment._url)
+            updated_comment = get(page.comments, id=comment.id)
+
+        r = self._comment_state_update(updated_comment)
+
+        return "You have <u>deleted</u> this comment" in r.json()["text"]
+
+    def undelete_comment(self, comment):
+        """This will undelete the supplied comment provided you have the correct permissions.
+        This is an expensive request because if how moddb works. It needs to make three requests
+        in order to get the correct hash to undelete the comment. In addition, it may fail if the
+        comment has changed location (page number) from what the object says. It is recommended
+        to use a newly created comment object that is less than 30 minutes old.
+
+        Parameters
+        -----------
+        comment : Comment
+            The comment to undelete
+
+        Raises
+        -------
+        ModdbException
+            An error occured while trying to undelete the comment
+
+        Returns
+        --------
+        bool
+            True if the comment was successfully undeleted
+        """
+        with self:
+            page = parse(comment._url)
+            updated_comment = get(page._get_comments_from_url(comment._url, show_deleted=True), id=comment.id)
+
+        r = self._comment_state_update(updated_comment)
+
+        return "You have <u>authorized</u> this comment" in r.json()["text"]
+
+    def edit_comment(self, comment, new_text):
+        """Edit the contents of a comment. If successful will also update the 
+        comment object to the new content
+        
+        Parameters
+        -----------
+        comment : Comment
+            The comment to edit
+        new_text : str
+            The new content of the comment
+
+        Raises
+        -------
+        ModdbException
+            An error has occured trying to edit the comment
+
+        Returns
+        --------
+        bool
+            True if the comment was successfully edited        
+        """
+        r = self._request("post", f"{BASE_URL}/comment/ajax/post",
+            data = {
+                "ajax": "t",
+                "id": comment.id,
+                "summary": new_text
+            }
+        )
+
+        if "Your comment has been saved" in r.json()["text"]:
+            comment.content = soup(r.json()["post"]).text
+            return True
+
+        return False

@@ -521,6 +521,11 @@ class Comment:
             page_type = get_type_from(url)
             self.location = Thumbnail(name=self.location.string, url=url, type=page_type)
 
+        try:
+            self._hash = html.find("a", title=("Delete", "Undelete"))["href"].split("=")[-1]
+        except  TypeError:
+            self._hash = None
+
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
 

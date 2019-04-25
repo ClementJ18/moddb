@@ -88,6 +88,7 @@ class BaseMetaClass:
         comments_raw = html.find_all("div", class_="row", id=True)
         for raw in comments_raw:
             comment = Comment(raw)
+            comment._url = f"{self.url}/page/{page}"
             if comment.position == 1:
                 try:
                     comments[-1].children.append(comment)
@@ -102,7 +103,7 @@ class BaseMetaClass:
                     comments[-1].children[-1].children.append(comment)
             else:
                 comments.append(comment)
-                    
+
         return CommentList(
             results=comments, 
             page=page,
@@ -187,11 +188,14 @@ class BaseMetaClass:
         name_finder = r"\/([a-z0-9-]*)#imagebox"
         return [Thumbnail(name=re.search(name_finder, match[0])[1], url=match[0], type=ThumbnailType.media, image=match[1]) for match in matches]
 
-    def _get_comments_from_url(self, url):
+    def _get_comments_from_url(self, url, *, show_deleted = False):
         """Extra method so we can get comments from a ResultList"""
-        return self._get_comments(get_page(url))
+        params = {
+            "deleted" : "t" if show_deleted else None
+        }
+        return self._get_comments(get_page(url, params=params))
 
-    def get_comments(self, index : int = 1) -> CommentList:
+    def get_comments(self, index : int = 1, *, show_deleted = False) -> CommentList:
         """Used to get comments on the model regardless of what page they may be present in. The function
         itself simply relies on two other to make the request and parse the table.
 
@@ -199,13 +203,20 @@ class BaseMetaClass:
         ----------
         index : int 
             The page of the model to get the comments for.
+        show_deleted : Optional[bool]
+            Pass true to show deleted user comments. Only works if it is a page
+            you have permissions on.
 
         Returns
         --------
         CommentList[Comment]
             A list-like object containing the comments and additional methods
         """
-        return self._get_comments(get_page(f"{self.url}/page/{index}"))
+        params = {
+            "deleted" : "t" if show_deleted else None
+        }
+
+        return self._get_comments(get_page(f"{self.url}/page/{index}", params=params))
 
 class GetGamesMixin:
     """Abstract class containing the get_games method"""
@@ -639,6 +650,7 @@ class RSSFeedMixin:
         str
             URL for the feed type
         """
+        #TODO: allow for RSS all type
         url = f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
         
         if parse_feed:

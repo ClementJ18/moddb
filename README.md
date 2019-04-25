@@ -81,6 +81,42 @@ Only one poll can be present at a time on the forms and therefore for any poll t
 In addition, I considered manually rebuilding the poll options by incrementing the ids but it appears that there are missing polls and therefore polls ids won't follow each other numerically. So long story short: there is no way to allow voting on polls at the moment.
 
 ### Post Requests
-The question of post requests is a complicated one for a couple reasons. First of all, it is technically out of the scope of a scrapper which acts more as a bunch of GET statements rather than as a full API. However, the scope of the project is slightly different, stating that ideally, you should be able to fully emulate the moddb website using this library and a web framework. So it is reasonable to assume that POST requests would not be considered feature creep even though they are not necessary for functionality. 
+The question of post requests is a complicated one for a couple reasons. First of all, it is technically out of the scope of a scraper which acts more as a bunch of GET statements rather than as a full API. However, the scope of the project is slightly different, stating that ideally, you should be able to fully emulate the moddb website using this library and a web framework. So it is reasonable to assume that POST requests would not be considered feature creep even though they are not necessary for functionality. 
 
-The more troublesome question is one of ethic. Now, I'm no professional but I assume that ads scrapped by bots don't generate revenue, or that at least, it seems logical that a website would guarantee that advertisers get the most bang for their buck. In addition, it also seems a fair assumption, that while modders keep the site alive they also require the most server power per user when compared to viewers. Viewers will only need a couple pages generated, while modders may upload files and images, create new page, ect... So, a scrapper for GET requests doesn't seem too bad, it would only hit people interested in viewing moddb programmatically, not requiring that much processing power. However, a POST aspect would open up the website to mass spam, individual pages could be spammed with comments and a massive amount of mods, games, engines, ect.. could be created at once. Of course, it does technically fall upon the shoulders of the web developers to secure their own website, but ModDB despite its flaws and shortcoming is a website dear to me. Therefore, for now, the library will remain strictly a scrapper while I ponder upon the question.
+The more troublesome question is one of ethic. Now, I'm no professional but I assume that ads scrapped by bots don't generate revenue, or that at least, it seems logical that a website would guarantee that advertisers get the most bang for their buck. In addition, it also seems a fair assumption, that while modders keep the site alive they also require the most server power per user when compared to viewers. Viewers will only need a couple pages generated, while modders may upload files and images, create new page, ect... So, a scraper for GET requests doesn't seem too bad, it would only hit people interested in viewing moddb programmatically, not requiring that much processing power. However, a POST aspect would open up the website to mass spam, individual pages could be spammed with comments and a massive amount of mods, games, engines, ect.. could be created at once. Of course, it does technically fall upon the shoulders of the web developers to secure their own website, but ModDB despite its flaws and shortcoming is a website dear to me. Therefore, for now, the library will remain strictly a scraper while I ponder upon the question.
+
+### Deleting comments
+Requests related to comments have a `hash` field which seems to be a uuid. For adding comment, a simple random uuid v4 seems to do the trick, something I can easily generate myself. However, I have ran into a singuliar problem when trying to genereate a hash value for the field required for deleting comments. It seems not to be the same type, it might not even be a uuid at all. Parsing the various hashes has shown a random assortment of all versions of uuids, so it is unlikely it is actually one. Which leaves us with the problem of it being a hash, but a hash of what?
+
+The hash is reloaded to a different one everytime the page is reloaded leading me to think that it might be linked to a timestamp. Currently, my approach is to try and figure out what the hash is, once I have but the smallest lead on what algorithm or what name it has I can easily dig that way until I manage to replicate the process. Here are the probable hashes:
+- MD5
+- NTLM
+- MD4
+- LM
+- RAdmin v2.x
+- Haval-128
+- MD2
+- RipeMD-128
+- Tiger-128
+- Snefru-128
+- MD5(HMAC)
+- MD4(HMAC)
+- Haval-128(HMAC)
+- RipeMD-128(HMAC)
+- Tiger-128(HMAC)
+- Snefru-128(HMAC)
+- MD2(HMAC)
+- MD5(ZipMonster)
+- MD5(HMAC(Wordpress))
+- Skein-256(128)
+- Skein-512(128)
+
+This would be a piece of cake if I knew what exactly was being hashed, but even that I don't know, perhaps some mix of the sitearea, site id, ect... It has an expiry date, so the starting point would probably by to figure out what the expiry date is in order to get a better idea of what the timestamp is.
+
+Currently the following formats have been tried:
+- hashlib.md5(str(time.time()+100000).encode('utf-8')).digest()
+- hashlib.new("md4", str(time.time()+100000).encode('utf-8')).hexdigest()
+
+The most efficient backup plan is as follows: add a new url field to the Comment object, which contains the precise location of where the comment came, with the shortcoming that the page might change if many comments are added. When the comment deletion is required, use the Client's session to re-retrieve the comment. Since it is assumed that the client has enough permissions it should mean that the comments will have a hash attribute, if it does not raise a permission error. If it does, retrieve it and proceed with the deletion. Issues with this remain that comments have a chance of moving around between the time period of the initial comment grab and of the time the user requests for the comment to be parsed.
+
+It could also be that the token are just random tokens generated server side, added to a database and then discarded ~30 minutes later in which case there are no ways to fake those tokens.

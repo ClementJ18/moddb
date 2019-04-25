@@ -2,13 +2,14 @@ from .enums import ThumbnailType
 
 import re
 import sys
+import uuid
+import inspect
 import logging
 import datetime
 import requests
 from typing import Tuple
-from bs4 import BeautifulSoup, Tag
 from urllib.parse import urljoin
-import inspect
+from bs4 import BeautifulSoup, Tag
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
@@ -193,7 +194,7 @@ def get_type_from(url):
     ThumbnailType
         The type of the page
     """
-    regex = r"\/([a-z]+)\/"
+    regex = r"\/((?!page|pages\b)\b\w+)\/"
     type_mapping = {
         "new": "article",
         "feature": "article",
@@ -205,8 +206,7 @@ def get_type_from(url):
     }
 
     matches = re.findall(regex, url)
-    matches.reverse()
-    match = matches[0][0:-1] if matches[0].endswith("s") else matches[0]      
+    match = matches[-1][0:-1] if matches[0].endswith("s") else matches[0]      
 
     try:
         page_type = ThumbnailType[match]
@@ -331,6 +331,9 @@ def get(iterable, **attrs):
         return True
 
     return find(predicate, iterable)
+
+def generate_hash():
+    return uuid.uuid4().hex
 
 time_mapping = {
     "year" : 125798400,

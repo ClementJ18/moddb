@@ -342,6 +342,7 @@ def rss(type : RSSType, *, parse_feed = False):
     Union[str, dict]
         URL for the feed type
     """
+    #TODO: allow for RSS all
     url = f'https://rss.moddb.com/{type.name}/feed/rss.xml'
     if parse_feed:
         return feedparser.parse(request(url).text)
