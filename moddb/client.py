@@ -8,7 +8,7 @@ from robobrowser import RoboBrowser
 from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number, generate_hash, get
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member, Group, Mod, Game, Engine, Team
-from .enums import ThumbnailType, WatchType
+from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
 from .base import parse
 
@@ -57,7 +57,7 @@ class Client:
         self._last_comment_time = 0
 
     def __repr__(self):
-        return f"<Client username={self.member.name} level={self.member.stats.level}>"
+        return f"<Client username={self.member.name} level={self.member.profile.level}>"
 
     def __enter__(self):
         self._fake_session = sys.modules["moddb"].SESSION
@@ -493,8 +493,7 @@ class Client:
         return "You have <u>authorized</u> this comment" in r.json()["text"]
 
     def edit_comment(self, comment, new_text):
-        """Edit the contents of a comment. If successful will also update the 
-        comment object to the new content
+        """Edit the contents of a comment.
         
         Parameters
         -----------
@@ -521,8 +520,118 @@ class Client:
             }
         )
 
-        if "Your comment has been saved" in r.json()["text"]:
-            comment.content = soup(r.json()["post"]).text
-            return True
+        return "Your comment has been saved" in r.json()["text"]
 
-        return False
+    def add_review(self, page, rating, *, review = None, has_spoilers = False):
+        """Rate and review a page. If you rating is below 3 or above 8 you will be asked
+        to also provide a review or else the request will not be made.
+
+        Parameters
+        -----------
+        page : Union[]
+            The page you wish to review
+        rating : int
+            The rating from 1 to 10
+        review : str
+            The text review you are giving of this page
+        has_spoilers : bool
+            Whether or not this review contains spoilers.
+
+        Raises
+        -------
+        ModdbException
+            An error occured trying to review the page.
+
+        Returns
+        --------
+        bool
+            True of the review was successfuly submitted.
+
+        """
+        #TODO: Address below
+        #1: Hash seems to be the same all the time, worth scraping at source of page?
+        #2: Current error: The review requested could not be found in postman
+        #3: Also no reponse when doing the request through this.
+        if not (2 < rating < 9) and review is None:
+            raise ModdbException("Please include a review to justify such a low/high rating.")
+
+        r = self._request("post", f"{BASE_URL}/reviews/ajax", 
+            data={
+                "ajax" : "t",
+                "sitearea": page.url.split("/")[-2],
+                "siteareaid": page.id,
+                "hash": generate_hash(),
+                "earlyaccess": int(page.profile.status == Status.early_access),
+                "rating": rating,
+                "summary": review,
+                "spoiler": int(has_spoilers)
+            },
+            allow_redirects=False
+        )
+
+        return "Your rating has been saved" in r.json()["text"] 
+
+    def delete_review(self, page):
+        """Delete the review you have left on this page.
+
+        Parameters
+        -----------
+        page : Union[]
+            The page you wish delete the review from
+
+        Raises
+        -------
+        ModdbException
+            An error occured while trying to delete the review
+
+        Returns
+        --------
+        bool
+            True if the review was successfully deleted
+        """
+        #TODO: Finish this
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data={
+                "ajax": "t",
+                "action": "delete",
+                "sitearea": "reviews",
+                "siteareaid": id,
+                "hash": generate_hash(),
+                "ispd": "???"
+            }
+        )
+
+    def edit_review(self, page, *, rating = None, review = None, has_spoilers = False):
+        """Edit the review to change the rating, the review or if it contains spoilers.
+
+        Parameters
+        -----------
+        page : Union[]
+            The page you wish to edit the review from
+        rating : Optional[int]
+            The new rating you wish to post
+        review : Optional[str]
+            The new review you wish to post
+        has_spoilers : Optional[bool]
+            Whether or not the review (current or new) contains spoilers
+
+        Raises
+        -------
+        ModdbException
+            An error occured while trying to edit the review
+
+        Returns
+        --------
+        bool
+            True if the review was successfully edited    
+        """
+        #TODO: Finish this
+        r = self._request("post", f"{page.url}/reviews/{review.id}/edit",
+            data={
+                "formhash": generate_hash(),
+                "rating": rating,
+                "summary": summary,
+                "spoiler": int(has_spoilers),
+                "reviews": 'Save review'
+            }
+        )
