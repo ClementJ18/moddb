@@ -381,7 +381,12 @@ class SharedMethodsMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        html = get_page(f"{self.url}/reviews/page/{index}", params=params)
+        return self._get_reviews(f"{self.url}/reviews/page/{index}", params=params)
+
+    def _get_reviews(self, url, *, params):
+        """Backend class so we can use it with ResultList"""
+        html = get_page(url, params=params)
+
         try:
             table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         except AttributeError:
@@ -421,13 +426,9 @@ class SharedMethodsMixin:
 
         return ResultList(
             results=reviews,
-            params={
-                'query': query, 
-                'rating': rating, 
-                'sort': sort
-            },
-            action=self.get_reviews,
-            url=f"{self.url}/reviews/page/{index}",
+            params=params,
+            action=self._get_reviews,
+            url=url,
             page=page,
             max_page=max_page
         )
@@ -1866,7 +1867,11 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
             "sort": f"{sort[0]}-{sort[1]}" if sort else None
         }
 
-        html = get_page(f"{self.url}/blogs/page/{index}", params=params)
+        return self._get_blogs(f"{self.url}/blogs/page/{index}", params=params)
+
+    def _get_blogs(self, url, *, params):
+        """Backend class so we can use it with ResultList"""
+        html = get_page(url, params=params)
         try:
             table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         except AttributeError:
@@ -1897,13 +1902,9 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
 
         return ResultList(
             results=blogs,
-            params={
-                "query": query,
-                "timeframe": timeframe,
-                "sort": sort
-            },
-            url=f"{self.url}/blogs/page/{index}",
-            action=self.get_blogs,
+            params=params,
+            url=url,
+            action=self._get_blogs,
             page=page,
             max_page=max_page
         )

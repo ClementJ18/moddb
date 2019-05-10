@@ -8,7 +8,3 @@ import requests
 SESSION = requests.Session()
 
 __version__ = "0.7"
-
-#TODO:
-#add @staticmethod, @classmethod, ect...
-#double check that ResultList for get_blogs and get_reviews works, I have the sneaking suspicion they don't
