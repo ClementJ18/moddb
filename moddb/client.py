@@ -522,17 +522,18 @@ class Client:
 
         return "Your comment has been saved" in r.json()["text"]
 
-    def add_review(self, page, rating, *, review = None, has_spoilers = False):
+    def add_review(self, page, rating, *, text = None, has_spoilers = False):
         """Rate and review a page. If you rating is below 3 or above 8 you will be asked
-        to also provide a review or else the request will not be made.
+        to also provide a review or else the request will not be made. This is also
+        used to edit existing reviews.
 
         Parameters
         -----------
-        page : Union[]
+        page : Union[Mod, Game, Engine, Hardware, Software, Platform]
             The page you wish to review
         rating : int
             The rating from 1 to 10
-        review : str
+        text : str
             The text review you are giving of this page
         has_spoilers : bool
             Whether or not this review contains spoilers.
@@ -548,22 +549,21 @@ class Client:
             True of the review was successfuly submitted.
 
         """
-        #TODO: Address below
-        #1: Hash seems to be the same all the time, worth scraping at source of page?
-        #2: Current error: The review requested could not be found in postman
-        #3: Also no reponse when doing the request through this.
         if not (2 < rating < 9) and review is None:
-            raise ModdbException("Please include a review to justify such a low/high rating.")
+            raise ModdbException("Please include a review to justify such a low/high rating.") 
+
+        with self:
+            page = parse(page.url)    
 
         r = self._request("post", f"{BASE_URL}/reviews/ajax", 
             data={
                 "ajax" : "t",
                 "sitearea": page.url.split("/")[-2],
                 "siteareaid": page.id,
-                "hash": generate_hash(),
+                "hash": page._review_hash,
                 "earlyaccess": int(page.profile.status == Status.early_access),
                 "rating": rating,
-                "summary": review,
+                "summary": text,
                 "spoiler": int(has_spoilers)
             },
             allow_redirects=False
@@ -571,13 +571,14 @@ class Client:
 
         return "Your rating has been saved" in r.json()["text"] 
 
-    def delete_review(self, page):
-        """Delete the review you have left on this page.
+    def delete_review(self, review):
+        """Delete your review on the given page. This function will do two requests in order
+        to delete your review.
 
         Parameters
         -----------
-        page : Union[]
-            The page you wish delete the review from
+        review : Review
+            The review you wish to delete
 
         Raises
         -------
@@ -589,49 +590,19 @@ class Client:
         bool
             True if the review was successfully deleted
         """
-        #TODO: Finish this
+        with self:
+            hash_review = self.member.get_reviews()[0]
+
         r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
             data={
                 "ajax": "t",
                 "action": "delete",
                 "sitearea": "reviews",
-                "siteareaid": id,
-                "hash": generate_hash(),
-                "ispd": "???"
-            }
+                "siteareaid": review.id,
+                "hash": hash_review._hash,
+                "ispd": 1
+            },
+            allow_redirects = False
         )
 
-    def edit_review(self, page, *, rating = None, review = None, has_spoilers = False):
-        """Edit the review to change the rating, the review or if it contains spoilers.
-
-        Parameters
-        -----------
-        page : Union[]
-            The page you wish to edit the review from
-        rating : Optional[int]
-            The new rating you wish to post
-        review : Optional[str]
-            The new review you wish to post
-        has_spoilers : Optional[bool]
-            Whether or not the review (current or new) contains spoilers
-
-        Raises
-        -------
-        ModdbException
-            An error occured while trying to edit the review
-
-        Returns
-        --------
-        bool
-            True if the review was successfully edited    
-        """
-        #TODO: Finish this
-        r = self._request("post", f"{page.url}/reviews/{review.id}/edit",
-            data={
-                "formhash": generate_hash(),
-                "rating": rating,
-                "summary": summary,
-                "spoiler": int(has_spoilers),
-                "reviews": 'Save review'
-            }
-        )
+        return "You have <u>deleted</u> this review." in r.json()["text"]

@@ -371,7 +371,7 @@ class SharedMethodsMixin:
 
         Returns
         --------
-        ResultList[Thumbnail]
+        ResultList[Review]
             The list of reviews parsed from the page
         """
         params = {
@@ -774,6 +774,11 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
         except AttributeError:
             self.rating = 0.0
             LOGGER.info("'%s' '%s' is not rated", self.__class__.__name__, self.name)
+
+        try:
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})["value"]
+        except AttributeError:
+            self._review_hash = None
 
         self.medias = self._get_media(2, html=html)
 
@@ -2212,6 +2217,11 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin)
             self.rating = 0.0
             LOGGER.info("'%s' '%s' is not rated", self.profile.category.name, self.name)
 
+        try:
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})["value"]
+        except AttributeError:
+            self._review_hash = None
+
         articles_raw = None
         try:
             articles_raw = html.find("span", string="Related Articles").parent.parent.parent.find("div", class_="table")
@@ -2380,6 +2390,8 @@ class Review:
 
     Attributes
     -----------
+    id : int
+        The review id
     text : str
         The contents of the review. Can be none if the member hasn't left any
     rating : int
@@ -2388,6 +2400,10 @@ class Review:
         A member like thumbnail of the member who left the review
     date : datetime.datetime
         Date and time of the review creation
+    agree : str
+            Link to agree with the review
+    disagree : str
+        Link to disagree with the review
     """
     def __init__(self, **attrs):
         text = attrs.get("text")
@@ -2399,9 +2415,27 @@ class Review:
         review = attrs.get("review")
         self.rating = int(review.span.string)
 
+        try:
+            strings = ("Agree", "Delete", "Disagree")
+            self.id = int(re.findall(r"siteareaid=(\d*)", review.find("a", title=strings)["href"])[0])
+        except TypeError:
+            self.id = None
+
+        try:
+            self._hash = re.findall(r"hash=(.*)&", review.find("a", title="Delete")["href"])[0]
+        except TypeError:
+            self._hash = None
+
         author = review.div.a
         self.author = Thumbnail(url=author["href"], name=author.string.split(" ")[0], type=ThumbnailType.member)
         self.date = get_date(review.div.span.time["datetime"])
+
+        try:
+            self.agree = join(review.find("a", title="Agree")["href"])
+            self.disagree = join(review.find("a", title="Disagree")["href"])
+        except TypeError:
+            self.agree = None
+            self.disagree = None
 
     def __repr__(self):
         return f"<Review author={self.author.name} rating={self.rating}>"
