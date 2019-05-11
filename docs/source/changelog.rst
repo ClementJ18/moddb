@@ -19,14 +19,14 @@ Bug Fixes
 
 New Features
 ##############
-* Add __contains__ for :class:`.ResultList`, :class:`.CommentList`and :class:`.Search`
+* Add __contains__ for :class:`.ResultList`, :class:`.CommentList` and :class:`.Search`
 * All get_comments now have access to the show_deleted kwarg
 * Added :class:`.Review` id attribute
 * Added attribute for Agree and Disagree :class:`.Review` links
 * Added helper methods for finding object within sequences (find and get)
 
 New :class:`.Client` Methods
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Added support for adding comments
 * Added support for deleting comments
 * Added support for undeleting comments
