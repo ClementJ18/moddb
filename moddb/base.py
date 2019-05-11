@@ -173,7 +173,7 @@ class Search(collections.abc.MutableSequence):
         return self._results + sequence.results
 
     def __contains__(self, element):
-        return bool(get(self._results, name=element.name))
+        return get(self._results, name=element.name) is not None
 
 def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, str] = None,
            page : int = 1, **filters) -> Search: 

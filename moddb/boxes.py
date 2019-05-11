@@ -973,7 +973,7 @@ class ResultList(ModDBList):
         return self._do_action(self._url, params=self._params)
 
     def __contains__(self, element):
-        return bool(get(self._results, name=element.name))
+        return get(self._results, name=element.name) is not None
 
 
 class CommentList(ModDBList):
@@ -989,7 +989,7 @@ class CommentList(ModDBList):
     """
 
     def __contains__(self, element):
-        return bool(get(self._results, id=element.id))
+        return get(self._results, name=element.name) is not None
 
     def flatten(self) -> List[Comment]:
         """Returns a 'flattened' list of comments where children of comments are added right
