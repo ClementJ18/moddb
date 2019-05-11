@@ -651,7 +651,6 @@ class RSSFeedMixin:
         str
             URL for the feed type
         """
-        #TODO: allow for RSS all type
         url = f'https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml'    
         
         if parse_feed:

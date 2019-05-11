@@ -13,11 +13,26 @@ v0.7
 Bug Fixes
 ###########
 * Links in comment content are now properly displayed as links rather than simply the domain name
-* Changed get_all_results to return either ResultList or CommentList to allow for comment flattening
+* Changed get_all_results to return either :class:`.ResultList` or :class:`.CommentList` to allow for comment flattening
+* Replace <a> tags (non-embed ones) in comment content by simply the href value of the tag
+* Fixed bug with getting more results from :class:`.ResultList` for blogs and reviews
 
 New Features
 ##############
+* Add __contains__ for :class:`.ResultList`, :class:`.CommentList`and :class:`.Search`
+* All get_comments now have access to the show_deleted kwarg
+* Added :class:`.Review` id attribute
+* Added attribute for Agree and Disagree :class:`.Review` links
+* Added helper methods for finding object within sequences (find and get)
 
+New :class:`.Client` Methods
+~~~~~~~~~~~~~~~~~~~~
+* Added support for adding comments
+* Added support for deleting comments
+* Added support for undeleting comments
+* Added support for editing comments
+* Added support for adding reviews to pages
+* Added support for deleting review from page
 
 v0.6
 -----
