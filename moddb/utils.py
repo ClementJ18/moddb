@@ -2,13 +2,14 @@ from .enums import ThumbnailType
 
 import re
 import sys
+import uuid
+import inspect
 import logging
 import datetime
 import requests
 from typing import Tuple
-from bs4 import BeautifulSoup, Tag
 from urllib.parse import urljoin
-import inspect
+from bs4 import BeautifulSoup, Tag
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
@@ -193,7 +194,7 @@ def get_type_from(url):
     ThumbnailType
         The type of the page
     """
-    regex = r"\/([a-z]+)\/"
+    regex = r"\/((?!page|pages\b)\b\w+)\/"
     type_mapping = {
         "new": "article",
         "feature": "article",
@@ -205,8 +206,7 @@ def get_type_from(url):
     }
 
     matches = re.findall(regex, url)
-    matches.reverse()
-    match = matches[0][0:-1] if matches[0].endswith("s") else matches[0]      
+    match = matches[-1][0:-1] if matches[0].endswith("s") else matches[0]      
 
     try:
         page_type = ThumbnailType[match]
@@ -247,6 +247,93 @@ class Object:
     """A dud objects that will transform every kwarg given into an attribute"""
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
+
+def find(predicate, seq):
+    """A helper to return the first element found in the sequence
+    that meets the predicate. For example: ::
+
+        comment = find(lambda comment: comment.author.name == 'SilverElf', mod.comments.flatten())
+
+    would find the first :class:`.Comment` whose author's name is 'SilverElf' and return it.
+    If no entry is found, then ``None`` is returned.
+
+    This is different from `filter`_ due to the fact it stops the moment it finds
+    a valid entry.
+
+    .. _filter: https://docs.python.org/3.6/library/functions.html#filter
+
+    Parameters
+    -----------
+    predicate
+        A function that returns a boolean-like result.
+    seq : iterable
+        The iterable to search through.
+    """
+
+    for element in seq:
+        if predicate(element):
+            return element
+    return None
+
+def get(iterable, **attrs):
+    r"""A helper that returns the first element in the iterable that meets
+    all the traits passed in ``attrs``. This is an alternative for
+    :func:`moddb.utils.find`.
+
+    When multiple attributes are specified, they are checked using
+    logical AND, not logical OR. Meaning they have to meet every
+    attribute passed in and not one of them.
+
+    To have a nested attribute search (i.e. search by ``x.y``) then
+    pass in ``x__y`` as the keyword argument.
+
+    If nothing is found that matches the attributes passed, then
+    ``None`` is returned.
+
+    Examples
+    ---------
+
+    Basic usage:
+
+    .. code-block:: python3
+
+        article = moddb.utils.get(mod.get_articles(), name='Version 3.5 Released')
+
+    Multiple attribute matching:
+
+    .. code-block:: python3
+
+        comment = moddb.utils.get(mod.get_comments(2), content='Test', karma=3)
+
+    Nested attribute matching:
+
+    .. code-block:: python3
+
+        comment = moddb.utils.get(article.get_comments(), author__name='SilverElf', content='Best article ever')
+
+    Parameters
+    -----------
+    iterable
+        An iterable to search through.
+    \*\*attrs
+        Keyword arguments that denote attributes to search with.
+    """
+
+    def predicate(elem):
+        for attr, val in attrs.items():
+            nested = attr.split('__')
+            obj = elem
+            for attribute in nested:
+                obj = getattr(obj, attribute)
+
+            if obj != val:
+                return False
+        return True
+
+    return find(predicate, iterable)
+
+def generate_hash():
+    return uuid.uuid4().hex
 
 time_mapping = {
     "year" : 125798400,

@@ -1,14 +1,16 @@
 import sys
 import json
+import time
 import requests
 from typing import Union, Any
 from robobrowser import RoboBrowser
 
-from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number
+from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number, generate_hash, get
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member, Group, Mod, Game, Engine, Team
-from .enums import ThumbnailType, WatchType
+from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
+from .base import parse
 
 class Client:
     """Login the user to moddb through the library, this allows user to see guest comments and see
@@ -52,9 +54,10 @@ class Client:
             raise ValueError(f"Login failed for user {username}")
 
         self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username}").text))
+        self._last_comment_time = 0
 
     def __repr__(self):
-        return repr(self.member)
+        return f"<Client username={self.member.name} level={self.member.profile.level}>"
 
     def __enter__(self):
         self._fake_session = sys.modules["moddb"].SESSION
@@ -375,3 +378,231 @@ class Client:
         )
 
         return "friend request has been sent" in r.json()["text"]
+
+    def add_comment(self, page, text, *, comment = None):
+        """Add a comment to a page.
+
+        Parameters
+        -----------
+        page : Any
+            Must be a moddb.page, the page you wish to add the comment to.
+        test : str
+            The content of the comment you wish to post
+        comment : Optional[Comment] 
+            If you wish to reply to another comment you must provide the comment
+            object for it there.
+
+        Returns
+        --------
+        Any
+            The page's updated object containing the new comment and any other new data that 
+            has been posted since then
+        """
+        if self._last_comment_time + 60 > time.time():
+            raise ModdbException("You must wait at least one minute between each comment")
+
+        r = self._request("post", page.url,
+            data = {
+                "formhash": generate_hash(),
+                "replyid": comment.id if comment else 0,
+                "page": 1,
+                "summary": text,
+                "comment": "Save comment"
+            }
+        )
+
+        self._last_comment_time = time.time()
+
+        return page.__class__(soup(r.text))
+
+    def _comment_state_update(self, comment):
+        if comment is None:
+            raise ModdbException("This comment no longer exists or is no longer on the page it was initially retrieved from.")
+
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data = {
+                "ajax": "t",
+                "action": "delete",
+                "sitearea": "comment",
+                "siteareaid": comment.id,
+                "hash": comment._hash
+            },
+            allow_redirects=False
+        )
+
+        return r
+
+    def delete_comment(self, comment):
+        """This will delete the supplied comment provided you have the correct permissions.
+        This is an expensive request because if how moddb works. It needs to make two requests
+        in order to get the correct hash to delete the comment. In addition, it may fail if the
+        comment has changed location (page number) from what the object says. It is recommended
+        to use a newly created comment object that is less than 30 minutes old.
+
+        Parameters
+        -----------
+        comment : Comment
+            The comment to delete
+
+        Raises
+        -------
+        ModdbException
+            An error occured while trying to delete the comment
+
+        Returns
+        --------
+        bool
+            True if the comment was successfully deleted
+        """
+        with self:
+            page = parse(comment._url)
+            updated_comment = get(page.comments, id=comment.id)
+
+        r = self._comment_state_update(updated_comment)
+
+        return "You have <u>deleted</u> this comment" in r.json()["text"]
+
+    def undelete_comment(self, comment):
+        """This will undelete the supplied comment provided you have the correct permissions.
+        This is an expensive request because if how moddb works. It needs to make three requests
+        in order to get the correct hash to undelete the comment. In addition, it may fail if the
+        comment has changed location (page number) from what the object says. It is recommended
+        to use a newly created comment object that is less than 30 minutes old.
+
+        Parameters
+        -----------
+        comment : Comment
+            The comment to undelete
+
+        Raises
+        -------
+        ModdbException
+            An error occured while trying to undelete the comment
+
+        Returns
+        --------
+        bool
+            True if the comment was successfully undeleted
+        """
+        with self:
+            page = parse(comment._url)
+            updated_comment = get(page._get_comments_from_url(comment._url, show_deleted=True), id=comment.id)
+
+        r = self._comment_state_update(updated_comment)
+
+        return "You have <u>authorized</u> this comment" in r.json()["text"]
+
+    def edit_comment(self, comment, new_text):
+        """Edit the contents of a comment.
+        
+        Parameters
+        -----------
+        comment : Comment
+            The comment to edit
+        new_text : str
+            The new content of the comment
+
+        Raises
+        -------
+        ModdbException
+            An error has occured trying to edit the comment
+
+        Returns
+        --------
+        bool
+            True if the comment was successfully edited        
+        """
+        r = self._request("post", f"{BASE_URL}/comment/ajax/post",
+            data = {
+                "ajax": "t",
+                "id": comment.id,
+                "summary": new_text
+            }
+        )
+
+        return "Your comment has been saved" in r.json()["text"]
+
+    def add_review(self, page, rating, *, text = None, has_spoilers = False):
+        """Rate and review a page. If you rating is below 3 or above 8 you will be asked
+        to also provide a review or else the request will not be made. This is also
+        used to edit existing reviews.
+
+        Parameters
+        -----------
+        page : Union[Mod, Game, Engine, Hardware, Software, Platform]
+            The page you wish to review
+        rating : int
+            The rating from 1 to 10
+        text : str
+            The text review you are giving of this page
+        has_spoilers : bool
+            Whether or not this review contains spoilers.
+
+        Raises
+        -------
+        ModdbException
+            An error occured trying to review the page.
+
+        Returns
+        --------
+        bool
+            True of the review was successfuly submitted.
+
+        """
+        if not (2 < rating < 9) and review is None:
+            raise ModdbException("Please include a review to justify such a low/high rating.") 
+
+        with self:
+            page = parse(page.url)    
+
+        r = self._request("post", f"{BASE_URL}/reviews/ajax", 
+            data={
+                "ajax" : "t",
+                "sitearea": page.url.split("/")[-2],
+                "siteareaid": page.id,
+                "hash": page._review_hash,
+                "earlyaccess": int(page.profile.status == Status.early_access),
+                "rating": rating,
+                "summary": text,
+                "spoiler": int(has_spoilers)
+            },
+            allow_redirects=False
+        )
+
+        return "Your rating has been saved" in r.json()["text"] 
+
+    def delete_review(self, review):
+        """Delete your review on the given page. This function will do two requests in order
+        to delete your review.
+
+        Parameters
+        -----------
+        review : Review
+            The review you wish to delete
+
+        Raises
+        -------
+        ModdbException
+            An error occured while trying to delete the review
+
+        Returns
+        --------
+        bool
+            True if the review was successfully deleted
+        """
+        with self:
+            hash_review = self.member.get_reviews()[0]
+
+        r = self._request("post", f"{BASE_URL}/messages/ajax/action/",
+            data={
+                "ajax": "t",
+                "action": "delete",
+                "sitearea": "reviews",
+                "siteareaid": review.id,
+                "hash": hash_review._hash,
+                "ispd": 1
+            },
+            allow_redirects = False
+        )
+
+        return "You have <u>deleted</u> this review." in r.json()["text"]

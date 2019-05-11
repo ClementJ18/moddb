@@ -88,6 +88,7 @@ class BaseMetaClass:
         comments_raw = html.find_all("div", class_="row", id=True)
         for raw in comments_raw:
             comment = Comment(raw)
+            comment._url = f"{self.url}/page/{page}"
             if comment.position == 1:
                 try:
                     comments[-1].children.append(comment)
@@ -102,7 +103,7 @@ class BaseMetaClass:
                     comments[-1].children[-1].children.append(comment)
             else:
                 comments.append(comment)
-                    
+
         return CommentList(
             results=comments, 
             page=page,
@@ -187,11 +188,14 @@ class BaseMetaClass:
         name_finder = r"\/([a-z0-9-]*)#imagebox"
         return [Thumbnail(name=re.search(name_finder, match[0])[1], url=match[0], type=ThumbnailType.media, image=match[1]) for match in matches]
 
-    def _get_comments_from_url(self, url):
+    def _get_comments_from_url(self, url, *, show_deleted = False):
         """Extra method so we can get comments from a ResultList"""
-        return self._get_comments(get_page(url))
+        params = {
+            "deleted" : "t" if show_deleted else None
+        }
+        return self._get_comments(get_page(url, params=params))
 
-    def get_comments(self, index : int = 1) -> CommentList:
+    def get_comments(self, index : int = 1, *, show_deleted = False) -> CommentList:
         """Used to get comments on the model regardless of what page they may be present in. The function
         itself simply relies on two other to make the request and parse the table.
 
@@ -199,13 +203,20 @@ class BaseMetaClass:
         ----------
         index : int 
             The page of the model to get the comments for.
+        show_deleted : Optional[bool]
+            Pass true to show deleted user comments. Only works if it is a page
+            you have permissions on.
 
         Returns
         --------
         CommentList[Comment]
             A list-like object containing the comments and additional methods
         """
-        return self._get_comments(get_page(f"{self.url}/page/{index}"))
+        params = {
+            "deleted" : "t" if show_deleted else None
+        }
+
+        return self._get_comments(get_page(f"{self.url}/page/{index}", params=params))
 
 class GetGamesMixin:
     """Abstract class containing the get_games method"""
@@ -360,7 +371,7 @@ class SharedMethodsMixin:
 
         Returns
         --------
-        ResultList[Thumbnail]
+        ResultList[Review]
             The list of reviews parsed from the page
         """
         params = {
@@ -370,7 +381,12 @@ class SharedMethodsMixin:
             "sort": f'{sort[0]}-{sort[1]}' if sort else None
         }
 
-        html = get_page(f"{self.url}/reviews/page/{index}", params=params)
+        return self._get_reviews(f"{self.url}/reviews/page/{index}", params=params)
+
+    def _get_reviews(self, url, *, params):
+        """Backend class so we can use it with ResultList"""
+        html = get_page(url, params=params)
+
         try:
             table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         except AttributeError:
@@ -410,13 +426,9 @@ class SharedMethodsMixin:
 
         return ResultList(
             results=reviews,
-            params={
-                'query': query, 
-                'rating': rating, 
-                'sort': sort
-            },
-            action=self.get_reviews,
-            url=f"{self.url}/reviews/page/{index}",
+            params=params,
+            action=self._get_reviews,
+            url=url,
             page=page,
             max_page=max_page
         )
@@ -762,6 +774,11 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
         except AttributeError:
             self.rating = 0.0
             LOGGER.info("'%s' '%s' is not rated", self.__class__.__name__, self.name)
+
+        try:
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})["value"]
+        except AttributeError:
+            self._review_hash = None
 
         self.medias = self._get_media(2, html=html)
 
@@ -1849,7 +1866,11 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
             "sort": f"{sort[0]}-{sort[1]}" if sort else None
         }
 
-        html = get_page(f"{self.url}/blogs/page/{index}", params=params)
+        return self._get_blogs(f"{self.url}/blogs/page/{index}", params=params)
+
+    def _get_blogs(self, url, *, params):
+        """Backend class so we can use it with ResultList"""
+        html = get_page(url, params=params)
         try:
             table = html.find("form", attrs={'name': "filterform"}).parent.find("div", class_="table")
         except AttributeError:
@@ -1880,13 +1901,9 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
 
         return ResultList(
             results=blogs,
-            params={
-                "query": query,
-                "timeframe": timeframe,
-                "sort": sort
-            },
-            url=f"{self.url}/blogs/page/{index}",
-            action=self.get_blogs,
+            params=params,
+            url=url,
+            action=self._get_blogs,
             page=page,
             max_page=max_page
         )
@@ -2200,6 +2217,11 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin)
             self.rating = 0.0
             LOGGER.info("'%s' '%s' is not rated", self.profile.category.name, self.name)
 
+        try:
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})["value"]
+        except AttributeError:
+            self._review_hash = None
+
         articles_raw = None
         try:
             articles_raw = html.find("span", string="Related Articles").parent.parent.parent.find("div", class_="table")
@@ -2368,6 +2390,8 @@ class Review:
 
     Attributes
     -----------
+    id : int
+        The review id
     text : str
         The contents of the review. Can be none if the member hasn't left any
     rating : int
@@ -2376,6 +2400,10 @@ class Review:
         A member like thumbnail of the member who left the review
     date : datetime.datetime
         Date and time of the review creation
+    agree : str
+            Link to agree with the review
+    disagree : str
+        Link to disagree with the review
     """
     def __init__(self, **attrs):
         text = attrs.get("text")
@@ -2387,9 +2415,27 @@ class Review:
         review = attrs.get("review")
         self.rating = int(review.span.string)
 
+        try:
+            strings = ("Agree", "Delete", "Disagree")
+            self.id = int(re.findall(r"siteareaid=(\d*)", review.find("a", title=strings)["href"])[0])
+        except TypeError:
+            self.id = None
+
+        try:
+            self._hash = re.findall(r"hash=(.*)&", review.find("a", title="Delete")["href"])[0]
+        except TypeError:
+            self._hash = None
+
         author = review.div.a
         self.author = Thumbnail(url=author["href"], name=author.string.split(" ")[0], type=ThumbnailType.member)
         self.date = get_date(review.div.span.time["datetime"])
+
+        try:
+            self.agree = join(review.find("a", title="Agree")["href"])
+            self.disagree = join(review.find("a", title="Disagree")["href"])
+        except TypeError:
+            self.agree = None
+            self.disagree = None
 
     def __repr__(self):
         return f"<Review author={self.author.name} rating={self.rating}>"

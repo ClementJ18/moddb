@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name = "moddb",
-    version = "0.6",
+    version = "0.7",
     description = "A scrapper for ModDB Mod and Game pages",
     author = "Clement Julia",
     author_email = "clement.julia13@gmail.com",

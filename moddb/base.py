@@ -38,7 +38,7 @@ class Search(collections.abc.MutableSequence):
         unpacked and passed to the search function.
     """
     def __init__(self, **kwargs):
-        self.results = kwargs.get("results")
+        self._results = kwargs.get("results")
         self.category = kwargs.get("category")
         self.filters = kwargs.get("filters")
         self.max_page = kwargs.get("max_page")
@@ -149,28 +149,31 @@ class Search(collections.abc.MutableSequence):
         return list(toolz.unique(results, key=lambda element: element.name))
 
     def __repr__(self):
-        return f"<Search results={len(self.results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.max_page}>"
+        return f"<Search results={len(self._results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.max_page}>"
 
     def __getitem__(self, element):
-        return self.results.__getitem__(element)
+        return self._results.__getitem__(element)
 
     def __delitem__(self, element):
-        self.results.__delitem__(element)
+        self._results.__delitem__(element)
 
     def __len__(self):
-        return self.results.__len__()
+        return self._results.__len__()
 
     def __setitem__(self, key, value):
-        self.results.__setitem__(key, value)
+        self._results.__setitem__(key, value)
 
     def insert(self, index, value):
-        self.results.insert(index, value)
+        self._results.insert(index, value)
 
     def __add__(self, sequence):
         if not isinstance(sequence, Search):
             raise TypeError(f'can only concatenate Search (not "{sequence.__class__.__name__}") to Search')
 
-        return self.results + sequence.results
+        return self._results + sequence.results
+
+    def __contains__(self, element):
+        return get(self._results, name=element.name) is not None
 
 def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, str] = None,
            page : int = 1, **filters) -> Search: 
