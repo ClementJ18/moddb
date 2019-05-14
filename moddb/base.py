@@ -304,7 +304,7 @@ def login(username : str, password : str) -> Member:
     if "freeman" not in browser.session.cookies:
         raise ValueError(f"Login failed for user {username}")
 
-    return Member(get_page(f"{BASE_URL}/members/{username}"))
+    return Member(get_page(f"{BASE_URL}/members/{username.replace('_', '-')}"))
 
 def logout(): 
     """Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and 
