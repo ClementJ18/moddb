@@ -53,7 +53,7 @@ class Client:
         if "freeman" not in browser.session.cookies:
             raise ValueError(f"Login failed for user {username}")
 
-        self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username}").text))
+        self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username.replace('_', '-')}").text))
         self._last_comment_time = 0
 
     def __repr__(self):
