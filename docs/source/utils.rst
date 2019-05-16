@@ -14,27 +14,10 @@ Object
     :inherited-members:
     
 
-get_date
+get
 ---------
-.. autofunction:: moddb.utils.get_date
+.. autofunction:: moddb.utils.get
 
-get_page
+find
 ---------
-.. autofunction:: moddb.utils.get_page
-
-get_type_from
----------------
-.. autofunction:: moddb.utils.get_type_from
-
-join
------
-.. autofunction:: moddb.utils.join
-
-request
---------
-.. autofunction:: moddb.utils.request
-
-soup
------
-.. autofunction:: moddb.utils.soup
-
+.. autofunction:: moddb.utils.find

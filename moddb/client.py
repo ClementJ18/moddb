@@ -2,10 +2,9 @@ import sys
 import json
 import time
 import requests
-from typing import Union, Any
 from robobrowser import RoboBrowser
 
-from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number, generate_hash, get
+from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number, generate_hash, get, LOGGER
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member, Group, Mod, Game, Engine, Team
 from .enums import ThumbnailType, WatchType, Status
@@ -53,6 +52,8 @@ class Client:
         if "freeman" not in browser.session.cookies:
             raise ValueError(f"Login failed for user {username}")
 
+        LOGGER.info("Login successful for %s", username)
+
         self.member = Member(soup(self._request("get", f"{BASE_URL}/members/{username.replace('_', '-')}").text))
         self._last_comment_time = 0
 
@@ -80,6 +81,7 @@ class Client:
         try:
             text = r.json()
             if text.get("error", False):
+                LOGGER.error(text["text"])
                 raise ModdbException(text["text"])
         except json.decoder.JSONDecodeError:
             r.raise_for_status()
@@ -178,7 +180,7 @@ class Client:
             max_page=max_page
         )
 
-    def tracking(self, page : Union[Mod, Game, Engine, Group, Member]):
+    def tracking(self, page):
         """Follow/unfollow this page.
         
         Parameters
@@ -271,7 +273,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def membership(self, page : Union[Group, Team]):
+    def membership(self, page):
         """Join/leave a team
 
         Parameters
@@ -298,12 +300,12 @@ class Client:
 
         return "successfully joined" in r.json()["text"]
 
-    def report(self, page : Any):
+    def report(self, page):
         """Report a page. This can take any object that has an id and url attribute.
 
         Parameters
         -----------
-        page : Any
+        page : Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
             The page to report
 
         Raises
@@ -384,7 +386,7 @@ class Client:
 
         Parameters
         -----------
-        page : Any
+        page : Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
             Must be a moddb.page, the page you wish to add the comment to.
         test : str
             The content of the comment you wish to post
@@ -394,7 +396,7 @@ class Client:
 
         Returns
         --------
-        Any
+        Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
             The page's updated object containing the new comment and any other new data that 
             has been posted since then
         """
