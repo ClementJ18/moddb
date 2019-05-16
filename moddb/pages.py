@@ -70,6 +70,8 @@ class BaseMetaClass:
 
         self.comments = self._get_comments(html)
 
+        self._html = html
+
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
@@ -1705,6 +1707,8 @@ class Job:
             LOGGER.info("Job '%s' has no related companies", self.name)
             self.related = []
 
+        self._html = html
+
     def __repr__(self):
         return f"<Job name={self.name}>"
 
@@ -2058,6 +2062,8 @@ class FrontPage:
         self.files = [Thumbnail(name=x.a["title"], url=x.a["href"], type=ThumbnailType.file, image=x.a.img["src"]) for x in files]
 
         self.poll = Poll(get_page(html.find("div", class_="poll").form["action"]))
+
+        self._html = html
 
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"

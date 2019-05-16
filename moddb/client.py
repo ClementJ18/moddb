@@ -299,7 +299,7 @@ class Client:
         return "successfully joined" in r.json()["text"]
 
     def report(self, page : Any):
-        """Report a page. This can take any attribute that has an id and url attribute.
+        """Report a page. This can take any object that has an id and url attribute.
 
         Parameters
         -----------
