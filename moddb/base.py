@@ -145,11 +145,12 @@ class Search(collections.abc.MutableSequence):
                 break
             else:
                 results.extend(search)
+                LOGGER.info("Parsed page %s/%s", search.page, search.max_page)
 
         return list(toolz.unique(results, key=lambda element: element.name))
 
     def __repr__(self):
-        return f"<Search results={len(self._results)}/{self.results_max}, category={self.category.name} pages={self.page}/{self.max_page}>"
+        return f"<Search category={self.category.name} pages={self.page}/{self.max_page}, results={self._results}>"
 
     def __getitem__(self, element):
         return self._results.__getitem__(element)
@@ -228,11 +229,11 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     
     try:
         pages = int(html.find("div", class_="pages").find_all()[-1].string)
+        page = int(html.find("span", class_="current").string)
     except AttributeError:
         LOGGER.info("Search query %s has less than 30 results (only one page)", url)
         pages = 1
-
-    page = int(html.find("span", class_="current").string)
+        page = 1
 
     results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"]) for x in search_raws]
     results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
@@ -307,15 +308,15 @@ def login(username : str, password : str) -> Member:
     return Member(get_page(f"{BASE_URL}/members/{username.replace('_', '-')}"))
 
 def logout(): 
-    """Logs the user out by clearing the cookies, all unapproved guest commnets will be hidden and 
+    """Logs the user out by clearing the cookies, all unapproved guest comments will be hidden and 
     all private groups will be hidden once more
     """
     sys.modules["moddb"].SESSION.cookies.clear()
 
 def front_page() -> FrontPage:
     """This returns a model representing the front page of  May sound fancy but it is no more
-    than a collection of popular mods, files, games and articles. In addition jobs are listed (but
-    not linked so unparsable) and a poll.
+    than a collection of popular mods, files, games and articles. In addition jobs are listed
+    and a poll.
 
     Returns
     --------

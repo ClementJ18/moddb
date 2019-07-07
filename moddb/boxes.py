@@ -912,6 +912,7 @@ class ModDBList(collections.abc.MutableSequence):
                 break
             else:
                 results.extend(search)
+                LOGGER.info("Parsed page %s/%s", search.page, search.max_page)
 
         def key_check(element):
             if isinstance(element, Comment):

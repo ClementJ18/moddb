@@ -95,7 +95,7 @@ class BaseMetaClass:
                 try:
                     comments[-1].children.append(comment)
                 except IndexError:
-                    comment[-1].append(MissingComment(0))
+                    comment.append(MissingComment(0))
                     comments[-1].children.append(comment)
             elif comment.position == 2:
                 try:
@@ -1987,7 +1987,6 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
 
         return self._get(f"{self.url}/groups/page/{index}", params=params)
 
-@concat_docs
 class FrontPage:
     """An object representing the front page of  More of less just a long suggestion of the hottest mods,
     games, articles and files of the moment
