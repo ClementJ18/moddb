@@ -3,6 +3,7 @@ from .enums import ThumbnailType
 import re
 import sys
 import uuid
+import random
 import inspect
 import logging
 import datetime
@@ -13,6 +14,44 @@ from bs4 import BeautifulSoup, Tag
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
+
+time_mapping = {
+    "year" : 125798400,
+    "month": 2419200,
+    "week": 604800,
+    "day": 86400,
+    "hour": 3600,
+    "minute": 60,
+    "econd": 1
+}
+
+user_agent_list = [
+    #Chrome
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+    #Firefox
+    'Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)',
+    'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
+    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)',
+    'Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko',
+    'Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko',
+    'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)',
+    'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko',
+    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)',
+    'Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko',
+    'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)',
+    'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)',
+    'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)'
+]
 
 def concat_docs(cls):
     """Does it look like I'm enjoying this?"""
@@ -98,9 +137,9 @@ def request(url, *, params = {}, post = False):
         params["query"] = params["query"].replace(" ", "+")
 
     if post:
-        r = SESSION.post(url, data=params.get("data", {}), cookies=cookies)
+        r = SESSION.post(url, data=params.get("data", {}), cookies=cookies, headers={"User-Agent": random.choice(user_agent_list)})
     else:
-        r = SESSION.get(url, cookies=cookies, params=params)
+        r = SESSION.get(url, cookies=cookies, params=params, headers={"User-Agent": random.choice(user_agent_list)})
 
     r.raise_for_status()
     return r
@@ -109,8 +148,8 @@ def soup(html : str) -> BeautifulSoup:
     """Simple helper function that takes a string representation of an html page and
     returns a beautiful soup object"""
     
-    soup = BeautifulSoup(html, "html.parser")
-    return soup
+    soupd = BeautifulSoup(html, "html.parser")
+    return soupd
 
 def get_page(url : str, *, params : dict = {}):
     """A helper function that takes a url and returns a beautiful soup objects. This is used to center
@@ -334,13 +373,3 @@ def get(iterable, **attrs):
 
 def generate_hash():
     return uuid.uuid4().hex
-
-time_mapping = {
-    "year" : 125798400,
-    "month": 2419200,
-    "week": 604800,
-    "day": 86400,
-    "hour": 3600,
-    "minute": 60,
-    "econd": 1
-}

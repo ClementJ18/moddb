@@ -1,10 +1,11 @@
 import sys
 import json
 import time
+import random
 import requests
 from robobrowser import RoboBrowser
 
-from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number, generate_hash, get, LOGGER
+from .utils import soup, get_type_from, get_date, BASE_URL, get_page_number, generate_hash, get, LOGGER, user_agent_list
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member, Group, Mod, Game, Engine, Team
 from .enums import ThumbnailType, WatchType, Status
@@ -73,7 +74,8 @@ class Client:
         of the library."""
         route = getattr(requests, method)
         cookies = cookies = requests.utils.dict_from_cookiejar(self._session.cookies)
-        r = route(url, cookies=cookies, **kwargs)
+        headers = {**kwargs.pop("headers", {}), "User-Agent": random.choice(user_agent_list)}
+        r = route(url, cookies=cookies, headers=headers, **kwargs)
         return self._proccess_response(r)
 
     def _proccess_response(self, r):

@@ -1292,9 +1292,6 @@ class Media(BaseMetaClass):
 
         self.views, self.today = get_views(raw_media["views"].a.string)
 
-        if "filename" in raw_media:
-            self.filename = raw_media["filename"].span.string.strip()
-
         if "size" in raw_media and "duration" in raw_media:
             self.category = MediaCategory.video
             self.fileurl = html.find("meta", property="og:image")["content"][:-4]
@@ -1305,10 +1302,30 @@ class Media(BaseMetaClass):
             self.category = MediaCategory.audio
             self.fileurl = html.find("video", id="mediaplayer").find("source")["src"]
 
+        if "filename" in raw_media:
+            self.filename = raw_media["filename"].span.string.strip()
+        else:
+            self.filename = self.fileurl.split("/")[-1]
+
         self.description = html.find("meta", {"name":"description"})["content"]
 
     def __repr__(self):
         return f"<Media name={self.name} type={self.type.name}>"
+
+    def save(self, path = None): 
+        """Save the media to a location.
+
+        Parameters
+        -----------
+        path : Optional[str]
+            Path to the location you wish to save the file at. If none is provided
+            it will save in the current working directory.
+
+        """
+        file = request(self.fileurl)
+        path = f"{path}/{self.filename}" if path else self.filename
+        with open(path, "wb") as f:
+            f.write(file.content)
 
 @concat_docs
 class Article(BaseMetaClass):
