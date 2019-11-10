@@ -497,7 +497,8 @@ class Client:
         return "You have <u>authorized</u> this comment" in r.json()["text"]
 
     def edit_comment(self, comment, new_text):
-        """Edit the contents of a comment.
+        """Edit the contents of a comment. You can only edit your comment 120 minutes after it has 
+        been posted
         
         Parameters
         -----------
