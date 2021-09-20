@@ -1169,7 +1169,7 @@ class File(BaseMetaClass):
 
         """
         download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
-        mirror = join(download.find("a", string=f"download {self.name}")["href"])
+        mirror = join(download.find("a", string=f"download {self.filename}")["href"])
         file = request(mirror)
         path = f"{path}/{self.filename}" if path else self.filename
         with open(path, "wb") as f:
