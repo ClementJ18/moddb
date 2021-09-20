@@ -13,6 +13,8 @@ import bs4
 import json
 import datetime
 import feedparser
+import requests
+import os
 from typing import List, Tuple, Union
 
 __all__ = ['Mod', 'Game', 'Engine', 'File', 'Addon', 'Media', 'Article',
@@ -1170,10 +1172,13 @@ class File(BaseMetaClass):
         """
         download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
         mirror = join(download.find("a", string=f"download {self.filename}")["href"])
-        file = request(mirror)
-        path = f"{path}/{self.filename}" if path else self.filename
-        with open(path, "wb") as f:
-            f.write(file.content)
+        with requests.get(mirror, stream=True) as r:
+            r.raise_for_status()
+            path = f"{path}/{self.filename}.part" if path else (self.filename + '.part')
+            with open(path, 'wb') as f:
+                for chunk in r.iter_content(chunk_size=16384):
+                    f.write(chunk)
+            os.rename(path, path[:-5])
 
 @concat_docs
 class Addon(File):
