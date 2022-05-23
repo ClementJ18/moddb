@@ -69,7 +69,7 @@ class Client:
         self.member = Member(
             soup(
                 self._request(
-                    "get", f"{BASE_URL}/members/{username.replace('_', '-')}"
+                    "GET", f"{BASE_URL}/members/{username.replace('_', '-')}"
                 ).text
             )
         )
@@ -95,7 +95,10 @@ class Client:
             **kwargs.pop("headers", {}),
             "User-Agent": random.choice(user_agent_list),
         }
-        r = route(url, cookies=cookies, headers=headers, **kwargs)
+        req = requests.Request(method, url, headers=headers, cookies=cookies, **kwargs)
+        prepped = self._session.prepare_request(req)
+
+        r = self._session.send(prepped)
         return self._proccess_response(r)
 
     def _proccess_response(self, r):
@@ -118,7 +121,7 @@ class Client:
         List[Update]
             List of updates (thumbnail like objects with extra methods and an extra attribute)
         """
-        r = self._request("get", f"{BASE_URL}/messages/updates")
+        r = self._request("GET", f"{BASE_URL}/messages/updates")
         html = soup(r.text)
         updates = []
 
@@ -173,7 +176,7 @@ class Client:
         List[Request]
             List of requests (thumbnail like objects with extra methods)
         """
-        r = self._request("get", f"{BASE_URL}/messages/updates")
+        r = self._request("GET", f"{BASE_URL}/messages/updates")
         html = soup(r.text)
         requests = []
         raw = html.find("span", string="Friend Requests")
@@ -219,7 +222,7 @@ class Client:
 
         """
         url = f"{BASE_URL}/messages/watching/{category.name}s/page/{page}"
-        html = soup(self._request("get", url).text)
+        html = soup(self._request("GET", url).text)
 
         results_raw = html.find("div", class_="table").find_all("div", recursive=False)[
             1:
@@ -263,7 +266,7 @@ class Client:
             True if the page has been successfully followed, False if it has been successfully unfollowed
         """
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/messages/ajax/action/",
             data={
                 "ajax": "t",
@@ -295,7 +298,7 @@ class Client:
             True if the comment has been successfully liked
         """
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/messages/ajax/action/",
             data={
                 "ajax": "t",
@@ -330,7 +333,7 @@ class Client:
             raise TypeError("Argument must be a Comment-like object")
 
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/messages/ajax/action/",
             data={
                 "ajax": "t",
@@ -364,7 +367,7 @@ class Client:
 
         """
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/groups/ajax/members/change/{page.id}",
             data={"ajax": "t"},
             allow_redirects=False,
@@ -391,7 +394,7 @@ class Client:
             True if the page has been successfully reported
         """
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/messages/ajax/action/",
             data={
                 "ajax": "t",
@@ -423,7 +426,7 @@ class Client:
             True if the user was succesfully unfriended
         """
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/members/ajax/friends/delete/{member.id}",
             data={"ajax": "t"},
             allow_redirects=False,
@@ -451,7 +454,7 @@ class Client:
             True if the user was succesfully sent a friend request
         """
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/members/ajax/friends/add/{member.id}",
             data={"ajax": "t"},
             allow_redirects=False,
@@ -484,7 +487,7 @@ class Client:
             )
 
         r = self._request(
-            "post",
+            "POST",
             page.url,
             data={
                 "formhash": generate_hash(),
@@ -506,7 +509,7 @@ class Client:
             )
 
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/messages/ajax/action/",
             data={
                 "ajax": "t",
@@ -605,7 +608,7 @@ class Client:
             True if the comment was successfully edited
         """
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/comment/ajax/post",
             data={"ajax": "t", "id": comment.id, "summary": new_text},
         )
@@ -648,7 +651,7 @@ class Client:
             page = parse(page.url)
 
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/reviews/ajax",
             data={
                 "ajax": "t",
@@ -688,7 +691,7 @@ class Client:
             hash_review = self.member.get_reviews()[0]
 
         r = self._request(
-            "post",
+            "POST",
             f"{BASE_URL}/messages/ajax/action/",
             data={
                 "ajax": "t",

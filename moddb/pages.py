@@ -53,6 +53,7 @@ from .utils import (
 import re
 import bs4
 import json
+import requests
 import datetime
 import feedparser
 from typing import List, Tuple, Union
@@ -808,7 +809,7 @@ class RSSFeedMixin:
         url = f"https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml"
 
         if parse_feed:
-            return feedparser.parse(request(url).text)
+            return feedparser.parse(request(requests.Request("GET", url)).text)
 
         return url
 
@@ -1423,7 +1424,7 @@ class File(BaseMetaClass):
         """
         download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
         mirror = join(download.find("a", string=f"download {self.name}")["href"])
-        file = request(mirror)
+        file = request(requests.Request("GET", mirror))
         path = f"{path}/{self.filename}" if path else self.filename
         with open(path, "wb") as f:
             f.write(file.content)
@@ -1585,7 +1586,7 @@ class Media(BaseMetaClass):
             it will save in the current working directory.
 
         """
-        file = request(self.fileurl)
+        file = request(requests.Request("GET", self.fileurl))
         path = f"{path}/{self.filename}" if path else self.filename
         with open(path, "wb") as f:
             f.write(file.content)

@@ -501,7 +501,7 @@ class Update(Thumbnail):
         bool
             True if the updates were successfully cleared
         """
-        r = self._client._request("post", self._clear_url, data={"ajax": "t"})
+        r = self._client._request("POST", self._clear_url, data={"ajax": "t"})
 
         return "successfully removed" in r.json()["text"]
 
@@ -518,7 +518,7 @@ class Update(Thumbnail):
         bool
             True if the page was successfully unfollowed
         """
-        r = self._client._request("post", self._unfollow_url, data={"ajax": "t"})
+        r = self._client._request("POST", self._unfollow_url, data={"ajax": "t"})
 
         return "no longer watching" in r.json()["text"]
 
@@ -547,7 +547,7 @@ class Request(Thumbnail):
         bool
             True if the request was successfully accepted
         """
-        r = self._client._request("post", self._accept, data={"ajax": "t"})
+        r = self._client._request("POST", self._accept, data={"ajax": "t"})
 
         return "now friends with" in r.json()["text"]
 
@@ -564,7 +564,7 @@ class Request(Thumbnail):
         bool
             True if the page was successfully declined
         """
-        r = self._client._request("post", self._decline, data={"ajax": "t"})
+        r = self._client._request("POST", self._decline, data={"ajax": "t"})
 
         return "successfully removed" in r.json()["text"]
 
@@ -1212,8 +1212,8 @@ class CommentList(ModDBList):
 
         [ Comment1 ]
             ├── Comment2\n
-                ├── Comment3\n
-                └── Comment4\n
+            |   ├── Comment3\n
+            |   └── Comment4\n
             └── Comment5
 
         would become:

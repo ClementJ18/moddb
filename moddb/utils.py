@@ -15,7 +15,7 @@ from pyrate_limiter import Duration, Limiter, RequestRate
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
-LIMITER = Limiter(RequestRate(6, Duration.MINUTE))
+LIMITER = Limiter(RequestRate(30, Duration.MINUTE*5))
 
 time_mapping = {
     "year": 125798400,
@@ -117,18 +117,15 @@ def get_date(d: str) -> datetime.datetime:
 
     return datetime.datetime.strptime(d, "%Y-%m")
 
-@LIMITER.ratelimit('identity', delay=True)
-def request(url, *, params={}, post=False):
+
+@LIMITER.ratelimit("identity", delay=True)
+def request(req : requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
     Parameters
     -----------
-    url : str
-        url to get
-    params : dict
-        A dict of paramaters to be passed along
-    post : bool
-        Whether or not this a post request
+    req : requests.Request
+        The request to perform
 
     Return
     -------
@@ -138,23 +135,16 @@ def request(url, *, params={}, post=False):
     """
     SESSION = sys.modules["moddb"].SESSION
     cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
-    if "query" in params:
-        params["query"] = params["query"].replace(" ", "+")
-
-    if post:
-        r = SESSION.post(
-            url,
-            data=params.get("data", {}),
-            cookies=cookies,
-            headers={"User-Agent": random.choice(user_agent_list)},
-        )
+    
+    if req.cookies is not None:
+        req.cookies = {**req.cookies, **cookies}
     else:
-        r = SESSION.get(
-            url,
-            cookies=cookies,
-            params=params,
-            headers={"User-Agent": random.choice(user_agent_list)},
-        )
+        req.cookies = cookies
+    
+    req.headers["User-Agent"] = random.choice(user_agent_list)
+
+    prepped = SESSION.prepare_request(req)
+    r = SESSION.send(prepped)
 
     r.raise_for_status()
     return r
@@ -164,8 +154,7 @@ def soup(html: str) -> BeautifulSoup:
     """Simple helper function that takes a string representation of an html page and
     returns a beautiful soup object"""
 
-    soupd = BeautifulSoup(html, "html.parser")
-    return soupd
+    return BeautifulSoup(html, "html.parser")
 
 
 def get_page(url: str, *, params: dict = {}):
@@ -185,7 +174,7 @@ def get_page(url: str, *, params: dict = {}):
     -------
     bs4.BeautifulSoup
     """
-    r = request(url, params=params)
+    r = request(requests.Request("GET", url, params=params))
     return soup(r.text)
 
 

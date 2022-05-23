@@ -6,6 +6,7 @@ from .pages import FrontPage, Member
 import re
 import sys
 import toolz
+import requests
 import feedparser
 import collections
 from typing import Tuple, Any
@@ -382,6 +383,6 @@ def rss(type: RSSType, *, parse_feed=False):
     """
     url = f"https://rss.moddb.com/{type.name}/feed/rss.xml"
     if parse_feed:
-        return feedparser.parse(request(url).text)
+        return feedparser.parse(request(requests.Request("GET", url)).text)
 
     return url
