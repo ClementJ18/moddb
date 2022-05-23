@@ -23,17 +23,10 @@ Check out the [documentation](https://moddb.readthedocs.io) for more information
 [Support](https://discord.gg/Ape8bZt)
 
 ## Installing
-This package is not available on Pypi but can still be installed using pip if you also have git installed. Else you will have to download the repository and instal using the setup.py script located at root. To install with pip
+You can get it from pypi: https://pypi.org/project/moddb
 
 ```
-pip install -U git+git://github.com/ClementJ18/moddb.git@v0.7
-```
-
-## Uninstalling
-To uninstall the package
-
-```
-pip uninstall moddb
+pip install moddb
 ```
 
 ## Models
@@ -56,6 +49,8 @@ pip uninstall moddb
 * [x] HardwAre
 * [x] Updates
 * [x] Friend Requests
+* [ ] Watchers
+* [ ] Tags
 
 Maybe
 * [ ] Messages

@@ -3,7 +3,8 @@ import moddb
 
 class TestGroup(unittest.TestCase):
     def setUp(self):
-        self.group = moddb.pages.Group(moddb.get_page(getattr(self, "url", "https://www.moddb.com/groups/humour-satire-parody")))
+        with open(getattr(self, "path", "test/fixtures/humour-satire-parody.html"), "r") as f:
+            self.group = moddb.pages.Group(moddb.utils.soup(f.read()))
 
     def test_get_addons(self):
         addons = self.group.get_addons()

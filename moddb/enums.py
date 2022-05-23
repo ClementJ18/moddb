@@ -1,7 +1,9 @@
 import enum
 
+
 class SearchCategory(enum.Enum):
     """The list of things you can search for"""
+
     games = 0
     mods = 1
     addons = 2
@@ -26,15 +28,19 @@ class SearchCategory(enum.Enum):
     companys = developers
     features = articles
 
+
 class Category(enum.Enum):
     """Enum for the different areas of the site which things can be attached to"""
+
     mods = "mods"
     games = "games"
     engines = "engines"
     downloads = "downloads"
 
+
 class RSSType(enum.Enum):
     """Enum to define the type of RSS you want to get from this page"""
+
     articles = 0
     downloads = 1
     images = 2
@@ -52,24 +58,31 @@ class RSSType(enum.Enum):
 
 class MediaCategory(enum.Enum):
     """What category a media object is, use for read purposes."""
+
     video = 0
     image = 1
     audio = 2
 
+
 class ArticleCategory(enum.Enum):
     """Category of the article"""
+
     news = 1
     features = 2
     tutorials = 4
 
+
 class Difficulty(enum.Enum):
     """Difficulty of the tutorial"""
+
     basic = 1
     intermediate = 2
     advanced = 3
 
+
 class TutorialCategory(enum.Enum):
     """Skill covered by the tutorial"""
+
     coding = 1
     graphics = 2
     concept_art = 3
@@ -99,30 +112,35 @@ class TutorialCategory(enum.Enum):
     qa_testing = 29
     design_concepts = 31
     starting_a_mod = 32
-    
+
 
 class Membership(enum.Enum):
     """Member ship settings of Groups and Teams"""
+
     invitation = 1
     application = 2
     open_to_all = 3
 
+
 class TeamCategory(enum.IntFlag):
     """Category of companies, either publisher, developer or both"""
+
     def __repr__(self):
         cls = self.__class__
         if self._name_ is not None:
             return self._name_
         members, uncovered = enum._decompose(cls, self._value_)
-        return ' & '.join([str(m._name_ or m._value_) for m in members])
+        return " & ".join([str(m._name_ or m._value_) for m in members])
 
     __str__ = __repr__
 
     developer = 3
     publisher = 4
 
+
 class GroupCategory(enum.Enum):
     """Category of fan groups"""
+
     official = 1
     educational = 2
     fans_clans = 3
@@ -136,8 +154,10 @@ class GroupCategory(enum.Enum):
     event = 11
     developer_publisher = 99
 
+
 class ThumbnailType(enum.Enum):
     """The various types of thunbails that can be created"""
+
     mod = 0
     game = 1
     engine = 2
@@ -156,8 +176,10 @@ class ThumbnailType(enum.Enum):
     hardware = 15
     company = team
 
+
 class AddonCategory(enum.Enum):
     """Category of addons"""
+
     maps = 100
     multiplayer_map = 101
     singleplayer_map = 102
@@ -194,15 +216,19 @@ class AddonCategory(enum.Enum):
     ambience_sounds = 137
     language_sounds = 138
 
+
 class Status(enum.Enum):
     """Status of a page"""
+
     released = 1
     unreleased = 3
     early_access = 4
     coming_soon = 2
 
+
 class Theme(enum.Enum):
     """Theme of the page"""
+
     anime = 1
     comedy = 2
     comic = 3
@@ -226,9 +252,11 @@ class Theme(enum.Enum):
     music = 21
     pirate = 22
     survival = 23
-    
+
+
 class Genre(enum.Enum):
     """Genre of the page"""
+
     action = 1
     sub_adventure = 2
     first_person_shooter = 3
@@ -280,14 +308,16 @@ class Genre(enum.Enum):
     moba = 52
     party_based = 53
 
+
 class PlayerStyle(enum.IntFlag):
     """The player style of the game"""
+
     def __repr__(self):
         cls = self.__class__
         if self._name_ is not None:
             return self._name_
         members, uncovered = enum._decompose(cls, self._value_)
-        return '|'.join([str(m._name_ or m._value_) for m in members])
+        return "|".join([str(m._name_ or m._value_) for m in members])
 
     __str__ = __repr__
 
@@ -296,16 +326,20 @@ class PlayerStyle(enum.IntFlag):
     coop = 4
     mmo = 8
 
+
 class TimeFrame(enum.Enum):
     """How recently the page was updated/uploaded, 24 hours, last week, last month, ect..."""
+
     day = 1
     week = 2
     month = 3
     year = 4
     more = 5
 
+
 class Licence(enum.Enum):
     """The licence of the object"""
+
     commercial = 1
     creative_commons = 2
     proprietary = 3
@@ -316,13 +350,17 @@ class Licence(enum.Enum):
     mit = 8
     zlib = 9
 
+
 class Scope(enum.Enum):
     """Scope of the game"""
+
     aaa = 1
     indie = 2
 
+
 class FileCategory(enum.Enum):
     """The category of the File"""
+
     releases = 1
     full_version = 2
     demo = 3
@@ -352,8 +390,10 @@ class FileCategory(enum.Enum):
     plugin = 27
     script = 28
 
+
 class JobSkill(enum.Enum):
     """The skill required for q job"""
+
     artists = 1
     audio_or_music = 2
     human_resources = 3
@@ -366,16 +406,20 @@ class JobSkill(enum.Enum):
     sales = 10
     web_or_other = 11
 
+
 class HardwareCategory(enum.Enum):
     """The category of the hardware"""
+
     headset = 1
     haptics = 2
     controller = 3
     video = 4
     sound = 5
 
+
 class SoftwareCategory(enum.Enum):
     """The category of the software"""
+
     commerical = 1
     communication = 2
     development = 3
@@ -404,12 +448,14 @@ class SoftwareCategory(enum.Enum):
     music = 26
     games = 27
 
+
 class WatchType(enum.Enum):
     mod = 0
     game = 1
     engine = 2
     group = 3
     member = 4
+
 
 class Month(enum.Enum):
     january = "01"

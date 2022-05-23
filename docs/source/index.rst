@@ -40,7 +40,7 @@ Welcome to moddb's documentation!
     :alt: Commits Since
 
 The moddb python library is a module to scrape the ModDB.com website. The goal is to emulate
-the moddb website using function and OOP as if ModDB was simply an API. Ideally, in it's finished
+the moddb website using function and OOP as if ModDB was simply an API. Ideally, in its finished
 state you should be able to pair with a web framework to perfectly emulate the website and all
 its features.
 

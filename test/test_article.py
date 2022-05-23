@@ -3,7 +3,8 @@ import moddb
 
 class TestArticle(unittest.TestCase):
     def setUp(self):
-        self.article = moddb.pages.Article(moddb.get_page(getattr(self, "url", "https://www.moddb.com/mods/third-age-total-war/videos/rohan7")))
+        with open(getattr(self, "path", "test/fixtures/rohan7.html"), "r") as f:
+            self.article = moddb.pages.Article(moddb.utils.soup(f.read()))
 
     def test_get_comments(self):
         self.article.get_comments()

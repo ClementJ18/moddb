@@ -36,12 +36,12 @@ class TestSearch(unittest.TestCase):
         search = self.search.next_page()
         search.previous_page()
 
-class TestParse(unittest.TestCase):
-    def setUp(self):
-        self.model = moddb.parse(getattr(self, "url", "https://www.moddb.com/mods/edain-mod"))
+# class TestParse(unittest.TestCase):
+#     def setUp(self):
+#         self.model = moddb.parse(getattr(self, "path", "test/fixtures/edain-mod.html")
 
-    def test_check(self):
-        pass
+#     def test_check(self):
+#         pass
 
 class TestLogin(unittest.TestCase):
     def test_login(self):

@@ -3,7 +3,8 @@ import moddb
 
 class TestFile(unittest.TestCase):
     def setUp(self):
-        self.file = moddb.pages.File(moddb.get_page(getattr(self, "url", "https://www.moddb.com/games/pokemon-generations/downloads/pokegen-v2-launcher")))
+        with open(getattr(self, "path", "test/fixtures/pokegen-v2-launcher.html"), "r") as f:
+            self.file = moddb.pages.File(moddb.utils.soup(f.read()))
 
     def test_get_comments(self):
         self.file.get_comments()

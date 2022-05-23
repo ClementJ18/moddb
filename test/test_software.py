@@ -3,7 +3,8 @@ import moddb
 
 class TestSoftware(unittest.TestCase):
     def setUp(self):
-        self.software = moddb.pages.Software(moddb.get_page(getattr(self, "url", "https://www.moddb.com/software/project-neptune-vr")))
+        with open(getattr(self, "path", "test/fixtures/project-neptune-vr.html"), "r") as f:
+            self.software = moddb.pages.Software(moddb.utils.soup(f.read()))
 
     def test_get_articles(self):
         articles = self.software.get_articles()

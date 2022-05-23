@@ -1,9 +1,11 @@
 import unittest
 import moddb
+import time
 
 class TestMod(unittest.TestCase):
     def setUp(self):
-        self.mod = moddb.pages.Mod(moddb.get_page(getattr(self, "url", "https://www.moddb.com/mods/edain-mod")))
+        with open(getattr(self, "path", "test/fixtures/edain-mod.html"), "r") as f:
+            self.mod = moddb.pages.Mod(moddb.utils.soup(f.read()))
 
     def test_get_addons(self):
         addons = self.mod.get_addons()

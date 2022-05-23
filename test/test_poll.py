@@ -3,7 +3,8 @@ import moddb
 
 class TestPoll(unittest.TestCase):
     def setUp(self):
-        self.poll = moddb.pages.Poll(moddb.get_page(getattr(self, "url", "https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods")))
+        with open(getattr(self, "path", "test/fixtures/total-conversions-vs-cosmetic-mods.html"), "r") as f:
+            self.poll = moddb.pages.Poll(moddb.utils.soup(f.read()))
 
     def test_get_comments(self):
         self.poll.get_comments()
