@@ -1,8 +1,11 @@
 import unittest
+from tests.utils import patched_request
+from unittest.mock import patch
 import moddb
 
-from test.test_config import username, password
+from tests.test_config import username, password
 
+@patch("moddb.utils.request", new=patched_request)
 class TestFrontPage(unittest.TestCase):
     def setUp(self):
         self.fp = moddb.front_page()
@@ -19,6 +22,7 @@ class TestFrontPage(unittest.TestCase):
         for file in self.fp.files:
             file.parse()
 
+@patch("moddb.utils.request", new=patched_request)
 class TestSearch(unittest.TestCase):
     def setUp(self):
         cat = getattr(self, "category", moddb.SearchCategory.mods)
@@ -36,6 +40,7 @@ class TestSearch(unittest.TestCase):
         search = self.search.next_page()
         search.previous_page()
 
+# @patch("moddb.utils.request", new=patched_request)
 # class TestParse(unittest.TestCase):
 #     def setUp(self):
 #         self.model = moddb.parse(getattr(self, "path", "test/fixtures/edain-mod.html")
@@ -43,6 +48,7 @@ class TestSearch(unittest.TestCase):
 #     def test_check(self):
 #         pass
 
+@patch("moddb.utils.request", new=patched_request)
 class TestLogin(unittest.TestCase):
     def test_login(self):
         moddb.login(username, password)

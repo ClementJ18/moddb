@@ -1,10 +1,12 @@
 import unittest
+from tests.utils import patched_request
+from unittest.mock import patch
 import moddb
 
+@patch("moddb.utils.request", new=patched_request)
 class TestMember(unittest.TestCase):
     def setUp(self):
-        with open(getattr(self, "path", "test/fixtures/mladen1996.html"), "r") as f:
-            self.member = moddb.pages.Member(moddb.utils.soup(f.read()))
+        self.member = moddb.pages.Member(moddb.get_page(getattr(self, "url", "https://www.moddb.com/members/mladen1996")))
 
     def test_get_addons(self):
         addons = self.member.get_addons()

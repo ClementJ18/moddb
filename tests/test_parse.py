@@ -1,4 +1,6 @@
 import unittest
+from tests.utils import patched_request
+from unittest.mock import patch
 import moddb
 
 import logging
@@ -8,6 +10,7 @@ handler = logging.FileHandler(filename='moddb.log', encoding='utf-8', mode='w')
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
+@patch("moddb.utils.request", new=patched_request)
 class TestParsers(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

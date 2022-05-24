@@ -1,10 +1,12 @@
 import unittest
+from tests.utils import patched_request
+from unittest.mock import patch
 import moddb
 
+@patch("moddb.utils.request", new=patched_request)
 class TestTeam(unittest.TestCase):
     def setUp(self):
-        with open(getattr(self, "path", "test/fixtures/edainmod-dev-team.html"), "r") as f:
-            self.team = moddb.pages.Team(moddb.utils.soup(f.read()))
+        self.team = moddb.pages.Team(moddb.get_page(getattr(self, "url", "https://www.moddb.com/company/edainmod-dev-team")))
 
     def test_get_addons(self):
         addons = self.team.get_addons()

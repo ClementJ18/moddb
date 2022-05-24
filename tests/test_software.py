@@ -1,10 +1,12 @@
 import unittest
+from tests.utils import patched_request
+from unittest.mock import patch
 import moddb
 
+@patch("moddb.utils.request", new=patched_request)
 class TestSoftware(unittest.TestCase):
     def setUp(self):
-        with open(getattr(self, "path", "test/fixtures/project-neptune-vr.html"), "r") as f:
-            self.software = moddb.pages.Software(moddb.utils.soup(f.read()))
+        self.software = moddb.pages.Software(moddb.get_page(getattr(self, "url", "https://www.moddb.com/software/project-neptune-vr")))
 
     def test_get_articles(self):
         articles = self.software.get_articles()

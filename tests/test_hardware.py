@@ -1,10 +1,12 @@
 import unittest
+from tests.utils import patched_request
+from unittest.mock import patch
 import moddb
 
+@patch("moddb.utils.request", new=patched_request)
 class TestHardware(unittest.TestCase):
     def setUp(self):
-        with open(getattr(self, "path", "test/fixtures/htc-vive.html"), "r") as f:
-            self.hardware = moddb.pages.Hardware(moddb.utils.soup(f.read()))
+        self.hardware = moddb.pages.Hardware(moddb.get_page(getattr(self, "url", "https://www.moddb.com/hardware/htc-vive")))
 
     def test_get_articles(self):
         articles = self.hardware.get_articles()

@@ -1,10 +1,12 @@
 import unittest
+from tests.utils import patched_request
+from unittest.mock import patch
 import moddb
 
+@patch("moddb.utils.request", new=patched_request)
 class TestEngine(unittest.TestCase):
     def setUp(self):
-        with open(getattr(self, "path", "test/fixtures/sage-strategy-action-game-engine.html"), "r") as f:
-            self.engine = moddb.pages.Engine(moddb.utils.soup(f.read()))
+        self.engine = moddb.pages.Engine(moddb.get_page(getattr(self, "url", "https://www.moddb.com/engines/sage-strategy-action-game-engine")))
 
     def test_get_addons(self):
         addons = self.engine.get_addons()
