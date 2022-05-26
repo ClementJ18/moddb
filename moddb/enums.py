@@ -196,23 +196,19 @@ class SoftwareCategory(enum.Enum):
     overclocking                   = 25
     benchmarking                   = 26
     streaming_and_recording        = 27
-    web,_pr_and_other              = 28
+    web_pr_and_other               = 28
     game_design                    = 29
     web_design                     = 30
     browser                        = 31
     social_networking              = 32
     video_editing                  = 33
     vr                             = 34
-
-
 class Difficulty(enum.Enum):
     """Difficulty of the tutorial"""
 
     basic        = 1
     intermediate = 2
     advanced     = 3
-
-
 class TutorialCategory(enum.Enum):
     """Skill covered by the tutorial"""
 
@@ -510,12 +506,10 @@ class SoftwareCategory(enum.Enum):
     overclocking                   = 25
     benchmarking                   = 26
     streaming_and_recording        = 27
-    web,_pr_and_other              = 28
+    web_pr_and_other               = 28
     game_design                    = 29
     web_design                     = 30
     browser                        = 31
     social_networking              = 32
     video_editing                  = 33
     vr                             = 34
-
-

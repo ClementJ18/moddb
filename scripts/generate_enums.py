@@ -105,7 +105,7 @@ def generate_member_list(html, enum):
             continue
         
         name_raw = select.string.lower().replace("-", "").strip().replace("3d", "d3").replace("2d", "d2").replace("4x", "x4")
-        name = re.sub(r'[\s\&/\']+', '_', name_raw)
+        name = re.sub(r'[\s\&\/\',]+', '_', name_raw)
 
         if name in names:
             name = f'sub_{name}'
