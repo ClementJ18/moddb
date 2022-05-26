@@ -40,13 +40,13 @@ class TestSearch(unittest.TestCase):
         search = self.search.next_page()
         search.previous_page()
 
-# @patch("moddb.utils.request", new=patched_request)
-# class TestParse(unittest.TestCase):
-#     def setUp(self):
-#         self.model = moddb.parse(getattr(self, "path", "test/fixtures/edain-mod.html")
+@patch("moddb.utils.request", new=patched_request)
+class TestParse(unittest.TestCase):
+    def setUp(self):
+        self.model = moddb.parse(getattr(self, "url", "https://www.moddb.com/mods/edain-mod"))
 
-#     def test_check(self):
-#         pass
+    def test_check(self):
+        pass
 
 @patch("moddb.utils.request", new=patched_request)
 class TestLogin(unittest.TestCase):

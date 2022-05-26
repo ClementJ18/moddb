@@ -11,7 +11,11 @@ class FakeResponse:
 
 request = moddb.utils.request
 def patched_request(req):
-    path = f"tests/fixtures{req.url.replace(moddb.BASE_URL, '')}.html"
+    filename = req.url.replace(moddb.BASE_URL, '')
+    if not filename:
+        filename = "/frontpage"
+    
+    path = f"tests/fixtures{filename}.html"
 
     # cache the file if it doesn't exist
     if not os.path.exists(path):

@@ -1,12 +1,9 @@
 import unittest
-from tests.utils import patched_request
-from unittest.mock import patch
 import moddb
 import random
 
 from tests.test_config import username, password, sender_username, sender_password
 
-@patch("moddb.utils.request", new=patched_request)
 class TestClient(unittest.TestCase):
     def setUp(self):
         self.client = moddb.Client(username, password)

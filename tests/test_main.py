@@ -19,7 +19,7 @@ from tests.test_platform import TestPlatform
 from tests.test_software import TestSoftware
 from tests.test_hardware import TestHardware
 from tests.test_poll import TestPoll
-from tests.test_base import TestFrontPage, TestSearch, TestLogin # , TestParse
+from tests.test_base import TestFrontPage, TestSearch, TestLogin, TestParse
 from tests.test_client import TestClient
 
 logger = logging.getLogger('moddb')
@@ -300,8 +300,9 @@ for query in queries:
     suite.addTests(loader.loadTestsFromTestCase(TestSearch))
 
 suite.addTests(loader.loadTestsFromTestCase(TestClient))
-
 runner = unittest.TextTestRunner(verbosity=3)
-result = runner.run(suite)
-# result = suite.debug()
+
+if __name__ == "__main__":
+    result = runner.run(suite)
+    # result = suite.debug()
 
