@@ -1,12 +1,18 @@
-import unittest
-from tests.utils import patched_request
+import pytest
 from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
+DEFAULT = "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king"
+
 @patch("moddb.utils.request", new=patched_request)
-class TestGame(unittest.TestCase):
-    def setUp(self):
-        self.game = moddb.pages.Game(moddb.get_page(getattr(self, "url", "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king")))
+class TestGame:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_mod(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.game = moddb.Game(moddb.get_page(request.param))
 
     def test_get_addons(self):
         addons = self.game.get_addons()

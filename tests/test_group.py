@@ -1,12 +1,18 @@
-import unittest
-from tests.utils import patched_request
+import pytest
 from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
+DEFAULT = "https://www.moddb.com/groups/humour-satire-parody"
+
 @patch("moddb.utils.request", new=patched_request)
-class TestGroup(unittest.TestCase):
-    def setUp(self):
-        self.group = moddb.pages.Group(moddb.get_page(getattr(self, "url", "https://www.moddb.com/groups/humour-satire-parody")))
+class TestGroup:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.group = moddb.Group(moddb.get_page(request.param))
 
     def test_get_addons(self):
         addons = self.group.get_addons()

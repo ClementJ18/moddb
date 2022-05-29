@@ -21,6 +21,7 @@ from .pages import Member, Group, Mod, Game, Engine, Team
 from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
 from .base import parse
+from .utils import LIMITER
 
 
 class Client:
@@ -86,19 +87,20 @@ class Client:
         sys.modules["moddb"].SESSION = self._fake_session
         delattr(self, "_fake_session")
 
+    @LIMITER.ratelimit("moddb", delay=True)
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""
-        route = getattr(requests, method)
         cookies = cookies = requests.utils.dict_from_cookiejar(self._session.cookies)
         headers = {
             **kwargs.pop("headers", {}),
             "User-Agent": random.choice(user_agent_list),
         }
-        req = requests.Request(method, url, headers=headers, cookies=cookies, **kwargs)
+
+        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
         prepped = self._session.prepare_request(req)
 
-        r = self._session.send(prepped)
+        r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
         return self._proccess_response(r)
 
     def _proccess_response(self, r):
@@ -107,6 +109,8 @@ class Client:
             text = r.json()
             if text.get("error", False):
                 LOGGER.error(text["text"])
+                LOGGER.error(r.request.url)
+                LOGGER.error(r.request.body)
                 raise ModdbException(text["text"])
         except json.decoder.JSONDecodeError:
             r.raise_for_status()
@@ -224,18 +228,21 @@ class Client:
         url = f"{BASE_URL}/messages/watching/{category.name}s/page/{page}"
         html = soup(self._request("GET", url).text)
 
-        results_raw = html.find("div", class_="table").find_all("div", recursive=False)[
-            1:
-        ]
-        results = [
-            Thumbnail(
-                url=x.a["href"],
-                name=x.a["title"],
-                type=ThumbnailType[category.name],
-                image=x.a.img["src"],
-            )
-            for x in results_raw
-        ]
+        results_raw = html.find("div", class_="table").find_all("div", recursive=False)[1:]
+        
+        try:
+            results = [
+                Thumbnail(
+                    url=x.a["href"],
+                    name=x.a["title"],
+                    type=ThumbnailType[category.name],
+                    image=x.a.img["src"],
+                )
+                for x in results_raw
+            ]
+        except TypeError:
+            LOGGER.info("No %ss watched for %s", category.name, self.member.name)
+            results = []
 
         page, max_page = get_page_number(html)
 

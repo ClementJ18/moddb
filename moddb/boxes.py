@@ -246,7 +246,11 @@ class Profile:
             SearchCategory.mods,
             SearchCategory.addons,
         ]:
-            self.icon = profile_raw.find("h5", string="Icon").parent.span.img["src"]
+            try:
+                self.icon = profile_raw.find("h5", string="Icon").parent.span.img["src"]
+            except AttributeError:
+                self.icon = None
+                LOGGER.info("%s '%s' does not have an icon", page_type, _name)
 
         if page_type in [
             SearchCategory.games,
@@ -690,6 +694,25 @@ class Comment:
             )[-1]
         except TypeError:
             self._hash = None
+
+    def is_stale(self):
+        """Comments are very volatile. If they are pushed onto another page by other comments 
+        it becomes impossible to use objects with the previous page number. In addition,
+        calculating the new page number is no possible. Pages do not have a defined size but
+        rather grow and shrink based on sizes of individual comments. Finally, comments
+        also have token that can be used to modify them. These tokens have a hard life of
+        30 minutes from the time of the request. This function puts in place several mechanism
+        to verify wether or not the object can still be trusted.
+        
+        
+        Returns
+        --------
+        bool
+            True, the comment is stale and you should fetch a new version, False you **should**
+            be good to continue using it.
+        """
+
+        return False
 
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"

@@ -15,7 +15,19 @@ from pyrate_limiter import Duration, Limiter, RequestRate
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
-LIMITER = Limiter(RequestRate(30, Duration.MINUTE*5))
+LIMITER = Limiter(
+    # request stuff slowly, like a human
+    RequestRate(
+        1,
+        Duration.SECOND*5
+    ),
+
+    # take breaks when requesting stuff, like a human
+    RequestRate(
+        30, 
+        Duration.MINUTE*5
+    ),
+    )
 
 time_mapping = {
     "year": 125798400,
@@ -118,7 +130,7 @@ def get_date(d: str) -> datetime.datetime:
     return datetime.datetime.strptime(d, "%Y-%m")
 
 
-@LIMITER.ratelimit("identity", delay=True)
+@LIMITER.ratelimit("moddb", delay=True)
 def request(req : requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
@@ -213,8 +225,10 @@ def join(path: str) -> str:
         The full url.
 
     """
-    return urljoin(BASE_URL, path)
+    if not path.startswith(BASE_URL):
+        return urljoin(BASE_URL, path)
 
+    return path
 
 def normalize(string: str) -> str:
     """Removes all extra fluff from a text to get the barebone content"""

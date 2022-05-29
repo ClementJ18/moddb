@@ -256,10 +256,12 @@ def search(
         pages = 1
         page = 1
 
-    results = [
-        Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"])
-        for x in search_raws
-    ]
+    results = []
+    for x in search_raws:
+        image = x.a.img["src"] if x.a.img else None
+        thumbnail = Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=image)
+        results.append(thumbnail)
+        
     results_max = int(
         normalize(html.find("h5", string=category.name.title()).parent.span.string)
     )

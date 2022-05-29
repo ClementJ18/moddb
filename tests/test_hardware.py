@@ -1,12 +1,18 @@
-import unittest
-from tests.utils import patched_request
+import pytest
 from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
+DEFAULT = "https://www.moddb.com/hardware/htc-vive"
+
 @patch("moddb.utils.request", new=patched_request)
-class TestHardware(unittest.TestCase):
-    def setUp(self):
-        self.hardware = moddb.pages.Hardware(moddb.get_page(getattr(self, "url", "https://www.moddb.com/hardware/htc-vive")))
+class TestHardware:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.hardware = moddb.Hardware(moddb.get_page(request.param))
 
     def test_get_articles(self):
         articles = self.hardware.get_articles()

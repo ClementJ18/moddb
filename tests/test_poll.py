@@ -1,12 +1,18 @@
-import unittest
-from tests.utils import patched_request
+import pytest
 from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
+DEFAULT = "https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods"
+
 @patch("moddb.utils.request", new=patched_request)
-class TestPoll(unittest.TestCase):
-    def setUp(self):
-        self.poll = moddb.pages.Poll(moddb.get_page(getattr(self, "url", "https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods")))
+class TestPoll:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.poll = moddb.Poll(moddb.get_page(request.param))
 
     def test_get_comments(self):
         self.poll.get_comments()

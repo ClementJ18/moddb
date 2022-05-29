@@ -1,13 +1,17 @@
-import unittest
-from tests.utils import patched_request
+import pytest
 from unittest.mock import patch
-import moddb
 
+from tests.test_utils import patched_request
 from tests.test_config import username, password
 
+import moddb
+
+DEFAULT_SEARCH = ("edain mod", moddb.SearchCategory.mods)
+
 @patch("moddb.utils.request", new=patched_request)
-class TestFrontPage(unittest.TestCase):
-    def setUp(self):
+class TestFrontPage:
+    @pytest.fixture(autouse=True)
+    def _get_object(self, _):
         self.fp = moddb.front_page()
 
     def get_articles(self):
@@ -23,15 +27,16 @@ class TestFrontPage(unittest.TestCase):
             file.parse()
 
 @patch("moddb.utils.request", new=patched_request)
-class TestSearch(unittest.TestCase):
-    def setUp(self):
-        cat = getattr(self, "category", moddb.SearchCategory.mods)
-        self.search= moddb.search(cat)
+class TestSearch:
+    @pytest.fixture(params=[DEFAULT_SEARCH], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.search= moddb.search(request.param[1], query=request.param[0])
 
     def test_resort(self):
-        results = self.search.results
+        results = self.search._results
         search2 = self.search.resort(("visitstotal", "asc"))
-        self.assertNotEqual(results, search2.results)
+        assert results != search2._results
 
     def test_next_page(self):
         self.search.next_page()
@@ -40,21 +45,12 @@ class TestSearch(unittest.TestCase):
         search = self.search.next_page()
         search.previous_page()
 
-@patch("moddb.utils.request", new=patched_request)
-class TestParse(unittest.TestCase):
-    def setUp(self):
-        self.model = moddb.parse(getattr(self, "url", "https://www.moddb.com/mods/edain-mod"))
-
-    def test_check(self):
-        pass
-
-@patch("moddb.utils.request", new=patched_request)
-class TestLogin(unittest.TestCase):
+class TestLogin:
     def test_login(self):
         moddb.login(username, password)
 
-    def test_fake_login(self):
-        with self.assertRaises(ValueError):
+    def test_bad_login(self):
+        with pytest.raises(ValueError) as e:
             moddb.login("tico", "ticoisgod")
 
     def tearDown(self):

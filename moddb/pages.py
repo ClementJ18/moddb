@@ -111,15 +111,21 @@ class BaseMetaClass:
             except AttributeError:
                 self.name = html.find("meta", property="og:title")["content"]
 
+
+        
+
         try:
             self.id = int(
                 re.search(
-                    r"siteareaid=(\d*)", html.find("a", class_="reporticon")["href"]
+                    r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"]
                 )[1]
             )
         except TypeError:
-            self.id = None
-            LOGGER.info("'%s' '%s' has no id", self.__class__.__name__, self.name)
+            try:
+                self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+            except (AttributeError, TypeError):
+                # really scratching the bottom here but a lot of "official" groups don't have the regular ID
+                self.id = int(html.find("meta", property="og:image")["content"].split("/")[-2])
 
         try:
             self.url = html.find("meta", property="og:url")["content"]
@@ -163,7 +169,7 @@ class BaseMetaClass:
                 try:
                     comments[-1].children.append(comment)
                 except IndexError:
-                    comment.append(MissingComment(0))
+                    comments.append(MissingComment(0))
                     comments[-1].children.append(comment)
             elif comment.position == 2:
                 try:
@@ -212,19 +218,41 @@ class BaseMetaClass:
             return []
 
         objects_raw = table.find_all("div", recursive=False)[1:]
-        objects = []
-        for obj in objects_raw:
-            date = obj.find("time")
-            summary = obj.find("p")
-            thumbnail = Thumbnail(
-                name=obj.a["title"],
-                url=obj.a["href"],
-                image=obj.a.img["src"],
-                type=get_type_from(join(obj.a["href"])),
-                summary=summary.string if summary else None,
-                date=get_date(date["datetime"]) if date else None,
-            )
-            objects.append(thumbnail)
+
+        try:
+            # parse as normal list of articles
+            objects = []
+            for obj in objects_raw:
+                date = obj.find("time")
+                summary = obj.find("p")
+                thumbnail = Thumbnail(
+                    name=obj.a["title"],
+                    url=obj.a["href"],
+                    image=obj.a.img["src"],
+                    type=get_type_from(join(obj.a["href"])),
+                    summary=summary.string if summary else None,
+                    date=get_date(date["datetime"]) if date else None,
+                )
+                objects.append(thumbnail)
+        except TypeError:
+            # parse as a title-content pair of articles
+            LOGGER.info("Parsing articles as key-pair list")
+            objects = []
+            objects_raw = objects_raw[1:]
+            for title, content in zip(objects_raw[::2], objects_raw[1::2]):
+                date = title.find("time")
+                url = title.find("h4").a
+                thumbnail = Thumbnail(
+                    name=url.text,
+                    url=url["href"],
+                    image=None,
+                    type=get_type_from(join(url["href"])),
+                    summary=content.text,
+                    date=get_date(date["datetime"]) if date else None,
+                )
+                objects.append(thumbnail)                
+
+            
 
         page, max_page = get_page_number(html)
 
@@ -813,6 +841,45 @@ class RSSFeedMixin:
 
         return url
 
+class GetAddonsMixin:
+    def get_addons(
+        self,
+        index: int = 1,
+        *,
+        query: str = None,
+        addon_type: AddonCategory = None,
+        timeframe: TimeFrame = None,
+        licence: Licence = None,
+    ) -> ResultList:
+        """Get a page of addons for the page. Each page will yield up to 30 addons.
+
+        Parameters
+        -----------
+        index : int
+            The page number to get the addons from.
+        query : str
+            The string query to search for in the addon name, optional.
+        addon_type : AddonCategory
+            Type enum defining what category the file is.
+        timeframe : TimeFrame
+            Time frame of when the file was added, optional
+        licence : Licence
+            The licence for the addon, optional
+
+        Returns
+        --------
+        ResultList[Thumbnail]
+            The list of addon type thumbnails parsed from the page
+        """
+        params = {
+            "filter": "t",
+            "kw": query,
+            "category": addon_type.value if addon_type else None,
+            "timeframe": timeframe.value if timeframe else None,
+            "licence": licence.value if licence else None,
+        }
+        return self._get(f"{self.url}/addons/page/{index}", params=params)
+
 
 class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
@@ -990,7 +1057,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
             self.description = str(html.find("div", id="profiledescription"))
             self.plaintext = html.find("div", id="profiledescription").text
         except AttributeError:
-            LOGGER.info("'%s' '%s' has no extended description")
+            LOGGER.info("'%s' '%s' has no extended description", self.__class__.__name__, self.name)
             self.description = None
             self.plaintext = None
 
@@ -1127,50 +1194,12 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
 
         return engines
 
-    def get_addons(
-        self,
-        index: int = 1,
-        *,
-        query: str = None,
-        addon_type: AddonCategory = None,
-        timeframe: TimeFrame = None,
-        licence: Licence = None,
-    ) -> ResultList:
-        """Get a page of addons for the page. Each page will yield up to 30 addons.
-
-        Parameters
-        -----------
-        index : int
-            The page number to get the addons from.
-        query : str
-            The string query to search for in the addon name, optional.
-        addon_type : AddonCategory
-            Type enum defining what category the file is.
-        timeframe : TimeFrame
-            Time frame of when the file was added, optional
-        licence : Licence
-            The licence for the addon, optional
-
-        Returns
-        --------
-        ResultList[Thumbnail]
-            The list of addon type thumbnails parsed from the page
-        """
-        params = {
-            "filter": "t",
-            "kw": query,
-            "category": addon_type.value if addon_type else None,
-            "timeframe": timeframe.value if timeframe else None,
-            "licence": licence.value if licence else None,
-        }
-        return self._get(f"{self.url}/addons/page/{index}", params=params)
-
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
 
 @concat_docs
-class Mod(PageMetaClass):
+class Mod(PageMetaClass, GetAddonsMixin):
     """Basically just a subclass of Page
 
     Parameters
@@ -1212,7 +1241,7 @@ class Mod(PageMetaClass):
 
 
 @concat_docs
-class Game(PageMetaClass, GetModsMixin):
+class Game(PageMetaClass, GetModsMixin, GetAddonsMixin):
     """A subclass of Page plus a method to get all the mods.
 
     Parameters
@@ -1722,7 +1751,7 @@ class Article(BaseMetaClass):
 
 
 @concat_docs
-class Group(PageMetaClass):
+class Group(PageMetaClass, GetAddonsMixin):
     """This object represents the group model of  Certain attributes can be None if the group
     has been set to private. If you wish to see a group you have access to then you can login with the
     login
@@ -1773,6 +1802,7 @@ class Group(PageMetaClass):
     description : str
         The plaintext description of the group
     """
+    get_reviews = None
 
     def __init__(self, html: bs4.BeautifulSoup):
         self.name = html.find("div", class_="title").h2.a.string
@@ -1840,18 +1870,12 @@ class Group(PageMetaClass):
             self.description = html.find("div", id="profiledescription").text
         except AttributeError:
             self.description = (
-                html.find("div", class_="column span-all")
+                html.find("div", class_=["column", "span-all"])
                 .find("div", class_="tooltip")
                 .parent.text
             )
 
         self.medias = self._get_media(2, html=html)
-
-    def get_reviews(self, *args, **kwargs):
-        """"""
-        raise AttributeError(
-            f"{self.__class__.__name__} has no 'get_reviews' attribute"
-        )
 
     def _get_suggestions(self, html: bs4.BeautifulSoup) -> List[Thumbnail]:
         """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
@@ -2127,7 +2151,7 @@ class Blog(BaseMetaClass):
 
 
 @concat_docs
-class Member(PageMetaClass, GetGamesMixin, GetModsMixin):
+class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
     """The object to represent an individual member on ModDB
 
     Parameters
@@ -2444,14 +2468,13 @@ class FrontPage:
             name = x.a.find("h2")
             summary = x.a.find("p")
 
-            image = re.search(r"\((.*)\)", x["style"])
-            if image:
-                image = image.group(1)
-            else:
-                try:
-                    image = x["data-bg"]
-                except KeyError:
-                    image = None
+            image = None
+            if "style" in x.div:
+                re_search = re.search(r"\((.*)\)", x.div["style"])
+                if re_search:
+                    image = re_search.group(1)
+            elif "data-bg" in x.div:
+                image = x.div["data-bg"]
 
             thumbnail = Thumbnail(
                 name=name.string if name else None,
@@ -3066,6 +3089,7 @@ class Review:
         review = attrs.get("review")
         self.rating = int(review.span.string)
 
+        # id and hash are none if the review doesn't have content
         try:
             strings = ("Agree", "Delete", "Disagree")
             self.id = int(
@@ -3075,6 +3099,7 @@ class Review:
             )
         except TypeError:
             self.id = None
+
 
         try:
             self._hash = re.findall(

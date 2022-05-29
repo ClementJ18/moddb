@@ -1,13 +1,19 @@
-import unittest
-from tests.utils import patched_request
+import pytest
 from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
-@patch("moddb.utils.request", new=patched_request)
-class TestMember(unittest.TestCase):
-    def setUp(self):
-        self.member = moddb.pages.Member(moddb.get_page(getattr(self, "url", "https://www.moddb.com/members/mladen1996")))
+DEFAULT = "https://www.moddb.com/members/upstart"
 
+@patch("moddb.utils.request", new=patched_request)
+class TestMember:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.member = moddb.Member(moddb.get_page(request.param))
+            
     def test_get_addons(self):
         addons = self.member.get_addons()
         self.member.get_addons(2)

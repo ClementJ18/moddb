@@ -1,13 +1,18 @@
-import unittest
-from tests.utils import patched_request
+import pytest
 from unittest.mock import patch
+
+from tests.test_utils import patched_request
 
 import moddb
 
+DEFAULT = "https://www.moddb.com/mods/edain-mod"
+
 @patch("moddb.utils.request", new=patched_request)
-class TestMod(unittest.TestCase):
-    def setUp(self):
-        self.mod = moddb.pages.Mod(moddb.get_page(getattr(self, "url", "https://www.moddb.com/mods/edain-mod")))
+class TestMod:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.mod = moddb.Mod(moddb.get_page(request.param))
 
     def test_get_addons(self):
         addons = self.mod.get_addons()
