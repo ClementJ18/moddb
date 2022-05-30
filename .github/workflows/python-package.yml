@@ -32,9 +32,9 @@ jobs:
     - name: Test changes with light tests
       run: |
         bash run_tests.sh
-      if: github.event.pull_request.base.ref_name == "develop"
+      if: github.event.pull_request.base.ref_name == 'develop'
     - name: Test changes with full tests
       run: |
         bash run_tests.sh full
-      if: github.event.pull_request.base.ref_name == "master"
+      if: github.event.pull_request.base.ref_name == 'master'
   
