@@ -4,6 +4,7 @@ from unittest.mock import patch
 from tests.test_utils import patched_request
 
 import moddb
+import requests
 
 DEFAULT = "https://www.moddb.com/members/upstart"
 
@@ -51,7 +52,10 @@ class TestMember:
         self.member.get_friends(3)
 
         for friend in friends:
-            friend.parse()
+            try:
+                friend.parse()
+            except requests.exceptions.HTTPError:
+                pass
 
     def test_get_games(self):
         games = self.member.get_games()

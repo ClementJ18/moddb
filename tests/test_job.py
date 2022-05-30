@@ -15,4 +15,5 @@ class TestJob:
             self.job = moddb.Job(moddb.get_page(request.param))
 
     def test_author_parse(self):
-        self.job.author.parse()
+        if self.job.author is not None:
+            self.job.author.parse()

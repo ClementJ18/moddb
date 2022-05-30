@@ -1,8 +1,15 @@
+from ast import Import
 import pytest
 from unittest.mock import patch
 
 from tests.test_utils import patched_request
-from tests.test_config import username, password
+
+try:
+    from tests.test_config import username, password
+except ModuleNotFoundError:
+    import os
+    username = os.environ["USERNAME"]
+    password = os.environ["PASSWORD"]
 
 import moddb
 
@@ -11,7 +18,7 @@ DEFAULT_SEARCH = ("edain mod", moddb.SearchCategory.mods)
 @patch("moddb.utils.request", new=patched_request)
 class TestFrontPage:
     @pytest.fixture(autouse=True)
-    def _get_object(self, _):
+    def _get_object(self, request):
         self.fp = moddb.front_page()
 
     def get_articles(self):

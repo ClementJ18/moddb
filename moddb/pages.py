@@ -109,10 +109,7 @@ class BaseMetaClass:
             try:
                 self.name = html.find("a", itemprop="mainEntityOfPage").string
             except AttributeError:
-                self.name = html.find("meta", property="og:title")["content"]
-
-
-        
+                self.name = html.find("meta", property="og:title")["content"]        
 
         try:
             self.id = int(
@@ -942,7 +939,13 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin):
         # boxes
         if page_type != SearchCategory.members:
             self.profile = Profile(html)
-            self.stats = Statistics(html)
+
+            try:
+                self.stats = Statistics(html)
+            except AttributeError:
+                LOGGER.info("Entity '%s' has no stats (idk why, ask moddb)", self.name)
+                self.stats = None
+
             if page_type != SearchCategory.engines:
                 self.style = Style(html)
 
@@ -1584,16 +1587,17 @@ class Media(BaseMetaClass):
             self.size = tuple(raw_media["size"].span.string.strip().split("×"))
 
         self.views, self.today = get_views(raw_media["views"].a.string)
+        media_player = html.find("video", id="mediaplayer")
 
-        if "size" in raw_media and "duration" in raw_media:
-            self.category = MediaCategory.video
-            self.fileurl = html.find("meta", property="og:image")["content"][:-4]
-        elif "size" in raw_media:
+        if not media_player:
             self.category = MediaCategory.image
             self.fileurl = html.find("meta", property="og:image")["content"]
         else:
-            self.category = MediaCategory.audio
-            self.fileurl = html.find("video", id="mediaplayer").find("source")["src"]
+            self.fileurl = media_player.source["src"]
+            if "audio" in media_player.source["type"]:
+                self.category = MediaCategory.audio
+            else:
+                self.category = MediaCategory.video
 
         if "filename" in raw_media:
             self.filename = raw_media["filename"].span.string.strip()
@@ -1603,7 +1607,7 @@ class Media(BaseMetaClass):
         self.description = html.find("meta", {"name": "description"})["content"]
 
     def __repr__(self):
-        return f"<Media name={self.name} type={self.type.name}>"
+        return f"<Media name={self.name} type={self.category.name}>"
 
     def save(self, path=None):
         """Save the media to a location.
@@ -2787,7 +2791,12 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin)
             self.description = html.find("p", itemprop="description").string
 
         self.profile = Profile(html)
-        self.stats = Statistics(html)
+        
+        try:
+            self.stats = Statistics(html)
+        except AttributeError:
+            LOGGER.info("Entity '%s' has no stats (idk why, ask moddb)", self.name)
+            self.stats = None
 
         try:
             self.rating = float(

@@ -2,13 +2,21 @@ import pytest
 import random
 
 from tests.test_utils import mixed_urls
-from tests.test_config import username, password, sender_username, sender_password
+
+try:
+    from tests.test_config import username, password, sender_username, sender_password
+except ModuleNotFoundError:
+    import os
+    username = os.environ["USERNAME"]
+    password = os.environ["PASSWORD"]
+    sender_username = os.environ["SENDER_USERNAME"]
+    sender_password = os.environ["SENDER_PASSWORD"]
 
 import moddb
 
 class TestClient:
     @pytest.fixture(autouse=True)
-    def _get_object(self, _):
+    def _get_object(self, request):
         self.client = moddb.Client(username, password)
         self.sender = moddb.Client(sender_username, sender_password)
 
