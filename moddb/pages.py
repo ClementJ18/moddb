@@ -12,6 +12,7 @@ from .boxes import (
     PlatformStatistics,
     MissingComment,
     ResultList,
+    Mirror
 )
 from .enums import (
     ThumbnailType,
@@ -46,11 +47,13 @@ from .utils import (
     concat_docs,
     Object,
     request,
+    prepare_request,
     get_type_from,
     get_page_number,
 )
 
 import re
+import sys
 import bs4
 import json
 import requests
@@ -1444,22 +1447,60 @@ class File(BaseMetaClass):
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
 
-    def save(self, path=None):
-        """Save the file to a location.
+    def save(self, file_obj, *, mirror=None):
+        """Save the file to an object.
 
         Parameters
         -----------
-        path : Optional[str]
-            Path to the location you wish to save the file at. If none is provided
-            it will save in the current working directory.
+        file_obj : typing.BinaryIO
+            The file obj to save the file to. The binary data
+            will be streamed to that object.
+        mirror : Optional[Mirror]
+            An optional mirror object to download the
+            file from a specific moddb mirror
 
         """
-        download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
-        mirror = join(download.find("a", string=f"download {self.name}")["href"])
-        file = request(requests.Request("GET", mirror))
-        path = f"{path}/{self.filename}" if path else self.filename
-        with open(path, "wb") as f:
-            f.write(file.content)
+        if mirror is None:
+            download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
+            url = download.find("a", string=f"download {self.filename}")["href"]
+        else:
+            url = mirror._url
+        
+        SESSION = sys.modules["moddb"].SESSION
+        prepped = prepare_request(requests.Request("GET", join(url)), SESSION)
+        with SESSION.send(prepped, stream=True) as r:
+            r.raise_for_status()
+            for chunk in r.iter_content(chunk_size=8192): 
+                file_obj.write(chunk)
+
+    def get_mirrors(self):
+        """Get all the mirrors from which a file can be downloaded. This
+        can then be passed to File.save to download from a specific mirror.
+        
+        
+        Returns
+        --------
+        List[Mirror]
+            A list of Mirror objects"""
+
+        html = get_page(f"https://www.moddb.com/downloads/start/{self.id}/all") 
+        mirrors_div = html.find("div", class_="mirrors").find_all("div", recursive=False)
+        mirrors = []
+        for mirror in mirrors_div:
+            mirror_match = re.match(r"(.*) #([0-9]*) \((.{2}), (.{2})\)", mirror.div.p.contents[-1].strip())
+            stats_match = re.match(r"([0-9,]*) downloads? served, ([0-9.]*)% capacity", mirror.div.span.string)
+
+            mirrors.append(Mirror(
+                name = mirror_match.group(1),
+                index = int(mirror_match.group(2)),
+                city = mirror_match.group(3),
+                country = mirror_match.group(4),
+                served = int(stats_match.group(1).replace(",", "")),
+                capacity = float(stats_match.group(2)),
+                url = mirror.div.p.a["href"]
+            ))
+
+        return mirrors
 
 
 @concat_docs
@@ -1609,20 +1650,23 @@ class Media(BaseMetaClass):
     def __repr__(self):
         return f"<Media name={self.name} type={self.category.name}>"
 
-    def save(self, path=None):
-        """Save the media to a location.
+    def save(self, file_obj):
+        """Save the media to an object.
 
         Parameters
         -----------
-        path : Optional[str]
-            Path to the location you wish to save the file at. If none is provided
-            it will save in the current working directory.
+        file_obj : typing.BinaryIO
+            The file obj to save the file to. The binary data
+            will be streamed to that object.
 
         """
-        file = request(requests.Request("GET", self.fileurl))
-        path = f"{path}/{self.filename}" if path else self.filename
-        with open(path, "wb") as f:
-            f.write(file.content)
+        SESSION = sys.modules["moddb"].SESSION
+        prepped = prepare_request(requests.Request("GET", self.fileurl), SESSION)
+        
+        with SESSION.send(prepped, stream=True) as r:
+            r.raise_for_status()
+            for chunk in r.iter_content(chunk_size=8192): 
+                file_obj.write(chunk)
 
 
 @concat_docs

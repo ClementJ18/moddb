@@ -113,4 +113,10 @@ Option
 .. autoclass:: moddb.boxes.Option
     :members:
     :inherited-members:
+
+Mirror
+-------
+.. autoclass:: moddb.boxes.Mirror
+    :members:
+    :inherited-members:
     

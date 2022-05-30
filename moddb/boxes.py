@@ -1256,3 +1256,39 @@ class CommentList(ModDBList):
                 top_list.extend(child.children)
 
         return top_list
+
+class Mirror:
+    """Represents a download mirror from which the user can download a file
+    
+    Attributes
+    -----------
+    name : str
+        The name of the mirror
+    index : int
+        The index of the mirror, as multiple mirrors 
+        have the same name. Index starts at 1
+    city : str
+        Alpha 2 code for the city the server is located
+        in
+    country : str
+        Alpha 2 code for the country the server is 
+        located in
+    served : int
+        How many downloads of this file this mirror has 
+        served
+    capacity : float
+        The current capacity of this server as a percentage.
+        E.g. 35.5 -> 35.5%. Lower is better for speed.
+    """
+
+    def __init__(self, **kwargs):
+        self.name = kwargs.get("name")
+        self.index = kwargs.get("index")
+        self.city = kwargs.get("city")
+        self.country = kwargs.get("country")
+        self.served = kwargs.get("served")
+        self.capacity = kwargs.get("capacity")
+        self._url = kwargs.get("url")
+
+    def __repr__(self):
+        return f"<Mirror name={self.name} index={self.index} >"

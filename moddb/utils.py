@@ -129,6 +129,19 @@ def get_date(d: str) -> datetime.datetime:
 
     return datetime.datetime.strptime(d, "%Y-%m")
 
+def prepare_request(req : requests.Request, session):
+    cookies = requests.utils.dict_from_cookiejar(session.cookies)
+    
+    if req.cookies is not None:
+        req.cookies = {**req.cookies, **cookies}
+    else:
+        req.cookies = cookies
+    
+    req.headers["User-Agent"] = random.choice(user_agent_list)
+
+    prepped = session.prepare_request(req)
+    return prepped
+
 
 @LIMITER.ratelimit("moddb", delay=True)
 def request(req : requests.Request):
@@ -146,16 +159,7 @@ def request(req : requests.Request):
 
     """
     SESSION = sys.modules["moddb"].SESSION
-    cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
-    
-    if req.cookies is not None:
-        req.cookies = {**req.cookies, **cookies}
-    else:
-        req.cookies = cookies
-    
-    req.headers["User-Agent"] = random.choice(user_agent_list)
-
-    prepped = SESSION.prepare_request(req)
+    prepped = prepare_request(req, SESSION)
     r = SESSION.send(prepped)
 
     r.raise_for_status()

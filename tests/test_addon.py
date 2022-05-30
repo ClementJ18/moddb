@@ -17,3 +17,6 @@ class TestAddon:
     def test_get_comments(self):
         self.addon.get_comments()
         self.addon.get_comments(5)
+
+    def test_get_mirrors(self):
+        self.addon.get_mirrors()
