@@ -15,6 +15,7 @@ from .utils import (
     get,
     LOGGER,
     user_agent_list,
+    raise_for_status
 )
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member, Group, Mod, Game, Engine, Team
@@ -101,19 +102,7 @@ class Client:
         prepped = self._session.prepare_request(req)
 
         r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
-        return self._proccess_response(r)
-
-    def _proccess_response(self, r):
-        # if we're making an ajax request we'll get a json response that we decode and check for errors
-        try:
-            text = r.json()
-            if text.get("error", False):
-                LOGGER.error(text["text"])
-                LOGGER.error(r.request.url)
-                LOGGER.error(r.request.body)
-                raise ModdbException(text["text"])
-        except json.decoder.JSONDecodeError:
-            r.raise_for_status()
+        raise_for_status(r)
 
         return r
 

@@ -50,6 +50,7 @@ from .utils import (
     prepare_request,
     get_type_from,
     get_page_number,
+    raise_for_status
 )
 
 import re
@@ -1448,7 +1449,9 @@ class File(BaseMetaClass):
         return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
 
     def save(self, file_obj, *, mirror=None):
-        """Save the file to an object.
+        """Save the file to an object. This functions makes
+        two requests. If you pass a valid mirror it will
+        make only one request.
 
         Parameters
         -----------
@@ -1469,7 +1472,7 @@ class File(BaseMetaClass):
         SESSION = sys.modules["moddb"].SESSION
         prepped = prepare_request(requests.Request("GET", join(url)), SESSION)
         with SESSION.send(prepped, stream=True) as r:
-            r.raise_for_status()
+            raise_for_status(r)
             for chunk in r.iter_content(chunk_size=8192): 
                 file_obj.write(chunk)
 
@@ -1664,7 +1667,7 @@ class Media(BaseMetaClass):
         prepped = prepare_request(requests.Request("GET", self.fileurl), SESSION)
         
         with SESSION.send(prepped, stream=True) as r:
-            r.raise_for_status()
+            raise_for_status(r)
             for chunk in r.iter_content(chunk_size=8192): 
                 file_obj.write(chunk)
 

@@ -1,8 +1,10 @@
 from .enums import ThumbnailType
+from .errors import ModdbException, AwaitingAuthorisation
 
 import re
 import sys
 import uuid
+import json
 import random
 import inspect
 import logging
@@ -142,6 +144,20 @@ def prepare_request(req : requests.Request, session):
     prepped = session.prepare_request(req)
     return prepped
 
+def raise_for_status(response):
+    try:
+        text = response.json()
+        if text.get("error", False):
+            LOGGER.error(text["text"])
+            LOGGER.error(response.request.url)
+            LOGGER.error(response.request.body)
+            raise ModdbException(text["text"])
+    except json.decoder.JSONDecodeError:
+        response.raise_for_status()
+
+    if "is currently awaiting authorisation, which can take a couple of days while a" in response.text.lower():
+        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
+
 
 @LIMITER.ratelimit("moddb", delay=True)
 def request(req : requests.Request):
@@ -162,7 +178,7 @@ def request(req : requests.Request):
     prepped = prepare_request(req, SESSION)
     r = SESSION.send(prepped)
 
-    r.raise_for_status()
+    raise_for_status(r)
     return r
 
 

@@ -3,3 +3,8 @@ class ModdbException(Exception):
     being made"""
 
     pass
+
+class AwaitingAuthorisation(ModdbException):
+    """This object is awaiting authorisation and can therefore not be accessed at the
+    present time."""
+    pass
