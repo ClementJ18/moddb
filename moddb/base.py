@@ -1,6 +1,13 @@
 from .enums import SearchCategory, ThumbnailType, RSSType
 from .boxes import Thumbnail
-from .utils import get_page, LOGGER, normalize, get_type_from, BASE_URL, generate_login_cookies
+from .utils import (
+    get_page,
+    LOGGER,
+    normalize,
+    get_type_from,
+    BASE_URL,
+    generate_login_cookies,
+)
 from .pages import FrontPage, Member
 
 import sys
@@ -257,7 +264,7 @@ def search(
         image = x.a.img["src"] if x.a.img else None
         thumbnail = Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=image)
         results.append(thumbnail)
-        
+
     results_max = int(
         normalize(html.find("h5", string=category.name.title()).parent.span.string)
     )

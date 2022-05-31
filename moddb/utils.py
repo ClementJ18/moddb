@@ -19,17 +19,10 @@ LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
 LIMITER = Limiter(
     # request stuff slowly, like a human
-    RequestRate(
-        1,
-        Duration.SECOND*5
-    ),
-
+    RequestRate(1, Duration.SECOND * 5),
     # take breaks when requesting stuff, like a human
-    RequestRate(
-        30, 
-        Duration.MINUTE*5
-    ),
-    )
+    RequestRate(30, Duration.MINUTE * 5),
+)
 
 time_mapping = {
     "year": 125798400,
@@ -131,18 +124,20 @@ def get_date(d: str) -> datetime.datetime:
 
     return datetime.datetime.strptime(d, "%Y-%m")
 
-def prepare_request(req : requests.Request, session):
+
+def prepare_request(req: requests.Request, session):
     cookies = requests.utils.dict_from_cookiejar(session.cookies)
-    
+
     if req.cookies is not None:
         req.cookies = {**req.cookies, **cookies}
     else:
         req.cookies = cookies
-    
+
     req.headers["User-Agent"] = random.choice(user_agent_list)
 
     prepped = session.prepare_request(req)
     return prepped
+
 
 def raise_for_status(response):
     try:
@@ -155,13 +150,19 @@ def raise_for_status(response):
     except json.decoder.JSONDecodeError:
         response.raise_for_status()
 
-    if "is currently awaiting authorisation, which can take a couple of days while a" in response.text.lower():
-        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
+    if (
+        "is currently awaiting authorisation, which can take a couple of days while a"
+        in response.text.lower()
+    ):
+        raise AwaitingAuthorisation(
+            "This page is still await authorisation and cannot currently be parsed"
+        )
+
 
 def generate_login_cookies(username, password):
     resp = requests.get(f"{BASE_URL}/members/login")
     html = soup(resp.text)
-    form = html.find("form", attrs={"name":"membersform"})
+    form = html.find("form", attrs={"name": "membersform"})
 
     username_input = form.find("input", id="membersusername")
     botcatcher = form.find("input", type="text", id=False)
@@ -172,18 +173,24 @@ def generate_login_cookies(username, password):
         botcatcher["name"]: "",
         "password": password,
         "rememberme": ["1"],
-        "members": "Sign in"
+        "members": "Sign in",
     }
 
-    login = requests.post("https://www.moddb.com/members/login", data=data, cookies=resp.cookies, allow_redirects=False)
+    login = requests.post(
+        "https://www.moddb.com/members/login",
+        data=data,
+        cookies=resp.cookies,
+        allow_redirects=False,
+    )
 
     if "freeman" not in login.cookies:
         raise ValueError(f"Login failed for user {username}")
 
     return login.cookies
 
+
 @LIMITER.ratelimit("moddb", delay=True)
-def request(req : requests.Request):
+def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
     Parameters
@@ -272,6 +279,7 @@ def join(path: str) -> str:
         return urljoin(BASE_URL, path)
 
     return path
+
 
 def normalize(string: str) -> str:
     """Removes all extra fluff from a text to get the barebone content"""

@@ -14,7 +14,7 @@ from .utils import (
     get,
     LOGGER,
     user_agent_list,
-    raise_for_status
+    raise_for_status,
 )
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
 from .pages import Member
@@ -83,10 +83,14 @@ class Client:
             "User-Agent": random.choice(user_agent_list),
         }
 
-        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
+        req = requests.Request(
+            method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {})
+        )
         prepped = self._session.prepare_request(req)
 
-        r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
+        r = self._session.send(
+            prepped, allow_redirects=kwargs.pop("allow_redirects", True)
+        )
         raise_for_status(r)
 
         return r
@@ -202,8 +206,10 @@ class Client:
         url = f"{BASE_URL}/messages/watching/{category.name}s/page/{page}"
         html = soup(self._request("GET", url).text)
 
-        results_raw = html.find("div", class_="table").find_all("div", recursive=False)[1:]
-        
+        results_raw = html.find("div", class_="table").find_all("div", recursive=False)[
+            1:
+        ]
+
         try:
             results = [
                 Thumbnail(

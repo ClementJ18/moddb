@@ -696,15 +696,15 @@ class Comment:
             self._hash = None
 
     def is_stale(self):
-        """Comments are very volatile. If they are pushed onto another page by other comments 
+        """Comments are very volatile. If they are pushed onto another page by other comments
         it becomes impossible to use objects with the previous page number. In addition,
         calculating the new page number is no possible. Pages do not have a defined size but
         rather grow and shrink based on sizes of individual comments. Finally, comments
         also have token that can be used to modify them. These tokens have a hard life of
         30 minutes from the time of the request. This function puts in place several mechanism
         to verify wether or not the object can still be trusted.
-        
-        
+
+
         Returns
         --------
         bool
@@ -1257,24 +1257,25 @@ class CommentList(ModDBList):
 
         return top_list
 
+
 class Mirror:
     """Represents a download mirror from which the user can download a file
-    
+
     Attributes
     -----------
     name : str
         The name of the mirror
     index : int
-        The index of the mirror, as multiple mirrors 
+        The index of the mirror, as multiple mirrors
         have the same name. Index starts at 1
     city : str
         Alpha 2 code for the city the server is located
         in
     country : str
-        Alpha 2 code for the country the server is 
+        Alpha 2 code for the country the server is
         located in
     served : int
-        How many downloads of this file this mirror has 
+        How many downloads of this file this mirror has
         served
     capacity : float
         The current capacity of this server as a percentage.
