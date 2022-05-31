@@ -158,6 +158,29 @@ def raise_for_status(response):
     if "is currently awaiting authorisation, which can take a couple of days while a" in response.text.lower():
         raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
 
+def generate_login_cookies(username, password):
+    resp = requests.get(f"{BASE_URL}/members/login")
+    html = soup(resp.text)
+    form = html.find("form", attrs={"name":"membersform"})
+
+    username_input = form.find("input", id="membersusername")
+    botcatcher = form.find("input", type="text", id=False)
+
+    data = {
+        "referer": "",
+        username_input["name"]: username,
+        botcatcher["name"]: "",
+        "password": password,
+        "rememberme": ["1"],
+        "members": "Sign in"
+    }
+
+    login = requests.post("https://www.moddb.com/members/login", data=data, cookies=resp.cookies, allow_redirects=False)
+
+    if "freeman" not in login.cookies:
+        raise ValueError(f"Login failed for user {username}")
+
+    return login.cookies
 
 @LIMITER.ratelimit("moddb", delay=True)
 def request(req : requests.Request):

@@ -46,7 +46,6 @@ from .utils import (
     get_type,
     concat_docs,
     Object,
-    request,
     prepare_request,
     get_type_from,
     get_page_number,
@@ -59,7 +58,6 @@ import bs4
 import json
 import requests
 import datetime
-import feedparser
 from typing import List, Tuple, Union
 
 __all__ = [
@@ -819,28 +817,20 @@ class GetSoftwareHardwareMixin:
 
 
 class RSSFeedMixin:
-    def rss(self, type: RSSType, *, parse_feed=False):
+    def rss(self, type: RSSType):
         """Get the RSS feed url for the page depending on which feed type you want
 
         Parameters
         -----------
         type : RSSType
             The type of feed you desire to get
-        parse_feed : Optional[bool]:
-            Set to true if you want the library to parse the rss feed for you and return the entries as a dict
-            rather than returning the url for the rss feed.
 
         Returns
         --------
         str
             URL for the feed type
         """
-        url = f"https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml"
-
-        if parse_feed:
-            return feedparser.parse(request(requests.Request("GET", url)).text)
-
-        return url
+        return f"https://rss.moddb.com/{self._type.name}/{self.name_id}/{type.name}/feed/rss.xml"
 
 class GetAddonsMixin:
     def get_addons(

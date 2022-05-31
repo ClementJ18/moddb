@@ -27,10 +27,7 @@ setup(
     install_requires=[
         'beautifulsoup4 == 4.6.3',
         'requests>=2.20.0',
-        'robobrowser == 0.5.3',
-        'feedparser == 6.0.10',
         'toolz == 0.11.2',
-        'Werkzeug==0.16.1',
         'pyrate-limiter==2.8.1'
       ]
     )

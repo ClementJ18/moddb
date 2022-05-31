@@ -1,11 +1,10 @@
 import sys
-import json
 import time
 import random
 import requests
-from robobrowser import RoboBrowser
 
 from .utils import (
+    generate_login_cookies,
     soup,
     get_type_from,
     get_date,
@@ -18,7 +17,7 @@ from .utils import (
     raise_for_status
 )
 from .boxes import Update, Thumbnail, Request, Comment, ResultList
-from .pages import Member, Group, Mod, Game, Engine, Team
+from .pages import Member
 from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
 from .base import parse
@@ -49,23 +48,9 @@ class Client:
     """
 
     def __init__(self, username: str, password: str):
-        browser = RoboBrowser(history=True, parser="html.parser")
-        browser.open(f"{BASE_URL}/members/login")
-        t = browser.find_all("form")[1].find_all("input", class_="text", type="text")
-        t.remove(browser.find("input", id="membersusername"))
-        form = browser.get_form(attrs={"name": "membersform"})
-
-        form["password"].value = password
-        form["referer"].value = ""
-        form[browser.find("input", id="membersusername")["name"]].value = username
-        form[t[0]["name"]].value = ""
-
-        browser.submit_form(form)
-        self._session = browser.session
-
-        if "freeman" not in browser.session.cookies:
-            raise ValueError(f"Login failed for user {username}")
-
+        session = requests.Session()
+        session.cookies = generate_login_cookies(username, password)
+        self._session = session
         LOGGER.info("Login successful for %s", username)
 
         self.member = Member(
