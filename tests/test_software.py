@@ -57,3 +57,6 @@ class TestSoftware:
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.software.get_watchers()

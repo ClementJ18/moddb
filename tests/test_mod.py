@@ -64,3 +64,6 @@ class TestMod:
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.mod.get_watchers()

@@ -399,13 +399,13 @@ class SharedMethodsMixin:
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the tutorials from.
-        query : str
+        query : Optional[str]
             The string query to look for in the tutorial title, optional.
-        difficulty : Difficulty
+        difficulty : Optional[Difficulty]
             Enum type representing the difficulty of the tutorial, optional.
-        tutorial_type : TutorialCategory
+        tutorial_type : Optional[TutorialCategory]
             Enum type representing the theme/type/category of the tutorial, optional.
         sort : Optional[Tuple[str, str]]
             The sorting tuple to sort by the results
@@ -486,7 +486,7 @@ class GetWaresMixin:
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the software for.
         query : Optional[str]
             The text to look for in the hardware's names
@@ -542,21 +542,24 @@ class GetAddonsMixin:
         addon_type: AddonCategory = None,
         timeframe: TimeFrame = None,
         licence: Licence = None,
+        sort: Tuple[str, str] = None,
     ) -> ResultList:
         """Get a page of addons for the page. Each page will yield up to 30 addons.
 
         Parameters
         -----------
-        index : int
+        index : Optional[int]
             The page number to get the addons from.
-        query : str
+        query : Optional[str]
             The string query to search for in the addon name, optional.
-        addon_type : AddonCategory
+        addon_type : Optional[AddonCategory]
             Type enum defining what category the file is.
-        timeframe : TimeFrame
+        timeframe : Optional[TimeFrame]
             Time frame of when the file was added, optional
-        licence : Licence
+        licence : Optional[Licence]
             The licence for the addon, optional
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
 
         Returns
         --------
@@ -569,5 +572,36 @@ class GetAddonsMixin:
             "category": addon_type.value if addon_type else None,
             "timeframe": timeframe.value if timeframe else None,
             "licence": licence.value if licence else None,
+            "sort": f"{sort[0]}-{sort[1]}" if sort else None,
         }
         return self._get(f"{self.url}/addons/page/{index}", params=params)
+
+
+class GetWatchersMixin:
+    def get_watchers(
+        self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None
+    ) -> ResultList:
+        """Get a page of watchers for the page. Each page will yield up to 30 members.
+
+        Parameters
+        -----------
+        index : Optional[int]
+            The page number to get the watchers from.
+        query : Optional[str]
+            The string query to search for in the watcher name, optional.
+        sort : Optional[Tuple[str, str]]
+            The sorting tuple to sort by the results
+
+        Returns
+        --------
+        ResultList[Thumbnail]
+            The list of member type thumbnails parsed from the page
+        """
+
+        params = {
+            "filter": "t",
+            "kw": query,
+            "sort": f"{sort[0]}-{sort[1]}" if sort else None,
+        }
+
+        return self._get(f"{self.url}/watchers/page/{index}", params=params)

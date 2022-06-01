@@ -95,3 +95,6 @@ class TestTeam:
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.team.get_watchers()

@@ -71,3 +71,6 @@ class TestGame:
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.game.get_watchers()

@@ -106,4 +106,5 @@ class TestMember:
         for video in videos:
             video.parse()
 
-
+    def test_get_watchers(self):
+        self.member.get_watchers()

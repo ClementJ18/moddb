@@ -60,3 +60,6 @@ class TestGroup:
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.group.get_watchers()

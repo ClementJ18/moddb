@@ -51,4 +51,4 @@ class TestPlatform:
         self.platform.get_software(3)
 
         for software in softwares:
-            software.parse() 
+            software.parse()

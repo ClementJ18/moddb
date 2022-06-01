@@ -56,3 +56,6 @@ class TestEngine:
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.engine.get_watchers()
