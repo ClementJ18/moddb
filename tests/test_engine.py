@@ -1,17 +1,19 @@
-import unittest
+import pytest
+from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
-class TestEngine(unittest.TestCase):
-    def setUp(self):
-        self.engine = moddb.pages.Engine(moddb.get_page(getattr(self, "url", "https://www.moddb.com/engines/sage-strategy-action-game-engine")))
+DEFAULT = "https://www.moddb.com/engines/sage-strategy-action-game-engine"
 
-    def test_get_addons(self):
-        addons = self.engine.get_addons()
-        self.engine.get_addons(2)
-        self.engine.get_addons(licence=moddb.Licence.public_domain)
-        for addon in addons:
-            addon.parse()
-
+@patch("moddb.utils.request", new=patched_request)
+class TestEngine:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.engine = moddb.Engine(moddb.get_page(request.param))
+    
     def test_get_articles(self):
         articles = self.engine.get_articles()
         self.engine.get_articles(4)
@@ -54,3 +56,6 @@ class TestEngine(unittest.TestCase):
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.engine.get_watchers()

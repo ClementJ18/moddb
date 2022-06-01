@@ -1,20 +1,25 @@
 from .enums import SearchCategory, ThumbnailType, RSSType
 from .boxes import Thumbnail
-from .utils import get_page, LOGGER, normalize, get_type_from, BASE_URL, request
+from .utils import (
+    get_page,
+    LOGGER,
+    normalize,
+    get_type_from,
+    BASE_URL,
+    generate_login_cookies,
+)
 from .pages import FrontPage, Member
 
-import re
 import sys
 import toolz
-import feedparser
 import collections
 from typing import Tuple, Any
-from robobrowser import RoboBrowser
 
 __all__ = ["Search", "search", "parse", "login", "logout", "front_page"]
 
+
 class Search(collections.abc.MutableSequence):
-    """Represents the search you just conducted through the library's search function. Can be used to navigate 
+    """Represents the search you just conducted through the library's search function. Can be used to navigate
     the search page efficiently. Behaves like a list.
 
     Attributes
@@ -37,6 +42,7 @@ class Search(collections.abc.MutableSequence):
         Dictionnary of filters used to keep the query list persistent, can also be
         unpacked and passed to the search function.
     """
+
     def __init__(self, **kwargs):
         self._results = kwargs.get("results")
         self.category = kwargs.get("category")
@@ -47,8 +53,8 @@ class Search(collections.abc.MutableSequence):
         self.results_max = kwargs.get("results_max")
         self.sort = kwargs.get("sort")
 
-    def next_page(self) -> 'Search':
-        """Returns a new search object with the next page of results, will raise ValueError 
+    def next_page(self) -> "Search":
+        """Returns a new search object with the next page of results, will raise ValueError
         if the last page is the current one
 
         Returns
@@ -64,10 +70,10 @@ class Search(collections.abc.MutableSequence):
         if self.page == self.max_page:
             raise ValueError("Reached last page already")
 
-        return self.to_page(self.page+1)
+        return self.to_page(self.page + 1)
 
-    def previous_page(self) -> 'Search': 
-        """Returns a new search object with the previous page of results, will raise 
+    def previous_page(self) -> "Search":
+        """Returns a new search object with the previous page of results, will raise
         ValueError if the first page is the current one
 
         Returns
@@ -83,13 +89,13 @@ class Search(collections.abc.MutableSequence):
         if self.page == 1:
             raise ValueError("Reached first page already")
 
-        return self.to_page(self.page-1)
+        return self.to_page(self.page - 1)
 
-    def to_page(self, page : int) -> 'Search': 
-        """Returns a new search object with results to a specific page in the search results 
-        allowing for fast navigation. Will raise ValueError if you attempt to navigate out 
+    def to_page(self, page: int) -> "Search":
+        """Returns a new search object with results to a specific page in the search results
+        allowing for fast navigation. Will raise ValueError if you attempt to navigate out
         of bounds.
-    
+
         Parameters
         -----------
         page : int
@@ -108,9 +114,11 @@ class Search(collections.abc.MutableSequence):
         if page < 1 or page > self.max_page:
             raise ValueError(f"Please pick a page between 1 and {self.max_page}")
 
-        return search(self.category, query=self.query, page=page, sort=self.sort, **self.filters)
+        return search(
+            self.category, query=self.query, page=page, sort=self.sort, **self.filters
+        )
 
-    def resort(self, new_sort : Tuple[str, str]) -> 'Search': 
+    def resort(self, new_sort: Tuple[str, str]) -> "Search":
         """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
 
         Parameters
@@ -123,12 +131,14 @@ class Search(collections.abc.MutableSequence):
         Search
             The new set of results with the updated sort order
         """
-        return search(self.category, query=self.query, page=1, sort=new_sort, **self.filters)
+        return search(
+            self.category, query=self.query, page=1, sort=new_sort, **self.filters
+        )
 
     def get_all_results(self):
         """An expensive methods that iterates over every page of the search and returns all
         the results. This may return more results than you expected if new page have fit the criteria
-        while iterating. 
+        while iterating.
 
         Returns
         --------
@@ -169,16 +179,25 @@ class Search(collections.abc.MutableSequence):
 
     def __add__(self, sequence):
         if not isinstance(sequence, Search):
-            raise TypeError(f'can only concatenate Search (not "{sequence.__class__.__name__}") to Search')
+            raise TypeError(
+                f'can only concatenate Search (not "{sequence.__class__.__name__}") to Search'
+            )
 
         return self._results + sequence.results
 
     def __contains__(self, element):
         return get(self._results, name=element.name) is not None
 
-def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, str] = None,
-           page : int = 1, **filters) -> Search: 
-    """ Search for for a certain type of models and return a list of thumbnails of that 
+
+def search(
+    category: SearchCategory,
+    *,
+    query: str = None,
+    sort: Tuple[str, str] = None,
+    page: int = 1,
+    **filters,
+) -> Search:
+    """Search for for a certain type of models and return a list of thumbnails of that
     model. This function was created to make full use of moddb's filter and sorting system as
     long as the appropriate parameters are passed. Because this function is a single one for every
     model type in moddb the parameters that can be passed vary between model type but the
@@ -194,7 +213,7 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     query : str
         String to search for in the model title
     sort : Tuple[str, str]
-        The tuple to sort by, look at the models your are searching for documentation 
+        The tuple to sort by, look at the models your are searching for documentation
         on sorting.
     page : int
         The page of results to get first
@@ -213,20 +232,25 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
     game = game.id if game else None
 
     url = f"{BASE_URL}/{category.name}/page/{page}"
-    filter_parsed = {key : value.value for key, value in filters.items() if hasattr(value, "value")}
+    filter_parsed = {
+        key: value.value for key, value in filters.items() if hasattr(value, "value")
+    }
     cat = ThumbnailType[category.name[0:-1]]
 
-    html = get_page(url, params={
-        "filter": "t", 
-        "kw": query, 
-        "sort": sort_ready, 
-        "game": game, 
-        "year": filters.get("years", None), 
-        **filter_parsed
-    })
+    html = get_page(
+        url,
+        params={
+            "filter": "t",
+            "kw": query,
+            "sort": sort_ready,
+            "game": game,
+            "year": filters.get("years", None),
+            **filter_parsed,
+        },
+    )
 
     search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
-    
+
     try:
         pages = int(html.find("div", class_="pages").find_all()[-1].string)
         page = int(html.find("span", class_="current").string)
@@ -235,12 +259,28 @@ def search(category : SearchCategory, *, query : str = None, sort : Tuple[str, s
         pages = 1
         page = 1
 
-    results = [Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=x.a.img["src"]) for x in search_raws]
-    results_max = int(normalize(html.find("h5", string=category.name.title()).parent.span.string))
-    return Search(results=results, max_page=pages, page=page, filters=filters, 
-                  category=category, query=query, results_max=results_max, sort=sort)
+    results = []
+    for x in search_raws:
+        image = x.a.img["src"] if x.a.img else None
+        thumbnail = Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=image)
+        results.append(thumbnail)
 
-def parse(url : str, *, page_type : ThumbnailType = None) -> Any: 
+    results_max = int(
+        normalize(html.find("h5", string=category.name.title()).parent.span.string)
+    )
+    return Search(
+        results=results,
+        max_page=pages,
+        page=page,
+        filters=filters,
+        category=category,
+        query=query,
+        results_max=results_max,
+        sort=sort,
+    )
+
+
+def parse(url: str, *, page_type: ThumbnailType = None) -> Any:
     """Parse a url and return the appropriate object.
 
     Parameters
@@ -248,8 +288,8 @@ def parse(url : str, *, page_type : ThumbnailType = None) -> Any:
     url : str
         The url to parse
     page_type : Optional[ThumbnailType]
-        An optional argument which allows to specify a different model to be used to parse this page. In 
-        general there is no reason to touch this but in case an error happens or you wish to force 
+        An optional argument which allows to specify a different model to be used to parse this page. In
+        general there is no reason to touch this but in case an error happens or you wish to force
         something to happen out of the regular behavior the option is there.
 
     Returns
@@ -266,7 +306,7 @@ def parse(url : str, *, page_type : ThumbnailType = None) -> Any:
     return model
 
 
-def login(username : str, password : str) -> Member: 
+def login(username: str, password: str) -> Member:
     """Login the user to moddb through the library, this allows user to see guest comments and see
     private groups they are part of.
 
@@ -288,30 +328,16 @@ def login(username : str, password : str) -> Member:
         The member you are logged in as
     """
 
-    browser = RoboBrowser(history=True, parser='html.parser')
-    browser.open(f'{BASE_URL}/members/login')
-    t = browser.find_all("form")[1].find_all("input", class_="text", type="text")
-    t.remove(browser.find("input", id="membersusername"))
-    form = browser.get_form(attrs={"name": "membersform"})
-
-    form["password"].value = password
-    form["referer"].value = ""
-    form[browser.find("input", id="membersusername")["name"]].value = username
-    form[t[0]["name"]].value = ""
-
-    browser.submit_form(form)
-    sys.modules["moddb"].SESSION = browser.session
-
-    if "freeman" not in browser.session.cookies:
-        raise ValueError(f"Login failed for user {username}")
-
+    sys.modules["moddb"].SESSION.cookies = generate_login_cookies(username, password)
     return Member(get_page(f"{BASE_URL}/members/{username.replace('_', '-')}"))
 
-def logout(): 
-    """Logs the user out by clearing the cookies, all unapproved guest comments will be hidden and 
+
+def logout():
+    """Logs the user out by clearing the cookies, all unapproved guest comments will be hidden and
     all private groups will be hidden once more
     """
     sys.modules["moddb"].SESSION.cookies.clear()
+
 
 def front_page() -> FrontPage:
     """This returns a model representing the front page of  May sound fancy but it is no more
@@ -322,29 +348,23 @@ def front_page() -> FrontPage:
     --------
     FrontPage
         The front page object.
-        
+
     """
     html = get_page(BASE_URL)
     return FrontPage(html)
 
-def rss(type : RSSType, *, parse_feed = False):
+
+def rss(type: RSSType):
     """Get the RSS feed url for the entire site depending on which feed type you want
 
     Parameters
     -----------
     type : RSSType
         The type of feed you desire to get
-    parse_feed : Optional[bool]:
-        Set to true if you want the library to parse the rss feed for you and return the entries as a dict
-        rather than returning the url for the rss feed.
 
     Returns
     --------
-    Union[str, dict]
+    str
         URL for the feed type
     """
-    url = f'https://rss.moddb.com/{type.name}/feed/rss.xml'
-    if parse_feed:
-        return feedparser.parse(request(url).text)
-
-    return url
+    return f"https://rss.moddb.com/{type.name}/feed/rss.xml"

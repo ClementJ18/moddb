@@ -1,9 +1,18 @@
-import unittest
+import pytest
+from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
-class TestMod(unittest.TestCase):
-    def setUp(self):
-        self.mod = moddb.pages.Mod(moddb.get_page(getattr(self, "url", "https://www.moddb.com/mods/edain-mod")))
+DEFAULT = "https://www.moddb.com/mods/edain-mod"
+
+@patch("moddb.utils.request", new=patched_request)
+class TestMod:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.mod = moddb.Mod(moddb.get_page(request.param))
 
     def test_get_addons(self):
         addons = self.mod.get_addons()
@@ -55,3 +64,6 @@ class TestMod(unittest.TestCase):
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.mod.get_watchers()

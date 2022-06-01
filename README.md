@@ -23,17 +23,10 @@ Check out the [documentation](https://moddb.readthedocs.io) for more information
 [Support](https://discord.gg/Ape8bZt)
 
 ## Installing
-This package is not available on Pypi but can still be installed using pip if you also have git installed. Else you will have to download the repository and instal using the setup.py script located at root. To install with pip
+You can get it from pypi: https://pypi.org/project/moddb
 
 ```
-pip install -U git+git://github.com/ClementJ18/moddb.git@v0.7
-```
-
-## Uninstalling
-To uninstall the package
-
-```
-pip uninstall moddb
+pip install moddb
 ```
 
 ## Models
@@ -56,6 +49,8 @@ pip uninstall moddb
 * [x] HardwAre
 * [x] Updates
 * [x] Friend Requests
+* [ ] Watchers
+* [ ] Tags
 
 Maybe
 * [ ] Messages
@@ -66,3 +61,6 @@ Maybe
 * **Boxes**: Containers present on pages, a **div** tag which contains information around a certain theme and as such have been grouped into Box Models of such.
 * **Pages**: Another name for Models.
 * **Thumbnails**: A very widely used model meant to represent models which are references but not expanded onto. Usually the model in question will only include a url and the name of the page. This is transformed into a thumbnail and the user can then parse it with the built-in method.
+
+## Development
+requirement.txt file contains the necessary additional libraries for develompment

@@ -1,10 +1,20 @@
-import unittest
+import pytest
+from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
+import requests
 
-class TestMember(unittest.TestCase):
-    def setUp(self):
-        self.member = moddb.pages.Member(moddb.get_page(getattr(self, "url", "https://www.moddb.com/members/mladen1996")))
+DEFAULT = "https://www.moddb.com/members/upstart"
 
+@patch("moddb.utils.request", new=patched_request)
+class TestMember:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.member = moddb.Member(moddb.get_page(request.param))
+            
     def test_get_addons(self):
         addons = self.member.get_addons()
         self.member.get_addons(2)
@@ -42,7 +52,10 @@ class TestMember(unittest.TestCase):
         self.member.get_friends(3)
 
         for friend in friends:
-            friend.parse()
+            try:
+                friend.parse()
+            except requests.exceptions.HTTPError:
+                pass
 
     def test_get_games(self):
         games = self.member.get_games()
@@ -93,4 +106,5 @@ class TestMember(unittest.TestCase):
         for video in videos:
             video.parse()
 
-
+    def test_get_watchers(self):
+        self.member.get_watchers()

@@ -1,9 +1,18 @@
-import unittest
+import pytest
+from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
-class TestGroup(unittest.TestCase):
-    def setUp(self):
-        self.group = moddb.pages.Group(moddb.get_page(getattr(self, "url", "https://www.moddb.com/groups/humour-satire-parody")))
+DEFAULT = "https://www.moddb.com/groups/humour-satire-parody"
+
+@patch("moddb.utils.request", new=patched_request)
+class TestGroup:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.group = moddb.Group(moddb.get_page(request.param))
 
     def test_get_addons(self):
         addons = self.group.get_addons()
@@ -51,3 +60,6 @@ class TestGroup(unittest.TestCase):
 
         for video in videos:
             video.parse()
+
+    def test_get_watchers(self):
+        self.group.get_watchers()

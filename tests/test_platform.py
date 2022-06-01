@@ -1,9 +1,18 @@
-import unittest
+import pytest
+from unittest.mock import patch
+
+from tests.test_utils import patched_request
+
 import moddb
 
-class TestPlatform(unittest.TestCase):
-    def setUp(self):
-        self.platform = moddb.pages.Platform(moddb.get_page(getattr(self, "url", "https://www.moddb.com/platforms/pc")))
+DEFAULT = "https://www.moddb.com/platforms/pc"
+
+@patch("moddb.utils.request", new=patched_request)
+class TestPlatform:
+    @pytest.fixture(params=[DEFAULT], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request) as f:
+            self.platform = moddb.Platform(moddb.get_page(request.param))
 
     def test_get_comments(self):
         self.platform.get_comments()
@@ -42,4 +51,4 @@ class TestPlatform(unittest.TestCase):
         self.platform.get_software(3)
 
         for software in softwares:
-            software.parse() 
+            software.parse()

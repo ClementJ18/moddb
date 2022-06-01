@@ -20,13 +20,13 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'moddb'
-copyright = '2018, Clement Julia'
+copyright = '2022, Clement Julia'
 author = 'Clement Julia'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '1.0'
+release = '0.8.0'
 
 
 # -- General configuration ---------------------------------------------------
