@@ -2,7 +2,7 @@ from ast import Import
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request
+from tests.test_utils import patched_request, sample_list
 
 try:
     from tests.test_config import username, password
@@ -22,15 +22,15 @@ class TestFrontPage:
         self.fp = moddb.front_page()
 
     def get_articles(self):
-        for article in self.fp.articles:
+        for article in sample_list(self.fp.articles, 3):
             article.parse()
 
     def get_games(self):
-        for game in self.fp.games:
+        for game in sample_list(self.fp.games, 3):
             game.parse()
 
     def get_files(self):
-        for file in self.fp.files:
+        for file in sample_list(self.fp.files, 3):
             file.parse()
 
 @patch("moddb.utils.request", new=patched_request)
