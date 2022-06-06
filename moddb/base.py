@@ -1,9 +1,8 @@
 import requests
-from .enums import SearchCategory, ThumbnailType, RSSType
+from .enums import SearchCategory, RSSType
 from .boxes import ResultList, _parse_results
 from .utils import (
     get_page,
-    LOGGER,
     get_page_type,
     BASE_URL,
     generate_login_cookies,
@@ -61,9 +60,7 @@ def search(
     game = game.id if game else None
 
     url = f"{BASE_URL}/{category.name}/page/{page}"
-    filter_parsed = {
-        key: value.value for key, value in filters.items() if hasattr(value, "value")
-    }
+    filter_parsed = {key: value.value for key, value in filters.items() if hasattr(value, "value")}
 
     params = {
         "filter": "t",

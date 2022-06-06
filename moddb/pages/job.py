@@ -57,9 +57,9 @@ class Job:
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
-        breadcrumb = json.loads(html.find("script", type="application/ld+json").string)[
-            "itemListElement"
-        ][-1]["Item"]
+        breadcrumb = json.loads(html.find("script", type="application/ld+json").string)["itemListElement"][
+            -1
+        ]["Item"]
         self.name = breadcrumb["name"]
         self.url = breadcrumb["@id"]
         self.name_id = self.url.split("/")[0]
@@ -69,15 +69,11 @@ class Job:
             "div", class_="table tablemenu"
         )
 
-        self.id = int(
-            re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1]
-        )
+        self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", string="Report")["href"])[1])
 
         try:
             author = profile_raw.find("h5", string="Author").parent.span.a
-            self.author = Thumbnail(
-                url=author["href"], name=author.string, type=ThumbnailType.member
-            )
+            self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
         except AttributeError:
             LOGGER.info("Job '%s' has no author", self.name)
             self.author = None
@@ -86,28 +82,19 @@ class Job:
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {
-                x.string: join(x["href"]) for x in raw_tags if x.string is not None
-            }
+            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
 
-        self.skill = JobSkill(
-            int(profile_raw.find("h5", string="Skill").parent.span.a["href"][-1])
-        )
+        self.skill = JobSkill(int(profile_raw.find("h5", string="Skill").parent.span.a["href"][-1]))
 
-        self.location = profile_raw.find(
-            "h5", string="Location"
-        ).parent.span.string.strip()
+        self.location = profile_raw.find("h5", string="Location").parent.span.string.strip()
 
         try:
-            related = html.find("div", class_="tablerelated").find_all(
-                "a", class_="image"
-            )
+            related = html.find("div", class_="tablerelated").find_all("a", class_="image")
             self.related = [
-                Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team)
-                for x in related
+                Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related
             ]
         except AttributeError:
             LOGGER.info("Job '%s' has no related companies", self.name)

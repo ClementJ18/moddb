@@ -92,11 +92,7 @@ class File(BaseMetaClass):
             x.string.lower(): x.parent.span.string.strip()
             for x in info.find_all("h5", string=("Filename", "Size", "MD5 Hash"))
         }
-        self.name = (
-            html.find("a", title="Report")
-            .parent.parent.find("span", class_="heading")
-            .string
-        )
+        self.name = html.find("a", title="Report").parent.parent.find("span", class_="heading").string
         self.filename = file["filename"]
         super().__init__(html)
 
@@ -117,13 +113,9 @@ class File(BaseMetaClass):
             )
 
         uploader = info.find("h5", string="Uploader").parent.a
-        self.author = Thumbnail(
-            url=uploader["href"], name=uploader.string, type=ThumbnailType.member
-        )
+        self.author = Thumbnail(url=uploader["href"], name=uploader.string, type=ThumbnailType.member)
 
-        self.date = get_date(
-            info.find("h5", string="Added").parent.span.time["datetime"]
-        )
+        self.date = get_date(info.find("h5", string="Added").parent.span.time["datetime"])
         self.button = info.find("h5", string="Embed Button").parent.span.input["value"]
         self.widget = info.find("h5", string="Embed Widget").parent.span.input["value"]
 
@@ -173,14 +165,10 @@ class File(BaseMetaClass):
             A list of Mirror objects"""
 
         html = get_page(f"https://www.moddb.com/downloads/start/{self.id}/all")
-        mirrors_div = html.find("div", class_="mirrors").find_all(
-            "div", recursive=False
-        )
+        mirrors_div = html.find("div", class_="mirrors").find_all("div", recursive=False)
         mirrors = []
         for mirror in mirrors_div:
-            mirror_match = re.match(
-                r"(.*) #([0-9]*) \((.{2}), (.{2})\)", mirror.div.p.contents[-1].strip()
-            )
+            mirror_match = re.match(r"(.*) #([0-9]*) \((.{2}), (.{2})\)", mirror.div.p.contents[-1].strip())
             stats_match = re.match(
                 r"([0-9,]*) downloads? served, ([0-9.]*)% capacity",
                 mirror.div.span.string,
@@ -300,25 +288,19 @@ class Media(BaseMetaClass):
             self.name = html.find("img", id="mediaimage")["title"]
 
         super().__init__(html)
-        medias = html.find_all(
-            "h5", string=("Date", "By", "Duration", "Size", "Views", "Filename")
-        )
+        medias = html.find_all("h5", string=("Date", "By", "Duration", "Size", "Views", "Filename"))
         raw_media = {media.string.lower(): media.parent for media in medias}
 
         self.date = get_date(raw_media["date"].span.time["datetime"])
 
         author = raw_media["by"].span.a
-        self.author = Thumbnail(
-            url=author["href"], name=author.string.strip(), type=ThumbnailType.member
-        )
+        self.author = Thumbnail(url=author["href"], name=author.string.strip(), type=ThumbnailType.member)
 
         if "duration" in raw_media:
             duration = raw_media["duration"].span.time.string.strip().split(":")
             duration.reverse()
             times = ["seconds", "minutes", "hours"]
-            self.duration = datetime.timedelta(
-                **{times[duration.index(x)]: int(x) for x in duration}
-            )
+            self.duration = datetime.timedelta(**{times[duration.index(x)]: int(x) for x in duration})
         else:
             self.duration = 0
 

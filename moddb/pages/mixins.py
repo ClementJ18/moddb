@@ -2,7 +2,7 @@ from typing import Tuple, Union, List
 
 from . import opinion
 
-from ..utils import LOGGER, get_page, Object
+from ..utils import get_page, Object
 from ..boxes import ResultList, Thumbnail
 from ..enums import (
     Status,
@@ -539,9 +539,7 @@ class GetAddonsMixin:
 
 
 class GetWatchersMixin:
-    def get_watchers(
-        self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None
-    ) -> ResultList:
+    def get_watchers(self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None) -> ResultList:
         """Get a page of watchers for the page. Each page will yield up to 30 members.
 
         Parameters

@@ -5,9 +5,7 @@ from tests.test_utils import patched_request, sample_list
 
 import moddb
 
-DEFAULT = (
-    "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king"
-)
+DEFAULT = "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king"
 
 
 @patch("moddb.utils.request", new=patched_request)

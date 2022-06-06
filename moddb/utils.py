@@ -157,9 +157,7 @@ def raise_for_status(response):
         "is currently awaiting authorisation, which can take a couple of days while a"
         in response.text.lower()
     ):
-        raise AwaitingAuthorisation(
-            "This page is still await authorisation and cannot currently be parsed"
-        )
+        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
 
 
 def generate_login_cookies(username, password):
@@ -341,9 +339,7 @@ def ceildiv(a: int, b: int) -> int:
     return -(a // -b)
 
 
-def get_list_stats(
-    result_box: bs4.BeautifulSoup, per_page: int = 30
-) -> Tuple[int, int, int]:
+def get_list_stats(result_box: bs4.BeautifulSoup, per_page: int = 30) -> Tuple[int, int, int]:
     """Get the current page, total pages and total results from
     a result list"""
     stats = re.match(

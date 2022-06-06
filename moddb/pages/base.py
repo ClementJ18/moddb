@@ -6,7 +6,6 @@ from ..utils import (
     join,
     LOGGER,
     get_page,
-    get_date,
     get_media_type,
     get_page_type,
 )
@@ -57,19 +56,13 @@ class BaseMetaClass:
                 self.name = html.find("meta", property="og:title")["content"]
 
         try:
-            self.id = int(
-                re.search(
-                    r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"]
-                )[1]
-            )
+            self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1])
         except TypeError:
             try:
                 self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
             except (AttributeError, TypeError):
                 # really scratching the bottom here but a lot of "official" groups don't have the regular ID
-                self.id = int(
-                    html.find("meta", property="og:image")["content"].split("/")[-2]
-                )
+                self.id = int(html.find("meta", property="og:image")["content"].split("/")[-2])
 
         try:
             self.url = html.find("meta", property="og:url")["content"]
@@ -82,9 +75,7 @@ class BaseMetaClass:
             self.report = join(html.find("a", string="Report")["href"])
         except TypeError:
             self.report = None
-            LOGGER.info(
-                "'%s' '%s' cannot be reported", self.__class__.__name__, self.name
-            )
+            LOGGER.info("'%s' '%s' cannot be reported", self.__class__.__name__, self.name)
 
         self.comments = self._get_comments(html)
 
@@ -274,9 +265,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
             # misc
             try:
-                self.embed = html.find("input", type="text", class_="text textembed")[
-                    "value"
-                ]
+                self.embed = html.find("input", type="text", class_="text textembed")["value"]
             except TypeError:
                 self.embed = str(html.find_all("textarea")[1].a)
 
@@ -288,9 +277,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         articles_raw = None
         try:
-            raw = html.find("span", string="Articles") or html.find(
-                "span", string="Related Articles"
-            )
+            raw = html.find("span", string="Articles") or html.find("span", string="Related Articles")
             articles_raw = raw.parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [
@@ -325,9 +312,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {
-                x.string: join(x["href"]) for x in raw_tags if x.string is not None
-            }
+            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
@@ -351,18 +336,16 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         try:
             self.rating = float(
-                html.find("div", class_="score").find("meta", itemprop="ratingValue")[
-                    "content"
-                ]
+                html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"]
             )
         except AttributeError:
             self.rating = 0.0
             LOGGER.info("'%s' '%s' is not rated", self.__class__.__name__, self.name)
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find(
-                "input", {"name": "hash"}
-            )["value"]
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
+                "value"
+            ]
         except AttributeError:
             self._review_hash = None
 
@@ -525,9 +508,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
         return f"<{self.__class__.__name__} name={self.name}>"
 
 
-class HardwareSoftwareMetaClass(
-    BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin
-):
+class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin):
     """Shared class for Hardware and Software
 
     Attributes
@@ -569,26 +550,24 @@ class HardwareSoftwareMetaClass(
 
         try:
             self.rating = float(
-                html.find("div", class_="score").find("meta", itemprop="ratingValue")[
-                    "content"
-                ]
+                html.find("div", class_="score").find("meta", itemprop="ratingValue")["content"]
             )
         except AttributeError:
             self.rating = 0.0
             LOGGER.info("'%s' '%s' is not rated", self.profile.category.name, self.name)
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find(
-                "input", {"name": "hash"}
-            )["value"]
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
+                "value"
+            ]
         except AttributeError:
             self._review_hash = None
 
         articles_raw = None
         try:
-            articles_raw = html.find(
-                "span", string="Related Articles"
-            ).parent.parent.parent.find("div", class_="table")
+            articles_raw = html.find("span", string="Related Articles").parent.parent.parent.find(
+                "div", class_="table"
+            )
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [
                 Thumbnail(
@@ -621,9 +600,7 @@ class HardwareSoftwareMetaClass(
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {
-                x.string: join(x["href"]) for x in raw_tags if x.string is not None
-            }
+            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
             LOGGER.info("Hardware '%s' has no tags", self.name)
@@ -632,14 +609,11 @@ class HardwareSoftwareMetaClass(
 
         try:
             t = ThumbnailType[self.__class__.__name__.lower()]
-            suggestions = html.find(
-                "span", string="You may also like"
-            ).parent.parent.parent.find_all("a", class_="image")
+            suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all(
+                "a", class_="image"
+            )
             self.suggestions = [
-                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"])
-                for x in suggestions
+                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions
             ]
         except AttributeError:
-            LOGGER.info(
-                "'%s' '%s' has no suggestions", self.__class__.__name__, self.name
-            )
+            LOGGER.info("'%s' '%s' has no suggestions", self.__class__.__name__, self.name)

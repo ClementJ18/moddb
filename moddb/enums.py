@@ -175,45 +175,6 @@ class Month(enum.Enum):
 # change something
 
 
-class SoftwareCategory(enum.Enum):
-    """The category of the software"""
-
-    programming = 1
-    ide = 2
-    sdk = 3
-    emulator = 4
-    d3_art = 5
-    d3_graphics = 6
-    voxel_editor = 7
-    normal_map_generator = 8
-    uv_mapping_and_unwrapping = 9
-    heightmap_or_terrain_generator = 10
-    shader_editor = 11
-    d2_art = 12
-    raster_graphics_editor = 13
-    vector_graphics_editor = 14
-    sprite_editor_and_rigger = 15
-    tile_or_map_editor = 16
-    sound_and_music = 17
-    audio_editing = 18
-    digital_audio_workstation = 19
-    music_sequencer = 20
-    software_synthesizer = 21
-    gaming = 22
-    gaming_client = 23
-    voip = 24
-    overclocking = 25
-    benchmarking = 26
-    streaming_and_recording = 27
-    web_pr_and_other = 28
-    game_design = 29
-    web_design = 30
-    browser = 31
-    social_networking = 32
-    video_editing = 33
-    vr = 34
-
-
 class Difficulty(enum.Enum):
     """Difficulty of the tutorial"""
 
