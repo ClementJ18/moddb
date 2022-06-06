@@ -300,7 +300,7 @@ def get_media_type(img: Tag) -> int:
         return 1
 
 
-def get_page_type(url : str) -> "ThumbnailType":
+def get_page_type(url: str) -> "ThumbnailType":
     """Get the page type based on a url.
 
     Parameters
@@ -341,8 +341,10 @@ def ceildiv(a: int, b: int) -> int:
     return -(a // -b)
 
 
-def get_list_stats(result_box : bs4.BeautifulSoup, per_page:int = 30) -> Tuple[int, int, int]:
-    """Get the current page, total pages and total results from 
+def get_list_stats(
+    result_box: bs4.BeautifulSoup, per_page: int = 30
+) -> Tuple[int, int, int]:
+    """Get the current page, total pages and total results from
     a result list"""
     stats = re.match(
         r".*\(([0-9,]*) - ([0-9,]*) of ([0-9,]*)\)",

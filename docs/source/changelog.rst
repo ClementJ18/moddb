@@ -39,7 +39,7 @@ Removed Features
 * Removed `feedparser` dependency, RSS feed methods now only retun the URL
 * Removed under the hood `robobrowser` dependency
 * Removed obsolete `Engine.get_addons` method
-* 
+* Removed `page_type` parameter in :func:`parse_page`
 
 
 v0.7

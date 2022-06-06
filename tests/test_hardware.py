@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/hardware/htc-vive"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestHardware:
     @pytest.fixture(params=[DEFAULT], autouse=True)
@@ -63,7 +64,7 @@ class TestHardware:
         self.hardware.get_software(3)
 
         for software in sample_list(softwares, 3):
-            software.parse()  
+            software.parse()
 
     def test_get_tutorials(self):
         tutorials = self.hardware.get_tutorials()

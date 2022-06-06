@@ -4,17 +4,21 @@ from unittest.mock import patch
 
 import moddb
 
+
 class FakeResponse:
     def __init__(self, text):
         self.text = text
         self.content = text.encode("utf-8")
 
+
 request = moddb.utils.request
+
+
 def patched_request(req):
-    filename = req.url.replace(moddb.BASE_URL, '')
+    filename = req.url.replace(moddb.BASE_URL, "")
     if not filename:
         filename = "/frontpage"
-    
+
     path = f"tests/fixtures{filename}.html"
 
     # cache the file if it doesn't exist
@@ -28,12 +32,14 @@ def patched_request(req):
     with open(path, "r") as f:
         return FakeResponse(f.read())
 
+
 def sample_list(l, k):
     sample = min(k, len(l))
     if l:
         return random.sample(l, sample)
 
     return []
+
 
 mod_urls = [
     "https://www.moddb.com/mods/edain-mod",
@@ -55,7 +61,7 @@ game_urls = [
     "https://www.moddb.com/games/half-life",
     "https://www.moddb.com/games/diablo-2-lod",
     "https://www.moddb.com/games/car-chase-simulator",
-    "https://www.moddb.com/games/fated-kingdom"
+    "https://www.moddb.com/games/fated-kingdom",
 ]
 
 engine_urls = [
@@ -67,7 +73,7 @@ engine_urls = [
     "https://www.moddb.com/engines/limon-engine",
     "https://www.moddb.com/engines/unknown",
     "https://www.moddb.com/engines/shmup-creator",
-    "https://www.moddb.com/engines/limon-engine"
+    "https://www.moddb.com/engines/limon-engine",
 ]
 
 file_urls = [
@@ -88,7 +94,7 @@ addon_urls = [
     "https://www.moddb.com/mods/call-of-chernobyl/addons/doctorx-dynamic-faction-relations",
     "https://www.moddb.com/mods/call-of-chernobyl/addons/arsenal-overhaul",
     "https://www.moddb.com/games/cc-generals-zero-hour/addons/usa-challenge",
-    "https://www.moddb.com/games/axis-allies/addons/simple-vanilla-sai-buff"
+    "https://www.moddb.com/games/axis-allies/addons/simple-vanilla-sai-buff",
 ]
 
 media_urls = [
@@ -108,7 +114,7 @@ media_urls = [
     "https://www.moddb.com/mods/goldeneye-source/videos/podcast-17-v41-interview-with-ges",
     "https://www.moddb.com/mods/tiberium-essence/videos/vlado32-fields-of-green",
     "https://www.moddb.com/mods/goldeneye-source/videos/podcast-17-v41-interview-with-ges",
-    "https://www.moddb.com/mods/recovered-operations/videos/recoil-tension"
+    "https://www.moddb.com/mods/recovered-operations/videos/recoil-tension",
 ]
 
 article_urls = [
@@ -119,8 +125,8 @@ article_urls = [
     "https://www.moddb.com/news/dungeon-siege-skinning-contest",
     "https://www.moddb.com/games/neon-knigh/tutorials/neon-knight-manual",
     "https://www.moddb.com/games/fear/tutorials/alma1",
-    "https://www.moddb.com/games/katharsis/news/katharsis-devlog-11"
-] 
+    "https://www.moddb.com/games/katharsis/news/katharsis-devlog-11",
+]
 
 group_urls = [
     "https://www.moddb.com/groups/humour-satire-parody",
@@ -131,8 +137,8 @@ group_urls = [
     "https://www.moddb.com/groups/dreamhack-activities",
     "https://www.moddb.com/groups/indie-game-contest-strasbourg-2016",
     "https://www.moddb.com/groups/custom-night",
-    "https://www.moddb.com/groups/2013-mod-of-the-year-awards"
-] 
+    "https://www.moddb.com/groups/2013-mod-of-the-year-awards",
+]
 
 team_urls = [
     "https://www.moddb.com/company/wallace2anjos",
@@ -141,7 +147,7 @@ team_urls = [
     "https://www.moddb.com/company/left-4-dead-mods",
     "https://www.moddb.com/company/taleworlds",
     "https://www.moddb.com/company/belaruso500",
-    "https://www.moddb.com/company/v1-infinity"
+    "https://www.moddb.com/company/v1-infinity",
 ]
 
 job_urls = [
@@ -150,8 +156,8 @@ job_urls = [
     "https://www.moddb.com/jobs/revshareroyalty-3d-character-artist",
     "https://www.moddb.com/jobs/seeking-2d-uiux-artist-3d-weapon-modler-character-animator",
     "https://www.moddb.com/jobs/2d-top-down-shooter-artistanimator",
-    "https://www.moddb.com/jobs/player-modeler-modeler1"
-] 
+    "https://www.moddb.com/jobs/player-modeler-modeler1",
+]
 
 member_urls = [
     "https://www.moddb.com/members/barneypan",
@@ -168,7 +174,7 @@ platform_urls = [
     "https://www.moddb.com/platforms/mac",
     "https://www.moddb.com/platforms/linux",
     "https://www.moddb.com/platforms/vr",
-    "https://www.moddb.com/platforms/ar"
+    "https://www.moddb.com/platforms/ar",
 ]
 
 hardware_urls = [
@@ -177,7 +183,7 @@ hardware_urls = [
     "https://www.moddb.com/hardware/the-free-space-omni",
     "https://www.moddb.com/hardware/sprintr",
     "https://www.moddb.com/hardware/osvr",
-    "https://www.moddb.com/hardware/oculus-rift"
+    "https://www.moddb.com/hardware/oculus-rift",
 ]
 
 software_urls = [
@@ -186,7 +192,7 @@ software_urls = [
     "https://www.moddb.com/software/harfang-3d",
     "https://www.moddb.com/software/tilt-brush",
     "https://www.moddb.com/software/virtual-desktop",
-    "https://www.moddb.com/software/geovisionary"
+    "https://www.moddb.com/software/geovisionary",
 ]
 
 poll_urls = [
@@ -195,7 +201,7 @@ poll_urls = [
     "https://www.moddb.com/polls/default-v5-theme-should-be",
     "https://www.moddb.com/polls/what-is-your-plan-for-2017",
     "https://www.moddb.com/polls/should-moddb-focus-on-mods-only",
-    "https://www.moddb.com/polls/prices-in-game-profiles"
+    "https://www.moddb.com/polls/prices-in-game-profiles",
 ]
 
 test_urls = [
@@ -219,7 +225,7 @@ test_urls = [
 queries = [
     ("edain mod", moddb.SearchCategory.mods),
     ("battle for middle earth", moddb.SearchCategory.games),
-    ("tanks", moddb.SearchCategory.groups)
+    ("tanks", moddb.SearchCategory.groups),
 ]
 
 mixed_urls = [
@@ -235,5 +241,5 @@ mixed_urls = [
     "https://www.moddb.com/groups/humour-satire-parody",
     "https://www.moddb.com/groups/warhammer-40k-fans-group",
     "https://www.moddb.com/members/barneypan",
-    "https://www.moddb.com/members/officialnecro"
+    "https://www.moddb.com/members/officialnecro",
 ]

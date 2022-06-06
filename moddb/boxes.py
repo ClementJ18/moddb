@@ -48,7 +48,7 @@ __all__ = [
     "PlatformStatistics",
     "PartialArticle",
     "Option",
-    "Mirror"
+    "Mirror", 
     "ResultList",
     "CommentList",
 ]

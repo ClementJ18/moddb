@@ -5,23 +5,6 @@ Examples and Snippets
 =======================
 Here are presented some up to date snippets of things that can be done with the library.
 
-Getting every page of a search
---------------------------------
-This has now been fully implemented with the :class: `.Search.get_all_results()` method.
-
-Reusing filters
-----------------
-Filters are a cool thing, they allow you to limit the amount of result you return to be more tailored to what you're actually looking for. But what if you want to do multiple searches with the same filters? You could save them as a dict which you then unpack into the search function and keep saved somewhere sure, but why bother, the Search object already stores the filters so just piggy off that and you'll be fine.::
-
-    import moddb
-    #I swear I don't have a LOTR bias. Also, this is a simple example, assume we have dozens of filters.
-    fake_game = moddb.Object(id=10009)
-    search = moddb.search(moddb.SearchCategory.mods, game=fake_game)
-    #so now we have a set of filters, now let's say we wanna fine tune the search a bit more, let's says we also only want
-    #the mods that have been released in the last year
-    search = moddb.search(moddb.SearchCategory.mods, timeframe=moddb.TimeFrame.year, **search.filters)
-
-
 The Client
 ------------
 Clients represents an independtly logged in user. This allows you to make certain requests more easily, they don't need to be logged in to the library's session but rather those independent sessions can be used to make requests. They can be used to make requests with the methods provided by Client but can also be used to overwrite the module wide session to make any requests with any user. Firt, a simple example of using client:: 

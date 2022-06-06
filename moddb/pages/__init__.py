@@ -29,5 +29,5 @@ __all__ = [
     "Poll",
     "Software",
     "Hardware",
-    "ReviewList"
+    "ReviewList",
 ]

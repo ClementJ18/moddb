@@ -6,7 +6,10 @@ from tests.test_utils import patched_request
 
 import moddb
 
-DEFAULT = "https://www.moddb.com/games/pokemon-generations/downloads/pokegen-v2-launcher"
+DEFAULT = (
+    "https://www.moddb.com/games/pokemon-generations/downloads/pokegen-v2-launcher"
+)
+
 
 @patch("moddb.utils.request", new=patched_request)
 class TestFile:

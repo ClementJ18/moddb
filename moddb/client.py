@@ -26,6 +26,7 @@ from .base import parse_page
 
 COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
 
+
 @concat_docs
 class Update(Thumbnail):
     """An update object. Which is basically just a fancy thumbnail with a couple extra attributes and
@@ -85,7 +86,11 @@ class Update(Thumbnail):
 
 @concat_docs
 class Request(Thumbnail):
-    """A thumbnail with two extra methods used to clear and accept requests."""
+    """A thumbnail with two extra methods used to clear and accept requests.
+    
+    Attributes
+    -----------
+    """
 
     def __init__(self, **attrs):
         super().__init__(**attrs)

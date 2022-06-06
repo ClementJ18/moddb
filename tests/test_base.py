@@ -8,12 +8,14 @@ try:
     from tests.test_config import username, password
 except ModuleNotFoundError:
     import os
+
     username = os.environ["USERNAME"]
     password = os.environ["PASSWORD"]
 
 import moddb
 
 DEFAULT_SEARCH = ("edain mod", moddb.SearchCategory.mods)
+
 
 @patch("moddb.utils.request", new=patched_request)
 class TestFrontPage:
@@ -33,12 +35,13 @@ class TestFrontPage:
         for file in sample_list(self.fp.files, 3):
             file.parse()
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestSearch:
     @pytest.fixture(params=[DEFAULT_SEARCH], autouse=True)
     def _get_object(self, request):
         with patch("moddb.utils.request", new=patched_request) as f:
-            self.search= moddb.search(request.param[1], query=request.param[0])
+            self.search = moddb.search(request.param[1], query=request.param[0])
 
     def test_resort(self):
         results = self.search._results
@@ -51,6 +54,7 @@ class TestSearch:
     def test_previous_pages(self):
         search = self.search.next_page()
         search.previous_page()
+
 
 class TestLogin:
     def test_login(self):
