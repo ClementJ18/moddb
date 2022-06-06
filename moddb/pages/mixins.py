@@ -1,6 +1,8 @@
 from typing import Tuple, Union, List
 
-from ..utils import LOGGER, get_page, get_page_number, Object
+from . import opinion
+
+from ..utils import LOGGER, get_page, Object
 from ..boxes import ResultList, Thumbnail
 from ..enums import (
     Status,
@@ -19,7 +21,6 @@ from ..enums import (
     SoftwareCategory,
     RSSType,
 )
-from . import opinion
 
 
 class GetGamesMixin:
@@ -224,58 +225,18 @@ class SharedMethodsMixin:
             "sort": f"{sort[0]}-{sort[1]}" if sort else None,
         }
 
-        return self._get_reviews(f"{self.url}/reviews/page/{index}", params=params)
-
-    def _get_reviews(self, url, *, params):
-        """Backend class so we can use it with ResultList"""
+        base_url = f"{self.url}/reviews"
+        url = f"{base_url}/page/{index}"
         html = get_page(url, params=params)
+        results, current_page, total_pages, total_results = opinion.parse_reviews(html)
 
-        try:
-            table = html.find("form", attrs={"name": "filterform"}).parent.find(
-                "div", class_="table"
-            )
-        except AttributeError:
-            table = None
-
-        if table is None:
-            return []
-
-        raw_reviews = table.find_all("div", recursive=False)[2:]
-        reviews = []
-        e = 0
-        # This is very hacky because a page of reviews is actually a list of review titles and review contents
-        # I'm not fucking with you, its a list of divs which go [Div[Title of review one], Div[content of review one],
-        # Div[Title of review two], Div[content of review two]] It's dumb as fuck and I hate it.
-        for _ in range(len(raw_reviews)):
-            try:
-                review = raw_reviews[e]
-            except IndexError:
-                break
-
-            try:
-                text = raw_reviews[e + 1]
-            except IndexError:
-                # some reviews don't have text, it's optional as long as you don't give lower than a three
-                text = {"class": "None"}
-
-            if "rowcontentnext" in text["class"]:
-                e += 1
-                review_obj = opinion.Review(review=review, text=text)
-            else:
-                review_obj = opinion.Review(review=review)
-
-            reviews.append(review_obj)
-            e += 1
-
-        page, max_page = get_page_number(html)
-
-        return ResultList(
-            results=reviews,
+        return opinion.ReviewList(
+            results=results,
+            url=base_url,
+            total_results=total_results,
             params=params,
-            action=self._get_reviews,
-            url=url,
-            page=page,
-            max_page=max_page,
+            current_page=current_page,
+            total_pages=total_pages,
         )
 
     def get_articles(

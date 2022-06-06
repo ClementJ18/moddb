@@ -6,21 +6,20 @@ from ..utils import (
     join,
     LOGGER,
     get_page,
-    get_page_number,
     get_date,
-    get_type,
-    get_type_from,
+    get_media_type,
+    get_page_type,
 )
 from ..boxes import (
     CommentList,
-    Comment,
     Thumbnail,
-    MissingComment,
     ResultList,
     Profile,
     Statistics,
     PartialArticle,
     Style,
+    _parse_comments,
+    _parse_results,
 )
 from ..enums import ThumbnailType, SearchCategory
 from .mixins import SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin
@@ -40,7 +39,7 @@ class BaseMetaClass:
     id : int
         The id of the page
     name_id : str
-        The name_id of the member, cannot be changed, it's a mix of the original username lowercased with
+        The name_id of the entity, cannot be changed, it's a mix of the original username lowercased with
         spaces removed and shortened.
     url : str
         The url of the page
@@ -95,42 +94,26 @@ class BaseMetaClass:
         return f"<{self.__class__.__name__} name={self.name}>"
 
     def _get_comments(self, html: bs4.BeautifulSoup) -> CommentList:
-        """Extracts the comments from an html page and adds them to a CommentList. In addition
-        this method also adds them to the comments children as need be.
+        """Extracts the comments from an html page and adds them to a CommentList.
 
         Parameters
         -----------
         html : bs4.BeautifulSoup
             The html containing the comments
-        """
-        page, max_page = get_page_number(html)
 
-        comments = []
-        comments_raw = html.find_all("div", class_="row", id=True)
-        for raw in comments_raw:
-            comment = Comment(raw)
-            comment._url = f"{self.url}/page/{page}"
-            if comment.position == 1:
-                try:
-                    comments[-1].children.append(comment)
-                except IndexError:
-                    comments.append(MissingComment(0))
-                    comments[-1].children.append(comment)
-            elif comment.position == 2:
-                try:
-                    comments[-1].children[-1].children.append(comment)
-                except IndexError:
-                    comments[-1].children.append(MissingComment(1))
-                    comments[-1].children[-1].children.append(comment)
-            else:
-                comments.append(comment)
+        Returns
+        --------
+        CommentList
+            The list of parsed comments
+        """
+        results, current_page, total_pages, total_results = _parse_comments(html)
 
         return CommentList(
-            results=comments,
-            page=page,
-            max_page=max_page,
-            action=self._get_comments_from_url,
-            url=f"{self.url}/page/{page}",
+            results=results,
+            current_page=current_page,
+            total_pages=total_pages,
+            url=self.url,
+            total_results=total_results,
         )
 
     def _get(self, url: str, *, params: dict = {}) -> ResultList:
@@ -148,64 +131,19 @@ class BaseMetaClass:
 
         Returns
         -------
-        List[Thumbnail]
+        ResultList[Thumbnail]
             The list of objects present on the page as a list of thumbnails.
         """
         html = get_page(url, params=params)
-        try:
-            table = html.find("form", attrs={"name": "filterform"}).parent.find(
-                "div", class_="table"
-            )
-        except AttributeError:
-            table = None
-
-        if table is None:
-            return []
-
-        objects_raw = table.find_all("div", recursive=False)[1:]
-
-        try:
-            # parse as normal list of articles
-            objects = []
-            for obj in objects_raw:
-                date = obj.find("time")
-                summary = obj.find("p")
-                thumbnail = Thumbnail(
-                    name=obj.a["title"],
-                    url=obj.a["href"],
-                    image=obj.a.img["src"],
-                    type=get_type_from(join(obj.a["href"])),
-                    summary=summary.string if summary else None,
-                    date=get_date(date["datetime"]) if date else None,
-                )
-                objects.append(thumbnail)
-        except TypeError:
-            # parse as a title-content pair of articles
-            LOGGER.info("Parsing articles as key-pair list")
-            objects = []
-            objects_raw = objects_raw[1:]
-            for title, content in zip(objects_raw[::2], objects_raw[1::2]):
-                date = title.find("time")
-                url = title.find("h4").a
-                thumbnail = Thumbnail(
-                    name=url.text,
-                    url=url["href"],
-                    image=None,
-                    type=get_type_from(join(url["href"])),
-                    summary=content.text,
-                    date=get_date(date["datetime"]) if date else None,
-                )
-                objects.append(thumbnail)
-
-        page, max_page = get_page_number(html)
+        results, current_page, total_pages, total_results = _parse_results(html)
 
         return ResultList(
-            results=objects,
+            results=results,
             params=params,
             url=url,
-            action=self._get,
-            page=page,
-            max_page=max_page,
+            current_page=current_page,
+            total_pages=total_pages,
+            total_results=total_results,
         )
 
     def _get_media(self, index: int, *, html) -> List[Thumbnail]:
@@ -239,11 +177,6 @@ class BaseMetaClass:
             for match in matches
         ]
 
-    def _get_comments_from_url(self, url, *, show_deleted=False):
-        """Extra method so we can get comments from a ResultList"""
-        params = {"deleted": "t" if show_deleted else None}
-        return self._get_comments(get_page(url, params=params))
-
     def get_comments(self, index: int = 1, *, show_deleted=False) -> CommentList:
         """Used to get comments on the model regardless of what page they may be present in. The function
         itself simply relies on two other to make the request and parse the table.
@@ -262,7 +195,6 @@ class BaseMetaClass:
             A list-like object containing the comments and additional methods
         """
         params = {"deleted": "t" if show_deleted else None}
-
         return self._get_comments(get_page(f"{self.url}/page/{index}", params=params))
 
 
@@ -408,7 +340,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
                     name=x.a["title"],
                     url=x.a["href"],
                     image=x.a.img["src"],
-                    type=ThumbnailType(get_type(x.a.img)),
+                    type=ThumbnailType(get_media_type(x.a.img)),
                 )
                 for x in imagebox
                 if x.a
@@ -479,7 +411,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
         for x in suggestions_raw:
             try:
                 link = x.find("a", class_="image")
-                suggestion_type = get_type_from(link["href"])
+                suggestion_type = get_page_type(link["href"])
                 suggestion = Thumbnail(
                     name=link["title"],
                     url=link["href"],

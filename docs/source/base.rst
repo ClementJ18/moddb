@@ -10,19 +10,17 @@ models yourself.
    :local:
    :backlinks: none
 
-Search
--------
-.. autoclass:: moddb.base.Search
-    :members:
-    :inherited-members:
-
 search
 --------
 .. autofunction:: moddb.base.search
 
-parse
+parse_page
 -------
-.. autofunction:: moddb.base.parse
+.. autofunction:: moddb.base.parse_page
+
+parse_results
+--------------
+.. autofunction:: moddb.base.parse_results
 
 login
 ------

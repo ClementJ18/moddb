@@ -1,192 +1,21 @@
+import requests
 from .enums import SearchCategory, ThumbnailType, RSSType
-from .boxes import Thumbnail
+from .boxes import ResultList, _parse_results
 from .utils import (
     get_page,
     LOGGER,
-    normalize,
-    get_type_from,
+    get_page_type,
     BASE_URL,
     generate_login_cookies,
+    request,
+    soup,
 )
 from .pages import FrontPage, Member
 
 import sys
-import toolz
-import collections
 from typing import Tuple, Any
 
-__all__ = ["Search", "search", "parse", "login", "logout", "front_page"]
-
-
-class Search(collections.abc.MutableSequence):
-    """Represents the search you just conducted through the library's search function. Can be used to navigate
-    the search page efficiently. Behaves like a list.
-
-    Attributes
-    -----------
-    results : List[Thumbnail]
-        The list of results the search returned
-    category : ThumbnailType
-        The type results
-    filters : Dict[str : Enum]
-        The dict of filters that was used to search for the results
-    max_page : int
-        The number of pages
-    page : int
-        The current page, range is 1-max_page included
-    query : str
-        The text query that was used in the search
-    results_max : int
-        The total number of results for this search
-    filters : dict
-        Dictionnary of filters used to keep the query list persistent, can also be
-        unpacked and passed to the search function.
-    """
-
-    def __init__(self, **kwargs):
-        self._results = kwargs.get("results")
-        self.category = kwargs.get("category")
-        self.filters = kwargs.get("filters")
-        self.max_page = kwargs.get("max_page")
-        self.page = kwargs.get("page")
-        self.query = kwargs.get("query")
-        self.results_max = kwargs.get("results_max")
-        self.sort = kwargs.get("sort")
-
-    def next_page(self) -> "Search":
-        """Returns a new search object with the next page of results, will raise ValueError
-        if the last page is the current one
-
-        Returns
-        --------
-        Search
-            The new search objects containing a new set of results.
-
-        Raises
-        -------
-        ValueError
-            There is no next page
-        """
-        if self.page == self.max_page:
-            raise ValueError("Reached last page already")
-
-        return self.to_page(self.page + 1)
-
-    def previous_page(self) -> "Search":
-        """Returns a new search object with the previous page of results, will raise
-        ValueError if the first page is the current one
-
-        Returns
-        --------
-        Search
-            The new search objects containing a new set of results.
-
-        Raises
-        -------
-        ValueError
-            There is no previous page
-        """
-        if self.page == 1:
-            raise ValueError("Reached first page already")
-
-        return self.to_page(self.page - 1)
-
-    def to_page(self, page: int) -> "Search":
-        """Returns a new search object with results to a specific page in the search results
-        allowing for fast navigation. Will raise ValueError if you attempt to navigate out
-        of bounds.
-
-        Parameters
-        -----------
-        page : int
-            A page number within the range 1 - max_page inclusive
-
-        Returns
-        --------
-        Search
-            The new search objects containing a new set of results.
-
-        Raises
-        -------
-        ValueError
-            This page does not exist
-        """
-        if page < 1 or page > self.max_page:
-            raise ValueError(f"Please pick a page between 1 and {self.max_page}")
-
-        return search(
-            self.category, query=self.query, page=page, sort=self.sort, **self.filters
-        )
-
-    def resort(self, new_sort: Tuple[str, str]) -> "Search":
-        """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
-
-        Parameters
-        -----------
-        new_sort : Tuple[str, str]
-            The new sorting tuple to check by
-
-        Returns
-        -------
-        Search
-            The new set of results with the updated sort order
-        """
-        return search(
-            self.category, query=self.query, page=1, sort=new_sort, **self.filters
-        )
-
-    def get_all_results(self):
-        """An expensive methods that iterates over every page of the search and returns all
-        the results. This may return more results than you expected if new page have fit the criteria
-        while iterating.
-
-        Returns
-        --------
-        List[Thumbnail]
-            The list of things you were searching for
-        """
-        search = self.to_page(1)
-        results = list(search)
-
-        while True:
-            try:
-                search = search.next_page()
-            except ValueError:
-                break
-            else:
-                results.extend(search)
-                LOGGER.info("Parsed page %s/%s", search.page, search.max_page)
-
-        return list(toolz.unique(results, key=lambda element: element.name))
-
-    def __repr__(self):
-        return f"<Search category={self.category.name} pages={self.page}/{self.max_page}, results={self._results}>"
-
-    def __getitem__(self, element):
-        return self._results.__getitem__(element)
-
-    def __delitem__(self, element):
-        self._results.__delitem__(element)
-
-    def __len__(self):
-        return self._results.__len__()
-
-    def __setitem__(self, key, value):
-        self._results.__setitem__(key, value)
-
-    def insert(self, index, value):
-        self._results.insert(index, value)
-
-    def __add__(self, sequence):
-        if not isinstance(sequence, Search):
-            raise TypeError(
-                f'can only concatenate Search (not "{sequence.__class__.__name__}") to Search'
-            )
-
-        return self._results + sequence.results
-
-    def __contains__(self, element):
-        return get(self._results, name=element.name) is not None
+__all__ = ["search", "parse_page", "login", "logout", "front_page", "parse_results"]
 
 
 def search(
@@ -196,7 +25,7 @@ def search(
     sort: Tuple[str, str] = None,
     page: int = 1,
     **filters,
-) -> Search:
+) -> ResultList:
     """Search for for a certain type of models and return a list of thumbnails of that
     model. This function was created to make full use of moddb's filter and sorting system as
     long as the appropriate parameters are passed. Because this function is a single one for every
@@ -222,7 +51,7 @@ def search(
 
     Returns
     --------
-    Search
+    ResultList
         The search object containing the current query settings (so at to be able to redo the search easily),
         pagination metadata and helper methods to navigate the list of results.
     """
@@ -235,52 +64,34 @@ def search(
     filter_parsed = {
         key: value.value for key, value in filters.items() if hasattr(value, "value")
     }
-    cat = ThumbnailType[category.name[0:-1]]
+
+    params = {
+        "filter": "t",
+        "kw": query,
+        "sort": sort_ready,
+        "game": game,
+        "year": filters.get("years", None),
+        **filter_parsed,
+    }
 
     html = get_page(
         url,
-        params={
-            "filter": "t",
-            "kw": query,
-            "sort": sort_ready,
-            "game": game,
-            "year": filters.get("years", None),
-            **filter_parsed,
-        },
+        params=params,
     )
 
-    search_raws = html.find("div", class_="table").find_all("div", recursive=False)[1:]
+    results, current_page, total_pages, total_results = _parse_results(html)
 
-    try:
-        pages = int(html.find("div", class_="pages").find_all()[-1].string)
-        page = int(html.find("span", class_="current").string)
-    except AttributeError:
-        LOGGER.info("Search query %s has less than 30 results (only one page)", url)
-        pages = 1
-        page = 1
-
-    results = []
-    for x in search_raws:
-        image = x.a.img["src"] if x.a.img else None
-        thumbnail = Thumbnail(url=x.a["href"], name=x.a["title"], type=cat, image=image)
-        results.append(thumbnail)
-
-    results_max = int(
-        normalize(html.find("h5", string=category.name.title()).parent.span.string)
-    )
-    return Search(
+    return ResultList(
         results=results,
-        max_page=pages,
-        page=page,
-        filters=filters,
-        category=category,
-        query=query,
-        results_max=results_max,
-        sort=sort,
+        total_pages=total_pages,
+        current_page=current_page,
+        params=params,
+        url=f"{BASE_URL}/{category.name}",
+        total_results=total_results,
     )
 
 
-def parse(url: str, *, page_type: ThumbnailType = None) -> Any:
+def parse_page(url: str, *, page_type: ThumbnailType = None) -> Any:
     """Parse a url and return the appropriate object.
 
     Parameters
@@ -300,10 +111,51 @@ def parse(url: str, *, page_type: ThumbnailType = None) -> Any:
     """
 
     html = get_page(url)
-    page_type = page_type or get_type_from(url)
+    page_type = page_type or get_page_type(url)
 
     model = getattr(sys.modules["moddb"], page_type.name.title())(html)
     return model
+
+
+def parse_results(url: str, *, params: dict = {}) -> ResultList:
+    """Parse a list of results and return them as a
+    list of thumbnails.
+
+    Parameters
+    -----------
+    url : str
+        The url of the result list to parse
+
+    Returns
+    --------
+    ResultList
+        The list of thumbnails, wrapped in a ResultList
+        so as to benefit from the helper methods that
+        help with navigation
+    """
+
+    resp = request(requests.Request("GET", url, params=params))
+    html = soup(resp.text)
+
+    results, current_page, total_pages, total_results = _parse_results(html)
+
+    parts = resp.url.split("?")
+    url = parts[0].split("/page")[0]
+
+    filters = {}
+    if len(parts) > 1:
+        for filter in parts[1].split("&"):
+            key, value = filter.split("=")
+            filters[key] = value
+
+    return ResultList(
+        results=results,
+        total_pages=total_pages,
+        current_page=current_page,
+        url=url,
+        total_results=total_results,
+        params=filters,
+    )
 
 
 def login(username: str, password: str) -> Member:

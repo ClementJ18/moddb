@@ -1,8 +1,8 @@
 from ..utils import concat_docs, LOGGER
-from .base import HardwareSoftwareMetaClass
-from .mixins import GetGamesMixin, GetWaresMixin
 from ..enums import SearchCategory, ThumbnailType
 from ..boxes import Thumbnail
+from .base import HardwareSoftwareMetaClass
+from .mixins import GetGamesMixin, GetWaresMixin
 
 
 @concat_docs

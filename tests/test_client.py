@@ -32,7 +32,7 @@ class TestClient:
 
     def test_posts(self):
         for url in mixed_urls:
-            e = moddb.parse(url)
+            e = moddb.parse_page(url)
             self.client.tracking(e) #follow
             self.client.tracking(e) #unfollow
 

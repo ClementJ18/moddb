@@ -5,7 +5,7 @@ class ModdbException(Exception):
     pass
 
 
-class AwaitingAuthorisation(ModdbException):
+class AwaitingAuthorisation(Exception):
     """This object is awaiting authorisation and can therefore not be accessed at the
     present time."""
 

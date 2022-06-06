@@ -286,7 +286,7 @@ def normalize(string: str) -> str:
     return string.replace(",", "").replace("members", "").replace("member", "").strip()
 
 
-def get_type(img: Tag) -> int:
+def get_media_type(img: Tag) -> int:
     """Determines the type of the image through some very hacky stuff, might break"""
     if img is None:
         return 2
@@ -296,7 +296,7 @@ def get_type(img: Tag) -> int:
         return 1
 
 
-def get_type_from(url):
+def get_page_type(url):
     """Get the page type based on a url.
 
     Parameters
@@ -332,32 +332,28 @@ def get_type_from(url):
     return page_type
 
 
-def get_page_number(html):
-    """Central function for retrieving the page numbers of result pages
+def ceildiv(a, b):
+    return -(a // -b)
 
-    Parameters
-    -----------
-    html : bs4.BeautifulSoup
-        The html to get the page numbers from
 
-    Returns
-    --------
-    Tuple[int, int]
-        The page and max_page
-    """
-    try:
-        max_page = int(html.find("div", class_="pages").find_all()[-1].string)
-    except AttributeError:
-        LOGGER.info("Has less than 30 comments (only one page)")
-        max_page = 1
+def get_list_stats(result_box, per_page=30):
+    stats = re.match(
+        r".*\(([0-9,]*) - ([0-9,]*) of ([0-9,]*)\)",
+        result_box.find("div", class_="normalcorner")
+        .find("div", class_="title")
+        .find("span", class_="heading")
+        .string,
+    )
 
-    try:
-        page = int(html.find("span", class_="current").string)
-    except AttributeError:
-        LOGGER.info("Has less than 30 results (only one page)")
-        page = 1
+    if not stats:  # less than a page
+        return 1, 1, None
 
-    return page, max_page
+    max_results = int(stats.group(2).replace(",", ""))
+    all_results = int(stats.group(3).replace(",", ""))
+    max_page = ceildiv(all_results, per_page)
+    current_page = ceildiv(max_results, per_page)
+
+    return current_page, max_page, all_results
 
 
 class Object:

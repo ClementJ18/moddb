@@ -1,7 +1,7 @@
 import bs4
 from typing import List, Tuple
 
-from ..utils import concat_docs, LOGGER, join, get_page, get_page_number
+from ..utils import concat_docs, LOGGER, join, get_page
 from .base import PageMetaClass, BaseMetaClass
 from .mixins import (
     GetAddonsMixin,
@@ -18,6 +18,7 @@ from ..boxes import (
     MemberStatistics,
     ResultList,
     CommentList,
+    _parse_results,
 )
 from ..enums import ThumbnailType, SearchCategory, TimeFrame, Membership, GroupCategory
 from .article import Blog
@@ -418,48 +419,17 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             "sort": f"{sort[0]}-{sort[1]}" if sort else None,
         }
 
-        return self._get_blogs(f"{self.url}/blogs/page/{index}", params=params)
-
-    def _get_blogs(self, url, *, params):
-        """Backend class so we can use it with ResultList"""
-        html = get_page(url, params=params)
-        try:
-            table = html.find("form", attrs={"name": "filterform"}).parent.find(
-                "div", class_="table"
-            )
-        except AttributeError:
-            table = None
-
-        if table is None:
-            return []
-
-        raw_blogs = table.find_all("div", recursive=False)[2:]
-        blogs = []
-        e = 0
-        for _ in range(len(raw_blogs)):
-            try:
-                heading = raw_blogs[e]
-            except IndexError:
-                break
-
-            try:
-                text = raw_blogs[e + 1]
-            except IndexError:
-                text = {"class": None}
-
-            blog_obj = Blog(heading=heading, text=text)
-            blogs.append(blog_obj)
-            e += 2
-
-        page, max_page = get_page_number(html)
+        url = f"{self.url}/blogs"
+        html = get_page(f"{url}/page/{index}", params=params)
+        results, current_page, total_pages, total_results = _parse_results(html)
 
         return ResultList(
-            results=blogs,
+            results=results,
             params=params,
             url=url,
-            action=self._get_blogs,
-            page=page,
-            max_page=max_page,
+            current_page=current_page,
+            total_pages=total_pages,
+            total_results=total_results,
         )
 
     def get_member_comments(

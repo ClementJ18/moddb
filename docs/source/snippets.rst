@@ -47,7 +47,7 @@ A simple little example, users have updates which happen when pages upload new a
 
     #now we want to get something using that user's account, like their profile
     with client:
-        member = moddb.parse("https://www.moddb.com/members/regularuser")
+        member = moddb.parse_page("https://www.moddb.com/members/regularuser")
 
     #now we can see this profile from the persepctive of RegularUser.
 

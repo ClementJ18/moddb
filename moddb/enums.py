@@ -89,7 +89,7 @@ class TeamCategory(enum.IntFlag):
         if self._name_ is not None:
             return self._name_
         members, uncovered = enum._decompose(cls, self._value_)
-        return " & ".join([str(m._name_ or m._value_) for m in members])
+        return "|".join([str(m._name_ or m._value_) for m in members])
 
     __str__ = __repr__
 
