@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request
+from tests.test_utils import patched_request, sample_list
 
 import moddb
 
@@ -18,7 +18,8 @@ class TestGame:
         addons = self.game.get_addons()
         self.game.get_addons(2)
         self.game.get_addons(licence=moddb.Licence.public_domain)
-        for addon in addons:
+        
+        for addon in sample_list(addons, 3):
             addon.parse()
 
     def test_get_articles(self):
@@ -26,7 +27,7 @@ class TestGame:
         self.game.get_articles(4)
         self.game.get_articles(category=moddb.ArticleCategory.news)
 
-        for article in articles:
+        for article in sample_list(articles, 3):
             article.parse()
 
     def test_get_comments(self):
@@ -38,20 +39,20 @@ class TestGame:
         self.game.get_files(4)
         self.game.get_files(category=moddb.FileCategory.demo)
 
-        for file in files:
+        for file in sample_list(files, 3):
             file.parse()
 
     def test_get_images(self):
         images = self.game.get_images()
 
-        for image in images[:10]:
+        for image in sample_list(images, 3):
             image.parse()
 
     def test_get_mods(self):
         mods = self.game.get_mods()
         self.game.get_mods(3)
 
-        for mod in mods:
+        for mod in sample_list(mods, 3):
             mod.parse()
 
     def test_get_reviews(self):
@@ -63,13 +64,13 @@ class TestGame:
         self.game.get_tutorials(3)
         self.game.get_tutorials(difficulty=moddb.Difficulty.basic)
 
-        for tutorial in tutorials:
+        for tutorial in sample_list(tutorials, 3):
             tutorial.parse()
 
     def test_get_videos(self):
         videos = self.game.get_videos()
 
-        for video in videos:
+        for video in sample_list(videos, 3):
             video.parse()
 
     def test_get_watchers(self):

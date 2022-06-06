@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request
+from tests.test_utils import patched_request, sample_list
 
 import moddb
 
@@ -19,7 +19,7 @@ class TestEngine:
         self.engine.get_articles(4)
         self.engine.get_articles(category=moddb.ArticleCategory.news)
 
-        for article in articles:
+        for article in sample_list(articles, 3):
             article.parse()
 
     def test_get_comments(self):
@@ -30,13 +30,13 @@ class TestEngine:
         games = self.engine.get_games()
         self.engine.get_games(3)
 
-        for game in games:
+        for game in sample_list(games, 3):
             game.parse()
 
     def test_get_images(self):
         images = self.engine.get_images()
 
-        for image in images[:10]:
+        for image in sample_list(images, 3):
             image.parse()
 
     def test_get_reviews(self):
@@ -48,13 +48,13 @@ class TestEngine:
         self.engine.get_tutorials(3)
         self.engine.get_tutorials(difficulty=moddb.Difficulty.basic)
 
-        for tutorial in tutorials:
+        for tutorial in sample_list(tutorials, 3):
             tutorial.parse()
 
     def test_get_videos(self):
         videos = self.engine.get_videos()
 
-        for video in videos:
+        for video in sample_list(videos, 3):
             video.parse()
 
     def test_get_watchers(self):

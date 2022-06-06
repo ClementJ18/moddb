@@ -1,5 +1,5 @@
 import os
-import logging
+import random
 from unittest.mock import patch
 
 import moddb
@@ -27,6 +27,13 @@ def patched_request(req):
 
     with open(path, "r") as f:
         return FakeResponse(f.read())
+
+def sample_list(l, k):
+    sample = min(k, len(l))
+    if l:
+        return random.sample(l, sample)
+
+    return []
 
 mod_urls = [
     "https://www.moddb.com/mods/edain-mod",

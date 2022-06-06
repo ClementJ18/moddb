@@ -629,7 +629,7 @@ class Client:
             True of the review was successfuly submitted.
 
         """
-        if not (2 < rating < 9) and review is None:
+        if not (2 < rating < 9) and text is None:
             raise ModdbException(
                 "Please include a review to justify such a low/high rating."
             )

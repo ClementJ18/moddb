@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request
+from tests.test_utils import patched_request, sample_list
 
 import moddb
 
@@ -18,7 +18,7 @@ class TestMod:
         addons = self.mod.get_addons()
         self.mod.get_addons(2)
         self.mod.get_addons(licence=moddb.Licence.public_domain)
-        for addon in addons:
+        for addon in sample_list(addons, 3):
             addon.parse()
 
     def test_get_articles(self):
@@ -26,7 +26,7 @@ class TestMod:
         self.mod.get_articles(4)
         self.mod.get_articles(category=moddb.ArticleCategory.news)
 
-        for article in articles:
+        for article in sample_list(articles, 3):
             article.parse()
 
     def test_get_comments(self):
@@ -38,13 +38,13 @@ class TestMod:
         self.mod.get_files(4)
         self.mod.get_files(category=moddb.FileCategory.demo)
 
-        for file in files:
+        for file in sample_list(files, 3):
             file.parse()
 
     def test_get_images(self):
         images = self.mod.get_images()
 
-        for image in images[:10]:
+        for image in sample_list(images, 3):
             image.parse()
 
     def test_get_reviews(self):
@@ -56,13 +56,13 @@ class TestMod:
         self.mod.get_tutorials(3)
         self.mod.get_tutorials(difficulty=moddb.Difficulty.basic)
 
-        for tutorial in tutorials:
+        for tutorial in sample_list(tutorials, 3):
             tutorial.parse()
 
     def test_get_videos(self):
         videos = self.mod.get_videos()
 
-        for video in videos:
+        for video in sample_list(videos, 3):
             video.parse()
 
     def test_get_watchers(self):
