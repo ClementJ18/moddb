@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/software/project-neptune-vr"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestSoftware:
     @pytest.fixture(params=[DEFAULT], autouse=True)

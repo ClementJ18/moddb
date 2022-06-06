@@ -1,7 +1,7 @@
 .. currentmodule:: moddb.base
 
-Key Functions & Objects
-========================
+Key Functions
+===============
 This page documents the functions and objects you will interact with at a high level. They are
 the most reliable source for obtaining pages and should preffered over passing the html to the
 models yourself.

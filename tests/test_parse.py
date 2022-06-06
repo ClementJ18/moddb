@@ -5,11 +5,14 @@ from tests import test_utils
 
 import moddb
 
-logger = logging.getLogger('moddb')
+logger = logging.getLogger("moddb")
 logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename='moddb.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+handler = logging.FileHandler(filename="moddb.log", encoding="utf-8", mode="w")
+handler.setFormatter(
+    logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(message)s")
+)
 logger.addHandler(handler)
+
 
 @patch("moddb.utils.request", new=test_utils.patched_request)
 class TestParsers:
@@ -61,7 +64,7 @@ class TestParsers:
         for url in test_utils.article_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
-            moddb.pages.Article(soup)  
+            moddb.pages.Article(soup)
 
     def test_parse_groups(self):
         for url in test_utils.group_urls:
@@ -73,7 +76,7 @@ class TestParsers:
         for url in test_utils.team_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
-            moddb.pages.Team(soup) 
+            moddb.pages.Team(soup)
 
     def test_parse_jobs(self):
         for url in test_utils.job_urls:

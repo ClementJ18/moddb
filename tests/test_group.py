@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/groups/humour-satire-parody"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestGroup:
     @pytest.fixture(params=[DEFAULT], autouse=True)
@@ -38,7 +39,7 @@ class TestGroup:
         self.group.get_files(4)
         self.group.get_files(category=moddb.FileCategory.demo)
 
-        for file in sample_list(files,3):
+        for file in sample_list(files, 3):
             file.parse()
 
     def test_get_images(self):

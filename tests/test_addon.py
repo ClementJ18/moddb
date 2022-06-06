@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/games/grand-theft-auto-san-andreas/addons/superman-sa-beta-v10"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestAddon:
     @pytest.fixture(params=[DEFAULT], autouse=True)

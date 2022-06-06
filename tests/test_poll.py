@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestPoll:
     @pytest.fixture(params=[DEFAULT], autouse=True)

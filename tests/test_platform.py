@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/platforms/pc"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestPlatform:
     @pytest.fixture(params=[DEFAULT], autouse=True)

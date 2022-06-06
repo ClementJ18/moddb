@@ -1,6 +1,6 @@
 import sys
-import time
 import random
+from pyrate_limiter import Duration, Limiter, RequestRate
 import requests
 
 from .utils import (
@@ -23,6 +23,8 @@ from .pages import Member
 from .enums import WatchType, Status
 from .errors import ModdbException
 from .base import parse_page
+
+COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
 
 
 @concat_docs
@@ -84,7 +86,11 @@ class Update(Thumbnail):
 
 @concat_docs
 class Request(Thumbnail):
-    """A thumbnail with two extra methods used to clear and accept requests."""
+    """A thumbnail with two extra methods used to clear and accept requests.
+    
+    Attributes
+    -----------
+    """
 
     def __init__(self, **attrs):
         super().__init__(**attrs)
@@ -167,7 +173,6 @@ class Client:
                 ).text
             )
         )
-        self._last_comment_time = 0
 
     def __repr__(self):
         return f"<Client username={self.member.name} level={self.member.profile.level}>"
@@ -556,11 +561,7 @@ class Client:
             The page's updated object containing the new comment and any other new data that
             has been posted since then
         """
-        if self._last_comment_time + 60 > time.time():
-            raise ModdbException(
-                "You must wait at least one minute between each comment"
-            )
-
+        COMMENT_LIMITER.try_acquire(self.member.name_id, delay=True)
         r = self._request(
             "POST",
             page.url,
@@ -572,8 +573,6 @@ class Client:
                 "comment": "Save comment",
             },
         )
-
-        self._last_comment_time = time.time()
 
         return page.__class__(soup(r.text))
 

@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/jobs/programmer-enviro-artist-audio-specialist-needed-to-expand-our-launched-game"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestJob:
     @pytest.fixture(params=[DEFAULT], autouse=True)

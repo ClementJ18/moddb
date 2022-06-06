@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/mods/edain-mod"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestMod:
     @pytest.fixture(params=[DEFAULT], autouse=True)

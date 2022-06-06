@@ -7,6 +7,7 @@ import moddb
 
 DEFAULT = "https://www.moddb.com/company/edainmod-dev-team"
 
+
 @patch("moddb.utils.request", new=patched_request)
 class TestTeam:
     @pytest.fixture(params=[DEFAULT], autouse=True)
@@ -80,7 +81,7 @@ class TestTeam:
         self.team.get_software(3)
 
         for software in sample_list(softwares, 3):
-            software.parse() 
+            software.parse()
 
     def test_get_tutorials(self):
         tutorials = self.team.get_tutorials()
@@ -88,7 +89,7 @@ class TestTeam:
         self.team.get_tutorials(difficulty=moddb.Difficulty.basic)
 
         for tutorial in sample_list(tutorials, 3):
-            tutorial.parse()   
+            tutorial.parse()
 
     def test_get_videos(self):
         videos = self.team.get_videos()

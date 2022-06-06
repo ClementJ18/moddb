@@ -5,7 +5,10 @@ from tests.test_utils import patched_request, sample_list
 
 import moddb
 
-DEFAULT = "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king"
+DEFAULT = (
+    "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king"
+)
+
 
 @patch("moddb.utils.request", new=patched_request)
 class TestGame:
@@ -18,7 +21,7 @@ class TestGame:
         addons = self.game.get_addons()
         self.game.get_addons(2)
         self.game.get_addons(licence=moddb.Licence.public_domain)
-        
+
         for addon in sample_list(addons, 3):
             addon.parse()
 

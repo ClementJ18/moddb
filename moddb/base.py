@@ -91,17 +91,13 @@ def search(
     )
 
 
-def parse_page(url: str, *, page_type: ThumbnailType = None) -> Any:
+def parse_page(url: str) -> Any:
     """Parse a url and return the appropriate object.
 
     Parameters
     ------------
     url : str
         The url to parse
-    page_type : Optional[ThumbnailType]
-        An optional argument which allows to specify a different model to be used to parse this page. In
-        general there is no reason to touch this but in case an error happens or you wish to force
-        something to happen out of the regular behavior the option is there.
 
     Returns
     --------
@@ -111,7 +107,7 @@ def parse_page(url: str, *, page_type: ThumbnailType = None) -> Any:
     """
 
     html = get_page(url)
-    page_type = page_type or get_page_type(url)
+    page_type = get_page_type(url)
 
     model = getattr(sys.modules["moddb"], page_type.name.title())(html)
     return model
