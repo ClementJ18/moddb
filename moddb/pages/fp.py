@@ -3,8 +3,8 @@ import re
 
 from ..boxes import Thumbnail
 from ..enums import ThumbnailType
-from ..utils import get_type_from, join, get_page
-from .opinion import Poll
+from ..utils import get_page_type, join, get_page
+from . import opinion
 
 
 class FrontPage:
@@ -61,7 +61,7 @@ class FrontPage:
                 url=x.a["href"],
                 summary=summary.string if summary else None,
                 image=image,
-                type=get_type_from(x.a["href"]),
+                type=get_page_type(x.a["href"]),
             )
 
             self.slider.append(thumbnail)
@@ -142,7 +142,9 @@ class FrontPage:
             for x in files
         ]
 
-        self.poll = Poll(get_page(html.find("div", class_="poll").form["action"]))
+        self.poll = opinion.Poll(
+            get_page(html.find("div", class_="poll").form["action"])
+        )
 
         self._html = html
 

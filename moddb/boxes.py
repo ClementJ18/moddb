@@ -15,22 +15,24 @@ from .enums import (
     GroupCategory,
     TeamCategory,
 )
+
 from .utils import (
     get_date,
+    get_list_stats,
     get_page,
     get_views,
     join,
     normalize,
     LOGGER,
     time_mapping,
-    get_type_from,
-    concat_docs,
+    get_page_type,
     get,
 )
 
 import re
 import sys
 import toolz
+import datetime
 import collections
 from typing import List, Any, Tuple, Union
 
@@ -470,110 +472,94 @@ class Thumbnail:
         return getattr(sys.modules["moddb"], self.type.name.title())(get_page(self.url))
 
 
-@concat_docs
-class Update(Thumbnail):
-    """An update object. Which is basically just a fancy thumbnail with a couple extra attributes and
-    methods.
+def _parse_results(html):
+    result_box = html.find("div", class_="normalbox browsebox")
+    try:
+        search_raws = (
+            result_box.find("div", class_="inner")
+            .find("div", class_="table")
+            .find_all("div", class_=["rowcontent"])
+        )
+    except AttributeError:
+        return [], 1, 1, 0
 
-    Attributes
-    -----------
-    updates : List[Thumbnail]
-        A list of thumbnail objects of the things thave have been posted (new files, new images)
-    """
+    results = []
+    try:
+        for obj in search_raws:
+            date = obj.find("time")
+            summary = obj.find("p")
+            results.append(
+                Thumbnail(
+                    name=obj.a["title"],
+                    url=obj.a["href"],
+                    image=obj.a.img["src"],
+                    type=get_page_type(join(obj.a["href"])),
+                    summary=summary.string if summary else None,
+                    date=get_date(date["datetime"]) if date else None,
+                )
+            )
+    except (TypeError, KeyError):
+        # parse as a title-content pair of articles
+        LOGGER.info("Parsing articles as key-pair list")
+        for title, content in zip(search_raws[::2], search_raws[1::2]):
+            date = title.find("time")
+            url = title.find("h4").a
+            results.append(
+                Thumbnail(
+                    name=url.text,
+                    url=url["href"],
+                    image=None,
+                    type=get_page_type(join(url["href"])),
+                    summary=content.text,
+                    date=get_date(date["datetime"]) if date else None,
+                )
+            )
 
-    def __init__(self, **attrs):
-        super().__init__(**attrs)
+    current_page, total_page, total_results = get_list_stats(result_box)
+    if total_results is None:
+        total_results = len(results)
 
-        self.updates = attrs.get("updates")
-        self._unfollow_url = join(attrs.get("unfollow"))
-        self._clear_url = join(attrs.get("clear"))
-        self._client = attrs.get("client")
-
-    def __repr__(self):
-        return f"<Update name={self.name} type={self.type.name} updates={len(self.updates)}>"
-
-    def clear(self):
-        """Clears all updates
-
-        Raises
-        -------
-        ModdbException
-            An error has occured while trying to clear the updates for this page
-
-        Returns
-        --------
-        bool
-            True if the updates were successfully cleared
-        """
-        r = self._client._request("POST", self._clear_url, data={"ajax": "t"})
-
-        return "successfully removed" in r.json()["text"]
-
-    def unfollow(self):
-        """Unfollows the page. This will also clear the updates
-
-        Raises
-        -------
-        ModdbException
-            An error has occured while trying to unfollow this page
-
-        Returns
-        --------
-        bool
-            True if the page was successfully unfollowed
-        """
-        r = self._client._request("POST", self._unfollow_url, data={"ajax": "t"})
-
-        return "no longer watching" in r.json()["text"]
+    return results, current_page, total_page, total_results
 
 
-@concat_docs
-class Request(Thumbnail):
-    """A thumbnail with two extra methods used to clear and accept requests."""
+def _parse_comments(html):
+    comments = []
+    comment_box = html.find("div", id="comments")
+    if comment_box is None:
+        return [], 1, 1, 0
 
-    def __init__(self, **attrs):
-        super().__init__(**attrs)
+    current_page, total_page, total_results = get_list_stats(comment_box)
 
-        self._decline = join(attrs.get("decline"))
-        self._accept = join(attrs.get("accept"))
-        self._client = attrs.get("client")
+    try:
+        url = html.find("meta", property="og:url")["content"]
+    except TypeError:
+        url = join(html.find("a", itemprop="mainEntityOfPage")["href"])
 
-    def accept(self):
-        """Accept the friend request.
+    comments_raw = comment_box.find("div", class_=["tablecomments"]).find_all(
+        "div", class_="row", recursive=False
+    )
+    if total_results is None:
+        total_results = len(comments_raw)
 
-        Raises
-        -------
-        ModdbException
-            An error has occured while trying to accept the request
+    for raw in comments_raw:
+        comment = Comment(raw)
+        comment._url = f"{url}/page/{current_page}"
+        if comment.position == 1:
+            try:
+                comments[-1].children.append(comment)
+            except IndexError:
+                comments.append(MissingComment(0))
+                comments[-1].children.append(comment)
+        elif comment.position == 2:
+            try:
+                comments[-1].children[-1].children.append(comment)
+            except IndexError:
+                comments[-1].children.append(MissingComment(1))
+                comments[-1].children[-1].children.append(comment)
+        else:
+            comments.append(comment)
 
-        Returns
-        --------
-        bool
-            True if the request was successfully accepted
-        """
-        r = self._client._request("POST", self._accept, data={"ajax": "t"})
-
-        return "now friends with" in r.json()["text"]
-
-    def decline(self):
-        """Decline the friend request
-
-        Raises
-        -------
-        ModdbException
-            An error has occured while trying to decline the request
-
-        Returns
-        --------
-        bool
-            True if the page was successfully declined
-        """
-        r = self._client._request("POST", self._decline, data={"ajax": "t"})
-
-        return "successfully removed" in r.json()["text"]
-
-    def __repr__(self):
-        return f"<Request from={self.name}>"
+    return comments, current_page, total_page, total_results
 
 
 class Comment:
@@ -635,6 +621,7 @@ class Comment:
         )
         self.date = get_date(html.find("time")["datetime"])
         actions = html.find("span", class_="actions")
+        self._fetch_time = datetime.datetime.utcnow()
 
         position = html["class"]
         if "reply1" in position:
@@ -683,7 +670,7 @@ class Comment:
         self.location = html.find("a", class_="related")
         if self.location is not None:
             url = join(self.location["href"])
-            page_type = get_type_from(url)
+            page_type = get_page_type(url)
             self.location = Thumbnail(
                 name=self.location.string, url=url, type=page_type
             )
@@ -712,7 +699,10 @@ class Comment:
             be good to continue using it.
         """
 
-        return False
+        return (
+            self._fetch_time + datetime.timedelta(minute=30)
+            > datetime.datetime.utcnow()
+        )
 
     def __repr__(self):
         return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
@@ -745,6 +735,9 @@ class MissingComment:
 
     def __repr__(self):
         return f"<MissingComment position={self.position}>"
+
+    def is_stale(self):
+        return True
 
 
 class MemberProfile:
@@ -1033,37 +1026,40 @@ class ModDBList(collections.abc.MutableSequence):
 
     Attributes
     -----------
-    page : int
-        The page of results this page represents
-    max_page : int
-        The maximum amount of result pages available
-    _results : list
-        The list of results this object emulates
-    _params : dict
-        the dict of pre-processed params (filters, query & sort) that lead to this
-        result list, can be unprocessed params in some occasions
-    _url : str
-        The url to getting this list of results, also contains what page the list of
-        results is from
-    _action : callable
-        The callable that is used when methods such as next_page or previous_page are
-        used to get another set of results. Must be able to take a positional argument `url`
-        and a keyword argument `params`.
+    current_page : int
+        The page of results this objects represents
+    total_pages : int
+        The total amount of result pages available
+    total_results : int
+        The total amount of results available
     """
 
     def __init__(self, **kwargs):
-        self._results = kwargs.get("results")
-        self._params = kwargs.get("params", {})
-        self._url = kwargs.get("url")
-        self._action = kwargs.get("action")
-        self.max_page = kwargs.get("max_page")
-        self.page = kwargs.get("page")
+        self._results = kwargs.pop("results")
+        self._params = kwargs.pop("params", {})
+        self._url = kwargs.pop("url")
+        self.total_pages = kwargs.pop("total_pages")
+        self.current_page = kwargs.pop("current_page")
+        self.total_results = kwargs.pop("total_results")
 
-    def _do_action(self, url, params={}):
-        if params:
-            return self._action(url, params=params)
+    def _parse_method(self, html):
+        raise NotImplementedError
 
-        return self._action(url)
+    def _do_request(self, **kwargs):
+        page = kwargs.pop("page", self.current_page)
+        params = {**self._params, **kwargs}
+
+        html = get_page(f"{self._url}/page/{page}", params=params)
+        results, current_page, total_pages, total_results = self._parse_method(html)
+
+        return self.__class__(
+            results=results,
+            params=params,
+            url=self._url,
+            total_pages=total_pages,
+            current_page=current_page,
+            total_results=total_results,
+        )
 
     def next_page(self) -> Union["ResultList", "CommentList"]:
         """Returns the next page of results as either a CommentList if you are retriving comments or
@@ -1079,10 +1075,10 @@ class ModDBList(collections.abc.MutableSequence):
         ValueError
             There is no next page
         """
-        if self.page == self.max_page:
+        if self.current_page == self.total_pages:
             raise ValueError("Reached last page already")
 
-        return self.to_page(self.page + 1)
+        return self.to_page(self.current_page + 1)
 
     def previous_page(self) -> Union["ResultList", "CommentList"]:
         """Returns the previous page of results as either a CommentList if you are retriving comments or
@@ -1098,10 +1094,10 @@ class ModDBList(collections.abc.MutableSequence):
         ValueError
             There is no previous page
         """
-        if self.page == 1:
+        if self.current_page == 1:
             raise ValueError("Reached first page already")
 
-        return self.to_page(self.page - 1)
+        return self.to_page(self.current_page - 1)
 
     def to_page(self, page: int) -> Union["ResultList", "CommentList"]:
         """Returns the desired page of results as either a CommentList if you are retriving comments or
@@ -1122,11 +1118,10 @@ class ModDBList(collections.abc.MutableSequence):
         ValueError
             This page does not exist
         """
-        if page < 1 or page > self.max_page:
-            raise ValueError(f"Please pick a page between 1 and {self.max_page}")
+        if page < 1 or page > self.total_pages:
+            raise ValueError(f"Please pick a page between 1 and {self.total_pages}")
 
-        new_url = self._url.replace(self._url.split("/")[-1], str(page))
-        return self._do_action(new_url, params=self._params)
+        return self._do_request(page=page)
 
     def get_all_results(self):
         """An expensive methods that iterates over every page of the result query and returns all
@@ -1148,7 +1143,9 @@ class ModDBList(collections.abc.MutableSequence):
                 break
             else:
                 results.extend(search)
-                LOGGER.info("Parsed page %s/%s", search.page, search.max_page)
+                LOGGER.info(
+                    "Parsed page %s/%s", search.current_page, search.total_pages
+                )
 
         def key_check(element):
             if isinstance(element, Comment):
@@ -1160,7 +1157,7 @@ class ModDBList(collections.abc.MutableSequence):
         return search
 
     def __repr__(self):
-        return f"<{self.__class__.__name__} pages={self.page}/{self.max_page}, results={self._results}>"
+        return f"<{self.__class__.__name__} pages={self.current_page}/{self.total_pages}, results={self._results}>"
 
     def __getitem__(self, element):
         return self._results.__getitem__(element)
@@ -1188,11 +1185,16 @@ class ResultList(ModDBList):
 
     Attributes
     -----------
-    page : int
-        The page of results this page represents
-    max_page : int
-        The maximum amount of result pages available
+    current_page : int
+        The page of results this objects represents
+    total_pages : int
+        The total amount of result pages available
+    total_results : int
+        The total amount of results available
     """
+
+    def _parse_method(self, html):
+        return _parse_results(html)
 
     def resort(self, new_sort: Tuple[str, str]) -> "ResultList":
         """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
@@ -1207,8 +1209,7 @@ class ResultList(ModDBList):
         ResultList
             The new set of results with the updated sort order
         """
-        self._params["sort"] = f"{new_sort[0]}-{new_sort[1]}"
-        return self._do_action(self._url, params=self._params)
+        return self._do_request(sort=f"{new_sort[0]}-{new_sort[1]}")
 
     def __contains__(self, element):
         return get(self._results, name=element.name) is not None
@@ -1220,11 +1221,16 @@ class CommentList(ModDBList):
 
     Attributes
     -----------
-    page : int
-        The page of comments this page represents
-    max_page : int
-        The maximum amount of comment pages available
+    current_page : int
+        The page of results this objects represents
+    total_pages : int
+        The total amount of result pages available
+    total_results : int
+        The total amount of results available
     """
+
+    def _parse_method(self, html):
+        return _parse_comments(html)
 
     def __contains__(self, element):
         return get(self._results, name=element.name) is not None

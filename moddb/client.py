@@ -4,24 +4,131 @@ import random
 import requests
 
 from .utils import (
+    concat_docs,
     generate_login_cookies,
+    join,
     soup,
-    get_type_from,
+    get_page_type,
     get_date,
     BASE_URL,
-    get_page_number,
     generate_hash,
     get,
     LOGGER,
     user_agent_list,
     raise_for_status,
+    LIMITER,
 )
-from .boxes import Update, Thumbnail, Request, Comment, ResultList
+from .boxes import Thumbnail, Comment, ResultList, _parse_results
 from .pages import Member
-from .enums import ThumbnailType, WatchType, Status
+from .enums import WatchType, Status
 from .errors import ModdbException
-from .base import parse
-from .utils import LIMITER
+from .base import parse_page
+
+
+@concat_docs
+class Update(Thumbnail):
+    """An update object. Which is basically just a fancy thumbnail with a couple extra attributes and
+    methods.
+
+    Attributes
+    -----------
+    updates : List[Thumbnail]
+        A list of thumbnail objects of the things thave have been posted (new files, new images)
+    """
+
+    def __init__(self, **attrs):
+        super().__init__(**attrs)
+
+        self.updates = attrs.get("updates")
+        self._unfollow_url = join(attrs.get("unfollow"))
+        self._clear_url = join(attrs.get("clear"))
+        self._client = attrs.get("client")
+
+    def __repr__(self):
+        return f"<Update name={self.name} type={self.type.name} updates={len(self.updates)}>"
+
+    def clear(self):
+        """Clears all updates
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to clear the updates for this page
+
+        Returns
+        --------
+        bool
+            True if the updates were successfully cleared
+        """
+        r = self._client._request("POST", self._clear_url, data={"ajax": "t"})
+
+        return "successfully removed" in r.json()["text"]
+
+    def unfollow(self):
+        """Unfollows the page. This will also clear the updates
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to unfollow this page
+
+        Returns
+        --------
+        bool
+            True if the page was successfully unfollowed
+        """
+        r = self._client._request("POST", self._unfollow_url, data={"ajax": "t"})
+
+        return "no longer watching" in r.json()["text"]
+
+
+@concat_docs
+class Request(Thumbnail):
+    """A thumbnail with two extra methods used to clear and accept requests."""
+
+    def __init__(self, **attrs):
+        super().__init__(**attrs)
+
+        self._decline = join(attrs.get("decline"))
+        self._accept = join(attrs.get("accept"))
+        self._client = attrs.get("client")
+
+    def accept(self):
+        """Accept the friend request.
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to accept the request
+
+        Returns
+        --------
+        bool
+            True if the request was successfully accepted
+        """
+        r = self._client._request("POST", self._accept, data={"ajax": "t"})
+
+        return "now friends with" in r.json()["text"]
+
+    def decline(self):
+        """Decline the friend request
+
+        Raises
+        -------
+        ModdbException
+            An error has occured while trying to decline the request
+
+        Returns
+        --------
+        bool
+            True if the page was successfully declined
+        """
+        r = self._client._request("POST", self._decline, data={"ajax": "t"})
+
+        return "successfully removed" in r.json()["text"]
+
+    def __repr__(self):
+        return f"<Request from={self.name}>"
 
 
 class Client:
@@ -133,14 +240,14 @@ class Client:
                 Update(
                     name=thumbnail["title"],
                     url=thumbnail["href"],
-                    type=get_type_from(thumbnail["href"]),
+                    type=get_page_type(thumbnail["href"]),
                     image=thumbnail.img["src"],
                     client=self,
                     unfollow=unfollow,
                     clear=clear,
                     updates=[
                         Thumbnail(
-                            name=x.string, url=x["href"], type=get_type_from(x["href"])
+                            name=x.string, url=x["href"], type=get_page_type(x["href"])
                         )
                         for x in updates_raw
                     ],
@@ -175,7 +282,7 @@ class Client:
                 Request(
                     name=thumbnail["title"],
                     url=thumbnail["href"],
-                    type=get_type_from(thumbnail["href"]),
+                    type=get_page_type(thumbnail["href"]),
                     image=thumbnail.img["src"],
                     client=self,
                     accept=accept,
@@ -203,35 +310,16 @@ class Client:
             List of watched things
 
         """
-        url = f"{BASE_URL}/messages/watching/{category.name}s/page/{page}"
-        html = soup(self._request("GET", url).text)
-
-        results_raw = html.find("div", class_="table").find_all("div", recursive=False)[
-            1:
-        ]
-
-        try:
-            results = [
-                Thumbnail(
-                    url=x.a["href"],
-                    name=x.a["title"],
-                    type=ThumbnailType[category.name],
-                    image=x.a.img["src"],
-                )
-                for x in results_raw
-            ]
-        except TypeError:
-            LOGGER.info("No %ss watched for %s", category.name, self.member.name)
-            results = []
-
-        page, max_page = get_page_number(html)
+        url = f"{BASE_URL}/messages/watching/{category.name}s"
+        html = soup(self._request("GET", f"{url}/page/{page}").text)
+        results, current_page, total_pages, total_results = _parse_results(html)
 
         return ResultList(
             results=results,
             url=url,
-            action=self.get_watched,
-            page=page,
-            max_page=max_page,
+            current_page=current_page,
+            total_pages=total_pages,
+            total_results=total_results,
         )
 
     def tracking(self, page):
@@ -533,7 +621,7 @@ class Client:
             True if the comment was successfully deleted
         """
         with self:
-            page = parse(comment._url)
+            page = parse_page(comment._url)
             updated_comment = get(page.comments, id=comment.id)
 
         r = self._comment_state_update(updated_comment)
@@ -563,7 +651,7 @@ class Client:
             True if the comment was successfully undeleted
         """
         with self:
-            page = parse(comment._url)
+            page = parse_page(comment._url)
             updated_comment = get(
                 page._get_comments_from_url(comment._url, show_deleted=True),
                 id=comment.id,
@@ -635,7 +723,7 @@ class Client:
             )
 
         with self:
-            page = parse(page.url)
+            page = parse_page(page.url)
 
         r = self._request(
             "POST",

@@ -1,9 +1,49 @@
 import re
 
-from ..utils import concat_docs, get_date, join
-from ..boxes import Thumbnail, Option
+from ..utils import concat_docs, get_date, get_list_stats, join
+from ..boxes import ModDBList, Thumbnail, Option
 from ..enums import ThumbnailType
 from .base import BaseMetaClass
+
+
+class ReviewList(ModDBList):
+    """Represents a list of reviews
+
+    Attributes
+    -----------
+    current_page : int
+        The page of results this objects represents
+    total_pages : int
+        The total amount of result pages available
+    total_results : int
+        The total amount of results available
+    """
+
+    def _parse_method(self, html):
+        return parse_reviews(html)
+
+
+def parse_reviews(html):
+    review_box = html.find("div", class_="normalbox browsebox")
+
+    try:
+        raw_ratings = (
+            review_box.find("div", class_="inner")
+            .find("div", class_="table")
+            .find_all("div", class_=["rowrating"], recursive=False)
+        )
+    except AttributeError:
+        return [], 1, 1, 0
+
+    reviews = []
+    for rating in raw_ratings:
+        next_sibling = rating.find_next_sibling("div", class_=["rowcontent"])
+        if next_sibling is not None and "rowcontentnext" in next_sibling["class"]:
+            reviews.append(Review(rating=rating, text=next_sibling))
+        else:
+            reviews.append(Review(rating=rating))
+
+    return reviews, *get_list_stats(review_box, 10)
 
 
 @concat_docs
@@ -50,7 +90,7 @@ class Review:
         else:
             self.text = None
 
-        review = attrs.get("review")
+        review = attrs.get("rating")
         self.rating = int(review.span.string)
 
         # id and hash are none if the review doesn't have content
