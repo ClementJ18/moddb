@@ -36,6 +36,9 @@ jobs:
       run: |
         echo ${{ github.event.pull_request.base.ref }}
         echo ${{ github.event.pull_request.base.ref_name }}
+    - name: Black and flake
+      run: |
+        bash run_lint.sh
     - name: Test changes with light tests
       run: |
         bash run_tests.sh --reruns 3 --reruns-delay 15 

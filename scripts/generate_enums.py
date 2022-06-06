@@ -8,12 +8,6 @@ logging.basicConfig(level=logging.INFO)
 
 enum_dict = [
     {
-        "name": "SoftwareCategory",
-        "url": "https://www.moddb.com/software",
-        "doc": "The category of the software",
-        "key": "category"
-    },
-    {
         "name": "Difficulty",
         "url": "https://www.moddb.com/tutorials",
         "doc": "Difficulty of the tutorial",
@@ -93,6 +87,7 @@ enum_dict = [
     },
 ]
 
+
 def generate_member_list(html, enum):
     soup = bs4.BeautifulSoup(html, "html.parser")
     selects = soup.find("select", attrs={"name": enum["key"]}).find_all("option")
@@ -103,13 +98,13 @@ def generate_member_list(html, enum):
     for select in selects:
         if not select["value"]:
             continue
-        
+
         name_raw = select.string.lower().replace("-", "").strip().replace("3d", "d3").replace("2d", "d2").replace("4x", "x4")
         name = re.sub(r'[\s\&\/\',]+', '_', name_raw)
 
         if name in names:
             name = f'sub_{name}'
-        
+
         members.append((int(select["value"]), name))
         names.append(name)
         max_size = len(name) if len(name) > max_size else max_size
@@ -117,6 +112,7 @@ def generate_member_list(html, enum):
     logging.info("%s: size %s max size %s", enum["name"], len(members), max_size)
     logging.debug("%s: %s", len(selects), selects)
     return members, max_size
+
 
 def generate_string(members, max_size, enum):
     string = f'class {enum["name"]}(enum.Enum):\n'
@@ -128,11 +124,12 @@ def generate_string(members, max_size, enum):
 
     return string
 
+
 def generate_enums(enums):
     string = "# GENERATED AUTOMATICALLY, DO NOT EDIT\n"
     with open("scripts/data/enums_base.txt", "r") as f:
         string += f.read()
-    
+
     for enum in enums:
         r = requests.get(enum["url"])
         members, max_size = generate_member_list(r.text, enum)
@@ -145,4 +142,3 @@ def generate_enums(enums):
 
 if __name__ == '__main__':
     generate_enums(enum_dict)
-

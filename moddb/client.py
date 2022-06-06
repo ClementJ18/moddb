@@ -87,7 +87,7 @@ class Update(Thumbnail):
 @concat_docs
 class Request(Thumbnail):
     """A thumbnail with two extra methods used to clear and accept requests.
-    
+
     Attributes
     -----------
     """
@@ -167,11 +167,7 @@ class Client:
         LOGGER.info("Login successful for %s", username)
 
         self.member = Member(
-            soup(
-                self._request(
-                    "GET", f"{BASE_URL}/members/{username.replace('_', '-')}"
-                ).text
-            )
+            soup(self._request("GET", f"{BASE_URL}/members/{username.replace('_', '-')}").text)
         )
 
     def __repr__(self):
@@ -195,14 +191,10 @@ class Client:
             "User-Agent": random.choice(user_agent_list),
         }
 
-        req = requests.Request(
-            method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {})
-        )
+        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
         prepped = self._session.prepare_request(req)
 
-        r = self._session.send(
-            prepped, allow_redirects=kwargs.pop("allow_redirects", True)
-        )
+        r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
         raise_for_status(r)
 
         return r
@@ -228,10 +220,7 @@ class Client:
         )
         raw = html.find_all("span", string=strings)
         objects = [
-            e.parent.parent.parent.find("div", class_="table").find_all(
-                "div", recursive=False
-            )
-            for e in raw
+            e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False) for e in raw
         ]
 
         objects_raw = [item for sublist in objects for item in sublist[:-1]]
@@ -251,9 +240,7 @@ class Client:
                     unfollow=unfollow,
                     clear=clear,
                     updates=[
-                        Thumbnail(
-                            name=x.string, url=x["href"], type=get_page_type(x["href"])
-                        )
+                        Thumbnail(name=x.string, url=x["href"], type=get_page_type(x["href"]))
                         for x in updates_raw
                     ],
                     date=get_date(update.find("time")["datetime"]),
@@ -274,9 +261,7 @@ class Client:
         html = soup(r.text)
         requests = []
         raw = html.find("span", string="Friend Requests")
-        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all(
-            "div", recursive=False
-        )
+        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
 
         for request in raw_requests[:-1]:
             thumbnail = request.find("a")
@@ -717,9 +702,7 @@ class Client:
 
         """
         if not (2 < rating < 9) and text is None:
-            raise ModdbException(
-                "Please include a review to justify such a low/high rating."
-            )
+            raise ModdbException("Please include a review to justify such a low/high rating.")
 
         with self:
             page = parse_page(page.url)

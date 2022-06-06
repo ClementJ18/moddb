@@ -1,0 +1,10 @@
+[tool.flakeheaven]
+max_line_length = 110
+exclude = ["__init__.py"]
+
+[tool.black]
+line-length = 110
+
+[tool.flakeheaven.plugins]
+pyflakes = ["+*", "-F821"]
+"flake8-*" = ["+*"]

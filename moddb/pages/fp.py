@@ -40,9 +40,7 @@ class FrontPage:
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
-        slider = html.find("div", class_="rotatorholder").find_all(
-            "div", class_="rotatorbox"
-        )
+        slider = html.find("div", class_="rotatorholder").find_all("div", class_="rotatorbox")
         self.slider = []
         for x in slider:
             name = x.a.find("h2")
@@ -142,9 +140,7 @@ class FrontPage:
             for x in files
         ]
 
-        self.poll = opinion.Poll(
-            get_page(html.find("div", class_="poll").form["action"])
-        )
+        self.poll = opinion.Poll(get_page(html.find("div", class_="poll").form["action"]))
 
         self._html = html
 

@@ -99,9 +99,7 @@ class Article(BaseMetaClass):
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {
-                x.string: join(x["href"]) for x in raw_tags if x.string is not None
-            }
+            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             self.tags = {}
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
@@ -111,9 +109,7 @@ class Article(BaseMetaClass):
 
         self.intro = html.find("p", itemprop="description").string
         author = html.find("span", itemprop="author").span.a
-        self.author = Thumbnail(
-            name=author.string, url=author["href"], type=ThumbnailType.member
-        )
+        self.author = Thumbnail(name=author.string, url=author["href"], type=ThumbnailType.member)
 
         self.date = get_date(html.find("time", itemprop="datePublished")["datetime"])
         self.html = str(html.find("div", itemprop="articleBody"))
@@ -123,12 +119,8 @@ class Article(BaseMetaClass):
 
         if self.category == ArticleCategory.tutorials:
             cat = html.find("span", itemprop="proficiencyLevel").nextSibling.strip()
-            self.tutorial_category = TutorialCategory[
-                cat.replace("/", "_").replace(" ", "_").lower()
-            ]
-            self.difficulty = Difficulty[
-                html.find("span", itemprop="proficiencyLevel").string.lower()
-            ]
+            self.tutorial_category = TutorialCategory[cat.replace("/", "_").replace(" ", "_").lower()]
+            self.difficulty = Difficulty[html.find("span", itemprop="proficiencyLevel").string.lower()]
 
     def __repr__(self):
         return f"<Article title={self.name} type={self.category.name}>"
@@ -162,9 +154,7 @@ class Blog(BaseMetaClass):
 
     def __init__(self, *, heading, text):
         author = heading.find("span", class_="subheading").a
-        self.author = Thumbnail(
-            url=author["href"], name=author.string, type=ThumbnailType.member
-        )
+        self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
 
         self.date = get_date(heading.find("span", class_="date").time["datetime"])
 

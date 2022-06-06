@@ -99,17 +99,13 @@ class Group(PageMetaClass, GetAddonsMixin):
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {
-                x.string: join(x["href"]) for x in raw_tags if x.string is not None
-            }
+            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
         except AttributeError:
             LOGGER.info("Entity '%s' has no tags (private)", self.name)
             self.tags = {}
 
         try:
-            self.embed = html.find("input", type="text", class_="text textembed")[
-                "value"
-            ]
+            self.embed = html.find("input", type="text", class_="text textembed")["value"]
         except TypeError:
             try:
                 self.embed = str(html.find_all("textarea")[1].a)
@@ -120,12 +116,10 @@ class Group(PageMetaClass, GetAddonsMixin):
         self.suggestions = self._get_suggestions(html)
 
         try:
-            articles_raw = html.find(
-                "span", string="Articles"
-            ).parent.parent.parent.find("div", class_="table")
-            thumbnails = articles_raw.find_all(
-                "div", class_="row rowcontent clear", recursive=False
+            articles_raw = html.find("span", string="Articles").parent.parent.parent.find(
+                "div", class_="table"
             )
+            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear", recursive=False)
             self.articles = [
                 Thumbnail(
                     name=x.a["title"],
@@ -145,9 +139,7 @@ class Group(PageMetaClass, GetAddonsMixin):
             self.description = html.find("div", id="profiledescription").text
         except AttributeError:
             self.description = (
-                html.find("div", class_=["column", "span-all"])
-                .find("div", class_="tooltip")
-                .parent.text
+                html.find("div", class_=["column", "span-all"]).find("div", class_="tooltip").parent.text
             )
 
         self.medias = self._get_media(2, html=html)
@@ -331,9 +323,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
                 .find_all("div", recursive=False)[:-2]
             )
             self.groups = [
-                Thumbnail(
-                    name=div.a["title"], url=div.a["href"], type=ThumbnailType.group
-                )
+                Thumbnail(name=div.a["title"], url=div.a["href"], type=ThumbnailType.group)
                 for div in groups_raw
             ]
         except AttributeError:
@@ -358,9 +348,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
                 .find_all("div", recursive=False)
             )
             self.blogs = [
-                Thumbnail(
-                    name=blog.a.string, url=blog.a["href"], type=ThumbnailType.blog
-                )
+                Thumbnail(name=blog.a.string, url=blog.a["href"], type=ThumbnailType.blog)
                 for blog in blogs_raw[:-2]
             ]
         except (TypeError, AttributeError):
@@ -368,9 +356,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             LOGGER.info("Member '%s' has no blog suggestions", self.name)
 
         try:
-            friends = html.find("div", class_="table tablerelated").find_all(
-                "div", recursive=False
-            )[1:]
+            friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
             self.friends = [
                 Thumbnail(
                     name=friend.a["title"],
@@ -432,9 +418,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             total_results=total_results,
         )
 
-    def get_member_comments(
-        self, index: int = 1, *, show_deleted: bool = False
-    ) -> CommentList:
+    def get_member_comments(self, index: int = 1, *, show_deleted: bool = False) -> CommentList:
         """Gets a page of all the comments a member has posted.
 
         Parameters
