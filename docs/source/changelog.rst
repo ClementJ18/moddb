@@ -8,6 +8,40 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.8.0
+-------
+Bug Fixes
+##########
+* Improved parsing stability accross the board
+* Fixed :func:`Addon.save`
+* Fixed large memory usage of saving addons
+* 
+
+New Features
+#############
+* Ratelimits implemented: 1 request every 5 seconds up to 30 every 5 minutes.
+* New error :class:`AwaitingAuthorisation`
+* Monolithic pages.py split into submodule
+* `parse` renamed to `parse_page`
+* Added :func:`parse_results` to allow parsing any result list regardless of native support (such as tags)
+* New support for mirrors as with the class :class:`Mirror` and `mirror` keyword for :func:`Addon.save` and :func:`File.save`
+* New :func:`Comment.is_stale` method to make it easier to detect if a comment can still be used
+* Renamed `ResultList.page` to `ResultList.current_page`
+* Renamed `ResultList.max_page` to `ResultList.total_pages`
+* Added `ResultList.total_results` to make it easier to access the total number of results
+* Updated enums and included script for future updates
+* Added `get_watcher` method to several page objects
+
+
+Removed Features
+#################
+* Remove :class:`Search`, fused together back with :class:`ResultList`
+* Removed `feedparser` dependency, RSS feed methods now only retun the URL
+* Removed under the hood `robobrowser` dependency
+* Removed obsolete `Engine.get_addons` method
+* 
+
+
 v0.7
 -----
 Bug Fixes

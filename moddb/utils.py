@@ -1,3 +1,4 @@
+import bs4
 from .enums import ThumbnailType
 from .errors import ModdbException, AwaitingAuthorisation
 
@@ -126,6 +127,7 @@ def get_date(d: str) -> datetime.datetime:
 
 
 def prepare_request(req: requests.Request, session):
+    """Prepared a request with the appropriate cookies"""
     cookies = requests.utils.dict_from_cookiejar(session.cookies)
 
     if req.cookies is not None:
@@ -140,6 +142,7 @@ def prepare_request(req: requests.Request, session):
 
 
 def raise_for_status(response):
+    """Raise any error that could have occured"""
     try:
         text = response.json()
         if text.get("error", False):
@@ -160,6 +163,7 @@ def raise_for_status(response):
 
 
 def generate_login_cookies(username, password):
+    """Log a user in and return the `freeman` cookie containing the login hash"""
     resp = requests.get(f"{BASE_URL}/members/login")
     html = soup(resp.text)
     form = html.find("form", attrs={"name": "membersform"})
@@ -296,7 +300,7 @@ def get_media_type(img: Tag) -> int:
         return 1
 
 
-def get_page_type(url):
+def get_page_type(url : str) -> "ThumbnailType":
     """Get the page type based on a url.
 
     Parameters
@@ -332,11 +336,14 @@ def get_page_type(url):
     return page_type
 
 
-def ceildiv(a, b):
+def ceildiv(a: int, b: int) -> int:
+    "Like a // b but rounded up instead of down."
     return -(a // -b)
 
 
-def get_list_stats(result_box, per_page=30):
+def get_list_stats(result_box : bs4.BeautifulSoup, per_page:int = 30) -> Tuple[int, int, int]:
+    """Get the current page, total pages and total results from 
+    a result list"""
     stats = re.match(
         r".*\(([0-9,]*) - ([0-9,]*) of ([0-9,]*)\)",
         result_box.find("div", class_="normalcorner")

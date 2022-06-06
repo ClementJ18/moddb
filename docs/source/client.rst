@@ -9,4 +9,17 @@ The client also supports __enter__ and __exit__ as means to temporarily replace 
 .. autoclass:: moddb.client.Client
     :members:
     :inherited-members:
+
+Update
+-----------
+.. autoclass:: moddb.client.Update
+    :members:
+    :inherited-members:
+    
+
+Request
+-----------
+.. autoclass:: moddb.client.Request
+    :members:
+    :inherited-members:
     
