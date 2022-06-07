@@ -1,7 +1,7 @@
 .. currentmodule:: moddb.base
 
-Key Functions & Objects
-========================
+Key Functions
+===============
 This page documents the functions and objects you will interact with at a high level. They are
 the most reliable source for obtaining pages and should preffered over passing the html to the
 models yourself.
@@ -10,19 +10,17 @@ models yourself.
    :local:
    :backlinks: none
 
-Search
--------
-.. autoclass:: moddb.base.Search
-    :members:
-    :inherited-members:
-
 search
 --------
 .. autofunction:: moddb.base.search
 
-parse
+parse_page
 -------
-.. autofunction:: moddb.base.parse
+.. autofunction:: moddb.base.parse_page
+
+parse_results
+--------------
+.. autofunction:: moddb.base.parse_results
 
 login
 ------

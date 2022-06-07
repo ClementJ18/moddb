@@ -1,8 +1,11 @@
+import bs4
 from .enums import ThumbnailType
+from .errors import ModdbException, AwaitingAuthorisation
 
 import re
 import sys
 import uuid
+import json
 import random
 import inspect
 import logging
@@ -11,47 +14,55 @@ import requests
 from typing import Tuple
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup, Tag
+from pyrate_limiter import Duration, Limiter, RequestRate
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
+LIMITER = Limiter(
+    # request stuff slowly, like a human
+    RequestRate(1, Duration.SECOND * 5),
+    # take breaks when requesting stuff, like a human
+    RequestRate(30, Duration.MINUTE * 5),
+)
 
 time_mapping = {
-    "year" : 125798400,
+    "year": 125798400,
     "month": 2419200,
     "week": 604800,
     "day": 86400,
     "hour": 3600,
     "minute": 60,
-    "econd": 1
+    "econd": 1,
 }
 
 user_agent_list = [
-    #Chrome
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
-    #Firefox
-    'Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)',
-    'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
-    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)',
-    'Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko',
-    'Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko',
-    'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
-    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)',
-    'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko',
-    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)',
-    'Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko',
-    'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)',
-    'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)',
-    'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)'
+    # Chrome
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
+    # Firefox
+    "Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)",
+    "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",
+    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)",
+    "Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko",
+    "Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko",
+    "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko",
+    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)",
+    "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
+    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko",
+    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)",
+    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)",
+    "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)",
 ]
+
 
 def concat_docs(cls):
     """Does it look like I'm enjoying this?"""
@@ -59,20 +70,20 @@ def concat_docs(cls):
 
     def get_docs(parent):
         nonlocal attributes
-        if parent.__name__ == 'object':
+        if parent.__name__ == "object":
             return
 
         docs = parent.__doc__.splitlines()
         if "    Attributes" in docs:
-            attributes = docs[docs.index("    Attributes") + 2:] + attributes
+            attributes = docs[docs.index("    Attributes") + 2 :] + attributes
 
         source = inspect.getsource(parent.__init__)
-        source = source[source.index('):'):]
+        source = source[source.index("):") :]
 
-        if 'super().__init__' in source:
+        if "super().__init__" in source:
             get_docs(parent.__base__)
-        elif '__init__' in source:
-            get_docs(parent.__base__.__base__)            
+        elif "__init__" in source:
+            get_docs(parent.__base__.__base__)
 
     get_docs(cls)
     original = cls.__doc__.splitlines()
@@ -80,16 +91,17 @@ def concat_docs(cls):
         original.append("    Attributes")
         original.append("    -----------")
 
-    final = original[:original.index("    Attributes") + 2]
+    final = original[: original.index("    Attributes") + 2]
     final.extend([x for x in attributes if x.strip()])
     cls.__doc__ = "\n".join(final)
 
     return cls
 
-def get_date(d : str) -> datetime.datetime:
-    """A helper function that takes a ModDB string representation of time and returns an equivalent 
+
+def get_date(d: str) -> datetime.datetime:
+    """A helper function that takes a ModDB string representation of time and returns an equivalent
     datetime.datetime object. This can range from a datetime with the full year to
-    second to just a year and a month. 
+    second to just a year and a month.
 
     Parameters
     -----------
@@ -100,30 +112,93 @@ def get_date(d : str) -> datetime.datetime:
     -------
     datetime.datetime
         The datetime object for the given string
-    """ 
+    """
     try:
-        return datetime.datetime.strptime(d[:-3] + d[-2:], '%Y-%m-%dT%H:%M:%S%z')
+        return datetime.datetime.strptime(d[:-3] + d[-2:], "%Y-%m-%dT%H:%M:%S%z")
     except ValueError:
         pass
 
     try:
-        return datetime.datetime.strptime(d, '%Y-%m-%d')
+        return datetime.datetime.strptime(d, "%Y-%m-%d")
     except ValueError:
         pass
 
-    return datetime.datetime.strptime(d, '%Y-%m')
+    return datetime.datetime.strptime(d, "%Y-%m")
 
-def request(url, *, params = {}, post = False):
+
+def prepare_request(req: requests.Request, session):
+    """Prepared a request with the appropriate cookies"""
+    cookies = requests.utils.dict_from_cookiejar(session.cookies)
+
+    if req.cookies is not None:
+        req.cookies = {**req.cookies, **cookies}
+    else:
+        req.cookies = cookies
+
+    req.headers["User-Agent"] = random.choice(user_agent_list)
+
+    prepped = session.prepare_request(req)
+    return prepped
+
+
+def raise_for_status(response):
+    """Raise any error that could have occured"""
+    try:
+        text = response.json()
+        if text.get("error", False):
+            LOGGER.error(text["text"])
+            LOGGER.error(response.request.url)
+            LOGGER.error(response.request.body)
+            raise ModdbException(text["text"])
+    except json.decoder.JSONDecodeError:
+        response.raise_for_status()
+
+    if (
+        "is currently awaiting authorisation, which can take a couple of days while a"
+        in response.text.lower()
+    ):
+        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
+
+
+def generate_login_cookies(username, password):
+    """Log a user in and return the `freeman` cookie containing the login hash"""
+    resp = requests.get(f"{BASE_URL}/members/login")
+    html = soup(resp.text)
+    form = html.find("form", attrs={"name": "membersform"})
+
+    username_input = form.find("input", id="membersusername")
+    botcatcher = form.find("input", type="text", id=False)
+
+    data = {
+        "referer": "",
+        username_input["name"]: username,
+        botcatcher["name"]: "",
+        "password": password,
+        "rememberme": ["1"],
+        "members": "Sign in",
+    }
+
+    login = requests.post(
+        "https://www.moddb.com/members/login",
+        data=data,
+        cookies=resp.cookies,
+        allow_redirects=False,
+    )
+
+    if "freeman" not in login.cookies:
+        raise ValueError(f"Login failed for user {username}")
+
+    return login.cookies
+
+
+@LIMITER.ratelimit("moddb", delay=True)
+def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
     Parameters
     -----------
-    url : str
-        url to get
-    params : dict
-        A dict of paramaters to be passed along
-    post : bool
-        Whether or not this a post request
+    req : requests.Request
+        The request to perform
 
     Return
     -------
@@ -132,26 +207,21 @@ def request(url, *, params = {}, post = False):
 
     """
     SESSION = sys.modules["moddb"].SESSION
-    cookies = requests.utils.dict_from_cookiejar(SESSION.cookies)
-    if "query" in params:
-        params["query"] = params["query"].replace(" ", "+")
+    prepped = prepare_request(req, SESSION)
+    r = SESSION.send(prepped)
 
-    if post:
-        r = SESSION.post(url, data=params.get("data", {}), cookies=cookies, headers={"User-Agent": random.choice(user_agent_list)})
-    else:
-        r = SESSION.get(url, cookies=cookies, params=params, headers={"User-Agent": random.choice(user_agent_list)})
-
-    r.raise_for_status()
+    raise_for_status(r)
     return r
 
-def soup(html : str) -> BeautifulSoup:
+
+def soup(html: str) -> BeautifulSoup:
     """Simple helper function that takes a string representation of an html page and
     returns a beautiful soup object"""
-    
-    soupd = BeautifulSoup(html, "html.parser")
-    return soupd
 
-def get_page(url : str, *, params : dict = {}):
+    return BeautifulSoup(html, "html.parser")
+
+
+def get_page(url: str, *, params: dict = {}):
     """A helper function that takes a url and returns a beautiful soup objects. This is used to center
     the request making section of the library. Can also be passed a set of paramaters, used for sorting
     and filtering in the search function.
@@ -168,10 +238,11 @@ def get_page(url : str, *, params : dict = {}):
     -------
     bs4.BeautifulSoup
     """
-    r = request(url, params=params)
+    r = request(requests.Request("GET", url, params=params))
     return soup(r.text)
 
-def get_views(string : str) -> Tuple[int, int]:
+
+def get_views(string: str) -> Tuple[int, int]:
     """A helper function that takes a string reresentation of total something and
     daily amount of that same thing and returns both as a tuple of ints.
 
@@ -191,9 +262,10 @@ def get_views(string : str) -> Tuple[int, int]:
 
     return views, today
 
-def join(path : str) -> str:
+
+def join(path: str) -> str:
     """Joins a partial moddb url with the base url and returns the combined url
-    
+
     Parameters
     -----------
     path : str
@@ -205,28 +277,34 @@ def join(path : str) -> str:
         The full url.
 
     """
-    return urljoin(BASE_URL, path)
+    if not path.startswith(BASE_URL):
+        return urljoin(BASE_URL, path)
 
-def normalize(string : str) -> str:
+    return path
+
+
+def normalize(string: str) -> str:
     """Removes all extra fluff from a text to get the barebone content"""
     return string.replace(",", "").replace("members", "").replace("member", "").strip()
 
-def get_type(img : Tag) -> int:
+
+def get_media_type(img: Tag) -> int:
     """Determines the type of the image through some very hacky stuff, might break"""
     if img is None:
         return 2
     elif img["src"][-8:-5] == ".mp4":
         return 0
     else:
-        return 1 
+        return 1
 
-def get_type_from(url):
+
+def get_page_type(url: str) -> "ThumbnailType":
     """Get the page type based on a url.
 
     Parameters
     -----------
     url : str
-        The url to get 
+        The url to get
 
     Return
     -------
@@ -241,11 +319,11 @@ def get_type_from(url):
         "download": "file",
         "image": "media",
         "audio": " media",
-        "video": "media"
+        "video": "media",
     }
 
     matches = re.findall(regex, url)
-    match = matches[-1][0:-1] if matches[0].endswith("s") else matches[0]      
+    match = matches[-1][0:-1] if matches[0].endswith("s") else matches[0]
 
     try:
         page_type = ThumbnailType[match]
@@ -255,37 +333,40 @@ def get_type_from(url):
     LOGGER.info("%s is type %s", url, page_type)
     return page_type
 
-def get_page_number(html):
-    """Central function for retrieving the page numbers of result pages
 
-    Parameters
-    -----------
-    html : bs4.BeautifulSoup
-        The html to get the page numbers from
+def ceildiv(a: int, b: int) -> int:
+    "Like a // b but rounded up instead of down."
+    return -(a // -b)
 
-    Returns
-    --------
-    Tuple[int, int]
-        The page and max_page
-    """
-    try:
-        max_page = int(html.find("div", class_="pages").find_all()[-1].string)
-    except AttributeError:
-        LOGGER.info("Has less than 30 comments (only one page)")
-        max_page = 1
 
-    try:
-        page = int(html.find("span", class_="current").string)
-    except AttributeError:
-        LOGGER.info("Has less than 30 results (only one page)")
-        page = 1
+def get_list_stats(result_box: bs4.BeautifulSoup, per_page: int = 30) -> Tuple[int, int, int]:
+    """Get the current page, total pages and total results from
+    a result list"""
+    stats = re.match(
+        r".*\(([0-9,]*) - ([0-9,]*) of ([0-9,]*)\)",
+        result_box.find("div", class_="normalcorner")
+        .find("div", class_="title")
+        .find("span", class_="heading")
+        .string,
+    )
 
-    return page, max_page
-        
+    if not stats:  # less than a page
+        return 1, 1, None
+
+    max_results = int(stats.group(2).replace(",", ""))
+    all_results = int(stats.group(3).replace(",", ""))
+    max_page = ceildiv(all_results, per_page)
+    current_page = ceildiv(max_results, per_page)
+
+    return current_page, max_page, all_results
+
+
 class Object:
     """A dud objects that will transform every kwarg given into an attribute"""
+
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
+
 
 def find(predicate, seq):
     """A helper to return the first element found in the sequence
@@ -313,6 +394,7 @@ def find(predicate, seq):
         if predicate(element):
             return element
     return None
+
 
 def get(iterable, **attrs):
     r"""A helper that returns the first element in the iterable that meets
@@ -360,7 +442,7 @@ def get(iterable, **attrs):
 
     def predicate(elem):
         for attr, val in attrs.items():
-            nested = attr.split('__')
+            nested = attr.split("__")
             obj = elem
             for attribute in nested:
                 obj = getattr(obj, attribute)
@@ -370,6 +452,7 @@ def get(iterable, **attrs):
         return True
 
     return find(predicate, iterable)
+
 
 def generate_hash():
     return uuid.uuid4().hex

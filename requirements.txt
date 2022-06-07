@@ -1,15 +1,14 @@
-# moddb\pages.py: 8
-# moddb\utils.py: 8
-# test.py: 4
 beautifulsoup4 == 4.6.3
-
-# moddb\__init__.py: 7
-# moddb\utils.py: 5
 requests>=2.20.0
+toolz==0.11.2
+pyrate-limiter==2.8.1
 
-# moddb\base.py: 9
-robobrowser == 0.5.3
-
-# setup.py: 3
 sphinx == 1.8.3
 sphinx-autodoc-typehints == 1.6.0
+
+pytest==7.1.2
+pytest_html==3.1.1
+pytest-rerunfailures==10.2
+pytest-test-groups==1.0.3
+flakeheaven==1.0.1
+black==22.3.0

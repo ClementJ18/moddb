@@ -22,7 +22,12 @@ ResultList
 .. autoclass:: moddb.boxes.ResultList
     :members:
     :inherited-members:
-    
+
+ResultList
+------------
+.. autoclass:: moddb.pages.ReviewList
+    :members:
+    :inherited-members:    
 
 Statistics
 -----------
@@ -48,20 +53,6 @@ Style
 Thumbnail
 -----------
 .. autoclass:: moddb.boxes.Thumbnail
-    :members:
-    :inherited-members:
-    
-
-Update
------------
-.. autoclass:: moddb.boxes.Update
-    :members:
-    :inherited-members:
-    
-
-Request
------------
-.. autoclass:: moddb.boxes.Request
     :members:
     :inherited-members:
     
@@ -111,6 +102,13 @@ PartialArticle
 Option
 -------
 .. autoclass:: moddb.boxes.Option
+    :members:
+    :inherited-members:
+
+
+Mirror
+-------
+.. autoclass:: moddb.boxes.Mirror
     :members:
     :inherited-members:
     
