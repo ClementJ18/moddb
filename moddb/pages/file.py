@@ -5,6 +5,7 @@ import datetime
 import requests
 
 from ..utils import (
+    BASE_URL,
     concat_docs,
     get_date,
     get_page,
@@ -142,7 +143,7 @@ class File(BaseMetaClass):
 
         """
         if mirror is None:
-            download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
+            download = get_page(f"{BASE_URL}/downloads/start/{self.id}")
             url = download.find("a", string=f"download {self.filename}")["href"]
         else:
             url = mirror._url

@@ -1,5 +1,7 @@
+import re
 import sys
 import random
+from typing import List, Tuple
 from pyrate_limiter import Duration, Limiter, RequestRate
 import requests
 
@@ -20,11 +22,128 @@ from .utils import (
 )
 from .boxes import Thumbnail, Comment, ResultList, _parse_results
 from .pages import Member
-from .enums import WatchType, Status
+from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
 from .base import parse_page
 
 COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
+
+
+class Message:
+    """A single message within a thread.
+
+    Attributes
+    ----------
+    id : int
+        The id of the message
+    member : Thumbnail
+        A member type thumbnail representing the member
+        who sent the message
+    timestamp : datetime.datetime
+        Message send date
+    text : str
+        The html text of the message
+    """
+
+    def __init__(self, html):
+        member = html.find("a", class_="avatar")
+
+        self.id = int(html["id"])
+        self.member = Thumbnail(url=member["href"], type=ThumbnailType.member, name=member["title"])
+        self.timestamp = get_date(html.find("time")["datetime"])
+        self.text = html.find("div", class_="comment").text
+
+    def __repr__(self):
+        return f"< Message member={self.member} >"
+
+
+class Thread:
+    """A thread is a conversation between two or more members in which
+    one or more messages can be sent.
+
+    Sorting
+    --------
+        * **id** - when the message was sent, asc is oldest, desc is most recent
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **hasread** - order by whether or the message has been read, asc is unread first, desc is read first
+        * **hasreplied** - order by whether or not you have replied to the message, asc us unreplied first, desc is replied first
+
+    Attributes
+    -----------
+    name : str
+        Name of the thread
+    id : int
+        Id of the thread
+    count : int
+        The number of messages in this thread
+    members : List[Tumbnail]
+        All the members participating in the thread. Note: The
+        thumbnail of the member who fetched the message will always
+        be first and will have their name attribute be 'you' instead
+        of the username
+    message : List[Message]
+        The messages associated to this thread
+    """
+
+    def __init__(self, html):
+        thread = html.find("div", id="firstmessage")
+        header = thread.find("div", class_="normalcorner")
+
+        header_string = header.find("span", class_="heading").string
+        header_match = re.match(r"(.*) \(([0-9]*) messages?\)", header_string)
+        if header_match is None:
+            self.name = header_string
+            self.count = 1
+        else:
+            self.name = header_match.group(1)
+            self.count = int(header_match.group(2))
+
+        members = thread.find("p", class_="introduction").strong.find_all("a")
+        option = header.find("a", class_=["deleteicon"])
+        messages = thread.find("div", class_=["tablecomments"]).find_all("div", recursive=False)
+
+        self.id = int(option["href"][option["href"].index("=") + 1 :])
+        self.members = [
+            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member) for member in members
+        ]
+        self.messages = [Message(message) for message in messages]
+
+        self._leave_hash = option["class"][-1]
+        self._submit_hash = html.find("input", attrs={"name": "formhash"})["value"]
+
+    def __repr__(self):
+        return f"< Thread name={self.name} count={self.count} >"
+
+
+class ThreadThumbnail:
+    """The thumbnail of a thread, these represent partial objects that
+    must be parsed using a client to get the full thread.
+
+    Attributes
+    -----------
+    name : str
+        The name of the thread
+    url : str
+        The url for the thread
+    last_messager : Thumbnail
+        A thumbnail representig the user that sent the
+        last message
+    timestamp : datetime.datetime
+        Datetime of the last message
+    content : str
+        Content of the last message. Useful for checking
+        the last message without having to parse the thread.
+    """
+
+    def __init__(self, **kwargs):
+        self.name = kwargs.get("name")
+        self.url = join(kwargs.get("url"))
+        self.last_messager = kwargs.get("last_messager")
+        self.timestamp = kwargs.get("timestamp")
+        self.content = kwargs.get("content")
+
+    def __repr__(self):
+        return f"< ThreadThumbnail name={self.name} last_messager={self.last_messager} >"
 
 
 @concat_docs
@@ -193,6 +312,7 @@ class Client:
 
         req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
         prepped = self._session.prepare_request(req)
+        LOGGER.info("Request: %s", prepped.url)
 
         r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
         raise_for_status(r)
@@ -470,7 +590,7 @@ class Client:
             allow_redirects=False,
         )
 
-        return not "already reported this content" in r.json()["text"]
+        return "already reported this content" not in r.json()["text"]
 
     def unfriend(self, member: Member):
         """Unfriend this member if you are friends with them.
@@ -614,7 +734,7 @@ class Client:
 
     def undelete_comment(self, comment):
         """This will undelete the supplied comment provided you have the correct permissions.
-        This is an expensive request because if how moddb works. It needs to make three requests
+        This is an expensive request because of how moddb works. It needs to make three requests
         in order to get the correct hash to undelete the comment. In addition, it may fail if the
         comment has changed location (page number) from what the object says. It is recommended
         to use a newly created comment object that is less than 30 minutes old.
@@ -762,3 +882,178 @@ class Client:
         )
 
         return "You have <u>deleted</u> this review." in r.json()["text"]
+
+    def get_threads(
+        self, query: str = None, read: bool = None, replied: bool = None, sort: Tuple[str, str] = None
+    ) -> List[ThreadThumbnail]:
+        """Get all the messages this user has sent or received. This does not return threads you
+        have left.
+
+        Parameters
+        -----------
+        query : Optional[str]
+            Optional query to filter messages
+        read : Optional[bool]
+            True to filter only read message, false to filter unread, None to allow both
+        replied : Optional[bool]
+            True to filter messages where you are the last message, False for messages
+            where another user is the last message, None for both.
+        sort : Tuple[str, str]
+            Optional sort tuple to order threads
+
+        Returns
+        --------
+        List[ThreadThumbnail]
+            Thread typed thumbnails
+        """
+        r = self._request(
+            "GET",
+            f"{BASE_URL}/messages/inbox",
+            params={
+                "filter": "t",
+                "kw": query,
+                "hasread": int(read) if read is not None else read,
+                "hasreplied": int(replied) if replied is not None else replied,
+                "sort": f"{sort[0]}-{sort[1]}" if sort is not None else sort,
+            },
+        )
+        html = soup(r.text)
+
+        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all("div", class_=["rowcontent"])
+        threads = []
+        for thread in threads_raw:
+            member = thread.find("span", class_="subheading").find_all("a")[0]
+            threads.append(
+                ThreadThumbnail(
+                    url=thread.a["href"],
+                    name=thread.a["title"],
+                    last_messager=Thumbnail(
+                        type=ThumbnailType.member, name=member.string, url=member["href"]
+                    ),
+                    timestamp=get_date(thread.find("time")["datetime"]),
+                    content=thread.find("div", class_="content").find("p").string,
+                )
+            )
+
+        return threads
+
+    def parse_thread(self, thread: ThreadThumbnail) -> Thread:
+        """Parse a thread thumbnail into a full thread object.
+
+        Parameters
+        ----------
+        thread : ThreadThumbnail
+            The thumbnail to parse
+
+        Returns
+        --------
+        Thread
+            The parsed thread and its messages
+        """
+        r = self._request("GET", thread.url)
+
+        return Thread(soup(r.text))
+
+    def send_message(self, members: List[Member], name: str, message: str) -> Thread:
+        """Send a message and start a thread with one or more members
+
+        Parameters
+        ----------
+        member : List[Member]
+            The members to send the message to and start the
+            thread with
+        name : str
+            The subject of the message
+        message : str
+            The message to send
+
+        Returns
+        --------
+        Thread
+            The thread started from sending this message
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/compose/",
+            data={
+                "formhash": generate_hash(),
+                "membersto": ",".join(member.name for member in members),
+                "name": name,
+                "description": message,
+                "messages": "Send+message",
+            },
+        )
+
+        return Thread(soup(r.text))
+
+    def reply_to_thread(self, thread: Thread, text: str) -> Thread:
+        """Add an additional message to an exiting thread
+
+        Parameters
+        -----------
+        thread : Thread
+            The thread to add the message to
+        text : str
+            The text to send
+
+        Returns
+        --------
+        Thread
+            The updated thread containing the new message. It is
+            recommended to use this object as it also contains
+            a new hash for sending another message
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/inbox/{thread.id}",
+            data={"formhash": thread._submit_hash, "description": text, "messages": "Send+message"},
+        )
+
+        return Thread(soup(r.text))
+
+    def add_member_to_thread(self, thread: Thread, member: Member) -> bool:
+        """Add a member to a conversation
+
+        Parameters
+        -----------
+        thread : Thread
+            The thread to add add a member to
+        member : Member
+            The member to add
+
+        Returns
+        --------
+        bool
+            Whether adding the member was succesful. This
+            will not update the thread.
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/ajax/members/invite/{thread.id}",
+            data={"ajax": "t", "username": member.name, "member": "0"},
+            allow_redirects=False,
+        )
+
+        return "has been successfully added" in r.json()["text"]
+
+    def leave_thread(self, thread: Thread) -> bool:
+        """Leave a thread, you will not get any more notifications on this thread.
+
+        Parameters
+        ----------
+        thread : Thread
+            The thread to leave
+
+        Returns
+        --------
+        bool
+            Whether leaving the thread was successful
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/ajax/delete/",
+            data={"ajax": "t", "thread": thread.id},
+            allow_redirects=False,
+        )
+
+        return "You have successfully deleted the requested thread" in r.json()["text"]

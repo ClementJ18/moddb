@@ -3,7 +3,7 @@ import re
 
 from ..boxes import Thumbnail
 from ..enums import ThumbnailType
-from ..utils import get_page_type, join, get_page
+from ..utils import get_page_type, get_page
 from . import opinion
 
 
@@ -119,7 +119,7 @@ class FrontPage:
         self.jobs = [
             Thumbnail(
                 name=x.find("a").string,
-                url=join(x.find("a")["href"]),
+                url=x.find("a")["href"],
                 type=ThumbnailType.job,
             )
             for x in jobs

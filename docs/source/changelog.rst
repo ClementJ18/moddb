@@ -8,6 +8,30 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.8.1
+-------
+Bug Fixes
+##########
+
+New Features
+#############
+* Increased ratelimit to 1/2.5sec, 60/5min
+* New objects :class:`Thread`, :class:`Message` and :class:`ThreadThumbnail`
+
+New :class:`.Client` methods
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For sending and manipulating messages:
+* :func:`Client.get_threads`
+* :func:`Client.parse_thread`
+* :func:`Client.send_message`
+* :func:`Client.reply_to_thread`
+* :func:`Client.add_member_to_thread`
+* :func:`Client.leave_thread`
+
+Removed Features
+#################
+
+
 v0.8.0
 -------
 Bug Fixes

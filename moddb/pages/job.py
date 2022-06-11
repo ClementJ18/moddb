@@ -2,12 +2,11 @@ import bs4
 import json
 import re
 
-from ..utils import concat_docs, join, LOGGER
+from ..utils import join, LOGGER
 from ..boxes import Thumbnail
 from ..enums import ThumbnailType, JobSkill
 
 
-@concat_docs
 class Job:
     """Model representing a job proposed on ModDB
 
