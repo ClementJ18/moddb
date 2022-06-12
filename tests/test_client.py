@@ -66,6 +66,7 @@ class TestClient:
         self.client.add_member_to_thread(thread, member)
 
         threads = self.client.get_threads()
-        self.client.parse_thread(threads[0])
+        thumbnail = self.client.parse_thread(threads[0])
 
-        self.client.leave_thread(thread)
+        self.client.leave_thread(thumbnail)
+        self.client.mark_all_read()

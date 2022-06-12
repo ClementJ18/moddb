@@ -27,6 +27,8 @@ For sending and manipulating messages:
 * :func:`Client.reply_to_thread`
 * :func:`Client.add_member_to_thread`
 * :func:`Client.leave_thread`
+* :func:`Client.mark_all_read`
+* :func:`Client.clear_watched`
 
 Removed Features
 #################
