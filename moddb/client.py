@@ -1,7 +1,7 @@
 import re
 import sys
 import random
-from typing import List, Tuple
+from typing import Any, List, Tuple, Union
 from pyrate_limiter import Duration, Limiter, RequestRate
 import requests
 
@@ -21,7 +21,7 @@ from .utils import (
     LIMITER,
 )
 from .boxes import Thumbnail, Comment, ResultList, _parse_results
-from .pages import Member
+from .pages import Member, Review, Mod, Game, Engine, Group, Team
 from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
 from .base import parse_page
@@ -168,7 +168,7 @@ class Update(Thumbnail):
     def __repr__(self):
         return f"<Update name={self.name} type={self.type.name} updates={len(self.updates)}>"
 
-    def clear(self):
+    def clear(self) -> bool:
         """Clears all updates
 
         Raises
@@ -185,7 +185,7 @@ class Update(Thumbnail):
 
         return "successfully removed" in r.json()["text"]
 
-    def unfollow(self):
+    def unfollow(self) -> bool:
         """Unfollows the page. This will also clear the updates
 
         Raises
@@ -218,7 +218,7 @@ class Request(Thumbnail):
         self._accept = join(attrs.get("accept"))
         self._client = attrs.get("client")
 
-    def accept(self):
+    def accept(self) -> bool:
         """Accept the friend request.
 
         Raises
@@ -235,7 +235,7 @@ class Request(Thumbnail):
 
         return "now friends with" in r.json()["text"]
 
-    def decline(self):
+    def decline(self) -> bool:
         """Decline the friend request
 
         Raises
@@ -319,7 +319,7 @@ class Client:
 
         return r
 
-    def get_updates(self):
+    def get_updates(self) -> List[Update]:
         """Get the current updates the user has for models they are subscribed to.
 
         Returns
@@ -369,7 +369,7 @@ class Client:
 
         return updates
 
-    def get_friend_requests(self):
+    def get_friend_requests(self) -> List[Request]:
         """Get the current friend requests the user has.
 
         Returns
@@ -403,7 +403,7 @@ class Client:
 
         return requests
 
-    def get_watched(self, category: WatchType, page: int = 1):
+    def get_watched(self, category: WatchType, page: int = 1) -> ResultList[Thumbnail]:
         """Get a list of thumbnails of watched items based on the type parameters. Eventually, you'll also be
         able to paginate your mods.
 
@@ -432,7 +432,7 @@ class Client:
             total_results=total_results,
         )
 
-    def tracking(self, page):
+    def tracking(self, page: Union[Mod, Game, Engine, Group, Member]) -> bool:
         """Follow/unfollow this page.
 
         Parameters
@@ -464,7 +464,7 @@ class Client:
 
         return "be notified" in r.json()["text"]
 
-    def like_comment(self, comment: Comment):
+    def like_comment(self, comment: Comment) -> bool:
         """Like a comment, if the comment has already been liked nothing will happen.
 
         Parameters
@@ -496,7 +496,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def dislike_comment(self, comment: Comment):
+    def dislike_comment(self, comment: Comment) -> bool:
         """Dislike a comment, if the comment has already been disliked nothing will happen.
 
         Parameters
@@ -531,7 +531,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def membership(self, page):
+    def membership(self, page: Union[Group, Team]) -> bool:
         """Join/leave a team
 
         Parameters
@@ -560,12 +560,12 @@ class Client:
 
         return "successfully joined" in r.json()["text"]
 
-    def report(self, page):
+    def report(self, page: Any) -> bool:
         """Report a page. This can take any object that has an id and url attribute.
 
         Parameters
         -----------
-        page : Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
+        page : Any
             The page to report
 
         Raises
@@ -592,7 +592,7 @@ class Client:
 
         return "already reported this content" not in r.json()["text"]
 
-    def unfriend(self, member: Member):
+    def unfriend(self, member: Member) -> bool:
         """Unfriend this member if you are friends with them.
 
         Parameters
@@ -619,7 +619,7 @@ class Client:
 
         return "no longer friends with this member" in r.json()["text"]
 
-    def send_request(self, member: Member):
+    def send_request(self, member: Member) -> bool:
         """Send a friend request to a user. You will not instantly become friends with them,
         they will have to accept the friend request you sent them first.
 
@@ -647,12 +647,12 @@ class Client:
 
         return "friend request has been sent" in r.json()["text"]
 
-    def add_comment(self, page, text, *, comment=None):
+    def add_comment(self, page: Any, text: str, *, comment: str = None) -> Any:
         """Add a comment to a page.
 
         Parameters
         -----------
-        page : Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
+        page : Any
             Must be a moddb.page, the page you wish to add the comment to.
         test : str
             The content of the comment you wish to post
@@ -662,7 +662,7 @@ class Client:
 
         Returns
         --------
-        Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
+        Any
             The page's updated object containing the new comment and any other new data that
             has been posted since then
         """
@@ -702,7 +702,7 @@ class Client:
 
         return r
 
-    def delete_comment(self, comment):
+    def delete_comment(self, comment: Comment) -> bool:
         """This will delete the supplied comment provided you have the correct permissions.
         This is an expensive request because if how moddb works. It needs to make two requests
         in order to get the correct hash to delete the comment. In addition, it may fail if the
@@ -732,7 +732,7 @@ class Client:
 
         return "You have <u>deleted</u> this comment" in r.json()["text"]
 
-    def undelete_comment(self, comment):
+    def undelete_comment(self, comment: Comment) -> bool:
         """This will undelete the supplied comment provided you have the correct permissions.
         This is an expensive request because of how moddb works. It needs to make three requests
         in order to get the correct hash to undelete the comment. In addition, it may fail if the
@@ -765,7 +765,7 @@ class Client:
 
         return "You have <u>authorized</u> this comment" in r.json()["text"]
 
-    def edit_comment(self, comment, new_text):
+    def edit_comment(self, comment: Comment, new_text: str) -> bool:
         """Edit the contents of a comment. You can only edit your comment 120 minutes after it has
         been posted
 
@@ -794,7 +794,7 @@ class Client:
 
         return "Your comment has been saved" in r.json()["text"]
 
-    def add_review(self, page, rating, *, text=None, has_spoilers=False):
+    def add_review(self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False) -> bool:
         """Rate and review a page. If you rating is below 3 or above 8 you will be asked
         to also provide a review or else the request will not be made. This is also
         used to edit existing reviews.
@@ -845,7 +845,7 @@ class Client:
 
         return "Your rating has been saved" in r.json()["text"]
 
-    def delete_review(self, review):
+    def delete_review(self, review: Review) -> bool:
         """Delete your review on the given page. This function will do two requests in order
         to delete your review.
 
@@ -884,7 +884,12 @@ class Client:
         return "You have <u>deleted</u> this review." in r.json()["text"]
 
     def get_threads(
-        self, query: str = None, read: bool = None, replied: bool = None, sort: Tuple[str, str] = None
+        self,
+        query: str = None,
+        read: bool = None,
+        replied: bool = None,
+        sent_items: bool = False,
+        sort: Tuple[str, str] = None,
     ) -> List[ThreadThumbnail]:
         """Get all the messages this user has sent or received. This does not return threads you
         have left.
@@ -898,6 +903,8 @@ class Client:
         replied : Optional[bool]
             True to filter messages where you are the last message, False for messages
             where another user is the last message, None for both.
+        sent_items:
+            Get only the threads you have started
         sort : Tuple[str, str]
             Optional sort tuple to order threads
 
@@ -906,9 +913,14 @@ class Client:
         List[ThreadThumbnail]
             Thread typed thumbnails
         """
+        if sent_items:
+            url = f"{BASE_URL}/messages/sentitems"
+        else:
+            url = f"{BASE_URL}/messages/inbox"
+
         r = self._request(
             "GET",
-            f"{BASE_URL}/messages/inbox",
+            url,
             params={
                 "filter": "t",
                 "kw": query,
