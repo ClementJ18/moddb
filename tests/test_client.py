@@ -57,3 +57,16 @@ class TestClient:
         request.accept()
 
         self.client.unfriend(self.sender.member)
+
+    def test_messages(self):
+        thread = self.sender.send_message([self.client.member], "Test", "This is a test message")
+        thread = self.client.reply_to_thread(thread, "This is a test reply")
+
+        member = moddb.parse_page("https://www.moddb.com/members/TheBetrayer")
+        self.client.add_member_to_thread(thread, member)
+
+        threads = self.client.get_threads()
+        thumbnail = self.client.parse_thread(threads[0])
+
+        self.client.leave_thread(thumbnail)
+        self.client.mark_all_read()

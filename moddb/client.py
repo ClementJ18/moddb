@@ -1,5 +1,7 @@
+import re
 import sys
 import random
+from typing import Any, List, Tuple, Union
 from pyrate_limiter import Duration, Limiter, RequestRate
 import requests
 
@@ -19,12 +21,129 @@ from .utils import (
     LIMITER,
 )
 from .boxes import Thumbnail, Comment, ResultList, _parse_results
-from .pages import Member
-from .enums import WatchType, Status
+from .pages import Member, Review, Mod, Game, Engine, Group, Team
+from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
 from .base import parse_page
 
 COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
+
+
+class Message:
+    """A single message within a thread.
+
+    Attributes
+    ----------
+    id : int
+        The id of the message
+    member : Thumbnail
+        A member type thumbnail representing the member
+        who sent the message
+    timestamp : datetime.datetime
+        Message send date
+    text : str
+        The html text of the message
+    """
+
+    def __init__(self, html):
+        member = html.find("a", class_="avatar")
+
+        self.id = int(html["id"])
+        self.member = Thumbnail(url=member["href"], type=ThumbnailType.member, name=member["title"])
+        self.timestamp = get_date(html.find("time")["datetime"])
+        self.text = html.find("div", class_="comment").text
+
+    def __repr__(self):
+        return f"< Message member={self.member} >"
+
+
+class Thread:
+    """A thread is a conversation between two or more members in which
+    one or more messages can be sent.
+
+    Sorting
+    --------
+        * **id** - when the message was sent, asc is oldest, desc is most recent
+        * **name** - order alphabetically, asc is a-z, desc is z-a
+        * **hasread** - order by whether or the message has been read, asc is unread first, desc is read first
+        * **hasreplied** - order by whether or not you have replied to the message, asc us unreplied first, desc is replied first
+
+    Attributes
+    -----------
+    name : str
+        Name of the thread
+    id : int
+        Id of the thread
+    count : int
+        The number of messages in this thread
+    members : List[Tumbnail]
+        All the members participating in the thread. Note: The
+        thumbnail of the member who fetched the message will always
+        be first and will have their name attribute be 'you' instead
+        of the username
+    message : List[Message]
+        The messages associated to this thread
+    """
+
+    def __init__(self, html):
+        thread = html.find("div", id="firstmessage")
+        header = thread.find("div", class_="normalcorner")
+
+        header_string = header.find("span", class_="heading").string
+        header_match = re.match(r"(.*) \(([0-9]*) messages?\)", header_string)
+        if header_match is None:
+            self.name = header_string
+            self.count = 1
+        else:
+            self.name = header_match.group(1)
+            self.count = int(header_match.group(2))
+
+        members = thread.find("p", class_="introduction").strong.find_all("a")
+        option = header.find("a", class_=["deleteicon"])
+        messages = thread.find("div", class_=["tablecomments"]).find_all("div", recursive=False)
+
+        self.id = int(option["href"][option["href"].index("=") + 1 :])
+        self.members = [
+            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member) for member in members
+        ]
+        self.messages = [Message(message) for message in messages]
+
+    def __repr__(self):
+        return f"< Thread name={self.name} count={self.count} >"
+
+
+class ThreadThumbnail:
+    """The thumbnail of a thread, these represent partial objects that
+    must be parsed using a client to get the full thread.
+
+    Attributes
+    -----------
+    name : str
+        The name of the thread
+    id : int
+        The id of the thread
+    url : str
+        The url for the thread
+    last_messager : Thumbnail
+        A thumbnail representig the user that sent the
+        last message
+    timestamp : datetime.datetime
+        Datetime of the last message
+    content : str
+        Content of the last message. Useful for checking
+        the last message without having to parse the thread.
+    """
+
+    def __init__(self, **kwargs):
+        self.name = kwargs.get("name")
+        self.url = join(kwargs.get("url"))
+        self.last_messager = kwargs.get("last_messager")
+        self.timestamp = kwargs.get("timestamp")
+        self.content = kwargs.get("content")
+        self.id = int(self.url.split("/")[-1])
+
+    def __repr__(self):
+        return f"< ThreadThumbnail name={self.name} last_messager={self.last_messager} >"
 
 
 @concat_docs
@@ -49,7 +168,7 @@ class Update(Thumbnail):
     def __repr__(self):
         return f"<Update name={self.name} type={self.type.name} updates={len(self.updates)}>"
 
-    def clear(self):
+    def clear(self) -> bool:
         """Clears all updates
 
         Raises
@@ -66,7 +185,7 @@ class Update(Thumbnail):
 
         return "successfully removed" in r.json()["text"]
 
-    def unfollow(self):
+    def unfollow(self) -> bool:
         """Unfollows the page. This will also clear the updates
 
         Raises
@@ -99,7 +218,7 @@ class Request(Thumbnail):
         self._accept = join(attrs.get("accept"))
         self._client = attrs.get("client")
 
-    def accept(self):
+    def accept(self) -> bool:
         """Accept the friend request.
 
         Raises
@@ -116,7 +235,7 @@ class Request(Thumbnail):
 
         return "now friends with" in r.json()["text"]
 
-    def decline(self):
+    def decline(self) -> bool:
         """Decline the friend request
 
         Raises
@@ -193,13 +312,14 @@ class Client:
 
         req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
         prepped = self._session.prepare_request(req)
+        LOGGER.info("Request: %s", prepped.url)
 
         r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
         raise_for_status(r)
 
         return r
 
-    def get_updates(self):
+    def get_updates(self) -> List[Update]:
         """Get the current updates the user has for models they are subscribed to.
 
         Returns
@@ -249,7 +369,34 @@ class Client:
 
         return updates
 
-    def get_friend_requests(self):
+    def clear_updates(self, category: WatchType) -> bool:
+        """Clear all updates for a specific category of
+        watched. This method will conduct two requests because
+        the clear update request requires a hash generated by
+        moddb.
+
+        Parameters
+        -----------
+        category: WatchType
+            The category of watched to clear
+
+        Returns
+        --------
+        bool
+            Whether or not the clear was successful
+        """
+        hash_page = self._request("GET", f"{BASE_URL}/messages/updates")
+        html = soup(hash_page.text)
+        pattern = re.compile(rf".*\/clearall\/(.*)\/1\/{category.name}s")
+        link = html.find("a", href=pattern)
+        if link is None:
+            return True
+
+        r = self._request("POST", f'{BASE_URL}{link["href"]}', data={"ajax": "t"})
+
+        return "updates were cleared" in r.json()["text"]
+
+    def get_friend_requests(self) -> List[Request]:
         """Get the current friend requests the user has.
 
         Returns
@@ -283,7 +430,7 @@ class Client:
 
         return requests
 
-    def get_watched(self, category: WatchType, page: int = 1):
+    def get_watched(self, category: WatchType, page: int = 1) -> ResultList:
         """Get a list of thumbnails of watched items based on the type parameters. Eventually, you'll also be
         able to paginate your mods.
 
@@ -312,7 +459,7 @@ class Client:
             total_results=total_results,
         )
 
-    def tracking(self, page):
+    def tracking(self, page: Union[Mod, Game, Engine, Group, Member]) -> bool:
         """Follow/unfollow this page.
 
         Parameters
@@ -344,7 +491,7 @@ class Client:
 
         return "be notified" in r.json()["text"]
 
-    def like_comment(self, comment: Comment):
+    def like_comment(self, comment: Comment) -> bool:
         """Like a comment, if the comment has already been liked nothing will happen.
 
         Parameters
@@ -376,7 +523,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def dislike_comment(self, comment: Comment):
+    def dislike_comment(self, comment: Comment) -> bool:
         """Dislike a comment, if the comment has already been disliked nothing will happen.
 
         Parameters
@@ -411,7 +558,7 @@ class Client:
 
         return "successfully issued" in r.json()["text"]
 
-    def membership(self, page):
+    def membership(self, page: Union[Group, Team]) -> bool:
         """Join/leave a team
 
         Parameters
@@ -440,12 +587,12 @@ class Client:
 
         return "successfully joined" in r.json()["text"]
 
-    def report(self, page):
+    def report(self, page: Any) -> bool:
         """Report a page. This can take any object that has an id and url attribute.
 
         Parameters
         -----------
-        page : Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
+        page : Any
             The page to report
 
         Raises
@@ -470,9 +617,9 @@ class Client:
             allow_redirects=False,
         )
 
-        return not "already reported this content" in r.json()["text"]
+        return "already reported this content" not in r.json()["text"]
 
-    def unfriend(self, member: Member):
+    def unfriend(self, member: Member) -> bool:
         """Unfriend this member if you are friends with them.
 
         Parameters
@@ -499,7 +646,7 @@ class Client:
 
         return "no longer friends with this member" in r.json()["text"]
 
-    def send_request(self, member: Member):
+    def send_request(self, member: Member) -> bool:
         """Send a friend request to a user. You will not instantly become friends with them,
         they will have to accept the friend request you sent them first.
 
@@ -527,12 +674,12 @@ class Client:
 
         return "friend request has been sent" in r.json()["text"]
 
-    def add_comment(self, page, text, *, comment=None):
+    def add_comment(self, page: Any, text: str, *, comment: str = None) -> Any:
         """Add a comment to a page.
 
         Parameters
         -----------
-        page : Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
+        page : Any
             Must be a moddb.page, the page you wish to add the comment to.
         test : str
             The content of the comment you wish to post
@@ -542,7 +689,7 @@ class Client:
 
         Returns
         --------
-        Union[Addon, Article, BaseMetaClass, Blog, Engine, File, Game, Group, Hardware, HardwareSoftwareMetaClass, Media, Member, Mod, PageMetaClass, Platform, Poll, Software, Team]
+        Any
             The page's updated object containing the new comment and any other new data that
             has been posted since then
         """
@@ -582,7 +729,7 @@ class Client:
 
         return r
 
-    def delete_comment(self, comment):
+    def delete_comment(self, comment: Comment) -> bool:
         """This will delete the supplied comment provided you have the correct permissions.
         This is an expensive request because if how moddb works. It needs to make two requests
         in order to get the correct hash to delete the comment. In addition, it may fail if the
@@ -612,9 +759,9 @@ class Client:
 
         return "You have <u>deleted</u> this comment" in r.json()["text"]
 
-    def undelete_comment(self, comment):
+    def undelete_comment(self, comment: Comment) -> bool:
         """This will undelete the supplied comment provided you have the correct permissions.
-        This is an expensive request because if how moddb works. It needs to make three requests
+        This is an expensive request because of how moddb works. It needs to make three requests
         in order to get the correct hash to undelete the comment. In addition, it may fail if the
         comment has changed location (page number) from what the object says. It is recommended
         to use a newly created comment object that is less than 30 minutes old.
@@ -645,7 +792,7 @@ class Client:
 
         return "You have <u>authorized</u> this comment" in r.json()["text"]
 
-    def edit_comment(self, comment, new_text):
+    def edit_comment(self, comment: Comment, new_text: str) -> bool:
         """Edit the contents of a comment. You can only edit your comment 120 minutes after it has
         been posted
 
@@ -674,7 +821,7 @@ class Client:
 
         return "Your comment has been saved" in r.json()["text"]
 
-    def add_review(self, page, rating, *, text=None, has_spoilers=False):
+    def add_review(self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False) -> bool:
         """Rate and review a page. If you rating is below 3 or above 8 you will be asked
         to also provide a review or else the request will not be made. This is also
         used to edit existing reviews.
@@ -725,7 +872,7 @@ class Client:
 
         return "Your rating has been saved" in r.json()["text"]
 
-    def delete_review(self, review):
+    def delete_review(self, review: Review) -> bool:
         """Delete your review on the given page. This function will do two requests in order
         to delete your review.
 
@@ -762,3 +909,202 @@ class Client:
         )
 
         return "You have <u>deleted</u> this review." in r.json()["text"]
+
+    def get_threads(
+        self,
+        query: str = None,
+        read: bool = None,
+        replied: bool = None,
+        sent_items: bool = False,
+        sort: Tuple[str, str] = None,
+    ) -> List[ThreadThumbnail]:
+        """Get all the messages this user has sent or received. This does not return threads you
+        have left.
+
+        Parameters
+        -----------
+        query : Optional[str]
+            Optional query to filter messages
+        read : Optional[bool]
+            True to filter only read message, false to filter unread, None to allow both
+        replied : Optional[bool]
+            True to filter messages where you are the last message, False for messages
+            where another user is the last message, None for both.
+        sent_items:
+            Get only the threads you have started
+        sort : Tuple[str, str]
+            Optional sort tuple to order threads
+
+        Returns
+        --------
+        List[ThreadThumbnail]
+            Thread typed thumbnails
+        """
+        if sent_items:
+            url = f"{BASE_URL}/messages/sentitems"
+        else:
+            url = f"{BASE_URL}/messages/inbox"
+
+        r = self._request(
+            "GET",
+            url,
+            params={
+                "filter": "t",
+                "kw": query,
+                "hasread": int(read) if read is not None else read,
+                "hasreplied": int(replied) if replied is not None else replied,
+                "sort": f"{sort[0]}-{sort[1]}" if sort is not None else sort,
+            },
+        )
+        html = soup(r.text)
+
+        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all("div", class_=["rowcontent"])
+        threads = []
+        for thread in threads_raw:
+            member = thread.find("span", class_="subheading").find_all("a")[0]
+            threads.append(
+                ThreadThumbnail(
+                    url=thread.a["href"],
+                    name=thread.a["title"],
+                    last_messager=Thumbnail(
+                        type=ThumbnailType.member, name=member.string, url=member["href"]
+                    ),
+                    timestamp=get_date(thread.find("time")["datetime"]),
+                    content=thread.find("div", class_="content").find("p").string,
+                )
+            )
+
+        return threads
+
+    def parse_thread(self, thread: ThreadThumbnail) -> Thread:
+        """Parse a thread thumbnail into a full thread object.
+
+        Parameters
+        ----------
+        thread : ThreadThumbnail
+            The thumbnail to parse
+
+        Returns
+        --------
+        Thread
+            The parsed thread and its messages
+        """
+        r = self._request("GET", thread.url)
+
+        return Thread(soup(r.text))
+
+    def send_message(self, members: List[Member], name: str, message: str) -> Thread:
+        """Send a message and start a thread with one or more members
+
+        Parameters
+        ----------
+        member : List[Member]
+            The members to send the message to and start the
+            thread with
+        name : str
+            The subject of the message
+        message : str
+            The message to send
+
+        Returns
+        --------
+        Thread
+            The thread started from sending this message
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/compose/",
+            data={
+                "formhash": generate_hash(),
+                "membersto": ",".join(member.name for member in members),
+                "name": name,
+                "description": message,
+                "messages": "Send+message",
+            },
+        )
+
+        return Thread(soup(r.text))
+
+    def reply_to_thread(self, thread: Union[Thread, ThreadThumbnail], text: str) -> Thread:
+        """Add an additional message to an exiting thread
+
+        Parameters
+        -----------
+        thread : Union[Thread, ThreadThumbnail]
+            The thread to add the message to
+        text : str
+            The text to send
+
+        Returns
+        --------
+        Thread
+            The updated thread containing the new message. It is
+            recommended to use this object as it also contains
+            a new hash for sending another message
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/inbox/{thread.id}",
+            data={"formhash": generate_hash(), "description": text, "messages": "Send+message"},
+        )
+
+        return Thread(soup(r.text))
+
+    def add_member_to_thread(self, thread: Union[Thread, ThreadThumbnail], member: Member) -> bool:
+        """Add a member to a conversation
+
+        Parameters
+        -----------
+        thread : Union[Thread, ThreadThumbnail]
+            The thread to add add a member to
+        member : Member
+            The member to add
+
+        Returns
+        --------
+        bool
+            Whether adding the member was succesful. This
+            will not update the thread.
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/ajax/members/invite/{thread.id}",
+            data={"ajax": "t", "username": member.name, "member": "0"},
+            allow_redirects=False,
+        )
+
+        return "has been successfully added" in r.json()["text"]
+
+    def leave_thread(self, thread: Union[Thread, ThreadThumbnail]) -> bool:
+        """Leave a thread, you will not get any more notifications on this thread.
+
+        Parameters
+        ----------
+        thread : Union[Thread, ThreadThumbnail]
+            The thread to leave
+
+        Returns
+        --------
+        bool
+            Whether leaving the thread was successful
+        """
+        r = self._request(
+            "POST",
+            f"{BASE_URL}/messages/ajax/delete/",
+            data={"ajax": "t", "thread": thread.id},
+            allow_redirects=False,
+        )
+
+        return "You have successfully deleted the requested thread" in r.json()["text"]
+
+    def mark_all_read(self) -> bool:
+        """Mark all threads as read.
+
+        Returns
+        --------
+        bool
+            True if all threads have been marked as read
+        """
+        r = self._request("POST", f"{BASE_URL}/messages/ajax/markallread", data={"ajax": "t"})
+
+        return "All messages marked as read" in r.json()["text"]
