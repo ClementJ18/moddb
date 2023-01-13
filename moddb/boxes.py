@@ -1204,7 +1204,7 @@ class Mirror:
         The index of the mirror, as multiple mirrors
         have the same name. Index starts at 1
     city : str
-        Alpha 2 code for the city the server is located
+        Alpha 2 code, or full name, of the city the server is located
         in
     country : str
         Alpha 2 code for the country the server is
