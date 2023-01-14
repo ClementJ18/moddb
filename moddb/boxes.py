@@ -1205,10 +1205,10 @@ class Mirror:
         have the same name. Index starts at 1
     city : str
         Alpha 2 code, or full name, of the city the server is located
-        in
+        in. Sometimes represents a country.
     country : str
         Alpha 2 code for the country the server is
-        located in
+        located in. Sometimes represents a continent.
     served : int
         How many downloads of this file this mirror has
         served

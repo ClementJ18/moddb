@@ -1,6 +1,5 @@
 import os
 import random
-from unittest.mock import patch
 
 import moddb
 
@@ -118,7 +117,7 @@ media_urls = [
 ]
 
 article_urls = [
-    "https://www.moddb.com/mods/the-consequence-of-infection/news/whats-happening-to-this-project-in-2019",
+    "https://www.moddb.com/mods/the-consequence-of-infection/news/small-mod-progress-update-1",
     "https://www.moddb.com/mods/project-zer0/news/new-intro-wip",
     "https://www.moddb.com/news/the-challenge-of-adblock",
     "https://www.moddb.com/groups/editors/news/d2multires",
