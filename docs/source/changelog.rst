@@ -12,6 +12,7 @@ v0.8.1
 -------
 Bug Fixes
 ##########
+* Relaxed regex on `File.get_mirrors` to avoid failing in certain edge cases
 
 New Features
 #############
