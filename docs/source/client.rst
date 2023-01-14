@@ -12,6 +12,28 @@ Client
     :members:
     :inherited-members:
 
+
+ThreadThumbnail
+----------------
+.. autoclass:: moddb.client.ThreadThumbnail
+    :members:
+    :inherited-members:
+
+
+Thread
+----------------
+.. autoclass:: moddb.client.Thread
+    :members:
+    :inherited-members:
+
+
+Message
+----------------
+.. autoclass:: moddb.client.Message
+    :members:
+    :inherited-members:
+
+
 Update
 -----------
 .. autoclass:: moddb.client.Update

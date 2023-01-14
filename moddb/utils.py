@@ -20,9 +20,9 @@ LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
 LIMITER = Limiter(
     # request stuff slowly, like a human
-    RequestRate(1, Duration.SECOND * 5),
+    RequestRate(1, Duration.SECOND * 2.5),
     # take breaks when requesting stuff, like a human
-    RequestRate(30, Duration.MINUTE * 5),
+    RequestRate(60, Duration.MINUTE * 5),
 )
 
 time_mapping = {
@@ -87,7 +87,7 @@ def concat_docs(cls):
 
     get_docs(cls)
     original = cls.__doc__.splitlines()
-    if not "    Attributes" in original:
+    if "    Attributes" not in original:
         original.append("    Attributes")
         original.append("    -----------")
 
@@ -179,7 +179,7 @@ def generate_login_cookies(username, password):
     }
 
     login = requests.post(
-        "https://www.moddb.com/members/login",
+        f"{BASE_URL}/members/login",
         data=data,
         cookies=resp.cookies,
         allow_redirects=False,

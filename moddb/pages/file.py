@@ -5,6 +5,7 @@ import datetime
 import requests
 
 from ..utils import (
+    BASE_URL,
     concat_docs,
     get_date,
     get_page,
@@ -142,7 +143,7 @@ class File(BaseMetaClass):
 
         """
         if mirror is None:
-            download = get_page(f"https://www.moddb.com/downloads/start/{self.id}")
+            download = get_page(f"{BASE_URL}/downloads/start/{self.id}")
             url = download.find("a", string=f"download {self.filename}")["href"]
         else:
             url = mirror._url
@@ -168,7 +169,7 @@ class File(BaseMetaClass):
         mirrors_div = html.find("div", class_="mirrors").find_all("div", recursive=False)
         mirrors = []
         for mirror in mirrors_div:
-            mirror_match = re.match(r"(.*) #([0-9]*) \((.{2}), (.{2})\)", mirror.div.p.contents[-1].strip())
+            mirror_match = re.match(r"(.*) #([0-9]*) \((\w+), (\w+)\)", mirror.div.p.contents[-1].strip())
             stats_match = re.match(
                 r"([0-9,]*) downloads? served, ([0-9.]*)% capacity",
                 mirror.div.span.string,
