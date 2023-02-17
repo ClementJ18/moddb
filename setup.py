@@ -25,9 +25,9 @@ setup(
     long_description=readme,
     packages=find_packages(include=['moddb', 'moddb.*']),
     install_requires=[
-        'beautifulsoup4 == 4.6.3',
-        'requests>=2.20.0',
-        'toolz == 0.11.2',
-        'pyrate-limiter==2.8.1'
+        'beautifulsoup4 >= 4.6.3',
+        'requests >= 2.20.0',
+        'toolz >= 0.11.2',
+        'pyrate-limiter >= 2.8.1'
       ]
     )
