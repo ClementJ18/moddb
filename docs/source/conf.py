@@ -27,7 +27,7 @@ author = "Clement Julia"
 # The short X.Y version
 version = ""
 # The full version, including alpha/beta/rc tags
-release = "0.8.1"
+release = "0.9.0"
 
 
 # -- General configuration ---------------------------------------------------

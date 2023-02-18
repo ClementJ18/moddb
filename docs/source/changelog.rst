@@ -8,6 +8,18 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.9.0
+-------
+Bug Fixes
+##########
+
+New Features
+#############
+
+Removed Features
+#################
+
+
 v0.8.1
 -------
 Bug Fixes

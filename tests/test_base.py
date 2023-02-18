@@ -40,7 +40,7 @@ class TestFrontPage:
 class TestSearch:
     @pytest.fixture(params=[DEFAULT_SEARCH], autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=patched_request) as f:
+        with patch("moddb.utils.request", new=patched_request):
             self.search = moddb.search(request.param[1], query=request.param[0])
 
     def test_resort(self):
@@ -61,7 +61,7 @@ class TestLogin:
         moddb.login(username, password)
 
     def test_bad_login(self):
-        with pytest.raises(ValueError) as e:
+        with pytest.raises(ValueError):
             moddb.login("tico", "ticoisgod")
 
     def tearDown(self):

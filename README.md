@@ -63,4 +63,7 @@ Maybe
 * **Thumbnails**: A very widely used model meant to represent models which are references but not expanded onto. Usually the model in question will only include a url and the name of the page. This is transformed into a thumbnail and the user can then parse it with the built-in method.
 
 ## Development
-requirement.txt file contains the necessary additional libraries for develompment
+The necessary dependencies are stored in requirements.txt and requirements-dev.txt and can be installed with the following command
+```
+python -m pip install -r requirements.txt -r requirements-dev.txt
+```
