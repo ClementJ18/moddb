@@ -112,3 +112,9 @@ Mirror
     :members:
     :inherited-members:
     
+
+Tag
+----
+.. autoclass:: moddb.boxes.Tag
+    :members:
+    :inherited-members:

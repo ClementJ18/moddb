@@ -43,8 +43,8 @@ pip install moddb
 * [x] HardwAre
 * [x] Updates
 * [x] Friend Requests
-* [ ] Watchers
-* [ ] Tags
+* [x] Watchers
+* [x] Tags
 
 Maybe
 * [ ] Messages

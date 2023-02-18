@@ -8,6 +8,8 @@ import requests
 from .utils import (
     concat_docs,
     generate_login_cookies,
+    get_sitearea,
+    get_siteareaid,
     join,
     soup,
     get_page_type,
@@ -20,7 +22,7 @@ from .utils import (
     raise_for_status,
     LIMITER,
 )
-from .boxes import Thumbnail, Comment, ResultList, _parse_results
+from .boxes import Tag, Thumbnail, Comment, ResultList, _parse_results
 from .pages import Member, Review, Mod, Game, Engine, Group, Team
 from .enums import ThumbnailType, WatchType, Status
 from .errors import ModdbException
@@ -483,7 +485,7 @@ class Client:
             data={
                 "ajax": "t",
                 "action": "watch",
-                "sitearea": page.url.split("/")[-2],
+                "sitearea": get_sitearea(page.url),
                 "siteareaid": page.id,
             },
             allow_redirects=False,
@@ -611,7 +613,7 @@ class Client:
             data={
                 "ajax": "t",
                 "action": "report",
-                "sitearea": page.url.split("/")[-2],
+                "sitearea": get_sitearea(page.url),
                 "siteareaid": page.id,
             },
             allow_redirects=False,
@@ -859,7 +861,7 @@ class Client:
             f"{BASE_URL}/reviews/ajax",
             data={
                 "ajax": "t",
-                "sitearea": page.url.split("/")[-2],
+                "sitearea": get_sitearea(page.url),
                 "siteareaid": page.id,
                 "hash": page._review_hash,
                 "earlyaccess": int(page.profile.status == Status.early_access),
@@ -1108,3 +1110,73 @@ class Client:
         r = self._request("POST", f"{BASE_URL}/messages/ajax/markallread", data={"ajax": "t"})
 
         return "All messages marked as read" in r.json()["text"]
+
+    def get_tags(self, page):
+        """Get more tags for a page. For some reason this requires an
+        authenticated user.
+
+        Parameters
+        -----------
+        page : Any
+            The page to get the tags for
+
+        Returns
+        --------
+        List[Tag]
+            List of returned tags
+        """
+
+        params = {
+            "ajax": "t",
+            "sitearea": get_sitearea(page.url),
+            "siteareadid": page.id
+        }
+
+        resp = self._request("POST", f"{BASE_URL}/tags/ajax/more", data=params)
+
+        return [Tag(**tag) for tag in resp.json()["tags"].values()]
+
+    def _vote_tag(self, tag : Tag, negative : int):
+        params = {
+            "ajax": "t",
+            "tag": tag.name_id,
+            "sitearea": get_siteareaid(tag.sitearea),
+            "siteareadid": tag.siteareaid,
+            "hash": generate_hash(),
+            "negative": str(negative)
+        }
+
+        resp = self._request("POST", f"{BASE_URL}/tags/ajax/add", data=params)
+        return resp.json()["success"]
+
+    def upvote_tag(self, tag : Tag) -> bool:
+        """Upvote a tag
+
+        Returns
+        --------
+        bool
+            Whether the upvote was successful
+        """
+        return self._vote_tag(tag, 0)
+
+    def downvote_tag(self, tag : Tag) -> bool:
+        """Downvote a tag
+
+        Returns
+        --------
+        bool
+            Whether the downvote was successful
+        """
+        return self._vote_tag(tag, 1)
+
+    def get_tag_members(self, tag : Tag):
+        params = {
+            "ajax": "t",
+            "tag": tag.name_id,
+            "sitearea": get_siteareaid(tag.sitearea),
+            "siteareadid": tag.siteareaid,
+            "hash": generate_hash(),
+        }
+
+        resp = self._request("POST", f"{BASE_URL}/tags/ajax/who", data=params)
+        return resp.json()["success"]

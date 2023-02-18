@@ -1,5 +1,6 @@
 import enum
 
+
 class SearchCategory(enum.Enum):
     """The list of things you can search for"""
 
@@ -62,12 +63,14 @@ class MediaCategory(enum.Enum):
     image = 1
     audio = 2
 
+
 class ArticleCategory(enum.Enum):
     """Category of the article"""
 
     news = 1
     features = 2
     tutorials = 4
+
 
 class Membership(enum.Enum):
     """Member ship settings of Groups and Teams"""
@@ -92,6 +95,7 @@ class TeamCategory(enum.IntFlag):
     developer = 3
     publisher = 4
 
+
 class ThumbnailType(enum.Enum):
     """The various types of thunbails that can be created"""
 
@@ -113,6 +117,7 @@ class ThumbnailType(enum.Enum):
     hardware = 15
     company = team
 
+
 class PlayerStyle(enum.IntFlag):
     """The player style of the game"""
 
@@ -130,6 +135,7 @@ class PlayerStyle(enum.IntFlag):
     coop = 4
     mmo = 8
 
+
 class TimeFrame(enum.Enum):
     """How recently the page was updated/uploaded, 24 hours, last week, last month, ect..."""
 
@@ -139,12 +145,14 @@ class TimeFrame(enum.Enum):
     year = 4
     more = 5
 
+
 class WatchType(enum.Enum):
     mod = 0
     game = 1
     engine = 2
     group = 3
     member = 4
+
 
 class Month(enum.Enum):
     january = "01"
@@ -159,6 +167,7 @@ class Month(enum.Enum):
     october = "10"
     november = "11"
     december = "12"
+
 
 # BELOW THIS LINE ENUMS ARE GENERATED AUTOMATICALLY
 # PR changes to scripts/generate_enums.py if you want to

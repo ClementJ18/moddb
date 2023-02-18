@@ -15,6 +15,8 @@ Bug Fixes
 
 New Features
 #############
+* New object `Tag` representing tags
+* New methods `Client.get_tags`, `Client.upvote_tag`, `Client.downvote_tag` and `Client.get_tag_members`
 
 Removed Features
 #################
