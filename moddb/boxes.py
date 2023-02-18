@@ -17,6 +17,7 @@ from .enums import (
 )
 
 from .utils import (
+    BASE_URL,
     get_date,
     get_list_stats,
     get_page,
@@ -1228,3 +1229,51 @@ class Mirror:
 
     def __repr__(self):
         return f"<Mirror name={self.name} index={self.index} >"
+
+
+class Tag:
+    """Represents a tag, useful to vote on stuff
+
+    Parameters
+    -----------
+    id : Optional[int]
+        ID of the tag. None if obtained from parsing a page
+    name_id : str
+        Name id of the tag
+    name : str
+        Name of the tag
+    date : Optional[datetime.datetime]
+        Creation date of the tag. None if obtained from parsing a page
+    official : Optional[bool]
+        Whether the tag is official or user created. None if obtained from parsing a page
+    sitearea : int
+        Site area
+    siteareaid : int
+        Site area id
+    positive : int
+        Number of positive votes
+    negative : int
+        Number of negative votes
+    rank : Optiona[int]
+        Rank of the tag in trending. None if obtained from parsing a page
+    url : str
+        Url to the tag
+    """
+
+    def __init__(self, **kwargs):
+        self.id = int(kwargs.pop("id"))
+        self.date = datetime.datetime.fromtimestamp(int(kwargs.pop("date")))
+        self.official = kwargs.pop("official") == "1"
+        self.sitearea = int(kwargs.pop("sitearea"))
+        self.siteareaid = int(kwargs.pop("siteareaid"))
+
+        self.positive = int(kwargs.pop("positive"))
+        self.negative = int(kwargs.pop("negative"))
+
+        self.name_id = kwargs.pop("tagid")
+        self.name = kwargs.pop("tag")
+        self.rank = int(kwargs.pop("trending"))
+        self.url = f"{BASE_URL}/tags/{self.name_id}"
+
+    def __repr__(self) -> str:
+        return f"< Tag id={self.id} name_id={self.name_id} >"

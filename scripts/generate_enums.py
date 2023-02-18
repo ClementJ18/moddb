@@ -127,7 +127,7 @@ def generate_string(members, max_size, enum):
 
 def generate_enums(enums):
     string = "# GENERATED AUTOMATICALLY, DO NOT EDIT\n"
-    with open("scripts/data/enums_base.txt", "r") as f:
+    with open("scripts/data/enums_base.py", "r") as f:
         string += f.read()
 
     for enum in enums:

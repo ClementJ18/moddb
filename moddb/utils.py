@@ -455,3 +455,18 @@ def get(iterable, **attrs):
 
 def generate_hash():
     return uuid.uuid4().hex
+
+
+def get_sitearea(url : str) -> str:
+    """Get the site area from a url"""
+    return url.split("/")[-2]
+
+
+siteareaid_mapping = {
+    "3": "mods"
+}
+
+
+def get_siteareaid(key : str):
+    """Get the sitearea id from an int"""
+    return siteareaid_mapping.get(key, "none")
