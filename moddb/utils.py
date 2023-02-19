@@ -463,10 +463,11 @@ def get_sitearea(url : str) -> str:
 
 
 siteareaid_mapping = {
-    "3": "mods"
+    "3": "mods",
+    "2": "games",
 }
 
 
 def get_siteareaid(key : str):
     """Get the sitearea id from an int"""
-    return siteareaid_mapping.get(key, "none")
+    return siteareaid_mapping.get(str(key), "none")

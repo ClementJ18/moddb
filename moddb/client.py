@@ -1152,6 +1152,11 @@ class Client:
     def upvote_tag(self, tag : Tag) -> bool:
         """Upvote a tag
 
+        Parameters
+        -----------
+        tag : Tag
+            The tag to upvote
+
         Returns
         --------
         bool
@@ -1162,6 +1167,11 @@ class Client:
     def downvote_tag(self, tag : Tag) -> bool:
         """Downvote a tag
 
+        Parameters
+        -----------
+        tag : Tag
+            The tag to downvote
+
         Returns
         --------
         bool
@@ -1170,6 +1180,18 @@ class Client:
         return self._vote_tag(tag, 1)
 
     def get_tag_members(self, tag : Tag):
+        """Get a list of the members that have voted for this tag
+
+        Parameters
+        -----------
+        tag : Tag
+            The tag to get the members
+
+        Returns
+        ---------
+        List[Thumbnail]
+            List of member typed thumbnail
+        """
         params = {
             "ajax": "t",
             "tag": tag.name_id,
@@ -1179,4 +1201,10 @@ class Client:
         }
 
         resp = self._request("POST", f"{BASE_URL}/tags/ajax/who", data=params)
-        return resp.json()["success"]
+
+        breakpoint()
+
+        return [
+            Thumbnail(url=join(thumb["href"]), name=thumb.string, type=ThumbnailType.member)
+            for thumb in soup(resp.json()["text"]).find_all("a")
+        ]

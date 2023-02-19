@@ -11,6 +11,7 @@ from ..utils import (
 )
 from ..boxes import (
     CommentList,
+    PartialTag,
     Thumbnail,
     ResultList,
     Profile,
@@ -224,8 +225,8 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
     article :  PartialArticle
         A partial representation of the frong page article. This does not include things like comments or any
         of the sideba elements found in a full article. Can be parsed to return the complete Article object.
-    tags : dict{str : str}
-        A dict of key-values pair where the key is the name of the tag and the value is the url.
+    tags : List[PartialTag]
+        A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     imagebox : List[Thumbnail]
         A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
         image box on the front page.
@@ -312,9 +313,9 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
         except AttributeError:
-            self.tags = {}
+            self.tags = []
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
 
         # imagebox
@@ -525,8 +526,8 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
         List of article type thumbnails from the recommended articles
     article : PartialArticle
         The partial article presented on the front page
-    tags : Dict{str : str}
-        Dict of tags with the name as the key and the url as the value
+    tags : List[PartialTag]
+         A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     medias : List[Thumbnail]
         list of thumbnails representing all the combined media objects of a page (videos and images)
     suggestions : List[Thumbnail]
@@ -600,9 +601,9 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
         except AttributeError:
-            self.tags = {}
+            self.tags = []
             LOGGER.info("Hardware '%s' has no tags", self.name)
 
         self.medias = self._get_media(1, html=html)
