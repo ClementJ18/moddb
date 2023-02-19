@@ -11,6 +11,7 @@ from .mixins import (
     GetWaresMixin,
 )
 from ..boxes import (
+    PartialTag,
     Profile,
     Statistics,
     Thumbnail,
@@ -60,8 +61,8 @@ class Group(PageMetaClass, GetAddonsMixin):
         The profile object for the group
     stats : Statistics
         The stats of the Group
-    tags : dict{str, str}
-        A dictionnary of tags where the key is the tag name and the value is the tag url
+    tags : List[PartialTag]
+        A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     embed : str
         The html for athe group embed
     medias : List[Thumbnail]
@@ -99,10 +100,10 @@ class Group(PageMetaClass, GetAddonsMixin):
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
         except AttributeError:
             LOGGER.info("Entity '%s' has no tags (private)", self.name)
-            self.tags = {}
+            self.tags = []
 
         try:
             self.embed = html.find("input", type="text", class_="text textembed")["value"]

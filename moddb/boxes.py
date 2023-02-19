@@ -1231,6 +1231,9 @@ class Mirror:
         return f"<Mirror name={self.name} index={self.index} >"
 
 
+PartialTag = collections.namedtuple("PartialTag", "name name_id url")
+
+
 class Tag:
     """Represents a tag, useful to vote on stuff
 

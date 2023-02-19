@@ -1,6 +1,6 @@
 import requests
 from .enums import SearchCategory, RSSType
-from .boxes import ResultList, _parse_results
+from .boxes import PartialTag, ResultList, Tag, _parse_results
 from .utils import (
     get_page,
     get_page_type,
@@ -12,7 +12,7 @@ from .utils import (
 from .pages import FrontPage, Member
 
 import sys
-from typing import Tuple, Any
+from typing import Tuple, Any, Union
 
 __all__ = ["search", "parse_page", "login", "logout", "front_page", "parse_results"]
 
@@ -199,12 +199,12 @@ def front_page() -> FrontPage:
     return FrontPage(html)
 
 
-def rss(type: RSSType):
+def rss(rss_type: RSSType):
     """Get the RSS feed url for the entire site depending on which feed type you want
 
     Parameters
     -----------
-    type : RSSType
+    rss_type : RSSType
         The type of feed you desire to get
 
     Returns
@@ -212,4 +212,24 @@ def rss(type: RSSType):
     str
         URL for the feed type
     """
-    return f"https://rss.moddb.com/{type.name}/feed/rss.xml"
+    return f"https://rss.moddb.com/{rss_type.name}/feed/rss.xml"
+
+
+def search_tags(tag : Union[str, PartialTag, Tag]):
+    """Search for entities tagged with a tag-id or Tag.
+
+    Parameters
+    -----------
+    tag : Union[str, PartialTag, Tag]
+        Either a name-id or the Tag to search for
+
+    Returns
+    --------
+    ResultList[Thumbnail]
+        List of entities tagged with this
+    """
+    if isinstance(tag, (Tag, PartialTag)):
+        tag = tag.name_id
+
+    url = f"https://www.moddb.com/tags/{tag}"
+    return parse_results(url)

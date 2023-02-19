@@ -3,7 +3,7 @@ import json
 import re
 
 from ..utils import join, LOGGER
-from ..boxes import Thumbnail
+from ..boxes import PartialTag, Thumbnail
 from ..enums import ThumbnailType, JobSkill
 
 
@@ -40,8 +40,8 @@ class Job:
         A member like thumbnail representing the poster of the job. Can be none if they desire to remain private.
     paid : bool
         Whether or not the job is paid
-    tags : dict{str : str}
-        A dict of key-values pair where the key is the name of the tag and the value is the url.
+    tags : List[PartialTag]
+        A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     skill : JobSkill
         the skill demanded for the job
     location : str
@@ -81,9 +81,9 @@ class Job:
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
         except AttributeError:
-            self.tags = {}
+            self.tags = []
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
 
         self.skill = JobSkill(int(profile_raw.find("h5", string="Skill").parent.span.a["href"][-1]))
