@@ -10,12 +10,6 @@ import moddb
 mod = moddb.parse_page("http://www.moddb.com/mods/edain-mod")
 print(mod.name) #Edain Mod
 ```
-The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function.
-```py
-import moddb
-mod = moddb.parse_page("http://www.moddb.com/mods/edain-mod", page_type=moddb.ThumbnailType.mod)
-print(mod.name) #Edain Mod
-```
 
 ## Advanced Usage
 Check out the [documentation](https://moddb.readthedocs.io) for more information

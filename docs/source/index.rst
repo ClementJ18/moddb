@@ -56,16 +56,6 @@ The simplest way to use this library is to simply pass a ModDB url to the parse 
    mod = moddb.parse_page("http://www.moddb.com/mods/edain-mod")
    print(mod.name) #Edain Mod
 
-The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB 
-site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function:: 
-
-   import moddb
-   mod = moddb.parse_page(
-               "http://www.moddb.com/mods/edain-mod", 
-               page_type=moddb.ThumbnailType.mod
-            )
-   print(mod.name) #Edain Mod
-
 Advanced Usage
 ---------------
 Of course, relying on the library isn't always what we want, you'd be forced to use requests plus nothing's 
