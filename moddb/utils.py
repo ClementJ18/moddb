@@ -5,7 +5,6 @@ from .errors import ModdbException, AwaitingAuthorisation
 import re
 import sys
 import uuid
-import json
 import random
 import inspect
 import logging
@@ -150,7 +149,7 @@ def raise_for_status(response):
             LOGGER.error(response.request.url)
             LOGGER.error(response.request.body)
             raise ModdbException(text["text"])
-    except json.decoder.JSONDecodeError:
+    except requests.exceptions.JSONDecodeError:
         response.raise_for_status()
 
     if (
