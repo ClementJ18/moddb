@@ -110,3 +110,8 @@ class TestMember:
 
     def test_get_watchers(self):
         self.member.get_watchers()
+
+    def test_get_tags(self):
+        tags = self.game.get_tags()
+        if tags:
+            random.choice(tags).get_members()

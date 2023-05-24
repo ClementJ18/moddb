@@ -18,13 +18,16 @@ from .enums import (
 
 from .utils import (
     BASE_URL,
+    generate_hash,
     get_date,
     get_list_stats,
     get_page,
+    get_siteareaid,
     get_views,
     join,
     normalize,
     LOGGER,
+    soup,
     time_mapping,
     get_page_type,
     get,
@@ -1280,3 +1283,26 @@ class Tag:
 
     def __repr__(self) -> str:
         return f"< Tag id={self.id} name_id={self.name_id} >"
+    
+    def get_members(self):
+        """Get a list of the members that have voted for this tag
+
+        Returns
+        ---------
+        List[Thumbnail]
+            List of member typed thumbnail
+        """
+        params = {
+            "ajax": "t",
+            "tag": self.name_id,
+            "sitearea": get_siteareaid(self.sitearea),
+            "siteareaid": self.siteareaid,
+            "hash": generate_hash(),
+        }
+
+        resp = get_page(f"{BASE_URL}/tags/ajax/who", params=params)
+
+        return [
+            Thumbnail(url=join(thumb["href"]), name=thumb.string, type=ThumbnailType.member)
+            for thumb in resp.find("div", class_="successboxachtung").find_all("a")
+        ]

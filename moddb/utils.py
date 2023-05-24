@@ -220,7 +220,7 @@ def soup(html: str) -> BeautifulSoup:
     return BeautifulSoup(html, "html.parser")
 
 
-def get_page(url: str, *, params: dict = {}):
+def get_page(url: str, *, params: dict = {}, json : bool = False):
     """A helper function that takes a url and returns a beautiful soup objects. This is used to center
     the request making section of the library. Can also be passed a set of paramaters, used for sorting
     and filtering in the search function.
@@ -229,16 +229,21 @@ def get_page(url: str, *, params: dict = {}):
     -----------
     url : str
         The url to get
-
     params : dict
         A dictionnary of filters and sorting key-value pairs.
+    json : Optional[bool]
+        Whether the expected response is json, in which case it will not be soup'd
 
     Returns
     -------
     bs4.BeautifulSoup
     """
-    r = request(requests.Request("GET", url, params=params))
-    return soup(r.text)
+    resp = request(requests.Request("GET", url, params=params))
+    breakpoint()
+    if json:
+        return resp.json()
+
+    return soup(resp.text)
 
 
 def get_views(string: str) -> Tuple[int, int]:
