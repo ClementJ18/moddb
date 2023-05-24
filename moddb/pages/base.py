@@ -57,7 +57,9 @@ class BaseMetaClass:
                 self.name = html.find("meta", property="og:title")["content"]
 
         try:
-            self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1])
+            self.id = int(
+                re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]
+            )
         except TypeError:
             try:
                 self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
@@ -190,7 +192,9 @@ class BaseMetaClass:
         return self._get_comments(get_page(f"{self.url}/page/{index}", params=params))
 
 
-class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin):
+class PageMetaClass(
+    BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin
+):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
     those classes.
 
@@ -278,7 +282,9 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         articles_raw = None
         try:
-            raw = html.find("span", string="Articles") or html.find("span", string="Related Articles")
+            raw = html.find("span", string="Articles") or html.find(
+                "span", string="Related Articles"
+            )
             articles_raw = raw.parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [
@@ -313,7 +319,11 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
             self.tags = []
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
@@ -344,9 +354,9 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
             LOGGER.info("'%s' '%s' is not rated", self.__class__.__name__, self.name)
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
-                "value"
-            ]
+            self._review_hash = html.find("form", class_="ratingform").find(
+                "input", {"name": "hash"}
+            )["value"]
         except AttributeError:
             self._review_hash = None
 
@@ -558,9 +568,9 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
             LOGGER.info("'%s' '%s' is not rated", self.profile.category.name, self.name)
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
-                "value"
-            ]
+            self._review_hash = html.find("form", class_="ratingform").find(
+                "input", {"name": "hash"}
+            )["value"]
         except AttributeError:
             self._review_hash = None
 
@@ -601,7 +611,11 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
             self.tags = []
             LOGGER.info("Hardware '%s' has no tags", self.name)
@@ -610,11 +624,12 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
 
         try:
             t = ThumbnailType[self.__class__.__name__.lower()]
-            suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all(
-                "a", class_="image"
-            )
+            suggestions = html.find(
+                "span", string="You may also like"
+            ).parent.parent.parent.find_all("a", class_="image")
             self.suggestions = [
-                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions
+                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"])
+                for x in suggestions
             ]
         except AttributeError:
             LOGGER.info("'%s' '%s' has no suggestions", self.__class__.__name__, self.name)

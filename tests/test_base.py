@@ -70,7 +70,7 @@ class TestLogin:
 
 
 class TestTagSearch:
-    @pytest.fixture(params=[DEFAULT_SEARCH], autouse=True)
+    @pytest.fixture(params=[DEFAULT_TAG_SEARCH], autouse=True)
     def _get_object(self, request):
         with patch("moddb.utils.request", new=patched_request):
             self.search = moddb.search_tags(request.param)

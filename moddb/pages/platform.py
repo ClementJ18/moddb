@@ -83,7 +83,9 @@ class Platform(
 
         try:
             company = html.find("h5", string="Company").parent.span.a
-            self.company = Thumbnail(name=company.string, url=company["href"], type=ThumbnailType.team)
+            self.company = Thumbnail(
+                name=company.string, url=company["href"], type=ThumbnailType.team
+            )
         except AttributeError:
             LOGGER.info("Platform '%s' has no company", self.name)
             self.company = None

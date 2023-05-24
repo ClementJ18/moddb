@@ -215,7 +215,7 @@ def rss(rss_type: RSSType):
     return f"https://rss.moddb.com/{rss_type.name}/feed/rss.xml"
 
 
-def search_tags(tag : Union[str, PartialTag, Tag]):
+def search_tags(tag: Union[str, PartialTag, Tag]):
     """Search for entities tagged with a tag-id or Tag.
 
     Parameters

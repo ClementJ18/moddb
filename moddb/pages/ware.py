@@ -110,7 +110,9 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
             self.games = []
 
         try:
-            history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
+            history = html.find("span", string="History").parent.parent.parent.find_all(
+                "a", class_="image"
+            )
             self.history = [
                 Thumbnail(
                     url=x["href"],
