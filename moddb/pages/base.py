@@ -22,7 +22,7 @@ from ..boxes import (
     _parse_results,
 )
 from ..enums import ThumbnailType, SearchCategory
-from .mixins import SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin
+from .mixins import GetTagsMixin, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin
 
 
 class BaseMetaClass:
@@ -190,7 +190,7 @@ class BaseMetaClass:
         return self._get_comments(get_page(f"{self.url}/page/{index}", params=params))
 
 
-class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin):
+class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
     those classes.
 

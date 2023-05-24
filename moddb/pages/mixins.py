@@ -1,9 +1,10 @@
+import json
 from typing import Tuple, Union, List
 
 from . import opinion
 
-from ..utils import get_page, Object
-from ..boxes import ResultList, Thumbnail
+from ..utils import BASE_URL, get_page, Object, get_sitearea
+from ..boxes import ResultList, Tag, Thumbnail
 from ..enums import (
     Status,
     Genre,
@@ -564,3 +565,23 @@ class GetWatchersMixin:
         }
 
         return self._get(f"{self.url}/watchers/page/{index}", params=params)
+    
+class GetTagsMixin:
+    def get_tags(self):
+        """Get more tags for a page.
+
+        Returns
+        --------
+        List[Tag]
+            List of returned tags
+        """
+
+        params = {
+            "ajax": "t",
+            "sitearea": get_sitearea(self.url),
+            "siteareaid": self.id
+        }
+
+        resp = get_page(f"{BASE_URL}/tags/ajax/more", params=params, json=True)
+
+        return [Tag(**tag) for tag in resp["tags"].values()]

@@ -15,6 +15,7 @@ except ModuleNotFoundError:
 import moddb
 
 DEFAULT_SEARCH = ("edain mod", moddb.SearchCategory.mods)
+DEFAULT_TAG_SEARCH = "strategy"
 
 
 @patch("moddb.utils.request", new=patched_request)
@@ -66,3 +67,24 @@ class TestLogin:
 
     def tearDown(self):
         moddb.SESSION.close()
+
+
+class TestTagSearch:
+    @pytest.fixture(params=[DEFAULT_SEARCH], autouse=True)
+    def _get_object(self, request):
+        with patch("moddb.utils.request", new=patched_request):
+            self.search = moddb.search_tags(request.param)
+
+    def test_resort(self):
+        results = self.search._results
+        search2 = self.search.resort(("visitstotal", "asc"))
+        assert results != search2._results
+
+    def test_next_page(self):
+        self.search.next_page()
+
+    def test_previous_pages(self):
+        search = self.search.next_page()
+        search.previous_page()
+
+    

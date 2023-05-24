@@ -1111,31 +1111,6 @@ class Client:
 
         return "All messages marked as read" in r.json()["text"]
 
-    def get_tags(self, page):
-        """Get more tags for a page. For some reason this requires an
-        authenticated user.
-
-        Parameters
-        -----------
-        page : Any
-            The page to get the tags for
-
-        Returns
-        --------
-        List[Tag]
-            List of returned tags
-        """
-
-        params = {
-            "ajax": "t",
-            "sitearea": get_sitearea(page.url),
-            "siteareadid": page.id
-        }
-
-        resp = self._request("POST", f"{BASE_URL}/tags/ajax/more", data=params)
-
-        return [Tag(**tag) for tag in resp.json()["tags"].values()]
-
     def _vote_tag(self, tag : Tag, negative : int):
         params = {
             "ajax": "t",
@@ -1178,33 +1153,3 @@ class Client:
             Whether the downvote was successful
         """
         return self._vote_tag(tag, 1)
-
-    def get_tag_members(self, tag : Tag):
-        """Get a list of the members that have voted for this tag
-
-        Parameters
-        -----------
-        tag : Tag
-            The tag to get the members
-
-        Returns
-        ---------
-        List[Thumbnail]
-            List of member typed thumbnail
-        """
-        params = {
-            "ajax": "t",
-            "tag": tag.name_id,
-            "sitearea": get_siteareaid(tag.sitearea),
-            "siteareadid": tag.siteareaid,
-            "hash": generate_hash(),
-        }
-
-        resp = self._request("POST", f"{BASE_URL}/tags/ajax/who", data=params)
-
-        breakpoint()
-
-        return [
-            Thumbnail(url=join(thumb["href"]), name=thumb.string, type=ThumbnailType.member)
-            for thumb in soup(resp.json()["text"]).find_all("a")
-        ]

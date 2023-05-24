@@ -1,3 +1,4 @@
+import random
 import pytest
 from unittest.mock import patch
 
@@ -64,3 +65,8 @@ class TestGroup:
 
     def test_get_watchers(self):
         self.group.get_watchers()
+
+    def test_get_tags(self):
+        tags = self.game.get_tags()
+        if tags:
+            random.choice(tags).get_members()
