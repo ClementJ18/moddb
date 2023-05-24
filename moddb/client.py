@@ -106,7 +106,8 @@ class Thread:
 
         self.id = int(option["href"][option["href"].index("=") + 1 :])
         self.members = [
-            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member) for member in members
+            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member)
+            for member in members
         ]
         self.messages = [Message(message) for message in messages]
 
@@ -312,7 +313,9 @@ class Client:
             "User-Agent": random.choice(user_agent_list),
         }
 
-        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
+        req = requests.Request(
+            method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {})
+        )
         prepped = self._session.prepare_request(req)
         LOGGER.info("Request: %s", prepped.url)
 
@@ -342,7 +345,8 @@ class Client:
         )
         raw = html.find_all("span", string=strings)
         objects = [
-            e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False) for e in raw
+            e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
+            for e in raw
         ]
 
         objects_raw = [item for sublist in objects for item in sublist[:-1]]
@@ -410,7 +414,9 @@ class Client:
         html = soup(r.text)
         requests = []
         raw = html.find("span", string="Friend Requests")
-        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
+        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all(
+            "div", recursive=False
+        )
 
         for request in raw_requests[:-1]:
             thumbnail = request.find("a")
@@ -823,7 +829,9 @@ class Client:
 
         return "Your comment has been saved" in r.json()["text"]
 
-    def add_review(self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False) -> bool:
+    def add_review(
+        self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False
+    ) -> bool:
         """Rate and review a page. If you rating is below 3 or above 8 you will be asked
         to also provide a review or else the request will not be made. This is also
         used to edit existing reviews.
@@ -960,7 +968,9 @@ class Client:
         )
         html = soup(r.text)
 
-        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all("div", class_=["rowcontent"])
+        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all(
+            "div", class_=["rowcontent"]
+        )
         threads = []
         for thread in threads_raw:
             member = thread.find("span", class_="subheading").find_all("a")[0]
@@ -1111,20 +1121,20 @@ class Client:
 
         return "All messages marked as read" in r.json()["text"]
 
-    def _vote_tag(self, tag : Tag, negative : int):
+    def _vote_tag(self, tag: Tag, negative: int):
         params = {
             "ajax": "t",
             "tag": tag.name_id,
             "sitearea": get_siteareaid(tag.sitearea),
             "siteareadid": tag.siteareaid,
             "hash": generate_hash(),
-            "negative": str(negative)
+            "negative": str(negative),
         }
 
         resp = self._request("POST", f"{BASE_URL}/tags/ajax/add", data=params)
         return resp.json()["success"]
 
-    def upvote_tag(self, tag : Tag) -> bool:
+    def upvote_tag(self, tag: Tag) -> bool:
         """Upvote a tag
 
         Parameters
@@ -1139,7 +1149,7 @@ class Client:
         """
         return self._vote_tag(tag, 0)
 
-    def downvote_tag(self, tag : Tag) -> bool:
+    def downvote_tag(self, tag: Tag) -> bool:
         """Downvote a tag
 
         Parameters

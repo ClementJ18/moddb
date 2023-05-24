@@ -1,4 +1,3 @@
-import json
 from typing import Tuple, Union, List
 
 from . import opinion
@@ -540,7 +539,9 @@ class GetAddonsMixin:
 
 
 class GetWatchersMixin:
-    def get_watchers(self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None) -> ResultList:
+    def get_watchers(
+        self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None
+    ) -> ResultList:
         """Get a page of watchers for the page. Each page will yield up to 30 members.
 
         Parameters
@@ -565,7 +566,8 @@ class GetWatchersMixin:
         }
 
         return self._get(f"{self.url}/watchers/page/{index}", params=params)
-    
+
+
 class GetTagsMixin:
     def get_tags(self):
         """Get more tags for a page.
@@ -576,11 +578,7 @@ class GetTagsMixin:
             List of returned tags
         """
 
-        params = {
-            "ajax": "t",
-            "sitearea": get_sitearea(self.url),
-            "siteareaid": self.id
-        }
+        params = {"ajax": "t", "sitearea": get_sitearea(self.url), "siteareaid": self.id}
 
         resp = get_page(f"{BASE_URL}/tags/ajax/more", params=params, json=True)
 

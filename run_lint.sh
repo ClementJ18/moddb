@@ -1,2 +1,2 @@
-black --diff  moddb/ tests/
+black --diff  moddb/ tests/ --line-length 100
 flakeheaven lint moddb/

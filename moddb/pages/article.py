@@ -98,7 +98,11 @@ class Article(BaseMetaClass):
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
             self.tags = []
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
@@ -118,8 +122,12 @@ class Article(BaseMetaClass):
 
         if self.category == ArticleCategory.tutorials:
             cat = html.find("span", itemprop="proficiencyLevel").nextSibling.strip()
-            self.tutorial_category = TutorialCategory[cat.replace("/", "_").replace(" ", "_").lower()]
-            self.difficulty = Difficulty[html.find("span", itemprop="proficiencyLevel").string.lower()]
+            self.tutorial_category = TutorialCategory[
+                cat.replace("/", "_").replace(" ", "_").lower()
+            ]
+            self.difficulty = Difficulty[
+                html.find("span", itemprop="proficiencyLevel").string.lower()
+            ]
 
     def __repr__(self):
         return f"<Article title={self.name} type={self.category.name}>"

@@ -27,7 +27,6 @@ from .utils import (
     join,
     normalize,
     LOGGER,
-    soup,
     time_mapping,
     get_page_type,
     get,
@@ -103,7 +102,9 @@ class Statistics:
                 "Members",
             ),
         )
-        self.__dict__.update({stat.string.lower(): int(normalize(stat.parent.a.string)) for stat in misc})
+        self.__dict__.update(
+            {stat.string.lower(): int(normalize(stat.parent.a.string)) for stat in misc}
+        )
 
         visits = normalize(html.find("h5", string="Visits").parent.a.string)
         self.visits, self.today = get_views(visits)
@@ -223,7 +224,9 @@ class Profile:
             self.share = None
 
         if page_type in [SearchCategory.developers, SearchCategory.groups]:
-            self.private = profile_raw.find("h5", string="Privacy").parent.span.string.strip() != "Public"
+            self.private = (
+                profile_raw.find("h5", string="Privacy").parent.span.string.strip() != "Public"
+            )
 
             membership = profile_raw.find("h5", string="Subscription").parent.span.string.strip()
             if membership == "Open to all members":
@@ -290,7 +293,8 @@ class Profile:
             if page_type != SearchCategory.mods:
                 platforms = profile_raw.find("h5", string="Platforms").parent.span.find_all("a")
                 self.platforms = [
-                    Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform) for x in platforms
+                    Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform)
+                    for x in platforms
                 ]
 
         if page_type != SearchCategory.groups:
@@ -371,7 +375,9 @@ class Style:
 
     def __init__(self, html):
         misc = html.find_all("h5", string=("Theme", "Genre", "Players"))
-        styles = {style.string.lower(): re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc}
+        styles = {
+            style.string.lower(): re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc
+        }
 
         self.theme = Theme(int(styles["theme"]))
         self.genre = Genre(int(styles["genre"]))
@@ -388,7 +394,9 @@ class Style:
             LOGGER.info("Has no boxart")
 
     def __repr__(self):
-        return f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
+        return (
+            f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
+        )
 
 
 class Thumbnail:
@@ -662,14 +670,17 @@ class Comment:
         return self._fetch_time + datetime.timedelta(minute=30) > datetime.datetime.utcnow()
 
     def __repr__(self):
-        return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
+        return (
+            f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
+        )
 
 
 class MissingComment:
     """An object to represent a missing comment. This used in the cases where a parent comment with
     children is deleted so that the children may still be accessible, missing comment will have the
     same attributes as a :class:`.Comment` but they will all be equal to None or False apart from children
-    and the comment position, which will have the children of the comment that was deleted attached to it."""
+    and the comment position, which will have the children of the comment that was deleted attached to it.
+    """
 
     def __init__(self, position):
         self.id = None
@@ -740,13 +751,17 @@ class MemberProfile:
         self.name = html.find("meta", property="og:title")["content"]
 
         self.level = int(level_raw.find("span", class_="level").string)
-        self.progress = float("0." + level_raw.find("span", class_="info").strong.string.replace("%", ""))
+        self.progress = float(
+            "0." + level_raw.find("span", class_="info").strong.string.replace("%", "")
+        )
         self.title = level_raw.find("span", class_="info").a.string
 
         self.avatar = profile_raw.find("div", class_="avatarinfo").img["src"]
         self.online = bool(profile_raw.find("h5", string="Status"))
         last_online = profile_raw.find("h5", string="Last Online")
-        self.last_online = get_date(last_online.parent.span.time["datetime"]) if last_online else None
+        self.last_online = (
+            get_date(last_online.parent.span.time["datetime"]) if last_online else None
+        )
 
         try:
             self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
@@ -815,7 +830,10 @@ class MemberStatistics:
             string=("Watchers", "Activity Points", "Comments", "Tags", "Site visits"),
         )
         self.__dict__.update(
-            {stat.string.lower().replace(" ", "_"): int(normalize(get(stat.parent))) for stat in misc}
+            {
+                stat.string.lower().replace(" ", "_"): int(normalize(get(stat.parent)))
+                for stat in misc
+            }
         )
 
         visits = normalize(html.find("h5", string="Visitors").parent.a.string)
@@ -1283,7 +1301,7 @@ class Tag:
 
     def __repr__(self) -> str:
         return f"< Tag id={self.id} name_id={self.name_id} >"
-    
+
     def get_members(self):
         """Get a list of the members that have voted for this tag
 

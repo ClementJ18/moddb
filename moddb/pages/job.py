@@ -56,9 +56,9 @@ class Job:
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
-        breadcrumb = json.loads(html.find("script", type="application/ld+json").string)["itemListElement"][
-            -1
-        ]["Item"]
+        breadcrumb = json.loads(html.find("script", type="application/ld+json").string)[
+            "itemListElement"
+        ][-1]["Item"]
         self.name = breadcrumb["name"]
         self.url = breadcrumb["@id"]
         self.name_id = self.url.split("/")[0]
@@ -72,7 +72,9 @@ class Job:
 
         try:
             author = profile_raw.find("h5", string="Author").parent.span.a
-            self.author = Thumbnail(url=author["href"], name=author.string, type=ThumbnailType.member)
+            self.author = Thumbnail(
+                url=author["href"], name=author.string, type=ThumbnailType.member
+            )
         except AttributeError:
             LOGGER.info("Job '%s' has no author", self.name)
             self.author = None
@@ -81,7 +83,11 @@ class Job:
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = [PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1]) for x in raw_tags if x.string is not None]
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
             self.tags = []
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)

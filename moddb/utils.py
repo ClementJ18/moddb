@@ -156,7 +156,9 @@ def raise_for_status(response):
         "is currently awaiting authorisation, which can take a couple of days while a"
         in response.text.lower()
     ):
-        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
+        raise AwaitingAuthorisation(
+            "This page is still await authorisation and cannot currently be parsed"
+        )
 
 
 def generate_login_cookies(username, password):
@@ -220,7 +222,7 @@ def soup(html: str) -> BeautifulSoup:
     return BeautifulSoup(html, "html.parser")
 
 
-def get_page(url: str, *, params: dict = {}, json : bool = False):
+def get_page(url: str, *, params: dict = {}, json: bool = False):
     """A helper function that takes a url and returns a beautiful soup objects. This is used to center
     the request making section of the library. Can also be passed a set of paramaters, used for sorting
     and filtering in the search function.
@@ -239,7 +241,6 @@ def get_page(url: str, *, params: dict = {}, json : bool = False):
     bs4.BeautifulSoup
     """
     resp = request(requests.Request("GET", url, params=params))
-    breakpoint()
     if json:
         return resp.json()
 
@@ -462,7 +463,7 @@ def generate_hash():
     return uuid.uuid4().hex
 
 
-def get_sitearea(url : str) -> str:
+def get_sitearea(url: str) -> str:
     """Get the site area from a url"""
     return url.split("/")[-2]
 
@@ -473,6 +474,6 @@ siteareaid_mapping = {
 }
 
 
-def get_siteareaid(key : str):
+def get_siteareaid(key: str):
     """Get the sitearea id from an int"""
     return siteareaid_mapping.get(str(key), "none")
