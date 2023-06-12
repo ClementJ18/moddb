@@ -2,20 +2,22 @@ import random
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request, sample_list
+from tests.utils import patched_request, sample_list
 
 import moddb
 
 DEFAULT = "https://www.moddb.com/engines/sage-strategy-action-game-engine"
 
 
-@patch("moddb.utils.request", new=patched_request)
-class TestEngine:
+class EngineBase:
     @pytest.fixture(params=[DEFAULT], autouse=True)
     def _get_object(self, request):
         with patch("moddb.utils.request", new=patched_request) as f:
             self.engine = moddb.Engine(moddb.get_page(request.param))
 
+
+@patch("moddb.utils.request", new=patched_request)        
+class TestEnginePatched(EngineBase):
     def test_get_articles(self):
         articles = self.engine.get_articles()
         self.engine.get_articles(4)
@@ -62,7 +64,9 @@ class TestEngine:
     def test_get_watchers(self):
         self.engine.get_watchers()
 
+
+class TestEngine(EngineBase):
     def test_get_tags(self):
-        tags = self.game.get_tags()
+        tags = self.engine.get_tags()
         if tags:
             random.choice(tags).get_members()

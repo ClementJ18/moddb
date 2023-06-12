@@ -2,7 +2,7 @@ import pytest
 from unittest.mock import patch
 from tests.test_engine import DEFAULT
 
-from tests.test_utils import patched_request
+from tests.utils import patched_request
 
 import moddb
 
