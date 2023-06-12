@@ -156,7 +156,7 @@ class BaseMetaClass:
         List[Thumbnail]
             List of media like thumbnails that can be parsed individually. Can be a very long list.
         """
-        script = html.find_all("script", text=True)[index]
+        script = html.find_all("script", string=True)[index]
         regex = r'new Array\(0, "(\S*)", "(\S*)"'
         matches = re.findall(regex, script.text)
 

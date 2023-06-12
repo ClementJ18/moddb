@@ -2,7 +2,7 @@ import random
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request, sample_list
+from tests.utils import patched_request, sample_list
 
 import moddb
 
@@ -102,6 +102,6 @@ class TestTeam:
         self.team.get_watchers()
 
     def test_get_tags(self):
-        tags = self.game.get_tags()
+        tags = self.team.get_tags()
         if tags:
             random.choice(tags).get_members()

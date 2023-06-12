@@ -1,7 +1,7 @@
 import pytest
 import random
 
-from tests.test_utils import mixed_urls
+from tests.utils import mixed_urls
 
 try:
     from tests.test_config import username, password, sender_username, sender_password

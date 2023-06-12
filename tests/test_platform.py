@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request, sample_list
+from tests.utils import patched_request, sample_list
 
 import moddb
 
