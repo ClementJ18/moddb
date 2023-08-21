@@ -20,6 +20,7 @@ New Features
 * New method `search_tags`
 * New object `PartialTag`
 * `tag` attributes are now `List[PartialTag]`
+* Decreased ratelimit to 1/1sec, 40/5min
 
 Removed Features
 #################

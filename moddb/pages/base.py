@@ -519,7 +519,7 @@ class PageMetaClass(
         return f"<{self.__class__.__name__} name={self.name}>"
 
 
-class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin):
+class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin):
     """Shared class for Hardware and Software
 
     Attributes

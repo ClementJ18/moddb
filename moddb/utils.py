@@ -19,9 +19,9 @@ LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
 LIMITER = Limiter(
     # request stuff slowly, like a human
-    RequestRate(1, Duration.SECOND * 2.5),
+    RequestRate(1, Duration.SECOND * 1),
     # take breaks when requesting stuff, like a human
-    RequestRate(60, Duration.MINUTE * 5),
+    RequestRate(40, Duration.MINUTE * 5),
 )
 
 time_mapping = {
