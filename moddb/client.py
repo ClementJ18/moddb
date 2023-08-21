@@ -1,32 +1,33 @@
+import random
 import re
 import sys
-import random
 from typing import Any, List, Tuple, Union
-from pyrate_limiter import Duration, Limiter, RequestRate
-import requests
 
+import requests
+from pyrate_limiter import Duration, Limiter, RequestRate
+
+from .base import parse_page
+from .boxes import Comment, ResultList, Tag, Thumbnail, _parse_results
+from .enums import Status, ThumbnailType, WatchType
+from .errors import ModdbException
+from .pages import Engine, Game, Group, Member, Mod, Review, Team
 from .utils import (
+    BASE_URL,
+    LIMITER,
+    LOGGER,
     concat_docs,
+    generate_hash,
     generate_login_cookies,
+    get,
+    get_date,
+    get_page_type,
     get_sitearea,
     get_siteareaid,
     join,
-    soup,
-    get_page_type,
-    get_date,
-    BASE_URL,
-    generate_hash,
-    get,
-    LOGGER,
-    user_agent_list,
     raise_for_status,
-    LIMITER,
+    soup,
+    user_agent_list,
 )
-from .boxes import Tag, Thumbnail, Comment, ResultList, _parse_results
-from .pages import Member, Review, Mod, Game, Engine, Group, Team
-from .enums import ThumbnailType, WatchType, Status
-from .errors import ModdbException
-from .base import parse_page
 
 COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
 

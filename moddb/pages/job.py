@@ -1,10 +1,11 @@
-import bs4
 import json
 import re
 
-from ..utils import join, LOGGER
+import bs4
+
 from ..boxes import PartialTag, Thumbnail
-from ..enums import ThumbnailType, JobSkill
+from ..enums import JobSkill, ThumbnailType
+from ..utils import LOGGER, join
 
 
 class Job:

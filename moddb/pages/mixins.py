@@ -1,26 +1,24 @@
-from typing import Tuple, Union, List
+from typing import List, Tuple, Union
 
-from . import opinion
-
-from ..utils import BASE_URL, get_page, Object, get_sitearea
 from ..boxes import ResultList, Tag, Thumbnail
 from ..enums import (
-    Status,
-    Genre,
-    Theme,
-    Scope,
-    PlayerStyle,
-    TimeFrame,
-    Licence,
-    ArticleCategory,
-    FileCategory,
     AddonCategory,
+    ArticleCategory,
     Difficulty,
-    TutorialCategory,
+    FileCategory,
+    Genre,
     HardwareCategory,
-    SoftwareCategory,
+    Licence,
+    PlayerStyle,
     RSSType,
+    Scope,
+    SoftwareCategory,
+    Status,
+    Theme,
+    TimeFrame,
+    TutorialCategory,
 )
+from ..utils import BASE_URL, Object, get_page, get_sitearea
 
 
 class GetGamesMixin:
@@ -218,6 +216,8 @@ class SharedMethodsMixin:
         ResultList[Review]
             The list of reviews parsed from the page
         """
+        from .opinion import parse_reviews, ReviewList
+
         params = {
             "filter": "t",
             "kw": query,
@@ -228,9 +228,9 @@ class SharedMethodsMixin:
         base_url = f"{self.url}/reviews"
         url = f"{base_url}/page/{index}"
         html = get_page(url, params=params)
-        results, current_page, total_pages, total_results = opinion.parse_reviews(html)
+        results, current_page, total_pages, total_results = parse_reviews(html)
 
-        return opinion.ReviewList(
+        return ReviewList(
             results=results,
             url=base_url,
             total_results=total_results,

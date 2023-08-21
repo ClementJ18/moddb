@@ -1,28 +1,23 @@
-import bs4
 from typing import List, Tuple
 
-from ..utils import concat_docs, LOGGER, join, get_page
-from .base import PageMetaClass, BaseMetaClass
-from .mixins import (
-    GetAddonsMixin,
-    GetEnginesMixin,
-    GetGamesMixin,
-    GetModsMixin,
-    GetWaresMixin,
-)
+import bs4
+
 from ..boxes import (
-    PartialTag,
-    Profile,
-    Statistics,
-    Thumbnail,
+    CommentList,
     MemberProfile,
     MemberStatistics,
+    PartialTag,
+    Profile,
     ResultList,
-    CommentList,
+    Statistics,
+    Thumbnail,
     _parse_results,
 )
-from ..enums import ThumbnailType, SearchCategory, TimeFrame, Membership, GroupCategory
+from ..enums import GroupCategory, Membership, SearchCategory, ThumbnailType, TimeFrame
+from ..utils import LOGGER, concat_docs, get_page, join
 from .article import Blog
+from .base import BaseMetaClass, PageMetaClass
+from .mixins import GetAddonsMixin, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin
 
 
 @concat_docs

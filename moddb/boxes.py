@@ -1,43 +1,43 @@
+import collections
+import datetime
+import re
+import sys
+from typing import Any, List, Tuple, Union
+
+import toolz
+
 from .enums import (
-    ThumbnailType,
-    SearchCategory,
-    Membership,
-    Licence,
+    AddonCategory,
+    ArticleCategory,
     Genre,
-    Theme,
+    GroupCategory,
+    HardwareCategory,
+    Licence,
+    Membership,
     PlayerStyle,
     Scope,
-    ArticleCategory,
-    HardwareCategory,
-    Status,
+    SearchCategory,
     SoftwareCategory,
-    AddonCategory,
-    GroupCategory,
+    Status,
     TeamCategory,
+    Theme,
+    ThumbnailType,
 )
-
 from .utils import (
     BASE_URL,
+    LOGGER,
     generate_hash,
+    get,
     get_date,
     get_list_stats,
     get_page,
+    get_page_type,
     get_siteareaid,
     get_views,
     join,
     normalize,
-    LOGGER,
     time_mapping,
-    get_page_type,
-    get,
 )
-
-import re
-import sys
-import toolz
-import datetime
-import collections
-from typing import List, Any, Tuple, Union
 
 __all__ = [
     "Statistics",

@@ -1,9 +1,9 @@
 import bs4
 
+from ..enums import SearchCategory
 from ..utils import concat_docs
 from .base import PageMetaClass
-from .mixins import GetModsMixin, GetAddonsMixin
-from ..enums import SearchCategory
+from .mixins import GetAddonsMixin, GetModsMixin
 
 
 @concat_docs
