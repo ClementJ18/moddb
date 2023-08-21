@@ -1,9 +1,10 @@
-import bs4
 import re
+
+import bs4
 
 from ..boxes import Thumbnail
 from ..enums import ThumbnailType
-from ..utils import get_page_type, get_page
+from ..utils import get_page, get_page_type
 from . import opinion
 
 

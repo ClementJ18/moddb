@@ -86,5 +86,3 @@ class TestTagSearch:
     def test_previous_pages(self):
         search = self.search.next_page()
         search.previous_page()
-
-    

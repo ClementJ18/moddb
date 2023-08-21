@@ -16,7 +16,7 @@ class EngineBase:
             self.engine = moddb.Engine(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=patched_request)        
+@patch("moddb.utils.request", new=patched_request)
 class TestEnginePatched(EngineBase):
     def test_get_articles(self):
         articles = self.engine.get_articles()

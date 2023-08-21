@@ -1,28 +1,23 @@
 import re
-import bs4
 from typing import List
 
-from ..utils import (
-    join,
-    LOGGER,
-    get_page,
-    get_media_type,
-    get_page_type,
-)
+import bs4
+
 from ..boxes import (
     CommentList,
-    PartialTag,
-    Thumbnail,
-    ResultList,
-    Profile,
-    Statistics,
     PartialArticle,
+    PartialTag,
+    Profile,
+    ResultList,
+    Statistics,
     Style,
+    Thumbnail,
     _parse_comments,
     _parse_results,
 )
-from ..enums import ThumbnailType, SearchCategory
-from .mixins import GetTagsMixin, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin
+from ..enums import SearchCategory, ThumbnailType
+from ..utils import LOGGER, get_media_type, get_page, get_page_type, join
+from .mixins import GetTagsMixin, GetWatchersMixin, RSSFeedMixin, SharedMethodsMixin
 
 
 class BaseMetaClass:
@@ -519,7 +514,9 @@ class PageMetaClass(
         return f"<{self.__class__.__name__} name={self.name}>"
 
 
-class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin):
+class HardwareSoftwareMetaClass(
+    BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin
+):
     """Shared class for Hardware and Software
 
     Attributes

@@ -1,19 +1,20 @@
-import bs4
-from .enums import ThumbnailType
-from .errors import ModdbException, AwaitingAuthorisation
-
+import datetime
+import inspect
+import logging
+import random
 import re
 import sys
 import uuid
-import random
-import inspect
-import logging
-import datetime
-import requests
 from typing import Tuple
 from urllib.parse import urljoin
+
+import bs4
+import requests
 from bs4 import BeautifulSoup, Tag
 from pyrate_limiter import Duration, Limiter, RequestRate
+
+from .enums import ThumbnailType
+from .errors import AwaitingAuthorisation, ModdbException
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"

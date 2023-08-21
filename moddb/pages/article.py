@@ -1,8 +1,9 @@
 import bs4
-from .base import BaseMetaClass
-from ..utils import concat_docs, LOGGER, join, get_views, get_date
-from ..enums import ArticleCategory, ThumbnailType, TutorialCategory, Difficulty
+
 from ..boxes import PartialTag, Profile, Thumbnail
+from ..enums import ArticleCategory, Difficulty, ThumbnailType, TutorialCategory
+from ..utils import LOGGER, concat_docs, get_date, get_views, join
+from .base import BaseMetaClass
 
 
 @concat_docs

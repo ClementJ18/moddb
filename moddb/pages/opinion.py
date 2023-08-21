@@ -1,8 +1,8 @@
 import re
 
-from ..utils import concat_docs, get_date, get_list_stats, join
-from ..boxes import ModDBList, Thumbnail, Option
+from ..boxes import ModDBList, Option, Thumbnail
 from ..enums import ThumbnailType
+from ..utils import concat_docs, get_date, get_list_stats, join
 from .base import BaseMetaClass
 
 

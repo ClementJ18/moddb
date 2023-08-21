@@ -1,14 +1,14 @@
-from .fp import FrontPage
-from .mod import Mod
-from .game import Game
-from .engine import Engine
 from .article import Article, Blog
-from .entity import Team, Group, Member
-from .file import File, Addon, Media
+from .engine import Engine
+from .entity import Group, Member, Team
+from .file import Addon, File, Media
+from .fp import FrontPage
+from .game import Game
+from .job import Job
+from .mod import Mod
 from .opinion import Poll, Review, ReviewList
 from .platform import Platform
 from .ware import Hardware, Software
-from .job import Job
 
 __all__ = [
     "Mod",

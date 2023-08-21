@@ -1,8 +1,8 @@
-from ..utils import concat_docs, join, LOGGER, get_date
-from ..boxes import Thumbnail, PlatformStatistics
+from ..boxes import PlatformStatistics, Thumbnail
 from ..enums import ThumbnailType
-from .mixins import GetModsMixin, GetGamesMixin, GetEnginesMixin, GetWaresMixin
+from ..utils import LOGGER, concat_docs, get_date, join
 from .base import BaseMetaClass
+from .mixins import GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin
 
 
 @concat_docs

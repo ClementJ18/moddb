@@ -49,11 +49,15 @@ class TestClient:
 
     def test_friends(self):
         self.sender.send_request(self.client.member)
-        request = moddb.utils.get(self.client.get_friend_requests(), name=self.sender.member.profile.name)
+        request = moddb.utils.get(
+            self.client.get_friend_requests(), name=self.sender.member.profile.name
+        )
         request.decline()
 
         self.sender.send_request(self.client.member)
-        request = moddb.utils.get(self.client.get_friend_requests(), name=self.sender.member.profile.name)
+        request = moddb.utils.get(
+            self.client.get_friend_requests(), name=self.sender.member.profile.name
+        )
         request.accept()
 
         self.client.unfriend(self.sender.member)

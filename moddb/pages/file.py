@@ -1,22 +1,23 @@
-import re
-import bs4
-import sys
 import datetime
+import re
+import sys
+
+import bs4
 import requests
 
+from ..boxes import Mirror, Thumbnail
+from ..enums import AddonCategory, FileCategory, MediaCategory, ThumbnailType
 from ..utils import (
     BASE_URL,
     concat_docs,
     get_date,
     get_page,
-    raise_for_status,
-    join,
     get_views,
+    join,
     prepare_request,
+    raise_for_status,
 )
 from .base import BaseMetaClass
-from ..enums import FileCategory, AddonCategory, ThumbnailType, MediaCategory
-from ..boxes import Mirror, Thumbnail
 
 
 @concat_docs
