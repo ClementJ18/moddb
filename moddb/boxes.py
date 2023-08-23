@@ -1,10 +1,13 @@
+from __future__ import annotations
+
 import collections
 import datetime
 import re
 import sys
-from typing import Any, List, Tuple, Union
+from typing import TYPE_CHECKING, Any, List, Tuple, Union
 
 import toolz
+from bs4 import BeautifulSoup
 
 from .enums import (
     AddonCategory,
@@ -38,6 +41,9 @@ from .utils import (
     normalize,
     time_mapping,
 )
+
+if TYPE_CHECKING:
+    from .pages.article import Article
 
 __all__ = [
     "Statistics",
@@ -89,7 +95,7 @@ class Statistics:
         The last time this page was updated
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         misc = html.find_all(
             "h5",
             string=(
@@ -174,7 +180,7 @@ class Profile:
 
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         try:
             _name = html.find("a", itemprop="mainEntityOfPage").string
         except AttributeError:
@@ -373,7 +379,7 @@ class Style:
         URL of the boxart for the page.
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         misc = html.find_all("h5", string=("Theme", "Genre", "Players"))
         styles = {
             style.string.lower(): re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc
@@ -582,7 +588,7 @@ class Comment:
         contain the page number.
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         author = html.find("a", class_="avatar")
         self.id = int(html["id"])
         self.author = Thumbnail(
@@ -743,7 +749,7 @@ class MemberProfile:
         Link to follow a member
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find(
             "div", class_="table tablemenu"
         )
@@ -820,7 +826,7 @@ class MemberStatistics:
         the maximum rank
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         def get(parent):
             return parent.a.string.strip() if parent.a else parent.span.string.strip()
 
@@ -877,7 +883,7 @@ class PlatformStatistics:
         Number of mods created for this platform
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         headings = ("Hardware", "Software", "Engines", "Games", "Mods")
         html_headings = html.find_all("h5", string=headings)
         self.__dict__.update(
@@ -917,7 +923,7 @@ class PartialArticle:
         plaintext of the article content (without html)
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
 
         self.name = meta_raw.h4.a.string
@@ -937,7 +943,7 @@ class PartialArticle:
     def __repr__(self):
         return f"<PartialArticle title={self.name}>"
 
-    def get_article(self) -> "Article":
+    def get_article(self) -> Article:
         """Returns the full article object of this article.
 
         Returns
@@ -945,7 +951,9 @@ class PartialArticle:
         Article
             The complete article object
         """
-        return getattr(sys.modules["moddb"], "Article")(get_page(self.url))
+        from .pages.article import Article
+
+        return Article(get_page(self.url))
 
 
 class Option:
@@ -995,7 +1003,7 @@ class ModDBList(collections.abc.MutableSequence):
         self.current_page = kwargs.pop("current_page")
         self.total_results = kwargs.pop("total_results")
 
-    def _parse_method(self, html):
+    def _parse_method(self, html: BeautifulSoup):
         raise NotImplementedError
 
     def _do_request(self, **kwargs):
@@ -1144,7 +1152,7 @@ class ResultList(ModDBList):
         The total amount of results available
     """
 
-    def _parse_method(self, html):
+    def _parse_method(self, html: BeautifulSoup):
         return _parse_results(html)
 
     def resort(self, new_sort: Tuple[str, str]) -> "ResultList":
@@ -1180,7 +1188,7 @@ class CommentList(ModDBList):
         The total amount of results available
     """
 
-    def _parse_method(self, html):
+    def _parse_method(self, html: BeautifulSoup):
         return _parse_comments(html)
 
     def __contains__(self, element):
@@ -1302,7 +1310,7 @@ class Tag:
     def __repr__(self) -> str:
         return f"< Tag id={self.id} name_id={self.name_id} >"
 
-    def get_members(self):
+    def _get_members(self):
         """Get a list of the members that have voted for this tag
 
         Returns
@@ -1310,6 +1318,7 @@ class Tag:
         List[Thumbnail]
             List of member typed thumbnail
         """
+        LOGGER.warning("_get_members is undocumented and unreliable for the time being")
         params = {
             "ajax": "t",
             "tag": self.name_id,

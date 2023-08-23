@@ -1,7 +1,7 @@
 import re
 from typing import List
 
-import bs4
+from bs4 import BeautifulSoup
 
 from ..boxes import (
     CommentList,
@@ -26,7 +26,7 @@ class BaseMetaClass:
 
     Parameters
     -----------
-    html : bs4.BeautifulSoup
+    html : BeautifulSoup
         The html containing the comments
 
     Attributes
@@ -44,7 +44,7 @@ class BaseMetaClass:
         URL to report the page
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         if not getattr(self, "name", None):
             try:
                 self.name = html.find("a", itemprop="mainEntityOfPage").string
@@ -82,12 +82,12 @@ class BaseMetaClass:
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
-    def _get_comments(self, html: bs4.BeautifulSoup) -> CommentList:
+    def _get_comments(self, html: BeautifulSoup) -> CommentList:
         """Extracts the comments from an html page and adds them to a CommentList.
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The html containing the comments
 
         Returns
@@ -195,7 +195,7 @@ class PageMetaClass(
 
     Parameters
     -----------
-    html : bs4.BeautifulSoup
+    html : BeautifulSoup
         The page to be parsed.
 
     page_type : ThumbnailType
@@ -243,7 +243,7 @@ class PageMetaClass(
         Plaintext version of the full description
     """
 
-    def __init__(self, html: bs4.BeautifulSoup, page_type: SearchCategory):
+    def __init__(self, html: BeautifulSoup, page_type: SearchCategory):
         super().__init__(html)
         self._type = page_type
 
@@ -377,13 +377,13 @@ class PageMetaClass(
             self.description = None
             self.plaintext = None
 
-    def _get_suggestions(self, html: bs4.BeautifulSoup) -> List[Thumbnail]:
+    def _get_suggestions(self, html: BeautifulSoup) -> List[Thumbnail]:
         """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
         will be a list of Thumbnail objects that can be parsed individually.
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The html page we are trying to parse the suggestions for
 
         Returns
@@ -413,13 +413,13 @@ class PageMetaClass(
 
         return suggestions
 
-    def _get_games(self, html: bs4.BeautifulSoup) -> List[Thumbnail]:
+    def _get_games(self, html: BeautifulSoup) -> List[Thumbnail]:
         """Used both for Teams and Engines, returns a list of games  present on the page
         as Thumbnail objects.
 
         Parameters
         ----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The html to extract the list of games from
 
         Returns
@@ -444,12 +444,12 @@ class PageMetaClass(
 
         return games
 
-    def _get_files(self, html: bs4.BeautifulSoup) -> List[Thumbnail]:
+    def _get_files(self, html: BeautifulSoup) -> List[Thumbnail]:
         """Cache the files present on the page. Up to 5 files might be present
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The page to cache the files from
 
         Returns
@@ -479,13 +479,13 @@ class PageMetaClass(
 
         return files
 
-    def _get_engines(self, html):
+    def _get_engines(self, html: BeautifulSoup):
         """Hidden method to get the engines showed currently on the page as a list of engine like thumbnails. Takes
         an entire page of html and sorts it out
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The page to cache the engines from
 
         Returns
@@ -541,7 +541,7 @@ class HardwareSoftwareMetaClass(
         list of suggested software/hardware type thumbnails
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         super().__init__(html)
         try:
             self.description = html.find("div", id="profiledescription").p.string

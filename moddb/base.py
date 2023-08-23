@@ -1,12 +1,17 @@
+from __future__ import annotations
+
 import sys
-from typing import Any, Tuple, Union
+from typing import TYPE_CHECKING, Any, Tuple, Union
 
 import requests
 
 from .boxes import PartialTag, ResultList, Tag, _parse_results
-from .enums import RSSType, SearchCategory
 from .pages import FrontPage, Member
 from .utils import BASE_URL, generate_login_cookies, get_page, get_page_type, request, soup
+
+if TYPE_CHECKING:
+    from .enums import RSSType, SearchCategory
+
 
 __all__ = ["search", "parse_page", "login", "logout", "front_page", "parse_results"]
 
