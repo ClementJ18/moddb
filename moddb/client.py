@@ -1,16 +1,19 @@
+from __future__ import annotations
+
 import random
 import re
 import sys
-from typing import Any, List, Tuple, Union
+from typing import TYPE_CHECKING, Any, List, Tuple, Union
 
 import requests
+from bs4 import BeautifulSoup
 from pyrate_limiter import Duration, Limiter, RequestRate
 
 from .base import parse_page
-from .boxes import Comment, ResultList, Tag, Thumbnail, _parse_results
-from .enums import Status, ThumbnailType, WatchType
+from .boxes import ResultList, Thumbnail, _parse_results
+from .enums import Status, ThumbnailType
 from .errors import ModdbException
-from .pages import Engine, Game, Group, Member, Mod, Review, Team
+from .pages import Member
 from .utils import (
     BASE_URL,
     LIMITER,
@@ -28,6 +31,11 @@ from .utils import (
     soup,
     user_agent_list,
 )
+
+if TYPE_CHECKING:
+    from .boxes import Comment, Tag
+    from .enums import WatchType
+    from .pages import Engine, Game, Group, Mod, Review, Team
 
 COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
 
@@ -48,7 +56,7 @@ class Message:
         The html text of the message
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         member = html.find("a", class_="avatar")
 
         self.id = int(html["id"])
@@ -88,7 +96,7 @@ class Thread:
         The messages associated to this thread
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         thread = html.find("div", id="firstmessage")
         header = thread.find("div", class_="normalcorner")
 

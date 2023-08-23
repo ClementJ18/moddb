@@ -1,9 +1,8 @@
-from typing import List, Tuple
+from __future__ import annotations
 
-import bs4
+from typing import TYPE_CHECKING, List, Tuple
 
 from ..boxes import (
-    CommentList,
     MemberProfile,
     MemberStatistics,
     PartialTag,
@@ -18,6 +17,11 @@ from ..utils import LOGGER, concat_docs, get_page, join
 from .article import Blog
 from .base import BaseMetaClass, PageMetaClass
 from .mixins import GetAddonsMixin, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin
+
+if TYPE_CHECKING:
+    import bs4
+
+    from ..boxes import CommentList
 
 
 @concat_docs

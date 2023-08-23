@@ -1,24 +1,31 @@
-from typing import List, Tuple, Union
+from __future__ import annotations
 
-from ..boxes import ResultList, Tag, Thumbnail
-from ..enums import (
-    AddonCategory,
-    ArticleCategory,
-    Difficulty,
-    FileCategory,
-    Genre,
-    HardwareCategory,
-    Licence,
-    PlayerStyle,
-    RSSType,
-    Scope,
-    SoftwareCategory,
-    Status,
-    Theme,
-    TimeFrame,
-    TutorialCategory,
-)
-from ..utils import BASE_URL, Object, get_page, get_sitearea
+from typing import TYPE_CHECKING, List, Tuple, Union
+
+from ..boxes import Tag
+from ..utils import BASE_URL, get_page, get_sitearea
+
+if TYPE_CHECKING:
+    from ..boxes import ResultList, Thumbnail
+    from ..enums import (
+        AddonCategory,
+        ArticleCategory,
+        Difficulty,
+        FileCategory,
+        Genre,
+        HardwareCategory,
+        Licence,
+        PlayerStyle,
+        RSSType,
+        Scope,
+        SoftwareCategory,
+        Status,
+        Theme,
+        TimeFrame,
+        TutorialCategory,
+    )
+    from ..utils import Object
+    from .game import Game
 
 
 class GetGamesMixin:
@@ -93,7 +100,7 @@ class GetModsMixin:
         theme: Theme = None,
         players: PlayerStyle = None,
         timeframe: TimeFrame = None,
-        game: Union["Game", Object] = None,
+        game: Union[Game, Object] = None,
         sort: Tuple[str, str] = None,
     ) -> ResultList:
         """Get a page of mods for the game. Each page will yield up to 30 mods.
@@ -216,7 +223,7 @@ class SharedMethodsMixin:
         ResultList[Review]
             The list of reviews parsed from the page
         """
-        from .opinion import parse_reviews, ReviewList
+        from .opinion import ReviewList, parse_reviews
 
         params = {
             "filter": "t",
