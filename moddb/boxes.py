@@ -659,7 +659,7 @@ class Comment:
     def is_stale(self):
         """Comments are very volatile. If they are pushed onto another page by other comments
         it becomes impossible to use objects with the previous page number. In addition,
-        calculating the new page number is no possible. Pages do not have a defined size but
+        calculating the new page number is not possible. Pages do not have a defined size but
         rather grow and shrink based on sizes of individual comments. Finally, comments
         also have token that can be used to modify them. These tokens have a hard life of
         30 minutes from the time of the request. This function puts in place several mechanism
@@ -682,7 +682,7 @@ class Comment:
 
 
 class MissingComment:
-    """An object to represent a missing comment. This used in the cases where a parent comment with
+    """An object to represent a missing comment. This is used in the cases where a parent comment with
     children is deleted so that the children may still be accessible, missing comment will have the
     same attributes as a :class:`.Comment` but they will all be equal to None or False apart from children
     and the comment position, which will have the children of the comment that was deleted attached to it.

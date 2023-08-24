@@ -23,7 +23,7 @@ ResultList
     :members:
     :inherited-members:
 
-ResultList
+ReviewList
 ------------
 .. autoclass:: moddb.pages.ReviewList
     :members:
