@@ -1,9 +1,15 @@
-import re
+from __future__ import annotations
 
-from ..utils import concat_docs, get_date, get_list_stats, join
-from ..boxes import ModDBList, Thumbnail, Option
+import re
+from typing import TYPE_CHECKING
+
+from ..boxes import ModDBList, Option, Thumbnail
 from ..enums import ThumbnailType
+from ..utils import concat_docs, get_date, get_list_stats, join
 from .base import BaseMetaClass
+
+if TYPE_CHECKING:
+    from bs4 import BeautifulSoup
 
 
 class ReviewList(ModDBList):
@@ -19,7 +25,7 @@ class ReviewList(ModDBList):
         The total amount of results available
     """
 
-    def _parse_method(self, html):
+    def _parse_method(self, html: BeautifulSoup):
         return parse_reviews(html)
 
 
@@ -96,7 +102,9 @@ class Review:
         # id and hash are none if the review doesn't have content
         try:
             strings = ("Agree", "Delete", "Disagree")
-            self.id = int(re.findall(r"siteareaid=(\d*)", review.find("a", title=strings)["href"])[0])
+            self.id = int(
+                re.findall(r"siteareaid=(\d*)", review.find("a", title=strings)["href"])[0]
+            )
         except TypeError:
             self.id = None
 
@@ -159,10 +167,12 @@ class Poll(BaseMetaClass):
         The list of available options for the poll
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         poll = html.find("div", class_="poll")
         self.question = (
-            poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
+            poll.parent.parent.parent.find("div", class_="normalcorner")
+            .find("span", class_="heading")
+            .string
         )
         self.name = self.question
         super().__init__(html)
@@ -181,7 +191,9 @@ class Poll(BaseMetaClass):
             raw = percentage[index].div.string.replace("%", "").replace("\xa0", "")
             percent = float(f"0.{raw}")
             text = re.sub(r"\([\d,]* vote(s)?\)", "", rest[index].text)
-            votes = int(re.search(r"([\d,]*) vote(s)?", rest[index].span.string)[1].replace(",", ""))
+            votes = int(
+                re.search(r"([\d,]*) vote(s)?", rest[index].span.string)[1].replace(",", "")
+            )
             self.options.append(Option(text=text, votes=votes, percent=percent))
 
     def __repr__(self):

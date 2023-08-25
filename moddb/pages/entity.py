@@ -1,27 +1,27 @@
-import bs4
-from typing import List, Tuple
+from __future__ import annotations
 
-from ..utils import concat_docs, LOGGER, join, get_page
-from .base import PageMetaClass, BaseMetaClass
-from .mixins import (
-    GetAddonsMixin,
-    GetEnginesMixin,
-    GetGamesMixin,
-    GetModsMixin,
-    GetWaresMixin,
-)
+from typing import TYPE_CHECKING, List, Tuple
+
 from ..boxes import (
-    Profile,
-    Statistics,
-    Thumbnail,
     MemberProfile,
     MemberStatistics,
+    PartialTag,
+    Profile,
     ResultList,
-    CommentList,
+    Statistics,
+    Thumbnail,
     _parse_results,
 )
-from ..enums import ThumbnailType, SearchCategory, TimeFrame, Membership, GroupCategory
+from ..enums import GroupCategory, Membership, SearchCategory, ThumbnailType, TimeFrame
+from ..utils import LOGGER, concat_docs, get_page, join
 from .article import Blog
+from .base import BaseMetaClass, PageMetaClass
+from .mixins import GetAddonsMixin, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin
+
+if TYPE_CHECKING:
+    import bs4
+
+    from ..boxes import CommentList
 
 
 @concat_docs
@@ -60,8 +60,8 @@ class Group(PageMetaClass, GetAddonsMixin):
         The profile object for the group
     stats : Statistics
         The stats of the Group
-    tags : dict{str, str}
-        A dictionnary of tags where the key is the tag name and the value is the tag url
+    tags : List[PartialTag]
+        A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     embed : str
         The html for athe group embed
     medias : List[Thumbnail]
@@ -99,10 +99,14 @@ class Group(PageMetaClass, GetAddonsMixin):
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
             LOGGER.info("Entity '%s' has no tags (private)", self.name)
-            self.tags = {}
+            self.tags = []
 
         try:
             self.embed = html.find("input", type="text", class_="text textembed")["value"]
@@ -119,7 +123,9 @@ class Group(PageMetaClass, GetAddonsMixin):
             articles_raw = html.find("span", string="Articles").parent.parent.parent.find(
                 "div", class_="table"
             )
-            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear", recursive=False)
+            thumbnails = articles_raw.find_all(
+                "div", class_="row rowcontent clear", recursive=False
+            )
             self.articles = [
                 Thumbnail(
                     name=x.a["title"],
@@ -139,7 +145,9 @@ class Group(PageMetaClass, GetAddonsMixin):
             self.description = html.find("div", id="profiledescription").text
         except AttributeError:
             self.description = (
-                html.find("div", class_=["column", "span-all"]).find("div", class_="tooltip").parent.text
+                html.find("div", class_=["column", "span-all"])
+                .find("div", class_="tooltip")
+                .parent.text
             )
 
         self.medias = self._get_media(2, html=html)
@@ -356,7 +364,9 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             LOGGER.info("Member '%s' has no blog suggestions", self.name)
 
         try:
-            friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
+            friends = html.find("div", class_="table tablerelated").find_all(
+                "div", recursive=False
+            )[1:]
             self.friends = [
                 Thumbnail(
                     name=friend.a["title"],

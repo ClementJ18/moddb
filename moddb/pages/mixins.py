@@ -1,26 +1,31 @@
-from typing import Tuple, Union, List
+from __future__ import annotations
 
-from . import opinion
+from typing import TYPE_CHECKING, List, Tuple, Union
 
-from ..utils import get_page, Object
-from ..boxes import ResultList, Thumbnail
-from ..enums import (
-    Status,
-    Genre,
-    Theme,
-    Scope,
-    PlayerStyle,
-    TimeFrame,
-    Licence,
-    ArticleCategory,
-    FileCategory,
-    AddonCategory,
-    Difficulty,
-    TutorialCategory,
-    HardwareCategory,
-    SoftwareCategory,
-    RSSType,
-)
+from ..boxes import Tag
+from ..utils import BASE_URL, get_page, get_sitearea
+
+if TYPE_CHECKING:
+    from ..boxes import ResultList, Thumbnail
+    from ..enums import (
+        AddonCategory,
+        ArticleCategory,
+        Difficulty,
+        FileCategory,
+        Genre,
+        HardwareCategory,
+        Licence,
+        PlayerStyle,
+        RSSType,
+        Scope,
+        SoftwareCategory,
+        Status,
+        Theme,
+        TimeFrame,
+        TutorialCategory,
+    )
+    from ..utils import Object
+    from .game import Game
 
 
 class GetGamesMixin:
@@ -95,7 +100,7 @@ class GetModsMixin:
         theme: Theme = None,
         players: PlayerStyle = None,
         timeframe: TimeFrame = None,
-        game: Union["Game", Object] = None,
+        game: Union[Game, Object] = None,
         sort: Tuple[str, str] = None,
     ) -> ResultList:
         """Get a page of mods for the game. Each page will yield up to 30 mods.
@@ -218,6 +223,8 @@ class SharedMethodsMixin:
         ResultList[Review]
             The list of reviews parsed from the page
         """
+        from .opinion import ReviewList, parse_reviews
+
         params = {
             "filter": "t",
             "kw": query,
@@ -228,9 +235,9 @@ class SharedMethodsMixin:
         base_url = f"{self.url}/reviews"
         url = f"{base_url}/page/{index}"
         html = get_page(url, params=params)
-        results, current_page, total_pages, total_results = opinion.parse_reviews(html)
+        results, current_page, total_pages, total_results = parse_reviews(html)
 
-        return opinion.ReviewList(
+        return ReviewList(
             results=results,
             url=base_url,
             total_results=total_results,
@@ -539,7 +546,9 @@ class GetAddonsMixin:
 
 
 class GetWatchersMixin:
-    def get_watchers(self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None) -> ResultList:
+    def get_watchers(
+        self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None
+    ) -> ResultList:
         """Get a page of watchers for the page. Each page will yield up to 30 members.
 
         Parameters
@@ -564,3 +573,20 @@ class GetWatchersMixin:
         }
 
         return self._get(f"{self.url}/watchers/page/{index}", params=params)
+
+
+class GetTagsMixin:
+    def get_tags(self):
+        """Get more tags for a page.
+
+        Returns
+        --------
+        List[Tag]
+            List of returned tags
+        """
+
+        params = {"ajax": "t", "sitearea": get_sitearea(self.url), "siteareaid": self.id}
+
+        resp = get_page(f"{BASE_URL}/tags/ajax/more", params=params, json=True)
+
+        return [Tag(**tag) for tag in resp["tags"].values()]

@@ -1,5 +1,7 @@
+import json
 import os
 import random
+from unittest.mock import patch
 
 import moddb
 
@@ -8,6 +10,15 @@ class FakeResponse:
     def __init__(self, text):
         self.text = text
         self.content = text.encode("utf-8")
+
+        try:
+            c = json.loads(self.content)
+            self.json_content = c
+        except Exception:
+            self.json_content = {}
+
+    def json(self):
+        return self.json_content
 
 
 request = moddb.utils.request
@@ -18,17 +29,17 @@ def patched_request(req):
     if not filename:
         filename = "/frontpage"
 
-    path = f"tests/fixtures{filename}.html"
+    html_path = f"tests/fixtures{filename}.html"
 
     # cache the file if it doesn't exist
-    if not os.path.exists(path):
+    if not os.path.exists(html_path):
         r = request(req)
 
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        with open(path, "wb") as f:
+        os.makedirs(os.path.dirname(html_path), exist_ok=True)
+        with open(html_path, "wb") as f:
             f.write(r.content)
 
-    with open(path, "r") as f:
+    with open(html_path, "r") as f:
         return FakeResponse(f.read())
 
 

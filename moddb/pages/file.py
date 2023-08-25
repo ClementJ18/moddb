@@ -1,22 +1,23 @@
-import re
-import bs4
-import sys
 import datetime
+import re
+import sys
+
+import bs4
 import requests
 
+from ..boxes import Mirror, Thumbnail
+from ..enums import AddonCategory, FileCategory, MediaCategory, ThumbnailType
 from ..utils import (
     BASE_URL,
     concat_docs,
     get_date,
     get_page,
-    raise_for_status,
-    join,
     get_views,
+    join,
     prepare_request,
+    raise_for_status,
 )
 from .base import BaseMetaClass
-from ..enums import FileCategory, AddonCategory, ThumbnailType, MediaCategory
-from ..boxes import Mirror, Thumbnail
 
 
 @concat_docs
@@ -93,7 +94,9 @@ class File(BaseMetaClass):
             x.string.lower(): x.parent.span.string.strip()
             for x in info.find_all("h5", string=("Filename", "Size", "MD5 Hash"))
         }
-        self.name = html.find("a", title="Report").parent.parent.find("span", class_="heading").string
+        self.name = (
+            html.find("a", title="Report").parent.parent.find("span", class_="heading").string
+        )
         self.filename = file["filename"]
         super().__init__(html)
 
@@ -114,7 +117,9 @@ class File(BaseMetaClass):
             )
 
         uploader = info.find("h5", string="Uploader").parent.a
-        self.author = Thumbnail(url=uploader["href"], name=uploader.string, type=ThumbnailType.member)
+        self.author = Thumbnail(
+            url=uploader["href"], name=uploader.string, type=ThumbnailType.member
+        )
 
         self.date = get_date(info.find("h5", string="Added").parent.span.time["datetime"])
         self.button = info.find("h5", string="Embed Button").parent.span.input["value"]
@@ -169,7 +174,9 @@ class File(BaseMetaClass):
         mirrors_div = html.find("div", class_="mirrors").find_all("div", recursive=False)
         mirrors = []
         for mirror in mirrors_div:
-            mirror_match = re.match(r"(.*) #([0-9]*) \((\w+), (\w+)\)", mirror.div.p.contents[-1].strip())
+            mirror_match = re.match(
+                r"(.*) #([0-9]*) \((\w+), (\w+)\)", mirror.div.p.contents[-1].strip()
+            )
             stats_match = re.match(
                 r"([0-9,]*) downloads? served, ([0-9.]*)% capacity",
                 mirror.div.span.string,
@@ -295,13 +302,17 @@ class Media(BaseMetaClass):
         self.date = get_date(raw_media["date"].span.time["datetime"])
 
         author = raw_media["by"].span.a
-        self.author = Thumbnail(url=author["href"], name=author.string.strip(), type=ThumbnailType.member)
+        self.author = Thumbnail(
+            url=author["href"], name=author.string.strip(), type=ThumbnailType.member
+        )
 
         if "duration" in raw_media:
             duration = raw_media["duration"].span.time.string.strip().split(":")
             duration.reverse()
             times = ["seconds", "minutes", "hours"]
-            self.duration = datetime.timedelta(**{times[duration.index(x)]: int(x) for x in duration})
+            self.duration = datetime.timedelta(
+                **{times[duration.index(x)]: int(x) for x in duration}
+            )
         else:
             self.duration = 0
 

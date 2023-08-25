@@ -1,40 +1,49 @@
+from __future__ import annotations
+
+import collections
+import datetime
+import re
+import sys
+from typing import TYPE_CHECKING, Any, List, Tuple, Union
+
+import toolz
+from bs4 import BeautifulSoup
+
 from .enums import (
-    ThumbnailType,
-    SearchCategory,
-    Membership,
-    Licence,
+    AddonCategory,
+    ArticleCategory,
     Genre,
-    Theme,
+    GroupCategory,
+    HardwareCategory,
+    Licence,
+    Membership,
     PlayerStyle,
     Scope,
-    ArticleCategory,
-    HardwareCategory,
-    Status,
+    SearchCategory,
     SoftwareCategory,
-    AddonCategory,
-    GroupCategory,
+    Status,
     TeamCategory,
+    Theme,
+    ThumbnailType,
 )
-
 from .utils import (
+    BASE_URL,
+    LOGGER,
+    generate_hash,
+    get,
     get_date,
     get_list_stats,
     get_page,
+    get_page_type,
+    get_siteareaid,
     get_views,
     join,
     normalize,
-    LOGGER,
     time_mapping,
-    get_page_type,
-    get,
 )
 
-import re
-import sys
-import toolz
-import datetime
-import collections
-from typing import List, Any, Tuple, Union
+if TYPE_CHECKING:
+    from .pages.article import Article
 
 __all__ = [
     "Statistics",
@@ -86,7 +95,7 @@ class Statistics:
         The last time this page was updated
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         misc = html.find_all(
             "h5",
             string=(
@@ -99,7 +108,9 @@ class Statistics:
                 "Members",
             ),
         )
-        self.__dict__.update({stat.string.lower(): int(normalize(stat.parent.a.string)) for stat in misc})
+        self.__dict__.update(
+            {stat.string.lower(): int(normalize(stat.parent.a.string)) for stat in misc}
+        )
 
         visits = normalize(html.find("h5", string="Visits").parent.a.string)
         self.visits, self.today = get_views(visits)
@@ -169,7 +180,7 @@ class Profile:
 
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         try:
             _name = html.find("a", itemprop="mainEntityOfPage").string
         except AttributeError:
@@ -219,7 +230,9 @@ class Profile:
             self.share = None
 
         if page_type in [SearchCategory.developers, SearchCategory.groups]:
-            self.private = profile_raw.find("h5", string="Privacy").parent.span.string.strip() != "Public"
+            self.private = (
+                profile_raw.find("h5", string="Privacy").parent.span.string.strip() != "Public"
+            )
 
             membership = profile_raw.find("h5", string="Subscription").parent.span.string.strip()
             if membership == "Open to all members":
@@ -286,7 +299,8 @@ class Profile:
             if page_type != SearchCategory.mods:
                 platforms = profile_raw.find("h5", string="Platforms").parent.span.find_all("a")
                 self.platforms = [
-                    Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform) for x in platforms
+                    Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform)
+                    for x in platforms
                 ]
 
         if page_type != SearchCategory.groups:
@@ -365,9 +379,11 @@ class Style:
         URL of the boxart for the page.
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         misc = html.find_all("h5", string=("Theme", "Genre", "Players"))
-        styles = {style.string.lower(): re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc}
+        styles = {
+            style.string.lower(): re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc
+        }
 
         self.theme = Theme(int(styles["theme"]))
         self.genre = Genre(int(styles["genre"]))
@@ -384,7 +400,9 @@ class Style:
             LOGGER.info("Has no boxart")
 
     def __repr__(self):
-        return f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
+        return (
+            f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
+        )
 
 
 class Thumbnail:
@@ -570,7 +588,7 @@ class Comment:
         contain the page number.
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         author = html.find("a", class_="avatar")
         self.id = int(html["id"])
         self.author = Thumbnail(
@@ -641,7 +659,7 @@ class Comment:
     def is_stale(self):
         """Comments are very volatile. If they are pushed onto another page by other comments
         it becomes impossible to use objects with the previous page number. In addition,
-        calculating the new page number is no possible. Pages do not have a defined size but
+        calculating the new page number is not possible. Pages do not have a defined size but
         rather grow and shrink based on sizes of individual comments. Finally, comments
         also have token that can be used to modify them. These tokens have a hard life of
         30 minutes from the time of the request. This function puts in place several mechanism
@@ -658,14 +676,17 @@ class Comment:
         return self._fetch_time + datetime.timedelta(minute=30) > datetime.datetime.utcnow()
 
     def __repr__(self):
-        return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
+        return (
+            f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
+        )
 
 
 class MissingComment:
-    """An object to represent a missing comment. This used in the cases where a parent comment with
+    """An object to represent a missing comment. This is used in the cases where a parent comment with
     children is deleted so that the children may still be accessible, missing comment will have the
     same attributes as a :class:`.Comment` but they will all be equal to None or False apart from children
-    and the comment position, which will have the children of the comment that was deleted attached to it."""
+    and the comment position, which will have the children of the comment that was deleted attached to it.
+    """
 
     def __init__(self, position):
         self.id = None
@@ -728,7 +749,7 @@ class MemberProfile:
         Link to follow a member
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find(
             "div", class_="table tablemenu"
         )
@@ -736,13 +757,17 @@ class MemberProfile:
         self.name = html.find("meta", property="og:title")["content"]
 
         self.level = int(level_raw.find("span", class_="level").string)
-        self.progress = float("0." + level_raw.find("span", class_="info").strong.string.replace("%", ""))
+        self.progress = float(
+            "0." + level_raw.find("span", class_="info").strong.string.replace("%", "")
+        )
         self.title = level_raw.find("span", class_="info").a.string
 
         self.avatar = profile_raw.find("div", class_="avatarinfo").img["src"]
         self.online = bool(profile_raw.find("h5", string="Status"))
         last_online = profile_raw.find("h5", string="Last Online")
-        self.last_online = get_date(last_online.parent.span.time["datetime"]) if last_online else None
+        self.last_online = (
+            get_date(last_online.parent.span.time["datetime"]) if last_online else None
+        )
 
         try:
             self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
@@ -801,7 +826,7 @@ class MemberStatistics:
         the maximum rank
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         def get(parent):
             return parent.a.string.strip() if parent.a else parent.span.string.strip()
 
@@ -811,7 +836,10 @@ class MemberStatistics:
             string=("Watchers", "Activity Points", "Comments", "Tags", "Site visits"),
         )
         self.__dict__.update(
-            {stat.string.lower().replace(" ", "_"): int(normalize(get(stat.parent))) for stat in misc}
+            {
+                stat.string.lower().replace(" ", "_"): int(normalize(get(stat.parent)))
+                for stat in misc
+            }
         )
 
         visits = normalize(html.find("h5", string="Visitors").parent.a.string)
@@ -855,7 +883,7 @@ class PlatformStatistics:
         Number of mods created for this platform
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         headings = ("Hardware", "Software", "Engines", "Games", "Mods")
         html_headings = html.find_all("h5", string=headings)
         self.__dict__.update(
@@ -895,7 +923,7 @@ class PartialArticle:
         plaintext of the article content (without html)
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         meta_raw = html.find("div", class_="row rowcontent rownoimage clear")
 
         self.name = meta_raw.h4.a.string
@@ -915,7 +943,7 @@ class PartialArticle:
     def __repr__(self):
         return f"<PartialArticle title={self.name}>"
 
-    def get_article(self) -> "Article":
+    def get_article(self) -> Article:
         """Returns the full article object of this article.
 
         Returns
@@ -923,7 +951,9 @@ class PartialArticle:
         Article
             The complete article object
         """
-        return getattr(sys.modules["moddb"], "Article")(get_page(self.url))
+        from .pages.article import Article
+
+        return Article(get_page(self.url))
 
 
 class Option:
@@ -973,7 +1003,7 @@ class ModDBList(collections.abc.MutableSequence):
         self.current_page = kwargs.pop("current_page")
         self.total_results = kwargs.pop("total_results")
 
-    def _parse_method(self, html):
+    def _parse_method(self, html: BeautifulSoup):
         raise NotImplementedError
 
     def _do_request(self, **kwargs):
@@ -1122,7 +1152,7 @@ class ResultList(ModDBList):
         The total amount of results available
     """
 
-    def _parse_method(self, html):
+    def _parse_method(self, html: BeautifulSoup):
         return _parse_results(html)
 
     def resort(self, new_sort: Tuple[str, str]) -> "ResultList":
@@ -1158,7 +1188,7 @@ class CommentList(ModDBList):
         The total amount of results available
     """
 
-    def _parse_method(self, html):
+    def _parse_method(self, html: BeautifulSoup):
         return _parse_comments(html)
 
     def __contains__(self, element):
@@ -1228,3 +1258,78 @@ class Mirror:
 
     def __repr__(self):
         return f"<Mirror name={self.name} index={self.index} >"
+
+
+PartialTag = collections.namedtuple("PartialTag", "name name_id url")
+
+
+class Tag:
+    """Represents a tag, useful to vote on stuff
+
+    Parameters
+    -----------
+    id : Optional[int]
+        ID of the tag. None if obtained from parsing a page
+    name_id : str
+        Name id of the tag
+    name : str
+        Name of the tag
+    date : Optional[datetime.datetime]
+        Creation date of the tag. None if obtained from parsing a page
+    official : Optional[bool]
+        Whether the tag is official or user created. None if obtained from parsing a page
+    sitearea : int
+        Site area
+    siteareaid : int
+        Site area id
+    positive : int
+        Number of positive votes
+    negative : int
+        Number of negative votes
+    rank : Optiona[int]
+        Rank of the tag in trending. None if obtained from parsing a page
+    url : str
+        Url to the tag
+    """
+
+    def __init__(self, **kwargs):
+        self.id = int(kwargs.pop("id"))
+        self.date = datetime.datetime.fromtimestamp(int(kwargs.pop("date")))
+        self.official = kwargs.pop("official") == "1"
+        self.sitearea = int(kwargs.pop("sitearea"))
+        self.siteareaid = int(kwargs.pop("siteareaid"))
+
+        self.positive = int(kwargs.pop("positive"))
+        self.negative = int(kwargs.pop("negative"))
+
+        self.name_id = kwargs.pop("tagid")
+        self.name = kwargs.pop("tag")
+        self.rank = int(kwargs.pop("trending"))
+        self.url = f"{BASE_URL}/tags/{self.name_id}"
+
+    def __repr__(self) -> str:
+        return f"< Tag id={self.id} name_id={self.name_id} >"
+
+    def _get_members(self):
+        """Get a list of the members that have voted for this tag
+
+        Returns
+        ---------
+        List[Thumbnail]
+            List of member typed thumbnail
+        """
+        LOGGER.warning("_get_members is undocumented and unreliable for the time being")
+        params = {
+            "ajax": "t",
+            "tag": self.name_id,
+            "sitearea": get_siteareaid(self.sitearea),
+            "siteareaid": self.siteareaid,
+            "hash": generate_hash(),
+        }
+
+        resp = get_page(f"{BASE_URL}/tags/ajax/who", params=params)
+
+        return [
+            Thumbnail(url=join(thumb["href"]), name=thumb.string, type=ThumbnailType.member)
+            for thumb in resp.find("div", class_="successboxachtung").find_all("a")
+        ]

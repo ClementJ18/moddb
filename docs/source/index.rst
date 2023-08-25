@@ -8,8 +8,8 @@
 
 Welcome to moddb's documentation!
 =================================
-.. image:: https://readthedocs.org/projects/moddb/badge/?version=latest
-   :target: https://moddb.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/moddb/badge/?version=stable
+   :target: https://moddb.readthedocs.io/en/stable/?badge=stable
    :alt: Documentation Status
 
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
@@ -24,7 +24,7 @@ Welcome to moddb's documentation!
    :target: https://github.com/ClementJ18/moddb/pulls
    :alt: Open PRs
 
-.. image:: https://img.shields.io/github/release/ClementJ18/moddb.svg
+.. image:: https://img.shields.io/pypi/v/moddb
    :alt: Latest Release
 
 .. image:: https://img.shields.io/github/stars/ClementJ18/moddb.svg?label=Stars&style=social 
@@ -35,14 +35,13 @@ Welcome to moddb's documentation!
    :target: https://discord.gg/Ape8bZt
    :alt: Discord Link
 
-.. image:: https://img.shields.io/github/commits-since/ClementJ18/moddb/latest.svg
-    :target: https://github.com/ClementJ18/moddb/releases/latest
-    :alt: Commits Since
-
 The moddb python library is a module to scrape the ModDB.com website. The goal is to emulate
 the moddb website using function and OOP as if ModDB was simply an API. Ideally, in its finished
 state you should be able to pair with a web framework to perfectly emulate the website and all
-its features.
+its features. 
+
+This library is not endorsed by the ModDB team and remains a scraper. As such please be respectful 
+of their servers when using it.
 
 .. contents:: Table of Contents
    :local:
@@ -55,16 +54,6 @@ The simplest way to use this library is to simply pass a ModDB url to the parse 
 
    import moddb
    mod = moddb.parse_page("http://www.moddb.com/mods/edain-mod")
-   print(mod.name) #Edain Mod
-
-The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB 
-site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function:: 
-
-   import moddb
-   mod = moddb.parse_page(
-               "http://www.moddb.com/mods/edain-mod", 
-               page_type=moddb.ThumbnailType.mod
-            )
    print(mod.name) #Edain Mod
 
 Advanced Usage
@@ -171,7 +160,7 @@ Installing
 ------------
 Install with pip::
 
-   pip install moddb==0.8.0
+   pip install moddb
 
 .. toctree::
    :maxdepth: 2

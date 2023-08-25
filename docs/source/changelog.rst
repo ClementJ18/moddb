@@ -8,6 +8,24 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.9.0
+-------
+Bug Fixes
+##########
+
+New Features
+#############
+* New object `Tag` representing tags
+* New methods `PageMetaClass.get_tags`, `Client.upvote_tag` and `Client.downvote_tag`
+* New method `search_tags`
+* New object `PartialTag`
+* `tag` attributes are now `List[PartialTag]`
+* Decreased ratelimit to 1/1sec, 40/5min
+
+Removed Features
+#################
+
+
 v0.8.1
 -------
 Bug Fixes

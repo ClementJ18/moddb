@@ -1,7 +1,7 @@
 import logging
 from unittest.mock import patch
 
-from tests import test_utils
+from tests import utils
 
 import moddb
 
@@ -12,7 +12,7 @@ handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 
-@patch("moddb.utils.request", new=test_utils.patched_request)
+@patch("moddb.utils.request", new=utils.patched_request)
 class TestParsers:
     mods = []
     games = []
@@ -20,25 +20,25 @@ class TestParsers:
     members = []
 
     def test_parse_mods(self):
-        for url in test_utils.mod_urls:
+        for url in utils.mod_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             self.mods.append(moddb.pages.Mod(soup))
 
     def test_parse_games(self):
-        for url in test_utils.game_urls:
+        for url in utils.game_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             self.games.append(moddb.pages.Game(soup))
 
     def test_parse_engines(self):
-        for url in test_utils.engine_urls:
+        for url in utils.engine_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             self.engines.append(moddb.pages.Engine(soup))
 
     def test_parse_files(self):
-        for url in test_utils.file_urls:
+        for url in utils.file_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             try:
@@ -47,43 +47,43 @@ class TestParsers:
                 logger.debug(e)
 
     def test_parse_addons(self):
-        for url in test_utils.addon_urls:
+        for url in utils.addon_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Addon(soup)
 
     def test_parse_medias(self):
-        for url in test_utils.media_urls:
+        for url in utils.media_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Media(soup)
 
     def test_parse_articles(self):
-        for url in test_utils.article_urls:
+        for url in utils.article_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Article(soup)
 
     def test_parse_groups(self):
-        for url in test_utils.group_urls:
+        for url in utils.group_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Group(soup)
 
     def test_parse_teams(self):
-        for url in test_utils.team_urls:
+        for url in utils.team_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Team(soup)
 
     def test_parse_jobs(self):
-        for url in test_utils.job_urls:
+        for url in utils.job_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Job(soup)
 
     def test_parse_members(self):
-        for url in test_utils.member_urls:
+        for url in utils.member_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             self.members.append(moddb.pages.Member(soup))
@@ -92,25 +92,25 @@ class TestParsers:
         moddb.front_page()
 
     def test_parse_platforms(self):
-        for url in test_utils.platform_urls:
+        for url in utils.platform_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Platform(soup)
 
     def test_parse_hardware(self):
-        for url in test_utils.hardware_urls:
+        for url in utils.hardware_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Hardware(soup)
 
     def test_parse_software(self):
-        for url in test_utils.software_urls:
+        for url in utils.software_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Software(soup)
 
     def test_parse_polls(self):
-        for url in test_utils.poll_urls:
+        for url in utils.poll_urls:
             logger.debug(url)
             soup = moddb.get_page(url)
             moddb.pages.Poll(soup)

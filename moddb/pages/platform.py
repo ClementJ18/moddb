@@ -1,8 +1,15 @@
-from ..utils import concat_docs, join, LOGGER, get_date
-from ..boxes import Thumbnail, PlatformStatistics
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from ..boxes import PlatformStatistics, Thumbnail
 from ..enums import ThumbnailType
-from .mixins import GetModsMixin, GetGamesMixin, GetEnginesMixin, GetWaresMixin
+from ..utils import LOGGER, concat_docs, get_date, join
 from .base import BaseMetaClass
+from .mixins import GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin
+
+if TYPE_CHECKING:
+    from bs4 import BeautifulSoup
 
 
 @concat_docs
@@ -70,7 +77,7 @@ class Platform(
         A list of mods suggested on the platform main page.
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         self.name = html.find("a", itemprop="mainEntityOfPage").string
         self.id = None
 
@@ -83,7 +90,9 @@ class Platform(
 
         try:
             company = html.find("h5", string="Company").parent.span.a
-            self.company = Thumbnail(name=company.string, url=company["href"], type=ThumbnailType.team)
+            self.company = Thumbnail(
+                name=company.string, url=company["href"], type=ThumbnailType.team
+            )
         except AttributeError:
             LOGGER.info("Platform '%s' has no company", self.name)
             self.company = None

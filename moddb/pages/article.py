@@ -1,8 +1,9 @@
 import bs4
+
+from ..boxes import PartialTag, Profile, Thumbnail
+from ..enums import ArticleCategory, Difficulty, ThumbnailType, TutorialCategory
+from ..utils import LOGGER, concat_docs, get_date, get_views, join
 from .base import BaseMetaClass
-from ..utils import concat_docs, LOGGER, join, get_views, get_date
-from ..enums import ArticleCategory, ThumbnailType, TutorialCategory, Difficulty
-from ..boxes import Profile, Thumbnail
 
 
 @concat_docs
@@ -46,9 +47,8 @@ class Article(BaseMetaClass):
     profile : Profile
         The profile object of the moddb model the article is for (engine, game, mod...). Can be none if it is not
         rattached to anything, such as for site news.
-    tags : dict{str : str}
-        A dictionary of tags with the tag names as the key and the url to the tag
-        as the value.
+    tags : List[PartialTag]
+         A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     views : int
         Total amount of times this article was viewed
     today : int
@@ -99,9 +99,13 @@ class Article(BaseMetaClass):
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
-            self.tags = {}
+            self.tags = []
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
 
         views_raw = raw.find("h5", string="Views").parent.span.a.string
@@ -119,8 +123,12 @@ class Article(BaseMetaClass):
 
         if self.category == ArticleCategory.tutorials:
             cat = html.find("span", itemprop="proficiencyLevel").nextSibling.strip()
-            self.tutorial_category = TutorialCategory[cat.replace("/", "_").replace(" ", "_").lower()]
-            self.difficulty = Difficulty[html.find("span", itemprop="proficiencyLevel").string.lower()]
+            self.tutorial_category = TutorialCategory[
+                cat.replace("/", "_").replace(" ", "_").lower()
+            ]
+            self.difficulty = Difficulty[
+                html.find("span", itemprop="proficiencyLevel").string.lower()
+            ]
 
     def __repr__(self):
         return f"<Article title={self.name} type={self.category.name}>"

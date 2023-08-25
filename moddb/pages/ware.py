@@ -1,8 +1,15 @@
-from ..utils import concat_docs, LOGGER
-from ..enums import SearchCategory, ThumbnailType
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 from ..boxes import Thumbnail
+from ..enums import SearchCategory, ThumbnailType
+from ..utils import LOGGER, concat_docs
 from .base import HardwareSoftwareMetaClass
 from .mixins import GetGamesMixin, GetWaresMixin
+
+if TYPE_CHECKING:
+    from bs4 import BeautifulSoup
 
 
 @concat_docs
@@ -48,7 +55,7 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
         A list of recommended hardwares.
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         super().__init__(html)
         self._type = SearchCategory.hardwares
 
@@ -110,7 +117,9 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
             self.games = []
 
         try:
-            history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
+            history = html.find("span", string="History").parent.parent.parent.find_all(
+                "a", class_="image"
+            )
             self.history = [
                 Thumbnail(
                     url=x["href"],
@@ -173,6 +182,6 @@ class Software(HardwareSoftwareMetaClass):
 
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         super().__init__(html)
         self._type = SearchCategory.softwares

@@ -1,9 +1,14 @@
-import bs4
+from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
+from ..enums import SearchCategory
 from ..utils import concat_docs
 from .base import PageMetaClass
 from .mixins import GetAddonsMixin
-from ..enums import SearchCategory
+
+if TYPE_CHECKING:
+    from bs4 import BeautifulSoup
 
 
 @concat_docs
@@ -44,5 +49,5 @@ class Mod(PageMetaClass, GetAddonsMixin):
 
     """
 
-    def __init__(self, html: bs4.BeautifulSoup):
+    def __init__(self, html: BeautifulSoup):
         super().__init__(html, SearchCategory.mods)

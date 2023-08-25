@@ -10,12 +10,6 @@ import moddb
 mod = moddb.parse_page("http://www.moddb.com/mods/edain-mod")
 print(mod.name) #Edain Mod
 ```
-The library tries to get the type of the url you are passing on its own but due to inconsistencies in the ModDB site this is not always correct, if you desire to be more specific you can pass a ThumbnailType to the function.
-```py
-import moddb
-mod = moddb.parse_page("http://www.moddb.com/mods/edain-mod", page_type=moddb.ThumbnailType.mod)
-print(mod.name) #Edain Mod
-```
 
 ## Advanced Usage
 Check out the [documentation](https://moddb.readthedocs.io) for more information
@@ -49,8 +43,8 @@ pip install moddb
 * [x] HardwAre
 * [x] Updates
 * [x] Friend Requests
-* [ ] Watchers
-* [ ] Tags
+* [x] Watchers
+* [x] Tags
 
 Maybe
 * [ ] Messages
@@ -63,4 +57,7 @@ Maybe
 * **Thumbnails**: A very widely used model meant to represent models which are references but not expanded onto. Usually the model in question will only include a url and the name of the page. This is transformed into a thumbnail and the user can then parse it with the built-in method.
 
 ## Development
-requirement.txt file contains the necessary additional libraries for develompment
+The necessary dependencies are stored in requirements.txt and requirements-dev.txt and can be installed with the following command
+```
+python -m pip install -r requirements.txt -r requirements-dev.txt
+```

@@ -1,28 +1,28 @@
-import bs4
-from .enums import ThumbnailType
-from .errors import ModdbException, AwaitingAuthorisation
-
+import datetime
+import inspect
+import logging
+import random
 import re
 import sys
 import uuid
-import json
-import random
-import inspect
-import logging
-import datetime
-import requests
 from typing import Tuple
 from urllib.parse import urljoin
+
+import bs4
+import requests
 from bs4 import BeautifulSoup, Tag
 from pyrate_limiter import Duration, Limiter, RequestRate
+
+from .enums import ThumbnailType
+from .errors import AwaitingAuthorisation, ModdbException
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
 LIMITER = Limiter(
     # request stuff slowly, like a human
-    RequestRate(1, Duration.SECOND * 2.5),
+    RequestRate(1, Duration.SECOND * 1),
     # take breaks when requesting stuff, like a human
-    RequestRate(60, Duration.MINUTE * 5),
+    RequestRate(40, Duration.MINUTE * 5),
 )
 
 time_mapping = {
@@ -150,14 +150,16 @@ def raise_for_status(response):
             LOGGER.error(response.request.url)
             LOGGER.error(response.request.body)
             raise ModdbException(text["text"])
-    except json.decoder.JSONDecodeError:
+    except requests.exceptions.JSONDecodeError:
         response.raise_for_status()
 
     if (
         "is currently awaiting authorisation, which can take a couple of days while a"
         in response.text.lower()
     ):
-        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
+        raise AwaitingAuthorisation(
+            "This page is still await authorisation and cannot currently be parsed"
+        )
 
 
 def generate_login_cookies(username, password):
@@ -221,7 +223,7 @@ def soup(html: str) -> BeautifulSoup:
     return BeautifulSoup(html, "html.parser")
 
 
-def get_page(url: str, *, params: dict = {}):
+def get_page(url: str, *, params: dict = {}, json: bool = False):
     """A helper function that takes a url and returns a beautiful soup objects. This is used to center
     the request making section of the library. Can also be passed a set of paramaters, used for sorting
     and filtering in the search function.
@@ -230,16 +232,20 @@ def get_page(url: str, *, params: dict = {}):
     -----------
     url : str
         The url to get
-
     params : dict
         A dictionnary of filters and sorting key-value pairs.
+    json : Optional[bool]
+        Whether the expected response is json, in which case it will not be soup'd
 
     Returns
     -------
     bs4.BeautifulSoup
     """
-    r = request(requests.Request("GET", url, params=params))
-    return soup(r.text)
+    resp = request(requests.Request("GET", url, params=params))
+    if json:
+        return resp.json()
+
+    return soup(resp.text)
 
 
 def get_views(string: str) -> Tuple[int, int]:
@@ -456,3 +462,19 @@ def get(iterable, **attrs):
 
 def generate_hash():
     return uuid.uuid4().hex
+
+
+def get_sitearea(url: str) -> str:
+    """Get the site area from a url"""
+    return url.split("/")[-2]
+
+
+siteareaid_mapping = {
+    "3": "mods",
+    "2": "games",
+}
+
+
+def get_siteareaid(key: str):
+    """Get the sitearea id from an int"""
+    return siteareaid_mapping.get(str(key), "none")

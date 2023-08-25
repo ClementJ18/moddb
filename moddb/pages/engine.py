@@ -1,9 +1,9 @@
 import bs4
 
-from ..utils import concat_docs, LOGGER
+from ..enums import SearchCategory
+from ..utils import LOGGER, concat_docs
 from .base import PageMetaClass
 from .mixins import GetGamesMixin
-from ..enums import SearchCategory
 
 
 @concat_docs

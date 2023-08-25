@@ -23,7 +23,7 @@ ResultList
     :members:
     :inherited-members:
 
-ResultList
+ReviewList
 ------------
 .. autoclass:: moddb.pages.ReviewList
     :members:
@@ -112,3 +112,9 @@ Mirror
     :members:
     :inherited-members:
     
+
+Tag
+----
+.. autoclass:: moddb.boxes.Tag
+    :members:
+    :inherited-members:

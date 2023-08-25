@@ -1,27 +1,23 @@
 import re
-import bs4
 from typing import List
 
-from ..utils import (
-    join,
-    LOGGER,
-    get_page,
-    get_media_type,
-    get_page_type,
-)
+from bs4 import BeautifulSoup
+
 from ..boxes import (
     CommentList,
-    Thumbnail,
-    ResultList,
-    Profile,
-    Statistics,
     PartialArticle,
+    PartialTag,
+    Profile,
+    ResultList,
+    Statistics,
     Style,
+    Thumbnail,
     _parse_comments,
     _parse_results,
 )
-from ..enums import ThumbnailType, SearchCategory
-from .mixins import SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin
+from ..enums import SearchCategory, ThumbnailType
+from ..utils import LOGGER, get_media_type, get_page, get_page_type, join
+from .mixins import GetTagsMixin, GetWatchersMixin, RSSFeedMixin, SharedMethodsMixin
 
 
 class BaseMetaClass:
@@ -30,7 +26,7 @@ class BaseMetaClass:
 
     Parameters
     -----------
-    html : bs4.BeautifulSoup
+    html : BeautifulSoup
         The html containing the comments
 
     Attributes
@@ -48,7 +44,7 @@ class BaseMetaClass:
         URL to report the page
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         if not getattr(self, "name", None):
             try:
                 self.name = html.find("a", itemprop="mainEntityOfPage").string
@@ -56,7 +52,9 @@ class BaseMetaClass:
                 self.name = html.find("meta", property="og:title")["content"]
 
         try:
-            self.id = int(re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1])
+            self.id = int(
+                re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]
+            )
         except TypeError:
             try:
                 self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
@@ -84,12 +82,12 @@ class BaseMetaClass:
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name}>"
 
-    def _get_comments(self, html: bs4.BeautifulSoup) -> CommentList:
+    def _get_comments(self, html: BeautifulSoup) -> CommentList:
         """Extracts the comments from an html page and adds them to a CommentList.
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The html containing the comments
 
         Returns
@@ -153,7 +151,7 @@ class BaseMetaClass:
         List[Thumbnail]
             List of media like thumbnails that can be parsed individually. Can be a very long list.
         """
-        script = html.find_all("script", text=True)[index]
+        script = html.find_all("script", string=True)[index]
         regex = r'new Array\(0, "(\S*)", "(\S*)"'
         matches = re.findall(regex, script.text)
 
@@ -189,13 +187,15 @@ class BaseMetaClass:
         return self._get_comments(get_page(f"{self.url}/page/{index}", params=params))
 
 
-class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin):
+class PageMetaClass(
+    BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin
+):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
     those classes.
 
     Parameters
     -----------
-    html : bs4.BeautifulSoup
+    html : BeautifulSoup
         The page to be parsed.
 
     page_type : ThumbnailType
@@ -224,8 +224,8 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
     article :  PartialArticle
         A partial representation of the frong page article. This does not include things like comments or any
         of the sideba elements found in a full article. Can be parsed to return the complete Article object.
-    tags : dict{str : str}
-        A dict of key-values pair where the key is the name of the tag and the value is the url.
+    tags : List[PartialTag]
+        A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     imagebox : List[Thumbnail]
         A list of Thumbnail objects representing the image, videos and audio clips that are presented in the
         image box on the front page.
@@ -243,7 +243,7 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
         Plaintext version of the full description
     """
 
-    def __init__(self, html: bs4.BeautifulSoup, page_type: SearchCategory):
+    def __init__(self, html: BeautifulSoup, page_type: SearchCategory):
         super().__init__(html)
         self._type = page_type
 
@@ -277,7 +277,9 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         articles_raw = None
         try:
-            raw = html.find("span", string="Articles") or html.find("span", string="Related Articles")
+            raw = html.find("span", string="Articles") or html.find(
+                "span", string="Related Articles"
+            )
             articles_raw = raw.parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [
@@ -312,9 +314,13 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
-            self.tags = {}
+            self.tags = []
             LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
 
         # imagebox
@@ -343,9 +349,9 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
             LOGGER.info("'%s' '%s' is not rated", self.__class__.__name__, self.name)
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
-                "value"
-            ]
+            self._review_hash = html.find("form", class_="ratingform").find(
+                "input", {"name": "hash"}
+            )["value"]
         except AttributeError:
             self._review_hash = None
 
@@ -371,13 +377,13 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
             self.description = None
             self.plaintext = None
 
-    def _get_suggestions(self, html: bs4.BeautifulSoup) -> List[Thumbnail]:
+    def _get_suggestions(self, html: BeautifulSoup) -> List[Thumbnail]:
         """Hidden method used to get the list of suggestions on the page. As with most things, this list of suggestions
         will be a list of Thumbnail objects that can be parsed individually.
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The html page we are trying to parse the suggestions for
 
         Returns
@@ -407,13 +413,13 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         return suggestions
 
-    def _get_games(self, html: bs4.BeautifulSoup) -> List[Thumbnail]:
+    def _get_games(self, html: BeautifulSoup) -> List[Thumbnail]:
         """Used both for Teams and Engines, returns a list of games  present on the page
         as Thumbnail objects.
 
         Parameters
         ----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The html to extract the list of games from
 
         Returns
@@ -438,12 +444,12 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         return games
 
-    def _get_files(self, html: bs4.BeautifulSoup) -> List[Thumbnail]:
+    def _get_files(self, html: BeautifulSoup) -> List[Thumbnail]:
         """Cache the files present on the page. Up to 5 files might be present
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The page to cache the files from
 
         Returns
@@ -473,13 +479,13 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
 
         return files
 
-    def _get_engines(self, html):
+    def _get_engines(self, html: BeautifulSoup):
         """Hidden method to get the engines showed currently on the page as a list of engine like thumbnails. Takes
         an entire page of html and sorts it out
 
         Parameters
         -----------
-        html : bs4.BeautifulSoup
+        html : BeautifulSoup
             The page to cache the engines from
 
         Returns
@@ -508,7 +514,9 @@ class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchers
         return f"<{self.__class__.__name__} name={self.name}>"
 
 
-class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin):
+class HardwareSoftwareMetaClass(
+    BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin
+):
     """Shared class for Hardware and Software
 
     Attributes
@@ -525,15 +533,15 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
         List of article type thumbnails from the recommended articles
     article : PartialArticle
         The partial article presented on the front page
-    tags : Dict{str : str}
-        Dict of tags with the name as the key and the url as the value
+    tags : List[PartialTag]
+         A list of partial tags. You can use `get_tags` and then use the name id to get the right one.
     medias : List[Thumbnail]
         list of thumbnails representing all the combined media objects of a page (videos and images)
     suggestions : List[Thumbnail]
         list of suggested software/hardware type thumbnails
     """
 
-    def __init__(self, html):
+    def __init__(self, html: BeautifulSoup):
         super().__init__(html)
         try:
             self.description = html.find("div", id="profiledescription").p.string
@@ -557,9 +565,9 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
             LOGGER.info("'%s' '%s' is not rated", self.profile.category.name, self.name)
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
-                "value"
-            ]
+            self._review_hash = html.find("form", class_="ratingform").find(
+                "input", {"name": "hash"}
+            )["value"]
         except AttributeError:
             self._review_hash = None
 
@@ -600,20 +608,25 @@ class HardwareSoftwareMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin,
 
         try:
             raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
-            self.tags = {x.string: join(x["href"]) for x in raw_tags if x.string is not None}
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
         except AttributeError:
-            self.tags = {}
+            self.tags = []
             LOGGER.info("Hardware '%s' has no tags", self.name)
 
         self.medias = self._get_media(1, html=html)
 
         try:
             t = ThumbnailType[self.__class__.__name__.lower()]
-            suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all(
-                "a", class_="image"
-            )
+            suggestions = html.find(
+                "span", string="You may also like"
+            ).parent.parent.parent.find_all("a", class_="image")
             self.suggestions = [
-                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions
+                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"])
+                for x in suggestions
             ]
         except AttributeError:
             LOGGER.info("'%s' '%s' has no suggestions", self.__class__.__name__, self.name)

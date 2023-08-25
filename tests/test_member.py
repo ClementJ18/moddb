@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 
-from tests.test_utils import patched_request, sample_list
+from tests.utils import patched_request, sample_list
 
 import moddb
 import requests
@@ -110,3 +110,8 @@ class TestMember:
 
     def test_get_watchers(self):
         self.member.get_watchers()
+
+    def test_get_tags(self):
+        tags = self.member.get_tags()
+        # if tags:
+        #     random.choice(tags)._get_members()
