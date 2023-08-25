@@ -9,7 +9,7 @@
 Welcome to moddb's documentation!
 =================================
 .. image:: https://readthedocs.org/projects/moddb/badge/?version=stable
-   :target: https://moddb.readthedocs.io/en/latest/?badge=stable
+   :target: https://moddb.readthedocs.io/en/stable/?badge=stable
    :alt: Documentation Status
 
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
