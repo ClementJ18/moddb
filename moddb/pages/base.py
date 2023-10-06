@@ -16,7 +16,7 @@ from ..boxes import (
     _parse_results,
 )
 from ..enums import SearchCategory, ThumbnailType
-from ..utils import LOGGER, get_media_type, get_page, get_page_type, join
+from ..utils import LOGGER, get_page, get_page_type, join
 from .mixins import GetTagsMixin, GetWatchersMixin, RSSFeedMixin, SharedMethodsMixin
 
 
@@ -331,7 +331,7 @@ class PageMetaClass(
                     name=x.a["title"],
                     url=x.a["href"],
                     image=x.a.img["src"],
-                    type=ThumbnailType(get_media_type(x.a.img)),
+                    type=ThumbnailType.media,
                 )
                 for x in imagebox
                 if x.a
