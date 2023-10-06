@@ -8,6 +8,20 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.9.1
+-------
+Bug Fixes
+##########
+* Pinned major releases of all dependencies
+
+New Features
+#############
+* Documented more of the utility functions
+
+Removed Features
+#################
+
+
 v0.9.0
 -------
 Bug Fixes
