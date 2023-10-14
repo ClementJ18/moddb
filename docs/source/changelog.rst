@@ -17,6 +17,7 @@ Bug Fixes
 New Features
 #############
 * Documented more of the utility functions
+* Some enum members have been renamed to better fit with the naming pattern of the website
 
 Removed Features
 #################
