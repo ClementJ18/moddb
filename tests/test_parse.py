@@ -1,5 +1,6 @@
 import logging
-from unittest.mock import patch
+
+import pytest
 
 from tests import utils
 
@@ -11,8 +12,9 @@ handler = logging.FileHandler(filename="moddb.log", encoding="utf-8", mode="w")
 handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(message)s"))
 logger.addHandler(handler)
 
+pytestmark = [pytest.mark.vcr]
 
-@patch("moddb.utils.request", new=utils.patched_request)
+
 class TestParsers:
     mods = []
     games = []

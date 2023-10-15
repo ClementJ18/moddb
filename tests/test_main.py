@@ -1,4 +1,3 @@
-from unittest.mock import patch
 import logging
 import pytest
 
@@ -32,138 +31,123 @@ handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestMods(test_mod.TestMod):
     @pytest.fixture(params=utils.mod_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.mod = moddb.Mod(moddb.get_page(request.param))
+        self.mod = moddb.Mod(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestGames(test_game.TestGame):
     @pytest.fixture(params=utils.game_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.game = moddb.Game(moddb.get_page(request.param))
+        self.game = moddb.Game(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestEngines(test_engine.TestEngine):
     @pytest.fixture(params=utils.engine_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.engine = moddb.Engine(moddb.get_page(request.param))
+        self.engine = moddb.Engine(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestFiles(test_file.TestFile):
     @pytest.fixture(params=utils.file_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.file = moddb.File(moddb.get_page(request.param))
+        self.file = moddb.File(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestAddons(test_addon.TestAddon):
     @pytest.fixture(params=utils.addon_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.addon = moddb.Addon(moddb.get_page(request.param))
+        self.addon = moddb.Addon(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestMedias(test_media.TestMedia):
     @pytest.fixture(params=utils.media_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.media = moddb.Media(moddb.get_page(request.param))
+        self.media = moddb.Media(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestArticles(test_article.TestArticle):
     @pytest.fixture(params=utils.article_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.article = moddb.Article(moddb.get_page(request.param))
+        self.article = moddb.Article(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestGroups(test_group.TestGroup):
     @pytest.fixture(params=utils.group_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.group = moddb.Group(moddb.get_page(request.param))
+        self.group = moddb.Group(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestTeams(test_team.TestTeam):
     @pytest.fixture(params=utils.team_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.team = moddb.Team(moddb.get_page(request.param))
+        self.team = moddb.Team(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestJobs(test_job.TestJob):
     @pytest.fixture(params=utils.job_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.job = moddb.Job(moddb.get_page(request.param))
+        self.job = moddb.Job(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestMembers(test_member.TestMember):
     @pytest.fixture(params=utils.member_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.member = moddb.Member(moddb.get_page(request.param))
+        self.member = moddb.Member(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestPlatforms(test_platform.TestPlatform):
     @pytest.fixture(params=utils.platform_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.platform = moddb.Platform(moddb.get_page(request.param))
+        self.platform = moddb.Platform(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestHardwares(test_hardware.TestHardware):
     @pytest.fixture(params=utils.hardware_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.hardware = moddb.Hardware(moddb.get_page(request.param))
+        self.hardware = moddb.Hardware(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestSoftwares(test_software.TestSoftware):
     @pytest.fixture(params=utils.software_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.software = moddb.Software(moddb.get_page(request.param))
+        self.software = moddb.Software(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestPolls(test_poll.TestPoll):
     @pytest.fixture(params=utils.poll_urls, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.poll = moddb.Poll(moddb.get_page(request.param))
+        self.poll = moddb.Poll(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=utils.patched_request)
+@pytest.mark.vcr
 class TestSearches(test_base.TestSearch):
     @pytest.fixture(params=utils.queries, autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=utils.patched_request) as f:
-            self.search = moddb.search(request.param[1], query=request.param[0])
+        self.search = moddb.search(request.param[1], query=request.param[0])
 
 
 class TestLogin(test_base.TestLogin):
     pass
 
 
+@pytest.mark.vcr
 class TestFrontPage(test_base.TestFrontPage):
     pass
 

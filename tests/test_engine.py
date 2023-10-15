@@ -1,22 +1,20 @@
-import random
 import pytest
-from unittest.mock import patch
 
-from tests.utils import patched_request, sample_list
+from tests.utils import sample_list
 
 import moddb
 
 DEFAULT = "https://www.moddb.com/engines/sage-strategy-action-game-engine"
 
+pytestmark = [pytest.mark.vcr]
+
 
 class EngineBase:
     @pytest.fixture(params=[DEFAULT], autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=patched_request) as f:
-            self.engine = moddb.Engine(moddb.get_page(request.param))
+        self.engine = moddb.Engine(moddb.get_page(request.param))
 
 
-@patch("moddb.utils.request", new=patched_request)
 class TestEnginePatched(EngineBase):
     def test_get_articles(self):
         articles = self.engine.get_articles()
