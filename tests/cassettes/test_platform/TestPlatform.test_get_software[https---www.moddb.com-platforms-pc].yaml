@@ -889,8 +889,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KGEq91Nctb0ErYdKyP1CkmmNbX2p2Nfqt3gHULQfBzdcJCAs0Lio99c0R%2Ftk0F0xOzJUM5WE3E7bNkv6bCyfz8hBzCGut7%2BGOl2HcoLmztHd7A3nIyqyH8bb6vwI8j9BPYVW2zeXd07O%2FOc%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -1635,8 +1633,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=63siYBLh6VFkeB2VX2mShFBmjb1od4JgNWer1QrMbLN7xvsAreDsta2yOEpn51DmRX5iY1VLQBh7KAq8w9EnvXw8%2Bs7b2Aq4ylbihXpxKklCZxBMYejJkXJpIqBVqNtImJ270cs4wof%2BDIM%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -2233,8 +2229,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=D01Xu20G9Py8LP4etTrfYvKex%2F4VN12Jc4C44taDq651o7ZMrWmcqBrmVYVgTHU2tk5YNH4tKxZDLK9saOsKSkZEPsFreSmMlbJBe9Iz9wDsdAdeyqE4dF13wS5PLC8yEuCT8mHP%2F%2BFRNQk%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -2993,8 +2987,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tCAVQPMNA%2FnHGvDOLxutRqv1YoO3aa8keLZorHimyBgI3Fs4k%2BC0s4LEXbb5Tcwyor9Zu8XhbI%2FGBS0fp2qypEofd%2FA3s1SUgnWVSx2pSFlGqVEUqoIZxQ9h8HaZ9mGEBNmdMSU1vFOLw2Q%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -4546,6 +4538,1557 @@ interactions:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=bbb3c5e4199142b15f1f427055f80617; expires=Sun, 15-Oct-2023 17:53:40
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - dukenukem=2348982ff286e55b4f4f05e8a6a30a45; freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=1146027c93f6186959a0aa76fd9d8479; dukenukem=2348982ff286e55b4f4f05e8a6a30a45;
+        freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=1146027c93f6186959a0aa76fd9d8479
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/57.0.2987.133 Safari/537.36
+    method: GET
+    uri: https://www.moddb.com/software/bitmap2material-3
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Bitmap2Material
+        3 Windows, Mac software - Mod DB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"bitmap2material 3, windows, mac, uv,
+        mapping, and, unwrapping, virtual reality, augmented reality, software, architecture,
+        retail, tours, social networking, sdk, educational, medical, environment,
+        maps, simulation, editing, capture, recording, developers, creation\" />\r\n\t<meta
+        name=\"description\" content=\"Bitmap2Material is an incredibly powerful tool
+        that helps you generate full, seamlessly tiling materials from any bitmap
+        image, right within your favorite DCC tool and game engine*. This now includes
+        all PBR (Physically-Based Rendering) channels, based...\" />\r\n\t<meta name=\"robots\"
+        content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Bitmap2Material 3 Windows, Mac software\"
+        />\r\n\t<meta property=\"og:description\" content=\"Bitmap2Material is an
+        incredibly powerful tool that helps you generate full, seamlessly tiling materials
+        from any bitmap image, right within your favorite DCC tool and game engine*.
+        This now includes all PBR (Physically-Based Rendering) channels, based...\"
+        />\r\n\t<meta property=\"og:site_name\" content=\"Mod DB\" />\r\n\t<meta property=\"og:type\"
+        content=\"software\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/software/bitmap2material-3\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/software/1/1/64/p.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Bitmap2Material 3 Windows, Mac software\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"Bitmap2Material is an incredibly powerful tool that helps you generate
+        full, seamlessly tiling materials from any bitmap image, right within your
+        favorite DCC tool and game engine*. This now includes all PBR (Physically-Based
+        Rendering) channels, based...\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/software/bitmap2material-3\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/software/1/1/64/p.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;73\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/software/bitmap2material-3/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Bitmap2Material 3 Windows, Mac software
+        feed\" />\t<script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">22</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Bitmap2Material 3 Windows, Mac software</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t<li><a href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/articles/add\">post article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Software\" /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/software/1/1/64/p.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/software/bitmap2material-3\"
+        itemprop=\"mainEntityOfPage\">Bitmap2Material 3</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span
+        itemprop=\"author\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/company/allegorithmic\" itemprop=\"url\"><span itemprop=\"name\">Allegorithmic</span></a></span>
+        | <time datetime=\"2014-09-30\" itemprop=\"datePublished\">Released 2014</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/software/bitmap2material-3\">summary</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"off\"><a href=\"/software/bitmap2material-3/articles\">articles</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"off\"><a href=\"/software/bitmap2material-3/reviews\">reviews</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"off\"><a href=\"/software/bitmap2material-3/downloads\">files</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/software/bitmap2material-3/videos\">videos</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/software/bitmap2material-3/images\">images</a></li>\r\n\t\t\t\t\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"Bitmap2Material is an incredibly powerful
+        tool that helps you generate full, seamlessly tiling materials from any bitmap
+        image, right within your favorite DCC tool and game engine*. This now includes
+        all PBR (Physically-Based Rendering) channels, based on the most accurate
+        conversion algorithm out there.\" />\t<div class=\"headernormalbox normalbox
+        normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div class=\"body
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>Bitmap2Material is an incredibly powerful tool
+        that helps you generate full, seamlessly tiling materials from any bitmap
+        image, right within your favorite DCC tool and game engine*. This now includes
+        all PBR (Physically-Based Rendering) channels, based on the most accurate
+        conversion algorithm out there.<br /><br /><strong>HIGH QUALITY OUTPUTS</strong><br
+        /><br />Bitmap2Material lets you extract all the possible maps from a single
+        image: this now includes PBR channels such base color (or albedo), metallic,
+        roughness but also normal, height, specular, curvature, AO etc.<br /><br /><strong>ADJUST
+        HIGHLIGHTS AND SHADOWS</strong><br /><br />This allows you to create the base
+        color (or albedo) for PBR and can be done in just a few clicks.<br /><br /><strong>REMOVE
+        SEAMS</strong><br /><br />Substance B2M provides the ability to make any material
+        tile. You do not need to care anymore about making your photography tile,
+        B2M takes care of it for you. You can chose between 2 modes of tiling: offset
+        or splat.<br /><br /><strong>GENERATE THE METALLIC MAP</strong><br /><br />Easily
+        obtain a metallic map from the image using simple tools, or an input mask.
+        This feature is essential when working in PBR.<br /><br /><strong>FULL CONTROL
+        OVER MICROSURFACE</strong><br /><br />Control and adjust the finest details
+        of your material thanks to the comprehensive set of parameters exposed by
+        B2M. This includes adjusting the generated roughness map, for PBR.<br /><br
+        /><strong>SHAPE RECOGNITION</strong><br /><br />Bitmap2Material is the only
+        map extractor which can keep the original shapes of your picture among all
+        your maps.<br /><br /><strong>GRUNGE MAPS</strong><br /><br />Change the look&amp;feel
+        of your material with one of the 15 embedded grunge maps, or use one of your
+        own.<br /><br /><strong>AN INFINITY OF VARIATIONS</strong><br /><br />B2M
+        offers the unique ability to randomize your material and produce infinite
+        variations with a single click!<br /><br />Use Bitmap2Material directly in
+        your modeling tool or game engine in real time*! (Compatible tools and engines
+        are: 3dsMax, Maya, Unity, UE4, UDK, Modo) <br /><br />Go on our website <a
+        href=\"https://steamcommunity.com/linkfilter/?url=http://www.allegorithmic.com\"
+        target=\"_blank\" rel=\"noopener\">Allegorithmic.com</a> to download the trial
+        version! <br /><br />Note: The Indie license lets you use Substance B2M3 for
+        commercial purpose, as long as your company/entity doesn&rsquo;t generate
+        more than 100 000$ per year.</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/software/bitmap2material-3/videos/trailer#imagebox\"
+        title=\"Trailer\"><span class=\"play\" data-id=\"2175639\"></span><img src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/movie_max.webm.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/bitmap2material-3/images/screenshot5#imagebox\" title=\"Screenshot\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/6.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/bitmap2material-3/images/screenshot4#imagebox\" title=\"Screenshot\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/5.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/bitmap2material-3/images/screenshot3#imagebox\" title=\"Screenshot\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/bitmap2material-3/images/screenshot2#imagebox\" title=\"Screenshot\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/3.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/bitmap2material-3/images/screenshot1#imagebox\" title=\"Screenshot\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/2.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/software/bitmap2material-3/images/screenshot#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox menubox\"
+        id=\"embedbuttons\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t<p>To
+        promote Bitmap2Material 3 and <a href=\"/software/bitmap2material-3/stats\">grow
+        its popularity</a> (<a href=\"/software/top\">top software</a>), use the embed
+        code provided on your homepage, blog, forums and elsewhere you desire. Or
+        try <a href=\"#\" class=\"togglewidget\">our widget</a>.</p>\t\t\t\t\t\t\t\t<div
+        class=\"table tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"display:
+        none;\">\n\t\t\t\t\t\t<textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        100%; height: 44px;\" class=\"text\" >&lt;iframe width=&quot;600&quot; height=&quot;180&quot;
+        src=&quot;https://www.moddb.com/software/bitmap2material-3/widget&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a
+        href=&quot;https://www.moddb.com/software/bitmap2material-3&quot;&gt;Bitmap2Material
+        3 software - Mod DB&lt;/a&gt;</textarea><div class=\"sharewidget\" style=\"text-align:
+        center;\"></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowwide
+        clear\">\n\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/software/bitmap2material-3&quot;
+        title=&quot;View Bitmap2Material 3 on Mod DB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/popularity/medium/software/64.png&quot;
+        alt=&quot;Bitmap2Material 3&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/bitmap2material-3\"
+        title=\"View Bitmap2Material 3 on Mod DB\"><img src=\"https://button.moddb.com/popularity/medium/software/64.png\"
+        alt=\"Bitmap2Material 3\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/software/bitmap2material-3&quot;
+        title=&quot;View Bitmap2Material 3 on Mod DB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/rating/medium/software/64.png&quot; alt=&quot;Bitmap2Material
+        3&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/bitmap2material-3\" title=\"View Bitmap2Material 3 on Mod
+        DB\"><img src=\"https://button.moddb.com/rating/medium/software/64.png\" alt=\"Bitmap2Material
+        3\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/software/bitmap2material-3&quot;
+        title=&quot;View Bitmap2Material 3 on Mod DB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://media.moddb.com/images/global/moddb.png&quot; alt=&quot;Bitmap2Material
+        3&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/bitmap2material-3\" title=\"View Bitmap2Material 3 - Mod
+        DB\"><img src=\"https://media.moddb.com/images/global/moddb.png\" alt=\"Bitmap2Material
+        3\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/software/bitmap2material-3/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo articles were found matching the criteria specified.
+        We suggest you try the <a href=\"/software/bitmap2material-3/articles\">article
+        list</a> with no filter applied, to browse all available. <a href=\"/software/bitmap2material-3/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/software/bitmap2material-3/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"fc0e97eed0ef66444554e9b61d6f4bc2\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"softwarebrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/mindtex-2\" title=\"MindTex
+        2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/69/crop_120x90/p.jpg\"
+        alt=\"MindTex 2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/mindtex-2\">MindTex 2</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-25T18:07:02+00:00\">Feb 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-02-22\">Released 2016</time>
+        Normal Map Generator  \t\t\t</span>\r\n\t\t\t<p>A normal map generation utility
+        for game developers and 3d professionals. Whether you want to generate a normal,
+        height, specular, gloss, self-illumination...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/3d-coat-v4\"
+        title=\"3D-Coat V4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/60/crop_120x90/p.jpg\"
+        alt=\"3D-Coat V4\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/3d-coat-v4\">3D-Coat V4</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-25T17:59:51+00:00\">Feb 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2012-10\">Released 2012</time>
+        3D Graphics  \t\t\t</span>\r\n\t\t\t<p>3D-Coat is the one application that
+        has all the tools you need to take your 3D idea from a block of digital clay
+        all the way to a production. </p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/kinecttovr\" title=\"KinectToVR\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/54/crop_120x90/9773a58828ab2c0c036f68b6da7b9684.png\"
+        alt=\"KinectToVR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/kinecttovr\">KinectToVR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-10-09T16:50:49+00:00\">Oct 9 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2018-01-29\">Released 2018</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>An open-source hook for VRInputEmulator to enable
+        foot and hip tracking with the Kinect V1 and V2. It currently allows for the
+        hips, left foot and right...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/grand-designer\" title=\"Grand
+        Designer\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/67/crop_120x90/p.jpg\"
+        alt=\"Grand Designer\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/grand-designer\">Grand Designer</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2020-02-25T18:06:17+00:00\">Feb
+        25 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2016-04-13\">Released 2016</time> 3D Graphics  \t\t\t</span>\r\n\t\t\t<p>Allows
+        you to create an infinity of planets, nebulae, asteroids thanks to the power
+        of procedural noises. Using the power of your DX11 GPU, every parameter...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/virtual-desktop\"
+        title=\"Virtual Desktop\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/6/crop_120x90/2.jpg\"
+        alt=\"Virtual Desktop\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/virtual-desktop\">Virtual Desktop</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2016-03-23T22:20:43+00:00\">Mar
+        23 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-16\">Released 2016</time> VR  \t\t\t</span>\r\n\t\t\t<p>An
+        application developed for the Oculus Rift and HTC Vive that let's you use
+        your computer in VR. You can browse the web, watch movies or even play games...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/overdose\"
+        title=\"OVERDOSE\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/27/crop_120x90/OVR.png\"
+        alt=\"OVERDOSE\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/overdose\">OVERDOSE</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-06-19T16:46:52+00:00\">Jun 19 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> VR  \t\t\t</span>\r\n\t\t\t<p>OVERDOSE.
+        is a VR app That Makes your phone cardboard into an HTC VIVE or an Oculus
+        Rift. Simply connecting it by Downloading the PC and mobile app and...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/software\">More
+        software &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo software were found
+        matching the criteria specified. We suggest you try the <a href=\"/software\">software
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"softwareinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=64\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=software&amp;siteareaid=64\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/software/1/1/64/i.png\"
+        alt=\"Bitmap2Material 3\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<span
+        itemprop=\"operatingSystem\"><a href=\"/platforms/pc\" title=\"Windows\">Windows</a>,
+        <a href=\"/platforms/mac\" title=\"Mac\">Mac</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<span
+        itemprop=\"genre\"><a href=\"/software?filter=t&amp;category=9\" rel=\"nofollow\">UV
+        Mapping and Unwrapping</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/company/allegorithmic\">Allegorithmic</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/compose?to=softwaregroup34813\">Send Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"http://www.allegorithmic.com/products/bitmap2material\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Allegorithmic.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2014-09-30\">Released 2014</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>Software watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=64\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fbitmap2material-3&title=Bitmap2Material+3+Windows%2C+Mac+software\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Bitmap2Material%203%20Windows%2C%20Mac%20software&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fbitmap2material-3\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Bitmap2Material+3+Windows%2C+Mac+software+https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fbitmap2material-3+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fbitmap2material-3&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fbitmap2material-3&quote=Bitmap2Material+3+Windows%2C+Mac+software&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fbitmap2material-3\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"menuprices\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Purchase</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\" style=\"overflow: visible\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu tableprice\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://store.steampowered.com/app/325910/Substance_B2M3/\" class=\"csstooltip\"
+        title=\"Updated 4 weeks ago\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"><span
+        class=\"button\">Wishlist</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/1.png\"
+        title=\"Steam\" alt=\"Steam\" /><span class=\"price\">View</span></a><span
+        itemprop=\"offers\" itemscope itemtype=\"https://schema.org/Offer\" style=\"display:
+        none;\"><meta itemprop=\"priceCurrency\" content=\"USD\" /><meta itemprop=\"price\"
+        content=\"49.99\" /></span>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"0\" />-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 0%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">0</span>
+        votes submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"software\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"64\" /><input type=\"hidden\" name=\"hash\" value=\"85492b419c7fbe366b2334151e052306\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"normalbox formbox\"
+        id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Twitter</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"fc0e97eed0ef66444554e9b61d6f4bc2\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest tweets
+        from <a href=\"https://twitter.com/substance3d\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@substance3d</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1679155896440754177 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/PeteDimitrovArt\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@PeteDimitrovArt</a>:
+        The crown textured.\n\nI did the relief details using the &quot;Path Tool&quot;
+        in the latest version of Substance Painter. It'\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/scztshqMlY\">T.co</a></p><p class=\"helper\">Jul 12
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678389871164153856
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Join us for
+        a free <a href=\"https://search.twitter.com/search?q=webinar\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#webinar</a> on July 20 to learn how
+        precision tools can help designers showcase products in context\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/nbbqPyxTYe\">T.co</a></p><p class=\"helper\">Jul 10
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1674548238073102337
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/MetaQuestVR\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@MetaQuestVR</a>: Where
+        are our 3D modelers at? Check out Adobe <a href=\"https://twitter.com/Substance3D\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@Substance3D</a> Modeler
+        to bring your creative concepts to life:\n\u2705 creat\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/U6h37L4udV\">T.co</a></p><p class=\"helper\">Jun 30
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1674469979666907137
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/RealityLabs\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@RealityLabs</a>: <a
+        rel=\"nofollow\" href=\"mailto:.@Adobe\">.@Adobe</a> <a href=\"https://twitter.com/Substance3D\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@Substance3D</a> Modeler
+        Now Available on Meta Quest 2 + Pro with Link <a rel=\"nofollow\"  href=\"https://www.meta.com/blog/quest/adobe-substance-3d-modeler-sculpting-rift-s-link\">Meta.com</a>
+        <a rel=\"nofollow\"  href=\"https://t.co/nEpROLPakA\">T.co</a></p><p class=\"helper\">Jun
+        29 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1674139771537608706
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Join us for
+        an immersive experience to Europa. \U0001F6F0\uFE0F\n\nWe collaborated with
+        <a href=\"https://twitter.com/NASAJPL\" target=\"_blank\" rel=\"nofollow noopener
+        noreferrer\">@NASAJPL</a> to bring the October 2024\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/x2LgAuiCvV\">T.co</a></p><p class=\"helper\">Jun 28
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1673443019046129664
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/Substance3D\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@Substance3D</a>: We'll
+        be speaking at <a href=\"https://twitter.com/PI_Apparel\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@PI_Apparel</a> in NYC on June 28 about
+        how 3D solutions are enabling new ways to design, manufact\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/VZRoK8QbtW\">T.co</a></p><p class=\"helper\">Jun 26
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"fc0e97eed0ef66444554e9b61d6f4bc2\" />\t\t\t\t\t<div class=\"row rowtagstagpbrchannels
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/pbr-channels\">pbr
+        channels</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=pbr-channels&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=pbr-channels&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagbitmaptomaterial clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/bitmap-to-material\">bitmap to material</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=bitmap-to-material&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=bitmap-to-material&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagseamlesstilingmaterials clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/seamless-tiling-materials\">seamless
+        tiling materials</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=seamless-tiling-materials&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=seamless-tiling-materials&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstaggeneratemetallicmaps clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/generate-metallic-maps\">generate
+        metallic maps</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=generate-metallic-maps&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=generate-metallic-maps&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstaggrungemaps clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/grunge-maps\">grunge maps</a><span style=\"float: right;\"><a
+        href=\"/tags/ajax/add?tag=grunge-maps&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=grunge-maps&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagmicrosurfacecontrol clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/microsurface-control\">microsurface
+        control</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=microsurface-control&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=microsurface-control&sitearea=software&siteareaid=64&hash=4f0d2976365f1db38ad027ce2c9a285c&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=4f0d2976365f1db38ad027ce2c9a285c\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=4f0d2976365f1db38ad027ce2c9a285c&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"4f0d2976365f1db38ad027ce2c9a285c\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"software\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"64\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox menubox\" id=\"softwareprofilestats\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/top\">14 of 70</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/bitmap2material-3/stats\">1,154 (4 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2020-02-25T18:02:24+00:00\"
+        itemprop=\"dateModified\">3 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/bitmap2material-3/watchers\">1 member</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5162 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/software\",\"name\":\"Software\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/software/bitmap2material-3\",\"name\":\"Bitmap2Material
+        3\",\"image\":\"https://media.moddb.com/images/software/1/1/64/p.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=software\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"software\",\r\n\t\t\t\t\t\t\ttags:
+        [\"mac\",\"pc\"],\r\n\t\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tfloorPrices:
+        {\r\n\t\t\t\t\t\t\tdefaultFloorprice: 0.05,\r\n\t\t\t\t\t\t\tusFloorprice:
+        0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
+        0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
+        \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
+        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
+        {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
+        \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
+        { enabled: true, maxRefreshes: 10, desktopRate: 15000, mobileRate: 12000,
+        mobileStickyRate: 15000, teadsRate: 30000, refreshableAdvertIds: [0, 220082044,
+        78946204, 72863404, 2925170143, 2984552083, 74678524] },\r\n\t\t\t\t\t\tinsertInto:
+        \"\",\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.AdScript = new GNAdScript.default(\".DBsupporter\",
+        adConfig);\r\n\t\t\t\t\twindow.AdScript.init();\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697490892\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697490892\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"2175639\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/2175639?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/software/bitmap2material-3/videos/trailer#imagebox\", \"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/movie_max.webm.jpg\",
+        2175639, \"Trailer\", \"video\"); slidearr[1][1] = new Array(0, \"/software/bitmap2material-3/images/screenshot5#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/6.jpg\",
+        2174346, \"Screenshot\", \"image\"); slidearr[1][2] = new Array(0, \"/software/bitmap2material-3/images/screenshot4#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/5.jpg\",
+        2174345, \"Screenshot\", \"image\"); slidearr[1][3] = new Array(0, \"/software/bitmap2material-3/images/screenshot3#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/4.jpg\",
+        2174344, \"Screenshot\", \"image\"); slidearr[1][4] = new Array(0, \"/software/bitmap2material-3/images/screenshot2#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/3.jpg\",
+        2174343, \"Screenshot\", \"image\"); slidearr[1][5] = new Array(0, \"/software/bitmap2material-3/images/screenshot1#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/2.jpg\",
+        2174342, \"Screenshot\", \"image\"); slidearr[2] = new Array(6);slidearr[2][0]
+        = new Array(0, \"/software/bitmap2material-3/images/screenshot#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/1.jpg\",
+        2174341, \"Screenshot\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"/software/bitmap2material-3/images/add\", true);\n\r\n\t\t\t$(\".togglewidget\").click(function()
+        {\r\n\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").closest(\".row\").slideToggle();\r\n\t\t\t\t\r\n\t\t\t\tif($(this).closest(\".body\").find(\".sharewidget\").html().length
+        == 0) {\r\n\t\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").html($(this).closest(\".body\").find(\".sharewidget\").prev().val().replace(/\\<br\\>\\<a
+        href=.*?\\<\\/a\\>/, \"\"));\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\treturn false;\r\n\t\t\t});\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\t\t\tviewBrowse = function(currentoption, response)
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tif(response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"]) {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\"form.ratingform\").rating(\"\", 20, 20);\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=software\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof reedpop_piwik === \"function\"
+        && cookie_data.npa.cookies == \"true\") { reedpop_piwik(); }\r\n\r\n\tif (typeof
+        gtag === \"function\") { gtag(\"consent\", \"update\", {\"ad_storage\": cookie_data.npa.status
+        == \"false\" ? \"granted\" : \"denied\", \"analytics_storage\": cookie_data.npa.cookies
+        == \"true\" ? \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status
+        == \"false\") {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t}
+        else {\r\n\t\t// don't personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\",
+        { domain: \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\nreedpop_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8173505d9a5202db-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Mon, 16 Oct 2023 21:14:52 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=S9R6u4%2B1f5Pr6dhBjJMNBwSXscQDdnhwyfM1NLgioqqJ4GJM9yEBMVIwTbAD3oMl0WjmTVIGd%2FoP5EvBeRj5WcC1mZmQ3fZf%2F5P4P3AqaKMmD8thq%2BXv%2FVb6t%2BAgDd8eRkcUhB57Fc8LpRQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=01da3c46998a9b9ace13fbe3a7975201; expires=Mon, 16-Oct-2023 21:24:52
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=01da3c46998a9b9ace13fbe3a7975201; expires=Mon, 16-Oct-2023 21:24:52
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - dukenukem=2348982ff286e55b4f4f05e8a6a30a45; freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=01da3c46998a9b9ace13fbe3a7975201; dukenukem=2348982ff286e55b4f4f05e8a6a30a45;
+        freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=01da3c46998a9b9ace13fbe3a7975201
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/55.0.2883.87 Safari/537.36
+    method: GET
+    uri: https://www.moddb.com/software/harfang-3d
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Harfang
+        3D Windows, Mac, Linux, VR software - Mod DB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"harfang 3d, windows, mac, linux, vr,
+        vr, virtual reality, augmented reality, software, architecture, retail, tours,
+        social networking, sdk, educational, medical, environment, maps, simulation,
+        editing, capture, recording, developers, creation\" />\r\n\t<meta name=\"description\"
+        content=\"Harfang is a high-end package to create 3D or 2D applications. It
+        provides a comprehensive API, including physics, VR, pathfinding, audio, video.
+        Harfang abstracts the platform your program runs on. Write your application
+        with any supported language...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Harfang 3D Windows, Mac, Linux, VR software\"
+        />\r\n\t<meta property=\"og:description\" content=\"Harfang is a high-end
+        package to create 3D or 2D applications. It provides a comprehensive API,
+        including physics, VR, pathfinding, audio, video. Harfang abstracts the platform
+        your program runs on. Write your application with any supported language...\"
+        />\r\n\t<meta property=\"og:site_name\" content=\"Mod DB\" />\r\n\t<meta property=\"og:type\"
+        content=\"software\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/software/harfang-3d\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/software/1/1/36/1uMoLEGP6.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Harfang 3D Windows, Mac, Linux, VR software\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"Harfang is a high-end package to create 3D or 2D applications. It
+        provides a comprehensive API, including physics, VR, pathfinding, audio, video.
+        Harfang abstracts the platform your program runs on. Write your application
+        with any supported language...\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/software/harfang-3d\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/software/1/1/36/1uMoLEGP6.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;73\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/software/harfang-3d/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Harfang 3D Windows, Mac, Linux, VR software
+        feed\" />\t<script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">22</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Harfang 3D Windows, Mac, Linux, VR software</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t<li><a href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/articles/add\">post article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Software\" /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/software/1/1/36/1uMoLEGP6.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/software/harfang-3d\"
+        itemprop=\"mainEntityOfPage\">Harfang 3D</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span
+        itemprop=\"author\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/members/astrofra\" itemprop=\"url\"><span itemprop=\"name\">astrofra</span></a></span>
+        | <time datetime=\"2016-03\" itemprop=\"datePublished\">Released 2016</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/software/harfang-3d\">summary</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"off\"><a href=\"/software/harfang-3d/articles\">articles</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"off\"><a href=\"/software/harfang-3d/reviews\">reviews</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"off\"><a href=\"/software/harfang-3d/downloads\">files</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"off\"><a href=\"/software/harfang-3d/videos\">videos</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/software/harfang-3d/images\">images</a></li>\r\n\t\t\t\t\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"Harfang is a high-end package to create
+        3D or 2D applications. It provides a comprehensive API, including physics,
+        VR, pathfinding, audio, video. Harfang abstracts the platform your program
+        runs on. Write your application with any supported language such as Python,
+        Lua and C++ and run it on any supported platform. Harfang was born from our
+        need to quickly try out ideas in a high-level language while needing access
+        to state-of-the-art technologies. Over the years it grew into a complete multimedia
+        framework. Harfang strives to bring capabilities and flexibility to the growing
+        developer communities of Python, Lua and C++.\" />\t<div class=\"headernormalbox
+        normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>Harfang is a high-end package to create 3D or
+        2D applications. It provides a comprehensive API, including physics, VR, pathfinding,
+        audio, video. Harfang abstracts the platform your program runs on. Write your
+        application with any supported language such as Python, Lua and C++ and run
+        it on any supported platform. Harfang was born from our need to quickly try
+        out ideas in a high-level language while needing access to state-of-the-art
+        technologies. Over the years it grew into a complete multimedia framework.
+        Harfang strives to bring capabilities and flexibility to the growing developer
+        communities of Python, Lua and C++.</p>\n<p><iframe src=\"//www.youtube.com/embed/MWTBA7ecGsc?rel=0\"
+        width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/software/harfang-3d/images/paged-world-system-prototype-streaming1#imagebox\"
+        title=\"Paged world system prototype (streaming)\"><img src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/e0f3efd9f64487c095a99f5459a8d90cbb12e948.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/harfang-3d/images/paged-world-system-prototype-streaming#imagebox\"
+        title=\"Paged world system prototype (streaming)\"><img src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/77460ec1ec70d6740b4e123e7e76d972c3d903ad.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/harfang-3d/images/image-3#imagebox\" title=\"Image 3\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/N75A9191.JPG\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/harfang-3d/images/image-21#imagebox\" title=\"Image 2\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/4.1.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/harfang-3d/images/image-12#imagebox\" title=\"Image 1\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/8.1.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/harfang-3d/images/image-2#imagebox\" title=\"Image 2\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/8.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/software/harfang-3d/images/image-11#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox menubox\"
+        id=\"embedbuttons\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t<p>To
+        promote Harfang 3D and <a href=\"/software/harfang-3d/stats\">grow its popularity</a>
+        (<a href=\"/software/top\">top software</a>), use the embed code provided
+        on your homepage, blog, forums and elsewhere you desire. Or try <a href=\"#\"
+        class=\"togglewidget\">our widget</a>.</p>\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"display:
+        none;\">\n\t\t\t\t\t\t<textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        100%; height: 44px;\" class=\"text\" >&lt;iframe width=&quot;600&quot; height=&quot;180&quot;
+        src=&quot;https://www.moddb.com/software/harfang-3d/widget&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a
+        href=&quot;https://www.moddb.com/software/harfang-3d&quot;&gt;Harfang 3D software
+        - Mod DB&lt;/a&gt;</textarea><div class=\"sharewidget\" style=\"text-align:
+        center;\"></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowwide
+        clear\">\n\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/software/harfang-3d&quot;
+        title=&quot;View Harfang 3D on Mod DB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/popularity/medium/software/36.png&quot;
+        alt=&quot;Harfang 3D&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/harfang-3d\" title=\"View
+        Harfang 3D on Mod DB\"><img src=\"https://button.moddb.com/popularity/medium/software/36.png\"
+        alt=\"Harfang 3D\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/software/harfang-3d&quot;
+        title=&quot;View Harfang 3D on Mod DB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/rating/medium/software/36.png&quot; alt=&quot;Harfang
+        3D&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/harfang-3d\" title=\"View Harfang 3D on Mod DB\"><img src=\"https://button.moddb.com/rating/medium/software/36.png\"
+        alt=\"Harfang 3D\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/software/harfang-3d&quot;
+        title=&quot;View Harfang 3D on Mod DB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://media.moddb.com/images/global/moddb.png&quot; alt=&quot;Harfang
+        3D&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/harfang-3d\" title=\"View Harfang 3D - Mod DB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"Harfang 3D\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/software/harfang-3d/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo articles were found matching the criteria specified.
+        We suggest you try the <a href=\"/software/harfang-3d/articles\">article list</a>
+        with no filter applied, to browse all available. <a href=\"/software/harfang-3d/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/software/harfang-3d/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"8134b3dbaeb9582ffff644a62955ac43\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"softwarebrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/grand-designer\" title=\"Grand
+        Designer\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/67/crop_120x90/p.jpg\"
+        alt=\"Grand Designer\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/grand-designer\">Grand Designer</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2020-02-25T18:06:17+00:00\">Feb
+        25 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2016-04-13\">Released 2016</time> 3D Graphics  \t\t\t</span>\r\n\t\t\t<p>Allows
+        you to create an infinity of planets, nebulae, asteroids thanks to the power
+        of procedural noises. Using the power of your DX11 GPU, every parameter...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/altspacevr\"
+        title=\"AltspaceVR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/19/crop_120x90/AltSpaceVR_Boss_Monster_Card.png\"
+        alt=\"AltspaceVR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/altspacevr\">AltspaceVR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-04-04T05:47:12+00:00\">Apr 4 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> VR  \t\t\t</span>\r\n\t\t\t<p>Be
+        together, in person. Experience the web, from anywhere, with anyone, through
+        virtual reality. Hang out with real people in virtual reality. Watch a...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/3d-coat-v4\"
+        title=\"3D-Coat V4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/60/crop_120x90/p.jpg\"
+        alt=\"3D-Coat V4\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/3d-coat-v4\">3D-Coat V4</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-25T17:59:51+00:00\">Feb 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2012-10\">Released 2012</time>
+        3D Graphics  \t\t\t</span>\r\n\t\t\t<p>3D-Coat is the one application that
+        has all the tools you need to take your 3D idea from a block of digital clay
+        all the way to a production. </p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/lecture-vr\" title=\"Lecture
+        VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/13/crop_120x90/lecture.jpg\"
+        alt=\"Lecture VR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/lecture-vr\">Lecture VR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-25T09:06:40+00:00\">Mar 25 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-03-15\">Early Access
+        2016</time> VR  \t\t\t</span>\r\n\t\t\t<p>Lecture VR is a tool that allows
+        users to hold meetings, professors to hold classes and content creators to
+        create immersive experiences. Think of us...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/janusvr\" title=\"JanusVR\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/8/crop_120x90/a8704d054a0c62c4facf0792978179d0.png\"
+        alt=\"JanusVR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/janusvr\">JanusVR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-28T01:08:03+00:00\">Mar 28 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2013-05\">Released 2013</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>JanusVR combines the power of the internet with
+        the potential of virtual reality. Websites become immersive spaces linked
+        by portals, where users can...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/paintnet\" title=\"Paint.NET\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/75/crop_120x90/pdn35_kirkland.jpg\"
+        alt=\"Paint.NET\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/paintnet\">Paint.NET</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2022-07-30T11:21:48+00:00\">Jul 30 2022</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2004-05-06\">Released 2004</time>
+        Raster Graphics Editor  \t\t\t</span>\r\n\t\t\t<p>Image and photo editing
+        software for PCs that run Windows. It features an intuitive and innovative
+        user interface with support for layers, unlimited undo...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/software\">More
+        software &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo software were found
+        matching the criteria specified. We suggest you try the <a href=\"/software\">software
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"softwareinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=36\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=software&amp;siteareaid=36\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/software/1/1/36/uMoLEGP6.jpg\"
+        alt=\"Harfang 3D\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<span
+        itemprop=\"operatingSystem\"><a href=\"/platforms/pc\" title=\"Windows\">Windows</a>,
+        <a href=\"/platforms/mac\" title=\"Mac\">Mac</a>, <a href=\"/platforms/linux\"
+        title=\"Linux\">Linux</a>, <a href=\"/platforms/vr\" title=\"VR\">VR</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<span
+        itemprop=\"genre\"><a href=\"/software?filter=t&amp;category=34\" rel=\"nofollow\">VR</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Creator</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/members/astrofra\">astrofra</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/compose?to=astrofra\">Send Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"https://www.harfang3d.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Harfang3d.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2016-03\">Released 2016</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>Software watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=36\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fharfang-3d&title=Harfang+3D+Windows%2C+Mac%2C+Linux%2C+VR+software\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Harfang%203D%20Windows%2C%20Mac%2C%20Linux%2C%20VR%20software&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fharfang-3d\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Harfang+3D+Windows%2C+Mac%2C+Linux%2C+VR+software+https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fharfang-3d+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fharfang-3d&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fharfang-3d&quote=Harfang+3D+Windows%2C+Mac%2C+Linux%2C+VR+software&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Fharfang-3d\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"0\" />-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 0%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">0</span>
+        votes submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"software\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"36\" /><input type=\"hidden\" name=\"hash\" value=\"5c427b74ea50e0784e0834214c124879\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<div class=\"normalbox linksbox\"
+        id=\"menulinkshardware\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div class=\"title\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"heading\">Use With</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" title=\"HTC Vive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/111/crop_120x90/VR_Web_Product_HMD.4.1.png\"
+        alt=\"HTC Vive\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" class=\"heading\">HTC Vive</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/htc\">HTC</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/oculus-dk2\"
+        title=\"Oculus DK2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/2/crop_120x90/preview.jpg\"
+        alt=\"Oculus DK2\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/oculus-dk2\" class=\"heading\">Oculus DK2</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/oculus\">Oculus</a>
+        Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/oculus-rift\"
+        title=\"Oculus Rift\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/29/crop_120x90/rift_hero.jpg\"
+        alt=\"Oculus Rift\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/oculus-rift\" class=\"heading\">Oculus Rift</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/oculus\">Oculus</a>
+        Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\t<div class=\"normalbox
+        formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Twitter</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"8134b3dbaeb9582ffff644a62955ac43\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest tweets
+        from <a href=\"https://twitter.com/harfang3dengine\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@harfang3dengine</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1676933972750745602 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>\U0001F64F\U0001F3FC Thanks to <a href=\"https://twitter.com/HUBInstitute\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@HUBInstitute</a> for
+        selecting Harfang as one of the top 100 startups and scaleups at <a href=\"https://twitter.com/VivaTech\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@VivaTech</a> 2023!\n\nWe\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/sxgjiHm14V\">T.co</a></p><p class=\"helper\">Jul
+        6 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1673230519704723457
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/awinkler_\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@awinkler_</a>: Estimating
+        a full-body pose from only the headset and controllers is ambiguous. Environment
+        information can help re\u2026 <a rel=\"nofollow\"  href=\"https://t.co/PPwPUJjqP2\">T.co</a></p><p
+        class=\"helper\">Jun 26 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1670721460917157888 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>\U0001F6A8HARFANG\xAE 3.2.6 is now out!\n\U0001F449http://bit.ly/3Pik016\n\nThis
+        minor release provides several fixes and brings a functi\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/yf2gmP8jft\">T.co</a></p><p class=\"helper\">Jun 19
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1669758816768995335
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a rel=\"nofollow\"
+        href=\"/tags/madewithbgfx\">#madewithbgfx</a> \U0001F60D <a rel=\"nofollow\"
+        \ href=\"https://t.co/poXILF9TfQ\">T.co</a></p><p class=\"helper\">Jun 16
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1669619089852055557
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/RCValdeLoire\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@RCValdeLoire</a>:
+        <a href=\"https://search.twitter.com/search?q=Num\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">#Num</a>\xE9rique \U0001F916\n\U0001F49C Les <a href=\"https://twitter.com/HumanTechDays\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@HumanTechDays</a>
+        de la <a href=\"https://twitter.com/RCValdeLoire\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@RCValdeLoire</a>, c'est aussi une pr\xE9sence forte
+        de notre r\xE9gion \xE0 <a href=\"https://search.twitter.com/search?q=VivaTech\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#VivaTech</a>,\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/Ig8xEsyxs7\">T.co</a></p><p class=\"helper\">Jun
+        16 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1668708063056994305
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>\U0001F4E2Meet
+        us tomorrow, June 14, at <a href=\"https://twitter.com/VivaTech\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@VivaTech</a> Paris on <a href=\"https://twitter.com/RCValdeLoire\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@RCValdeLoire</a> booth
+        D37, Hall 1.\nLet's talk <a href=\"https://search.twitter.com/search?q=3D\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#3D</a>, <a href=\"https://search.twitter.com/search?q=Python\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#Python</a>, <a href=\"https://search.twitter.com/search?q=BGFX\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#BGFX</a>,\u2026 <a
+        rel=\"nofollow\"  href=\"https://t.co/CiMHMGUvvD\">T.co</a></p><p class=\"helper\">Jun
+        13 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1668703468947734530
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/orleans_tech\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@orleans_tech</a>:
+        \U0001F680 Inscrivez-vous au prochain <a href=\"https://search.twitter.com/search?q=talk\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#talk</a> au <a href=\"https://twitter.com/Le_Lab_O\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@Le_Lab_O</a> le 22/06
+        \xE0 <a href=\"https://search.twitter.com/search?q=orleans\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#orleans</a> \u2714\uFE0F Mythes, r\xE9alit\xE9s
+        et opportunit\xE9s : le m\xE9tier\u2026 <a rel=\"nofollow\"  href=\"https://t.co/PDO9fdsEiL\">T.co</a></p><p
+        class=\"helper\">Jun 13 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1668703447145754624 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/VivaTech\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@VivaTech</a>: When <a href=\"https://search.twitter.com/search?q=VivaTech\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#VivaTech</a> calls,
+        you answer \U0001F4DE See you in 2 days. <a rel=\"nofollow\"  href=\"https://t.co/pyFBdyH2SB\">T.co</a></p><p
+        class=\"helper\">Jun 13 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1663099742727860226 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/VivaTech\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@VivaTech</a>: Plongez au c\u0153ur de
+        l'innovation lors du plus grand \xE9v\xE9nement europ\xE9en d\xE9di\xE9 aux
+        startups et \xE0 la technologie: Viva\u2026 <a rel=\"nofollow\"  href=\"https://t.co/Ki0SxXxVTk\">T.co</a></p><p
+        class=\"helper\">May 29 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1662352939141464065 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>\U0001F4E2 Under the wing of the <a href=\"https://twitter.com/RCValdeLoire\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@RCValdeLoire</a>,
+        <a href=\"https://twitter.com/harfang3dengine\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@harfang3dengine</a>  is gearing up for <a href=\"https://twitter.com/VivaTech\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@VivaTech</a>!\n\nThanks
+        to <a href=\"https://twitter.com/fbonneau\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@fbonneau</a> ,\u2026 <a rel=\"nofollow\"  href=\"https://t.co/pchM0yd79l\">T.co</a></p><p
+        class=\"helper\">May 27 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"8134b3dbaeb9582ffff644a62955ac43\" />\t\t\t\t\t<div class=\"row rowtagstagdevelopment
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/development\">Development</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=development&sitearea=software&siteareaid=36&hash=c1e7a4fbc516a0cbe6567ec61aa591ed\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=development&sitearea=software&siteareaid=36&hash=c1e7a4fbc516a0cbe6567ec61aa591ed&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagsdk clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/sdk\">SDK</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=sdk&sitearea=software&siteareaid=36&hash=c1e7a4fbc516a0cbe6567ec61aa591ed\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=sdk&sitearea=software&siteareaid=36&hash=c1e7a4fbc516a0cbe6567ec61aa591ed&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=c1e7a4fbc516a0cbe6567ec61aa591ed\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=c1e7a4fbc516a0cbe6567ec61aa591ed&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"c1e7a4fbc516a0cbe6567ec61aa591ed\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"software\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"36\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox menubox\" id=\"softwareprofilestats\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/top\">8 of 70</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/harfang-3d/stats\">2,099 (6 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2018-04-15T09:02:22+00:00\"
+        itemprop=\"dateModified\">5 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/software/harfang-3d/watchers\">1 member</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5162 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/software\",\"name\":\"Software\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/software/harfang-3d\",\"name\":\"Harfang
+        3D\",\"image\":\"https://media.moddb.com/images/software/1/1/36/1uMoLEGP6.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=software\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"software\",\r\n\t\t\t\t\t\t\ttags:
+        [\"linux\",\"pc\",\"mac\"],\r\n\t\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tfloorPrices:
+        {\r\n\t\t\t\t\t\t\tdefaultFloorprice: 0.05,\r\n\t\t\t\t\t\t\tusFloorprice:
+        0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
+        0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
+        \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
+        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
+        {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
+        \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
+        { enabled: true, maxRefreshes: 10, desktopRate: 15000, mobileRate: 12000,
+        mobileStickyRate: 15000, teadsRate: 30000, refreshableAdvertIds: [0, 220082044,
+        78946204, 72863404, 2925170143, 2984552083, 74678524] },\r\n\t\t\t\t\t\tinsertInto:
+        \"\",\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.AdScript = new GNAdScript.default(\".DBsupporter\",
+        adConfig);\r\n\t\t\t\t\twindow.AdScript.init();\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697490893\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697490893\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = [];\r\n\t\t\t\tvar shownvideo = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/software/harfang-3d/images/paged-world-system-prototype-streaming1#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/e0f3efd9f64487c095a99f5459a8d90cbb12e948.png\",
+        1628137, \"Paged world system prototype (streaming)\", \"image\"); slidearr[1][1]
+        = new Array(0, \"/software/harfang-3d/images/paged-world-system-prototype-streaming#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/77460ec1ec70d6740b4e123e7e76d972c3d903ad.png\",
+        1628134, \"Paged world system prototype (streaming)\", \"image\"); slidearr[1][2]
+        = new Array(0, \"/software/harfang-3d/images/image-3#imagebox\", \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/N75A9191.JPG\",
+        1612325, \"Image 3\", \"image\"); slidearr[1][3] = new Array(0, \"/software/harfang-3d/images/image-21#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/4.1.jpg\",
+        1612324, \"Image 2\", \"image\"); slidearr[1][4] = new Array(0, \"/software/harfang-3d/images/image-12#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/8.1.jpg\",
+        1612323, \"Image 1\", \"image\"); slidearr[1][5] = new Array(0, \"/software/harfang-3d/images/image-2#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/8.jpg\",
+        1612322, \"Image 2\", \"image\"); slidearr[2] = new Array(6);slidearr[2][0]
+        = new Array(0, \"/software/harfang-3d/images/image-11#imagebox\", \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/4.jpg\",
+        1612321, \"Image 1\", \"image\"); slidearr[2][1] = new Array(0, \"/software/harfang-3d/images/image-1#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/2016-01-27_120002_cgrading_no_aa.1.png\",
+        1612320, \"Image 1\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"/software/harfang-3d/images/add\", true);\n\r\n\t\t\t$(\".togglewidget\").click(function()
+        {\r\n\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").closest(\".row\").slideToggle();\r\n\t\t\t\t\r\n\t\t\t\tif($(this).closest(\".body\").find(\".sharewidget\").html().length
+        == 0) {\r\n\t\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").html($(this).closest(\".body\").find(\".sharewidget\").prev().val().replace(/\\<br\\>\\<a
+        href=.*?\\<\\/a\\>/, \"\"));\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\treturn false;\r\n\t\t\t});\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\t\t\tviewBrowse = function(currentoption, response)
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tif(response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"]) {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\"form.ratingform\").rating(\"\", 20, 20);\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=software\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof reedpop_piwik === \"function\"
+        && cookie_data.npa.cookies == \"true\") { reedpop_piwik(); }\r\n\r\n\tif (typeof
+        gtag === \"function\") { gtag(\"consent\", \"update\", {\"ad_storage\": cookie_data.npa.status
+        == \"false\" ? \"granted\" : \"denied\", \"analytics_storage\": cookie_data.npa.cookies
+        == \"true\" ? \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status
+        == \"false\") {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t}
+        else {\r\n\t\t// don't personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\",
+        { domain: \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\nreedpop_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 81735063dfac0263-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Mon, 16 Oct 2023 21:14:53 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=43aYPrRpL9Lh0cJ6oOtuP7B%2FJy5qDN6g%2BE9sL26eQAEvirBmEyDEe9fO8gtluXh7IJYud4BjNiPpSmQwUUX8g31BNq478La76JRwTkwb%2FIiHs%2BupEItD5zL1LgccPTslXSXjD5MDwonkxOg%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=01da3c46998a9b9ace13fbe3a7975201; expires=Mon, 16-Oct-2023 21:24:53
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

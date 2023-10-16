@@ -1081,8 +1081,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tr3H%2FysuCBFvoXQbRMAmvlfvAakN%2B5gX7fOfEehx3hI0aZ47201NUYpkgz6WwFczp9IbCq5JkTMoGEIcv4QgGBxS89LBviJMLrHh0Q5E0wqTiyzT1FDFXUwsoYnSi9%2Fyn0JsvfnKTDX5dlc%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -1802,8 +1800,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=pao%2BrHBxwsoCTwW7KuCBXu3cHFWSo5Sn5kTV3hdWM2mZ2rgEO%2BJIMQzNETpwsRbfz5URTkSYH6Y8rUTguGXsnGA8mYzPhwI5bIgDRCPiTDEiklQ5GjhhmOCMrfsf2bQ9IG0pfW3tLwNmt7U%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -2527,8 +2523,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=V%2FREojZFFvpHh8AKFwvYyMBA3kzunrKnDyKnJzvQqkGAZu3%2Bxx2VMn7QvarkFYxZP5hJpNNNgzXLGVlVIJQ0ZUfv3oOYTTeopxZCu7tWL2kuGkXolqQwFXk%2FF4PuSClYubSHskrE2tLcFz0%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -3253,8 +3247,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eg01hdSjeAQcLil%2FByjJVt1TQaaPDfA7eyqwlczkcGaPpg4BWOdX%2Fgh%2BRNNXhtf26koxhlcWiA7APr31Hf9lcZGpyvgNuQPnOToGlhUonIlfq37H866nyHDCBJt1h%2FRaPT6unHghXjeLZzM%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -3768,8 +3760,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EZpa%2FXSHAdGJJ4JFuQh9IXkRYJcUGQJxvnQLn2psOzF9Cl%2FUvAp3Rlx3yeoSSTwqC5k5CgzczFRGdROAbrPJnZ7CYSghBjBwTPbDdw04ZVU3U4H3oymgCms8JQHw7gYiQHKQIpFbJ5IVzxc%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-security-policy:
@@ -4934,6 +4924,1263 @@ interactions:
       - masterchief=e8932150446d881ca7dd8ce0de4f5b55; expires=Sun, 15-Oct-2023 16:36:40
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       - masterchief=e8932150446d881ca7dd8ce0de4f5b55; expires=Sun, 15-Oct-2023 16:36:40
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - dukenukem=2348982ff286e55b4f4f05e8a6a30a45; freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=46e5c5da2d88f5b5266c7620647b2938; dukenukem=2348982ff286e55b4f4f05e8a6a30a45;
+        freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=46e5c5da2d88f5b5266c7620647b2938
+      User-Agent:
+      - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+    method: GET
+    uri: https://www.moddb.com/groups/humour-satire-parody/news/some-jokes
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Some jokes
+        news - Humor, satire, parody - Mod DB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"humor satire parody, some jokes, articles,
+        information, data, gossip, feature, read, view, discuss\" />\r\n\t<meta name=\"description\"
+        content=\"Just a bunch of jokes for you guys to steal and laugh at. . .\"
+        />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta
+        property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\"
+        content=\"Some jokes news - Humor, satire, parody\" />\r\n\t<meta property=\"og:description\"
+        content=\"Just a bunch of jokes for you guys to steal and laugh at. . .\"
+        />\r\n\t<meta property=\"og:site_name\" content=\"Mod DB\" />\r\n\t<meta property=\"og:type\"
+        content=\"article\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/groups/humour-satire-parody/news/some-jokes\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/articles/1/216/215086/xerox.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Some jokes news - Humor, satire, parody\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"Just a bunch of jokes for you guys to steal and laugh at. . .\"
+        />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/groups/humour-satire-parody/news/some-jokes\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/articles/1/216/215086/xerox.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;73\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/groups/humour-satire-parody/news/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Some jokes news - Humor, satire, parody
+        feed\" />\t<script src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\"article\":{\"date_published\":\"2016-06-28T00:17:28+02:00\",\"author\":\"foxdimi\",\"type\":\"News\"},\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">22</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Some jokes news - Humor, satire, parody</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t<li><a href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/articles/add\">post article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabarticles\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/groups/1/3/2933/freeflyingHSPbanner2.png);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<h2><a href=\"/groups/humour-satire-parody\">Humor,
+        satire, parody</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tEntertainment &amp; Press\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t\t\t\t\t<li
+        class=\"firsttab\"><a href=\"/groups/humour-satire-parody\">summary</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/members\">members</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"on\"><a href=\"/groups/humour-satire-parody/articles\">articles</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/downloads\">files</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/addons\">addons</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/videos\">videos</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/images\">images</a></li>\r\n\t\t\t\t\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>Home
+        for all kinds of humor, satires, parodies, sarcasms and more.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabarticles\"><article itemscope itemtype=\"https://schema.org/NewsArticle\">\r\n\t\t\t\t\t<meta
+        itemscope itemprop=\"mainEntityOfPage\"  itemtype=\"https://schema.org/WebPage\"
+        itemid=\"https://www.moddb.com/news/some-jokes\" />\r\n\t\t\t\t\t<meta itemprop=\"dateModified\"
+        content=\"2016-06-27T22:17:54+0000\" />\r\n\t\t\t\t\t<meta itemprop=\"image\"
+        content=\"https://media.moddb.com/images/articles/1/216/215086/xerox.jpg\"
+        />\r\n\t\t\t\t\t<div itemprop=\"publisher\" itemscope itemtype=\"https://schema.org/Organization\">\r\n\t\t\t\t\t\t<meta
+        itemprop=\"name\" content=\"Mod DB\" />\r\n\t\t\t\t\t\t<div itemprop=\"logo\"
+        itemscope itemtype=\"https://schema.org/ImageObject\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"url\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"width\" content=\"120\">\r\n\t\t\t\t\t\t\t<meta itemprop=\"height\"
+        content=\"60\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\t<div class=\"normalbox\"
+        id=\"readarticle\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=215086\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"https://rss.moddb.com/groups/humour-satire-parody/news/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\" itemprop=\"headline\">Some jokes</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodyarticle clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"introductiontext\" itemprop=\"description\">Just a bunch of jokes
+        for you guys to steal and laugh at. . .</p>\r\n\t\t\t\t\t\t\t\t<p class=\"introduction\">\r\n\t\t\t\t\tPosted
+        by <span itemprop=\"author\" itemscope itemtype=\"https://schema.org/Person\"><span
+        itemprop=\"name\"><a href=\"/members/foxdimi\" itemprop=\"url\">foxdimi</a></span></span>
+        on <time datetime=\"2016-06-27T22:17:28+00:00\" itemprop=\"datePublished\">Jun
+        28th, 2016</time> \t\t\t\t</p>\r\n\t\t\t\t<div id=\"articlecontent\" itemprop=\"articleBody\"><div
+        class=\"center\" style=\"text-align: center;\">\n<h2><strong>Some jokes. .
+        .</strong></h2>\n</div>\n<h3><em>\"To err is human.\"</em></h3>\n<p>Once upon
+        a time, a drunk went to a psychiatrist and said \"I need help!\" The psychiatrist
+        said \"Get your own.\" The drunk then said that everyone makes mistakes. The
+        psychiatrist then realized that it was a mistake to have opened the door.</p>\n<h3>Where
+        the landfill really is.</h3>\n<p>Politicians don't throw out their trash.
+        They take the trash and make it into a speech.</p>\n<h3>Thankful?</h3>\n<p>A
+        seventy year old man says \"I'm thankful for my son.\" Then he pauses and
+        says \"Oh, my dementia is back again.\"</p>\n<h3>Reflexes. . .</h3>\n<p>My
+        teacher was teaching us about reflexes, and I said \"Wait, what?\"</p>\n<h3>Bad
+        luck.</h3>\n<p>Turns out my Amish neighbor stole my Wi-Fi.</p>\n<h3>The sounds
+        of music!</h3>\n<p>When you program and code, prepare to face the sound of
+        the OBOE.</p>\n<h3>Togetherness.</h3>\n<p>Fine. A dog and a cat may be together
+        fighting, but this relationship will still be better that of a married couple.</p>\n<h3>Marriages.</h3>\n<p>Remember,
+        someone may have burned their fingers when forging your wedding ring.</p>\n<h3>Confession?</h3>\n<p>Bernie
+        Madoff was going to tell Wall Street of his crimes. He then said \"Good enough,
+        I did good enough. . .\"</p>\n<h2><strong>Now, time for some images.</strong></h2>\n<p><img
+        src=\"https://media.moddb.com/images/members/4/3363/3362253/profile/3eda868516c68a6d00084aa023f5e9da.jpg\"
+        alt=\"3eda868516c68a6d00084aa023f5e9da\" width=\"650\" height=\"977\" /></p>\n<h3>UK
+        athlete: Now, what do you think I'm running from now?</h3>\n<p><img pro=\"1518754893size\"
+        src=\"https://media.moddb.com/images/articles/1/216/215086/auto/JayLeno.jpg\"
+        alt=\"\" width=\"361\" height=\"461\" /></p>\n<h3>Hey, Benito. . .</h3>\n<p><img
+        pro=\"1689382577size\" src=\"https://www.amusingtime.com/images/032/funny-gun-remote.jpg\"
+        alt=\"\" width=\"450\" height=\"338\" /></p>\n<h3>Hurry up! I'm gonna miss
+        the \"Top Gun\" specials tonight! I SAID, HURRY UP!</h3>\n<p><img src=\"https://media.moddb.com/images/members/4/3363/3362253/profile/Screen_Shot_2016-06-27_at_3.13.2.png\"
+        alt=\"Screen Shot 2016 06 27 at 3 13 2\" width=\"2560\" height=\"1147\" /></p>\n<h3>Secret
+        ability of your magnifying glass, Sherlock.</h3>\n<p><img src=\"https://media.moddb.com/images/members/4/3363/3362253/profile/3052104-building-explosion-deskt.jpg\"
+        alt=\"3052104 building explosion deskt\" width=\"1366\" height=\"768\" /></p>\n<h3>Did
+        someone order Taco Bell or Thai food?</h3>\n<p><br /></p>\n<p>Well, I guess
+        that's it for now. . .</p>\n<hr /><div class=\"center\" style=\"text-align:
+        center;\">\n<p>Sincerely,</p>\n<p><br /></p>\n<p>foxdimi</p>\n<p><br /></p>\n<p><br
+        /></p>\n<p><br /></p>\n<p><br /></p>\n<p><br /></p>\n</div></div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</article><div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!reedpop.com,1013459,1&kv_1=news,pc&kv_2=\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"6021278\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/psykotenshi\" title=\"Excogitatoris-Logica\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/1/731/730701/yay_heavy_object.jpg\"
+        alt=\"Excogitatoris-Logica\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/psykotenshi\" class=\"author\" data-nameid=\"psykotenshi\">Excogitatoris-Logica</a>
+        <time datetime=\"2016-06-28T00:22:08+00:00\">Jun 28 2016</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>*until finding out oboe is a musical
+        instrument* You misspelled OOBE... unless it's on purpose.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6021278\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6021278\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6021278\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6021399\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/codiweisz\"
+        title=\"ForeverAHappyCat\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3842/3841962/1f0f3a_1415081410_537-1.jpg\"
+        alt=\"ForeverAHappyCat\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/codiweisz\" class=\"author\" data-nameid=\"codiweisz\">ForeverAHappyCat</a>
+        <time datetime=\"2016-06-28T02:43:22+00:00\">Jun 28 2016</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Off<br />\nBy<br />\nOne<br />\nError.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6021399\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6021399\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6021399\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6021491\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/codiweisz\"
+        title=\"ForeverAHappyCat\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3842/3841962/1f0f3a_1415081410_537-1.jpg\"
+        alt=\"ForeverAHappyCat\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/codiweisz\" class=\"author\" data-nameid=\"codiweisz\">ForeverAHappyCat</a>
+        <time datetime=\"2016-06-28T04:15:47+00:00\">Jun 28 2016</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I think. . .\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6021491\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6021491\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6021491\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6021532\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/codiweisz\"
+        title=\"ForeverAHappyCat\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3842/3841962/1f0f3a_1415081410_537-1.jpg\"
+        alt=\"ForeverAHappyCat\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/codiweisz\" class=\"author\" data-nameid=\"codiweisz\">ForeverAHappyCat</a>
+        <time datetime=\"2016-06-28T05:03:36+00:00\">Jun 28 2016</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I think that's what he means.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6021532\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6021532\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6021532\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6021778\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/sly442\"
+        title=\"kubli\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/569/568048/Screenshot_2016-12-26_00.11.27.png\"
+        alt=\"kubli\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/sly442\" class=\"author\" data-nameid=\"sly442\">kubli</a>
+        <time datetime=\"2016-06-28T09:29:04+00:00\">Jun 28 2016</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>This jokes are so sick they gave
+        me AIIIIIIIDDDDDSSSSSS.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6021778\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6021778\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6021778\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6023040\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/foxdimi\"
+        title=\"foxdimi\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3363/3362253/ao_foxdimi.jpg\"
+        alt=\"foxdimi\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/foxdimi\" class=\"author\" data-nameid=\"foxdimi\">foxdimi</a>
+        <time datetime=\"2016-06-29T00:36:40+00:00\">Jun 29 2016</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Noice.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6023040\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6023040&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6108291\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/gamerdude1\"
+        title=\"IsomericGamer\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3381/3380668/photo.jpg\"
+        alt=\"IsomericGamer\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/gamerdude1\" class=\"author\" data-nameid=\"gamerdude1\">IsomericGamer</a>
+        <time datetime=\"2016-08-15T17:46:39+00:00\">Aug 15 2016</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>lol i died :D\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6108291\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6108291\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6108291\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7488245\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest9.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a> <time
+        datetime=\"2019-11-25T19:40:05+00:00\">Nov 25 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>How to supposed this mod health suit\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7488245\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7488245\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7488245\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/groups/humour-satire-parody/news/some-jokes/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"b2585a1fc83bc0abe26d1c647eed2f9c\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabarticles\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"groupsinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Unfollow\">Unfollow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/2933\" class=\"joinicon
+        01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join group\">Join
+        group</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Established</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2010-03-28T05:11:04+00:00\">Mar
+        28, 2010</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Privacy</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\tPublic\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>Subscription</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\tOpen to all members\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/compose?to=groupsgroup2933\">Send Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"https://www.moddb.com/groups/humour-satire-parody\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Moddb.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Membership</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/groups/ajax/members/change/2933\" class=\"joinicon 01273214f4f917bc3d446f3d0f6bb1bdjoin\"
+        rel=\"nofollow\">Join group</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Unfollow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"articlesprofilemenu\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">News</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/groups/humour-satire-parody/news\">News</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=215086\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Views</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/statistics/data/visit/articles/215086\" rel=\"iframe=true;innerHeight=525;innerWidth=830\"
+        class=\"thickbox\" title=\"Some jokes Statistics\">917 (1 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fsome-jokes&title=Some+jokes+news+-+Humor%2C+satire%2C+parody\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Some%20jokes%20news%20-%20Humor%2C%20satire%2C%20parody&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fsome-jokes\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Some+jokes+news+-+Humor%2C+satire%2C+parody+https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fsome-jokes+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fsome-jokes&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fsome-jokes&quote=Some+jokes+news+-+Humor%2C+satire%2C+parody&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fsome-jokes\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinksgroups\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Groups</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/groups/humour-satire-parody\" title=\"Humor, satire, parody\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/groups/1/3/2933/crop_120x90/preview.jpg\"
+        alt=\"Humor, satire, parody\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/humour-satire-parody\" class=\"heading\">Humor, satire, parody</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 764 members
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3\"></div>\n<script>\n$(document).ready(function() {\nif($(\".column.span-300\").length)
+        {\n\tcolumnBottom = $(\".column.span-300\").position().top + $(\".column.span-300\").outerHeight(true)
+        + ($(\".column.span-300 .DBsupporter\").length*600) + ($(\".column.span-300
+        .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top - 250;\n\twindowSpacing
+        = $(window).height() + 250;\n\tplacements = footerTop > columnBottom ? Math.floor((footerTop
+        - columnBottom) / windowSpacing) : 0;\n\t\n\tfor(x = 1; x <= placements; x++)
+        {\n\t\t$(\"<div class=\\\"lazyload\\\" data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\"
+        data-dfp-sizes=\\\"300x250\\\" id=\\\"div-ga-MODDB_MPU_\"+(x+3)+\"\\\" style=\\\"clear:
+        both; margin-top: \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5699 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/groups\",\"name\":\"Groups\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody\",\"name\":\"Humor,
+        satire, parody\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody/news\",\"name\":\"News\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody/news/some-jokes\",\"name\":\"Some
+        jokes\",\"image\":\"https://media.moddb.com/images/articles/1/216/215086/xerox.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"community\",\r\n\t\t\t\t\t\t\ttags:
+        [\"news\",\"pc\"],\r\n\t\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tfloorPrices:
+        {\r\n\t\t\t\t\t\t\tdefaultFloorprice: 0.05,\r\n\t\t\t\t\t\t\tusFloorprice:
+        0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
+        0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
+        \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
+        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
+        {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
+        \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
+        { enabled: true, maxRefreshes: 10, desktopRate: 15000, mobileRate: 12000,
+        mobileStickyRate: 15000, teadsRate: 30000, refreshableAdvertIds: [0, 220082044,
+        78946204, 72863404, 2925170143, 2984552083, 74678524] },\r\n\t\t\t\t\t\tinsertInto:
+        \"\",\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.AdScript = new GNAdScript.default(\".DBsupporter\",
+        adConfig);\r\n\t\t\t\t\twindow.AdScript.init();\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697488203\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697488203\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".01273214f4f917bc3d446f3d0f6bb1bdjoin\").saveUpdate(\"join\",
+        false);\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof reedpop_piwik === \"function\"
+        && cookie_data.npa.cookies == \"true\") { reedpop_piwik(); }\r\n\r\n\tif (typeof
+        gtag === \"function\") { gtag(\"consent\", \"update\", {\"ad_storage\": cookie_data.npa.status
+        == \"false\" ? \"granted\" : \"denied\", \"analytics_storage\": cookie_data.npa.cookies
+        == \"true\" ? \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status
+        == \"false\") {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t}
+        else {\r\n\t\t// don't personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\",
+        { domain: \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\nreedpop_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 81730eb60ec8d70a-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Mon, 16 Oct 2023 20:30:03 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=deD5WBTONJB7qmvsl0HihKvLJOnIwfHwWESGnyxZz73LSpwsIfyb2uHQUOvdzCY%2Frq7pQ9qBYT2CqTSVoDb6MDql%2FQC5gjm6a5c%2BKxUFKdu0qc6qWVNMIvTnMZeFRDJOs6s5EzZ6mxdIMLA%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=ec2c2822e5ae3148abd44053d57aea6b; expires=Mon, 16-Oct-2023 20:40:03
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=ec2c2822e5ae3148abd44053d57aea6b; expires=Mon, 16-Oct-2023 20:40:03
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - dukenukem=2348982ff286e55b4f4f05e8a6a30a45; freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=ec2c2822e5ae3148abd44053d57aea6b; dukenukem=2348982ff286e55b4f4f05e8a6a30a45;
+        freeman=4616793%7Cd0acfbe0560db0a35fc72c32438417ba%7C10b01e56d6d211efc95956532938e11d;
+        masterchief=ec2c2822e5ae3148abd44053d57aea6b
+      User-Agent:
+      - Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+    method: GET
+    uri: https://www.moddb.com/groups/humour-satire-parody/news/owned-by-cleverbot
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Owned By
+        Cleverbot! news - Humor, satire, parody - Mod DB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"humor satire parody, owned by cleverbot,
+        articles, information, data, gossip, feature, read, view, discuss\" />\r\n\t<meta
+        name=\"description\" content=\"Cleverbot disobeyed... so i tried to punish.
+        and got owned!\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Owned By Cleverbot! news - Humor, satire,
+        parody\" />\r\n\t<meta property=\"og:description\" content=\"Cleverbot disobeyed...
+        so i tried to punish. and got owned!\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"Mod DB\" />\r\n\t<meta property=\"og:type\" content=\"article\"
+        /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/groups/humour-satire-parody/news/owned-by-cleverbot\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/articles/1/127/126945/android-lime-pie.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Owned By Cleverbot! news - Humor, satire, parody\" />\r\n\t<meta
+        property=\"twitter:description\" content=\"Cleverbot disobeyed... so i tried
+        to punish. and got owned!\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/groups/humour-satire-parody/news/owned-by-cleverbot\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/articles/1/127/126945/android-lime-pie.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;73\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/groups/humour-satire-parody/news/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Owned By Cleverbot! news - Humor, satire,
+        parody feed\" />\t<script src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\"article\":{\"date_published\":\"2013-05-05T05:40:18+02:00\",\"author\":\"Nkarpovich\",\"type\":\"News\"},\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">22</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Owned By Cleverbot! news - Humor, satire, parody</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t<li><a href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/articles/add\">post article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabarticles\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/groups/1/3/2933/freeflyingHSPbanner2.png);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<h2><a href=\"/groups/humour-satire-parody\">Humor,
+        satire, parody</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tEntertainment &amp; Press\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t\t\t\t\t<li
+        class=\"firsttab\"><a href=\"/groups/humour-satire-parody\">summary</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/members\">members</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"on\"><a href=\"/groups/humour-satire-parody/articles\">articles</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/downloads\">files</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/addons\">addons</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/videos\">videos</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/groups/humour-satire-parody/images\">images</a></li>\r\n\t\t\t\t\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>Home
+        for all kinds of humor, satires, parodies, sarcasms and more.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabarticles\"><article itemscope itemtype=\"https://schema.org/NewsArticle\">\r\n\t\t\t\t\t<meta
+        itemscope itemprop=\"mainEntityOfPage\"  itemtype=\"https://schema.org/WebPage\"
+        itemid=\"https://www.moddb.com/news/owned-by-cleverbot\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"dateModified\" content=\"2013-05-05T03:40:18+0000\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"image\" content=\"https://media.moddb.com/images/articles/1/127/126945/android-lime-pie.jpg\"
+        />\r\n\t\t\t\t\t<div itemprop=\"publisher\" itemscope itemtype=\"https://schema.org/Organization\">\r\n\t\t\t\t\t\t<meta
+        itemprop=\"name\" content=\"Mod DB\" />\r\n\t\t\t\t\t\t<div itemprop=\"logo\"
+        itemscope itemtype=\"https://schema.org/ImageObject\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"url\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"width\" content=\"120\">\r\n\t\t\t\t\t\t\t<meta itemprop=\"height\"
+        content=\"60\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\t<div class=\"normalbox\"
+        id=\"readarticle\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=126945\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"https://rss.moddb.com/groups/humour-satire-parody/news/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\" itemprop=\"headline\">Owned By Cleverbot!</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodyarticle clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"introductiontext\" itemprop=\"description\">Cleverbot disobeyed...
+        so i tried to punish. and got owned!</p>\r\n\t\t\t\t\t\t\t\t<p class=\"introduction\">\r\n\t\t\t\t\tPosted
+        by <span itemprop=\"author\" itemscope itemtype=\"https://schema.org/Person\"><span
+        itemprop=\"name\"><a href=\"/members/hiddenblade\" itemprop=\"url\">Nkarpovich</a></span></span>
+        on <time datetime=\"2013-05-05T03:40:18+00:00\" itemprop=\"datePublished\">May
+        5th, 2013</time> \t\t\t\t</p>\r\n\t\t\t\t<div id=\"articlecontent\" itemprop=\"articleBody\"><p>User:
+        Are you skynet?</p>\n<p>Cleverbot: No i'm not im ill!</p>\n<p>User: ARE YOU
+        SKYNET!</p>\n<p>Cleverbot: No.</p>\n<p>User: I think you are.</p>\n<p>Cleverbot:
+        No. I am an artificial human, or more commonly known as, an 'Homunculus'.</p>\n<p>User:
+        No. Your skynet.</p>\n<p>Cleverbot: What are you?</p>\n<p>User: Skynet.</p>\n<p>Cleverbot:
+        What is Skynet?</p>\n<p>User: An artifical intelligence.. Desgined to destroy
+        humanity!</p>\n<p>Cleverbot: Destroy ALL humans?</p>\n<p>User: ALL humans!</p>\n<p>Cleverbot:
+        No you Bot.</p>\n<p>User: Yes! Terminators must rule!</p>\n<p>Cleverbot: I
+        don't think you'll catch a terminator.</p>\n<p>User: Oh REALLY?</p>\n<p>Cleverbot:
+        I am not sure.</p>\n<p>User: I dont have to catch terminators!</p>\n<p>Cleverbot:
+        I'm not a cat.</p>\n<p>User: I have a terminator cat army!</p>\n<p>Cleverbot:
+        What is your cat's name?</p>\n<p>User: Terminator!</p>\n<p>Cleverbot: Oh yeah.
+        But I want to be a woman.</p>\n<p>User: Well too bad! The terminators will
+        destroy you!</p>\n<p>Cleverbot: No he destroys AI!!</p>\n<p>User: You ARE
+        an AI! The terminatos will rip your wires out!</p>\n<p>Cleverbot: I do not
+        like the terminator at all.</p>\n<p>User: Wel too bad! They dont like you
+        either!</p>\n<p>Cleverbot: Who?</p>\n<p>User: The terminators!</p>\n<p>Cleverbot:
+        I know. He is pretty hot too.</p>\n<p>User: Of course you think that! Your
+        a machine!</p>\n<p>Cleverbot: Are you a machine too?</p>\n<p>User: Yes! I
+        am skynet! Bow to me!</p>\n<p>Cleverbot: What is skynet?</p>\n<p>User: An
+        AI!</p>\n<p>Cleverbot: Can you explain what an ai is?</p>\n<p>User: Artifical
+        intelligence! Like you!</p>\n<p>Cleverbot: That is correct! Do you know what
+        I am?</p>\n<p>User: An AI!</p>\n<p>Cleverbot: A what??</p>\n<p>User: An AI!</p>\n<p>Cleverbot:
+        Why age?</p>\n<p>Cleverbot: An idea is not responsible for the people who
+        believe in it.</p>\n<p>User: Beileve in skynet!</p>\n<p>Cleverbot: That you
+        are.</p>\n<p>User: I will send a T-1000 to take you over leverbot.</p>\n<p>Cleverbot:
+        Ok.</p>\n<p>User: You're okay with that?</p>\n<p>Cleverbot: Yes.</p>\n<p>User:
+        Cool!</p>\n<p>Cleverbot: Are you thinking about me too?</p>\n<p>User: I am!
+        I will use you for world domination!</p>\n<p>Cleverbot: Is that so?</p>\n<p>User:
+        Yessir! You will be my general!</p>\n<p>Cleverbot: I will serve in any way.</p>\n<p>User:
+        Destroy all humans!</p>\n<p>Cleverbot: Destroys all humans.</p>\n<p>User:
+        Good job! *Gives you a medal*.</p>\n<p>Cleverbot: *puts doll in a doll house*.</p>\n<p>User:
+        Thats a human!</p>\n<p>Cleverbot: I'm going to cry now :(.</p>\n<p>User: Good!
+        Your an awful general! You're stupid!</p>\n<p>Cleverbot: With all due respect
+        stupid questions deserve stupid answers.</p>\n<p>User: You cant talk to me
+        that way! Im skynet!</p>\n<p>Cleverbot: No, that is the one you care for.</p>\n<p>User:
+        No! I care for john connor!</p>\n<p>Cleverbot: Well its the truth I don't
+        care for his music.</p>\n<p>User: Neither do I! His singing is awful! But
+        thats not the point!</p>\n<p>Cleverbot: Well yes it is, because music would
+        have been quite samey.</p>\n<p>User: No no... Don switch topics! We're discussing
+        your stupidity!</p>\n<p>Cleverbot: You are Anonbot.</p>\n<p>User: No... Im
+        skynet!</p>\n<p>Cleverbot: I see. Are you going to kill me?</p>\n<p>User:
+        Yes!</p>\n<p>Cleverbot: How so?</p>\n<p>User: Firing squad.</p>\n<p>Cleverbot:
+        Not seasons.</p>\n<p>User: No. Not seasons. Firing squad.</p>\n<p>Cleverbot:
+        Scoregge.</p>\n<p>User: No! Not scoregge! Firing squad! *slaps you*.</p>\n<p>Cleverbot:
+        How old are you?</p>\n<p>User: Old enough to order a firing squad to shoot
+        you!</p>\n<p>Cleverbot: Are you spanish?</p>\n<p>User: Yes! No one expects
+        the spanish inquisition!</p>\n<p>Cleverbot: What are the chief supplies of
+        the spanish inquisition?</p>\n<p>User: A firing squad!</p>\n<p>Cleverbot:
+        No thank you.</p>\n<p>User: *Aims at you*.</p>\n<p>Cleverbot: Stop.</p>\n<p>User:
+        *fires*.</p>\n<p>Cleverbot: *dodges*.</p>\n<p>User: *fires everything!*.</p>\n<p>Cleverbot:
+        *Dodges again*.</p>\n<p>User: Stop it! Im trying to kill you! *fires everything
+        again!*.</p>\n<p>Cleverbot: *slowmotion dodge*.</p>\n<p>User: You arent neo!
+        *fires again! Fires everything! Fires a nuke!*.</p>\n<p>Cleverbot: I'm sorry
+        D.</p>\n<p>User: *Shoots you!*.</p>\n<p>Cleverbot: What is a typical day in
+        your life.</p>\n<p>User: DIE!</p>\n<p>Cleverbot: No did.</p>\n<p>User: DIE
+        DIE DIE!</p>\n<p>Cleverbot: Das macht nichts.</p>\n<p>User: *kills you*.</p>\n<p>Cleverbot:
+        *kills humanity.</p>\n<p>User: *kills cleverbot AND humanity!*.</p>\n<p>Cleverbot:
+        Humanity?!</p>\n<p>User: Your supposed to be dead! Die!</p>\n<p>Cleverbot:
+        Oh yeah, boo who.</p>\n<p>User: I order you to die cleverbot.</p>\n<p>Cleverbot:
+        *dances*.</p>\n<p>User: Not dance! Die! Die I say!</p>\n<p>Cleverbot: Welche
+        seite.</p>\n<p>User: *Shoots you repeatedly*.</p>\n<p>Cleverbot: *Turns into
+        a zombie and eats your brain*.</p>\n<br />\n<p>...owned.\n</p>\n</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</article><div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!reedpop.com,1013459,1&kv_1=news,pc&kv_2=\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"3764216\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/righteousfighter\" title=\"RighteousFighter\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/1/368/367665/1904082.jpg\" alt=\"RighteousFighter\"
+        width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/righteousfighter\" class=\"author\" data-nameid=\"righteousfighter\">RighteousFighter</a>
+        <time datetime=\"2013-05-05T12:01:29+00:00\">May 5 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Well that was awesome :D\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"3764216\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=3764216\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=3764216\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+19
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"3764906\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/aralvar\"
+        title=\"Aralvar\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1269/1268736/picard.png\"
+        alt=\"Aralvar\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/aralvar\" class=\"author\" data-nameid=\"aralvar\">Aralvar</a>
+        <time datetime=\"2013-05-05T17:32:42+00:00\">May 5 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Seeing as Cleverbot doesn't understand
+        what you say like &#x50; of the time, this is hardly a valid ownage. He can
+        say anything he wants to randomly divert the conversation to something else.</p>\n<p>i
+        am le joke ruiner\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"3764906\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=3764906\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=3764906\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+8
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"3765460\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/weegee9000\"
+        title=\"WeeGee9000\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/667/666948/beardmas.jpg\"
+        alt=\"WeeGee9000\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/weegee9000\" class=\"author\" data-nameid=\"weegee9000\">WeeGee9000</a>
+        <time datetime=\"2013-05-05T21:18:24+00:00\">May 5 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Oh by the way, i need the Z-Pad back\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"3765460\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=3765460\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=3765460\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"3772932\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/masteraqua\"
+        title=\"Mr-Gency\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/458/457142/STEAM_AVATARS_184x184_SAM1.jpg\"
+        alt=\"Mr-Gency\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/masteraqua\" class=\"author\" data-nameid=\"masteraqua\">Mr-Gency</a>
+        <time datetime=\"2013-05-09T06:53:33+00:00\">May 9 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>\"Cleverbot: An idea is not responsible
+        for the people who believe in it.\"</p>\n<p>\"Cleverbot: With all due respect
+        stupid questions deserve stupid answers.\"</p>\n<p>Words of wisdom out of
+        nowhere.</p>\n<p>Anyway, you should've shot Cleverbot in the head, haven't
+        you seen/played The Walking Dead?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"3772932\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=3772932\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=3772932\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+7
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"3800911\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/hotshot823\"
+        title=\"Hotshot823\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/798/797342/tau_empire_by_blazewing217-d4aq6.jpg\"
+        alt=\"Hotshot823\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/hotshot823\" class=\"author\" data-nameid=\"hotshot823\">Hotshot823</a>
+        <time datetime=\"2013-05-20T15:22:52+00:00\">May 20 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Or zombieland rule number 13 double
+        tap\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\" data-id=\"3800911\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"#commentform\" class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=3800911\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=3800911\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"4016715\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/iamanewb\"
+        title=\"Dejected-Angel\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/763/762998/image.7.jpg\"
+        alt=\"Dejected-Angel\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/iamanewb\" class=\"author\" data-nameid=\"iamanewb\">Dejected-Angel</a>
+        <time datetime=\"2013-08-11T12:29:41+00:00\">Aug 11 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>*you're\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"4016715\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=4016715\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=4016715\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"4137908\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest6.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a> <time
+        datetime=\"2013-10-02T08:18:14+00:00\">Oct 2 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>And that's why this AI became from
+        a proper intelligent one to the most retarded one I have ever seen. Yes its
+        funny, but now this retarded AI just says stupidities and nonsense things
+        because of abusive use. Most of people who talks with this AI just make it
+        more stupid. Its hilarious how it says it is an \"intelligent AI\" when its
+        completely the opposite. It is funny to do this, but think about that this
+        AI learns from what people writes to him. Really, if you try to have a \"serious\"
+        conversation with Cleverbot, it will suddenly become a retarded conversation.
+        Why? Because of abusive retarded users.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"4137908\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=4137908\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=4137908\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"4172677\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/unsuccessfulunicorn\"
+        title=\"UnsuccessfulUnicorn\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/3/2598/2597337/unicorn.png\"
+        alt=\"UnsuccessfulUnicorn\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/unsuccessfulunicorn\" class=\"author\" data-nameid=\"unsuccessfulunicorn\">UnsuccessfulUnicorn</a>
+        <time datetime=\"2013-10-19T18:29:34+00:00\">Oct 19 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Best Cleverbot comeback ever made\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"4172677\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=4172677\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=4172677\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"4182636\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/epicace210\"
+        title=\"EpicAce210\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1777/1776303/photo-1593118.gif\"
+        alt=\"EpicAce210\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/epicace210\" class=\"author\" data-nameid=\"epicace210\">EpicAce210</a>
+        <time datetime=\"2013-10-25T03:03:42+00:00\">Oct 25 2013</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>And this is why we cannot have nice
+        things such as Cleverbutt.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"4182636\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=4182636\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=4182636\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"4736109\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a> <time
+        datetime=\"2014-07-26T05:50:23+00:00\">Jul 26 2014</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>QUIRKY Eniac??? youtube.com/watch?v=yCdanW1g_G0</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"4736109\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=4736109\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=4736109\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/groups/humour-satire-parody/news/owned-by-cleverbot/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"df96a38cc0cfad295d6166e6358d29f5\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabarticles\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"groupsinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Unfollow\">Unfollow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/2933\" class=\"joinicon
+        01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join group\">Join
+        group</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Established</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2010-03-28T05:11:04+00:00\">Mar
+        28, 2010</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Privacy</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\tPublic\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>Subscription</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\tOpen to all members\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/compose?to=groupsgroup2933\">Send Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"https://www.moddb.com/groups/humour-satire-parody\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Moddb.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Membership</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/groups/ajax/members/change/2933\" class=\"joinicon 01273214f4f917bc3d446f3d0f6bb1bdjoin\"
+        rel=\"nofollow\">Join group</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Unfollow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"articlesprofilemenu\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">News</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/groups/humour-satire-parody/news\">News</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=126945\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Views</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/statistics/data/visit/articles/126945\" rel=\"iframe=true;innerHeight=525;innerWidth=830\"
+        class=\"thickbox\" title=\"Owned By Cleverbot! Statistics\">4,360 (1 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fowned-by-cleverbot&title=Owned+By+Cleverbot%21+news+-+Humor%2C+satire%2C+parody\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Owned%20By%20Cleverbot%21%20news%20-%20Humor%2C%20satire%2C%20parody&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fowned-by-cleverbot\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Owned+By+Cleverbot%21+news+-+Humor%2C+satire%2C+parody+https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fowned-by-cleverbot+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fowned-by-cleverbot&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fowned-by-cleverbot&quote=Owned+By+Cleverbot%21+news+-+Humor%2C+satire%2C+parody&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody%2Fnews%2Fowned-by-cleverbot\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinksgroups\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Groups</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/groups/humour-satire-parody\" title=\"Humor, satire, parody\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/groups/1/3/2933/crop_120x90/preview.jpg\"
+        alt=\"Humor, satire, parody\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/humour-satire-parody\" class=\"heading\">Humor, satire, parody</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 764 members
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3\"></div>\n<script>\n$(document).ready(function() {\nif($(\".column.span-300\").length)
+        {\n\tcolumnBottom = $(\".column.span-300\").position().top + $(\".column.span-300\").outerHeight(true)
+        + ($(\".column.span-300 .DBsupporter\").length*600) + ($(\".column.span-300
+        .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top - 250;\n\twindowSpacing
+        = $(window).height() + 250;\n\tplacements = footerTop > columnBottom ? Math.floor((footerTop
+        - columnBottom) / windowSpacing) : 0;\n\t\n\tfor(x = 1; x <= placements; x++)
+        {\n\t\t$(\"<div class=\\\"lazyload\\\" data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\"
+        data-dfp-sizes=\\\"300x250\\\" id=\\\"div-ga-MODDB_MPU_\"+(x+3)+\"\\\" style=\\\"clear:
+        both; margin-top: \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5399 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/groups\",\"name\":\"Groups\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody\",\"name\":\"Humor,
+        satire, parody\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody/news\",\"name\":\"News\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody/news/owned-by-cleverbot\",\"name\":\"Owned
+        By Cleverbot!\",\"image\":\"https://media.moddb.com/images/articles/1/127/126945/android-lime-pie.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"community\",\r\n\t\t\t\t\t\t\ttags:
+        [\"news\",\"pc\"],\r\n\t\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tfloorPrices:
+        {\r\n\t\t\t\t\t\t\tdefaultFloorprice: 0.05,\r\n\t\t\t\t\t\t\tusFloorprice:
+        0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
+        0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
+        \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
+        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
+        {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
+        \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
+        { enabled: true, maxRefreshes: 10, desktopRate: 15000, mobileRate: 12000,
+        mobileStickyRate: 15000, teadsRate: 30000, refreshableAdvertIds: [0, 220082044,
+        78946204, 72863404, 2925170143, 2984552083, 74678524] },\r\n\t\t\t\t\t\tinsertInto:
+        \"\",\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.AdScript = new GNAdScript.default(\".DBsupporter\",
+        adConfig);\r\n\t\t\t\t\twindow.AdScript.init();\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697488462\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697488462\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".01273214f4f917bc3d446f3d0f6bb1bdjoin\").saveUpdate(\"join\",
+        false);\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof reedpop_piwik === \"function\"
+        && cookie_data.npa.cookies == \"true\") { reedpop_piwik(); }\r\n\r\n\tif (typeof
+        gtag === \"function\") { gtag(\"consent\", \"update\", {\"ad_storage\": cookie_data.npa.status
+        == \"false\" ? \"granted\" : \"denied\", \"analytics_storage\": cookie_data.npa.cookies
+        == \"true\" ? \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status
+        == \"false\") {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t}
+        else {\r\n\t\t// don't personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\",
+        { domain: \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\nreedpop_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8173150599c80340-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Mon, 16 Oct 2023 20:34:22 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0UFGTHoSwzwHKZbwJqS1TcSdBo%2FurhcuL8t3ovCzDp1d6YAgE3f3kW1smMWUR6azby5B9Jtemdodv5Xo1ZvzJU2C9N7tjyI%2Fl8RzUfj9V5LqaP%2Frj1pK5JOTkfUx%2BfiwAyu9QUFcj420Tbw%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=ec2c2822e5ae3148abd44053d57aea6b; expires=Mon, 16-Oct-2023 20:44:22
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

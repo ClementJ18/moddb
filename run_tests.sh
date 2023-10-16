@@ -1,6 +1,6 @@
 if [ ${1:-not_full} == "full" ]
 then
-    pytest tests/test_main.py --log-level="INFO" --html=report.html --self-contained-html "${@:2}"
+    pytest tests/extended --log-level="INFO" --html=report.html --self-contained-html "$@" --record-mode=all
 else
-    pytest -k "not test_main and not test_client" --log-level="INFO" --html=report.html --self-contained-html "$@"  --record-mode=none
+    pytest tests/standard --log-level="INFO" --html=report.html --self-contained-html "$@"  --record-mode=new_episodes
 fi
