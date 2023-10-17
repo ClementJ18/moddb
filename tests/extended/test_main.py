@@ -1,7 +1,7 @@
 import logging
 import pytest
 
-from tests import (
+from tests.standard import (
     test_mod,
     test_game,
     test_engine,
@@ -19,8 +19,9 @@ from tests import (
     test_poll,
     test_base,
     test_client,
-    utils,
 )
+
+from tests import utils
 
 import moddb
 

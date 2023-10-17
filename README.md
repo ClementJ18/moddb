@@ -67,7 +67,7 @@ The testing is handled in two ways. There is a standard set of tests which are m
 
 In general, if you're just trying to do a sanity check on the library it is recommended to use the standard test set using the cassettes. This minimizes requests dones to the ModDB server and your chance of being ratelimited. 
 
-* Standard Set: `pytest tests/standard --record-mode=new_episodes`
-* Full Set: `pytest tests/extended --record-mode=all`
+* Standard Set: `pytest -k "standard" --record-mode=new_episodes`
+* Full Set: `pytest -k "extended" --record-mode=all`
 
 Because tests in the suite grab the latest items from pages it is essentially not possible to have a zero request test. It is recommended to always run tests with at least the `new_episodes` record mode if you're planning to use the cassettes.
