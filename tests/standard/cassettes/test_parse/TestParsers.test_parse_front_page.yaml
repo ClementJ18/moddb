@@ -1,0 +1,1836 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/
+  response:
+    body:
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>Opps - Mod DB</title>\n\t<meta
+        charset=\"utf-8\">\n\t<meta name=\"robots\" content=\"noindex, nofollow\"
+        />\n\t<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />\n\t<link
+        rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css\"
+        type=\"text/css\" />\n\t<script src=\"/html/external/min/index.php?g=jquery&amp;1\"></script>\n\t<script
+        src=\"/html/external/min/index.php?g=js&amp;18\"></script>\n\n\t<style>\n\tbody
+        {\n\t\tbackground-color: #c00;\n\t\tfont-family: \"Trebuchet MS\", sans-serif,
+        Tahoma, Arial, Verdana;\n\t\tcolor: #000;\n\t}\n\t\n\t\t#error {\n\t\tmargin:
+        40px auto 0;\n\t}\n\t\t\n\tdiv.holder {\n\t\tbackground: #c00;\n\t\tmargin:
+        0 auto;\n\t\tpadding: 20px;\n\t\tposition: relative;\n\t\ttext-align: left;\n\t\twidth:
+        470px;\n\t}\n\t\n\th1 {\n\t\tfont-size: 30px;\n\t\tline-height: 1;\n\t\tmargin:
+        0;\n\t}\n\t\n\ta {\n\t\tcolor: #000;\n\t\tfont-weight: bold;\n\t\ttext-decoration:
+        none;\n\t}\n\t\n\tp, a, ul { color: #000; }\n\t\n\ta:hover {\n\t\ttext-decoration:
+        underline;\n\t}\n\t\n\t#cse-search-box {\n\t\tbackground-color: #000;\n\t\tfloat:
+        left;\n\t}\n\t\n\t#cse-search-box input.button:hover {\n\t\tcolor: #c00;\n\t}\n\t\n\t#cse-search-box
+        input.text {\n\t\tborder: none;\t\tfloat: left;\n\t\tbox-sizing: border-box;\n\t\tfont-size:
+        16px;\n\t\theight: 34px;\n\t\tline-height: 34px;\n\t\toutline: none;\n\t\tpadding:
+        0 5px;\n\t\twidth: 370px;\n\t}\n\t\n\t#cse-search-box input.button {\n\t\tbackground-color:
+        #000;\n\t\tborder: none;\n\t\tcolor: #fff;\n\t\tcursor: pointer;\n\t\tfloat:
+        left;\n\t\tfont-size: 16px;\n\t\theight: 34px;\n\t\tline-height: 34px;\n\t\tpadding:
+        0;\n\t\ttext-align: center;\n\t\twidth: 100px;\n\t}\n\t\n\t#searchbox {\n\t\tposition:
+        relative;\n\t}\n\t\n\t#searchbox ul.suggest_search {\n\t\tbackground-color:
+        #fff;\n\t\tdisplay: none;\n\t\tlist-style: none;\n\t\tmargin: 0;\n\t\tpadding:
+        0;\n\t\tposition: absolute;\n\t\ttext-align: left;\n\t\ttop: 34px;\n\t\twidth:
+        470px;\n\t}\n\t\n\t#searchbox ul.suggest_search li {\n\t\tborder-top: 1px
+        dotted #999;\n\t\tdisplay: block;\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tposition:
+        relative;\n\t}\n\t\n\t#searchbox ul.suggest_search li:first-child {\n\t\tborder-top:
+        1px solid #fff;\n\t}\n\t\n\t#searchbox ul.suggest_search li img {\n\t\tdisplay:
+        none;\n\t}\n\t\n\t#searchbox ul.suggest_search li.suggest_over {\n\t\tbackground-color:
+        #eee;\n\t\tborder-top: none;\n\t\tcolor: #000;\n\t\tpadding-top: 1px;\n\t}\n\t\n\t#searchbox
+        ul.suggest_search li.suggest_over img {\n\t\tbackground-color: #000;\n\t\tbottom:
+        -26px;\n\t\tdisplay: block;\n\t\tleft: -127px;\n\t\tposition: absolute;\n\t\theight:
+        90px;\n\t\twidth: 120px;\n\t\tz-index: 2;\n\t}\n\t\n\t#searchbox ul.suggest_search
+        li.suggest_overnext {\n\t\tborder-top: none;\n\t\tpadding-top: 1px;\n\t}\n\t\n\t#searchbox
+        ul.suggest_search li a {\n\t\tdisplay: block;\n\t\tmargin: 0 5px;\n\t\toverflow:
+        hidden;\n\t\tpadding: 5px 0;\n\t\ttext-decoration: none;\n\t}\n\t\n\t#searchbox
+        ul.suggest_search span.name {\n\t\tcolor: #000;\n\t\tdisplay: block;\n\t\tfont-size:
+        14px;\n\t\tfont-weight: normal;\n\t\theight: 20px;\n\t\tline-height: 20px;\n\t\toverflow:
+        hidden;\n\t}\n\t\n\t#searchbox ul.suggest_search span.summary {\n\t\tdisplay:
+        none;\n\t}\n\t</style>\n</head>\n<body>\n\n<table id=\"error\" cellpadding=\"0\"
+        cellspacing=\"0\" border=\"0\">\n<tr>\n\t<td>\n\t\t<a href=\"/\" class=\"logo\"
+        style=\"display: block; text-align: center; margin: 0 0 10px;\"><img src=\"/cutoff/images/default/logo.png\"
+        width=\"400\" alt=\"Mod DB\" border=\"0\" /></a>\n\t\t<div class=\"holder\">\n\t\t\t<h1>Too
+        Many Requests</h1>\n\t\t\t\t\t\t<p>It appears you are a bot, hitting our server
+        repeatedly. If you would like API access and to be whitelisted <a href=\"mailto:support@moddb.com?subject=Whitelist%20us\">contact
+        us</a>. Otherwise limit the number of requests you perform and check back
+        5mins ago. Follow us on <a href=\"https://twitter.com/moddb\" target=\"_blank\"
+        rel=\"noopener noreferrer\">Twitter</a> or <a href=\"https://www.facebook.com/moddb\"
+        target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> for the latest
+        updates:</p>\n\t\t\t<a class=\"twitter-timeline\" data-width=\"470\" data-theme=\"dark\"
+        data-link-color=\"#c00\" href=\"https://twitter.com/moddb?ref_src=twsrc%5Etfw\">Tweets
+        by moddb</a><script async src=\"https://platform.twitter.com/widgets.js\"
+        charset=\"utf-8\"></script>\n\t\t\t\t\t</div>\n\t</td>\n</tr>\n</table>\n\n</body>\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 817a47200c65153e-CDG
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 17 Oct 2023 17:31:54 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=B6FIiMlqCnMAWSiqCjhK6CgLZEhpnOA5lyFzs44oAAlhDLG7fxcIDoDb%2BDew6dHEMVjfh7FLWViV94UDuPYMmN%2BkoSKDcWtXvj%2BRb8z5AVkxE%2F2qt91%2Bas%2FQ%2FAyKTAZbYeQ0di6v1gJ0ayI%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      retry-after:
+      - Tue, 17 Oct 2023 17:26:36 GMT
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=26485d22824db3e6bf82241e405c5431; expires=Tue, 17-Oct-2023 17:41:54
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+    status:
+      code: 503
+      message: Service Unavailable
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Games and
+        mods development for Windows, Linux and Mac - Mod DB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"pc, games, mods, linux, mac, addons,
+        downloads, videos, gallery, development, community, features, reviews, previews,
+        tutorials, forums\" />\r\n\t<meta name=\"description\" content=\"Mod DB covers
+        game development and modding on Windows, Mac and Linux with downloads of the
+        best user generated content.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Games and mods development for Windows, Linux
+        and Mac\" />\r\n\t<meta property=\"og:description\" content=\"Mod DB covers
+        game development and modding on Windows, Mac and Linux with downloads of the
+        best user generated content.\" />\r\n\t<meta property=\"og:site_name\" content=\"Mod
+        DB\" />\r\n\t<meta property=\"og:type\" content=\"website\" /> \r\n\t<meta
+        property=\"og:url\" content=\"https://www.moddb.com\" /> \r\n\t<meta property=\"og:image\"
+        content=\"https://static.moddb.com/cutoff/images/default/splash.png\" /> \r\n\t
+        \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\" />\r\n\t<meta
+        property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Games and mods development for Windows, Linux and Mac\" />\r\n\t<meta
+        property=\"twitter:description\" content=\"Mod DB covers game development
+        and modding on Windows, Mac and Linux with downloads of the best user generated
+        content.\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;73\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/headlines/feed/rss.xml\" type=\"application/rss+xml\"
+        title=\"Games and mods development for Windows, Linux and Mac feed\" />\t<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/\" /><input type=\"hidden\" name=\"rememberme\" value=\"1\" /><input
+        type=\"hidden\" name=\"members\" value=\"1\" /><span class=\"bcadadeaaacabebformouter\"><span><span><span><span
+        class=\"bcadadeaaacabebforminner\"><input type=\"text\" name=\"IyMwMTMzYzc0NWI3YWI0MDYyN2Y3Y2I2YWFhODJlZWFjYzQ2NjM5MzE4MTlib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><span class=\"bcadadeaaacabebformouter\"><span><span><span
+        class=\"bcadadeaaacabebforminner\"><input type=\"text\" name=\"IyMwMTMzYzc0NWI3YWI0MDYyN2Y3Y2I2YWFhODJlZWFjYzE1MTkxODkwMzl1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span><style> span.bcadadeaaacabebformouter span
+        span span span { display: none; } span.bcadadeaaacabebformouter span { display:
+        inline; }</style>\n<input type=\"password\" name=\"password\" maxlength=\"100\"
+        placeholder=\"Password\" class=\"text password\" autocomplete=\"off\"  /><input
+        type=\"submit\" name=\"members\" value=\"GO\" class=\"button\" title=\"Sign
+        In\"  /></form>\t\t\t<span class=\"login\" style=\"display: none;\">or with:
+        <a href=\"/members/loginext/steam\" class=\"steamiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float: right;
+        margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericonsml\" style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Facebook\"></a></span>\r\n\t\t\t \r\n\t\t</div>\r\n\r\n\t\t<h1>Games and mods
+        development for Windows, Linux and Mac</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t
+        \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t \r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t<li><a href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/articles/add\">post article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-300-alt first\">\t \r\n\t<div class=\"rotator\">\r\n\t\t<div
+        class=\"links\">\r\n\t\t\t<a href=\"/headlines\" id=\"rotatornext\" class=\"next
+        link\" title=\"Next\"></a> \r\n\t\t\t<a href=\"/headlines\" id=\"rotatorprev\"
+        class=\"prev link\" title=\"Previous\"></a> \r\n\t\t\t<a href=\"https://rss.moddb.com/headlines/feed/rss.xml\"
+        class=\"rss link\" target=\"_blank\"></a> \r\n\t\t\t<a href=\"/headlines\"
+        class=\"browse link\" title=\"Browse Headlines\"></a> \r\n\t\t\t \r\n\t\t</div>\r\n\t\t<div
+        class=\"rotatorholder\" id=\"rotatorholder\">\r\n\t\t\t \r\n\t\t\t \r\n\t\t\t<div
+        class=\"rotatorbox\">\r\n\t\t\t\t<a href=\"https://www.moddb.com/mods/age-of-doom/news/classic-doom-campaign-is-ready\"><div
+        class=\"rotatorcorner\" style=\"background-image: url(https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/Doom_Redux_1.6.jpg);\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>[Age of DOOM] Campaign
+        Is Ready</h2>\r\n\t\t\t\t\t\t<p>Classic Doom Campaign 100 percent finished
+        and is ready. Release estimated for November, read on for details.</p>\r\n\t\t\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t
+        \r\n\t\t\t<div class=\"rotatorbox\" style=\"display: none;\">\r\n\t\t\t\t<a
+        href=\"https://www.moddb.com/mods/counter-strike-source-holy-swords/features/season-the-raiders\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/Desktop_Screenshot_2023.10.12_-.png\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>Counter-Strike: Source
+        - Holy Swords</h2>\r\n\t\t\t\t\t\t<p>Some time after Kestrel and his squad
+        stop the Pieuvre Armement mercenary group, a new terror threat emerges on
+        the European continent, called The Raiders.</p>\r\n\t\t\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t \r\n\t\t\t<div class=\"rotatorbox\"
+        style=\"display: none;\">\r\n\t\t\t\t<a href=\"https://www.moddb.com/mods/the-bush-mod/news/long-see-no-time\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/20220630130911_1.jpg\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>The Bush Mod - Long
+        See, No Time</h2>\r\n\t\t\t\t\t\t<p>A proper update and teaser for the new
+        version, creatively called Bush Mod New.</p>\r\n\t\t\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t \r\n\t\t\t<div class=\"rotatorbox\"
+        style=\"display: none;\">\r\n\t\t\t\t<a href=\"https://www.moddb.com/mods/movie-duels/downloads/movie-duels-update-6-patch-aio-automatic-installation\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/shot2022-07-11_19-10-32.jpg\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>Star Wars: Movie Duels
+        v6</h2>\r\n\t\t\t\t\t\t<p>All-In-One Update 6 + Patch that fixes several bugs,
+        including JM difficulty, adds new features like spawnable effects, and overhauls
+        JKA's foley/ambient sounds!</p>\r\n\t\t\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t \r\n\t\t\t<div class=\"rotatorbox\"
+        style=\"display: none;\">\r\n\t\t\t\t<a href=\"https://www.moddb.com/mods/hartman-tervan-robotics/news/graphical-improvements-in-hartman-tervan-robotics\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/headlinelogo1.png.13.jpg\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>HARTMAN-TERVAN ROBOTICS
+        graphics</h2>\r\n\t\t\t\t\t\t<p>In this article, the graphics of HARTMAN-TERVAN
+        ROBOTICS are shown off, a single player HL2EP2 mod in the making.</p>\r\n\t\t\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t
+        \r\n\t\t\t<div class=\"rotatorbox\" style=\"display: none;\">\r\n\t\t\t\t<a
+        href=\"https://www.moddb.com/mods/sins-of-new-eden-rebirth/news/sins-of-new-eden-rebirth-v16-released\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/image2.png\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>Sins of New Eden: Rebirth
+        v1.6 Released</h2>\r\n\t\t\t\t\t\t<p>The seventh and final installment of
+        Sins of New Eden: Rebirth, bringing the thrill of EVE to Online to Sins of
+        a Solar Empire: Rebellion.</p>\r\n\t\t\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t \r\n\t\t\t<div class=\"rotatorbox\"
+        style=\"display: none;\">\r\n\t\t\t\t<a href=\"https://www.moddb.com/mods/siren-doom-tc/news/major-campaign-update\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/Screenshot_20200527-005110.png\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>Siren (Doom TC) - Major
+        Campaign</h2>\r\n\t\t\t\t\t\t<p>Siren has been updated to 0.8. This is an
+        update to the campaign and features 3 large maps.</p>\r\n\t\t\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t
+        \r\n\t\t\t<div class=\"rotatorbox\" style=\"display: none;\">\r\n\t\t\t\t<a
+        href=\"https://www.moddb.com/mods/doom-3-2553/news/release199\"><div class=\"rotatorcorner\"
+        data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/headlinelogo0.png.18.jpg\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>Doom 3: 2553 - Release!</h2>\r\n\t\t\t\t\t\t<p>The
+        mod has finally been released! Next stop: The Lost Mission!</p>\r\n\t\t\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t
+        \r\n\t\t\t<div class=\"rotatorbox\" style=\"display: none;\">\r\n\t\t\t\t<a
+        href=\"https://www.moddb.com/mods/unification-mod-dawn-of-war-soulstorm/news/the-journey-towards-70-part4\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/headlinelogo1.png.11.png\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>Unification Mod - The
+        journey towards 7.0</h2>\r\n\t\t\t\t\t\t<p>Latest update covering the awaited
+        Steel Patch, for this Dawn of War: SoulStorm mod.</p>\r\n\t\t\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t
+        \r\n\t\t\t<div class=\"rotatorbox\" style=\"display: none;\">\r\n\t\t\t\t<a
+        href=\"https://www.moddb.com/mods/sudden-strike-3-modern-arms/news/counteroffensive-2023\"><div
+        class=\"rotatorcorner\" data-bg=\"https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/headlinelogo3.png.2.jpg\">\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t<h2>Sudden Strike 3: Counteroffensive
+        2023</h2>\r\n\t\t\t\t\t\t<p>Try out the massive 2023 summer battle in the
+        south of Ukraine, in Sudden Strike 3.</p>\r\n\t\t\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t</div></a>\r\n\t\t\t</div>\r\n\t\t\t \r\n\t\t</div>\r\n\t</div>\r\n\t
+        \t<div class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Latest Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/great-houses-of-calderia/news/great-houses-of-calderiamilitary-the-art-of-war-and-feudalism\"
+        title=\"Great Houses of Calderia\u2014Military: The art of war and feudalism\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320145/crop_120x90/Calderia_IndieDB_Cover_War.png\"
+        alt=\"Great Houses of Calderia\u2014Military: The art of war and feudalism\"
+        /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/great-houses-of-calderia\"
+        title=\"Great Houses of Calderia\"><img src=\"https://media.moddb.com/images/games/1/81/80877/calderia_icon.png\"
+        alt=\"Great Houses of Calderia\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/great-houses-of-calderia/news/great-houses-of-calderiamilitary-the-art-of-war-and-feudalism\">Great
+        Houses of Calderia\u2014Military: The art of war and feudalism</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17T14:59:59+00:00\">4hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/great-houses-of-calderia\" title=\"Game\">Great Houses of Calderia</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>War is a significant part of Calderian politics.
+        Discover how it works in Great Houses of Calderia!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/perennial-order/news/demo-available-2023-trailer-for-perennial-order\"
+        title=\"Demo Available &#038; 2023 Trailer for Perennial Order\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320153/crop_120x90/Perennial_Order_Demo_IndieDB.jpg\"
+        alt=\"Demo Available &#038; 2023 Trailer for Perennial Order\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/perennial-order\"
+        title=\"Perennial Order\"><img src=\"https://media.moddb.com/images/games/1/75/74218/Perennial_Order_Game_Cover_Icon.jpg\"
+        alt=\"Perennial Order\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/perennial-order/news/demo-available-2023-trailer-for-perennial-order\">Demo
+        Available &#038; 2023 Trailer for Perennial Order</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17\">5hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/perennial-order\" title=\"Game\">Perennial
+        Order</a>   \t\t\t</span>\r\n\t\t\t<p>The Perennial Order Demo is available
+        as well as our new trailer! Perennial Order is a dark, atmospheric Boss Rush
+        game with horror elements and Co-Op...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/openra/news/release-20231010-and-the-community\"
+        title=\"Release 20231010 and the Community\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320165/crop_120x90/20231010-darkcolors.png\"
+        alt=\"Release 20231010 and the Community\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/openra\" title=\"OpenRA\"><img src=\"https://media.moddb.com/images/games/1/15/14718/soviet-logo.png\"
+        alt=\"OpenRA\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/openra/news/release-20231010-and-the-community\">Release
+        20231010 and the Community</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17T12:27:36+00:00\">6hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/openra\" title=\"Game\">OpenRA</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>A new release has hit and we also like to give
+        a roundup on some of the popular community mods here on ModDB.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/battlestargalactica-fleetcommander/news/a-shape-of-the-things-to-come\"
+        title=\"Release Announcement and First Gameplay Look for BSG:FC\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320164/crop_120x90/Arti2.jpg\"
+        alt=\"Release Announcement and First Gameplay Look for BSG:FC\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/homeworld-remastered\"
+        title=\"Homeworld: Remastered\"><img src=\"https://media.moddb.com/images/games/1/37/36126/HWR-IconHD.png\"
+        alt=\"Homeworld: Remastered\" width=\"32\" height=\"32\" style=\"float: right;
+        padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/battlestargalactica-fleetcommander/news/a-shape-of-the-things-to-come\">Release
+        Announcement and First Gameplay Look for BSG:FC</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17\">9hours ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/mods/battlestargalactica-fleetcommander\" title=\"Mod\">Battlestar
+        Galactica: Fleet Commander</a>   \t\t\t</span>\r\n\t\t\t<p>With Battlestar
+        Galactica: Fleet Commander's release right around the corner, it's time for
+        your first look at what's next for the Remastered Edition...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/empty-shell/news/empty-shell-thrilling-survival-horror-available-on-steam\"
+        title=\"EMPTY SHELL - thrilling survival horror available on Steam\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320163/crop_120x90/cov.jpg\"
+        alt=\"EMPTY SHELL - thrilling survival horror available on Steam\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/empty-shell\" title=\"EMPTY
+        SHELL\"><img src=\"https://media.moddb.com/images/games/1/83/82484/icon.jpg\"
+        alt=\"EMPTY SHELL\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/empty-shell/news/empty-shell-thrilling-survival-horror-available-on-steam\">EMPTY
+        SHELL - thrilling survival horror available on Steam</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17\">10hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/empty-shell\" title=\"Game\">EMPTY
+        SHELL</a>   \t\t\t</span>\r\n\t\t\t<p>The ship carrying the volunteers has
+        set sail. They will be sent to the Facility, abandoned for more than two decades,
+        which awaits them shrouded in the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/black-one-blood-brothers/news/preview-147-new-maps-bodycam\"
+        title=\"Preview 1.47: New maps, bodycam...\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320161/crop_120x90/Preview_147_2.jpg\"
+        alt=\"Preview 1.47: New maps, bodycam...\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/black-one-blood-brothers\" title=\"Black One: Blood
+        Brothers\"><img src=\"https://media.moddb.com/images/games/1/77/76289/Icon_BOBB_256.png\"
+        alt=\"Black One: Blood Brothers\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/black-one-blood-brothers/news/preview-147-new-maps-bodycam\">Preview
+        1.47: New maps, bodycam...</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17T07:45:22+00:00\">11hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/black-one-blood-brothers\"
+        title=\"Game\">Black One: Blood Brothers</a>   \t\t\t</span>\r\n\t\t\t<p>We
+        are thrilled to introduce the features coming in the upcoming 1.47 update.
+        This update has been designed to enhance your gaming experience by providing...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/red-alert-3-uprising/tutorials/a-new-efficient-texture-workflow-for-old-rts-games\"
+        title=\"A new efficient texture workflow for old RTS games\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320160/crop_120x90/file.png\"
+        alt=\"A new efficient texture workflow for old RTS games\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/red-alert-3-uprising\"
+        title=\"Red Alert 3: Uprising\"><img src=\"https://media.moddb.com/images/games/1/15/14927/icon.png\"
+        alt=\"Red Alert 3: Uprising\" width=\"32\" height=\"32\" style=\"float: right;
+        padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/red-alert-3-uprising/tutorials/a-new-efficient-texture-workflow-for-old-rts-games\">A
+        new efficient texture workflow for old RTS games</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17\">12hours ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/red-alert-3-uprising\" title=\"Game\">Red Alert 3: Uprising</a>
+        \ Textures <a href=\"/games/red-alert-3-uprising/tutorials/a-new-efficient-texture-workflow-for-old-rts-games\"
+        class=\"commenticon\">1 comment</a>  \t\t\t</span>\r\n\t\t\t<p>Easy-to-learn
+        batch texturing technique through 3DSMAX scripts and photoshop, balancing
+        workload, simplicity and artistic quality.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/who-are-you-demo/news/steam-page-up\"
+        title=\"Steam page up!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320158/crop_120x90/Alienconropa.jpeg\"
+        alt=\"Steam page up!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/who-are-you-demo\" title=\"Who are you!? (Demo)\"><img
+        src=\"https://media.moddb.com/images/games/1/82/81533/CaratulaTwitch.png\"
+        alt=\"Who are you!? (Demo)\" width=\"32\" height=\"32\" style=\"float: right;
+        padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/who-are-you-demo/news/steam-page-up\">Steam
+        page up!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17T05:38:16+00:00\">13hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/who-are-you-demo\" title=\"Game\">Who are you!? (Demo)</a>   \t\t\t</span>\r\n\t\t\t<p>Our
+        steam page is up and ready for whishlisting! Come check it out!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/partol/news/update-im-back1\"
+        title=\"Update: I'm back!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320154/crop_120x90/hl2_Iyo3PQ3GMD.jpg\"
+        alt=\"Update: I'm back!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/portal\" title=\"Portal\"><img src=\"https://media.moddb.com/images/games/1/10/9995/Portal.png\"
+        alt=\"Portal\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/partol/news/update-im-back1\">Update:
+        I'm back!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-16T23:48:26+00:00\">19hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/mods/partol\" title=\"Mod\">Partol</a>   \t\t\t</span>\r\n\t\t\t<p>I'm
+        back from my break! Update on Partol and a new level!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/sven-co-op-redux/news/sven-co-op-redux-trailer-is-released\"
+        title=\"Sven Co-op Redux Trailer is released\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320149/crop_120x90/SCREDUX_NEWPOSTER.png\"
+        alt=\"Sven Co-op Redux Trailer is released\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/sven-co-op-redux/news/sven-co-op-redux-trailer-is-released\">Sven
+        Co-op Redux Trailer is released</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-16T16:05:49+00:00\">Oct 16 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/sven-co-op-redux\" title=\"Mod\">Sven
+        Co-op Redux</a>  <a href=\"/mods/sven-co-op-redux/news/sven-co-op-redux-trailer-is-released\"
+        class=\"commenticon\">1 comment</a>  \t\t\t</span>\r\n\t\t\t<p>Sven Co-op
+        Redux trailer has been released on YouTube.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/spellforce-2-master-of-war-cardgame/news/spellforce-2-master-of-war-now-at-the-android-playstore\"
+        title=\"SpellForce 2 - Master of War now at the Android Playstore!\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320148/crop_120x90/sf2_mow_logo_4_0_scattered_anima.gif\"
+        alt=\"SpellForce 2 - Master of War now at the Android Playstore!\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/spellforce-2-master-of-war-cardgame\"
+        title=\"SpellForce 2 Master of War (Cardgame)\"><img src=\"https://media.moddb.com/images/games/1/29/28417/SF2_MoW_4_0_Logo_icon_mini.png\"
+        alt=\"SpellForce 2 Master of War (Cardgame)\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/spellforce-2-master-of-war-cardgame/news/spellforce-2-master-of-war-now-at-the-android-playstore\">SpellForce
+        2 - Master of War now at the Android Playstore!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-16T16:03:57+00:00\">Oct 16 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/spellforce-2-master-of-war-cardgame\"
+        title=\"Game\">SpellForce 2 Master of War (Cardgame)</a>   \t\t\t</span>\r\n\t\t\t<p>The
+        legendary Card-Game of the SpellForce 2 Collectors Edition of 2006, now finally
+        for PC and Android at the google Playstore! Play against the NPC...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/city-52-induction/news/music-and-news\"
+        title=\"A little bit of fresh news!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320141/crop_120x90/3.png\"
+        alt=\"A little bit of fresh news!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life-2-episode-two\" title=\"Half-Life 2:
+        Episode Two\"><img src=\"https://media.moddb.com/images/games/1/13/12496/hl2.png\"
+        alt=\"Half-Life 2: Episode Two\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/city-52-induction/news/music-and-news\">A
+        little bit of fresh news!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-16T15:58:55+00:00\">Oct 16 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/city-52-induction\" title=\"Mod\">City-52:
+        induction</a>   \t\t\t</span>\r\n\t\t\t<p>About reworked maps, new music,
+        and more.            </p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/the-last-bullet-update/news/news-from-161023\"
+        title=\"News from 16.10.23\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320147/crop_120x90/TLB.png\"
+        alt=\"News from 16.10.23\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/the-last-bullet-update/news/news-from-161023\">News
+        from 16.10.23</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-16T14:56:51+00:00\">Oct
+        16 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/mods/the-last-bullet-update\" title=\"Mod\">The Last Bullet: Updated</a>
+        \ <a href=\"/mods/the-last-bullet-update/news/news-from-161023\" class=\"commenticon\">3
+        comments</a>  \t\t\t</span>\r\n\t\t\t<p>News time, before the release awaits
+        you. Read the full news.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/zircon-engine/news/lab-report-8-of-12-the-battle-of-darkplaces-beta-has-begun\"
+        title=\"October Lab Report #8 of 12 - The Battle of DarkPlaces Beta Has Begun\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320144/crop_120x90/dpbeta_qualker2401.gif\"
+        alt=\"October Lab Report #8 of 12 - The Battle of DarkPlaces Beta Has Begun\"
+        /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/quake\"
+        title=\"Quake\"><img src=\"https://media.moddb.com/images/games/1/1/2/Quake.png\"
+        alt=\"Quake\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/zircon-engine/news/lab-report-8-of-12-the-battle-of-darkplaces-beta-has-begun\">October
+        Lab Report #8 of 12 - The Battle of DarkPlaces Beta Has Begun</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-16\">Oct 16 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/zircon-engine\" title=\"Mod\">Zircon
+        Engine - a &quot;DarkPlaces Mark V&quot; project</a>   \t\t\t</span>\r\n\t\t\t<p>The
+        Battle of DarkPlaces Beta Has Begun. DarkPlaces Beta -- it is twice as fast
+        as classic DarkPlaces with many improvements.\_ Zircon is based on classic...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/operation-flashpoint-dragon-rising/tutorials/operation-flashpoint-dragon-rising-how-to-make-a-mission-3rd-step\"
+        title=\"Operation Flashpoint Dragon Rising: How to make a mission, 3rd step\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320142/crop_120x90/article_03-1.png\"
+        alt=\"Operation Flashpoint Dragon Rising: How to make a mission, 3rd step\"
+        /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/operation-flashpoint-dragon-rising\"
+        title=\"Operation Flashpoint: Dragon Rising\"><img src=\"https://media.moddb.com/images/games/1/12/11982/dricon.png\"
+        alt=\"Operation Flashpoint: Dragon Rising\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/operation-flashpoint-dragon-rising/tutorials/operation-flashpoint-dragon-rising-how-to-make-a-mission-3rd-step\">Operation
+        Flashpoint Dragon Rising: How to make a mission, 3rd step</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-16T09:11:36+00:00\">Oct
+        16 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/operation-flashpoint-dragon-rising\" title=\"Game\">Operation
+        Flashpoint: Dragon Rising</a>  Mapping/Technical  \t\t\t</span>\r\n\t\t\t<p>This
+        article explains the codes used in previous lecture article.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/moment-to-moment/news/a-new-theme-and-a-pair-of-brothers\"
+        title=\"A new theme and a pair of Brothers\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320137/crop_120x90/GraphPaperBackground.jpg\"
+        alt=\"A new theme and a pair of Brothers\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/moment-to-moment\" title=\"Moment to Moment\"><img
+        src=\"https://media.moddb.com/images/games/1/82/81955/AttackBlock.png\" alt=\"Moment
+        to Moment\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/moment-to-moment/news/a-new-theme-and-a-pair-of-brothers\">A
+        new theme and a pair of Brothers</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-16T04:31:59+00:00\">Oct 16 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/moment-to-moment\" title=\"Game\">Moment
+        to Moment</a>   \t\t\t</span>\r\n\t\t\t<p>A new weekly update with a new fight
+        in a new set of enemies!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/battlefield-1918/news/battlefield-1918-34-released\"
+        title=\"Battlefield 1918 3.4 Released!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320140/crop_120x90/Snapshot_2371.png\"
+        alt=\"Battlefield 1918 3.4 Released!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/battlefield-1942\" title=\"Battlefield 1942\"><img
+        src=\"https://media.moddb.com/images/games/1/1/41/icon.gif\" alt=\"Battlefield
+        1942\" width=\"32\" height=\"32\" style=\"float: right; padding-left: 4px;\"
+        /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/battlefield-1918/news/battlefield-1918-34-released\">Battlefield
+        1918 3.4 Released!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-16T04:31:30+00:00\">Oct 16 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/battlefield-1918\" title=\"Mod\">Battlefield
+        1918</a>  <a href=\"/mods/battlefield-1918/news/battlefield-1918-34-released\"
+        class=\"commenticon\">3 comments</a>  \t\t\t</span>\r\n\t\t\t<p>Today the
+        Battlefield 1918 Mod Development Team is proud to announce the long awaited
+        3.4 update of Battlefield 1918!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/coinhunt/news/coinhunt-released\"
+        title=\"CoinHunt Released\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320136/crop_120x90/coinhunt1024x768.1.png\"
+        alt=\"CoinHunt Released\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/coinhunt\" title=\"CoinHunt\"><img src=\"https://media.moddb.com/images/games/1/83/82461/coinhunt_icon64x64.png\"
+        alt=\"CoinHunt\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/coinhunt/news/coinhunt-released\">CoinHunt
+        Released</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-16T02:14:01+00:00\">Oct
+        16 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/coinhunt\" title=\"Game\">CoinHunt</a>   \t\t\t</span>\r\n\t\t\t<p>CoinHunt
+        is a BooBoo language demo. Collect all the coins and destroy all the enemies
+        (your times will be combined for a &quot;low&quot;-score.)</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/dust-wind-the-last-hope/news/dream-of-majorian\"
+        title=\"Dream of Majorian\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320132/crop_120x90/67c2b78e33d632c0dc0615d06a26e432.jpg\"
+        alt=\"Dream of Majorian\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/rome-total-war\" title=\"Rome: Total War\"><img
+        src=\"https://media.moddb.com/images/games/1/1/99/icon.gif\" alt=\"Rome: Total
+        War\" width=\"32\" height=\"32\" style=\"float: right; padding-left: 4px;\"
+        /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/dust-wind-the-last-hope/news/dream-of-majorian\">Dream
+        of Majorian</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-15\">Oct
+        15 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/mods/dust-wind-the-last-hope\" title=\"Mod\">Dust &#038; Wind: The
+        Last Hope</a>   \t\t\t</span>\r\n\t\t\t<p>Live of Majorian - the last hope
+        of Western Empire.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/mods/macenwolf/news/oh-the-weather-outside-is-frightful\"
+        title=\"Oh the weather outside is frightful\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320131/crop_120x90/siberian_2.png\"
+        alt=\"Oh the weather outside is frightful\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/wolfenstein-3d\" title=\"Wolfenstein 3D\"><img
+        src=\"https://media.moddb.com/images/games/1/1/67/icon.gif\" alt=\"Wolfenstein
+        3D\" width=\"32\" height=\"32\" style=\"float: right; padding-left: 4px;\"
+        /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/macenwolf/news/oh-the-weather-outside-is-frightful\">Oh
+        the weather outside is frightful</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T20:45:09+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/macenwolf\" title=\"Mod\">MacenWolf</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>It is cold as hell. You are likely to be eaten
+        by a frost grue.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/stramedia-my-misadventure/news/time-for-a-year-long-hiatus\"
+        title=\"Time for a Year-Long Hiatus\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320130/crop_120x90/cover_db.png\"
+        alt=\"Time for a Year-Long Hiatus\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/stramedia-my-misadventure\" title=\"Stramedia:
+        my_MISADVENTURE\"><img src=\"https://media.moddb.com/images/games/1/62/61252/icon.png\"
+        alt=\"Stramedia: my_MISADVENTURE\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/stramedia-my-misadventure/news/time-for-a-year-long-hiatus\">Time
+        for a Year-Long Hiatus</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T19:45:07+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/stramedia-my-misadventure\"
+        title=\"Game\">Stramedia: my_MISADVENTURE</a>   \t\t\t</span>\r\n\t\t\t<p>Game
+        development stinks, so I am going out to touch some grass and piss-stained
+        snow. (+ considering different approaches to making this game and sharing...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/first-responders/news/shootout-tasing-demonstration\"
+        title=\"Shootout &#038; Tasing Demonstration\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320128/crop_120x90/XhKbK6IY6YEDKyfyVZS078GNaezT1GzN.png\"
+        alt=\"Shootout &#038; Tasing Demonstration\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/first-responders\" title=\"First Responders\"><img
+        src=\"https://media.moddb.com/images/games/1/81/80613/fr-erts-icon.jpg\" alt=\"First
+        Responders\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/first-responders/news/shootout-tasing-demonstration\">Shootout
+        &#038; Tasing Demonstration</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T18:04:16+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/first-responders\" title=\"Game\">First
+        Responders</a>   \t\t\t</span>\r\n\t\t\t<p>Check out the shooting logic behind
+        our Emergency RTS game along with demonstrating how law enforcement stops
+        fleeing suspects.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/mods/stock-sides/news/first-look-at-stock-sides\"
+        title=\"First look at Stock Sides+\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320127/crop_120x90/stock_side_plus_article_logo.png\"
+        alt=\"First look at Stock Sides+\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/star-wars-battlefront-ii\" title=\"Star Wars Battlefront
+        II\"><img src=\"https://media.moddb.com/images/games/1/1/144/bft2.1.png\"
+        alt=\"Star Wars Battlefront II\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/stock-sides/news/first-look-at-stock-sides\">First
+        look at Stock Sides+</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/mods/stock-sides\" title=\"Mod\">Stock Sides+</a>   \t\t\t</span>\r\n\t\t\t<p>What
+        is it? Stock Sides that have been &quot;enhanced&quot; with Pandemic styled
+        models and features.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/outwith/news/first-devlog-background-and-intro\"
+        title=\"Open world RPG - First devlog - Background and Intro\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320126/crop_120x90/Outwith_logo_630-500.png\"
+        alt=\"Open world RPG - First devlog - Background and Intro\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/outwith\" title=\"Outwith\"><img
+        src=\"https://media.moddb.com/images/games/1/82/81808/Outwith_logo_01.png\"
+        alt=\"Outwith\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/outwith/news/first-devlog-background-and-intro\">Open
+        world RPG - First devlog - Background and Intro</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T16:58:37+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/outwith\" title=\"Game\">Outwith</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>The word Outwith is Scottish in origin, meaning
+        outside or beyond...\n</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/de3mmz-zsmod-for-half-life-2-episodes/features/custom-weapons-and-content-showcase\"
+        title=\"Custom weapons and content showcase\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320125/crop_120x90/half-life-2-episode-one-6986.jpg\"
+        alt=\"Custom weapons and content showcase\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life-2\" title=\"Half-Life 2\"><img src=\"https://media.moddb.com/images/games/1/1/61/hl2.png\"
+        alt=\"Half-Life 2\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/de3mmz-zsmod-for-half-life-2-episodes/features/custom-weapons-and-content-showcase\">Custom
+        weapons and content showcase</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T15:16:30+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/de3mmz-zsmod-for-half-life-2-episodes\"
+        title=\"Mod\">DE3'MMZ ZSMOD for Half-Life 2 Episodes</a>   \t\t\t</span>\r\n\t\t\t<p>A
+        convention for episodes for SMOD, Based on the SMOD Elite and SMOD 2013.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/just-keep-running/news/weve-been-busy-steam-release-soon\"
+        title=\"\U0001F9BAWe\u2019ve been busy! + Steam Release SOON\u2122\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320120/crop_120x90/Cookin2023-10-15_V4.jpg\"
+        alt=\"\U0001F9BAWe\u2019ve been busy! + Steam Release SOON\u2122\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/just-keep-running\"
+        title=\"Just Keep Running\"><img src=\"https://media.moddb.com/images/games/1/82/81292/Icon_V2.png\"
+        alt=\"Just Keep Running\" width=\"32\" height=\"32\" style=\"float: right;
+        padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/just-keep-running/news/weve-been-busy-steam-release-soon\">\U0001F9BAWe\u2019ve
+        been busy! + Steam Release SOON\u2122</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T14:59:59+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/just-keep-running\" title=\"Game\">Just
+        Keep Running</a>   \t\t\t</span>\r\n\t\t\t<p>Busy month! We managed to get
+        a bunch of stuff done with our games as well as some important business stuff.
+        I\u2019m still in the Swedish education system...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/beyond-sunset/news/lets-talk-about-the-episodes\"
+        title=\"Let\u2019s talk about the episodes!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320123/crop_120x90/020b66928b7420748c485130b859235e.png\"
+        alt=\"Let\u2019s talk about the episodes!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/beyond-sunset\" title=\"Beyond Sunset\"><img src=\"https://media.moddb.com/images/games/1/81/80065/BS_icon01.png\"
+        alt=\"Beyond Sunset\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/beyond-sunset/news/lets-talk-about-the-episodes\">Let\u2019s
+        talk about the episodes!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T14:50:20+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/beyond-sunset\" title=\"Game\">Beyond
+        Sunset</a>   \t\t\t</span>\r\n\t\t\t<p>So, we said it many times that each
+        episode will be a little different from the others. But what does it mean,
+        exactly?</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/games/danils-mod/news/dmod-142-graphic-update\" title=\"DMod 1.4.2
+        Graphic update!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320121/crop_120x90/Logomod24.png\"
+        alt=\"DMod 1.4.2 Graphic update!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/danils-mod\" title=\"Danil's Mod\"><img src=\"https://media.moddb.com/images/games/1/82/81482/ao_dmod.png\"
+        alt=\"Danil's Mod\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/danils-mod/news/dmod-142-graphic-update\">DMod
+        1.4.2 Graphic update!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T13:53:32+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/danils-mod\" title=\"Game\">Danil's
+        Mod</a>   \t\t\t</span>\r\n\t\t\t<p>Danil's Mod 1.4.2 LTS New Graphics! New
+        content system!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/silence-channel-2/news/development-is-done\"
+        title=\"Development is done!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320116/crop_120x90/Logo.jpg\"
+        alt=\"Development is done!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/silence-channel-2\" title=\"Silence Channel 2\"><img
+        src=\"https://media.moddb.com/images/games/1/80/79791/Icon.png\" alt=\"Silence
+        Channel 2\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/silence-channel-2/news/development-is-done\">Development
+        is done!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-15T10:26:59+00:00\">Oct
+        15 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/silence-channel-2\" title=\"Game\">Silence Channel 2</a>   \t\t\t</span>\r\n\t\t\t<p>Happy
+        October \U0001F383 Silence Channel 2 development is done \U0001F631\U0001F3AE</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/act-one/news/hdtf-classic-demo-4-released\"
+        title=\"HDTF Classic Demo 4 Released!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320119/crop_120x90/hdtfc_demo4.png\"
+        alt=\"HDTF Classic Demo 4 Released!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/act-one/news/hdtf-classic-demo-4-released\">HDTF
+        Classic Demo 4 Released!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-15T09:52:47+00:00\">Oct 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/act-one\" title=\"Mod\">HDTF
+        Classic - Act One</a>  <a href=\"/mods/act-one/news/hdtf-classic-demo-4-released\"
+        class=\"commenticon\">1 comment</a>  \t\t\t</span>\r\n\t\t\t<p>The fourth
+        demo has been released! It's time to relive HDTF in Goldsrc once again!</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/articles/add\">Post
+        article</a> | <a href=\"/articles/page/2\">More articles &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        articles were found matching the criteria specified. We suggest you try the
+        <a href=\"/articles\">article list</a> with no filter applied, to browse all
+        available. <a href=\"/articles/add\">Post article</a> and help us achieve
+        our mission of showcasing the best content from all developers. <a href=\"/members/register\">Join
+        now</a> to share your own content, we welcome creators and consumers alike
+        and look forward to your comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n<div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!reedpop.com,1013459,1&kv_1=pc&kv_2=\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox browsebox\" id=\"downloadsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/downloads/add/#downloadsform\"
+        class=\"addicon\"  title=\"Add file\">Add file</a> <a href=\"https://rss.moddb.com/downloads/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Latest Files</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/doom-ii/downloads/new-big-dick-doom21\"
+        title=\"New Big Dick DOOM2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259099/crop_120x90/Screenshot_20231018_000328.jpg\"
+        alt=\"New Big Dick DOOM2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/doom-ii\" title=\"Doom II\"><img src=\"https://media.moddb.com/images/games/1/1/172/icon.png\"
+        alt=\"Doom II\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/doom-ii/downloads/new-big-dick-doom21\">New
+        Big Dick DOOM2</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17T16:28:50+00:00\">2hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/doom-ii\" title=\"Game\">Doom II</a>  Full Version  \t\t\t</span>\r\n\t\t\t<p>This
+        is a brand new version of doom2, free with elder man's big dick make. The
+        big dick Premium Edition. I WAS CPU RAM ROM 386 OK.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/stalker-anomaly/addons/tlou-ambient\"
+        title=\"TLOU Ambient\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259094/crop_120x90/maxresdefault.jpg\"
+        alt=\"TLOU Ambient\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a
+        href=\"/games/stalker-call-of-pripyat\" title=\"S.T.A.L.K.E.R.: Call of Pripyat\"><img
+        src=\"https://media.moddb.com/images/games/1/13/12601/stalkercallofpripyat.png\"
+        alt=\"S.T.A.L.K.E.R.: Call of Pripyat\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/stalker-anomaly/addons/tlou-ambient\">TLOU
+        Ambient</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17T14:35:19+00:00\">4hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/mods/stalker-anomaly\" title=\"Mod\">S.T.A.L.K.E.R. Anomaly</a>  Music
+        <a href=\"/mods/stalker-anomaly/addons/tlou-ambient\" class=\"commenticon\">5
+        comments</a>  \t\t\t</span>\r\n\t\t\t<p>Ambient pack for Anomaly from The
+        Last of Us Part 1 and Part 2</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/zircon-engine/downloads/zircon-darkplaces-beta-version-2-windows-linux\"
+        title=\"Zircon DarkPlaces Beta Version 2 (Windows / Linux)\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/downloads/1/260/259093/crop_120x90/dpbeta1017.gif\"
+        alt=\"Zircon DarkPlaces Beta Version 2 (Windows / Linux)\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/quake\" title=\"Quake\"><img
+        src=\"https://media.moddb.com/images/games/1/1/2/Quake.png\" alt=\"Quake\"
+        width=\"32\" height=\"32\" style=\"float: right; padding-left: 4px;\" /></a>\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/zircon-engine/downloads/zircon-darkplaces-beta-version-2-windows-linux\">Zircon
+        DarkPlaces Beta Version 2 (Windows / Linux)</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17T14:02:35+00:00\">5hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/zircon-engine\" title=\"Mod\">Zircon
+        Engine - a &quot;DarkPlaces Mark V&quot; project</a>  Full Version  \t\t\t</span>\r\n\t\t\t<p>Added
+        Linux build. 64-bit lightmap fix from Quakespasm. &quot;saveconfig&quot; takes
+        an argument so &quot;saveconfig mine&quot; is possible. animated texture warning
+        is now...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/zircon-engine/downloads/zircon-darkplaces-beta-version-2-source-code\"
+        title=\"Zircon DarkPlaces Beta Version 2 (source code)\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/downloads/1/260/259092/crop_120x90/srccode.jpg\"
+        alt=\"Zircon DarkPlaces Beta Version 2 (source code)\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/quake\" title=\"Quake\"><img
+        src=\"https://media.moddb.com/images/games/1/1/2/Quake.png\" alt=\"Quake\"
+        width=\"32\" height=\"32\" style=\"float: right; padding-left: 4px;\" /></a>\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/zircon-engine/downloads/zircon-darkplaces-beta-version-2-source-code\">Zircon
+        DarkPlaces Beta Version 2 (source code)</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17T13:43:15+00:00\">5hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/zircon-engine\" title=\"Mod\">Zircon
+        Engine - a &quot;DarkPlaces Mark V&quot; project</a>  Source Code  \t\t\t</span>\r\n\t\t\t<p>Added
+        Linux build. 64-bit lightmap fix from Quakespasm. &quot;saveconfig&quot; takes
+        an argument so &quot;saveconfig mine&quot; is possible. animated texture warning
+        is now...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/total-bananas-1099/downloads/total-vanilla-beyond-37\" title=\"Total
+        Vanilla Beyond 3.7\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259090/crop_120x90/Screenshot_2023-10-17_153532.png\"
+        alt=\"Total Vanilla Beyond 3.7\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/medieval-ii-total-war-kingdoms\" title=\"Medieval
+        II: Total War: Kingdoms\"><img src=\"https://media.moddb.com/images/games/1/14/13242/m2.png\"
+        alt=\"Medieval II: Total War: Kingdoms\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/total-bananas-1099/downloads/total-vanilla-beyond-37\">Total
+        Vanilla Beyond 3.7</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17T13:36:08+00:00\">5hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/total-bananas-1099\" title=\"Mod\">Total
+        Bananas - 1099</a>  Full Version  \t\t\t</span>\r\n\t\t\t<p>Latest updated
+        Version of the mod 17 Oct. 2023\nSome bugfixes and new texts included.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/cc-kanes-wrath/addons/battlebase-beaverton-remastered\"
+        title=\"Battlebase Beaverton (Remastered)\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259087/crop_120x90/map_KW_Battlebase_Beaverton_R.1.png\"
+        alt=\"Battlebase Beaverton (Remastered)\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/cc-kanes-wrath\" title=\"Command & Conquer 3: Kane's
+        Wrath\"><img src=\"https://media.moddb.com/images/games/1/11/10291/kw.png\"
+        alt=\"Command & Conquer 3: Kane's Wrath\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/cc-kanes-wrath/addons/battlebase-beaverton-remastered\">Battlebase
+        Beaverton (Remastered)</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17T13:00:50+00:00\">6hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/cc-kanes-wrath\" title=\"Game\">Command
+        &#038; Conquer 3: Kane's Wrath</a>  Multiplayer Map  \t\t\t</span>\r\n\t\t\t<p>Remastered
+        version of &quot;Battlebase Beaverton&quot; (Oiginal map by Zypherbullet and
+        Hydrolase) DESolatorTrooper October 2023 (In game name - Battlebase Beaverton...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/cc-kanes-wrath/addons/desert-rush-remastered\"
+        title=\"Desert Rush (Remastered)\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259086/crop_120x90/map_KW_Desert_Rush_R.png\"
+        alt=\"Desert Rush (Remastered)\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/cc-kanes-wrath\" title=\"Command & Conquer 3: Kane's
+        Wrath\"><img src=\"https://media.moddb.com/images/games/1/11/10291/kw.png\"
+        alt=\"Command & Conquer 3: Kane's Wrath\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/cc-kanes-wrath/addons/desert-rush-remastered\">Desert
+        Rush (Remastered)</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-17T12:56:18+00:00\">6hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/cc-kanes-wrath\" title=\"Game\">Command
+        &#038; Conquer 3: Kane's Wrath</a>  Multiplayer Map  \t\t\t</span>\r\n\t\t\t<p>Remastered
+        version of &quot;Desert Rush&quot; map.\nDESolatorTrooper October 2023\n(In
+        game map name: Desert Rush)</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/rubiks-cube/downloads/rubiks-cube\"
+        title=\"Rubik's Cube\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259085/crop_120x90/Rubiks_Cube_Title.png\"
+        alt=\"Rubik's Cube\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a
+        href=\"/games/doom-ii\" title=\"Doom II\"><img src=\"https://media.moddb.com/images/games/1/1/172/icon.png\"
+        alt=\"Doom II\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/rubiks-cube/downloads/rubiks-cube\">Rubik's
+        Cube</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17T11:41:13+00:00\">7hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/mods/rubiks-cube\" title=\"Mod\">Rubik's Cube</a>  Full Version  \t\t\t</span>\r\n\t\t\t<p>After
+        playing and loving hundreds and hundreds of other mapper's... erm maps I decided
+        I would finally take the plunge and release something of my own...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/maze-roser/downloads/mazeroser-prototype-001\"
+        title=\"mazeroser_prototype_001\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259058/crop_120x90/mazeroser_prototype_version_001.png\"
+        alt=\"mazeroser_prototype_001\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/maze-roser\" title=\"Maze Roser\"><img src=\"https://media.moddb.com/images/games/1/83/82481/Maze_Roser_Game_Poster_Social_Me.png\"
+        alt=\"Maze Roser\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/maze-roser/downloads/mazeroser-prototype-001\">mazeroser_prototype_001</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17T09:11:37+00:00\">9hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/maze-roser\" title=\"Game\">Maze Roser</a>  Demo  \t\t\t</span>\r\n\t\t\t<p>This
+        is the first public prototype version of Maze Roser, The general gameplay
+        some features with the main-player, enemies, metal wall and simply tech-demo...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/vampire-the-masquerade-bloodlines/addons/scenery-cars-reskin\"
+        title=\"Scenery cars reskin\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259082/crop_120x90/bugas.jpg\"
+        alt=\"Scenery cars reskin\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/vampire-the-masquerade-bloodlines\" title=\"Vampire:
+        The Masquerade \u2013 Bloodlines\"><img src=\"https://media.moddb.com/images/games/1/12/11996/icon.gif\"
+        alt=\"Vampire: The Masquerade \u2013 Bloodlines\" width=\"32\" height=\"32\"
+        style=\"float: right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/vampire-the-masquerade-bloodlines/addons/scenery-cars-reskin\">Scenery
+        cars reskin</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-17T09:10:03+00:00\">9hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/vampire-the-masquerade-bloodlines\" title=\"Game\">Vampire:
+        The Masquerade \u2013 Bloodlines</a>  Vehicle Skin  \t\t\t</span>\r\n\t\t\t<p>-Real
+        make and a front reskin -and a few more things- to the old chevy -Real make
+        to the forklift -Real make to the digger -side and back- -Better Res...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/downloads/add\">Add
+        file</a> | <a href=\"/downloads\">More files &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        files were found matching the criteria specified. We suggest you try the <a
+        href=\"/downloads\">file list</a> with no filter applied, to browse all available.
+        <a href=\"/downloads/add\">Add file</a> and help us achieve our mission of
+        showcasing the best content from all developers. <a href=\"/members/register\">Join
+        now</a> to share your own content, we welcome creators and consumers alike
+        and look forward to your comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox\">\r\n\t<div class=\"supporter\"><div class=\"DBsupporter\"
+        data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250, 300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div>
+        \r\n</div>\r\n<div class=\"normalbox linksbox\" id=\"menulinksmods\">\r\n\t<div
+        class=\"normalcorner\">\r\n\t\t<div class=\"title\">\r\n\t\t\t \r\n\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t<a href=\"/mods/add/#modsform\" class=\"addicon\"
+        \ title=\"Add mod\">Add mod</a>\t\t\t</span>\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Popular
+        Mods</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inner\">\r\n\t\t<div
+        class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods\" class=\"button\">View All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/top\" class=\"button buttonalt\">Top Mods</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly\"
+        title=\"S.T.A.L.K.E.R. Anomaly\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/37/36728/crop_120x90/Anomaly-Logo-2.jpg\"
+        alt=\"S.T.A.L.K.E.R. Anomaly\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/stalker-anomaly\" class=\"heading\">S.T.A.L.K.E.R. Anomaly</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/stalker-call-of-pripyat\">S.T.A.L.K.E.R.:
+        Call of Pripyat</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/brutal-doom\"
+        title=\"Brutal Doom\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/20/19741/crop_120x90/Brutal_Doom_Cover.png\"
+        alt=\"Brutal Doom\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/brutal-doom\" class=\"heading\">Brutal Doom</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/doom\">Doom</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/siren-doom-tc\"
+        title=\"Siren (Doom TC)\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/47/46171/crop_120x90/SirenTitlecrop.png\"
+        alt=\"Siren (Doom TC)\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/siren-doom-tc\" class=\"heading\">Siren (Doom TC)</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/doom-ii\">Doom II</a>
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/empire-total-war-ii\"
+        title=\"Empire II\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/53/52882/crop_120x90/Empire_II_Discord.png\"
+        alt=\"Empire II\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/empire-total-war-ii\" class=\"heading\">Empire II</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/empire-total-war\">Empire:
+        Total War</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/unification-mod-dawn-of-war-soulstorm\"
+        title=\"Unification Mod - Dawn of War: SoulStorm\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/33/32926/crop_120x90/Unification_emblem_6_9.1.png\"
+        alt=\"Unification Mod - Dawn of War: SoulStorm\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/unification-mod-dawn-of-war-soulstorm\"
+        class=\"heading\">Unification Mod - Dawn of War: SoulStorm</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/dawn-of-war\">Dawn of
+        War</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/the-old-realms\"
+        title=\"The Old Realms\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/47/46579/crop_120x90/image1.png\"
+        alt=\"The Old Realms\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/the-old-realms\" class=\"heading\">The Old Realms</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/mount-blade-ii-bannerlord\">Mount
+        & Blade II: Bannerlord</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/counter-strike-source-offensive\"
+        title=\"Counter-Strike: Source Offensive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/47/46653/crop_120x90/moddb_logo.png\"
+        alt=\"Counter-Strike: Source Offensive\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/counter-strike-source-offensive\"
+        class=\"heading\">Counter-Strike: Source Offensive</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/counter-strike-source\">Counter-Strike:
+        Source</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/divide-and-conquer\"
+        title=\"Divide and Conquer\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/22/21249/crop_120x90/DaC_promoGIF.gif\"
+        alt=\"Divide and Conquer\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/divide-and-conquer\" class=\"heading\">Divide and Conquer</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/medieval-ii-total-war-kingdoms\">Medieval
+        II: Total War: Kingdoms</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/shokuho\" title=\"Shokuh\u014D\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/32/31945/crop_120x90/Logonewv2.png\"
+        alt=\"Shokuh\u014D\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/shokuho\" class=\"heading\">Shokuh\u014D</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/mount-blade-ii-bannerlord\">Mount
+        & Blade II: Bannerlord</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/the-horse-lords-a-total-modification-for-bfme\"
+        title=\"Age of the Ring\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/23/22582/crop_120x90/aotr_moddb_image_new.png\"
+        alt=\"Age of the Ring\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/the-horse-lords-a-total-modification-for-bfme\" class=\"heading\">Age
+        of the Ring</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king\">Battle for
+        Middle-earth II: Rise of the Witch King</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div class=\"supporter\"><div
+        class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250, 300x600\"
+        id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinksgames\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"options\">\r\n\t\t\t\t<a
+        href=\"/games/add/#gamesform\" class=\"addicon\"  title=\"Add game\">Add game</a>\t\t\t</span>\r\n\t\t\t
+        \r\n\t\t\t<span class=\"heading\">Popular Games</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games\" class=\"button\">View All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/top\" class=\"button buttonalt\">Top Games</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/cc-generals-zero-hour\"
+        title=\"C&#038;C: Generals Zero Hour\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/184/crop_120x90/preview.jpg\"
+        alt=\"C&#038;C: Generals Zero Hour\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/cc-generals-zero-hour\" class=\"heading\">C&#038;C: Generals
+        Zero Hour</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tReal
+        Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/1/crop_120x90/hl1_thumb.jpg\"
+        alt=\"Half-Life\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/half-life\" class=\"heading\">Half-Life</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/mount-blade-warband\"
+        title=\"Mount &#038; Blade: Warband\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/14/13649/crop_120x90/mb69.jpg\"
+        alt=\"Mount &#038; Blade: Warband\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/mount-blade-warband\" class=\"heading\">Mount &#038; Blade:
+        Warband</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tRole
+        Playing \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/doom-ii\" title=\"Doom
+        II\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/172/crop_120x90/profile.jpg\"
+        alt=\"Doom II\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/doom-ii\" class=\"heading\">Doom II</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/medieval-ii-total-war-kingdoms\"
+        title=\"Medieval II: Total War: Kingdoms\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/14/13242/crop_120x90/m2k_thumb.jpg\"
+        alt=\"Medieval II: Total War: Kingdoms\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/games/medieval-ii-total-war-kingdoms\"
+        class=\"heading\">Medieval II: Total War: Kingdoms</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/mount-blade-ii-bannerlord\"
+        title=\"Mount &#038; Blade II: Bannerlord\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/20/19261/crop_120x90/p.jpg\"
+        alt=\"Mount &#038; Blade II: Bannerlord\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/games/mount-blade-ii-bannerlord\"
+        class=\"heading\">Mount &#038; Blade II: Bannerlord</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tRole Playing \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/doom\" title=\"Doom\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/26/crop_120x90/doom_thumb.jpg\"
+        alt=\"Doom\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/doom\" class=\"heading\">Doom</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tFirst
+        Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/battlefield-2\"
+        title=\"Battlefield 2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/109/crop_120x90/bf2_thumb.jpg\"
+        alt=\"Battlefield 2\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/battlefield-2\" class=\"heading\">Battlefield 2</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/half-life-2\"
+        title=\"Half-Life 2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/61/crop_120x90/hl2_thumb.jpg\"
+        alt=\"Half-Life 2\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/half-life-2\" class=\"heading\">Half-Life 2</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/rusted-warfare\"
+        title=\"Rusted Warfare\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/66/65702/crop_120x90/rusted_p.1.jpg\"
+        alt=\"Rusted Warfare\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/rusted-warfare\" class=\"heading\">Rusted Warfare</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksjobs\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"options\">\r\n\t\t\t\t<a
+        href=\"/jobs/add/#jobsform\" class=\"addicon\"  title=\"Add job\">Add job</a>\t\t\t</span>\r\n\t\t\t
+        \r\n\t\t\t<span class=\"heading\">Jobs</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablemenu\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/jobs\" class=\"button\">View All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/jobs/add\" class=\"button buttonalt\">Post Job Ad</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tCMYKilluminatiNetwork
+        \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span class=\"summary\"><a href=\"/jobs/sdl2-porting-expert\">SDL2
+        Porting Expert</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row
+        clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tMystic Games Inc \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/jobs/2d-animator-for-action-adventure-platformer\">2D
+        Animator for Action-Adventure Platformer</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tL8rZone
+        \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span class=\"summary\"><a href=\"/jobs/looking-for-vfx-artist-and-3d-animators\">Looking
+        for VFX artist and 3D animators </a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tCompeer
+        Entertainment \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span class=\"summary\"><a href=\"/jobs/revenue-share-animatorrigger\">[Revenue
+        Share] Animator/Rigger</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tDiamond Games \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/jobs/awesome-team-looking-for-ue4-developeranimator\">Awesome!
+        Team looking for UE5 &quot;Developer&quot;,&quot;Animator&quot;</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tCompeer
+        Entertainment \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span class=\"summary\"><a href=\"/jobs/revenue-share-programmer2\">[Revenue
+        Share] Programmer</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tDiamond Games \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/jobs/na13941\">Amazing! &quot;UE4 Programmer&quot;,&quot;Blueprints&quot;,
+        &quot;Programming&quot;, &quot;C++&quot;</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\tDiamond
+        Games \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span class=\"summary\"><a href=\"/jobs/na13560\">Amazing
+        Team Looking For More Talent!, &quot;programmer&quot;, &quot;CPP&quot;, &quot;UE4&quot;,
+        &quot;Blackboard&quot;</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3\"></div>\n<script>\n$(document).ready(function() {\nif($(\".column.span-300\").length)
+        {\n\tcolumnBottom = $(\".column.span-300\").position().top + $(\".column.span-300\").outerHeight(true)
+        + ($(\".column.span-300 .DBsupporter\").length*600) + ($(\".column.span-300
+        .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top - 250;\n\twindowSpacing
+        = $(window).height() + 250;\n\tplacements = footerTop > columnBottom ? Math.floor((footerTop
+        - columnBottom) / windowSpacing) : 0;\n\t\n\tfor(x = 1; x <= placements; x++)
+        {\n\t\t$(\"<div class=\\\"lazyload\\\" data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\"
+        data-dfp-sizes=\\\"300x250\\\" id=\\\"div-ga-MODDB_MPU_\"+(x+3)+\"\\\" style=\\\"clear:
+        both; margin-top: \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n <div class=\"normalbox linksbox\" id=\"menulinksforum\">\r\n\t<div
+        class=\"normalcorner\">\r\n\t\t<div class=\"title\">\r\n\t\t\t \r\n\t\t\t<span
+        class=\"heading\">Forum Discussion</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablemenu\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/forum\" class=\"button\">View Forums</a>\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/forum/board/active-topics\" class=\"button buttonalt\">Active Topics</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\t<time
+        datetime=\"2023-10-17T10:49:10+00:00\">8hours ago</time> \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/forum/thread/for-hire-2d-artistillustrator-cartoon-characters-environments\">[For
+        Hire] 2D Artist/Illustrator | Cartoon Characters &#038; Environments</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\t<time
+        datetime=\"2023-10-17T08:00:13+00:00\">11hours ago</time> \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/forum/thread/looking-for-unity-programmer-to-help-with-demo\">Looking
+        for unity programmer to help with demo</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\t<time
+        datetime=\"2023-10-17T06:39:55+00:00\">12hours ago</time> \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/forum/thread/too-gruesome-for-a-retro-fps-shotgun-exorcist\">Too
+        Gruesome for a retro FPS? -  SHOTGUN EXORCIST</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\t<time
+        datetime=\"2023-10-16T22:25:17+00:00\">20hours ago</time> \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/forum/thread/jayjay-jester-heory\">Jayjay Jester
+        heory</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row
+        clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\t<time datetime=\"2023-10-16T14:42:38+00:00\">Oct
+        16 2023</time> \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span class=\"summary\"><a href=\"/forum/thread/ive-built-a-discord-bot-posting-steam-reviews-for-your-game\">I've
+        built a Discord Bot posting Steam Reviews for your game</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t<h5>\r\n\t\t\t\t\t\t<time
+        datetime=\"2023-10-16T07:18:11+00:00\">Oct 16 2023</time> \t\t\t\t\t</h5>\r\n\t\t\t\t\t<span
+        class=\"summary\"><a href=\"/forum/thread/taiwan-authorities-and-the-american-institute-in-taiwan-ait-play-tricks3\">Taiwan
+        authorities and the American Institute in Taiwan (AIT) Play tricks</a></span>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\t<div class=\"normalbox
+        pollbox\" id=\"pollsviewer\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=3283\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Poll</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t<p class=\"question\">Why do you mod games?</p><form
+        action=\"https://www.moddb.com/polls/why-do-you-mod-games\" method=\"post\"><input
+        type=\"hidden\" name=\"poll\" value=\"3283\" />\t\t\t\t\t<div class=\"baroption
+        clear\">\n\t\t\t\t\t\t<input type=\"radio\" name=\"option\" value=\"14288\"
+        id=\"pollopt14288\"  /> \n\t\t\t\t\t\t<label for=\"pollopt14288\">To learn
+        game development</label> \n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"baroption
+        clear\">\n\t\t\t\t\t\t<input type=\"radio\" name=\"option\" value=\"14289\"
+        id=\"pollopt14289\"  /> \n\t\t\t\t\t\t<label for=\"pollopt14289\">To make
+        games better</label> \n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"baroption
+        clear\">\n\t\t\t\t\t\t<input type=\"radio\" name=\"option\" value=\"14290\"
+        id=\"pollopt14290\"  /> \n\t\t\t\t\t\t<label for=\"pollopt14290\">For fame
+        and/or fortune</label> \n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"baroption
+        clear\">\n\t\t\t\t\t\t<input type=\"radio\" name=\"option\" value=\"14291\"
+        id=\"pollopt14291\"  /> \n\t\t\t\t\t\t<label for=\"pollopt14291\">For enjoyment
+        of seeing people play and enjoy my mods</label> \n\t\t\t\t\t</div>\n\t\t\t\t\t<input
+        type=\"submit\" name=\"\" value=\"Vote!\" class=\"button\"  /></form>\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinksdownloads\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"options\">\r\n\t\t\t\t<a
+        href=\"/downloads/add/#downloadsform\" class=\"addicon\"  title=\"Add download\">Add
+        download</a>\t\t\t</span>\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Popular
+        Files</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inner\">\r\n\t\t<div
+        class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/stalker-anomaly/downloads/stalker-anomaly-151\" title=\"S.T.A.L.K.E.R.
+        Anomaly 1.5.1\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/208/207799/crop_120x90/Anomaly-1.5.1-Logo.png\"
+        alt=\"S.T.A.L.K.E.R. Anomaly 1.5.1\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/stalker-anomaly/downloads/stalker-anomaly-151\" class=\"heading\">S.T.A.L.K.E.R.
+        Anomaly 1.5.1</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tFull
+        Version 8.75gb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/downloads/stalker-anomaly-151-to-152\"
+        title=\"S.T.A.L.K.E.R. Anomaly 1.5.1 to 1.5.2 Update\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/downloads/1/236/235237/crop_120x90/Anomaly-1.5.2-Logo.png\"
+        alt=\"S.T.A.L.K.E.R. Anomaly 1.5.1 to 1.5.2 Update\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/downloads/stalker-anomaly-151-to-152\"
+        class=\"heading\">S.T.A.L.K.E.R. Anomaly 1.5.1 to 1.5.2 Update</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tPatch 1.01gb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/addons/modded-exes-ledge-grabbing-mantling\"
+        title=\"[MODDED EXES] Ledge Grabbing / Mantling (UPDATE 2)\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/downloads/1/259/258889/crop_120x90/1_optimized.gif\"
+        alt=\"[MODDED EXES] Ledge Grabbing / Mantling (UPDATE 2)\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/addons/modded-exes-ledge-grabbing-mantling\"
+        class=\"heading\">[MODDED EXES] Ledge Grabbing / Mantling (UPDATE 2)</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tPrefab 805.12kb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/addons/screen-space-shaders\"
+        title=\"Screen Space Shaders [ Update 18.1 ] [ 1.5.2 ]\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/downloads/1/229/228793/crop_120x90/anim_0.3.gif\"
+        alt=\"Screen Space Shaders [ Update 18.1 ] [ 1.5.2 ]\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/addons/screen-space-shaders\"
+        class=\"heading\">Screen Space Shaders [ Update 18.1 ] [ 1.5.2 ]</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEffects GFX 24.13mb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/brutal-doom/downloads/brutal-doom-v21-beta\"
+        title=\"Brutal Doom v21\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/96/95667/crop_120x90/moddb_reader.jpg\"
+        alt=\"Brutal Doom v21\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/brutal-doom/downloads/brutal-doom-v21-beta\" class=\"heading\">Brutal
+        Doom v21</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tFull
+        Version 77.11mb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/addons/promzone-level\"
+        title=\"New levels 0.51\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/255/254311/crop_120x90/tn3.png\"
+        alt=\"New levels 0.51\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/stalker-anomaly/addons/promzone-level\" class=\"heading\">New
+        levels 0.51</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tPrefab
+        1.57gb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/vanilla-ui-plus/downloads/vanilla-ui-plus-nv\"
+        title=\"Vanilla UI Plus (New Vegas) 9.48\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/129/128019/crop_120x90/Vanilla_UI_Plus.jpg\"
+        alt=\"Vanilla UI Plus (New Vegas) 9.48\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/vanilla-ui-plus/downloads/vanilla-ui-plus-nv\"
+        class=\"heading\">Vanilla UI Plus (New Vegas) 9.48</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFull Version 742.61kb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/empire-total-war-ii/downloads/etw2-fullinstaller-v41\"
+        title=\"[INSTALLER] ETW2 - V4 - FULL INSTALLER\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/257/256801/crop_120x90/Empire_II_Discord.png\"
+        alt=\"[INSTALLER] ETW2 - V4 - FULL INSTALLER\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/empire-total-war-ii/downloads/etw2-fullinstaller-v41\"
+        class=\"heading\">[INSTALLER] ETW2 - V4 - FULL INSTALLER</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFull Version 23.73gb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/stalker-anomaly/addons/boomsticks-and-sharpsticks\"
+        title=\"Boomsticks and Sharpsticks\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/183/182679/crop_120x90/31-Aug-2020.gif\"
+        alt=\"Boomsticks and Sharpsticks\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/stalker-anomaly/addons/boomsticks-and-sharpsticks\" class=\"heading\">Boomsticks
+        and Sharpsticks</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tWeapon
+        Model 2.88gb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/divide-and-conquer/downloads/divide-and-conquer-v5-a-kingdom-reunited\"
+        title=\"Divide and Conquer: v5 - A Kingdom Reunited\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/downloads/1/255/254151/crop_120x90/DaCV5_Mod_DB.png\"
+        alt=\"Divide and Conquer: v5 - A Kingdom Reunited\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/mods/divide-and-conquer/downloads/divide-and-conquer-v5-a-kingdom-reunited\"
+        class=\"heading\">Divide and Conquer: v5 - A Kingdom Reunited</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFull Version 7.21gb \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3\"></div>\n<script>\n$(document).ready(function() {\nif($(\".column.span-300\").length)
+        {\n\tcolumnBottom = $(\".column.span-300\").position().top + $(\".column.span-300\").outerHeight(true)
+        + ($(\".column.span-300 .DBsupporter\").length*600) + ($(\".column.span-300
+        .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top - 250;\n\twindowSpacing
+        = $(window).height() + 250;\n\tplacements = footerTop > columnBottom ? Math.floor((footerTop
+        - columnBottom) / windowSpacing) : 0;\n\t\n\tfor(x = 1; x <= placements; x++)
+        {\n\t\t$(\"<div class=\\\"lazyload\\\" data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\"
+        data-dfp-sizes=\\\"300x250\\\" id=\\\"div-ga-MODDB_MPU_\"+(x+3)+\"\\\" style=\\\"clear:
+        both; margin-top: \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n\t<div class=\"normalbox menubox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Mod SDK & Community</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"padding-top:
+        1em; padding-bottom: 0; background: #fff;\">\n\t\t\t\t\t\tLove mods and want
+        them in your game? mod.io is created by Mod DB and aims to make it easy to
+        <a href=\"https://mod.io\" target=\"_blank\">integrate and launch a mod community</a>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"padding: 0;\">\n\t\t\t\t\t\t<div style=\"text-align:
+        center;\"><a href=\"https://mod.io\" title=\"Cross Platform Mod API and SDK
+        for game developers\" target=\"_blank\"><img src=\"https://media.moddb.com/images/members/1/1/1/profile/modio_menu_bottom.png\"
+        alt=\"Mod API\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5084 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">[{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"Mod
+        DB\",\"url\":\"https://www.moddb.com\",\"logo\":\"https://static.moddb.com/cutoff/images/default/splash.png\",\"sameAs\":[\"https://www.facebook.com/moddb\",\"https://twitter.com/moddb\",\"https://github.com/dbolical\"]},[]]</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.cycle.lite.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=home\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\t\tsource: \"index\",\r\n\t\t\t\t\t\t\tchannel: \"mods\",\r\n\t\t\t\t\t\t\ttags:
+        [\"pc\"],\r\n\t\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\t\tplayers: [\"\"],\r\n\t\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tfloorPrices: {\r\n\t\t\t\t\t\t\tdefaultFloorprice:
+        0.05,\r\n\t\t\t\t\t\t\tusFloorprice: 0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
+        0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
+        \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
+        {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
+        \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
+        { enabled: true, maxRefreshes: 10, desktopRate: 15000, mobileRate: 12000,
+        mobileStickyRate: 15000, teadsRate: 30000, refreshableAdvertIds: [0, 220082044,
+        78946204, 72863404, 2925170143, 2984552083, 74678524] },\r\n\t\t\t\t\t\tinsertInto:
+        \"\",\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.AdScript = new GNAdScript.default(\".DBsupporter\",
+        adConfig);\r\n\t\t\t\t\twindow.AdScript.init();\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697569408\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697569408\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t$(\"div.rotator
+        a.link\").show();\r\n\t\t\t\t$(\"#rotatorholder\").cycle({\r\n\t\t\t\t\ttimeout:
+        5000,\r\n\t\t\t\t\tspeed: 1000,\r\n\t\t\t\t\tpause: 1,\r\n\t\t\t\t\tnext:
+        \"#rotatornext\",\r\n\t\t\t\t\tprev: \"#rotatorprev\",\r\n\t\t\t\t\tbefore:
+        onBefore,\r\n\t\t\t\t\tafter: onAfter\r\n\t\t\t\t});\r\n\r\n\t\t\t\tfunction
+        onBefore(curr, next, opts) {\r\n\t\t\t\t\t$(\"#rotator\"+(opts.nextSlide >
+        opts.currSlide ? \"next\" : \"prev\")).addClass((opts.nextSlide > opts.currSlide
+        ? \"next\" : \"prev\")+\"on\");\r\n\t\t\t\t\t\r\n\t\t\t\t\tbg = $(this).find(\".rotatorcorner\");\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(bg.data(\"bg\")
+        && bg.data(\"bg\").length > 0) {\r\n\t\t\t\t\t\tbg.css(\"background-image\",\"url(\"+bg.data(\"bg\")+\")\").removeData(\"bg\");\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\r\n\t\t\t\tfunction
+        onAfter() {\r\n\t\t\t\t\t$(\"#rotatornext\").removeClass(\"nexton\");\r\n\t\t\t\t\t$(\"#rotatorprev\").removeClass(\"prevon\");\r\n\t\t\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof reedpop_piwik === \"function\"
+        && cookie_data.npa.cookies == \"true\") { reedpop_piwik(); }\r\n\r\n\tif (typeof
+        gtag === \"function\") { gtag(\"consent\", \"update\", {\"ad_storage\": cookie_data.npa.status
+        == \"false\" ? \"granted\" : \"denied\", \"analytics_storage\": cookie_data.npa.cookies
+        == \"true\" ? \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status
+        == \"false\") {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t}
+        else {\r\n\t\t// don't personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\",
+        { domain: \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\nreedpop_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 817acd4099542a6b-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 17 Oct 2023 19:03:28 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0lAZ6oCooxhY4GnaxoMu8e%2FPZbb45xkVscuIv2lthRJDcF6LQbeB7stEsTBqn9hrKWyASeMGc9zTTmB9283oc4rMceYLb%2BRXvbXJ%2B5Chkmy8XzpxJprMwfrihfQNeME%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=0133c745b7ab40627f7cb6aaa82eeacc; expires=Tue, 17-Oct-2023 19:13:28
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/polls/why-do-you-mod-games
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Why do
+        you mod games? - Mod DB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta
+        name=\"keywords\" content=\"why do you mod games, poll, opinion, vote, select,
+        elect, survey, question, discussion\" />\r\n\t<meta name=\"description\" content=\"View
+        the Mod DB  poll Why do you mod games?\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Why do you mod games?\" />\r\n\t<meta property=\"og:description\"
+        content=\"View the Mod DB  poll Why do you mod games?\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"Mod DB\" />\r\n\t<meta property=\"og:type\" content=\"article\"
+        /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/polls/why-do-you-mod-games\"
+        /> \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Why do you mod games?\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"View the Mod DB  poll Why do you mod games?\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/polls/why-do-you-mod-games\" /> \r\n\t \r\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;73\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/polls/why-do-you-mod-games/\" /><input type=\"hidden\" name=\"rememberme\"
+        value=\"1\" /><input type=\"hidden\" name=\"members\" value=\"1\" /><span
+        class=\"fedbaccffbfcdeeformouter\"><span><span><span><span><span><span class=\"fedbaccffbfcdeeforminner\"><input
+        type=\"text\" name=\"IyNkNWYzNDAwOTc4MTMyYjBmNWM1YTIxNGFhODYwNGYxYzM2OTQ3NTYxODd1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span></span><span class=\"fedbaccffbfcdeeformouter\"><span><span><span><span><span
+        class=\"fedbaccffbfcdeeforminner\"><input type=\"text\" name=\"IyNkNWYzNDAwOTc4MTMyYjBmNWM1YTIxNGFhODYwNGYxYzQ0NTQ1NTU4NzZib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><style> span.fedbaccffbfcdeeformouter
+        span span span span span.fedbaccffbfcdeeforminner { display: none; } span.fedbaccffbfcdeeformouter
+        span span span span span span.fedbaccffbfcdeeforminner { display: inline;
+        }</style>\n<input type=\"password\" name=\"password\" maxlength=\"100\" placeholder=\"Password\"
+        class=\"text password\" autocomplete=\"off\"  /><input type=\"submit\" name=\"members\"
+        value=\"GO\" class=\"button\" title=\"Sign In\"  /></form>\t\t\t<span class=\"login\"
+        style=\"display: none;\">or with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Steam\"></a><a href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a
+        href=\"/members/loginext/twitter\" class=\"twittericonsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Twitter\"></a><a
+        href=\"/members/loginext/facebook\" class=\"facebookiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Facebook\"></a></span>\r\n\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Why do you mod games?</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t
+        \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t \r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t<li><a href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/articles/add\">post article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-300-alt first\">\t<div class=\"normalbox
+        pollbox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=3283\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Why
+        do you mod games?</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"inner\">\n\t\t\t<div
+        class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t<p class=\"question\">Poll started by <a href=\"/members/intense\">INtense!</a>
+        with 141 votes and 4 comments. Browse the <a href=\"/polls\">poll archive</a>.</p>\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 7%;\">&nbsp;7%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(10 votes)</span>To learn game development</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 56%;\">&nbsp;56%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(79 votes)</span>To make games better</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(4 votes)</span>For fame and/or fortune</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 34%;\">&nbsp;34%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(48 votes)</span>For enjoyment of seeing people play
+        and enjoy my mods</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"8617975\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/foxfort\" title=\"FoxFort\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/424/423858/Untitled-2.9.png\"
+        alt=\"FoxFort\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/foxfort\" class=\"author\" data-nameid=\"foxfort\">FoxFort</a>
+        <time datetime=\"2023-09-04T14:24:49+00:00\">Sep 4 2023</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I'm enjoying modding and when I share
+        that work with rest of the world and seeing others like it. It's a bonus.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8617975\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8617975\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8617975\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8619325\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/ziro-sum-games\"
+        title=\"Ziro_Sum_Games\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4105/4104489/Untitled.png\"
+        alt=\"Ziro_Sum_Games\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/ziro-sum-games\" class=\"author\" data-nameid=\"ziro-sum-games\">Ziro_Sum_Games</a>
+        <time datetime=\"2023-09-07T05:11:39+00:00\">Sep 7 2023</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I do it to see what happens. Same
+        reason why I write.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"8619325\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8619325\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8619325\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8623992\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/cheezecrostata\"
+        title=\"CheezeCrostata\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4472/4471272/derp.jpg\"
+        alt=\"CheezeCrostata\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/cheezecrostata\" class=\"author\" data-nameid=\"cheezecrostata\">CheezeCrostata</a>
+        <time datetime=\"2023-09-15T14:44:10+00:00\">Sep 15 2023</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>For me it's a mix of \"For enjoyment
+        of seeing people play and enjoy my mods\" (mostly), \"To make games better\"
+        (second best), and \"For fame and/or fortune\" (just a bit; not so much fortune,
+        as fame).\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"8623992\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8623992\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8623992\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8628859\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/23-down\"
+        title=\"23-down\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/123/122457/soldat.gif\"
+        alt=\"23-down\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/23-down\" class=\"author\" data-nameid=\"23-down\">23-down</a>
+        <time datetime=\"2023-09-24T08:05:41+00:00\">Sep 24 2023</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>My response would be identical to
+        <a rel=\"nofollow\" href=\"/members/cheezecrostata\">CheezeCrostata</a> his
+        answer. Although time nowadays is almost none existent for me. I limit myself
+        by writing comments mostly of other people their creations. Once in a while
+        beta testing stuff but even that has become increasingly difficult for me.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8628859\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8628859\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8628859\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/why-do-you-mod-games/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"9edb16cf111fbafda85027d1154ecf82\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentguest clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/members/loginext/steam\" class=\"steamicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleicon\" style=\"float: right;
+        margin-left: 6px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericon\" style=\"float: right; margin-left: 6px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Facebook\"></a>Your
+        comment will be anonymous unless you <a href=\"/members/register\">join the
+        community</a>. Or sign in with your social account:</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><textarea
+        name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\" required=\"required\"
+        ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowcommentemail
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"commentemail\">&#69;&#109;&#97;&#105;&#108;</label>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><span class=\"bacecaadddbfformouter\"><span><span><span><span><span
+        class=\"bacecaadddbfforminner\"><input type=\"text\" name=\"IyNkNWYzNDAwOTc4MTMyYjBmNWM1YTIxNGFhODYwNGYxYzMzNDI5Nzc5MzBlbWFpbA:E::E:\"
+        maxlength=\"500\" value=\"\" id=\"commentemail\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><span class=\"bacecaadddbfformouter\"><span><span><span
+        class=\"bacecaadddbfforminner\"><input type=\"text\" name=\"IyNkNWYzNDAwOTc4MTMyYjBmNWM1YTIxNGFhODYwNGYxYzY4OTg1MzgwOThib3RjYXRjaGVy\"
+        maxlength=\"500\" class=\"text\" autocomplete=\"off\"  /></span></span></span></span><style>
+        span.bacecaadddbfformouter span span span.bacecaadddbfforminner { display:
+        none; } span.bacecaadddbfformouter span span span span span.bacecaadddbfforminner
+        { display: inline; }</style>\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"pollsinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Poll</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>New</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/members/register\" class=\"addicon\">Members only</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=3283\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fwhy-do-you-mod-games&title=Why+do+you+mod+games%3F\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Why%20do%20you%20mod%20games%3F&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fwhy-do-you-mod-games\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Why+do+you+mod+games%3F+https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fwhy-do-you-mod-games+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fwhy-do-you-mod-games&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fwhy-do-you-mod-games&quote=Why+do+you+mod+games%3F&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fwhy-do-you-mod-games\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinkspolls\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Hot Polls</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row rowavatar
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\" title=\"INtense!\"
+        class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/your-aims-in-2012\" class=\"heading\">Your
+        aims in 2012</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t24,422
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/tkaza\"
+        title=\"TKAzA\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/63/62828/avitar2.png\"
+        alt=\"TKAzA\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-long-have-you-been-modding\"
+        class=\"heading\">How long have you been modding?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t23,225 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/i-prefer-my-mods-to-be\"
+        class=\"heading\">I prefer my mods to be...</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t13,660
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-do-think-about-free-to-play-games\"
+        class=\"heading\">What do think about free to play games?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t12,502 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/kralichddg\"
+        title=\"Kralich/David\" class=\"image\"><img src=\"https://media.moddb.com/images/members/4/3603/3602558/Dearth_Nadir.jpg\"
+        alt=\"Kralich/David\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/best-modern-moty-winners-2012-2021-of-all-time\"
+        class=\"heading\">What are the best Modern MOTY winners (2012 - 2021) of all
+        time?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t11,017
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/would-you-mod-console-games-if-the-platform-was-open-like-the-pc\"
+        class=\"heading\">Would you mod console games if the platform was open like
+        the PC?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t10,607
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/you-want-to-design-games-in-the-future-as\"
+        class=\"heading\">You want to design games in the future as...</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t10,174 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/do-you-own-a-smartphone\"
+        class=\"heading\">Do you own a smartphone?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t9,591
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-do-you-set-your-resolution-for-pc-gaming\"
+        class=\"heading\">How do you set your resolution for PC gaming?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,567 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/lodle\"
+        title=\"lodle\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/161/160045/monkey_small.gif\"
+        alt=\"lodle\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-version-of-mac-os-x-do-you-use\"
+        class=\"heading\">What version of Mac OS X do you use?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,222 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div> \t<div
+        style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5084 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/why-do-you-mod-games\",\"name\":\"Why
+        do you mod games?\"}}]}</script>\n<script src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\t\ttags:
+        [\"pc\"],\r\n\t\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\t\tplayers: [\"\"],\r\n\t\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tfloorPrices: {\r\n\t\t\t\t\t\t\tdefaultFloorprice:
+        0.05,\r\n\t\t\t\t\t\t\tusFloorprice: 0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
+        0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
+        \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
+        {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
+        \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
+        { enabled: true, maxRefreshes: 10, desktopRate: 15000, mobileRate: 12000,
+        mobileStickyRate: 15000, teadsRate: 30000, refreshableAdvertIds: [0, 220082044,
+        78946204, 72863404, 2925170143, 2984552083, 74678524] },\r\n\t\t\t\t\t\tinsertInto:
+        \"\",\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.AdScript = new GNAdScript.default(\".DBsupporter\",
+        adConfig);\r\n\t\t\t\t\twindow.AdScript.init();\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697569409\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697569409\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentemail\").after('<input
+        type=\"hidden\" name=\"IyNkNWYzNDAwOTc4MTMyYjBmNWM1YTIxNGFhODYwNGYxYzQwNzI2MzQyNDNqc2ZpZWxk\"
+        value=\"1\" />');\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=666\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof reedpop_piwik === \"function\"
+        && cookie_data.npa.cookies == \"true\") { reedpop_piwik(); }\r\n\r\n\tif (typeof
+        gtag === \"function\") { gtag(\"consent\", \"update\", {\"ad_storage\": cookie_data.npa.status
+        == \"false\" ? \"granted\" : \"denied\", \"analytics_storage\": cookie_data.npa.cookies
+        == \"true\" ? \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status
+        == \"false\") {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t}
+        else {\r\n\t\t// don't personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\",
+        { domain: \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\nreedpop_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 817acd48ec400246-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 17 Oct 2023 19:03:29 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=qBW0io83z33hBIO9Qqtvj%2BJLRhTMPb43HKWD9qjaByDS8qq2UIpaLtR8UHThWchoSDJ5hfkSVfOiu%2B%2BjtZkPOcWtvQUvAJTzst6D%2FpLq8PbJlCY5LicL56g6KyoScwo%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=d5f3400978132b0f5c5a214aa8604f1c; expires=Tue, 17-Oct-2023 19:13:29
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1

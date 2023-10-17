@@ -152,7 +152,9 @@ def raise_for_status(response: requests.Response):
             LOGGER.error(response.request.body)
             raise ModdbException(text["text"])
     except requests.exceptions.JSONDecodeError:
-        response.raise_for_status()
+        pass
+
+    response.raise_for_status()
 
     if (
         "is currently awaiting authorisation, which can take a couple of days while a"
