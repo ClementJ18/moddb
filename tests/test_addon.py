@@ -2,7 +2,6 @@ import pytest
 
 import moddb
 
-import pytest_vcr_delete_on_fail
 
 DEFAULT = "https://www.moddb.com/games/grand-theft-auto-san-andreas/addons/superman-sa-beta-v10"
 
