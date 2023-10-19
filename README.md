@@ -61,3 +61,15 @@ The necessary dependencies are stored in requirements.txt and requirements-dev.t
 ```
 python -m pip install -r requirements.txt -r requirements-dev.txt
 ```
+
+## Testing
+The testing is handled in two ways. There is a standard set of tests which are more lightweight, they test different entities of the library using one URL per entity. The second way is through the extended test suite. This extended test suite runs the standard test suite with multiple urls for each entity. This provides a better coverage but is also a lot more expensive to run and sometimes errors out because of ratelimits. 
+
+In general, if you're just trying to do a sanity check on the library it is recommended to use the standard test set using the cassettes. This minimizes requests dones to the ModDB server and your chance of being ratelimited. 
+
+* Standard Set: `pytest -k "not main" --record-mode=new_episodes`
+* Full Set: `pytest -k "main" --record-mode=all`
+
+Because tests in the suite grab the latest items from pages it is essentially not possible to have a zero request test. It is recommended to always run tests with at least the `new_episodes` record mode if you're planning to use the cassettes.
+
+`grep -r -l Service Unavailable * | xargs rm`

@@ -22,9 +22,9 @@ class TestClient:
         self.client = moddb.Client(username, password)
         self.sender = moddb.Client(sender_username, sender_password)
 
-    def test_get_watched(self):
-        for e in moddb.WatchType:
-            self.client.get_watched(e)
+    @pytest.mark.parametrize("watch_type", moddb.WatchType)
+    def test_get_watched(self, watch_type):
+        self.client.get_watched(watch_type)
 
     def test_get_updates(self):
         updates = self.client.get_updates()
@@ -32,20 +32,20 @@ class TestClient:
         if updates:
             random.choice(updates).clear()
 
-    def test_posts(self):
-        for url in mixed_urls:
-            e = moddb.parse_page(url)
-            self.client.tracking(e)  # follow
-            self.client.tracking(e)  # unfollow
+    @pytest.mark.parametrize("url", mixed_urls)
+    def test_posts(self, url):
+        e = moddb.parse_page(url)
+        self.client.tracking(e)  # follow
+        self.client.tracking(e)  # unfollow
 
-            if e.comments:
-                comment = random.choice(e.comments.flatten())
-                self.client.like_comment(comment)
-                self.client.dislike_comment(comment)
+        if e.comments:
+            comment = random.choice(e.comments.flatten())
+            self.client.like_comment(comment)
+            self.client.dislike_comment(comment)
 
-            if isinstance(e, moddb.Group):
-                self.client.membership(e)  # join
-                self.client.membership(e)  # leave
+        if isinstance(e, moddb.Group):
+            self.client.membership(e)  # join
+            self.client.membership(e)  # leave
 
     def test_friends(self):
         self.sender.send_request(self.client.member)

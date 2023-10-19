@@ -21,29 +21,7 @@ class FakeResponse:
         return self.json_content
 
 
-request = moddb.utils.request
-
-
-def patched_request(req):
-    filename = req.url.replace(moddb.BASE_URL, "")
-    if not filename:
-        filename = "/frontpage"
-
-    html_path = f"tests/fixtures{filename}.html"
-
-    # cache the file if it doesn't exist
-    if not os.path.exists(html_path):
-        r = request(req)
-
-        os.makedirs(os.path.dirname(html_path), exist_ok=True)
-        with open(html_path, "wb") as f:
-            f.write(r.content)
-
-    with open(html_path, "r") as f:
-        return FakeResponse(f.read())
-
-
-def sample_list(l, k):
+def sample_list(l: list, k: int) -> list:
     sample = min(k, len(l))
     if l:
         return random.sample(l, sample)

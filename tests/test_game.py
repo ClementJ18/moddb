@@ -1,20 +1,18 @@
-import random
 import pytest
-from unittest.mock import patch
 
-from tests.utils import patched_request, sample_list
+from tests.utils import sample_list
 
 import moddb
 
 DEFAULT = "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king"
 
+pytestmark = [pytest.mark.vcr]
 
-@patch("moddb.utils.request", new=patched_request)
+
 class TestGame:
     @pytest.fixture(params=[DEFAULT], autouse=True)
     def _get_mod(self, request):
-        with patch("moddb.utils.request", new=patched_request) as f:
-            self.game = moddb.Game(moddb.get_page(request.param))
+        self.game = moddb.Game(moddb.get_page(request.param))
 
     def test_get_addons(self):
         addons = self.game.get_addons()

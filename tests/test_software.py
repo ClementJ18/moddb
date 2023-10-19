@@ -1,20 +1,18 @@
-import random
 import pytest
-from unittest.mock import patch
 
-from tests.utils import patched_request, sample_list
+from tests.utils import sample_list
 
 import moddb
 
 DEFAULT = "https://www.moddb.com/software/project-neptune-vr"
 
+pytestmark = [pytest.mark.vcr]
 
-@patch("moddb.utils.request", new=patched_request)
+
 class TestSoftware:
     @pytest.fixture(params=[DEFAULT], autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=patched_request) as f:
-            self.software = moddb.Software(moddb.get_page(request.param))
+        self.software = moddb.Software(moddb.get_page(request.param))
 
     def test_get_articles(self):
         articles = self.software.get_articles()
