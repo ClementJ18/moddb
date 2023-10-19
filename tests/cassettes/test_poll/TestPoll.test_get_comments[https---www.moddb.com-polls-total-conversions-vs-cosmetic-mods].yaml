@@ -8,13 +8,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=bbb3c5e4199142b15f1f427055f80617; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=bbb3c5e4199142b15f1f427055f80617
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/57.0.2987.133 Safari/537.36
     method: GET
     uri: https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods
   response:
@@ -48,25 +41,42 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
-        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
-        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
-        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
-        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
-        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
-        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/polls/total-conversions-vs-cosmetic-mods/\" /><input type=\"hidden\"
+        name=\"rememberme\" value=\"1\" /><input type=\"hidden\" name=\"members\"
+        value=\"1\" /><span class=\"aecccfceecaformouter\"><span><span><span class=\"aecccfceecaforminner\"><input
+        type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjM1NjQ5ODM4MzZib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span><span class=\"aecccfceecaformouter\"><span><span><span><span><span
+        class=\"aecccfceecaforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjY4OTA5MDQ4NDl1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><style> span.aecccfceecaformouter
+        span span span.aecccfceecaforminner { display: none; } span.aecccfceecaformouter
+        span span span span span.aecccfceecaforminner { display: inline; }</style>\n<input
+        type=\"password\" name=\"password\" maxlength=\"100\" placeholder=\"Password\"
+        class=\"text password\" autocomplete=\"off\"  /><input type=\"submit\" name=\"members\"
+        value=\"GO\" class=\"button\" title=\"Sign In\"  /></form>\t\t\t<span class=\"login\"
+        style=\"display: none;\">or with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Steam\"></a><a href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a
+        href=\"/members/loginext/twitter\" class=\"twittericonsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Twitter\"></a><a
+        href=\"/members/loginext/facebook\" class=\"facebookiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Facebook\"></a></span>\r\n\t\t\t
         \r\n\t\t</div>\r\n\r\n\t\t<h1>Total Conversions vs. Cosmetic Mods</h1>\r\n\t\t<a
         href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
         class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
@@ -739,11 +749,31 @@ interactions:
         clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
         class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods/#commentform\"
         method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
-        value=\"6f8e5eff9a49f22dd16631af8c9c8077\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"be8ac915a750f60f625a1d6325432e90\" /><input type=\"hidden\" name=\"replyid\"
         value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
-        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
-        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentguest clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/members/loginext/steam\" class=\"steamicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleicon\" style=\"float: right;
+        margin-left: 6px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericon\" style=\"float: right; margin-left: 6px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Facebook\"></a>Your
+        comment will be anonymous unless you <a href=\"/members/register\">join the
+        community</a>. Or sign in with your social account:</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><textarea
+        name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\" required=\"required\"
+        ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowcommentemail
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"commentemail\">&#69;&#109;&#97;&#105;&#108;</label>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><span class=\"dffdafcaformouter\"><span><span><span><span><span><span
+        class=\"dffdafcaforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjE3MjU5MjE3Njhib3RjYXRjaGVy\"
+        maxlength=\"500\" class=\"text\" autocomplete=\"off\"  /></span></span></span></span></span></span></span><span
+        class=\"dffdafcaformouter\"><span><span><span><span class=\"dffdafcaforminner\"><input
+        type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjIxOTkyODA1OTZlbWFpbA:E::E:\"
+        maxlength=\"500\" value=\"\" id=\"commentemail\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><style> span.dffdafcaformouter span
+        span span span span span { display: none; } span.dffdafcaformouter span span
+        { display: inline; }</style>\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
         class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
         type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
         \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
@@ -757,6 +787,8 @@ interactions:
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
         tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>New</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/members/register\" class=\"addicon\">Members only</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2499\"
         class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
@@ -864,12 +896,17 @@ interactions:
         for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">4929 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5066 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods\",\"name\":\"Total
         Conversions vs. Cosmetic Mods\"}}]}</script>\n<script src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
-        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\t\ttags:
@@ -878,7 +915,7 @@ interactions:
         0.05,\r\n\t\t\t\t\t\t\tusFloorprice: 0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -892,9 +929,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697391821\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697700336\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697391821\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697700336\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -919,10 +956,9 @@ interactions:
         {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
         viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
-        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
-        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
-        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentemail\").after('<input
+        type=\"hidden\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjI2OTUyNDYyOTJqc2ZpZWxk\"
+        value=\"1\" />');\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
         {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
         link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
         true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
@@ -935,7 +971,7 @@ interactions:
         style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
         = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
         > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=666\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
         {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
         {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
         : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
@@ -992,7 +1028,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8169dda29a82214f-CDG
+      - 818749bdeb172179-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -1000,11 +1036,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 17:43:41 GMT
+      - Thu, 19 Oct 2023 07:25:36 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9mLu%2FRYi2HEV1FcDQCY2PPf5Pln387n%2FPQaIB9gev0Gl75XKajmtaldLKS8tfN3W8LV5y2IK%2FEVHM6K4AE3M%2BxWofR6n69kv4sYW3AgkVF4tI5sGao5EL2Fc%2F7fTBV6QcLxx4fImYv3hLRg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AJ%2BGTOZFq%2FJlVEAWCPOJip9gk%2BmW%2FI911QWGcCuWtu7TBdlyaLPvO%2BCKgnsT0OZpnZWxcKEh2FV%2FcWSOOtabblBcD7wP%2Bfxb05w5P8uAQfbDa4L%2Fv180XJGisOlCLQgY6yhY2MkBRpq4udQ%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -1016,9 +1052,7 @@ interactions:
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
-      - masterchief=9d4e5c0456ec6c7205acc0abb7ff9a60; expires=Sun, 15-Oct-2023 17:53:41
-        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
-      - masterchief=9d4e5c0456ec6c7205acc0abb7ff9a60; expires=Sun, 15-Oct-2023 17:53:41
+      - masterchief=90b7d24a8a251e1bdd0897395e92e54b; expires=Thu, 19-Oct-2023 07:35:36
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
@@ -1038,12 +1072,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=9d4e5c0456ec6c7205acc0abb7ff9a60; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=9d4e5c0456ec6c7205acc0abb7ff9a60
-      User-Agent:
-      - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)
     method: GET
     uri: https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods/page/1
   response:
@@ -1078,35 +1106,51 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
-        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
-        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
-        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
-        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
-        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
-        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
-        \r\n\t\t</div>\r\n\r\n\t\t<h1>Total Conversions vs. Cosmetic Mods</h1>\r\n\t\t<a
-        href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
-        class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
-        \r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
-        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
-        title=\"New this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div
-        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
-        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
-        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
-        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/polls/total-conversions-vs-cosmetic-mods/\" /><input type=\"hidden\"
+        name=\"rememberme\" value=\"1\" /><input type=\"hidden\" name=\"members\"
+        value=\"1\" /><span class=\"bcdaaecadbcdedbformouter\"><span><span><span><span><span
+        class=\"bcdaaecadbcdedbforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjIxMjk5MjE0NzJ1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><span class=\"bcdaaecadbcdedbformouter\"><span><span><span><span><span><span
+        class=\"bcdaaecadbcdedbforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0Yjk5Nzc0ODQ5ODRib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span></span><style> span.bcdaaecadbcdedbformouter
+        span span span span span span { display: none; } span.bcdaaecadbcdedbformouter
+        span span { display: inline; }</style>\n<input type=\"password\" name=\"password\"
+        maxlength=\"100\" placeholder=\"Password\" class=\"text password\" autocomplete=\"off\"
+        \ /><input type=\"submit\" name=\"members\" value=\"GO\" class=\"button\"
+        title=\"Sign In\"  /></form>\t\t\t<span class=\"login\" style=\"display: none;\">or
+        with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float: right;
+        margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericonsml\" style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Facebook\"></a></span>\r\n\t\t\t \r\n\t\t</div>\r\n\r\n\t\t<h1>Total Conversions
+        vs. Cosmetic Mods</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"Mod DB
+        Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t \r\n\t\t\t<li><a href=\"/today\"
+        title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New
+        this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New this
+        month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
         href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
         href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
         href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
@@ -1769,11 +1813,30 @@ interactions:
         clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
         class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods/#commentform\"
         method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
-        value=\"eeaa5411057ecfb5dcc77f8f57b8b72c\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"8776807fb3cc815bfd6b69dff44c28c4\" /><input type=\"hidden\" name=\"replyid\"
         value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
-        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
-        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentguest clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/members/loginext/steam\" class=\"steamicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleicon\" style=\"float: right;
+        margin-left: 6px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericon\" style=\"float: right; margin-left: 6px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Facebook\"></a>Your
+        comment will be anonymous unless you <a href=\"/members/register\">join the
+        community</a>. Or sign in with your social account:</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><textarea
+        name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\" required=\"required\"
+        ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowcommentemail
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"commentemail\">&#69;&#109;&#97;&#105;&#108;</label>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><span class=\"bddddedfabformouter\"><span><span><span><span
+        class=\"bddddedfabforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0Yjk4MzIyMTYzMzllbWFpbA:E::E:\"
+        maxlength=\"500\" value=\"\" id=\"commentemail\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><span class=\"bddddedfabformouter\"><span><span><span><span><span><span
+        class=\"bddddedfabforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjIyMTYzNzg2OTFib3RjYXRjaGVy\"
+        maxlength=\"500\" class=\"text\" autocomplete=\"off\"  /></span></span></span></span></span></span></span><style>
+        span.bddddedfabformouter span span span span span span { display: none; }
+        span.bddddedfabformouter span { display: inline; }</style>\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
         class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
         type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
         \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
@@ -1787,6 +1850,8 @@ interactions:
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
         tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>New</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/members/register\" class=\"addicon\">Members only</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2499\"
         class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
@@ -1894,12 +1959,17 @@ interactions:
         for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">4929 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5066 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods\",\"name\":\"Total
         Conversions vs. Cosmetic Mods\"}}]}</script>\n<script src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
-        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\t\ttags:
@@ -1908,7 +1978,7 @@ interactions:
         0.05,\r\n\t\t\t\t\t\t\tusFloorprice: 0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -1922,9 +1992,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697391822\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697700337\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697391822\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697700337\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -1949,10 +2019,9 @@ interactions:
         {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
         viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
-        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
-        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
-        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentemail\").after('<input
+        type=\"hidden\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0Yjc2NjE1NDk4NTNqc2ZpZWxk\"
+        value=\"1\" />');\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
         {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
         link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
         true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
@@ -1965,7 +2034,7 @@ interactions:
         style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
         = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
         > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=666\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
         {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
         {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
         : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
@@ -2022,7 +2091,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8169ddaabea5f0cf-CDG
+      - 818749c45f4b99aa-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -2030,11 +2099,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 17:43:43 GMT
+      - Thu, 19 Oct 2023 07:25:37 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KBATgb7wT2%2FqFri8fJXfPAq457jLuczTlidansVfnv5drAfXu9VlvtBXNYH%2BitsEFEXiE0RLXhwwWH3ePVXCvcs%2BsNe2rfBCa5UfLehh6O0qk5YAQI5V47tg3hDCEF2QwBv9bK%2BoBR8zh8I%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Hb6Q8FPKHd%2BeLrCZ%2FA%2FUFn6fePDPIL3ol7r%2Fx8HxrwfenKZsYxO0lIqG7sw%2B458DnEp2ssuGAG5rOukD2oiIlgyYcRHJhDdbcuToxiyaMnBHEUM4e%2FBHRlN5KrEYHlTcVG3wPF5UNqCI7aA%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -2044,11 +2113,7 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
-        secure; HttpOnly; SameSite=Lax
-      - masterchief=81bdfff3ea51c2aa98344348199ac47b; expires=Sun, 15-Oct-2023 17:53:42
-        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
-      - masterchief=81bdfff3ea51c2aa98344348199ac47b; expires=Sun, 15-Oct-2023 17:53:42
+      - masterchief=90b7d24a8a251e1bdd0897395e92e54b; expires=Thu, 19-Oct-2023 07:35:37
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
@@ -2068,12 +2133,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=81bdfff3ea51c2aa98344348199ac47b; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=81bdfff3ea51c2aa98344348199ac47b
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko
     method: GET
     uri: https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods/page/4
   response:
@@ -2108,25 +2167,41 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
-        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
-        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
-        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
-        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
-        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
-        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/polls/total-conversions-vs-cosmetic-mods/\" /><input type=\"hidden\"
+        name=\"rememberme\" value=\"1\" /><input type=\"hidden\" name=\"members\"
+        value=\"1\" /><span class=\"cdebfdbaformouter\"><span><span><span><span><span
+        class=\"cdebfdbaforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjIzMDA2MzM4MTFib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><span class=\"cdebfdbaformouter\"><span><span><span
+        class=\"cdebfdbaforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjE1Mjg0NjkzODZ1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span><style> span.cdebfdbaformouter span span span
+        span span { display: none; } span.cdebfdbaformouter { display: inline; }</style>\n<input
+        type=\"password\" name=\"password\" maxlength=\"100\" placeholder=\"Password\"
+        class=\"text password\" autocomplete=\"off\"  /><input type=\"submit\" name=\"members\"
+        value=\"GO\" class=\"button\" title=\"Sign In\"  /></form>\t\t\t<span class=\"login\"
+        style=\"display: none;\">or with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Steam\"></a><a href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a
+        href=\"/members/loginext/twitter\" class=\"twittericonsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Twitter\"></a><a
+        href=\"/members/loginext/facebook\" class=\"facebookiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Facebook\"></a></span>\r\n\t\t\t
         \r\n\t\t</div>\r\n\r\n\t\t<h1>Total Conversions vs. Cosmetic Mods</h1>\r\n\t\t<a
         href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
         class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
@@ -2799,11 +2874,31 @@ interactions:
         clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
         class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods/#commentform\"
         method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
-        value=\"eca63a0006cbc026b688103511b614a5\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"6bb408d1dd0e80cbfedc2fd8580c7f28\" /><input type=\"hidden\" name=\"replyid\"
         value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
-        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
-        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentguest clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/members/loginext/steam\" class=\"steamicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleicon\" style=\"float: right;
+        margin-left: 6px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericon\" style=\"float: right; margin-left: 6px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Facebook\"></a>Your
+        comment will be anonymous unless you <a href=\"/members/register\">join the
+        community</a>. Or sign in with your social account:</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><textarea
+        name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\" required=\"required\"
+        ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowcommentemail
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"commentemail\">&#69;&#109;&#97;&#105;&#108;</label>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><span class=\"bcfacdcfformouter\"><span><span><span><span
+        class=\"bcfacdcfforminner\"><input type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjgyNDE4MzM3ODdib3RjYXRjaGVy\"
+        maxlength=\"500\" class=\"text\" autocomplete=\"off\"  /></span></span></span></span></span><span
+        class=\"bcfacdcfformouter\"><span><span><span><span><span class=\"bcfacdcfforminner\"><input
+        type=\"text\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjU5MDMwMjQxNjNlbWFpbA:E::E:\"
+        maxlength=\"500\" value=\"\" id=\"commentemail\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><style> span.bcfacdcfformouter
+        span span span span.bcfacdcfforminner { display: none; } span.bcfacdcfformouter
+        span span span span span.bcfacdcfforminner { display: inline; }</style>\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
         class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
         type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
         \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
@@ -2817,6 +2912,8 @@ interactions:
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
         tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>New</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/members/register\" class=\"addicon\">Members only</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2499\"
         class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
@@ -2924,12 +3021,17 @@ interactions:
         for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">4929 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5066 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/total-conversions-vs-cosmetic-mods\",\"name\":\"Total
         Conversions vs. Cosmetic Mods\"}}]}</script>\n<script src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
-        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\t\ttags:
@@ -2938,7 +3040,7 @@ interactions:
         0.05,\r\n\t\t\t\t\t\t\tusFloorprice: 0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -2952,9 +3054,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697391823\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697700338\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697391823\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697700338\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -2979,10 +3081,9 @@ interactions:
         {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
         viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
-        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
-        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
-        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentemail\").after('<input
+        type=\"hidden\" name=\"IyM5MGI3ZDI0YThhMjUxZTFiZGQwODk3Mzk1ZTkyZTU0YjEwNDUxODQzOTZqc2ZpZWxk\"
+        value=\"1\" />');\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
         {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
         link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
         true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
@@ -2995,7 +3096,7 @@ interactions:
         style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
         = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
         > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=666\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
         {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
         {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
         : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
@@ -3052,7 +3153,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8169ddb0fe8a3cfb-CDG
+      - 818749ca9eef2a5f-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -3060,11 +3161,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 17:43:44 GMT
+      - Thu, 19 Oct 2023 07:25:38 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HRR%2BLOAGW2ReZz4ROK74K8sXPz7XRB1kG1CgQ5LAZNzwYEkiAtiQCy7Jsb3M%2FJr%2FmnjeVu8HHuQrBybWWKBktrn%2FlSboHZqoiSt5Ji%2FayRBQiKh0c3p1CWuIsods6Ta6jtV7L3y5EcWzsj4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TOwWMlO7%2BEce1qQhtcamw%2BeJx0yg0h009SN0p%2BTyJ3cd9OwJWNPHmQg4HW%2FafI%2FVuGpCdyxHmK061kkmfmIGna7JHp0LxaTcmqyr81tt%2B4py3Dtz%2F120g0dA56Dgv%2BUc9mLhYxTeCcRDNCk%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -3074,11 +3175,7 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
-        secure; HttpOnly; SameSite=Lax
-      - masterchief=de54f130a9fa9c7d64e89047d22d016e; expires=Sun, 15-Oct-2023 17:53:43
-        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
-      - masterchief=de54f130a9fa9c7d64e89047d22d016e; expires=Sun, 15-Oct-2023 17:53:43
+      - masterchief=90b7d24a8a251e1bdd0897395e92e54b; expires=Thu, 19-Oct-2023 07:35:38
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

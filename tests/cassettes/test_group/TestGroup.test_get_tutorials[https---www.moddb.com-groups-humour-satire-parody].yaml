@@ -8,12 +8,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko
     method: GET
     uri: https://www.moddb.com/groups/humour-satire-parody
   response:
@@ -49,34 +43,51 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
-        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
-        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
-        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
-        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
-        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
-        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
-        \r\n\t\t</div>\r\n\r\n\t\t<h1>Humor, satire, parody group</h1>\r\n\t\t<a href=\"/\"
-        class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t
-        \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t \r\n\t\t\t<li><a
-        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
-        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
-        this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
-        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
-        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
-        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/groups/humour-satire-parody/\" /><input type=\"hidden\" name=\"rememberme\"
+        value=\"1\" /><input type=\"hidden\" name=\"members\" value=\"1\" /><span
+        class=\"ceeccfbbddeaformouter\"><span><span><span><span><span><span class=\"ceeccfbbddeaforminner\"><input
+        type=\"text\" name=\"IyNkMjY0NWI0OGEyN2Q5YmExZTczZDVhM2Y5ZWQ4ZTUxMDQ2MDkzMTMwNDNib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span></span><span class=\"ceeccfbbddeaformouter\"><span><span><span><span
+        class=\"ceeccfbbddeaforminner\"><input type=\"text\" name=\"IyNkMjY0NWI0OGEyN2Q5YmExZTczZDVhM2Y5ZWQ4ZTUxMDE3OTUyMDIyNTd1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><style> span.ceeccfbbddeaformouter
+        span span span span span span { display: none; } span.ceeccfbbddeaformouter
+        span { display: inline; }</style>\n<input type=\"password\" name=\"password\"
+        maxlength=\"100\" placeholder=\"Password\" class=\"text password\" autocomplete=\"off\"
+        \ /><input type=\"submit\" name=\"members\" value=\"GO\" class=\"button\"
+        title=\"Sign In\"  /></form>\t\t\t<span class=\"login\" style=\"display: none;\">or
+        with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float: right;
+        margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericonsml\" style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Facebook\"></a></span>\r\n\t\t\t \r\n\t\t</div>\r\n\r\n\t\t<h1>Humor, satire,
+        parody group</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n
+        \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
         href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
         href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
         href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
@@ -223,7 +234,9 @@ interactions:
         matching the criteria specified. We suggest you try the <a href=\"/groups/humour-satire-parody/articles\">article
         list</a> with no filter applied, to browse all available. <a href=\"/groups/humour-satire-parody/articles/add\">Post
         article</a> and help us achieve our mission of showcasing the best content
-        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        from all developers. <a href=\"/members/register\">Join now</a> to share your
+        own content, we welcome creators and consumers alike and look forward to your
+        comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
         class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
         class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
         class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
@@ -280,8 +293,8 @@ interactions:
         class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
         title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8382048\"
         class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
-        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
-        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
         style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
         id=\"8537277\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
         \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/kark-jocke\"
@@ -417,11 +430,31 @@ interactions:
         clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
         class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/groups/humour-satire-parody/#commentform\"
         method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
-        value=\"62fb6ceea9af4023f81524b0500eeb49\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"3fbb496e53560823c4587672e3a04425\" /><input type=\"hidden\" name=\"replyid\"
         value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
-        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
-        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentguest clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/members/loginext/steam\" class=\"steamicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleicon\" style=\"float: right;
+        margin-left: 6px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericon\" style=\"float: right; margin-left: 6px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Facebook\"></a>Your
+        comment will be anonymous unless you <a href=\"/members/register\">join the
+        community</a>. Or sign in with your social account:</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><textarea
+        name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\" required=\"required\"
+        ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowcommentemail
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"commentemail\">&#69;&#109;&#97;&#105;&#108;</label>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><span class=\"cefbcfddebddafaffformouter\"><span><span><span><span
+        class=\"cefbcfddebddafaffforminner\"><input type=\"text\" name=\"IyNkMjY0NWI0OGEyN2Q5YmExZTczZDVhM2Y5ZWQ4ZTUxMDU4ODQyNTAxOTBib3RjYXRjaGVy\"
+        maxlength=\"500\" class=\"text\" autocomplete=\"off\"  /></span></span></span></span></span><span
+        class=\"cefbcfddebddafaffformouter\"><span><span><span class=\"cefbcfddebddafaffforminner\"><input
+        type=\"text\" name=\"IyNkMjY0NWI0OGEyN2Q5YmExZTczZDVhM2Y5ZWQ4ZTUxMDIzNTcwOTg3MjRlbWFpbA:E::E:\"
+        maxlength=\"500\" value=\"\" id=\"commentemail\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span><style> span.cefbcfddebddafaffformouter span
+        span span span { display: none; } span.cefbcfddebddafaffformouter span span
+        { display: inline; }</style>\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
         class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
         type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
         \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
@@ -432,7 +465,7 @@ interactions:
         menubox\" id=\"groupsinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
-        title=\"Unfollow\">Unfollow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
         title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/2933\" class=\"joinicon
         01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join group\">Join
@@ -455,7 +488,7 @@ interactions:
         rel=\"nofollow\">Join group</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
-        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Unfollow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
         summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgroups%2Fhumour-satire-parody&title=Humor%2C+satire%2C+parody+group\"
         class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
@@ -473,59 +506,44 @@ interactions:
         class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
         class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
-        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/groups/humour-satire-parody/#tagsform\"
         method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
-        value=\"62fb6ceea9af4023f81524b0500eeb49\" />\t\t\t\t\t<div class=\"row rowtagstagentertainment
+        value=\"3fbb496e53560823c4587672e3a04425\" />\t\t\t\t\t<div class=\"row rowtagstagentertainment
         clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/entertainment\">Entertainment</a><span
-        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=entertainment&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b\"
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=entertainment&sitearea=groups&siteareaid=2933&hash=\"
         title=\"7 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=entertainment&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
+        href=\"/tags/ajax/add?tag=entertainment&sitearea=groups&siteareaid=2933&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagmemes clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/memes\">Memes</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=memes&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b\"
+        href=\"/tags/memes\">Memes</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=memes&sitearea=groups&siteareaid=2933&hash=\"
         title=\"7 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=memes&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
+        href=\"/tags/ajax/add?tag=memes&sitearea=groups&siteareaid=2933&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagsmile clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/smile\">Smile</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=smile&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b\"
+        href=\"/tags/smile\">Smile</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=smile&sitearea=groups&siteareaid=2933&hash=\"
         title=\"6 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=smile&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
+        href=\"/tags/ajax/add?tag=smile&sitearea=groups&siteareaid=2933&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagpress clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/press\">Press</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=press&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b\"
+        href=\"/tags/press\">Press</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=press&sitearea=groups&siteareaid=2933&hash=\"
         title=\"5 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=press&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
+        href=\"/tags/ajax/add?tag=press&sitearea=groups&siteareaid=2933&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagfunny clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/funny\">Funny</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=funny&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b\"
+        href=\"/tags/funny\">Funny</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=funny&sitearea=groups&siteareaid=2933&hash=\"
         title=\"5 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=funny&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
+        href=\"/tags/ajax/add?tag=funny&sitearea=groups&siteareaid=2933&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstaglmao clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/lmao\">LMAO</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=lmao&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b\"
+        href=\"/tags/lmao\">LMAO</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=lmao&sitearea=groups&siteareaid=2933&hash=\"
         title=\"4 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=lmao&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
+        href=\"/tags/ajax/add?tag=lmao&sitearea=groups&siteareaid=2933&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagloldb clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/loldb\">LoLDB</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=loldb&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b\"
+        href=\"/tags/loldb\">LoLDB</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=loldb&sitearea=groups&siteareaid=2933&hash=\"
         title=\"3 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=loldb&sitearea=groups&siteareaid=2933&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
-        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
-        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=b6c769579b6d56a9c8dbe9e53464912b\"
-        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=b6c769579b6d56a9c8dbe9e53464912b&negative=1\"
-        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
-        type=\"hidden\" name=\"hash\" value=\"b6c769579b6d56a9c8dbe9e53464912b\" id=\"tagshash\"
-        /><input type=\"hidden\" name=\"sitearea\" value=\"groups\" id=\"tagssitearea\"
-        /><input type=\"hidden\" name=\"siteareaid\" value=\"2933\" id=\"tagssiteareaid\"
-        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
-        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
-        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
-        type=\"submit\" name=\"morebtn\" value=\"More\" id=\"tagsmorebtn\"  />\t\t\t\t\t\t<input
-        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        href=\"/tags/ajax/add?tag=loldb&sitearea=groups&siteareaid=2933&hash=&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
         a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
         0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
         menubox\" id=\"groupsbuttons\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
@@ -555,9 +573,9 @@ interactions:
         tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Members</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/groups/humour-satire-parody/members\">764</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/groups/top\">11 of 40,812</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        href=\"/groups/top\">5 of 40,821</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/groups/humour-satire-parody/stats\">5,444,309 (83 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        href=\"/groups/humour-satire-parody/stats\">5,444,783 (184 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/groups/humour-satire-parody/watchers\">409 members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Addons</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
@@ -574,44 +592,44 @@ interactions:
         clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups\" class=\"button\">View
         All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/top\" class=\"button buttonalt\">Top
         Groups</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"row
-        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/conservatives-of-mod-db\"
-        title=\"Conservatives of ModDB\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6346/crop_120x90/Trump_keyart.jpg\"
-        alt=\"Conservatives of ModDB\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/groups/conservatives-of-mod-db\" class=\"heading\">Conservatives of
-        ModDB</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment
-        &amp; Press  with 112 members \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/indiegala\"
-        title=\"IndieGala\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6565/crop_120x90/preview.jpg\"
-        alt=\"IndieGala\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/groups/indiegala\" class=\"heading\">IndieGala</a>\r\n\t\t\t\t\t\t<span
-        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 47 members
-        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/the-bar\" title=\"THE
-        CLUB BAR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/29/28425/crop_120x90/Screenshot_2023-01-25_at_02-00-1.png\"
-        alt=\"THE CLUB BAR\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/groups/the-bar\" class=\"heading\">THE CLUB BAR</a>\r\n\t\t\t\t\t\t<span
-        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 92 members
-        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/desura\" title=\"Desura\"
-        class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1150/crop_120x90/Splash.png\"
-        alt=\"Desura\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/groups/desura\" class=\"heading\">Desura</a>\r\n\t\t\t\t\t\t<span
-        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 10,068
-        members \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/asterix-obelix-fans-group\"
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/asterix-obelix-fans-group\"
         title=\"Asterix &#038; Obelix fans group\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/6/5463/crop_120x90/asterix02.jpg\"
         alt=\"Asterix &#038; Obelix fans group\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/groups/asterix-obelix-fans-group\"
         class=\"heading\">Asterix &#038; Obelix fans group</a>\r\n\t\t\t\t\t\t<span
         class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 30 members
         \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/regular-show-episodes\"
-        title=\"Regular Show - Episodes\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/25/24946/crop_120x90/Regular-Show-Cover-large.jpg\"
-        alt=\"Regular Show - Episodes\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/groups/regular-show-episodes\" class=\"heading\">Regular Show - Episodes</a>\r\n\t\t\t\t\t\t<span
-        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
-        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
-        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/steam-network\"
+        title=\"Steam Network\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/5/4935/crop_120x90/1345934-1330893_steam_logo_thumb.gif\"
+        alt=\"Steam Network\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/steam-network\" class=\"heading\">Steam Network</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 73 members
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/we-want-real-rating-on-desura\"
+        title=\"We Want Real Rating On Desura\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6950/crop_120x90/apollo-one-space-program-personn.jpg\"
+        alt=\"We Want Real Rating On Desura\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/we-want-real-rating-on-desura\" class=\"heading\">We Want Real
+        Rating On Desura</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment
+        &amp; Press  with 21 members \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/humour-satire-parody\"
+        title=\"Humor, satire, parody\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/3/2933/crop_120x90/preview.jpg\"
+        alt=\"Humor, satire, parody\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/humour-satire-parody\" class=\"heading\">Humor, satire, parody</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 764 members
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/tech-box\" title=\"Tech-Box\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/9/8757/crop_120x90/TECH_BOX_LOGO.jpg\"
+        alt=\"Tech-Box\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/tech-box\" class=\"heading\">Tech-Box</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/lets-play-indie-with-christonian\"
+        title=\"Let's Play Indie Games with Christonian\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/8/7127/crop_120x90/christonian_300x300.png\"
+        alt=\"Let's Play Indie Games with Christonian\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/groups/lets-play-indie-with-christonian\"
+        class=\"heading\">Let's Play Indie Games with Christonian</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEntertainment &amp; Press  with 144 members
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
         class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
         id=\"div-ga-MODDB_MPU_3\"></div>\n<script>\n$(document).ready(function() {\nif($(\".column.span-300\").length)
         {\n\tcolumnBottom = $(\".column.span-300\").position().top + $(\".column.span-300\").outerHeight(true)
@@ -635,13 +653,18 @@ interactions:
         for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">374 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5816 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/groups\",\"name\":\"Groups\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody\",\"name\":\"Humor,
         satire, parody\",\"image\":\"https://media.moddb.com/images/groups/1/3/2933/preview.jpg\"}}]}</script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
-        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"community\",\r\n\t\t\t\t\t\t\ttags:
@@ -650,7 +673,7 @@ interactions:
         0.05,\r\n\t\t\t\t\t\t\tusFloorprice: 0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -664,9 +687,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697387220\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697663116\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697387220\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697663116\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -939,10 +962,9 @@ interactions:
         {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
         viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
-        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
-        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
-        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentemail\").after('<input
+        type=\"hidden\" name=\"IyNkMjY0NWI0OGEyN2Q5YmExZTczZDVhM2Y5ZWQ4ZTUxMDQ0NjEwMTY0NTdqc2ZpZWxk\"
+        value=\"1\" />');\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
         {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
         link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
         true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
@@ -955,7 +977,7 @@ interactions:
         style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
         = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
         > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=666\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
         {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
         {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
         : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
@@ -967,55 +989,8 @@ interactions:
         false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
         false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
         false);\n$(\".01273214f4f917bc3d446f3d0f6bb1bdjoin\").saveUpdate(\"join\",
-        false);\n\r\n\t\t\t\t\t$(\"#tagsmorebtn\").click(function(){\r\n\t\t\t\t\t\tvar
-        button = $(this).prop(\"disabled\", true);\r\n\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype:
-        \"POST\", url: urlPath(\"/tags/ajax/more\"), timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata:
-        {ajax: \"t\", sitearea: $(\"#tagssitearea\").val(), siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror:
-        function(response, error, exception) {\r\n\t\t\t\t\t\t\t\t$.achtung({message:
-        \"An error has occurred performing the action requested. Please try again
-        shortly.\", className: \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\tbutton.prop(\"disabled\",
-        false);\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response) {\r\n\t\t\t\t\t\t\t\tif(response[\"success\"]
-        && response[\"tags\"]) {\r\n\t\t\t\t\t\t\t\t\tbutton.remove();\r\n\r\n\t\t\t\t\t\t\t\t\tfor(i
-        in response[\"tags\"]) {\r\n\t\t\t\t\t\t\t\t\t\tif($(\".rowtagstag\"+response[\"tags\"][i][\"tagid\"].replace(\"-\",
-        \"\")).length == 0) {\r\n\t\t\t\t\t\t\t\t\t\t\tvar clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
-        $(this).attr(\"href\").replace(/TAGID/g, response[\"tags\"][i][\"tagid\"]).replace(/SITEAREAID/g,
-        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
-        ? response[\"tags\"][i][\"tag\"] : \"\");\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t}
-        else if(response[\"success\"]) {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message:
-        response[\"text\"], className: \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t}
-        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
-        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t\tbutton.prop(\"disabled\",
-        false);\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\treturn
-        false;\r\n\t\t\t\t\t});\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
-        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
-        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=groups\",{minchars:
-        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
-        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
-        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
-        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
-        in length and can only contain letters, numbers and spaces).\", className:
-        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
-        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
-        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
-        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
-        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
-        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
-        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
-        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
-        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
-        the action requested. Please try again shortly.\", className: \"achtungFail\",
-        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
-        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
-        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
-        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
-        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
-        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
-        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
-        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
-        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
-        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
-        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
-        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false);\n$(\"#tagsform .tagaction\").saveUpdate();\n\r\n\t\t\t$(\".allbtn
+        a\").click(function(){\r\n\t\t\t\t$(\".allbtn a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
         a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
@@ -1066,7 +1041,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 81696d4e3c17f135-CDG
+      - 8183bd0d6f3c02cf-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -1074,11 +1049,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:27:00 GMT
+      - Wed, 18 Oct 2023 21:05:16 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ALLsXHQh7dJUQEpn3CT3XG9rCG7wfW3wkB6tVg3bTfycf%2BD6ZfBTM8UVefksSHwFKArQaDh9p4T1zXGsVBbTCA2ISfH1d6E%2BEFQ9SvZ3shRPm8te%2BI0jb9nyQp2GtdYjYNaPcnFSRwVXSn8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=U3eh2xfyz0%2F7dBtQSbJPaa1zDJbVEnMVCqgMNYLylKdutVcSY6orXE7g7Bf5OacizKwHD8Ec8BznpHLrGqR6NK4pm7%2BSLo6B%2BSAzgTkdasYpQIufIHUvN%2F0pHTufyB5XDyZAgadUBqjHfRc%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -1088,7 +1063,7 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=b1960d1097c9e4074d3efee4c9203441; expires=Sun, 15-Oct-2023 16:37:00
+      - masterchief=d2645b48a27d9ba1e73d5a3f9ed8e510; expires=Wed, 18-Oct-2023 21:15:16
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
@@ -1108,12 +1083,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko
     method: GET
     uri: https://www.moddb.com/groups/humour-satire-parody/tutorials/page/1?filter=t
   response:
@@ -1148,23 +1117,42 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
         }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
         id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
-        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
-        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/groups/humour-satire-parody/tutorials/\" /><input type=\"hidden\"
+        name=\"rememberme\" value=\"1\" /><input type=\"hidden\" name=\"members\"
+        value=\"1\" /><span class=\"ecfdabeeadfdformouter\"><span><span><span><span><span
+        class=\"ecfdabeeadfdforminner\"><input type=\"text\" name=\"IyNkMjY0NWI0OGEyN2Q5YmExZTczZDVhM2Y5ZWQ4ZTUxMDc4NDYwNTI1NjB1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><span class=\"ecfdabeeadfdformouter\"><span><span><span><span
+        class=\"ecfdabeeadfdforminner\"><input type=\"text\" name=\"IyNkMjY0NWI0OGEyN2Q5YmExZTczZDVhM2Y5ZWQ4ZTUxMDE0OTQ3NjYyNThib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><style> span.ecfdabeeadfdformouter
+        span span span span.ecfdabeeadfdforminner { display: none; } span.ecfdabeeadfdformouter
+        span span span span span.ecfdabeeadfdforminner { display: inline; }</style>\n<input
+        type=\"password\" name=\"password\" maxlength=\"100\" placeholder=\"Password\"
+        class=\"text password\" autocomplete=\"off\"  /><input type=\"submit\" name=\"members\"
+        value=\"GO\" class=\"button\" title=\"Sign In\"  /></form>\t\t\t<span class=\"login\"
+        style=\"display: none;\">or with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Steam\"></a><a href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a
+        href=\"/members/loginext/twitter\" class=\"twittericonsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Twitter\"></a><a
+        href=\"/members/loginext/facebook\" class=\"facebookiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Facebook\"></a></span>\r\n\t\t\t
         \r\n\t\t</div>\r\n\r\n\t\t<h1>Tutorials - Humor, satire, parody</h1>\r\n\t\t<a
         href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
         class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
@@ -1258,7 +1246,9 @@ interactions:
         <a href=\"/groups/humour-satire-parody/tutorials\">tutorial list</a> with
         no filter applied, to browse all available. <a href=\"/groups/humour-satire-parody/tutorials/add\">Post
         tutorial</a> and help us achieve our mission of showcasing the best content
-        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        from all developers. <a href=\"/members/register\">Join now</a> to share your
+        own content, we welcome creators and consumers alike and look forward to your
+        comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
         class=\"column span-300 last tabarticles\"><div style=\"clear: both;\"></div>\r\n<div
         class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
         class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
@@ -1266,7 +1256,7 @@ interactions:
         menubox\" id=\"groupsinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
-        title=\"Unfollow\">Unfollow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
         title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/2933\" class=\"joinicon
         01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join group\">Join
@@ -1289,7 +1279,7 @@ interactions:
         rel=\"nofollow\">Join group</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
-        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Unfollow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
         class=\"normalbox menubox\" id=\"articlesstats\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tutorial Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
@@ -1317,13 +1307,18 @@ interactions:
         support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">374 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5816 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/groups\",\"name\":\"Groups\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody\",\"name\":\"Humor,
         satire, parody\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody/tutorials\",\"name\":\"Tutorials\"}}]}</script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"community\",\r\n\t\t\t\t\t\t\ttags:
@@ -1333,7 +1328,7 @@ interactions:
         0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -1347,9 +1342,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697387223\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697663119\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697387223\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697663119\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -1403,7 +1398,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 81696d5e5dda2a7c-CDG
+      - 8183bd1b9da80209-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -1411,11 +1406,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:27:03 GMT
+      - Wed, 18 Oct 2023 21:05:19 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=e%2B%2BRxfm9VCiHMBI%2FccqDwPNC1s9f6snde39NCpITBg1%2BT8X%2FLiGmO3%2Bn%2FwlXztw079%2BiqxfqPI%2F4t3L%2BwowKYPtfiWC4ZRfqyvpFrqJpzkCVGS%2BgRGV%2BWacyBkH2iWllTspQ9QmgsTqF1xc%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=23jNO0Yx301tqBc1pqhvF2PRNUjZOTh96nPzsRNrNO3z39sNvnCSZt0eUzkASIJrQKjrYgqDM9pPmvUkXevfOF7vOKW1M3SsuM1nebXo1r%2FGfFVlgYc8k%2BCq09oaJ9woF%2FJFGyAMSFEezsw%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -1425,7 +1420,7 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=b1960d1097c9e4074d3efee4c9203441; expires=Sun, 15-Oct-2023 16:37:03
+      - masterchief=d2645b48a27d9ba1e73d5a3f9ed8e510; expires=Wed, 18-Oct-2023 21:15:19
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
@@ -1445,13 +1440,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/60.0.3112.113 Safari/537.36
     method: GET
     uri: https://www.moddb.com/groups/humour-satire-parody/tutorials/page/3?filter=t
   response:
@@ -1486,33 +1474,51 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
         }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
         id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
-        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
-        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
-        \r\n\t\t</div>\r\n\r\n\t\t<h1>Tutorials - Humor, satire, parody</h1>\r\n\t\t<a
-        href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
-        class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
-        \r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
-        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
-        title=\"New this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div
-        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
-        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
-        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
-        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/groups/humour-satire-parody/tutorials/\" /><input type=\"hidden\"
+        name=\"rememberme\" value=\"1\" /><input type=\"hidden\" name=\"members\"
+        value=\"1\" /><span class=\"dedeccefecfebformouter\"><span><span><span><span><span><span
+        class=\"dedeccefecfebforminner\"><input type=\"text\" name=\"IyM0OTc3Y2ZiYmYyOGU4MThkNDYxNWM5Mjg2YjZjNzQyNTk2MDE2Njk3NDRib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span></span><span class=\"dedeccefecfebformouter\"><span><span><span><span
+        class=\"dedeccefecfebforminner\"><input type=\"text\" name=\"IyM0OTc3Y2ZiYmYyOGU4MThkNDYxNWM5Mjg2YjZjNzQyNTczMjg0NDc2Mjl1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><style> span.dedeccefecfebformouter
+        span span span span span span { display: none; } span.dedeccefecfebformouter
+        span { display: inline; }</style>\n<input type=\"password\" name=\"password\"
+        maxlength=\"100\" placeholder=\"Password\" class=\"text password\" autocomplete=\"off\"
+        \ /><input type=\"submit\" name=\"members\" value=\"GO\" class=\"button\"
+        title=\"Sign In\"  /></form>\t\t\t<span class=\"login\" style=\"display: none;\">or
+        with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float: right;
+        margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericonsml\" style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Facebook\"></a></span>\r\n\t\t\t \r\n\t\t</div>\r\n\r\n\t\t<h1>Tutorials -
+        Humor, satire, parody</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"Mod
+        DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t \r\n\t\t\t<li><a href=\"/today\"
+        title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New
+        this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New this
+        month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
         href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
         href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
         href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
@@ -1596,7 +1602,9 @@ interactions:
         <a href=\"/groups/humour-satire-parody/tutorials\">tutorial list</a> with
         no filter applied, to browse all available. <a href=\"/groups/humour-satire-parody/tutorials/add\">Post
         tutorial</a> and help us achieve our mission of showcasing the best content
-        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        from all developers. <a href=\"/members/register\">Join now</a> to share your
+        own content, we welcome creators and consumers alike and look forward to your
+        comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
         class=\"column span-300 last tabarticles\"><div style=\"clear: both;\"></div>\r\n<div
         class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
         class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
@@ -1604,7 +1612,7 @@ interactions:
         menubox\" id=\"groupsinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
-        title=\"Unfollow\">Unfollow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
         title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/2933\" class=\"joinicon
         01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join group\">Join
@@ -1627,7 +1635,7 @@ interactions:
         rel=\"nofollow\">Join group</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
-        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Unfollow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
         class=\"normalbox menubox\" id=\"articlesstats\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tutorial Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
@@ -1655,13 +1663,18 @@ interactions:
         support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">1271 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5816 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/groups\",\"name\":\"Groups\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody\",\"name\":\"Humor,
         satire, parody\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody/tutorials\",\"name\":\"Tutorials\"}}]}</script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"community\",\r\n\t\t\t\t\t\t\ttags:
@@ -1671,7 +1684,7 @@ interactions:
         0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -1685,9 +1698,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697387227\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697663120\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697387227\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697663120\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -1741,7 +1754,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 81696d7769d32a40-CDG
+      - 8183bd23597dd646-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -1749,11 +1762,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:27:07 GMT
+      - Wed, 18 Oct 2023 21:05:20 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JLB06qmZmv7KrxcOJKRINKBECiJvHwPFP71o%2BiXL%2Fid%2FJNbiwFH9rqmU6yDHIsawfB%2F7NuieWFZ32grvU8%2F1znUyYJ5fHYdPSG%2Bs0s1vDR4bBLsZI8%2FxLS687tw47CHrTFS%2BdeS7ztAxOGo%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2BAu4t3SfL9Trb3HvrQgYgwM2FtxggS5j4KBYSkO07w8JOvAH1%2BNWVM1BrJJ6try2jFUF0QuTJ7q2wmO8bfqRkyqSzitu4vyJajbDHi%2BGnWAHTOftD0LyOX0Ksy7RkYyXcVXAioyD8OTMJU8%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -1763,7 +1776,9 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=b1960d1097c9e4074d3efee4c9203441; expires=Sun, 15-Oct-2023 16:37:07
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=4977cfbbf28e818d4615c9286b6c7425; expires=Wed, 18-Oct-2023 21:15:20
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
@@ -1783,13 +1798,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b1960d1097c9e4074d3efee4c9203441
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/55.0.2883.87 Safari/537.36
     method: GET
     uri: https://www.moddb.com/groups/humour-satire-parody/tutorials/page/1?filter=t&meta=1
   response:
@@ -1824,23 +1832,42 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
         }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
         id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
-        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
-        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/groups/humour-satire-parody/tutorials/\" /><input type=\"hidden\"
+        name=\"rememberme\" value=\"1\" /><input type=\"hidden\" name=\"members\"
+        value=\"1\" /><span class=\"eaaedcdabformouter\"><span><span><span><span><span
+        class=\"eaaedcdabforminner\"><input type=\"text\" name=\"IyM1MDA1NzZhNjU3ODk2NDM4ZjQ5ZWRmNWFkMDkwNjUzZDY1MjA3MDMyMzl1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span><span class=\"eaaedcdabformouter\"><span><span><span
+        class=\"eaaedcdabforminner\"><input type=\"text\" name=\"IyM1MDA1NzZhNjU3ODk2NDM4ZjQ5ZWRmNWFkMDkwNjUzZDc0MTUyNzkwNzVib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span><style> span.eaaedcdabformouter span span
+        span.eaaedcdabforminner { display: none; } span.eaaedcdabformouter span span
+        span span span.eaaedcdabforminner { display: inline; }</style>\n<input type=\"password\"
+        name=\"password\" maxlength=\"100\" placeholder=\"Password\" class=\"text
+        password\" autocomplete=\"off\"  /><input type=\"submit\" name=\"members\"
+        value=\"GO\" class=\"button\" title=\"Sign In\"  /></form>\t\t\t<span class=\"login\"
+        style=\"display: none;\">or with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Steam\"></a><a href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a
+        href=\"/members/loginext/twitter\" class=\"twittericonsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Twitter\"></a><a
+        href=\"/members/loginext/facebook\" class=\"facebookiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Facebook\"></a></span>\r\n\t\t\t
         \r\n\t\t</div>\r\n\r\n\t\t<h1>Tutorials - Humor, satire, parody</h1>\r\n\t\t<a
         href=\"/\" class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
         class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t
@@ -1934,7 +1961,9 @@ interactions:
         <a href=\"/groups/humour-satire-parody/tutorials\">tutorial list</a> with
         no filter applied, to browse all available. <a href=\"/groups/humour-satire-parody/tutorials/add\">Post
         tutorial</a> and help us achieve our mission of showcasing the best content
-        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        from all developers. <a href=\"/members/register\">Join now</a> to share your
+        own content, we welcome creators and consumers alike and look forward to your
+        comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
         class=\"column span-300 last tabarticles\"><div style=\"clear: both;\"></div>\r\n<div
         class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
         class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
@@ -1942,7 +1971,7 @@ interactions:
         menubox\" id=\"groupsinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
-        title=\"Unfollow\">Unfollow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=2933\"
         class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
         title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/2933\" class=\"joinicon
         01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join group\">Join
@@ -1965,7 +1994,7 @@ interactions:
         rel=\"nofollow\">Join group</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=2933\"
-        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Unfollow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
         class=\"normalbox menubox\" id=\"articlesstats\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tutorial Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
@@ -1993,13 +2022,18 @@ interactions:
         support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">1271 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5816 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/groups\",\"name\":\"Groups\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody\",\"name\":\"Humor,
         satire, parody\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/groups/humour-satire-parody/tutorials\",\"name\":\"Tutorials\"}}]}</script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"community\",\r\n\t\t\t\t\t\t\ttags:
@@ -2009,7 +2043,7 @@ interactions:
         0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -2023,9 +2057,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697387229\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697663121\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697387229\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697663121\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -2079,7 +2113,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 81696d8878d422b4-CDG
+      - 8183bd2bba4cf120-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -2087,11 +2121,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:27:09 GMT
+      - Wed, 18 Oct 2023 21:05:21 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OgjzM8SJcyVHyJfaetgHq079sHElqnQDWnJaNoScrpeL0hzrdD5mKGwz%2FzgTesVc31DYqqIpQx4G%2FUdKP5Q0XkAyeSfkemDTx9VPOsx3HIQgH15HS9wc8CEIzEbRPIleGtBhjTpwvifYESU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DnKu%2F0upaKcJYsVPndnbS9haQ0TE4%2FEAEnuaYZSUXUJWZVGK1YqAl1NQXJEoYeY%2BK9Mywp004M%2BQYdxtNT2K%2FP2SOUN0DaZjuNO%2FzuCO2lE84HqMJp2ODRcMsMriguKKRMDalMYkBV41PDY%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -2101,7 +2135,9 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=b1960d1097c9e4074d3efee4c9203441; expires=Sun, 15-Oct-2023 16:37:09
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=500576a657896438f49edf5ad090653d; expires=Wed, 18-Oct-2023 21:15:21
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

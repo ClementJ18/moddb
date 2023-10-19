@@ -21,7 +21,7 @@ class FakeResponse:
         return self.json_content
 
 
-def sample_list(l, k):
+def sample_list(l: list, k: int) -> list:
     sample = min(k, len(l))
     if l:
         return random.sample(l, sample)

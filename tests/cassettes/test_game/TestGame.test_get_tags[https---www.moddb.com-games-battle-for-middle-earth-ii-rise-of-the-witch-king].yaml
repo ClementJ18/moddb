@@ -8,12 +8,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=921578fcd062bb3e558be77e09254658; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=921578fcd062bb3e558be77e09254658
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
     method: GET
     uri: https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king
   response:
@@ -62,27 +56,44 @@ interactions:
         w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
         true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
         e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
-        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
-        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
-        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"Electronic
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"Electronic
         Arts\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single Player\",\"Multiplayer\",\"Military\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Blockbuster\",\"Strategy\"],\"name\":
         \"Battle for Middle-earth II: Rise of the Witch King\",\"platforms\":[\"PC\"]}],\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
         {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
-        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><link
-        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
-        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
-        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
-        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
-        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
-        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
-        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
-        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
-        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
         value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
         type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
         class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/\" /><input
+        type=\"hidden\" name=\"rememberme\" value=\"1\" /><input type=\"hidden\" name=\"members\"
+        value=\"1\" /><span class=\"dfbabddfeacbfdformouter\"><span><span><span><span><span><span
+        class=\"dfbabddfeacbfdforminner\"><input type=\"text\" name=\"IyMyZmFiNGIyNWFiNDgwOTE5YzEwOWFkOWFiZWRlMWFiZTcxMTk2Nzg3MDZ1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span></span><span class=\"dfbabddfeacbfdformouter\"><span><span><span><span
+        class=\"dfbabddfeacbfdforminner\"><input type=\"text\" name=\"IyMyZmFiNGIyNWFiNDgwOTE5YzEwOWFkOWFiZWRlMWFiZTYyNzY2MjIzMDNib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><style> span.dfbabddfeacbfdformouter
+        span span span span.dfbabddfeacbfdforminner { display: none; } span.dfbabddfeacbfdformouter
+        span span span span span span.dfbabddfeacbfdforminner { display: inline; }</style>\n<input
+        type=\"password\" name=\"password\" maxlength=\"100\" placeholder=\"Password\"
+        class=\"text password\" autocomplete=\"off\"  /><input type=\"submit\" name=\"members\"
+        value=\"GO\" class=\"button\" title=\"Sign In\"  /></form>\t\t\t<span class=\"login\"
+        style=\"display: none;\">or with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Steam\"></a><a href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a
+        href=\"/members/loginext/twitter\" class=\"twittericonsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Twitter\"></a><a
+        href=\"/members/loginext/facebook\" class=\"facebookiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Facebook\"></a></span>\r\n\t\t\t
         \r\n\t\t</div>\r\n\r\n\t\t<h1>Battle for Middle-earth II: Rise of the Witch
         King Windows game</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"Mod DB
         Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t \r\n\t\t\t<li
@@ -198,8 +209,8 @@ interactions:
         class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
         rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
         \r\n\t\t\t<h4><a href=\"/mods/age-of-the-rings-realms-in-exile/news/annatar-sub-faction\">Annatar
-        Sub-faction</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-14T20:47:40+00:00\">19hours
-        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        Sub-faction</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-14T20:47:40+00:00\">Oct
+        14 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
         href=\"/mods/age-of-the-rings-realms-in-exile\" title=\"Mod\">Age of the Ring:
         Realms in Exile</a>  <a href=\"/mods/age-of-the-rings-realms-in-exile/news/annatar-sub-faction\"
         class=\"commenticon\">3 comments</a>  \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
@@ -317,7 +328,7 @@ interactions:
         datetime=\"2023-09-24T18:23:11+00:00\">Sep 24 2023</time>\t\t\t</span>\r\n\t\t\t<span
         class=\"subheading\">\r\n\t\t\t\t<a href=\"/mods/age-of-the-rings-realms-in-exile\"
         title=\"Mod\">Age of the Ring: Realms in Exile</a>  <a href=\"/mods/age-of-the-rings-realms-in-exile/news/realms-in-exile-what-was-and-what-it-will-be\"
-        class=\"commenticon\">8 comments</a>  \t\t\t</span>\r\n\t\t\t<p>How this mod
+        class=\"commenticon\">9 comments</a>  \t\t\t</span>\r\n\t\t\t<p>How this mod
         came into being and catching up on how development is going.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
         class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/articles/add\">Post
         article</a> | <a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/articles\">More
@@ -326,7 +337,9 @@ interactions:
         matching the criteria specified. We suggest you try the <a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/articles\">article
         list</a> with no filter applied, to browse all available. <a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/articles/add\">Post
         article</a> and help us achieve our mission of showcasing the best content
-        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        from all developers. <a href=\"/members/register\">Join now</a> to share your
+        own content, we welcome creators and consumers alike and look forward to your
+        comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
         class=\"normalbox browsebox\" id=\"downloadsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
         class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/downloads/add/#downloadsform\"
         class=\"addicon\"  title=\"Add file\">Add file</a> <a href=\"https://rss.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king/downloads/feed/rss.xml\"
@@ -352,7 +365,7 @@ interactions:
         class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-09-28T19:13:30+00:00\">Sep
         28 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
         href=\"/mods/edain-mod\" title=\"Mod\">Edain Mod</a>  Full Version <a href=\"/mods/edain-mod/downloads/edain-47\"
-        class=\"commenticon\">19 comments</a>  \t\t\t</span>\r\n\t\t\t<p>This download
+        class=\"commenticon\">20 comments</a>  \t\t\t</span>\r\n\t\t\t<p>This download
         contains all files you need to play the latest version (4.7) of the Edain
         Mod. If you experience any problems, please refer to the Readme...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
         class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/the-history-of-ages-final/downloads/update-electronic-arts-25-09-2023\"
@@ -402,7 +415,9 @@ interactions:
         matching the criteria specified. We suggest you try the <a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/downloads\">file
         list</a> with no filter applied, to browse all available. <a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/downloads/add\">Add
         file</a> and help us achieve our mission of showcasing the best content from
-        all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        all developers. <a href=\"/members/register\">Join now</a> to share your own
+        content, we welcome creators and consumers alike and look forward to your
+        comments.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
         class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
         class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
         class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
@@ -444,8 +459,8 @@ interactions:
         class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
         title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8525673\"
         class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
-        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
-        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
         style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
         id=\"8517785\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
         \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
@@ -519,8 +534,8 @@ interactions:
         class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
         title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8503807\"
         class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
-        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
-        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
         style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
         id=\"8445978\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
         \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
@@ -535,8 +550,7 @@ interactions:
         class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
         title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8445978\"
         class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
-        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
-        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">0 votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
         style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
         id=\"8395744\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
         \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/lonely-mountain\"
@@ -613,11 +627,30 @@ interactions:
         clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
         class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king/#commentform\"
         method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
-        value=\"5e20f8499e3db481cf1e833b525d2776\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"621a349da33cfa7082eb99fd22b918d5\" /><input type=\"hidden\" name=\"replyid\"
         value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
-        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
-        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentguest clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/members/loginext/steam\" class=\"steamicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleicon\" style=\"float: right;
+        margin-left: 6px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericon\" style=\"float: right; margin-left: 6px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Facebook\"></a>Your
+        comment will be anonymous unless you <a href=\"/members/register\">join the
+        community</a>. Or sign in with your social account:</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><textarea
+        name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\" required=\"required\"
+        ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowcommentemail
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"commentemail\">&#69;&#109;&#97;&#105;&#108;</label>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><span class=\"acbedcceacceformouter\"><span><span><span
+        class=\"acbedcceacceforminner\"><input type=\"text\" name=\"IyMyZmFiNGIyNWFiNDgwOTE5YzEwOWFkOWFiZWRlMWFiZTMyMTYxODQ3OTVlbWFpbA:E::E:\"
+        maxlength=\"500\" value=\"\" id=\"commentemail\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span><span class=\"acbedcceacceformouter\"><span><span><span><span
+        class=\"acbedcceacceforminner\"><input type=\"text\" name=\"IyMyZmFiNGIyNWFiNDgwOTE5YzEwOWFkOWFiZWRlMWFiZTE5MTczNjEzODlib3RjYXRjaGVy\"
+        maxlength=\"500\" class=\"text\" autocomplete=\"off\"  /></span></span></span></span></span><style>
+        span.acbedcceacceformouter span span span span { display: none; } span.acbedcceacceformouter
+        span span { display: inline; }</style>\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
         class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
         type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
         \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
@@ -678,7 +711,7 @@ interactions:
         votes submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
         method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
         name=\"sitearea\" value=\"games\" /><input type=\"hidden\" name=\"siteareaid\"
-        value=\"10009\" /><input type=\"hidden\" name=\"hash\" value=\"f2301aca79d3c5449221cb53fd295bc6\"
+        value=\"10009\" /><input type=\"hidden\" name=\"hash\" value=\"89a522d738a2f73cf0fc83f5b99343b2\"
         /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
         style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
         Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
@@ -686,10 +719,10 @@ interactions:
         value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
         value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
         value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
-        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
-        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
-        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
-        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Ratings
+        closed.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\" style=\"clear:
+        both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\" rows=\"10\"
+        placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
         class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
         this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
         value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
@@ -723,61 +756,46 @@ interactions:
         class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
         class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
-        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king/#tagsform\"
         method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
-        value=\"5e20f8499e3db481cf1e833b525d2776\" />\t\t\t\t\t<div class=\"row rowtagstaglordofthering2
+        value=\"621a349da33cfa7082eb99fd22b918d5\" />\t\t\t\t\t<div class=\"row rowtagstaglordofthering2
         clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/lord-of-the-ring-2\">lord
-        of the ring 2</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=lord-of-the-ring-2&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e\"
+        of the ring 2</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=lord-of-the-ring-2&sitearea=games&siteareaid=10009&hash=\"
         title=\"2 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=lord-of-the-ring-2&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
+        href=\"/tags/ajax/add?tag=lord-of-the-ring-2&sitearea=games&siteareaid=10009&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagmoddable clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/moddable\">Moddable</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=moddable&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e\"
+        href=\"/tags/moddable\">Moddable</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=moddable&sitearea=games&siteareaid=10009&hash=\"
         title=\"6 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=moddable&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
+        href=\"/tags/ajax/add?tag=moddable&sitearea=games&siteareaid=10009&hash=&negative=1\"
         title=\"1 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagmultiplayer clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
         href=\"/tags/multiplayer\">Multiplayer</a><span style=\"float: right;\"><a
-        href=\"/tags/ajax/add?tag=multiplayer&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e\"
+        href=\"/tags/ajax/add?tag=multiplayer&sitearea=games&siteareaid=10009&hash=\"
         title=\"4 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=multiplayer&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
+        href=\"/tags/ajax/add?tag=multiplayer&sitearea=games&siteareaid=10009&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagsingleplayer clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
         class=\"helper\"></p><p><a href=\"/tags/single-player\">Single-Player</a><span
-        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=single-player&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e\"
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=single-player&sitearea=games&siteareaid=10009&hash=\"
         title=\"4 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=single-player&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
+        href=\"/tags/ajax/add?tag=single-player&sitearea=games&siteareaid=10009&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagrealtime clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/real-time\">Real Time</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=real-time&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e\"
+        href=\"/tags/real-time\">Real Time</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=real-time&sitearea=games&siteareaid=10009&hash=\"
         title=\"3 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=real-time&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
+        href=\"/tags/ajax/add?tag=real-time&sitearea=games&siteareaid=10009&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagrts clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/rts\">RTS</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=rts&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e\"
+        href=\"/tags/rts\">RTS</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=rts&sitearea=games&siteareaid=10009&hash=\"
         title=\"3 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=rts&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
+        href=\"/tags/ajax/add?tag=rts&sitearea=games&siteareaid=10009&hash=&negative=1\"
         title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row rowtagstagwar clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
-        href=\"/tags/war\">War</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=war&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e\"
+        href=\"/tags/war\">War</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=war&sitearea=games&siteareaid=10009&hash=\"
         title=\"3 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=war&sitearea=games&siteareaid=10009&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
-        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
-        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=41340209c6aef67121c0aac07425e13e\"
-        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
-        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=41340209c6aef67121c0aac07425e13e&negative=1\"
-        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
-        type=\"hidden\" name=\"hash\" value=\"41340209c6aef67121c0aac07425e13e\" id=\"tagshash\"
-        /><input type=\"hidden\" name=\"sitearea\" value=\"games\" id=\"tagssitearea\"
-        /><input type=\"hidden\" name=\"siteareaid\" value=\"10009\" id=\"tagssiteareaid\"
-        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
-        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
-        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
-        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
-        type=\"submit\" name=\"morebtn\" value=\"More\" id=\"tagsmorebtn\"  />\t\t\t\t\t\t<input
-        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        href=\"/tags/ajax/add?tag=war&sitearea=games&siteareaid=10009&hash=&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
         a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
         0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
         menubox\" id=\"gamesbuttons\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
@@ -812,13 +830,13 @@ interactions:
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
         tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/top\">33 of 69,433</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/top\">31 of 69,465</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/stats\">2,848,717
-        (316 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/stats\">2,850,168
+        (349 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2023-09-26T20:00:05+00:00\"
-        itemprop=\"dateModified\">2 weeks ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        itemprop=\"dateModified\">3 weeks ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king/watchers\">598
         members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
@@ -839,39 +857,39 @@ interactions:
         class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
         clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games\" class=\"button\">View All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a
         href=\"/games/top\" class=\"button buttonalt\">Top Games</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/medal-of-honor-airborne\"
-        title=\"Medal of Honor: Airborne\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/292/crop_120x90/profile.jpg\"
-        alt=\"Medal of Honor: Airborne\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/games/medal-of-honor-airborne\" class=\"heading\">Medal of Honor:
-        Airborne</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tFirst
-        Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/cc-tiberium-wars\"
-        title=\"C&#038;C3: Tiberium Wars\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/196/crop_120x90/cc3_thumb.jpg\"
-        alt=\"C&#038;C3: Tiberium Wars\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/games/cc-tiberium-wars\" class=\"heading\">C&#038;C3: Tiberium Wars</a>\r\n\t\t\t\t\t\t<span
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/medal-of-honor-allied-assault-spearhead\"
+        title=\"Medal of Honor: Allied Assault - Spearhead\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/games/1/52/51724/crop_120x90/logo.jpg\"
+        alt=\"Medal of Honor: Allied Assault - Spearhead\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/games/medal-of-honor-allied-assault-spearhead\"
+        class=\"heading\">Medal of Honor: Allied Assault - Spearhead</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/battle-for-middle-earth\"
+        title=\"Battle for Middle-earth\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/101/crop_120x90/profile.jpg\"
+        alt=\"Battle for Middle-earth\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth\" class=\"heading\">Battle for Middle-earth</a>\r\n\t\t\t\t\t\t<span
         class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/cc-generals\"
-        title=\"C&#038;C: Generals\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/49/crop_120x90/preview.jpg\"
-        alt=\"C&#038;C: Generals\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/games/cc-generals\" class=\"heading\">C&#038;C: Generals</a>\r\n\t\t\t\t\t\t<span
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/company-of-heroes-2\"
+        title=\"Company of Heroes 2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/19/18050/crop_120x90/preview.jpg\"
+        alt=\"Company of Heroes 2\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/company-of-heroes-2\" class=\"heading\">Company of Heroes 2</a>\r\n\t\t\t\t\t\t<span
         class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/cc-tiberium-alliances\"
-        title=\"C&#038;C: Tiberium Alliances\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/17/16406/crop_120x90/preview.png\"
-        alt=\"C&#038;C: Tiberium Alliances\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/games/cc-tiberium-alliances\" class=\"heading\">C&#038;C: Tiberium
-        Alliances</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tReal
-        Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/cc-red-alert-2\"
-        title=\"C&#038;C: Red Alert 2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/44/crop_120x90/profile.jpg\"
-        alt=\"C&#038;C: Red Alert 2\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
-        href=\"/games/cc-red-alert-2\" class=\"heading\">C&#038;C: Red Alert 2</a>\r\n\t\t\t\t\t\t<span
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/empire-total-war\"
+        title=\"Empire: Total War\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/12/11267/crop_120x90/etw_screen.jpg\"
+        alt=\"Empire: Total War\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/empire-total-war\" class=\"heading\">Empire: Total War</a>\r\n\t\t\t\t\t\t<span
         class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/command-conquer-remastered\"
-        title=\"Command &#038; Conquer: Remastered\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/73/72316/crop_120x90/p.jpg\"
-        alt=\"Command &#038; Conquer: Remastered\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/games/command-conquer-remastered\"
-        class=\"heading\">Command &#038; Conquer: Remastered</a>\r\n\t\t\t\t\t\t<span
-        class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/red-alert-3-uprising\"
+        title=\"Red Alert 3: Uprising\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/15/14927/crop_120x90/preview.jpg\"
+        alt=\"Red Alert 3: Uprising\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/red-alert-3-uprising\" class=\"heading\">Red Alert 3: Uprising</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/harry-potter-and-the-sorcerers-stone\"
+        title=\"Harry Potter And The Sorcerer's Stone\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/17/16759/crop_120x90/HarryPotterPSGameVersionOne2.jpg\"
+        alt=\"Harry Potter And The Sorcerer's Stone\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/games/harry-potter-and-the-sorcerers-stone\"
+        class=\"heading\">Harry Potter And The Sorcerer's Stone</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tAdventure \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
         \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
         both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
         class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
@@ -897,13 +915,18 @@ interactions:
         for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">6028 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king\",\"name\":\"Battle
         for Middle-earth II: Rise of the Witch King\",\"image\":\"https://media.moddb.com/images/games/1/11/10009/lotr_rise_of_witch_king_box.jpg\"}}]}</script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
-        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
-        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
         \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
         adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
         \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\t\ttags:
@@ -914,7 +937,7 @@ interactions:
         0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
         0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
         \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
-        \"NL\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
         \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
         {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
         \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
@@ -928,9 +951,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697386941\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697662845\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697386941\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697662845\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -1043,10 +1066,9 @@ interactions:
         {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
         viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
-        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
-        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
-        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentemail\").after('<input
+        type=\"hidden\" name=\"IyMyZmFiNGIyNWFiNDgwOTE5YzEwOWFkOWFiZWRlMWFiZTQ2OTEwNjE5NzVqc2ZpZWxk\"
+        value=\"1\" />');\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
         {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
         link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
         true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
@@ -1059,7 +1081,7 @@ interactions:
         style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
         = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
         > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
-        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=666\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
         {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
         {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
         : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
@@ -1070,54 +1092,8 @@ interactions:
         else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
         false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
-        false);\n$(\"form.ratingform\").rating(\"\", 20, 20);\n\r\n\t\t\t\t\t$(\"#tagsmorebtn\").click(function(){\r\n\t\t\t\t\t\tvar
-        button = $(this).prop(\"disabled\", true);\r\n\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype:
-        \"POST\", url: urlPath(\"/tags/ajax/more\"), timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata:
-        {ajax: \"t\", sitearea: $(\"#tagssitearea\").val(), siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror:
-        function(response, error, exception) {\r\n\t\t\t\t\t\t\t\t$.achtung({message:
-        \"An error has occurred performing the action requested. Please try again
-        shortly.\", className: \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\tbutton.prop(\"disabled\",
-        false);\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response) {\r\n\t\t\t\t\t\t\t\tif(response[\"success\"]
-        && response[\"tags\"]) {\r\n\t\t\t\t\t\t\t\t\tbutton.remove();\r\n\r\n\t\t\t\t\t\t\t\t\tfor(i
-        in response[\"tags\"]) {\r\n\t\t\t\t\t\t\t\t\t\tif($(\".rowtagstag\"+response[\"tags\"][i][\"tagid\"].replace(\"-\",
-        \"\")).length == 0) {\r\n\t\t\t\t\t\t\t\t\t\t\tvar clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
-        $(this).attr(\"href\").replace(/TAGID/g, response[\"tags\"][i][\"tagid\"]).replace(/SITEAREAID/g,
-        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
-        ? response[\"tags\"][i][\"tag\"] : \"\");\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t}
-        else if(response[\"success\"]) {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message:
-        response[\"text\"], className: \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t}
-        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
-        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t\tbutton.prop(\"disabled\",
-        false);\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\treturn
-        false;\r\n\t\t\t\t\t});\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
-        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
-        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=games\",{minchars:
-        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
-        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
-        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
-        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
-        in length and can only contain letters, numbers and spaces).\", className:
-        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
-        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
-        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
-        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
-        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
-        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
-        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
-        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
-        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
-        the action requested. Please try again shortly.\", className: \"achtungFail\",
-        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
-        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
-        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
-        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
-        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
-        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
-        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
-        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
-        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
-        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
-        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        false);\n$(\"form.ratingform\").rating(\"/members/register\", 20, 20);\n$(\"#tagsform
+        .tagaction\").saveUpdate();\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
         a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
         false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
         a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
@@ -1169,7 +1145,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8169667d99ef0159-CDG
+      - 8183b66dfa4ed5c5-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -1177,11 +1153,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:22:21 GMT
+      - Wed, 18 Oct 2023 21:00:45 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nQ2PCXy%2BBcmi2kQENRyoV1NkGiCGHh8FFjl3FYjHeHakWpeEwLBGa5Z1sovR0EAQQAYLAbuFdsOJVuAPEiITd888AcnTAuobZtQow0kMsYqrkwTlUHfGj7CDpeX3IUxws4xP2cPnQQjhO70%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ufblLQEDrKUzTStn9ChXkJW3XRdwBeSxTrIGqJ4%2FuxGjt%2Fk%2BaNUTFUcOnLZA3ZfHNI1iZnGbJQvE%2Bvefr2R4Xz2Ou8i1STqLlJ6zjD1KqjFh%2FZ3DcXruhZwMumekBDKNgtPi6g0Rq3Mb1vo%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -1191,7 +1167,7 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=921578fcd062bb3e558be77e09254658; expires=Sun, 15-Oct-2023 16:32:21
+      - masterchief=2fab4b25ab480919c109ad9abede1abe; expires=Wed, 18-Oct-2023 21:10:45
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
@@ -1211,13 +1187,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=921578fcd062bb3e558be77e09254658; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=921578fcd062bb3e558be77e09254658
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/60.0.3112.113 Safari/537.36
     method: GET
     uri: https://www.moddb.com/tags/ajax/more?ajax=t&sitearea=games&siteareaid=10009
   response:
@@ -1229,7 +1198,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 816966842b5a228e-CDG
+      - 8183b674b951d611-CDG
       Cache-Control:
       - no-store
       Connection:
@@ -1239,11 +1208,11 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:22:22 GMT
+      - Wed, 18 Oct 2023 21:00:46 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=b21%2BnlRpS6SU%2FLHwOUMcanklrr0BedLnwasbyccI00wX50E6IPOna9lyiHwwOzGRShbEUKCvtymnIEkYD6vjjY%2F9NaxQQIe1siVoDdEqFkLHt00embtMVp9C0fy1LqjtOo94HTP4%2FM%2BEA9U%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=pCs8eA7S9EwD1emLkCpSn9FXkfmIwp%2Bix6XbjXYDiDl8Mm2k3uBQYJyJ4BuzAMpH5Q4VIth6cUbaSQ5%2Bk3TK3S3iscT1dflx4YzrHLfsH%2BzYH6jyDfUaHwTG2XLqSAU8HSF7afSfRb5X6Og%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -1253,7 +1222,7 @@ interactions:
       referrer-policy:
       - strict-origin
       set-cookie:
-      - masterchief=921578fcd062bb3e558be77e09254658; expires=Sun, 15-Oct-2023 16:32:22
+      - masterchief=2fab4b25ab480919c109ad9abede1abe; expires=Wed, 18-Oct-2023 21:10:46
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

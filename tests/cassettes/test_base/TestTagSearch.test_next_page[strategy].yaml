@@ -8,12 +8,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b62c2781477227bbc8d61da8fcbd5820; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=b62c2781477227bbc8d61da8fcbd5820
-      User-Agent:
-      - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
     method: GET
     uri: https://www.moddb.com/tags/strategy
   response:
@@ -56,7 +50,7 @@ interactions:
         title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
         | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
         Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        class=\"updatescount\">1</span> update</a> | <a href=\"/forum/board/thread-watch\"
         title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
         | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
@@ -101,7 +95,7 @@ interactions:
         \r\n</div>\r\n<div class=\"column span-300-alt first\">\t<div class=\"normalbox
         browsebox\" id=\"tagsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
         class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
-        class=\"heading\">Tag \"Strategy\" &nbsp;(0 - 30 of 16,675)</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"heading\">Tag \"Strategy\" &nbsp;(0 - 30 of 16,680)</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
         class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\r\n\t\t\t\t<form action=\"https://www.moddb.com/tags\"
         name=\"filterform\" class=\"filter filterauto clear\" method=\"get\"><input
@@ -410,7 +404,7 @@ interactions:
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
         tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Tags</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags\">16,675</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags\">16,680</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/tags/?sort=relevance-desc\">Popular</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
@@ -419,46 +413,46 @@ interactions:
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Trending Tags</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
-        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>18
-        mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/map\">#map</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>17 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/track\">#track</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>17 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/multiplayer\">#multiplayer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>16 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/level\">#level</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>15 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/edgar\">#edgar</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>15 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/torronteras\">#torronteras</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>11 mentions</h5>\n\t\t\t\t\t\t<span
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>164
+        mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/track\">#track</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>164 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/madness\">#madness</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>164 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/motocross\">#motocross</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/bloodlines\">#bloodlines</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/vampire\">#vampire</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/the\">#the</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/masquerade\">#masquerade</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>13 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/horror\">#horror</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>12 mentions</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/fps\">#fps</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>12 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/mod\">#mod</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>11 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/action\">#action</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>10 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/black-edition\">#black-edition</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>10 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/painkiller\">#painkiller</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/3d\">#3d</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/textures\">#textures</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/primevil\">#primevil</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/action\">#action</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/adventure\">#adventure</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>6 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/indie\">#indie</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>9 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/doom\">#doom</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>9 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/tags/puzzle\">#puzzle</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/hd-textures\">#hd-textures</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/skin\">#skin</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/adventure\">#adventure</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/release\">#release</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>6 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/helloneighbor\">#helloneighbor</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>5 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/extract\">#extract</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>5 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/singleplayer\">#singleplayer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>5 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/sandbox\">#sandbox</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>4 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/anime\">#anime</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        href=\"/tags/retro\">#retro</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>6 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/single-player\">#single-player</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
         \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
         class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
         300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n \t<div class=\"normalbox
@@ -496,7 +490,7 @@ interactions:
         for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">6734 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5839 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/tags\",\"name\":\"Tags\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/tags/strategy\",\"name\":\"Strategy\"}}]}</script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script>\n<script>\n$(document).ready(function()
@@ -523,9 +517,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697386331\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697661944\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697386331\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697661944\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -590,7 +584,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8169579bcb3c2a64-CDG
+      - 8183a06e2ad4021e-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -598,11 +592,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:12:12 GMT
+      - Wed, 18 Oct 2023 20:45:44 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=q5I8dVZxhN8pYiZNPsxng7NaJ%2BXBiUccoL%2BhEoGMcuTjXUddnU7vISxsc4I%2BLK%2BRtcLn8YP2Hbl0G3fQWzOLrtOnKXv%2BD0UCjX1yVbFmCqwdWbAo3Bf27dXcCGvsu8BAB0q7zWm5BXR%2BIBY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=g%2BHGIAOgBSG8N6EeOVxgaDkzbufsih%2FK7WsjXi%2BcXqSc5YEZ9lJCWKDwu%2BTffILp9B6MDPsbb0xDdjoGM9VQc94zatKMoN4codn8kPDAO%2FwLqDhwp2x2k1EUBiaqHLEgSqMrtnMxVsJoUvo%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -612,11 +606,7 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
-        secure; HttpOnly; SameSite=Lax
-      - masterchief=19455b34afce028c58b3a5cbe3a7023b; expires=Sun, 15-Oct-2023 16:22:11
-        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
-      - masterchief=19455b34afce028c58b3a5cbe3a7023b; expires=Sun, 15-Oct-2023 16:22:11
+      - masterchief=eb57ffe5ece9f482b73e4ca103865aaa; expires=Wed, 18-Oct-2023 20:55:44
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
@@ -636,13 +626,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Cookie:
-      - freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=19455b34afce028c58b3a5cbe3a7023b; freeman=4616793%7Cafa972f774ac7b7a83ef358c93e813af%7Ce612daf443bbde7eca2c7fe3283d4c49;
-        masterchief=19455b34afce028c58b3a5cbe3a7023b
-      User-Agent:
-      - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157
-        Safari/537.36
     method: GET
     uri: https://www.moddb.com/tags/strategy/page/2
   response:
@@ -687,7 +670,7 @@ interactions:
         title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
         | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
         Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
-        class=\"updatescount\">11</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        class=\"updatescount\">1</span> update</a> | <a href=\"/forum/board/thread-watch\"
         title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
         | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
         class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
@@ -732,7 +715,7 @@ interactions:
         \r\n</div>\r\n<div class=\"column span-300-alt first\">\t<div class=\"normalbox
         browsebox\" id=\"tagsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
         class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
-        class=\"heading\">Tag \"Strategy\" &nbsp;(30 - 60 of 16,675)</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"heading\">Tag \"Strategy\" &nbsp;(30 - 60 of 16,680)</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
         class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\r\n\t\t\t\t<form action=\"https://www.moddb.com/tags\"
         name=\"filterform\" class=\"filter filterauto clear\" method=\"get\"><input
@@ -750,12 +733,59 @@ interactions:
         >Date</a>\r\n\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t\t\t\t\t<a
         href=\"/tags/strategy?sort=trending-asc\" class=\"descicon\">Trending</a>\r\n\t\t\t\t\t\t\t\t|
         <a href=\"/tags/strategy?sort=tagid-asc\" >Tag</a>\r\n\t\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t</div>\r\n\t</div>\r\n\t\t\t\t<div
+        class=\"row rowcontent rowsitearea4 clear\">\r\n\t\t\t\t<a href=\"/news/new-horizons-version-13-full-release\"
+        title=\"New Horizons Version 13 Full Release\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/321/320182/crop_120x90/NHLogoLB.png\"
+        alt=\"New Horizons Version 13 Full Release\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/news/new-horizons-version-13-full-release\">New Horizons
+        Version 13 Full Release</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-18T20:07:43+00:00\">38mins ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>Greetings
+        fellow Command &#038; Conquer fans; I release now the latest version of the
+        New Horizons mod for Red Alert 2: Yuri's Revenge, that being Version...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowsitearea14 clear\">\r\n\t\t\t\t<a href=\"/downloads/new-horizons-version-13-full-release\"
+        title=\"New Horizons Version 13 Full Release\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/260/259306/crop_120x90/NHLogoLB.png\"
+        alt=\"New Horizons Version 13 Full Release\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/downloads/new-horizons-version-13-full-release\">New
+        Horizons Version 13 Full Release</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-18T20:05:04+00:00\">40mins ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tDownload  \t\t\t</span>\r\n\t\t\t<p>Greetings
+        fellow Command &#038; Conquer fans; I release now the latest version of the
+        New Horizons mod for Red Alert 2: Yuri's Revenge, that being Version...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowsitearea3 clear\">\r\n\t\t\t\t<a href=\"/mods/realism-submod\"
+        title=\"Realism Submod\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/60/59806/crop_120x90/zyro-image.png\"
+        alt=\"Realism Submod\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/realism-submod\">Realism Submod</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-18T14:19:41+00:00\">6hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tMod
+        \ \t\t\t</span>\r\n\t\t\t<p>Note!: It is a submod made through Geomod to improve
+        the gameplay of the game and provide as realistic an experience as possible.
+        1- ReallybadAI was added...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent rowsitearea4 clear\">\r\n\t\t\t\t<a href=\"/news/space-tales-rts-game-demo-and-kickstarter-launch\"
+        title=\"Space Tales: RTS Game - Demo and Kickstarter Launch\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320175/crop_120x90/Kickstarter_banner1.jpg\"
+        alt=\"Space Tales: RTS Game - Demo and Kickstarter Launch\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/news/space-tales-rts-game-demo-and-kickstarter-launch\">Space
+        Tales: RTS Game - Demo and Kickstarter Launch</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-18T11:18:15+00:00\">9hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>Unveil the
+        Universe, Command the Cosmos! Greetings, fellow space adventurers and fans
+        of real-time strategy gaming! The moment we've all eagerly awaited...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowsitearea4 clear\">\r\n\t\t\t\t<a href=\"/news/spellforce-2-master-of-war-now-at-the-android-playstore\"
+        title=\"SpellForce 2 - Master of War now at the Android Playstore!\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/321/320148/crop_120x90/sf2_mow_logo_4_0_scattered_anima.gif\"
+        alt=\"SpellForce 2 - Master of War now at the Android Playstore!\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/news/spellforce-2-master-of-war-now-at-the-android-playstore\">SpellForce
+        2 - Master of War now at the Android Playstore!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-16T16:05:55+00:00\">Oct 16 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>The legendary
+        Card-Game of the SpellForce 2 Collectors Edition of 2006, now finally for
+        PC and Android at the google Playstore! Play against the NPC...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
         class=\"row rowcontent rowsitearea2 clear\">\r\n\t\t\t\t<a href=\"/games/falnarion-tactics-iii\"
         title=\"Falnarion Tactics III\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82458/crop_120x90/Falnarion_Tactics_III_Logo.png\"
         alt=\"Falnarion Tactics III\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
         \r\n\t\t\t<h4><a href=\"/games/falnarion-tactics-iii\">Falnarion Tactics III</a></h4>\r\n\t\t\t<span
-        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-15T01:20:38+00:00\">14hours
-        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tGame
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-15T01:20:38+00:00\">Oct
+        15 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tGame
         \ \t\t\t</span>\r\n\t\t\t<p>Falnarion Tactics III is the third and final installment
         of the Falnarion Tactics series and picks up after the events of Falnarion
         Tactics II. A mysterious...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
@@ -824,19 +854,19 @@ interactions:
         class=\"subheading\">\r\n\t\t\t\tGame  \t\t\t</span>\r\n\t\t\t<p>Max Capacity
         is a challenging and rewarding game that will test your skills as a factory
         mogul. You will need to build and manage the most efficient factory...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
-        class=\"row rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/tamanblue\"
-        title=\"tamanblue\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41826/crop_120x90/release_1.png\"
-        alt=\"tamanblue\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
-        href=\"/company/tamanblue\">tamanblue</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
-        datetime=\"2023-10-09T21:27:23+00:00\">Oct 9 2023</time>\t\t\t</span>\r\n\t\t\t<span
-        class=\"subheading\">\r\n\t\t\t\tCompany  \t\t\t</span>\r\n\t\t\t<p>A developer
-        of real time strategy games including Max Capacity.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
         class=\"row rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/tatman-games\"
         title=\"Tatman Games\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41827/crop_120x90/release_1.png\"
         alt=\"Tatman Games\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
         href=\"/company/tatman-games\">Tatman Games</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
         datetime=\"2023-10-09T21:27:23+00:00\">Oct 9 2023</time>\t\t\t</span>\r\n\t\t\t<span
         class=\"subheading\">\r\n\t\t\t\tCompany  \t\t\t</span>\r\n\t\t\t<p>A publisher
+        of real time strategy games including Max Capacity.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/tamanblue\"
+        title=\"tamanblue\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41826/crop_120x90/release_1.png\"
+        alt=\"tamanblue\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/tamanblue\">tamanblue</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-10-09T21:27:23+00:00\">Oct 9 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tCompany  \t\t\t</span>\r\n\t\t\t<p>A developer
         of real time strategy games including Max Capacity.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
         class=\"row rowcontent rowsitearea14 clear\">\r\n\t\t\t\t<a href=\"/downloads/historical-project-mod-plus-90\"
         title=\"Historical Project Mod Plus 9.0\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/259/258640/crop_120x90/c_2-30dVeo2-zDpimjcIPykHCyjYYpLn.png\"
@@ -882,14 +912,6 @@ interactions:
         \ \t\t\t</span>\r\n\t\t\t<p>Kingdoms Rise and Fall is a captivating Real-Time
         Strategy game that takes you on an epic journey through different eras, spanning
         the entirety of history...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
-        rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/little-dreams-games\"
-        title=\"Little Dreams Games\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41805/crop_120x90/logo.jpg\"
-        alt=\"Little Dreams Games\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
-        \r\n\t\t\t<h4><a href=\"/company/little-dreams-games\">Little Dreams Games</a></h4>\r\n\t\t\t<span
-        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-04T09:09:09+00:00\">Oct
-        4 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tCompany
-        \ \t\t\t</span>\r\n\t\t\t<p>A publisher of real time strategy games including
-        Kingdoms Rise and Fall.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
         rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/little-dreams-gaming\"
         title=\"Little Dreams Gaming\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41804/crop_120x90/logo.jpg\"
         alt=\"Little Dreams Gaming\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
@@ -897,6 +919,14 @@ interactions:
         class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-04T09:09:09+00:00\">Oct
         4 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tCompany
         \ \t\t\t</span>\r\n\t\t\t<p>A developer of real time strategy games including
+        Kingdoms Rise and Fall.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/little-dreams-games\"
+        title=\"Little Dreams Games\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41805/crop_120x90/logo.jpg\"
+        alt=\"Little Dreams Games\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/little-dreams-games\">Little Dreams Games</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-04T09:09:09+00:00\">Oct
+        4 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tCompany
+        \ \t\t\t</span>\r\n\t\t\t<p>A publisher of real time strategy games including
         Kingdoms Rise and Fall.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
         rowcontent rowsitearea2 clear\">\r\n\t\t\t\t<a href=\"/games/planetiles\"
         title=\"Planetiles\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82409/crop_120x90/MicrosoftTeams-image.png\"
@@ -968,45 +998,7 @@ interactions:
         1 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tGame
         \ \t\t\t</span>\r\n\t\t\t<p>Grab your bike, pedal off and beat back the Greed
         to save your town. Kingdom Eighties is a story-based tower defense spin-off
-        to the award-winning Kingdom...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
-        rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/fury-studios\"
-        title=\"Fury Studios\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41791/crop_120x90/k80_p.jpg\"
-        alt=\"Fury Studios\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
-        href=\"/company/fury-studios\">Fury Studios</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
-        datetime=\"2023-10-01T18:01:08+00:00\">Oct 1 2023</time>\t\t\t</span>\r\n\t\t\t<span
-        class=\"subheading\">\r\n\t\t\t\tCompany  \t\t\t</span>\r\n\t\t\t<p>A developer
-        of tower defense games including Kingdom Eighties.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
-        class=\"row rowcontent rowsitearea2 clear\">\r\n\t\t\t\t<a href=\"/games/dragonheir-silent-gods\"
-        title=\"Dragonheir: Silent Gods\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82390/crop_120x90/dh_p.jpg\"
-        alt=\"Dragonheir: Silent Gods\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
-        \r\n\t\t\t<h4><a href=\"/games/dragonheir-silent-gods\">Dragonheir: Silent
-        Gods</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-10-01T17:38:04+00:00\">Oct
-        1 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tGame
-        \ \t\t\t</span>\r\n\t\t\t<p>Before the world can end its crusade against the
-        evil Dragon God, arrogance has brought immense loss and taken away this warrior,
-        whose soul is now forever...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
-        rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/nuverse\"
-        title=\"Nuverse\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41789/crop_120x90/dh_p.jpg\"
-        alt=\"Nuverse\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
-        href=\"/company/nuverse\">Nuverse</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
-        datetime=\"2023-10-01T17:38:01+00:00\">Oct 1 2023</time>\t\t\t</span>\r\n\t\t\t<span
-        class=\"subheading\">\r\n\t\t\t\tCompany  \t\t\t</span>\r\n\t\t\t<p>A publisher
-        of role playing games including Dragonheir: Silent Gods.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
-        class=\"row rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/sgra-studio\"
-        title=\"SGRA Studio\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41788/crop_120x90/dh_p.jpg\"
-        alt=\"SGRA Studio\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
-        href=\"/company/sgra-studio\">SGRA Studio</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
-        datetime=\"2023-10-01T17:38:01+00:00\">Oct 1 2023</time>\t\t\t</span>\r\n\t\t\t<span
-        class=\"subheading\">\r\n\t\t\t\tCompany  \t\t\t</span>\r\n\t\t\t<p>A developer
-        of role playing games including Dragonheir: Silent Gods.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
-        class=\"row rowcontent rowsitearea19 clear\">\r\n\t\t\t\t<a href=\"/company/refractal-studio\"
-        title=\"Refractal Studio\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41784/crop_120x90/MainCapsule.png\"
-        alt=\"Refractal Studio\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
-        \r\n\t\t\t<h4><a href=\"/company/refractal-studio\">Refractal Studio</a></h4>\r\n\t\t\t<span
-        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-09-30T03:06:03+00:00\">Sep
-        30 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tCompany
-        \ \t\t\t</span>\r\n\t\t\t<p>A developer and publisher of real time strategy
-        games including Broad Sword.</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        to the award-winning Kingdom...</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
         class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
         tags were found matching the criteria specified. We suggest you try the <a
         href=\"/tags\">tag list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t
@@ -1033,7 +1025,7 @@ interactions:
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
         tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Tags</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags\">16,675</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags\">16,680</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/tags/?sort=relevance-desc\">Popular</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
@@ -1042,46 +1034,46 @@ interactions:
         class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Trending Tags</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
         class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
         class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
-        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>18
-        mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/map\">#map</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>17 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/track\">#track</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>17 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/multiplayer\">#multiplayer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>16 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/level\">#level</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>15 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/edgar\">#edgar</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>15 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/torronteras\">#torronteras</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>11 mentions</h5>\n\t\t\t\t\t\t<span
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>164
+        mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/track\">#track</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>164 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/madness\">#madness</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>164 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/motocross\">#motocross</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/bloodlines\">#bloodlines</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/vampire\">#vampire</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/the\">#the</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>24 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/masquerade\">#masquerade</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>13 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/horror\">#horror</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>12 mentions</h5>\n\t\t\t\t\t\t<span
         class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/fps\">#fps</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>12 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/mod\">#mod</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>11 mentions</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/action\">#action</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>10 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/black-edition\">#black-edition</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>10 mentions</h5>\n\t\t\t\t\t\t<span
-        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/painkiller\">#painkiller</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/3d\">#3d</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/textures\">#textures</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/primevil\">#primevil</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/action\">#action</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/adventure\">#adventure</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>6 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/indie\">#indie</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>9 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/doom\">#doom</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>9 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
         href=\"/tags/puzzle\">#puzzle</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/hd-textures\">#hd-textures</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/skin\">#skin</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>8 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/adventure\">#adventure</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>7 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/release\">#release</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
         class=\"row clear\">\n\t\t\t\t\t\t<h5>6 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/helloneighbor\">#helloneighbor</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>5 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/extract\">#extract</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>5 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/singleplayer\">#singleplayer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>5 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/sandbox\">#sandbox</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
-        class=\"row clear\">\n\t\t\t\t\t\t<h5>4 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
-        href=\"/tags/anime\">#anime</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        href=\"/tags/retro\">#retro</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>6 mentions</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/tags/single-player\">#single-player</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
         \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
         class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
         300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n \t<div class=\"normalbox
@@ -1119,7 +1111,7 @@ interactions:
         for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
         Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
         target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
-        href=\"/members/online\">6734 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        href=\"/members/online\">5839 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
         type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/tags\",\"name\":\"Tags\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/tags/strategy\",\"name\":\"Strategy\"}}]}</script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
         src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script>\n<script>\n$(document).ready(function()
@@ -1146,9 +1138,9 @@ interactions:
         \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
         * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
         \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697386333\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697661945\\\"
         width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
-        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697386333\\\"
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697661945\\\"
         width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
         noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
         1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
@@ -1213,7 +1205,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 816957a24b372a6f-CDG
+      - 8183a0747e2e0375-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -1221,11 +1213,11 @@ interactions:
       Content-Type:
       - text/html; charset=UTF-8
       Date:
-      - Sun, 15 Oct 2023 16:12:13 GMT
+      - Wed, 18 Oct 2023 20:45:45 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tmDS1U8aybco%2Bi64lx5LEpH5%2BhGMl5aw5sa3TLgdeD43lV1FeIgEsjdZBO7qIyyolIVgZ5YmNsoejWaWlE3jrR9YFnoKL%2B9oCLqNXtF5nyv79jB%2BAPRzHM3l33uHt8juh%2FgQ%2Buf8NqR4WVM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IhpogNrzq%2B%2BMTSYFdDQMu%2F%2B68rLiSSOLiPL420xaLVtALFsxb92whWS%2Bzu%2FEyuZhKZDsHPX7djcsVP1%2BK5%2BNuwc77qdx%2FTKcHWPtlEpk7hUayDKx3trxCy0cla9NxJgfNFk63d%2Bn3VUDj9Y%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -1235,11 +1227,7 @@ interactions:
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
-      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
-        secure; HttpOnly; SameSite=Lax
-      - masterchief=b80646e836387e66b4634e034a632296; expires=Sun, 15-Oct-2023 16:22:12
-        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
-      - masterchief=b80646e836387e66b4634e034a632296; expires=Sun, 15-Oct-2023 16:22:12
+      - masterchief=eb57ffe5ece9f482b73e4ca103865aaa; expires=Wed, 18-Oct-2023 20:55:45
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
