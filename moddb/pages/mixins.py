@@ -589,4 +589,9 @@ class GetTagsMixin:
 
         resp = get_page(f"{BASE_URL}/tags/ajax/more", params=params, json=True)
 
+        # when there are not extra tags to return resp["tags"]
+        # is an empty list instead of a dict
+        if isinstance(resp["tags"], list):
+            return []
+
         return [Tag(**tag) for tag in resp["tags"].values()]

@@ -1,0 +1,843 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/games/fear/tutorials/alma1
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Alma? tutorial
+        - F.E.A.R. - Mod DB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta
+        name=\"keywords\" content=\"fear, alma, articles, information, data, gossip,
+        feature, read, view, discuss\" />\r\n\t<meta name=\"description\" content=\"In
+        this tutorial I will show you how to set up trigger system that will send
+        command to the game and respond with Alma's appearance...\" />\r\n\t<meta
+        name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\"
+        content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\" content=\"Alma?
+        tutorial - F.E.A.R.\" />\r\n\t<meta property=\"og:description\" content=\"In
+        this tutorial I will show you how to set up trigger system that will send
+        command to the game and respond with Alma's appearance...\" />\r\n\t<meta
+        property=\"og:site_name\" content=\"Mod DB\" />\r\n\t<meta property=\"og:type\"
+        content=\"article\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/games/fear/tutorials/alma1\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/articles/1/265/264169/th.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Alma? tutorial - F.E.A.R.\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"In this tutorial I will show you how to set up trigger system that
+        will send command to the game and respond with Alma's appearance...\" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/games/fear/tutorials/alma1\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/articles/1/265/264169/th.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;73\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/games/fear/tutorials/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Alma? tutorial - F.E.A.R. feed\" />\t<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\t\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":false,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\"ad_policies\":[\"Horror\"],\r\n\t\t\t\"companies\":[\"Monolith
+        Productions\",\"Vivendi\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single Player\",\"Multiplayer\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Blockbuster\",\"Horror\",\"FPS/Shooter\",\"Action
+        Adventure\"],\"name\": \"F.E.A.R.\",\"platforms\":[\"PC\"]}],\r\n\t\t\t\"article\":{\"date_published\":\"2019-02-07T22:50:00+01:00\",\"author\":\"Windows_95\",\"type\":\"Guide\"},\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"guest\">Hello guest <a
+        href=\"/members/register\">register</a> or <a href=\"/members/login\" id=\"togglelogin\">sign
+        in</a></span><span class=\"arrow\">&nbsp;</span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search Mod DB\" title=\"Search Mod DB\"  /></form>\t\t\t
+        \r\n\t\t\t<form action=\"https://www.moddb.com/members/login\" method=\"post\"
+        name=\"memberform\" class=\"login\"><input type=\"hidden\" name=\"referer\"
+        value=\"/games/fear/tutorials/alma1/\" /><input type=\"hidden\" name=\"rememberme\"
+        value=\"1\" /><input type=\"hidden\" name=\"members\" value=\"1\" /><span
+        class=\"fdcccecdddfbebaecbbformouter\"><span><span><span><span><span><span
+        class=\"fdcccecdddfbebaecbbforminner\"><input type=\"text\" name=\"IyM3ZDc4MTM1ZmNhZjY2NWQ0Zjg5NmZkZTVmMTU1M2YxYzIyMjg2ODQ5MTh1c2VybmFtZQ:E::E:\"
+        maxlength=\"500\" value=\"\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span></span></span><span class=\"fdcccecdddfbebaecbbformouter\"><span><span><span><span
+        class=\"fdcccecdddfbebaecbbforminner\"><input type=\"text\" name=\"IyM3ZDc4MTM1ZmNhZjY2NWQ0Zjg5NmZkZTVmMTU1M2YxYzkwNDYzNTQ3NjJib3RjYXRjaGVy\"
+        maxlength=\"500\" placeholder=\"Username\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><style> span.fdcccecdddfbebaecbbformouter
+        span span span span.fdcccecdddfbebaecbbforminner { display: none; } span.fdcccecdddfbebaecbbformouter
+        span span span span span span.fdcccecdddfbebaecbbforminner { display: inline;
+        }</style>\n<input type=\"password\" name=\"password\" maxlength=\"100\" placeholder=\"Password\"
+        class=\"text password\" autocomplete=\"off\"  /><input type=\"submit\" name=\"members\"
+        value=\"GO\" class=\"button\" title=\"Sign In\"  /></form>\t\t\t<span class=\"login\"
+        style=\"display: none;\">or with: <a href=\"/members/loginext/steam\" class=\"steamiconsml\"
+        style=\"float: right; margin: 3px 1px 0 4px;\" title=\"Click to connect via
+        Steam\"></a><a href=\"/members/loginext/google\" class=\"googleiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Google\"></a><a
+        href=\"/members/loginext/twitter\" class=\"twittericonsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Twitter\"></a><a
+        href=\"/members/loginext/facebook\" class=\"facebookiconsml\" style=\"float:
+        right; margin: 3px 1px 0 4px;\" title=\"Click to connect via Facebook\"></a></span>\r\n\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Alma? tutorial - F.E.A.R.</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"Mod DB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t
+        \r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t \r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t<li><a href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/articles/add\">post article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabtutorials\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/games/1/1/120/fear_header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<h2><a href=\"/games/fear\">F.E.A.R.</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/company/monolith-productions\">Monolith Productions</a> | <a href=\"/company/vivendi\">Vivendi</a>
+        | <time datetime=\"2005-10-11\">Released 2005</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t\t\t\t\t<li
+        class=\"firsttab\"><a href=\"/games/fear\">summary</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/games/fear/articles\">articles</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"on\"><a href=\"/games/fear/tutorials\">tutorials</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/games/fear/reviews\">reviews</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/games/fear/downloads\">files</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/games/fear/addons\">addons</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/games/fear/mods\">mods</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/games/fear/videos\">videos</a></li>\r\n\t\t\t\t\t\t\t\t<li
+        class=\"\"><a href=\"/games/fear/images\">images</a></li>\r\n\t\t\t\t\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>In
+        F.E.A.R An unidentified paramilitary force infiltrates a multi-billion dollar
+        aerospace compound, taking hostages but issuing no demands. The government
+        responds by sending in special forces, but loses contact as an eerie signal
+        interrupts radio communications. When the interference subsides moments later,
+        the team has been obliterated.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabtutorials\"><article itemscope itemtype=\"https://schema.org/TechArticle\">\r\n\t\t\t\t\t<meta
+        itemscope itemprop=\"mainEntityOfPage\"  itemtype=\"https://schema.org/WebPage\"
+        itemid=\"https://www.moddb.com/tutorials/alma1\" />\r\n\t\t\t\t\t<meta itemprop=\"dateModified\"
+        content=\"2020-04-11T13:22:11+0000\" />\r\n\t\t\t\t\t<meta itemprop=\"image\"
+        content=\"https://media.moddb.com/images/articles/1/265/264169/th.jpg\" />\r\n\t\t\t\t\t<div
+        itemprop=\"publisher\" itemscope itemtype=\"https://schema.org/Organization\">\r\n\t\t\t\t\t\t<meta
+        itemprop=\"name\" content=\"Mod DB\" />\r\n\t\t\t\t\t\t<div itemprop=\"logo\"
+        itemscope itemtype=\"https://schema.org/ImageObject\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"url\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"width\" content=\"120\">\r\n\t\t\t\t\t\t\t<meta itemprop=\"height\"
+        content=\"60\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\t<div class=\"normalbox\"
+        id=\"readarticle\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/games/fear/tutorials/add/#articlesform\"
+        class=\"addicon\"  title=\"Post tutorial\">Post tutorial</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=264169\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"https://rss.moddb.com/games/fear/tutorials/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\" itemprop=\"headline\">Alma?</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodyarticle clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"introductiontext\" itemprop=\"description\">In this tutorial I will
+        show you how to set up trigger system that will send command to the game and
+        respond with Alma's appearance...</p>\r\n\t\t\t\t\t\t\t\t<p class=\"introduction\">\r\n\t\t\t\t\tPosted
+        by <span itemprop=\"author\" itemscope itemtype=\"https://schema.org/Person\"><span
+        itemprop=\"name\"><a href=\"/members/fromussrwithlove\" itemprop=\"url\">Windows_95</a></span></span>
+        on <time datetime=\"2019-02-07\" itemprop=\"datePublished\">Feb 7th, 2019</time>
+        - <span itemprop=\"proficiencyLevel\">Intermediate</span> Level Design/Theory
+        \t\t\t\t</p>\r\n\t\t\t\t<div id=\"articlecontent\" itemprop=\"articleBody\"><h2><strong>PROLOGUE</strong></h2>\n<p>After
+        finishing your map, it is recommended to have <em>ModelEdit </em>opened and
+        <em>WorldEdit.chm </em>file in the Help folder (default address: <strong>C:\\Program
+        Files (x86)\\Sierra\\Dev\\Tools\\Help</strong>), because we will need to see
+        which animation we need and which command we will need. Let's get this done...</p>\n<h2><strong>CHOOSING
+        WHICH ANIM WE WANT TO USE</strong></h2>\n<p>Open <em>ModelEdit</em> and go
+        <strong>File&gt;Open </strong>and choose <em>alma.model00c</em>.</p>\n<p><a
+        href=\"https://media.moddb.com/images/members/4/3578/3577549/profile/1_Alma.png\"
+        target=\"_blank\" rel=\"noopener\"><img src=\"https://media.moddb.com/images/members/4/3578/3577549/profile/1_Alma.png\"
+        alt=\"Alma in ModelEdit\" width=\"1366\" height=\"706\" /></a></p>\n<p>In
+        the <em>Animations </em>tab choose which anim you want to use in your scene.
+        I will use <em>ScaryWalk2</em>. Just remember the name of anim, nothing else
+        to do in this program.</p>\n<h2><strong>ADDING ALMA'S AI</strong></h2>\n<p>Okay
+        now, go to the <em>WorldEdit </em>and open up your map. Press X button and
+        relocate spawn position (those three green lines in 3D view, two in 2D view)
+        to the place where you want to make Alma scene, then click right button on
+        your mouse and go <strong>Add&gt;Object..., </strong>go down and select CAI,
+        and press OK.<br />In the <em>Properties </em>tab, select <em>ModelTemplate
+        </em>to <em>Alma.</em></p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><em><img
+        src=\"https://media.moddb.com/images/members/4/3578/3577549/profile/3_Alma.png\"
+        alt=\"Model Template in Properties tab.\" width=\"178\" height=\"598\" /></em></p>\n<p><br
+        /></p>\n</div>\n<p>Now go to the <em>Nodes </em>tab and make new <em>Container
+        Node </em>and name it <em>Alma. </em>Now drag <em>CAI </em>you have added
+        into that <em>Container Node </em>and rename it to the <em>Alma.CAI.</em>
+        Now again press right mouse button and go to <strong>Add&gt;Object...,</strong>
+        and go down on the list to the <em>Spawn, </em>expand it and add <em>AISpawner.
+        </em>Put it in the same place as <em>CAI.</em> Again, drag it to the <em>Container
+        Node </em>where <em>Alma.CAI </em>is. And name it <em>Alma.SP01.</em></p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/members/4/3578/3577549/profile/4_Alma.png\"
+        alt=\"Target field.\" width=\"558\" height=\"533\" /></p>\n<p><br /></p>\n</div>\n<p>In
+        the<em> Target </em>field press B and choose <em>Alma.CAI </em>(see the picture)
+        and press OK.</p>\n<h2><strong>SCRIPTING</strong></h2>\n<p>In the <em>Properties
+        </em>tab, press E on the <em>InitialCommand </em>and type next:</p>\n<h3>msg
+        (CINERACT ScaryWalk2);</h3>\n<h3>delay # (msg REMOVE);</h3>\n<p>But # is a
+        number of delay and it is represented in seconds. For example if you put 5
+        instead of #, Alma will despawn after 5 seconds. Like I said I have put <em>ScaryWalk2
+        </em>anim, but you can write any animation you want from the <em>ModelEdit.
+        <br /></em>Press <em>Validate.</em> If nothing happens, that means everything
+        is fine, but if another small window jumps in, you have an error. Now let's
+        add trigger. Again go to <strong>Add&gt;Objects..., </strong>and from the
+        list choose <em>Trigger </em>and put it to the place where you want to trigger
+        Alma.</p>\n<p><a href=\"https://media.moddb.com/images/members/4/3578/3577549/profile/6_Alma.png\"
+        target=\"_blank\" rel=\"noopener\"><img src=\"https://media.moddb.com/images/members/4/3578/3577549/profile/6_Alma.png\"
+        alt=\"Example\" width=\"1366\" height=\"724\" /></a></p>\n<p>For example in
+        this screenshot, if I enter this red zone (trigger) Alma will appear at that
+        yellow object and will walk toward the wall (you can change direction by rotating
+        <em>Alma.CAI)</em>. Rename trigger to the <em>Alma.TG </em>and move it to
+        the Container<em> Node</em> you made before in this tutorial. Now rescale
+        the trigger so you can activate it by going forward, so no need to wander
+        around and searching for trigger if it's small by default. After you do this,
+        go to the <em>Properties </em>tab and check <em>PlayerTrigger </em>to <strong>TRUE,</strong>
+        so player can activate that trigger. We need now to connect it with the spawner.
+        Just above the <em>PlayerTrigger </em>is a property called <em>Commands.</em>
+        Go to the first command and press E at the end of the white box. Now type
+        this:</p>\n<h3>msg Alma.SP01 SPAWN;<br />msg player (SIGNAL #);</h3>\n<p>The
+        first command line is to activate spawner when trigger is triggered, and the
+        second line is just decorative, to make player interface flicker and to hear
+        static signals from the radio chatter. Again # represents seconds how long
+        player will have this. It is recommended to put a few seconds longer than
+        the delay in the previous commands we entered before. You can change to the
+        black and white vision too, check <em>WorldEdit.chm </em>I mentioned before
+        and to the player commands section. Press OK and build the map. If you done
+        everything correctly, Alma should appear, just like in the campaign.</p>\n<h2><strong>EPILOGUE</strong></h2>\n<p>If
+        you have any questions, put them down in the comment section, or join our
+        <a href=\"https://discordapp.com/invite/NteWk2s\">discord</a> server and meet
+        us there! Happy modding...</p>\n<p>Looking for finished map with this? Try
+        this:</p>\n<p><a  href=\"https://www.moddb.com/games/fear/downloads/tutorial-map-with-trigger-system-for-alma\">Moddb.com</a></p></div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</article><div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!reedpop.com,1013459,1&kv_1=article,guide,developer,single-player,multiplayer,military,adventure,blockbuster,horror,fps,action,action-adventure,pc&kv_2=fear\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"7241327\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/aidendemon\" title=\"AidenDemon\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1022/1021045/bel.jpg\"
+        alt=\"AidenDemon\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/aidendemon\" class=\"author\" data-nameid=\"aidendemon\">AidenDemon</a>
+        <time datetime=\"2019-02-08T05:55:43+00:00\">Feb 8 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Thank you for letting.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7241327\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7241327\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7241327\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7241332\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/lithtechguru\"
+        title=\"LithTechGuru\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4014/4013508/u6.png\"
+        alt=\"LithTechGuru\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/lithtechguru\" class=\"author\" data-nameid=\"lithtechguru\">LithTechGuru</a>
+        <time datetime=\"2019-02-08T06:07:06+00:00\">Feb 8 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>2019 is the year of F.E.A.R modding\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7241332\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7241332\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7241332\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7241753\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        title=\"Windows_95\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3578/3577549/x5bsod.png.pagespeed.gp_jp_jw_pj.png\"
+        alt=\"Windows_95\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        class=\"author\" data-nameid=\"fromussrwithlove\">Windows_95</a> <time datetime=\"2019-02-08T17:31:22+00:00\">Feb
+        8 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>You
+        are welcome. In the near future, we will post more tutorials to make F.E.A.R.
+        modding more easier.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"7241753\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7241753&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7241521\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/blueshit199\"
+        title=\"Blue199\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3580/3579026/smolder.png\"
+        alt=\"Blue199\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/blueshit199\" class=\"author\" data-nameid=\"blueshit199\">Blue199</a>
+        <time datetime=\"2019-02-08T12:30:58+00:00\">Feb 8 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I didn't know Alma's model was so
+        low poly.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"7241521\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7241521\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7241521\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7241754\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        title=\"Windows_95\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3578/3577549/x5bsod.png.pagespeed.gp_jp_jw_pj.png\"
+        alt=\"Windows_95\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        class=\"author\" data-nameid=\"fromussrwithlove\">Windows_95</a> <time datetime=\"2019-02-08T17:32:07+00:00\">Feb
+        8 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Yep,
+        she is. Every character in the game is low poly.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7241754\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7241754&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7244483\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/spy-maps\"
+        title=\"SPY-maps\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/103/102268/SPYmaps2.jpg\"
+        alt=\"SPY-maps\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/spy-maps\" class=\"author\" data-nameid=\"spy-maps\">SPY-maps</a>
+        <time datetime=\"2019-02-11T09:28:46+00:00\">Feb 11 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Did make a few sp-maps with Fear(1)
+        when the game as released.<br />\nSimply LOVED doing so and always wanted
+        to go back in. But newer games with \"better\" engines arrived.<br />\nSo,
+        Fear tutorials, ALWAYS welcome!</p>\n<p>Leon\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7244483\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7244483\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7244483\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7244588\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        title=\"Windows_95\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3578/3577549/x5bsod.png.pagespeed.gp_jp_jw_pj.png\"
+        alt=\"Windows_95\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        class=\"author\" data-nameid=\"fromussrwithlove\">Windows_95</a> <time datetime=\"2019-02-11T12:40:59+00:00\">Feb
+        11 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Yeah,
+        I would agree. If you want to help us with tutorials, go ahead. Like you said,
+        FEAR tutorials are always welcome..\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7244588\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7244588&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7245378\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/spy-maps\"
+        title=\"SPY-maps\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/103/102268/SPYmaps2.jpg\"
+        alt=\"SPY-maps\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/spy-maps\" class=\"author\" data-nameid=\"spy-maps\">SPY-maps</a>
+        <time datetime=\"2019-02-12T09:42:51+00:00\">Feb 12 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Would really love to do so but it
+        is about 15 years ago that i worked with that editor. So i lost all knowledge
+        about it. A real shame though because its really one of my all time favorite
+        games, the complete FEAR series i mean. Still, success,</p>\n<p>Leon\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7245378\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7245378\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7245378\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7245589\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        title=\"Windows_95\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3578/3577549/x5bsod.png.pagespeed.gp_jp_jw_pj.png\"
+        alt=\"Windows_95\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        class=\"author\" data-nameid=\"fromussrwithlove\">Windows_95</a> <time datetime=\"2019-02-12T15:54:43+00:00\">Feb
+        12 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Join
+        our discord server and meet us there... It looks that we need to talk with
+        you alot..\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"7245589\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7245589&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7246235\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/spy-maps\"
+        title=\"SPY-maps\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/103/102268/SPYmaps2.jpg\"
+        alt=\"SPY-maps\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/spy-maps\" class=\"author\" data-nameid=\"spy-maps\">SPY-maps</a>
+        <time datetime=\"2019-02-13T09:28:30+00:00\">Feb 13 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Thank you for the offer, but i really
+        will not be going back soon to Fear modding. Not because its not a great game
+        because that it still is but because i hardly do any mapping / modding at
+        all these days.<br />\nBut, please do continue. For sure that some people
+        will want to work with Fear. </p>\n<p>Leon\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7246235\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7246235\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7246235\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7247355\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        title=\"Windows_95\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3578/3577549/x5bsod.png.pagespeed.gp_jp_jw_pj.png\"
+        alt=\"Windows_95\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/fromussrwithlove\"
+        class=\"author\" data-nameid=\"fromussrwithlove\">Windows_95</a> <time datetime=\"2019-02-14T15:46:37+00:00\">Feb
+        14 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>If
+        you don't want, then it is ok, I respect your choice... But however, a little
+        training will help you to regain all lost knowledge.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7247355\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7247355&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7248999\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/spy-maps\"
+        title=\"SPY-maps\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/103/102268/SPYmaps2.jpg\"
+        alt=\"SPY-maps\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/spy-maps\" class=\"author\" data-nameid=\"spy-maps\">SPY-maps</a>
+        <time datetime=\"2019-02-16T11:44:08+00:00\">Feb 16 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>That is true, but i know myself.
+        Ones i started with a editor i keep going, as you can see in my profiles/
+        mods and addons pages. So i think twice or three times before i choose a new
+        game and or editor to play with. And as i already said do i hardly any mapping
+        at all these days. Just do other not so much related computer things.<br />\ngreetings,</p>\n<p>Leon\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7248999\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7248999\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7248999\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7465855\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/benox50\"
+        title=\"Benox50\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/397/396408/avatar2.png\"
+        alt=\"Benox50\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/benox50\" class=\"author\" data-nameid=\"benox50\">Benox50</a>
+        <time datetime=\"2019-10-27T02:22:53+00:00\">Oct 27 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Never saw those SP maps you made,
+        cannot find one of your channel. FEAR has like only 2-3 good SP maps that
+        you can find so I was interested when you said that, hmm. It really deserves
+        more imo, I just started mapping seriously for it to help and its actually
+        really fun and its a good editor. I also hesited alot before starting, but
+        then must do it man, it must. I hope to see you get in again and add some
+        FEAR to your stuff, we really need passionated people that will actually get
+        SP mapping going </p>\n<p>benox50\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7465855\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7465855\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7465855\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7435398\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/lithtechguru\"
+        title=\"LithTechGuru\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4014/4013508/u6.png\"
+        alt=\"LithTechGuru\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/lithtechguru\" class=\"author\" data-nameid=\"lithtechguru\">LithTechGuru</a>
+        <time datetime=\"2019-09-18T18:59:08+00:00\">Sep 18 2019</time>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Right now the images aren't loading
+        properly. You can see them in the archive.org snapshot of this article.<br
+        />\n<a  href=\"https://web.archive.org/web/20190209220403/https://www.moddb.com/games/fear/tutorials/alma1\">Web.archive.org</a>\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7435398\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7435398\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7435398\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/games/fear/tutorials/alma1/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"ff8054ed0491f0c16c05a14b40112e2b\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentguest clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/members/loginext/steam\" class=\"steamicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Steam\"></a><a
+        href=\"/members/loginext/google\" class=\"googleicon\" style=\"float: right;
+        margin-left: 6px;\" title=\"Click to connect via Google\"></a><a href=\"/members/loginext/twitter\"
+        class=\"twittericon\" style=\"float: right; margin-left: 6px;\" title=\"Click
+        to connect via Twitter\"></a><a href=\"/members/loginext/facebook\" class=\"facebookicon\"
+        style=\"float: right; margin-left: 6px;\" title=\"Click to connect via Facebook\"></a>Your
+        comment will be anonymous unless you <a href=\"/members/register\">join the
+        community</a>. Or sign in with your social account:</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><textarea
+        name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\" required=\"required\"
+        ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowcommentemail
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"commentemail\">&#69;&#109;&#97;&#105;&#108;</label>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><span class=\"acfaddeceformouter\"><span><span><span><span
+        class=\"acfaddeceforminner\"><input type=\"text\" name=\"IyM3ZDc4MTM1ZmNhZjY2NWQ0Zjg5NmZkZTVmMTU1M2YxYzE3NzUzNDAyOTZlbWFpbA:E::E:\"
+        maxlength=\"500\" value=\"\" id=\"commentemail\" class=\"text\" autocomplete=\"off\"
+        \ /></span></span></span></span></span><span class=\"acfaddeceformouter\"><span><span><span><span><span
+        class=\"acfaddeceforminner\"><input type=\"text\" name=\"IyM3ZDc4MTM1ZmNhZjY2NWQ0Zjg5NmZkZTVmMTU1M2YxYzUwMTgzNjM0NjFib3RjYXRjaGVy\"
+        maxlength=\"500\" class=\"text\" autocomplete=\"off\"  /></span></span></span></span></span></span><style>
+        span.acfaddeceformouter span span span span span { display: none; } span.acfaddeceformouter
+        span span span { display: inline; }</style>\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabtutorials\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"gamesinfo\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=120\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=games&amp;siteareaid=120\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/games/1/1/120/icon.gif\"
+        alt=\"F.E.A.R.\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/platforms/pc\" title=\"Windows\">Windows</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/company/monolith-productions\">Monolith Productions</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Publisher</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/company/vivendi\">Vivendi</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Engine</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/engines/lithtech\">LithTech</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/compose?to=gamesgroup108,gamesgroup123\">Send Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"http://www.whatisfear.com\" rel=\"noopener noreferrer\" target=\"_blank\">Whatisfear.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowwide clear\">\n\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2005-10-11\">Released 2005</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Game watch</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=120\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"menuprices\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Purchase</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\" style=\"overflow: visible\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu tableprice\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://store.steampowered.com/app/1673140\" class=\"csstooltip\" title=\"Updated
+        1 week ago\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"><span
+        class=\"button\">Buy</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/1.png\"
+        title=\"Steam\" alt=\"Steam\" /><span class=\"priceoriginal\">$9.99</span>
+        <span class=\"price\">$4.99</span> <span class=\"button discount\">-50%</span>
+        </a>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://www.anrdoezrs.net/links/7846631/type/dlg/https://www.greenmangaming.com/games/fear\"
+        class=\"csstooltip\" title=\"Updated 11 mins ago\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"><span class=\"button\">Buy</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/3.png\"
+        title=\"Green Man Gaming\" alt=\"Green Man Gaming\" /><span class=\"price\">$9.99</span></a>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<a href=\"https://store.steampowered.com/app/21090\"
+        class=\"csstooltip\" title=\"Updated 5 days ago\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"><span class=\"button\">Buy</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/1.png\"
+        title=\"Steam\" alt=\"Steam\" /><span class=\"price\">$54.99</span></a>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"articlesprofilemenu\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tutorial</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<h5>Tags</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/fear\">FEAR</a>, <a href=\"/tags/alma\">Alma</a>,
+        <a href=\"/tags/tutorial\">Tutorial</a>, <a href=\"/tags/worldedit\">WorldEdit</a>,
+        <a href=\"/tags/horror\">Horror</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/games/fear/tutorials\">Tutorials</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>New</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/games/fear/tutorials/add/#articlesform\" class=\"d94c04ee4f7056925c23f0f6cb68079aadd\">Post
+        tutorial</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=264169\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<h5>Views</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/statistics/data/visit/articles/264169\" rel=\"iframe=true;innerHeight=525;innerWidth=830\"
+        class=\"thickbox\" title=\"Alma? Statistics\">2,395 (2 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffear%2Ftutorials%2Falma1&title=Alma%3F+tutorial+-+F.E.A.R.\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Alma%3F%20tutorial%20-%20F.E.A.R.&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffear%2Ftutorials%2Falma1\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Alma%3F+tutorial+-+F.E.A.R.+https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffear%2Ftutorials%2Falma1+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffear%2Ftutorials%2Falma1&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffear%2Ftutorials%2Falma1&quote=Alma%3F+tutorial+-+F.E.A.R.&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffear%2Ftutorials%2Falma1\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinksgames\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Games</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/fear\" title=\"F.E.A.R.\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/120/crop_120x90/profile.jpg\"
+        alt=\"F.E.A.R.\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/fear\" class=\"heading\">F.E.A.R.</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tFirst
+        Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksengines\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Engines</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/engines/lithtech\" title=\"LithTech\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/27/crop_120x90/lithtech.jpg\"
+        alt=\"LithTech\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/lithtech\" class=\"heading\">LithTech</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tCommercial <time datetime=\"1998-09-30\">Released
+        1998</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksgroups\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Groups</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/groups/level-design-group\" title=\"Level Design Group\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/groups/1/1/524/crop_120x90/grouplogo.jpg\"
+        alt=\"Level Design Group\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/level-design-group\" class=\"heading\">Level Design Group</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tHobbies &amp; Interests \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/company/monolith-productions\"
+        title=\"Monolith Productions\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/108/crop_120x90/monolith_small.jpg\"
+        alt=\"Monolith Productions\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/company/monolith-productions\" class=\"heading\">Monolith Productions</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tDeveloper &amp; Publisher \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/company/vivendi\" title=\"Vivendi\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/123/crop_120x90/vivprof.png\"
+        alt=\"Vivendi\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/company/vivendi\" class=\"heading\">Vivendi</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tDeveloper &amp; Publisher \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3\"></div>\n<script>\n$(document).ready(function() {\nif($(\".column.span-300\").length)
+        {\n\tcolumnBottom = $(\".column.span-300\").position().top + $(\".column.span-300\").outerHeight(true)
+        + ($(\".column.span-300 .DBsupporter\").length*600) + ($(\".column.span-300
+        .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top - 250;\n\twindowSpacing
+        = $(window).height() + 250;\n\tplacements = footerTop > columnBottom ? Math.floor((footerTop
+        - columnBottom) / windowSpacing) : 0;\n\t\n\tfor(x = 1; x <= placements; x++)
+        {\n\t\t$(\"<div class=\\\"lazyload\\\" data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\"
+        data-dfp-sizes=\\\"300x250\\\" id=\\\"div-ga-MODDB_MPU_\"+(x+3)+\"\\\" style=\\\"clear:
+        both; margin-top: \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2023 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5180 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/fear\",\"name\":\"F.E.A.R.\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/fear/tutorials\",\"name\":\"Tutorials\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/games/fear/tutorials/alma1\",\"name\":\"Alma?\",\"image\":\"https://media.moddb.com/images/articles/1/265/264169/th.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jsgnnew&1\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#togglelogin\").click(function() { \r\n\t\t\t\t\tif($(\"#searchbox .search\").is(\":visible\"))
+        {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;&#187;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .search\").fadeOut(function() { $(\"#searchbox .login\").show(); });\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#searchbox .arrow\").html(\"&nbsp;\");\r\n\t\t\t\t\t\t$(\"#searchbox
+        .login\").fadeOut(function() { $(\"#searchbox .search\").show(); });\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t});\n$(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        adConfig = {\r\n\t\t\t\t\t\tcustom_variables: { \r\n\t\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\t\ttags:
+        [\"article\",\"guide\",\"developer\",\"single-player\",\"multiplayer\",\"military\",\"adventure\",\"blockbuster\",\"horror\",\"fps\",\"action\",\"action-adventure\",\"pc\"],\r\n\t\t\t\t\t\t\tgames:
+        [\"fear\"],\r\n\t\t\t\t\t\t\tplayers: [\"single\",\"multi\"],\r\n\t\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tfloorPrices: {\r\n\t\t\t\t\t\t\tdefaultFloorprice:
+        0.05,\r\n\t\t\t\t\t\t\tusFloorprice: 0.4,\r\n\t\t\t\t\t\t\tukFloorprice: 0.3,\r\n\t\t\t\t\t\t\taucaFloorprice:
+        0.2,\r\n\t\t\t\t\t\t\teuFloorprice: 0.1,\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tlazyload_selector:
+        \".lazyload\",\r\n\t\t\t\t\t\trunUAM: true,\r\n\t\t\t\t\t\tdevice: \"hd\",\r\n\t\t\t\t\t\tcountryCode:
+        \"FR\",\r\n\t\t\t\t\t\tchildPublisher: 1013459,\r\n\t\t\t\t\t\tshowNonPersonalisedAds:
+        \"true\",\r\n\t\t\t\t\t\trunPrebid: true,\r\n\t\t\t\t\t\tprebidLib: \"https://www.moddb.com/html/cutoff/js/misc.gn.pre.7.54.3.min.js\",\r\n\t\t\t\t\t\tprebidConfig:
+        {hd:{MODDB_LB_1:{code:\"/43340684/MODDB_LB_1\",mediaTypes:{banner:{sizes:[[728,90],[970,250],]}},pubstack:{adUnitName:\"MODDB_LB_1\",adUnitPath:\"/43340684/MODDB_LB_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2,57]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131444\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[970,250]}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]},MODDB_MPU_1:{code:\"/43340684/MODDB_MPU_1\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_1\",adUnitPath:\"/43340684/MODDB_MPU_1\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005889\",size:[300,250]}},]},MODDB_MPU_2:{code:\"/43340684/MODDB_MPU_2\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"MODDB_MPU_2\",adUnitPath:\"/43340684/MODDB_MPU_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_MPU_3:{code:\"/43340684/MODDB_MPU_3\",mediaTypes:{banner:{sizes:[[300,250],]}},pubstack:{adUnitName:\"MODDB_MPU_3\",adUnitPath:\"/43340684/MODDB_MPU_3\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x250\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131446\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005890\",size:[300,250]}},]},ModDB_Lazy_load_HP_MPU:{code:\"/43340684/ModDB_Lazy_load_HP_MPU\",mediaTypes:{banner:{sizes:[[300,250],[300,600],]}},pubstack:{adUnitName:\"ModDB_Lazy_load_HP_MPU\",adUnitPath:\"/43340684/ModDB_Lazy_load_HP_MPU\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[10,15]}},{bidder:\"triplelift\",params:{inventoryCode:\"moddb_infeed_300x600\"}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131445\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725897978519749\"}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,600]}},{bidder:\"ix\",params:{siteId:\"1005891\",size:[300,250]}},]},MODDB_LB_2:{code:\"/43340684/MODDB_LB_2\",mediaTypes:{banner:{sizes:[[728,90],]}},pubstack:{adUnitName:\"MODDB_LB_2\",adUnitPath:\"/43340684/MODDB_LB_2\"},bids:[{bidder:\"rubicon\",params:{accountId:\"16622\",siteId:\"481292\",zoneId:\"2853926\",sizes:[2]}},{bidder:\"pubmatic\",params:{publisherId:\"159481\",adSlot:\"5131447\"}},{bidder:\"amx\",params:{tagId:\"Z2FtZXItbmV0d29yay5uZXQ\"}},{bidder:\"onetag\",params:{pubId:\"75847b43ef0b8c2\"}},{bidder:\"criteo\",params:{networkId:11384}},{bidder:\"yieldmo\",params:{placementId:\"3312725898095960262\"}},{bidder:\"ix\",params:{siteId:\"1005888\",size:[728,90]}},]}}},\r\n\t\t\t\t\t\tpubstackTagId:
+        \"0544b900-38ce-4470-b90f-1468bc94dc03\",\r\n\t\t\t\t\t\townedSite: false,\r\n\t\t\t\t\t\trefreshAds:
+        { enabled: true, maxRefreshes: 10, desktopRate: 15000, mobileRate: 12000,
+        mobileStickyRate: 15000, teadsRate: 30000, refreshableAdvertIds: [0, 220082044,
+        78946204, 72863404, 2925170143, 2984552083, 74678524] },\r\n\t\t\t\t\t\tinsertInto:
+        \"\",\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.AdScript = new GNAdScript.default(\".DBsupporter\",
+        adConfig);\r\n\t\t\t\t\twindow.AdScript.init();\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1697716915\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1697716915\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentemail\").after('<input
+        type=\"hidden\" name=\"IyM3ZDc4MTM1ZmNhZjY2NWQ0Zjg5NmZkZTVmMTU1M2YxYzUxNjc5OTI4NTdqc2ZpZWxk\"
+        value=\"1\" />');\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=666\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof reedpop_piwik === \"function\"
+        && cookie_data.npa.cookies == \"true\") { reedpop_piwik(); }\r\n\r\n\tif (typeof
+        gtag === \"function\") { gtag(\"consent\", \"update\", {\"ad_storage\": cookie_data.npa.status
+        == \"false\" ? \"granted\" : \"denied\", \"analytics_storage\": cookie_data.npa.cookies
+        == \"true\" ? \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status
+        == \"false\") {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t}
+        else {\r\n\t\t// don't personalize\r\n\t\tif (typeof permutive === \"object\")
+        { permutive.consent({ \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\",
+        { domain: \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\nreedpop_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8188de7d4e040151-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Thu, 19 Oct 2023 12:01:55 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RHq4ziEzSrXZcBhuYqvkQFPDQ4re9X%2Bz1vuB97Z5zahy7ibyQ8tj1GY3qS0YyBhxeLsKIoMasLhlHTcVNm6ym6Ir%2F%2FXuXk2XWf3MbzWqcrh4C2OlkJOYkV22xkk9QHzwSxqGoLkgex9l%2Fk8%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=7d78135fcaf665d4f896fde5f1553f1c; expires=Thu, 19-Oct-2023 12:11:55
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1

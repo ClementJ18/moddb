@@ -13,12 +13,13 @@ import requests
 from bs4 import BeautifulSoup, Tag
 from pyrate_limiter import Duration, Limiter, RequestRate
 
-from .enums import ThumbnailType
+from .enums import MediaCategory, ThumbnailType
 from .errors import AwaitingAuthorisation, ModdbException
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
-LIMITER = Limiter(
+
+limiter = Limiter(
     # request stuff slowly, like a human
     RequestRate(1, Duration.SECOND * 1),
     # take breaks when requesting stuff, like a human
@@ -141,7 +142,7 @@ def prepare_request(req: requests.Request, session):
     return prepped
 
 
-def raise_for_status(response):
+def raise_for_status(response: requests.Response):
     """Raise any error that could have occured"""
     try:
         text = response.json()
@@ -151,7 +152,9 @@ def raise_for_status(response):
             LOGGER.error(response.request.body)
             raise ModdbException(text["text"])
     except requests.exceptions.JSONDecodeError:
-        response.raise_for_status()
+        pass
+
+    response.raise_for_status()
 
     if (
         "is currently awaiting authorisation, which can take a couple of days while a"
@@ -193,7 +196,7 @@ def generate_login_cookies(username, password):
     return login.cookies
 
 
-@LIMITER.ratelimit("moddb", delay=True)
+@limiter.ratelimit("moddb", delay=True)
 def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
@@ -202,7 +205,7 @@ def request(req: requests.Request):
     req : requests.Request
         The request to perform
 
-    Return
+    Returns
     -------
     requests.Response
         The returned response object
@@ -218,7 +221,18 @@ def request(req: requests.Request):
 
 def soup(html: str) -> BeautifulSoup:
     """Simple helper function that takes a string representation of an html page and
-    returns a beautiful soup object"""
+    returns a beautiful soup object
+
+    Parameters
+    -----------
+    html : str
+        The string representationg of the html to parse
+
+    Returns
+    --------
+    bs4.BeautifulSoup
+        The parsed html
+    """
 
     return BeautifulSoup(html, "html.parser")
 
@@ -240,6 +254,7 @@ def get_page(url: str, *, params: dict = {}, json: bool = False):
     Returns
     -------
     bs4.BeautifulSoup
+        The parsed html
     """
     resp = request(requests.Request("GET", url, params=params))
     if json:
@@ -290,18 +305,44 @@ def join(path: str) -> str:
 
 
 def normalize(string: str) -> str:
-    """Removes all extra fluff from a text to get the barebone content"""
+    """Removes all extra fluff from a stat to get the barebone content.
+
+    Stats usually have extra words like "members" or "visitors" and have command separated integers.
+
+    Parameters
+    -----------
+    string : str
+        The string to clean up
+
+    Returns
+    --------
+    str
+        The cleaned up stat
+    """
     return string.replace(",", "").replace("members", "").replace("member", "").strip()
 
 
-def get_media_type(img: Tag) -> int:
-    """Determines the type of the image through some very hacky stuff, might break"""
+def get_media_type(img: Tag) -> MediaCategory:
+    """Determines whether a media is an image, a video or an audio.
+
+    This is somewhat of a brittle method, don't rely on it too much.
+
+    Parameters
+    -----------
+    img: bsa.Tag
+        The image to check
+
+    Returns
+    ---------
+    MediaCategory
+        The category of the media
+    """
     if img is None:
-        return 2
+        return MediaCategory.audio
     elif img["src"][-8:-5] == ".mp4":
-        return 0
+        return MediaCategory.video
     else:
-        return 1
+        return MediaCategory.image
 
 
 def get_page_type(url: str) -> "ThumbnailType":
@@ -347,7 +388,22 @@ def ceildiv(a: int, b: int) -> int:
 
 def get_list_stats(result_box: bs4.BeautifulSoup, per_page: int = 30) -> Tuple[int, int, int]:
     """Get the current page, total pages and total results from
-    a result list"""
+    a result list
+
+    Parameters
+    ------------
+    result_box: bs4.BeautifulSoup
+        The HTML of the result box from a list of results page
+    per_page: Optional[int]
+        The number of results per page, important for calculations. Defaults
+        to 30, doesn't usually need to be touched
+
+    Returns
+    --------
+    Tuple[int, int, int]
+        The stats in order of: number of current page (starting from 1),
+        total number of pages (between 1 and X) and the total results.
+    """
     stats = re.match(
         r".*\(([0-9,]*) - ([0-9,]*) of ([0-9,]*)\)",
         result_box.find("div", class_="normalcorner")

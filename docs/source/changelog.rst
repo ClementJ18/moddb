@@ -8,6 +8,24 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.10.0
+-------
+Bug Fixes
+##########
+* Pinned major releases of all dependencies
+* Fixed improper parsing of not yet released pages
+* Fixed improper parsing of get_tags when page did not have more tags
+
+New Features
+#############
+* Documented more of the utility functions
+* Some enum members have been renamed to better fit with the naming pattern of the website
+* Tests now produce cassettes for easy re-use.
+
+Removed Features
+#################
+
+
 v0.9.0
 -------
 Bug Fixes

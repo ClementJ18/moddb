@@ -1,8 +1,6 @@
-from ast import Import
 import pytest
-from unittest.mock import patch
 
-from tests.utils import patched_request, sample_list
+from tests.utils import sample_list
 
 try:
     from tests.test_config import username, password
@@ -18,7 +16,7 @@ DEFAULT_SEARCH = ("edain mod", moddb.SearchCategory.mods)
 DEFAULT_TAG_SEARCH = "strategy"
 
 
-@patch("moddb.utils.request", new=patched_request)
+@pytest.mark.vcr
 class TestFrontPage:
     @pytest.fixture(autouse=True)
     def _get_object(self, request):
@@ -37,12 +35,11 @@ class TestFrontPage:
             file.parse()
 
 
-@patch("moddb.utils.request", new=patched_request)
+@pytest.mark.vcr
 class TestSearch:
     @pytest.fixture(params=[DEFAULT_SEARCH], autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=patched_request):
-            self.search = moddb.search(request.param[1], query=request.param[0])
+        self.search = moddb.search(request.param[1], query=request.param[0])
 
     def test_resort(self):
         results = self.search._results
@@ -69,11 +66,11 @@ class TestLogin:
         moddb.SESSION.close()
 
 
+@pytest.mark.vcr
 class TestTagSearch:
     @pytest.fixture(params=[DEFAULT_TAG_SEARCH], autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=patched_request):
-            self.search = moddb.search_tags(request.param)
+        self.search = moddb.search_tags(request.param)
 
     def test_resort(self):
         results = self.search._results

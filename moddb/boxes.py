@@ -473,7 +473,7 @@ def _parse_results(html):
                     image=obj.a.img["src"],
                     type=get_page_type(join(obj.a["href"])),
                     summary=summary.string if summary else None,
-                    date=get_date(date["datetime"]) if date else None,
+                    date=get_date(date["datetime"]) if date and date.string != "TBD" else None,
                 )
             )
     except (TypeError, KeyError):
@@ -489,7 +489,7 @@ def _parse_results(html):
                     image=None,
                     type=get_page_type(join(url["href"])),
                     summary=content.text,
-                    date=get_date(date["datetime"]) if date else None,
+                    date=get_date(date["datetime"]) if date and date.string != "TBD" else None,
                 )
             )
 

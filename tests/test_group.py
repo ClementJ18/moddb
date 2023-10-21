@@ -1,20 +1,18 @@
-import random
 import pytest
-from unittest.mock import patch
 
-from tests.utils import patched_request, sample_list
+from tests.utils import sample_list
 
 import moddb
 
 DEFAULT = "https://www.moddb.com/groups/humour-satire-parody"
 
+pytestmark = [pytest.mark.vcr]
 
-@patch("moddb.utils.request", new=patched_request)
+
 class TestGroup:
     @pytest.fixture(params=[DEFAULT], autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=patched_request) as f:
-            self.group = moddb.Group(moddb.get_page(request.param))
+        self.group = moddb.Group(moddb.get_page(request.param))
 
     def test_get_addons(self):
         addons = self.group.get_addons()

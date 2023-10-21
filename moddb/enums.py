@@ -241,38 +241,38 @@ class AddonCategory(enum.Enum):
     maps = 100
     multiplayer_map = 101
     singleplayer_map = 102
-    prefabs = 103
+    prefab = 103
     models = 104
-    animal_model = 105
-    players_model = 106
+    npc_model = 105
+    player_model = 106
     prop_model = 132
     vehicle_model = 107
-    weapons_model = 108
-    models_pack = 131
+    weapon_model = 108
+    model_pack = 131
     skins = 110
-    animal_skin = 111
-    players_skin = 112
+    npc_skin = 111
+    player_skin = 112
     prop_skin = 133
     vehicle_skin = 113
-    weapons_skin = 114
+    weapon_skin = 114
     skin_pack = 134
     audio = 116
     music = 117
-    animal_audio = 135
-    players_audio = 119
+    npc_audio = 135
+    player_audio = 119
     vehicle_audio = 120
-    weapons_audio = 121
+    weapon_audio = 121
     ambience_sounds = 137
     language_sounds = 138
     audio_pack = 118
     graphics = 123
-    decals = 124
+    decal = 124
     effects_gfx = 136
-    guis = 125
-    huds = 126
-    sprays = 127
-    sprites = 128
-    textures = 129
+    gui = 125
+    hud = 126
+    spray = 127
+    sprite = 128
+    texture = 129
 
 
 class Licence(enum.Enum):
@@ -318,10 +318,12 @@ class Theme(enum.Enum):
     nature = 13
     noire = 19
     pirate = 22
+    postapocalyptic = 25
     realism = 8
     scifi = 9
     survival = 23
     sport = 12
+    urban = 24
     war = 10
     western = 11
 
@@ -378,6 +380,7 @@ class Genre(enum.Enum):
     family = 31
     party = 29
     rhythm = 28
+    tcg_ccg_card_game = 54
     virtual_life = 30
     sub_puzzle = 32
 
@@ -400,11 +403,11 @@ class FileCategory(enum.Enum):
     server = 5
     trainer = 29
     media = 6
-    trailers = 7
-    movies = 8
+    trailer = 7
+    movie = 8
     music = 9
     audio = 25
-    wallpapers = 10
+    wallpaper = 10
     tools = 11
     audio_tool = 12
     archive_tool = 20
@@ -414,12 +417,12 @@ class FileCategory(enum.Enum):
     installer_tool = 16
     server_tool = 17
     plugin = 27
-    ides = 18
+    ide = 18
     sdk = 19
     source_code = 26
     miscellaneous = 21
-    guides = 22
-    tutorials = 23
+    guide = 22
+    tutorial = 23
     language_pack = 30
     other = 24
 
@@ -437,6 +440,7 @@ class JobSkill(enum.Enum):
     public_relations = 8
     qa_testers = 9
     sales = 10
+    writers = 12
     web_other = 11
 
 

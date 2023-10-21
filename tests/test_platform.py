@@ -1,19 +1,18 @@
 import pytest
-from unittest.mock import patch
 
-from tests.utils import patched_request, sample_list
+from tests.utils import sample_list
 
 import moddb
 
 DEFAULT = "https://www.moddb.com/platforms/pc"
 
+pytestmark = [pytest.mark.vcr]
 
-@patch("moddb.utils.request", new=patched_request)
+
 class TestPlatform:
     @pytest.fixture(params=[DEFAULT], autouse=True)
     def _get_object(self, request):
-        with patch("moddb.utils.request", new=patched_request) as f:
-            self.platform = moddb.Platform(moddb.get_page(request.param))
+        self.platform = moddb.Platform(moddb.get_page(request.param))
 
     def test_get_comments(self):
         self.platform.get_comments()
