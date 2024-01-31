@@ -16,6 +16,7 @@ from .errors import ModdbException
 from .pages import Member
 from .utils import (
     BASE_URL,
+    COMMENT_LIMITER,
     LOGGER,
     concat_docs,
     generate_hash,
@@ -27,7 +28,7 @@ from .utils import (
     get_siteareaid,
     join,
     raise_for_status,
-    limiter,
+    ratelimit,
     soup,
     user_agent_list,
 )
@@ -36,8 +37,6 @@ if TYPE_CHECKING:
     from .boxes import Comment, Tag
     from .enums import WatchType
     from .pages import Engine, Game, Group, Mod, Review, Team
-
-COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
 
 
 class Message:
@@ -312,7 +311,7 @@ class Client:
         sys.modules["moddb"].SESSION = self._fake_session
         delattr(self, "_fake_session")
 
-    @limiter.ratelimit("moddb", delay=True)
+    @ratelimit
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""
@@ -710,7 +709,7 @@ class Client:
             The page's updated object containing the new comment and any other new data that
             has been posted since then
         """
-        COMMENT_LIMITER.try_acquire(self.member.name_id, delay=True)
+        COMMENT_LIMITER.try_acquire(self.member.name_id)
         r = self._request(
             "POST",
             page.url,

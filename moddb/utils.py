@@ -5,14 +5,14 @@ import random
 import re
 import sys
 import uuid
-from typing import Tuple
+from typing import Optional, Sequence, Tuple, TypeVar
 from urllib.parse import urljoin
 from requests import utils
 
 import bs4
 import requests
 from bs4 import BeautifulSoup, Tag
-from pyrate_limiter import Duration, Limiter, RequestRate
+from pyrate_limiter import Duration, Limiter, Rate
 
 from .enums import MediaCategory, ThumbnailType
 from .errors import AwaitingAuthorisation, ModdbException
@@ -20,12 +20,24 @@ from .errors import AwaitingAuthorisation, ModdbException
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
 
-limiter = Limiter(
-    # request stuff slowly, like a human
-    RequestRate(1, Duration.SECOND * 1),
-    # take breaks when requesting stuff, like a human
-    RequestRate(40, Duration.MINUTE * 5),
+GLOBAL_LIMITER = Limiter(
+    [
+        # request stuff slowly, like a human
+        Rate(1, Duration.SECOND * 1),
+        # take breaks when requesting stuff, like a human
+        Rate(40, Duration.MINUTE * 5),
+    ]
 )
+COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
+
+global_limiter_decorator = GLOBAL_LIMITER.as_decorator()
+
+def mapping(*args, **kwargs):
+    return ("moddb", 1)
+
+def ratelimit(func):
+    return global_limiter_decorator(mapping)(func)
+
 
 COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
 
@@ -217,7 +229,7 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
     return login.cookies
 
 
-@limiter.ratelimit("moddb", delay=True)
+@ratelimit
 def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
@@ -451,7 +463,10 @@ class Object:
         self.__dict__.update(kwargs)
 
 
-def find(predicate, seq):
+D = TypeVar("D")
+
+
+def find(predicate, seq: Sequence[D]) -> Optional[D]:
     """A helper to return the first element found in the sequence
     that meets the predicate. For example: ::
 
@@ -479,7 +494,7 @@ def find(predicate, seq):
     return None
 
 
-def get(iterable, **attrs):
+def get(iterable: Sequence[D], **attrs) -> Optional[D]:
     r"""A helper that returns the first element in the iterable that meets
     all the traits passed in ``attrs``. This is an alternative for
     :func:`moddb.utils.find`.

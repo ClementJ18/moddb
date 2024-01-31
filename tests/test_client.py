@@ -1,3 +1,5 @@
+import time
+import pyrate_limiter
 import pytest
 import random
 
@@ -90,3 +92,4 @@ class TestClient:
         time.sleep(60)
 
         client.add_comment(page, "Test Reply", comment=comment)
+
