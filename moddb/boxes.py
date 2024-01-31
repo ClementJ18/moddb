@@ -532,8 +532,13 @@ def _parse_comments(html):
             try:
                 comments[-1].children[-1].children.append(comment)
             except IndexError:
-                comments[-1].children.append(MissingComment(1))
-                comments[-1].children[-1].children.append(comment)
+                try:
+                    comments[-1].children.append(MissingComment(1))
+                    comments[-1].children[-1].children.append(comment)
+                except IndexError:
+                    comments.append(MissingComment(0))
+                    comments[-1].children.append(MissingComment(1))
+                    comments[-1].children[-1].children.append(comment)
         else:
             comments.append(comment)
 

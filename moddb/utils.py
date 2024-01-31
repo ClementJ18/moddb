@@ -20,13 +20,15 @@ from .errors import AwaitingAuthorisation, ModdbException
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
 
+GLOBAL_THROTTLE = Duration.SECOND * 1
 GLOBAL_LIMITER = Limiter(
     [
         # request stuff slowly, like a human
-        Rate(1, Duration.SECOND * 1),
+        Rate(1, GLOBAL_THROTTLE),
         # take breaks when requesting stuff, like a human
         Rate(40, Duration.MINUTE * 5),
-    ]
+    ],
+    max_delay=GLOBAL_THROTTLE * 1000
 )
 COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
 

@@ -690,7 +690,7 @@ class Client:
 
         return "friend request has been sent" in r.json()["text"]
 
-    def add_comment(self, page: Any, text: str, *, comment: str = None) -> Any:
+    def add_comment(self, page: Any, text: str, *, comment: Comment = None) -> Any:
         """Add a comment to a page.
 
         Parameters
