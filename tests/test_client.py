@@ -77,8 +77,6 @@ class TestClient:
         threads = client.get_threads()
         thumbnail = client.parse_thread(threads[0])
 
-        self.client.leave_thread(thumbnail)
-        self.client.mark_all_read()
         client.leave_thread(thumbnail)
         client.mark_all_read()
 

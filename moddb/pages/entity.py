@@ -1,4 +1,5 @@
 from __future__ import annotations
+import logging
 
 from typing import TYPE_CHECKING, List, Tuple
 
@@ -87,14 +88,22 @@ class Group(PageMetaClass, GetAddonsMixin):
         try:
             self.profile = Profile(html)
         except AttributeError:
-            LOGGER.info("Entity '%s' has no profile (private)", self.name)
+            LOGGER.info(
+                "Entity '%s' has no profile (private)",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.profile = None
             self.private = True
 
         try:
             self.stats = Statistics(html)
         except AttributeError:
-            LOGGER.info("Entity '%s' has no stats (private)", self.name)
+            LOGGER.info(
+                "Entity '%s' has no stats (private)",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.stats = None
 
         try:
@@ -105,7 +114,11 @@ class Group(PageMetaClass, GetAddonsMixin):
                 if x.string is not None
             ]
         except AttributeError:
-            LOGGER.info("Entity '%s' has no tags (private)", self.name)
+            LOGGER.info(
+                "Entity '%s' has no tags (private)",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.tags = []
 
         try:
@@ -114,7 +127,9 @@ class Group(PageMetaClass, GetAddonsMixin):
             try:
                 self.embed = str(html.find_all("textarea")[1].a)
             except IndexError:
-                LOGGER.info("Group '%s' has no embed", self.name)
+                LOGGER.info(
+                    "Group '%s' has no embed", self.name, exc_info=LOGGER.level >= logging.DEBUG
+                )
                 self.embed = None
 
         self.suggestions = self._get_suggestions(html)
@@ -138,7 +153,11 @@ class Group(PageMetaClass, GetAddonsMixin):
                 for x in thumbnails
             ]
         except AttributeError:
-            LOGGER.info("Group '%s' has no article suggestions", self.name)
+            LOGGER.info(
+                "Group '%s' has no article suggestions",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.articles = []
 
         try:
@@ -173,7 +192,11 @@ class Group(PageMetaClass, GetAddonsMixin):
                 .find_all("div", recursive=False)
             )
         except AttributeError:
-            LOGGER.info("Group '%s' has no sidebar suggestions", self.name)
+            LOGGER.info(
+                "Group '%s' has no sidebar suggestions",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             return []
 
         suggestions = []
@@ -237,13 +260,15 @@ class Team(Group, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin):
         try:
             self.games = self._get_games(html)
         except AttributeError:
-            LOGGER.info("Team '%s' has no games", self.name)
+            LOGGER.info("Team '%s' has no games", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.games = []
 
         try:
             self.engines = self._get_engines(html)
         except AttributeError:
-            LOGGER.info("Team '%s' has no engines", self.name)
+            LOGGER.info(
+                "Team '%s' has no engines", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.engines = []
         try:
             mods = (
@@ -261,7 +286,7 @@ class Team(Group, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin):
                 for x in mods
             ]
         except AttributeError:
-            LOGGER.info("Team '%s' has no mods", self.name)
+            LOGGER.info("Team '%s' has no mods", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.mods = []
 
 
@@ -309,19 +334,29 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
         try:
             self.profile = MemberProfile(html)
         except AttributeError:
-            LOGGER.info("Member '%s' has no profile (private)", self.name)
+            LOGGER.info(
+                "Member '%s' has no profile (private)",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.profile = None
 
         try:
             self.stats = MemberStatistics(html)
         except AttributeError:
-            LOGGER.info("Member '%s' has no stats (private)", self.name)
+            LOGGER.info(
+                "Member '%s' has no stats (private)",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.stats = None
 
         try:
             self.description = html.find("div", id="profiledescription").p.string
         except AttributeError:
-            LOGGER.info("Member '%s' has no description", self.name)
+            LOGGER.info(
+                "Member '%s' has no description", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.description = None
 
         try:
@@ -335,7 +370,11 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
                 for div in groups_raw
             ]
         except AttributeError:
-            LOGGER.info("Member '%s' doesn't have any groups", self.name)
+            LOGGER.info(
+                "Member '%s' doesn't have any groups",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.groups = []
 
         try:
@@ -347,7 +386,11 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             self.blog = Blog(heading=blogs_raw.pop(0), text=blogs_raw.pop(0))
         except (TypeError, AttributeError):
             self.blog = None
-            LOGGER.info("Member '%s' has no front page blog", self.name)
+            LOGGER.info(
+                "Member '%s' has no front page blog",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         try:
             blogs_raw = (
@@ -361,7 +404,11 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             ]
         except (TypeError, AttributeError):
             self.blogs = []
-            LOGGER.info("Member '%s' has no blog suggestions", self.name)
+            LOGGER.info(
+                "Member '%s' has no blog suggestions",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         try:
             friends = html.find("div", class_="table tablerelated").find_all(
@@ -377,7 +424,9 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             ]
         except AttributeError:
             self.friends = []
-            LOGGER.info("Member '%s' has no friends ;(", self.name)
+            LOGGER.info(
+                "Member '%s' has no friends ;(", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
 
     def __repr__(self):
         return f"<Member name={self.name} level={self.profile.level}>"

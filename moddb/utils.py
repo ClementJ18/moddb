@@ -24,18 +24,20 @@ GLOBAL_THROTTLE = Duration.SECOND * 1
 GLOBAL_LIMITER = Limiter(
     [
         # request stuff slowly, like a human
-        Rate(1, GLOBAL_THROTTLE),
+        Rate(1, Duration.SECOND * 30),
         # take breaks when requesting stuff, like a human
         Rate(40, Duration.MINUTE * 5),
     ],
-    max_delay=GLOBAL_THROTTLE * 1000
+    max_delay=GLOBAL_THROTTLE * 1000,
 )
 COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
 
 global_limiter_decorator = GLOBAL_LIMITER.as_decorator()
 
+
 def mapping(*args, **kwargs):
     return ("moddb", 1)
+
 
 def ratelimit(func):
     return global_limiter_decorator(mapping)(func)

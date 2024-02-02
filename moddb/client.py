@@ -43,7 +43,7 @@ class Message:
     """A single message within a thread.
 
     Attributes
-    ----------
+    -----------
     id : int
         The id of the message
     member : Thumbnail
