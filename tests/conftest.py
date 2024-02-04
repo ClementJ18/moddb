@@ -1,5 +1,8 @@
+import logging
 import pytest
 
+logger = logging.getLogger("vcr")
+logger.setLevel(logging.WARNING)
 
 @pytest.fixture(scope="session")
 def vcr_config():

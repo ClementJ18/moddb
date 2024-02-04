@@ -34,6 +34,9 @@ class TestFrontPage:
         for file in sample_list(self.fp.files, 3):
             file.parse()
 
+    def get_poll(self):
+        self.fp.get_poll()
+
 
 @pytest.mark.vcr
 class TestSearch:

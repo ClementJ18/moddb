@@ -28,7 +28,7 @@ GLOBAL_LIMITER = Limiter(
         # take breaks when requesting stuff, like a human
         Rate(40, GLOBAL_THROTTLE),
     ],
-    max_delay=GLOBAL_THROTTLE,
+    max_delay=GLOBAL_THROTTLE + 500,
 )
 COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
 

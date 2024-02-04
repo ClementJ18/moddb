@@ -20,6 +20,7 @@ New Features
 * Added `FrontPage.get_poll` to get the poll on the front page
 * Ratelimiting login request to to 1/5s
 
+
 Removed Features
 #################
 * Removed `FrontPage.poll` to reduce the number of requests used when calling `front_page()`
