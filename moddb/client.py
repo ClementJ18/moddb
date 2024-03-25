@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, Any, List, Tuple, Union
 
 import requests
 from bs4 import BeautifulSoup
-from pyrate_limiter import Duration, Limiter, RequestRate
+from requests import utils
 
 from .base import parse_page
 from .boxes import ResultList, Thumbnail, _parse_results
@@ -293,7 +293,7 @@ class Client:
 
     def __init__(self, username: str, password: str):
         session = requests.Session()
-        session.cookies = generate_login_cookies(username, password)
+        session.cookies = generate_login_cookies(username, password, session=session)
         self._session = session
         LOGGER.info("Login successful for %s", username)
 
@@ -316,7 +316,7 @@ class Client:
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""
-        cookies = cookies = requests.utils.dict_from_cookiejar(self._session.cookies)
+        cookies = utils.dict_from_cookiejar(self._session.cookies)
         headers = {
             **kwargs.pop("headers", {}),
             "User-Agent": random.choice(user_agent_list),

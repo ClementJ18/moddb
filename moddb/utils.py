@@ -7,6 +7,7 @@ import sys
 import uuid
 from typing import Tuple
 from urllib.parse import urljoin
+from requests import utils
 
 import bs4
 import requests
@@ -25,6 +26,22 @@ limiter = Limiter(
     # take breaks when requesting stuff, like a human
     RequestRate(40, Duration.MINUTE * 5),
 )
+
+COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
+
+LOGIN_THROTTLE = Duration.SECOND * 5
+LOGIN_LIMITER = Limiter(Rate(1, LOGIN_THROTTLE), max_delay=LOGIN_THROTTLE + 500)
+
+global_limiter_decorator = GLOBAL_LIMITER.as_decorator()
+
+
+def mapping(*args, **kwargs):
+    return ("moddb", 1)
+
+
+def ratelimit(func):
+    return global_limiter_decorator(mapping)(func)
+
 
 time_mapping = {
     "year": 125798400,
@@ -127,9 +144,9 @@ def get_date(d: str) -> datetime.datetime:
     return datetime.datetime.strptime(d, "%Y-%m")
 
 
-def prepare_request(req: requests.Request, session):
+def prepare_request(req: requests.Request, session: requests.Session):
     """Prepared a request with the appropriate cookies"""
-    cookies = requests.utils.dict_from_cookiejar(session.cookies)
+    cookies = utils.dict_from_cookiejar(session.cookies)
 
     if req.cookies is not None:
         req.cookies = {**req.cookies, **cookies}
@@ -165,9 +182,13 @@ def raise_for_status(response: requests.Response):
         )
 
 
-def generate_login_cookies(username, password):
+def generate_login_cookies(username: str, password: str, session: requests.Session = None):
     """Log a user in and return the `freeman` cookie containing the login hash"""
-    resp = requests.get(f"{BASE_URL}/members/login")
+    LOGIN_LIMITER.try_acquire("login")
+    if session is None:
+        session = sys.modules["moddb"].SESSION
+
+    resp = session.get(f"{BASE_URL}/members/login")
     html = soup(resp.text)
     form = html.find("form", attrs={"name": "membersform"})
 
@@ -183,7 +204,7 @@ def generate_login_cookies(username, password):
         "members": "Sign in",
     }
 
-    login = requests.post(
+    login = session.post(
         f"{BASE_URL}/members/login",
         data=data,
         cookies=resp.cookies,
