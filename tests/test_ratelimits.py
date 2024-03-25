@@ -2,47 +2,61 @@ import time
 import pytest
 
 from moddb.errors import Ratelimited
-from moddb.ratelimit import Ratelimit
+from moddb.utils import Ratelimit, ratelimit
 
 
 @pytest.mark.parametrize(["rate", "per"], ((1, 5), (40, 300)))
 def test_ratelimit_get_limited(rate: float, per: float):
-    ratelimit = Ratelimit(rate, per)
+    limiter = Ratelimit(rate, per)
     for _ in range(rate):
-        ratelimit.call()
+        limiter.call()
 
     with pytest.raises(Ratelimited):
-        ratelimit.call()
+        limiter.call()
 
 
 @pytest.mark.parametrize(["rate", "per"], ((1, 5),))
 def test_ratelimit_stay_under(rate: float, per: float):
-    ratelimit = Ratelimit(rate, per)
-    for _ in range(ratelimit.rate * 5):
-        ratelimit.call()
-        time.sleep((ratelimit.per / ratelimit.rate) + 0.001)
+    limiter = Ratelimit(rate, per)
+    for _ in range(limiter.rate * 5):
+        limiter.call()
+        time.sleep((limiter.per / limiter.rate) + 0.001)
 
 
 def test_early_initial():
-    ratelimit = Ratelimit(10, 2)
-    ratelimit.call()
+    limiter = Ratelimit(10, 2)
+    limiter.call()
 
     time.sleep(4)
 
-    ratelimit.call()
+    limiter.call()
 
     time.sleep(1)
 
-    ratelimit.call()
+    limiter.call()
 
 
 def test_late_burst(freezer):
-    ratelimit = Ratelimit(10, 4)
-    ratelimit.call()
+    limiter = Ratelimit(10, 4)
+    limiter.call()
 
     freezer.tick(3)
-    ratelimit.call()
+    limiter.call()
 
     freezer.tick(2)
-    for _ in range(11):
-        ratelimit.call()
+
+    with pytest.raises(Ratelimited):
+        for _ in range(11):
+            limiter.call()
+
+def test_decorator():
+    limiter = Ratelimit(5, 1, sleep=1)
+
+    @ratelimit(limiter)
+    def ratelimited_function():
+        return "test"
+    
+    assert ratelimited_function() == "test"
+
+    for _ in range(6):
+        ratelimited_function()

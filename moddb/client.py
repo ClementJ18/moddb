@@ -29,9 +29,9 @@ from .utils import (
     raise_for_status,
     soup,
     user_agent_list,
+    COMMENT_LIMITER,
+    ratelimit
 )
-
-from .ratelimit import COMMENT_LIMITER, ratelimit
 
 if TYPE_CHECKING:
     from .boxes import Comment, Tag

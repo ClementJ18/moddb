@@ -1,9 +1,11 @@
 import datetime
+import functools
 import inspect
 import logging
 import random
 import re
 import sys
+import time
 import uuid
 from typing import Optional, Sequence, Tuple, TypeVar
 from urllib.parse import urljoin
@@ -14,8 +16,7 @@ import requests
 from bs4 import BeautifulSoup, Tag
 
 from .enums import MediaCategory, ThumbnailType
-from .errors import AwaitingAuthorisation, ModdbException
-from .ratelimit import GLOBAL_LIMITER, GLOBAL_THROTLE, LOGIN_LIMITER, ratelimit
+from .errors import AwaitingAuthorisation, ModdbException, Ratelimited
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
@@ -92,6 +93,60 @@ def concat_docs(cls):
     cls.__doc__ = "\n".join(final)
 
     return cls
+
+
+class Ratelimit:
+    def __init__(self, rate: float, per: float, sleep: Optional[None] = None):
+        self.rate = rate
+        self.per = per
+        self.sleep = sleep
+
+        self.last_called = datetime.datetime.min
+        self.initial_call = datetime.datetime.min
+        self.call_count = 0
+
+    def reset(self, now: datetime):
+        self.initial_call = now
+        self.call_count = 0
+
+    def call(self):
+        now = datetime.datetime.now()
+
+        expiry = self.initial_call + datetime.timedelta(seconds=self.per)
+        if now > expiry:
+            LOGGER.info("Reseting ratelimit")
+            self.reset(now)
+
+        if self.call_count + 1 > self.rate:
+            remaining = (expiry - now).total_seconds()
+            if self.sleep is not None and remaining <= self.sleep:
+                LOGGER.info("Ratelimited! Sleeping for %s", remaining)
+                time.sleep(remaining)
+                self.reset(now)
+            else:
+                raise Ratelimited(f"Ratelimited please try again in {remaining}", remaining)
+
+        self.call_count += 1
+
+
+def ratelimit(*limiters: Ratelimit):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            for limiter in limiters:
+                limiter.call()
+
+            return func(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
+
+GLOBAL_LIMITER = Ratelimit(40, 300, sleep=300)
+GLOBAL_THROTLE = Ratelimit(5, 1, sleep=1)
+COMMENT_LIMITER = Ratelimit(1, 60)
+LOGIN_LIMITER = Ratelimit(1, 5)
 
 
 def get_date(d: str) -> datetime.datetime:
