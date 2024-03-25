@@ -12,51 +12,13 @@ from requests import utils
 import bs4
 import requests
 from bs4 import BeautifulSoup, Tag
-from pyrate_limiter import Duration, Limiter, Rate
 
 from .enums import MediaCategory, ThumbnailType
 from .errors import AwaitingAuthorisation, ModdbException
+from .ratelimit import GLOBAL_LIMITER, GLOBAL_THROTLE, LOGIN_LIMITER, ratelimit
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
-
-GLOBAL_THROTTLE = Duration.MINUTE * 5
-GLOBAL_LIMITER = Limiter(
-    [
-        # request stuff slowly, like a human
-        Rate(1, Duration.SECOND * 1),
-        # take breaks when requesting stuff, like a human
-        Rate(40, GLOBAL_THROTTLE),
-    ],
-    max_delay=GLOBAL_THROTTLE + 500,
-)
-COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
-
-global_limiter_decorator = GLOBAL_LIMITER.as_decorator()
-
-
-def mapping(*args, **kwargs):
-    return ("moddb", 1)
-
-
-def ratelimit(func):
-    return global_limiter_decorator(mapping)(func)
-
-
-COMMENT_LIMITER = Limiter(Rate(1, Duration.MINUTE))
-
-LOGIN_THROTTLE = Duration.SECOND * 5
-LOGIN_LIMITER = Limiter(Rate(1, LOGIN_THROTTLE), max_delay=LOGIN_THROTTLE + 500)
-
-global_limiter_decorator = GLOBAL_LIMITER.as_decorator()
-
-
-def mapping(*args, **kwargs):
-    return ("moddb", 1)
-
-
-def ratelimit(func):
-    return global_limiter_decorator(mapping)(func)
 
 
 time_mapping = {
@@ -198,9 +160,9 @@ def raise_for_status(response: requests.Response):
         )
 
 
+@ratelimit(LOGIN_LIMITER)
 def generate_login_cookies(username: str, password: str, session: requests.Session = None):
     """Log a user in and return the `freeman` cookie containing the login hash"""
-    LOGIN_LIMITER.try_acquire("login")
     if session is None:
         session = sys.modules["moddb"].SESSION
 
@@ -233,7 +195,7 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
     return login.cookies
 
 
-@ratelimit
+@ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
 def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 

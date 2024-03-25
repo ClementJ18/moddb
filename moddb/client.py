@@ -16,7 +16,6 @@ from .errors import ModdbException
 from .pages import Member
 from .utils import (
     BASE_URL,
-    COMMENT_LIMITER,
     LOGGER,
     concat_docs,
     generate_hash,
@@ -28,10 +27,11 @@ from .utils import (
     get_siteareaid,
     join,
     raise_for_status,
-    ratelimit,
     soup,
     user_agent_list,
 )
+
+from .ratelimit import COMMENT_LIMITER, ratelimit
 
 if TYPE_CHECKING:
     from .boxes import Comment, Tag
@@ -690,6 +690,7 @@ class Client:
 
         return "friend request has been sent" in r.json()["text"]
 
+    @ratelimit(COMMENT_LIMITER)
     def add_comment(self, page: Any, text: str, *, comment: Comment = None) -> Any:
         """Add a comment to a page.
 
@@ -709,7 +710,6 @@ class Client:
             The page's updated object containing the new comment and any other new data that
             has been posted since then
         """
-        COMMENT_LIMITER.try_acquire(self.member.name_id)
         r = self._request(
             "POST",
             page.url,

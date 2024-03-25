@@ -144,11 +144,11 @@ class FrontPage:
 
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
-    
+
     def get_poll(self) -> opinion.Poll:
         """Get the full item of the front page poll. This
         result is cached after the first call.
-        
+
         Returns
         --------
         Poll

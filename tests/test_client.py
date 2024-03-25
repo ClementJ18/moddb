@@ -1,5 +1,4 @@
 import time
-import pyrate_limiter
 import pytest
 import random
 
@@ -17,9 +16,13 @@ except ModuleNotFoundError:
 
 import moddb
 
+from moddb.errors import Ratelimited
+
+
 @pytest.fixture(autouse=True, scope="module")
 def client():
     return moddb.Client(username, password)
+
 
 @pytest.fixture(autouse=True, scope="module")
 def sender():
@@ -54,15 +57,11 @@ class TestClient:
 
     def test_friends(self, client: moddb.Client, sender: moddb.Client):
         sender.send_request(client.member)
-        request = moddb.utils.get(
-            client.get_friend_requests(), name=sender.member.profile.name
-        )
+        request = moddb.utils.get(client.get_friend_requests(), name=sender.member.profile.name)
         request.decline()
 
         sender.send_request(client.member)
-        request = moddb.utils.get(
-            client.get_friend_requests(), name=sender.member.profile.name
-        )
+        request = moddb.utils.get(client.get_friend_requests(), name=sender.member.profile.name)
         request.accept()
 
         client.unfriend(sender.member)
@@ -84,10 +83,9 @@ class TestClient:
         page = moddb.parse_page("https://www.moddb.com/members/TheBetrayer")
         comment = client.add_comment(page, "Test Comment")
 
-        with pytest.raises(pyrate_limiter.BucketFullException):
+        with pytest.raises(Ratelimited):
             client.add_comment(page, "Test Reply", comment=comment)
 
         time.sleep(60)
 
         client.add_comment(page, "Test Reply", comment=comment)
-

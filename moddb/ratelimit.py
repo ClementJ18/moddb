@@ -1,15 +1,10 @@
-
 from datetime import datetime, timedelta
+import functools
 import time
 from typing import Optional
 
 from .utils import LOGGER
-
-class RatelimitError(Exception):
-    def __init__(self, message, remaining) -> None:
-        super().__init__(message)
-
-        self.remaining = remaining
+from .errors import Ratelimited
 
 
 class Ratelimit:
@@ -31,6 +26,7 @@ class Ratelimit:
 
         expiry = self.initial_call + timedelta(seconds=self.per)
         if now > expiry:
+            LOGGER.info("Reseting ratelimit")
             self.reset(now)
 
         if self.call_count + 1 > self.rate:
@@ -40,9 +36,26 @@ class Ratelimit:
                 time.sleep(remaining)
                 self.reset(now)
             else:
-                raise RatelimitError(f"Ratelimited please try again in {remaining}", remaining)
-            
+                raise Ratelimited(f"Ratelimited please try again in {remaining}", remaining)
+
         self.call_count += 1
 
-        
-            
+
+def ratelimit(*limiters: Ratelimit):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            for limiter in limiters:
+                limiter.call()
+
+            func(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
+
+GLOBAL_LIMITER = Ratelimit(40, 300, sleep=300)
+GLOBAL_THROTLE = Ratelimit(5, 1, sleep=1)
+COMMENT_LIMITER = Ratelimit(1, 60)
+LOGIN_LIMITER = Ratelimit(1, 5)

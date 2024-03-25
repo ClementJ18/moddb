@@ -21,7 +21,9 @@ class FakeResponse:
     def json(self):
         return self.json_content
 
+
 V = TypeVar("V")
+
 
 def sample_list(l: List[V], k: int) -> List[V]:
     sample = min(k, len(l))
