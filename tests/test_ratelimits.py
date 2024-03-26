@@ -49,13 +49,14 @@ def test_late_burst(freezer):
         for _ in range(11):
             limiter.call()
 
+
 def test_decorator():
     limiter = Ratelimit(5, 1, sleep=1)
 
     @ratelimit(limiter)
     def ratelimited_function():
         return "test"
-    
+
     assert ratelimited_function() == "test"
 
     for _ in range(6):

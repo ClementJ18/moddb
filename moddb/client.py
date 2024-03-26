@@ -16,6 +16,9 @@ from .errors import ModdbException
 from .pages import Member
 from .utils import (
     BASE_URL,
+    COMMENT_LIMITER,
+    GLOBAL_LIMITER,
+    GLOBAL_THROTLE,
     LOGGER,
     concat_docs,
     generate_hash,
@@ -27,10 +30,9 @@ from .utils import (
     get_siteareaid,
     join,
     raise_for_status,
+    ratelimit,
     soup,
     user_agent_list,
-    COMMENT_LIMITER,
-    ratelimit
 )
 
 if TYPE_CHECKING:
@@ -311,7 +313,7 @@ class Client:
         sys.modules["moddb"].SESSION = self._fake_session
         delattr(self, "_fake_session")
 
-    @ratelimit
+    @ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""

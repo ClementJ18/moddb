@@ -1,4 +1,5 @@
 import logging
+
 import bs4
 
 from ..boxes import PartialTag, Profile, Thumbnail

@@ -9,11 +9,11 @@ import time
 import uuid
 from typing import Optional, Sequence, Tuple, TypeVar
 from urllib.parse import urljoin
-from requests import utils
 
 import bs4
 import requests
 from bs4 import BeautifulSoup, Tag
+from requests import utils
 
 from .enums import MediaCategory, ThumbnailType
 from .errors import AwaitingAuthorisation, ModdbException, Ratelimited

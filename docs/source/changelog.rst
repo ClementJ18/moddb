@@ -19,6 +19,7 @@ New Features
 #############
 * Added `FrontPage.get_poll` to get the poll on the front page
 * Ratelimiting login request to to 1/5s
+* Ratelimited requests that are asked to raise will now raise `moddb.errors.Ratelimited`
 
 
 Removed Features
