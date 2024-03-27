@@ -7,7 +7,6 @@ import re
 import sys
 from typing import TYPE_CHECKING, Any, List, Tuple, Union
 
-import toolz
 from bs4 import BeautifulSoup
 
 from .enums import (
@@ -1149,13 +1148,13 @@ class ModDBList(collections.abc.MutableSequence):
                 results.extend(search)
                 LOGGER.info("Parsed page %s/%s", search.current_page, search.total_pages)
 
-        def key_check(element):
+        def key(element):
             if isinstance(element, Comment):
                 return element.id
             else:
                 return element.name
 
-        search._results = list(toolz.unique(results, key=key_check))
+        search._results = list({key(e): e for e in results}.values())
         return search
 
     def __repr__(self):
