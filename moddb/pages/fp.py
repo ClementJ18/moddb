@@ -35,9 +35,6 @@ class FrontPage:
     files : List[Thumbnail]
         A list of file like thumbnail objects representing the suggested
         files on the front page.
-    poll : Poll
-        The current ongoing moddb poll. Currently cannot be voted on.
-
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
@@ -141,9 +138,23 @@ class FrontPage:
             for x in files
         ]
 
-        self.poll = opinion.Poll(get_page(html.find("div", class_="poll").form["action"]))
-
+        self._poll_url = html.find("div", class_="poll").form["action"]
         self._html = html
+        self._poll = None
 
     def __repr__(self):
         return f"<FrontPage articles={len(self.articles)} mods={len(self.mods)} games={len(self.games)} files={len(self.files)}>"
+
+    def get_poll(self) -> opinion.Poll:
+        """Get the full item of the front page poll. This
+        result is cached after the first call.
+
+        Returns
+        --------
+        Poll
+            The returned poll
+        """
+        if self._poll is None:
+            self._poll = opinion.Poll(get_page(self._poll_url))
+
+        return self._poll

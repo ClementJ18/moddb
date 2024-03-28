@@ -1,6 +1,7 @@
 import json
 import os
 import random
+from typing import List, TypeVar
 from unittest.mock import patch
 
 import moddb
@@ -21,7 +22,10 @@ class FakeResponse:
         return self.json_content
 
 
-def sample_list(l: list, k: int) -> list:
+V = TypeVar("V")
+
+
+def sample_list(l: List[V], k: int) -> List[V]:
     sample = min(k, len(l))
     if l:
         return random.sample(l, sample)

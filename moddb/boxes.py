@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import collections
 import datetime
+import logging
 import re
 import sys
 from typing import TYPE_CHECKING, Any, List, Tuple, Union
 
-import toolz
 from bs4 import BeautifulSoup
 
 from .enums import (
@@ -226,7 +226,12 @@ class Profile:
                 "facebook": share[3]["href"],
             }
         except (AttributeError, IndexError):
-            LOGGER.info("Something funky about share box of %s %s", page_type.name, _name)
+            LOGGER.info(
+                "Something funky about share box of %s %s",
+                page_type.name,
+                _name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.share = None
 
         if page_type in [SearchCategory.developers, SearchCategory.groups]:
@@ -251,7 +256,12 @@ class Profile:
                 self.icon = profile_raw.find("h5", string="Icon").parent.span.img["src"]
             except AttributeError:
                 self.icon = None
-                LOGGER.info("%s '%s' does not have an icon", page_type, _name)
+                LOGGER.info(
+                    "%s '%s' does not have an icon",
+                    page_type,
+                    _name,
+                    exc_info=LOGGER.level >= logging.DEBUG,
+                )
 
         if page_type in [
             SearchCategory.games,
@@ -284,7 +294,12 @@ class Profile:
                 d = profile_raw.find("h5", string="Release date").parent.span.time
                 self.release = get_date(d["datetime"])
             except KeyError:
-                LOGGER.info("%s %s has not been released", page_type.name, _name)
+                LOGGER.info(
+                    "%s %s has not been released",
+                    page_type.name,
+                    _name,
+                    exc_info=LOGGER.level >= logging.DEBUG,
+                )
                 self.release = None
 
             if "Coming" in d.string:
@@ -308,7 +323,12 @@ class Profile:
                 self.homepage = html.find("h5", string="Homepage").parent.span.a["href"]
             except AttributeError:
                 self.homepage = None
-                LOGGER.info("%s %s has no homepage", page_type.name, _name)
+                LOGGER.info(
+                    "%s %s has no homepage",
+                    page_type.name,
+                    _name,
+                    exc_info=LOGGER.level >= logging.DEBUG,
+                )
 
         if page_type in [SearchCategory.games, SearchCategory.addons]:
             engine = profile_raw.find("h5", string="Engine")
@@ -392,12 +412,12 @@ class Style:
         try:
             self.scope = Scope(int(html.find("h5", string="Project").parent.a["href"][-1]))
         except AttributeError:
-            LOGGER.info("Has no scope")
+            LOGGER.info("Has no scope", exc_info=LOGGER.level >= logging.DEBUG)
 
         try:
             self.boxart = html.find("h5", string="Boxart").parent.span.a.img["src"]
         except AttributeError:
-            LOGGER.info("Has no boxart")
+            LOGGER.info("Has no boxart", exc_info=LOGGER.level >= logging.DEBUG)
 
     def __repr__(self):
         return (
@@ -478,7 +498,7 @@ def _parse_results(html):
             )
     except (TypeError, KeyError):
         # parse as a title-content pair of articles
-        LOGGER.info("Parsing articles as key-pair list")
+        LOGGER.info("Parsing articles as key-pair list", exc_info=LOGGER.level >= logging.DEBUG)
         for title, content in zip(search_raws[::2], search_raws[1::2]):
             date = title.find("time")
             url = title.find("h4").a
@@ -532,8 +552,13 @@ def _parse_comments(html):
             try:
                 comments[-1].children[-1].children.append(comment)
             except IndexError:
-                comments[-1].children.append(MissingComment(1))
-                comments[-1].children[-1].children.append(comment)
+                try:
+                    comments[-1].children.append(MissingComment(1))
+                    comments[-1].children[-1].children.append(comment)
+                except IndexError:
+                    comments.append(MissingComment(0))
+                    comments[-1].children.append(MissingComment(1))
+                    comments[-1].children[-1].children.append(comment)
         else:
             comments.append(comment)
 
@@ -620,6 +645,7 @@ class Comment:
                 "Comment %s by %s has no content, likely embed",
                 self.id,
                 self.author.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
             )
             self.content = None
 
@@ -772,21 +798,37 @@ class MemberProfile:
         try:
             self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
         except AttributeError:
-            LOGGER.info("Member %s has not publicized their gender", self.name)
+            LOGGER.info(
+                "Member %s has not publicized their gender",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.gender = None
 
         try:
             self.homepage = html.find("h5", string="Homepage").parent.span.a["href"]
         except AttributeError:
             self.homepage = None
-            LOGGER.info("Member %s has no homepage", self.name)
+            LOGGER.info(
+                "Member %s has no homepage", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
 
-        self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
+        try:
+            self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
+        except AttributeError:
+            self.country = None
+            LOGGER.info(
+                "Member %s country is not visible (happens when not logged in)",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         try:
             self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
         except AttributeError:
-            LOGGER.info("Can't watch yourself, narcissist...")
+            LOGGER.info(
+                "Can't watch yourself, narcissist...", exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.follow = None
 
     def __repr__(self):
@@ -855,7 +897,7 @@ class MemberStatistics:
         except AttributeError:
             self.rank = 0
             self.total = 0
-            LOGGER.info("Member %s has no rank", name)
+            LOGGER.info("Member %s has no rank", name, exc_info=LOGGER.level >= logging.DEBUG)
 
     def __repr__(self):
         return f"<MemberStatistics rank={self.rank}/{self.total}>"
@@ -1106,13 +1148,13 @@ class ModDBList(collections.abc.MutableSequence):
                 results.extend(search)
                 LOGGER.info("Parsed page %s/%s", search.current_page, search.total_pages)
 
-        def key_check(element):
+        def key(element):
             if isinstance(element, Comment):
                 return element.id
             else:
                 return element.name
 
-        search._results = list(toolz.unique(results, key=key_check))
+        search._results = list({key(e): e for e in results}.values())
         return search
 
     def __repr__(self):

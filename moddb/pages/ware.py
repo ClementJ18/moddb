@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 from typing import TYPE_CHECKING
 
 from ..boxes import Thumbnail
@@ -75,7 +76,9 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in hardware
             ]
         except AttributeError:
-            LOGGER.info("Hardware '%s' has no hardware", self.name)
+            LOGGER.info(
+                "Hardware '%s' has no hardware", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.hardware = []
 
         try:
@@ -94,7 +97,9 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in software
             ]
         except AttributeError:
-            LOGGER.info("Hardware '%s' has no software", self.name)
+            LOGGER.info(
+                "Hardware '%s' has no software", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.software = []
 
         try:
@@ -113,7 +118,9 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in games
             ]
         except AttributeError:
-            LOGGER.info("Hardware '%s' has no games", self.name)
+            LOGGER.info(
+                "Hardware '%s' has no games", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.games = []
 
         try:
@@ -130,7 +137,9 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in history
             ]
         except AttributeError:
-            LOGGER.info("Harware '%s' has no history", self.name)
+            LOGGER.info(
+                "Harware '%s' has no history", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.history = []
 
         try:
@@ -147,7 +156,11 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in recommended
             ]
         except AttributeError:
-            LOGGER.info("Hardware '%s' has no recommended", self.name)
+            LOGGER.info(
+                "Hardware '%s' has no recommended",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.recommended = []
 
 

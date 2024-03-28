@@ -2,6 +2,6 @@
 username = ""
 password = ""
 
-# Username and Password for a second account, used when two account need to interact
+# Username and Password for a second account, used when two accounts need to interact
 sender_username = ""
 sender_password = ""

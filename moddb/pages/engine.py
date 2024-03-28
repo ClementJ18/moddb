@@ -1,3 +1,5 @@
+import logging
+
 import bs4
 
 from ..enums import SearchCategory
@@ -47,5 +49,7 @@ class Engine(PageMetaClass, GetGamesMixin):
         try:
             self.games = self._get_games(html)
         except AttributeError:
-            LOGGER.info("Engine '%s' has no games", self.name)
+            LOGGER.info(
+                "Engine '%s' has no games", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.games = []

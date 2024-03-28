@@ -1,3 +1,4 @@
+import time
 import pytest
 import random
 
@@ -15,62 +16,76 @@ except ModuleNotFoundError:
 
 import moddb
 
+from moddb.errors import Ratelimited
+
+
+@pytest.fixture(autouse=True, scope="module")
+def client():
+    return moddb.Client(username, password)
+
+
+@pytest.fixture(autouse=True, scope="module")
+def sender():
+    return moddb.Client(sender_username, sender_password)
+
 
 class TestClient:
-    @pytest.fixture(autouse=True)
-    def _get_object(self, request):
-        self.client = moddb.Client(username, password)
-        self.sender = moddb.Client(sender_username, sender_password)
-
     @pytest.mark.parametrize("watch_type", moddb.WatchType)
-    def test_get_watched(self, watch_type):
-        self.client.get_watched(watch_type)
+    def test_get_watched(self, watch_type, client: moddb.Client):
+        client.get_watched(watch_type)
 
-    def test_get_updates(self):
-        updates = self.client.get_updates()
+    def test_get_updates(self, client: moddb.Client):
+        updates = client.get_updates()
 
         if updates:
             random.choice(updates).clear()
 
     @pytest.mark.parametrize("url", mixed_urls)
-    def test_posts(self, url):
+    def test_posts(self, url, client: moddb.Client):
         e = moddb.parse_page(url)
-        self.client.tracking(e)  # follow
-        self.client.tracking(e)  # unfollow
+        client.tracking(e)  # follow
+        client.tracking(e)  # unfollow
 
         if e.comments:
             comment = random.choice(e.comments.flatten())
-            self.client.like_comment(comment)
-            self.client.dislike_comment(comment)
+            client.like_comment(comment)
+            client.dislike_comment(comment)
 
         if isinstance(e, moddb.Group):
-            self.client.membership(e)  # join
-            self.client.membership(e)  # leave
+            client.membership(e)  # join
+            client.membership(e)  # leave
 
-    def test_friends(self):
-        self.sender.send_request(self.client.member)
-        request = moddb.utils.get(
-            self.client.get_friend_requests(), name=self.sender.member.profile.name
-        )
+    def test_friends(self, client: moddb.Client, sender: moddb.Client):
+        sender.send_request(client.member)
+        request = moddb.utils.get(client.get_friend_requests(), name=sender.member.profile.name)
         request.decline()
 
-        self.sender.send_request(self.client.member)
-        request = moddb.utils.get(
-            self.client.get_friend_requests(), name=self.sender.member.profile.name
-        )
+        sender.send_request(client.member)
+        request = moddb.utils.get(client.get_friend_requests(), name=sender.member.profile.name)
         request.accept()
 
-        self.client.unfriend(self.sender.member)
+        client.unfriend(sender.member)
 
-    def test_messages(self):
-        thread = self.sender.send_message([self.client.member], "Test", "This is a test message")
-        thread = self.client.reply_to_thread(thread, "This is a test reply")
+    def test_messages(self, client: moddb.Client, sender: moddb.Client):
+        thread = sender.send_message([client.member], "Test", "This is a test message")
+        thread = client.reply_to_thread(thread, "This is a test reply")
 
         member = moddb.parse_page("https://www.moddb.com/members/TheBetrayer")
-        self.client.add_member_to_thread(thread, member)
+        client.add_member_to_thread(thread, member)
 
-        threads = self.client.get_threads()
-        thumbnail = self.client.parse_thread(threads[0])
+        threads = client.get_threads()
+        thumbnail = client.parse_thread(threads[0])
 
-        self.client.leave_thread(thumbnail)
-        self.client.mark_all_read()
+        client.leave_thread(thumbnail)
+        client.mark_all_read()
+
+    def test_add_comment(self, client: moddb.Client):
+        page = moddb.parse_page("https://www.moddb.com/members/TheBetrayer")
+        comment = client.add_comment(page, "Test Comment")
+
+        with pytest.raises(Ratelimited):
+            client.add_comment(page, "Test Reply", comment=comment)
+
+        time.sleep(60)
+
+        client.add_comment(page, "Test Reply", comment=comment)

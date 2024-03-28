@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, Any, List, Tuple, Union
 
 import requests
 from bs4 import BeautifulSoup
-from pyrate_limiter import Duration, Limiter, RequestRate
+from requests import utils
 
 from .base import parse_page
 from .boxes import ResultList, Thumbnail, _parse_results
@@ -16,6 +16,9 @@ from .errors import ModdbException
 from .pages import Member
 from .utils import (
     BASE_URL,
+    COMMENT_LIMITER,
+    GLOBAL_LIMITER,
+    GLOBAL_THROTLE,
     LOGGER,
     concat_docs,
     generate_hash,
@@ -27,7 +30,7 @@ from .utils import (
     get_siteareaid,
     join,
     raise_for_status,
-    limiter,
+    ratelimit,
     soup,
     user_agent_list,
 )
@@ -37,14 +40,12 @@ if TYPE_CHECKING:
     from .enums import WatchType
     from .pages import Engine, Game, Group, Mod, Review, Team
 
-COMMENT_LIMITER = Limiter(RequestRate(1, Duration.MINUTE))
-
 
 class Message:
     """A single message within a thread.
 
     Attributes
-    ----------
+    -----------
     id : int
         The id of the message
     member : Thumbnail
@@ -293,7 +294,7 @@ class Client:
 
     def __init__(self, username: str, password: str):
         session = requests.Session()
-        session.cookies = generate_login_cookies(username, password)
+        session.cookies = generate_login_cookies(username, password, session=session)
         self._session = session
         LOGGER.info("Login successful for %s", username)
 
@@ -312,11 +313,11 @@ class Client:
         sys.modules["moddb"].SESSION = self._fake_session
         delattr(self, "_fake_session")
 
-    @limiter.ratelimit("moddb", delay=True)
+    @ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""
-        cookies = cookies = requests.utils.dict_from_cookiejar(self._session.cookies)
+        cookies = utils.dict_from_cookiejar(self._session.cookies)
         headers = {
             **kwargs.pop("headers", {}),
             "User-Agent": random.choice(user_agent_list),
@@ -691,7 +692,8 @@ class Client:
 
         return "friend request has been sent" in r.json()["text"]
 
-    def add_comment(self, page: Any, text: str, *, comment: str = None) -> Any:
+    @ratelimit(COMMENT_LIMITER)
+    def add_comment(self, page: Any, text: str, *, comment: Comment = None) -> Any:
         """Add a comment to a page.
 
         Parameters
@@ -710,7 +712,6 @@ class Client:
             The page's updated object containing the new comment and any other new data that
             has been posted since then
         """
-        COMMENT_LIMITER.try_acquire(self.member.name_id, delay=True)
         r = self._request(
             "POST",
             page.url,
