@@ -40,6 +40,7 @@ from .utils import (
     join,
     normalize,
     time_mapping,
+    unroll_number,
 )
 
 if TYPE_CHECKING:
@@ -177,6 +178,9 @@ class Profile:
         the plaftorms the software was built for.
     status : Status
         Exclusive to Games, Mods, Addons, Engines, Hardware .Whether the thing is released, unreleased, ect...
+    download_count: int
+        Total count of all downloads on the page, this adds up downloads of all files and addons. Exclusive
+        to mods and games.
 
     """
 
@@ -372,6 +376,20 @@ class Profile:
         if page_type == SearchCategory.groups:
             category = html.find("h3").string.strip().lower().replace(" & ", "_")
             self.category = GroupCategory[category]
+
+        if page_type in [SearchCategory.games, SearchCategory.mods]:
+            try:
+                self.download_count = unroll_number(
+                    html.find("a", class_="downloadautotoggle").span.string
+                )
+            except AttributeError:
+                self.download_count = 0
+                LOGGER.info(
+                    "%s %s has no download count",
+                    page_type.name,
+                    _name,
+                    exc_info=LOGGER.level >= logging.DEBUG,
+                )
 
     def __repr__(self):
         return f"<Profile category={self.category.name}>"

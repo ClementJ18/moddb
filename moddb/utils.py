@@ -591,3 +591,15 @@ siteareaid_mapping = {
 def get_siteareaid(key: str):
     """Get the sitearea id from an int"""
     return siteareaid_mapping.get(str(key), "none")
+
+
+number_mapping = {"k": 1_000, "m": 1_000_000}
+
+
+def unroll_number(string: str) -> int:
+    identifier = string[-1].lower()
+    if identifier.isdigit():
+        return int(string)
+
+    number = float(string[:-1]) * number_mapping[identifier]
+    return int(number)
