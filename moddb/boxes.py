@@ -465,12 +465,12 @@ class Thumbnail:
     """
 
     def __init__(self, **attrs):
-        self.url = join(attrs.get("url"))
-        self.name = attrs.get("name", None)
-        self.image = attrs.get("image", None)
-        self.summary = attrs.get("summary", None)
-        self.date = attrs.get("date", None)
-        self.type = attrs.get("type")
+        self.url: str = join(attrs.get("url"))
+        self.name: str | None = attrs.get("name", None)
+        self.image: str | None = attrs.get("image", None)
+        self.summary: str | None = attrs.get("summary", None)
+        self.date: datetime.datetime | None = attrs.get("date", None)
+        self.type: ThumbnailType = attrs.get("type")
 
     def __repr__(self):
         return f"<Thumbnail name={self.name} type={self.type.name}>"
@@ -583,6 +583,27 @@ def _parse_comments(html):
     return comments, current_page, total_page, total_results
 
 
+class CommentAuthor(Thumbnail):
+    """Represents the thumbnail of a user having left a comment on a page. Functions the same as a
+    thumbnail but with an extra attribute.
+
+    Attributes
+    -----------
+    comment_count : int
+        Number of comments the user has posted
+    """
+
+    def __init__(self, **attrs):
+        super().__init__(**attrs)
+
+        self.comment_count: int = attrs.get("comment_count", 0)
+
+    def __repr__(self):
+        return (
+            f"<Thumbnail name={self.name} type={self.type.name} comment_count={self.comment_count}>"
+        )
+
+
 class Comment:
     """A moddb comment object.
 
@@ -634,11 +655,19 @@ class Comment:
     def __init__(self, html: BeautifulSoup):
         author = html.find("a", class_="avatar")
         self.id = int(html["id"])
-        self.author = Thumbnail(
+        comment_count = int(
+            html.find("span", class_="heading")
+            .text.strip()
+            .split("-")[-1]
+            .replace("comments", "")
+            .replace(",", "")
+        )
+        self.author = CommentAuthor(
             name=author["title"],
             url=author["href"],
             image=author.img["src"],
             type=ThumbnailType.member,
+            comment_count=comment_count,
         )
         self.date = get_date(html.find("time")["datetime"])
         actions = html.find("span", class_="actions")

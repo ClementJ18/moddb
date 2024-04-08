@@ -265,9 +265,9 @@ def request(req: requests.Request):
         The returned response object
 
     """
-    SESSION = sys.modules["moddb"].SESSION
-    prepped = prepare_request(req, SESSION)
-    r = SESSION.send(prepped)
+    session: requests.Session = sys.modules["moddb"].SESSION
+    prepped = prepare_request(req, session)
+    r = session.send(prepped)
 
     raise_for_status(r)
     return r
@@ -318,7 +318,7 @@ def get_page(url: str, *, params: dict = {}, json: bool = False):
 
 
 def get_views(string: str) -> Tuple[int, int]:
-    """A helper function that takes a string reresentation of total something and
+    """A helper function that takes a string representation of total something and
     daily amount of that same thing and returns both as a tuple of ints.
 
     Parameters
