@@ -4,7 +4,7 @@ from tests.utils import sample_list
 
 import moddb
 
-DEFAULT = "https://www.moddb.com/platforms/pc"
+DEFAULT = "https://www.moddb.com/platforms/windows"
 
 pytestmark = [pytest.mark.vcr]
 

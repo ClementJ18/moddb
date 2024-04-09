@@ -114,7 +114,7 @@ class Ratelimit:
 
         expiry = self.initial_call + datetime.timedelta(seconds=self.per)
         if now > expiry:
-            LOGGER.info("Reseting ratelimit")
+            LOGGER.info("Resetting ratelimit")
             self.reset(now)
 
         if self.call_count + 1 > self.rate:

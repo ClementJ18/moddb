@@ -516,7 +516,7 @@ def _parse_results(html):
             )
     except (TypeError, KeyError):
         # parse as a title-content pair of articles
-        LOGGER.info("Parsing articles as key-pair list", exc_info=LOGGER.level >= logging.DEBUG)
+        LOGGER.info("Parsing articles as key-value pair list", exc_info=LOGGER.level >= logging.DEBUG)
         for title, content in zip(search_raws[::2], search_raws[1::2]):
             date = title.find("time")
             url = title.find("h4").a
