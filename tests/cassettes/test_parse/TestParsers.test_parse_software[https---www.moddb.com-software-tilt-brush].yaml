@@ -809,8 +809,6 @@ interactions:
       - 8188ebe7299199df-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -825,12 +823,1754 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '73257'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
       - masterchief=26ed6fd03792ba37c73cb8e76fe15e2f; expires=Thu, 19-Oct-2023 12:21:04
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/software/tilt-brush
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Tilt Brush
+        Windows, VR, Android, AndroidTab software - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"tilt brush, windows, vr, android,
+        android tablet, vr, virtual reality, augmented reality, software, architecture,
+        retail, tours, social networking, sdk, educational, medical, environment,
+        maps, simulation, editing, capture, recording, developers, creation\" />\r\n\t<meta
+        name=\"description\" content=\"Tilt Brush lets you paint in 3D space with
+        virtual reality. Your room is your canvas. Your palette is your imagination.
+        The possibilities are endless.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Tilt Brush Windows, VR, Android, AndroidTab
+        software\" />\r\n\t<meta property=\"og:description\" content=\"Tilt Brush
+        lets you paint in 3D space with virtual reality. Your room is your canvas.
+        Your palette is your imagination. The possibilities are endless.\" />\r\n\t<meta
+        property=\"og:site_name\" content=\"ModDB\" />\r\n\t<meta property=\"og:type\"
+        content=\"software\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/software/tilt-brush\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Tilt Brush Windows, VR, Android, AndroidTab software\" />\r\n\t<meta
+        property=\"twitter:description\" content=\"Tilt Brush lets you paint in 3D
+        space with virtual reality. Your room is your canvas. Your palette is your
+        imagination. The possibilities are endless.\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/software/tilt-brush\" /> \r\n\t<meta property=\"twitter:image\"
+        content=\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\" /> \r\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/software/tilt-brush/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Tilt Brush Windows, VR, Android, AndroidTab
+        software feed\" />\t<script async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Tilt Brush Windows, VR, Android, AndroidTab
+        software</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n
+        \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Software\" /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/software/tilt-brush\"
+        itemprop=\"mainEntityOfPage\">Tilt Brush</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span
+        itemprop=\"author\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/company/google\" itemprop=\"url\"><span itemprop=\"name\">Google</span></a></span>
+        | <time datetime=\"2016-04\" itemprop=\"datePublished\">Released 2016</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/software/tilt-brush\">summary</a></li><li
+        class=\"\"><a href=\"/software/tilt-brush/articles\">articles</a></li><li
+        class=\"off\"><a href=\"/software/tilt-brush/reviews\">reviews</a></li><li
+        class=\"off\"><a href=\"/software/tilt-brush/downloads\">files</a></li><li
+        class=\"\"><a href=\"/software/tilt-brush/videos\">videos</a></li><li class=\"\"><a
+        href=\"/software/tilt-brush/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p
+        itemprop=\"description\">Tilt Brush lets you paint in 3D space with virtual
+        reality. Your room is your canvas. Your palette is your imagination. The possibilities
+        are endless.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"imagebox
+        clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li class=\"previous
+        previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/software/tilt-brush/videos/tilt-brush-audio-reactive-brushes#imagebox\"
+        title=\"Tilt Brush: Audio Reactive Brushes\"><span class=\"play\" data-id=\"1614236\"></span><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/tilt-brush-audio-reactive-brushes.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/videos/tilt-brush#imagebox\" title=\"Tilt Brush\"><span
+        class=\"play\" data-id=\"1486933\"></span><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tilt-Brush-by-Google_v04.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/videos/dynamic-brushes#imagebox\" title=\"Dynamic
+        brushes\"><span class=\"play\" data-id=\"1486932\"></span><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-brushes_v03.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/videos/intuitive-interface#imagebox\" title=\"Intuitive
+        interface\"><span class=\"play\" data-id=\"1486931\"></span><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-ui_v03.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/images/google-acquires-tilt-brush-6#imagebox\"
+        title=\"google acquires tilt brush 6\"><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/google-acquires-tilt-brush.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/images/tristan-reidford-tilt-brush-crea-5#imagebox\"
+        title=\"Tristan Reidford Tilt Brush Crea 5\"><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tristan-Reidford-Tilt-Brush-Crea.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/software/tilt-brush/images/skull-4#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/software/tilt-brush/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/software/tilt-brush/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/googles-tilt-brush-adds-pictionary-game-mode-and-sketchfab-support\">Google\u2019s
+        Tilt Brush Adds Pictionary Game Mode And Sketchfab Support</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2016-09-12T01:59:59+00:00\">Sep
+        12 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row rowcontent
+        rowcontentnext clear\" style=\"padding-left: 0; padding-right: 0;\">\r\n\t\t<div
+        class=\"center\" style=\"text-align: center;\">\n<p><iframe src=\"https://www.moddb.com/media/iframe/1614236\"
+        width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n</div>\n<p><br
+        />The team behind Tilt Brush, Google&rsquo;s virtual reality art application,
+        have <a href=\"https://productforums.google.com/forum/#!topic/tilt-brush/kJf2LAaAcCM;context-place=forum/tilt-brush\">announced</a>
+        a new update that brings the program up to version 7, and includes some great
+        new features. Chief among them is a new Pictionary-style game mode called
+        Tiltasaurus. Google describes it as a party-based word guessing game:</p>\n<blockquote>\n<p>&ldquo;Tiltasaurus
+        shows you a word to paint - while you draw, your friends guess the word by
+        watching the desktop spectator cam. When your friend guesses the right answer,
+        swap the headset! We&rsquo;ve seen a number of streamers using Tilt Brush
+        to play word guessing games online, and we wanted to make it easier for you
+        to do so.&rdquo;</p>\n</blockquote>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><iframe src=\"https://www.moddb.com/media/iframe/1486933\"
+        width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n</div>\n<p><br
+        />Tilt Brush also now has improved <a href=\"https://sketchfab.com/\">Sketchfab</a>
+        support, which allows creations made inside Tilt Brush to be shared online
+        and viewed within a browser. Adding to the significance of this is Tilt Brush&rsquo;s
+        new ability to import 3D models made in other programs, which allows them
+        to be incorporated into VR paintings.</p>\n<p>Google has added a host of other
+        features to version 7 of Tilt Brush &ndash; including better rotation and
+        resizing controls, as well as the ability to swap palettes between the left
+        and right controllers. You can view the full <a href=\"https://docs.google.com/document/d/11ZsHozYn9FnWG7y3s3WAyKIACfbfwb4PbaS8cZ_xjvo/preview\">release
+        notes</a> or check out some of the <a href=\"https://sketchfab.com/search?q=tilt+brush&amp;type=models\">best
+        Tilt Brush artworks</a> on Sketchfab.</p>\n<p><iframe src=\"https://sketchfab.com/models/b1e1b1ef899a40a2b04934d51f3d4ad3/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/b1e1b1ef899a40a2b04934d51f3d4ad3?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Soul Of Cinder
+        - Dark Souls 3 Boss Tilt Brush</a><br /> by <a href=\"https://sketchfab.com/vrhuman?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">vrhuman</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><iframe
+        src=\"https://sketchfab.com/models/fc1551be38e449a986cafa8925222dc6/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/fc1551be38e449a986cafa8925222dc6?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Mercy Overwatch
+        TiltBrush vrhuman</a><br /> by <a href=\"https://sketchfab.com/vrhuman?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">vrhuman</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><iframe
+        src=\"https://sketchfab.com/models/d1aac857165a405287fa34a31c9a68b9/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/d1aac857165a405287fa34a31c9a68b9?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Okami Tiltbrush
+        V2</a><br /> by <a href=\"https://sketchfab.com/soulmarine?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">soulmarine</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><iframe
+        src=\"https://sketchfab.com/models/99527724bd724efaa832ddd5b08992b1/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/99527724bd724efaa832ddd5b08992b1?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">TiltBrush -
+        Knight &amp;amp; Dragon</a><br /> by <a href=\"https://sketchfab.com/lizedwards?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Elizabeth Edwards</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><br
+        /></p>\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/news/htc-vive-now-includes-a-new-set-of-free-vr-games\"
+        title=\"HTC Vive Now Includes A New Set Of Free VR Games\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/219/218344/crop_120x90/viveheader.PNG\"
+        alt=\"HTC Vive Now Includes A New Set Of Free VR Games\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/htc-vive-now-includes-a-new-set-of-free-vr-games\">HTC
+        Vive Now Includes A New Set Of Free VR Games</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-08-15\">Aug 15 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>Job Simulator and Fantastic Contraption have been
+        replaced.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/news/google-tilt-brush-adds-audio-reactive-painting-that-reacts-to-sound\"
+        title=\"Google Tilt Brush Adds Audio Reactive Painting That Reacts To Sound\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/218/217512/crop_120x90/Skull.1.jpg\"
+        alt=\"Google Tilt Brush Adds Audio Reactive Painting That Reacts To Sound\"
+        /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/google-tilt-brush-adds-audio-reactive-painting-that-reacts-to-sound\">Google
+        Tilt Brush Adds Audio Reactive Painting That Reacts To Sound</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2016-08-03\">Aug 3 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>These new
+        brushes will pulse and shine along with music played through your PC.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/tilt-brush/news/htc-vive-international-prices-revealed\"
+        title=\"HTC Vive International Prices Revealed\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/207/206860/crop_120x90/VR_Web_Product_HMD.png\"
+        alt=\"HTC Vive International Prices Revealed\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/htc-vive-international-prices-revealed\">HTC
+        Vive International Prices Revealed</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-02-28\">Feb 29 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>Here's how much SteamVR will cost outside of North
+        America.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\" style=\"text-align:
+        right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/software/tilt-brush/articles/add\">Post
+        article &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo articles were found
+        matching the criteria specified. We suggest you try the <a href=\"/software/tilt-brush/articles\">article
+        list</a> with no filter applied, to browse all available. <a href=\"/software/tilt-brush/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"5747938\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/happyfragging\" title=\"_revenant.4K\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/4/3345/3344721/Invader4000.jpg\"
+        alt=\"_revenant.4K\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/happyfragging\" class=\"author\" data-nameid=\"happyfragging\">_revenant.4K</a>
+        \ - <a href=\"#5747938\" style=\"color: inherit;\"><time datetime=\"2016-02-01T04:26:54+00:00\">Feb
+        1 2016</time></a> - 1,020 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>The future is here!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"5747938\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=5747938\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=5747938\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"5748463\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/happyfragging\"
+        title=\"_revenant.4K\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3345/3344721/Invader4000.jpg\"
+        alt=\"_revenant.4K\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/happyfragging\" class=\"author\" data-nameid=\"happyfragging\">_revenant.4K</a>
+        \ - <a href=\"#5748463\" style=\"color: inherit;\"><time datetime=\"2016-02-01T13:42:33+00:00\">Feb
+        1 2016</time></a> - 1,020 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Controled by your eyes :o\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"5748463\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=5748463\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=5748463\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/software/tilt-brush/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"480d2eaf0280fde783d8e4463af764aa\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"softwareinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=1\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=software&amp;siteareaid=1\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/software/1/1/1/tiltbrush.png\"
+        alt=\"Tilt Brush\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"operatingSystem\"><a href=\"/platforms/windows\"
+        title=\"Windows\">Windows</a>, <a href=\"/platforms/vr\" title=\"VR\">VR</a>,
+        <a href=\"/platforms/android\" title=\"Android\">Android</a>, <a href=\"/platforms/androidtab\"
+        title=\"Android Tablet\">AndroidTab</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"genre\"><a href=\"/software?filter=t&amp;category=34\"
+        rel=\"nofollow\">VR</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/google\">Google</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=softwaregroup3342\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.tiltbrush.com\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Tiltbrush.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2016-04\">Released 2016</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Software watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=1\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush&title=Tilt+Brush+Windows%2C+VR%2C+Android%2C+AndroidTab+software\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Tilt%20Brush%20Windows%2C%20VR%2C%20Android%2C%20AndroidTab%20software&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Tilt+Brush+Windows%2C+VR%2C+Android%2C+AndroidTab+software+https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush&quote=Tilt+Brush+Windows%2C+VR%2C+Android%2C+AndroidTab+software&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        software is NOT compatible with RTX Remix. Learn more about <a href=\"/news/rtx-remix-on-moddb\">ModDB's
+        collaboration with the Remix community</a> to organize all compatible games,.
+        <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"menuprices\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Purchase</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\" style=\"overflow: visible\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu tableprice\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://store.steampowered.com/app/327140\" class=\"csstooltip\" title=\"Updated
+        4 days ago\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"><span
+        class=\"button\">Buy</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/1.png\"
+        title=\"Steam\" alt=\"Steam\" /><span class=\"price\">$19.99</span></a><span
+        itemprop=\"offers\" itemscope itemtype=\"https://schema.org/Offer\" style=\"display:
+        none;\"><meta itemprop=\"priceCurrency\" content=\"USD\" /><meta itemprop=\"price\"
+        content=\"19.99\" /></span>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"8\" />8</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 80%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">1</span>
+        vote submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"software\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"1\" /><input type=\"hidden\" name=\"hash\" value=\"7e5cd9f2dd7e64e0ff04a7c8cab182af\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<div class=\"normalbox linksbox\"
+        id=\"menulinkshardware\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div class=\"title\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"heading\">Use With</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/hardware/google-cardboard\" title=\"Google Cardboard\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/27/crop_120x90/GC_p2.jpg\"
+        alt=\"Google Cardboard\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/google-cardboard\" class=\"heading\">Google Cardboard</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/google\">Google</a>
+        Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/htc-vive\"
+        title=\"HTC Vive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/111/crop_120x90/VR_Web_Product_HMD.4.1.png\"
+        alt=\"HTC Vive\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" class=\"heading\">HTC Vive</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/htc\">HTC</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/htc-vive-de\"
+        title=\"HTC Vive Developer Edition\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/3/crop_120x90/HTC-Vive_White.jpg\"
+        alt=\"HTC Vive Developer Edition\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive-de\" class=\"heading\">HTC Vive Developer Edition</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/htc\">HTC</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"480d2eaf0280fde783d8e4463af764aa\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/tiltbrush\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@tiltbrush</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1354114509321854976 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Tilt Brush is going open source! Head on over to our
+        blog post to learn more! \U0001F307https://opensource.googleblog.com/2021/01/the-future-of-tilt-brush.html</p><p
+        class=\"helper\">Jan 26 2021</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1341515859185975296 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/kayleigh_eliza_\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@kayleigh_eliza_</a>:
+        IT\u2019S HERE! My <a href=\"https://twitter.com/darkmaterials\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@darkmaterials</a> Series 2 inspired
+        scene painted in VR with <a href=\"https://search.twitter.com/search?q=tiltbrush\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#tiltbrush</a> \u2764\uFE0F
+        Series 2 was just as perfect\u2026 <a rel=\"nofollow\"  href=\"https://t.co/4EzmQDRxJJ\">T.co</a></p><p
+        class=\"helper\">Dec 22 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1338912204905611264 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>\u2764\u2764\u2764 <a rel=\"nofollow\"  href=\"https://t.co/4u2u7fsGqG\">T.co</a></p><p
+        class=\"helper\">Dec 15 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1325934328581222400 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/VR_Rosie\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@VR_Rosie</a>: \U0001F30CThe time has
+        come!! \U0001F30C\n\nExcited to announce, on Sunday the 15th my Space <a href=\"https://search.twitter.com/search?q=tiltbrush\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#tiltbrush</a> art
+        gallery will be RELEASED fo\u2026 <a rel=\"nofollow\"  href=\"https://t.co/bXsUggBjsZ\">T.co</a></p><p
+        class=\"helper\">Nov 9 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1323305344055930880 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>\U0001F495\U0001F495\U0001F495 <a rel=\"nofollow\"
+        \ href=\"https://t.co/G42m3jsb93\">T.co</a></p><p class=\"helper\">Nov 2 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1313918027272867841 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/ZapparApp\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@ZapparApp</a>: Welcome to the affordable
+        Mixed Reality revolution\u2026now on <a href=\"https://search.twitter.com/search?q=Kickstarter\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#Kickstarter</a>\n\nWe\u2019d
+        like to introduce you to all-new ZapBo\u2026 <a rel=\"nofollow\"  href=\"https://t.co/onbh2jcj0f\">T.co</a></p><p
+        class=\"helper\">Oct 7 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1310610796183838728 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/sekiguchiaimi\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@sekiguchiaimi</a>: \u3010New Museum
+        opened in VR\u2728\u3011\n&quot;Museum-of-Vrpainting&quot; opened in VRchat!\nEveryone
+        can go there  for free.\n(Please create\u2026 <a rel=\"nofollow\"  href=\"https://t.co/SWQvKZZuYu\">T.co</a></p><p
+        class=\"helper\">Sep 28 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"480d2eaf0280fde783d8e4463af764aa\" />\t\t\t\t\t<div class=\"row rowtagstagediting
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/editing\">Editing</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=editing&sitearea=software&siteareaid=1&hash=871a7e69ee748708f290cf74cea4d07d\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=editing&sitearea=software&siteareaid=1&hash=871a7e69ee748708f290cf74cea4d07d&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstaggraphics clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/graphics\">Graphics</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=graphics&sitearea=software&siteareaid=1&hash=871a7e69ee748708f290cf74cea4d07d\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=graphics&sitearea=software&siteareaid=1&hash=871a7e69ee748708f290cf74cea4d07d&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagmedia clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/media\">Media</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=media&sitearea=software&siteareaid=1&hash=871a7e69ee748708f290cf74cea4d07d\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=media&sitearea=software&siteareaid=1&hash=871a7e69ee748708f290cf74cea4d07d&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=871a7e69ee748708f290cf74cea4d07d\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=871a7e69ee748708f290cf74cea4d07d&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"871a7e69ee748708f290cf74cea4d07d\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"software\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"1\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"softwarebuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to Tilt Brush by selecting a button and using the embed code provided <a href=\"#\"
+        class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/software/tilt-brush&quot; title=&quot;View
+        Tilt Brush on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/software/1.png&quot;
+        alt=&quot;Tilt Brush&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/software/tilt-brush\"
+        title=\"View Tilt Brush on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/software/1.png\"
+        alt=\"Tilt Brush\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn
+        ratingbtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/software/tilt-brush\"
+        title=\"View Tilt Brush on ModDB\"><img src=\"https://button.moddb.com/rating/medium/software/1.png\"
+        alt=\"Tilt Brush\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn
+        smallbtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/software/tilt-brush\"
+        title=\"View Tilt Brush - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"Tilt Brush\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"softwareprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/top\">3 of 72</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/tilt-brush/stats\">12,309
+        (2 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2016-09-12T00:57:26+00:00\"
+        itemprop=\"dateModified\">7 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/tilt-brush/watchers\">4
+        members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Articles</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/tilt-brush/articles\">4</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinkssoftware\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">You may also
+        like</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inner\">\r\n\t\t<div
+        class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software\" class=\"button\">View
+        All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/top\" class=\"button buttonalt\">Top
+        Software</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"row
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/the-pull\" title=\"The
+        Pull\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/9/crop_120x90/thepull3.jpg\"
+        alt=\"The Pull\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/the-pull\" class=\"heading\">The Pull</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/geovisionary\"
+        title=\"GeoVisionary\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/3/crop_120x90/geo_uk_height_aerial_250kos_data.jpg\"
+        alt=\"GeoVisionary\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/geovisionary\" class=\"heading\">GeoVisionary</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/blender\"
+        title=\"Blender\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/57/crop_120x90/p.jpg\"
+        alt=\"Blender\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/blender\" class=\"heading\">Blender</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t3D Graphics \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/drop-vr-audio-visualizer\"
+        title=\"DROP VR - AUDIO VISUALIZER\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/49/crop_120x90/capsule_main_workshop.png\"
+        alt=\"DROP VR - AUDIO VISUALIZER\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/drop-vr-audio-visualizer\" class=\"heading\">DROP VR - AUDIO
+        VISUALIZER</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tVR
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/janusvr\"
+        title=\"JanusVR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/8/crop_120x90/a8704d054a0c62c4facf0792978179d0.png\"
+        alt=\"JanusVR\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/janusvr\" class=\"heading\">JanusVR</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/3d-coat-v4\"
+        title=\"3D-Coat V4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/60/crop_120x90/p.jpg\"
+        alt=\"3D-Coat V4\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/3d-coat-v4\" class=\"heading\">3D-Coat V4</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t3D Graphics \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/software\",\"name\":\"Software\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/software/tilt-brush\",\"name\":\"Tilt
+        Brush\",\"image\":\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=software\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"software\",\r\n\t\t\t\t\t\ttags:
+        [\"mobile\",\"android\",\"pc\",\"windows\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736421\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736421\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"1614236\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1614236?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\",\"1486933\":\"<iframe
+        style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\" height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1486933?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\",\"1486932\":\"<iframe
+        style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\" height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1486932?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\",\"1486931\":\"<iframe
+        style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\" height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1486931?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/software/tilt-brush/videos/tilt-brush-audio-reactive-brushes#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/tilt-brush-audio-reactive-brushes.mp4.jpg\",
+        1614236, \"Tilt Brush: Audio Reactive Brushes\", \"video\"); slidearr[1][1]
+        = new Array(0, \"/software/tilt-brush/videos/tilt-brush#imagebox\", \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tilt-Brush-by-Google_v04.mp4.jpg\",
+        1486933, \"Tilt Brush\", \"video\"); slidearr[1][2] = new Array(0, \"/software/tilt-brush/videos/dynamic-brushes#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-brushes_v03.mp4.jpg\",
+        1486932, \"Dynamic brushes\", \"video\"); slidearr[1][3] = new Array(0, \"/software/tilt-brush/videos/intuitive-interface#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-ui_v03.mp4.jpg\",
+        1486931, \"Intuitive interface\", \"video\"); slidearr[1][4] = new Array(0,
+        \"/software/tilt-brush/images/google-acquires-tilt-brush-6#imagebox\", \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/google-acquires-tilt-brush.jpg\",
+        1486951, \"google acquires tilt brush 6\", \"image\"); slidearr[1][5] = new
+        Array(0, \"/software/tilt-brush/images/tristan-reidford-tilt-brush-crea-5#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tristan-Reidford-Tilt-Brush-Crea.jpg\",
+        1486950, \"Tristan Reidford Tilt Brush Crea 5\", \"image\"); slidearr[2] =
+        new Array(6);slidearr[2][0] = new Array(0, \"/software/tilt-brush/images/skull-4#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Skull.1.jpg\",
+        1486949, \"Skull 4\", \"image\"); slidearr[2][1] = new Array(0, \"/software/tilt-brush/images/image-3#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/tilt-brush-app-3.png\",
+        1486948, \"Image 3\", \"image\"); slidearr[2][2] = new Array(0, \"/software/tilt-brush/images/image-2#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/fed3dabf7ea14a582e15653d066d2416.jpg\",
+        1486947, \"Image 2\", \"image\"); slidearr[2][3] = new Array(0, \"/software/tilt-brush/images/image-1#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Screen-Shot-2015-09-14-at-10.42.jpg\",
+        1486946, \"Image 1\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"/software/tilt-brush/images/add\", true);\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n$(\"form.ratingform\").rating(\"\",
+        20, 20);\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=software\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213daaad946571-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:07:02 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Di43QJKZZd4N0e7uT%2BxwgX4Wr%2B80ZzwtH1GducFxk8zftyx5yBzl3kP%2FgFQa05CENc9xRgpKKGdPRp6LmuoaE3ylTSs%2Bf%2FImYMnqsA%2BEOMMKudk6HjS5l%2Fz4bMdAZYrvaZNlLaynUFeFMvI%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '71494'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=d39328fc7a52f87373060c5bac9baed3; expires=Wed, 10-Apr-2024 08:17:01
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=d39328fc7a52f87373060c5bac9baed3; expires=Wed, 10-Apr-2024 08:17:01
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/software/tilt-brush
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Tilt Brush
+        Windows, VR, Android, AndroidTab software - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"tilt brush, windows, vr, android,
+        android tablet, vr, virtual reality, augmented reality, software, architecture,
+        retail, tours, social networking, sdk, educational, medical, environment,
+        maps, simulation, editing, capture, recording, developers, creation\" />\r\n\t<meta
+        name=\"description\" content=\"Tilt Brush lets you paint in 3D space with
+        virtual reality. Your room is your canvas. Your palette is your imagination.
+        The possibilities are endless.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Tilt Brush Windows, VR, Android, AndroidTab
+        software\" />\r\n\t<meta property=\"og:description\" content=\"Tilt Brush
+        lets you paint in 3D space with virtual reality. Your room is your canvas.
+        Your palette is your imagination. The possibilities are endless.\" />\r\n\t<meta
+        property=\"og:site_name\" content=\"ModDB\" />\r\n\t<meta property=\"og:type\"
+        content=\"software\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/software/tilt-brush\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Tilt Brush Windows, VR, Android, AndroidTab software\" />\r\n\t<meta
+        property=\"twitter:description\" content=\"Tilt Brush lets you paint in 3D
+        space with virtual reality. Your room is your canvas. Your palette is your
+        imagination. The possibilities are endless.\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/software/tilt-brush\" /> \r\n\t<meta property=\"twitter:image\"
+        content=\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\" /> \r\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/software/tilt-brush/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Tilt Brush Windows, VR, Android, AndroidTab
+        software feed\" />\t<script async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Tilt Brush Windows, VR, Android, AndroidTab
+        software</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n
+        \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Software\" /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/software/tilt-brush\"
+        itemprop=\"mainEntityOfPage\">Tilt Brush</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span
+        itemprop=\"author\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/company/google\" itemprop=\"url\"><span itemprop=\"name\">Google</span></a></span>
+        | <time datetime=\"2016-04\" itemprop=\"datePublished\">Released 2016</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/software/tilt-brush\">summary</a></li><li
+        class=\"\"><a href=\"/software/tilt-brush/articles\">articles</a></li><li
+        class=\"off\"><a href=\"/software/tilt-brush/reviews\">reviews</a></li><li
+        class=\"off\"><a href=\"/software/tilt-brush/downloads\">files</a></li><li
+        class=\"\"><a href=\"/software/tilt-brush/videos\">videos</a></li><li class=\"\"><a
+        href=\"/software/tilt-brush/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p
+        itemprop=\"description\">Tilt Brush lets you paint in 3D space with virtual
+        reality. Your room is your canvas. Your palette is your imagination. The possibilities
+        are endless.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"imagebox
+        clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li class=\"previous
+        previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/software/tilt-brush/videos/tilt-brush-audio-reactive-brushes#imagebox\"
+        title=\"Tilt Brush: Audio Reactive Brushes\"><span class=\"play\" data-id=\"1614236\"></span><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/tilt-brush-audio-reactive-brushes.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/videos/tilt-brush#imagebox\" title=\"Tilt Brush\"><span
+        class=\"play\" data-id=\"1486933\"></span><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tilt-Brush-by-Google_v04.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/videos/dynamic-brushes#imagebox\" title=\"Dynamic
+        brushes\"><span class=\"play\" data-id=\"1486932\"></span><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-brushes_v03.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/videos/intuitive-interface#imagebox\" title=\"Intuitive
+        interface\"><span class=\"play\" data-id=\"1486931\"></span><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-ui_v03.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/images/google-acquires-tilt-brush-6#imagebox\"
+        title=\"google acquires tilt brush 6\"><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/google-acquires-tilt-brush.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/images/tristan-reidford-tilt-brush-crea-5#imagebox\"
+        title=\"Tristan Reidford Tilt Brush Crea 5\"><img src=\"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tristan-Reidford-Tilt-Brush-Crea.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/software/tilt-brush/images/skull-4#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/software/tilt-brush/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/software/tilt-brush/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/googles-tilt-brush-adds-pictionary-game-mode-and-sketchfab-support\">Google\u2019s
+        Tilt Brush Adds Pictionary Game Mode And Sketchfab Support</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2016-09-12T01:59:59+00:00\">Sep
+        12 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row rowcontent
+        rowcontentnext clear\" style=\"padding-left: 0; padding-right: 0;\">\r\n\t\t<div
+        class=\"center\" style=\"text-align: center;\">\n<p><iframe src=\"https://www.moddb.com/media/iframe/1614236\"
+        width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n</div>\n<p><br
+        />The team behind Tilt Brush, Google&rsquo;s virtual reality art application,
+        have <a href=\"https://productforums.google.com/forum/#!topic/tilt-brush/kJf2LAaAcCM;context-place=forum/tilt-brush\">announced</a>
+        a new update that brings the program up to version 7, and includes some great
+        new features. Chief among them is a new Pictionary-style game mode called
+        Tiltasaurus. Google describes it as a party-based word guessing game:</p>\n<blockquote>\n<p>&ldquo;Tiltasaurus
+        shows you a word to paint - while you draw, your friends guess the word by
+        watching the desktop spectator cam. When your friend guesses the right answer,
+        swap the headset! We&rsquo;ve seen a number of streamers using Tilt Brush
+        to play word guessing games online, and we wanted to make it easier for you
+        to do so.&rdquo;</p>\n</blockquote>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><iframe src=\"https://www.moddb.com/media/iframe/1486933\"
+        width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n</div>\n<p><br
+        />Tilt Brush also now has improved <a href=\"https://sketchfab.com/\">Sketchfab</a>
+        support, which allows creations made inside Tilt Brush to be shared online
+        and viewed within a browser. Adding to the significance of this is Tilt Brush&rsquo;s
+        new ability to import 3D models made in other programs, which allows them
+        to be incorporated into VR paintings.</p>\n<p>Google has added a host of other
+        features to version 7 of Tilt Brush &ndash; including better rotation and
+        resizing controls, as well as the ability to swap palettes between the left
+        and right controllers. You can view the full <a href=\"https://docs.google.com/document/d/11ZsHozYn9FnWG7y3s3WAyKIACfbfwb4PbaS8cZ_xjvo/preview\">release
+        notes</a> or check out some of the <a href=\"https://sketchfab.com/search?q=tilt+brush&amp;type=models\">best
+        Tilt Brush artworks</a> on Sketchfab.</p>\n<p><iframe src=\"https://sketchfab.com/models/b1e1b1ef899a40a2b04934d51f3d4ad3/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/b1e1b1ef899a40a2b04934d51f3d4ad3?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Soul Of Cinder
+        - Dark Souls 3 Boss Tilt Brush</a><br /> by <a href=\"https://sketchfab.com/vrhuman?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">vrhuman</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><iframe
+        src=\"https://sketchfab.com/models/fc1551be38e449a986cafa8925222dc6/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/fc1551be38e449a986cafa8925222dc6?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Mercy Overwatch
+        TiltBrush vrhuman</a><br /> by <a href=\"https://sketchfab.com/vrhuman?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">vrhuman</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><iframe
+        src=\"https://sketchfab.com/models/d1aac857165a405287fa34a31c9a68b9/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/d1aac857165a405287fa34a31c9a68b9?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Okami Tiltbrush
+        V2</a><br /> by <a href=\"https://sketchfab.com/soulmarine?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">soulmarine</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><iframe
+        src=\"https://sketchfab.com/models/99527724bd724efaa832ddd5b08992b1/embed\"
+        width=\"640\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"
+        data-mce-fragment=\"1\"></iframe></p>\n<p><br /> <a href=\"https://sketchfab.com/models/99527724bd724efaa832ddd5b08992b1?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">TiltBrush -
+        Knight &amp;amp; Dragon</a><br /> by <a href=\"https://sketchfab.com/lizedwards?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Elizabeth Edwards</a><br
+        /> on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campain=share-popup\"
+        target=\"_blank\" style=\"font-weight: bold; color: #1caad9;\">Sketchfab</a></p>\n<p><br
+        /></p>\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/news/htc-vive-now-includes-a-new-set-of-free-vr-games\"
+        title=\"HTC Vive Now Includes A New Set Of Free VR Games\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/219/218344/crop_120x90/viveheader.PNG\"
+        alt=\"HTC Vive Now Includes A New Set Of Free VR Games\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/htc-vive-now-includes-a-new-set-of-free-vr-games\">HTC
+        Vive Now Includes A New Set Of Free VR Games</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-08-15\">Aug 15 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>Job Simulator and Fantastic Contraption have been
+        replaced.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/software/tilt-brush/news/google-tilt-brush-adds-audio-reactive-painting-that-reacts-to-sound\"
+        title=\"Google Tilt Brush Adds Audio Reactive Painting That Reacts To Sound\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/218/217512/crop_120x90/Skull.1.jpg\"
+        alt=\"Google Tilt Brush Adds Audio Reactive Painting That Reacts To Sound\"
+        /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/google-tilt-brush-adds-audio-reactive-painting-that-reacts-to-sound\">Google
+        Tilt Brush Adds Audio Reactive Painting That Reacts To Sound</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2016-08-03\">Aug 3 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>These new
+        brushes will pulse and shine along with music played through your PC.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/tilt-brush/news/htc-vive-international-prices-revealed\"
+        title=\"HTC Vive International Prices Revealed\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/207/206860/crop_120x90/VR_Web_Product_HMD.png\"
+        alt=\"HTC Vive International Prices Revealed\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/tilt-brush/news/htc-vive-international-prices-revealed\">HTC
+        Vive International Prices Revealed</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-02-28\">Feb 29 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>Here's how much SteamVR will cost outside of North
+        America.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\" style=\"text-align:
+        right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/software/tilt-brush/articles/add\">Post
+        article &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo articles were found
+        matching the criteria specified. We suggest you try the <a href=\"/software/tilt-brush/articles\">article
+        list</a> with no filter applied, to browse all available. <a href=\"/software/tilt-brush/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"5747938\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/happyfragging\" title=\"_revenant.4K\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/4/3345/3344721/Invader4000.jpg\"
+        alt=\"_revenant.4K\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/happyfragging\" class=\"author\" data-nameid=\"happyfragging\">_revenant.4K</a>
+        \ - <a href=\"#5747938\" style=\"color: inherit;\"><time datetime=\"2016-02-01T04:26:54+00:00\">Feb
+        1 2016</time></a> - 1,020 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>The future is here!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"5747938\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=5747938\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=5747938\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"5748463\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/happyfragging\"
+        title=\"_revenant.4K\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3345/3344721/Invader4000.jpg\"
+        alt=\"_revenant.4K\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/happyfragging\" class=\"author\" data-nameid=\"happyfragging\">_revenant.4K</a>
+        \ - <a href=\"#5748463\" style=\"color: inherit;\"><time datetime=\"2016-02-01T13:42:33+00:00\">Feb
+        1 2016</time></a> - 1,020 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Controled by your eyes :o\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"5748463\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=5748463\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=5748463\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/software/tilt-brush/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"64ffaf158704f25457cb90b94358670b\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"softwareinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=1\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=software&amp;siteareaid=1\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/software/1/1/1/tiltbrush.png\"
+        alt=\"Tilt Brush\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"operatingSystem\"><a href=\"/platforms/windows\"
+        title=\"Windows\">Windows</a>, <a href=\"/platforms/vr\" title=\"VR\">VR</a>,
+        <a href=\"/platforms/android\" title=\"Android\">Android</a>, <a href=\"/platforms/androidtab\"
+        title=\"Android Tablet\">AndroidTab</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"genre\"><a href=\"/software?filter=t&amp;category=34\"
+        rel=\"nofollow\">VR</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/google\">Google</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=softwaregroup3342\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.tiltbrush.com\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Tiltbrush.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2016-04\">Released 2016</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Software watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=software&amp;siteareaid=1\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush&title=Tilt+Brush+Windows%2C+VR%2C+Android%2C+AndroidTab+software\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Tilt%20Brush%20Windows%2C%20VR%2C%20Android%2C%20AndroidTab%20software&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Tilt+Brush+Windows%2C+VR%2C+Android%2C+AndroidTab+software+https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush&quote=Tilt+Brush+Windows%2C+VR%2C+Android%2C+AndroidTab+software&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fsoftware%2Ftilt-brush\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        software is NOT compatible with RTX Remix. Learn more about <a href=\"/news/rtx-remix-on-moddb\">ModDB's
+        collaboration with the Remix community</a> to organize all compatible games,.
+        <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"menuprices\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Purchase</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\" style=\"overflow: visible\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu tableprice\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://store.steampowered.com/app/327140\" class=\"csstooltip\" title=\"Updated
+        5 days ago\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"><span
+        class=\"button\">Buy</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/1.png\"
+        title=\"Steam\" alt=\"Steam\" /><span class=\"price\">$19.99</span></a><span
+        itemprop=\"offers\" itemscope itemtype=\"https://schema.org/Offer\" style=\"display:
+        none;\"><meta itemprop=\"priceCurrency\" content=\"USD\" /><meta itemprop=\"price\"
+        content=\"19.99\" /></span>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"8\" />8</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 80%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">1</span>
+        vote submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"software\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"1\" /><input type=\"hidden\" name=\"hash\" value=\"7e5cd9f2dd7e64e0ff04a7c8cab182af\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<div class=\"normalbox linksbox\"
+        id=\"menulinkshardware\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div class=\"title\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"heading\">Use With</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/hardware/google-cardboard\" title=\"Google Cardboard\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/27/crop_120x90/GC_p2.jpg\"
+        alt=\"Google Cardboard\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/google-cardboard\" class=\"heading\">Google Cardboard</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/google\">Google</a>
+        Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/htc-vive\"
+        title=\"HTC Vive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/111/crop_120x90/VR_Web_Product_HMD.4.1.png\"
+        alt=\"HTC Vive\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" class=\"heading\">HTC Vive</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/htc\">HTC</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/htc-vive-de\"
+        title=\"HTC Vive Developer Edition\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/3/crop_120x90/HTC-Vive_White.jpg\"
+        alt=\"HTC Vive Developer Edition\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive-de\" class=\"heading\">HTC Vive Developer Edition</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/htc\">HTC</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"64ffaf158704f25457cb90b94358670b\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/tiltbrush\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@tiltbrush</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1354114509321854976 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Tilt Brush is going open source! Head on over to our
+        blog post to learn more! \U0001F307https://opensource.googleblog.com/2021/01/the-future-of-tilt-brush.html</p><p
+        class=\"helper\">Jan 26 2021</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1341515859185975296 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/kayleigh_eliza_\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@kayleigh_eliza_</a>:
+        IT\u2019S HERE! My <a href=\"https://twitter.com/darkmaterials\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@darkmaterials</a> Series 2 inspired
+        scene painted in VR with <a href=\"https://search.twitter.com/search?q=tiltbrush\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#tiltbrush</a> \u2764\uFE0F
+        Series 2 was just as perfect\u2026 <a rel=\"nofollow\"  href=\"https://t.co/4EzmQDRxJJ\">T.co</a></p><p
+        class=\"helper\">Dec 22 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1338912204905611264 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>\u2764\u2764\u2764 <a rel=\"nofollow\"  href=\"https://t.co/4u2u7fsGqG\">T.co</a></p><p
+        class=\"helper\">Dec 15 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1325934328581222400 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/VR_Rosie\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@VR_Rosie</a>: \U0001F30CThe time has
+        come!! \U0001F30C\n\nExcited to announce, on Sunday the 15th my Space <a href=\"https://search.twitter.com/search?q=tiltbrush\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#tiltbrush</a> art
+        gallery will be RELEASED fo\u2026 <a rel=\"nofollow\"  href=\"https://t.co/bXsUggBjsZ\">T.co</a></p><p
+        class=\"helper\">Nov 9 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1323305344055930880 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>\U0001F495\U0001F495\U0001F495 <a rel=\"nofollow\"
+        \ href=\"https://t.co/G42m3jsb93\">T.co</a></p><p class=\"helper\">Nov 2 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1313918027272867841 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/ZapparApp\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@ZapparApp</a>: Welcome to the affordable
+        Mixed Reality revolution\u2026now on <a href=\"https://search.twitter.com/search?q=Kickstarter\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#Kickstarter</a>\n\nWe\u2019d
+        like to introduce you to all-new ZapBo\u2026 <a rel=\"nofollow\"  href=\"https://t.co/onbh2jcj0f\">T.co</a></p><p
+        class=\"helper\">Oct 7 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1310610796183838728 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/sekiguchiaimi\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@sekiguchiaimi</a>: \u3010New Museum
+        opened in VR\u2728\u3011\n&quot;Museum-of-Vrpainting&quot; opened in VRchat!\nEveryone
+        can go there  for free.\n(Please create\u2026 <a rel=\"nofollow\"  href=\"https://t.co/SWQvKZZuYu\">T.co</a></p><p
+        class=\"helper\">Sep 28 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"64ffaf158704f25457cb90b94358670b\" />\t\t\t\t\t<div class=\"row rowtagstagediting
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/editing\">Editing</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=editing&sitearea=software&siteareaid=1&hash=811816bb17215d138c1560f21f51abe1\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=editing&sitearea=software&siteareaid=1&hash=811816bb17215d138c1560f21f51abe1&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstaggraphics clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/graphics\">Graphics</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=graphics&sitearea=software&siteareaid=1&hash=811816bb17215d138c1560f21f51abe1\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=graphics&sitearea=software&siteareaid=1&hash=811816bb17215d138c1560f21f51abe1&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagmedia clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/media\">Media</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=media&sitearea=software&siteareaid=1&hash=811816bb17215d138c1560f21f51abe1\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=media&sitearea=software&siteareaid=1&hash=811816bb17215d138c1560f21f51abe1&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=811816bb17215d138c1560f21f51abe1\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=811816bb17215d138c1560f21f51abe1&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"811816bb17215d138c1560f21f51abe1\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"software\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"1\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"softwarebuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to Tilt Brush by selecting a button and using the embed code provided <a href=\"#\"
+        class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/software/tilt-brush&quot; title=&quot;View
+        Tilt Brush on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/software/1.png&quot;
+        alt=&quot;Tilt Brush&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/software/tilt-brush\"
+        title=\"View Tilt Brush on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/software/1.png\"
+        alt=\"Tilt Brush\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn
+        ratingbtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/software/tilt-brush\"
+        title=\"View Tilt Brush on ModDB\"><img src=\"https://button.moddb.com/rating/medium/software/1.png\"
+        alt=\"Tilt Brush\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn
+        smallbtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/software/tilt-brush\"
+        title=\"View Tilt Brush - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"Tilt Brush\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"softwareprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/top\">3 of 72</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/tilt-brush/stats\">12,310
+        (3 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2016-09-12T00:57:26+00:00\"
+        itemprop=\"dateModified\">7 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/tilt-brush/watchers\">4
+        members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Articles</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/software/tilt-brush/articles\">4</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinkssoftware\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">You may also
+        like</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inner\">\r\n\t\t<div
+        class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software\" class=\"button\">View
+        All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/top\" class=\"button buttonalt\">Top
+        Software</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"row
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/mydream-swift\" title=\"MyDream
+        Swift\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/15/crop_120x90/mydreamswift.jpg\"
+        alt=\"MyDream Swift\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/mydream-swift\" class=\"heading\">MyDream Swift</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/virtual-desktop\"
+        title=\"Virtual Desktop\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/6/crop_120x90/2.jpg\"
+        alt=\"Virtual Desktop\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/virtual-desktop\" class=\"heading\">Virtual Desktop</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/the-pull\"
+        title=\"The Pull\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/9/crop_120x90/thepull3.jpg\"
+        alt=\"The Pull\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/the-pull\" class=\"heading\">The Pull</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/drop-vr-audio-visualizer\"
+        title=\"DROP VR - AUDIO VISUALIZER\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/49/crop_120x90/capsule_main_workshop.png\"
+        alt=\"DROP VR - AUDIO VISUALIZER\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/drop-vr-audio-visualizer\" class=\"heading\">DROP VR - AUDIO
+        VISUALIZER</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tVR
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/fibre\" title=\"FIBRE\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/50/crop_120x90/OculusStore_Cover_Art_-_Landscap.png\"
+        alt=\"FIBRE\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/fibre\" class=\"heading\">FIBRE</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/software/freefall\"
+        title=\"Freefall\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/11/crop_120x90/2.jpg\"
+        alt=\"Freefall\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/software/freefall\" class=\"heading\">Freefall</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tVR \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5424 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/software\",\"name\":\"Software\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/software/tilt-brush\",\"name\":\"Tilt
+        Brush\",\"image\":\"https://media.moddb.com/images/software/1/1/1/Skull.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=software\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"software\",\r\n\t\t\t\t\t\ttags:
+        [\"mobile\",\"android\",\"pc\",\"windows\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749119\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749119\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"1614236\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1614236?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\",\"1486933\":\"<iframe
+        style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\" height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1486933?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\",\"1486932\":\"<iframe
+        style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\" height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1486932?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\",\"1486931\":\"<iframe
+        style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\" height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1486931?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/software/tilt-brush/videos/tilt-brush-audio-reactive-brushes#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/tilt-brush-audio-reactive-brushes.mp4.jpg\",
+        1614236, \"Tilt Brush: Audio Reactive Brushes\", \"video\"); slidearr[1][1]
+        = new Array(0, \"/software/tilt-brush/videos/tilt-brush#imagebox\", \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tilt-Brush-by-Google_v04.mp4.jpg\",
+        1486933, \"Tilt Brush\", \"video\"); slidearr[1][2] = new Array(0, \"/software/tilt-brush/videos/dynamic-brushes#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-brushes_v03.mp4.jpg\",
+        1486932, \"Dynamic brushes\", \"video\"); slidearr[1][3] = new Array(0, \"/software/tilt-brush/videos/intuitive-interface#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/features-ui_v03.mp4.jpg\",
+        1486931, \"Intuitive interface\", \"video\"); slidearr[1][4] = new Array(0,
+        \"/software/tilt-brush/images/google-acquires-tilt-brush-6#imagebox\", \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/google-acquires-tilt-brush.jpg\",
+        1486951, \"google acquires tilt brush 6\", \"image\"); slidearr[1][5] = new
+        Array(0, \"/software/tilt-brush/images/tristan-reidford-tilt-brush-crea-5#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Tristan-Reidford-Tilt-Brush-Crea.jpg\",
+        1486950, \"Tristan Reidford Tilt Brush Crea 5\", \"image\"); slidearr[2] =
+        new Array(6);slidearr[2][0] = new Array(0, \"/software/tilt-brush/images/skull-4#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Skull.1.jpg\",
+        1486949, \"Skull 4\", \"image\"); slidearr[2][1] = new Array(0, \"/software/tilt-brush/images/image-3#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/tilt-brush-app-3.png\",
+        1486948, \"Image 3\", \"image\"); slidearr[2][2] = new Array(0, \"/software/tilt-brush/images/image-2#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/fed3dabf7ea14a582e15653d066d2416.jpg\",
+        1486947, \"Image 2\", \"image\"); slidearr[2][3] = new Array(0, \"/software/tilt-brush/images/image-1#imagebox\",
+        \"https://media.moddb.com/cache/images/software/1/1/1/crop_120x90/Screen-Shot-2015-09-14-at-10.42.jpg\",
+        1486946, \"Image 1\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"/software/tilt-brush/images/add\", true);\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n$(\"form.ratingform\").rating(\"\",
+        20, 20);\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=software\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 872273aa8dd00b07-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:38:39 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=VTJULFEe3x9yw8RzaJByh8%2Fd%2Fnk39DZyuMjSiQJYc4S0StQCijpSnAv7O7vqvLTreNW1rlWho1edKs4Uj1IFSShNFzte7K5HrNdbXpNnYlWPAxL%2BFnpjnUmN%2B19MPE%2B9PSQ%2B5QayxhBe%2FCs%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '71482'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=733c1fd5f7af8bdfd766603b6445e1d9; expires=Wed, 10-Apr-2024 11:48:39
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=733c1fd5f7af8bdfd766603b6445e1d9; expires=Wed, 10-Apr-2024 11:48:39
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

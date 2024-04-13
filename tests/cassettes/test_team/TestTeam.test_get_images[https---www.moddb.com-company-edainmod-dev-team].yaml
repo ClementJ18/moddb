@@ -416,8 +416,6 @@ interactions:
       - 8183e1c78d2a2a3e-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -432,6 +430,8 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '38760'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
@@ -866,8 +866,6 @@ interactions:
       - 8183e1cf281902b3-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -882,12 +880,1563 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '38873'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
       - masterchief=508e24175175b8489d50cddd720f3608; expires=Wed, 18-Oct-2023 21:40:22
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/company/edainmod-dev-team
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Edain Team
+        company - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"edain team, developer, publisher, groups, events, company, club,
+        community, programmers, artists\" />\r\n\t<meta name=\"description\" content=\"This
+        is the group of the Edain Mod Developer Team. It is mainly used to manage
+        the rights of its members on this site.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Edain Team company\" />\r\n\t<meta property=\"og:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/company/edainmod-dev-team\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Edain Team company\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/company/edainmod-dev-team\" /> \r\n\t<meta
+        property=\"twitter:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
+        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Edain Team company</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all\">\t<div class=\"headerbox\" style=\"background-image:
+        url(https://media.moddb.com/images/groups/1/1/500/Mod-DB-header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/company/edainmod-dev-team\">Edain Team</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tDeveloper
+        &amp; Publisher\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"firsttab\"><a href=\"/company/edainmod-dev-team\">summary</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/members\">members</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/articles\">articles</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/downloads\">files</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/software\">software</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/hardware\">hardware</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/engines\">engines</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/games\">games</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/mods\">mods</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/addons\">addons</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/videos\">videos</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/images\">images</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/jobs\">jobs</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>This
+        is the group of the Edain Mod Developer Team.\nIt is mainly used to manage
+        the rights of its members on this site.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox infobox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Private Company</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t\t\t\t<div class=\"body clear\">\n\t\t\t\t<div class=\"tooltip\"></div>\t\t\t\t\t\t\t\t<p>The
+        company you are trying to view is a private company for members only. You
+        can apply to join and if accepted will be able to view its contents.</p><p>Continue
+        browsing the <a href=\"/company\">company list</a>, to find the profile you
+        are after.</p>\t\t\t</div>\n\t\t\t\t\t</div>\n\t</div>\n</div><div class=\"column
+        span-all\">\t<div class=\"normalbox browsebox\" id=\"groupsbrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/team-psykskallar\" title=\"Team
+        Psykskallar\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/705/crop_120x90/pic3_copy.PNG\"
+        alt=\"Team Psykskallar\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/team-psykskallar\">Team Psykskallar</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-11-28T22:39:26+00:00\">Nov
+        28 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t3
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>This group is
+        founded by Andreas &quot;ruMpel&quot; R\xF6nnberg. We have a really good mind
+        of creating sick mods, like Afraid of Monsters: Director's Cut and Cry...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/epic-games\"
+        title=\"Epic Games\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/9/crop_120x90/epic-games-logo.jpg\"
+        alt=\"Epic Games\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/epic-games\">Epic Games</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-02-23T22:34:17+00:00\">Feb 23 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t6 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Epic
+        is best known for its unreal series mainly the classic unreal and unreal engine.
+        Its a old and vibrant company that has a strong mod community following...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/spreading-infection\"
+        title=\"Ribcaged Entertainment\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1783/crop_120x90/riblogo1.png\"
+        alt=\"Ribcaged Entertainment\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/spreading-infection\">Ribcaged Entertainment</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2022-10-24T14:31:37+00:00\">Oct
+        24 2022</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t7
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Ribcaged Entertainment
+        (prevously Spreading Infection) is a dedicated team focused on providing the
+        public with fun playable games. We strive to perfect...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/atelier-801\"
+        title=\"Atelier 801\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6554/crop_120x90/atelier801.jpg\"
+        alt=\"Atelier 801\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/atelier-801\">Atelier 801</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2013-05-08T14:12:58+00:00\">May 8 2013</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t6 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Atelier
+        801 is a small company founded in 2011 by two persons : Jean-Baptiste Le Marchand
+        (programmer) and M\xE9lanie Christin (art director). We released...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/contra-mod-team\"
+        title=\"Contra Mod Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/323/crop_120x90/Install_Final.1.jpg\"
+        alt=\"Contra Mod Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/contra-mod-team\">Contra Mod Team</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-09-09T09:41:56+00:00\">Sep
+        9 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t18
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We are the mod
+        team who created a mod for C&#038;C Generals: Zero Hour under the name &quot;Contra&quot;.
+        Team leader and Contra AUTHOR: Andrey [Creator] Pestryakov</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/mentalmeisters\"
+        title=\"Mentalmeisters\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/5/4516/crop_120x90/mentalmeisters.png\"
+        alt=\"Mentalmeisters\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/mentalmeisters\">Mentalmeisters</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-04-03T11:32:14+00:00\">Apr
+        3 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t4
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Mentalmeisters
+        are the people who are currently behind the Mental Omega game project.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/gsc-game-world\"
+        title=\"GSC Game World\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/436/crop_120x90/gsc.1.jpg\"
+        alt=\"GSC Game World\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/gsc-game-world\">GSC Game World</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-05-16T05:56:12+00:00\">May
+        16 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t1
+        member Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>GSC Game World
+        is a Kiev-based computer game developer. Founded in 1995 in Kiev, Ukraine,
+        it released titles such as Cossacks: European Wars, American...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/no-life-studios\"
+        title=\"NLS - No Life Studios\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/70/crop_120x90/NLS_Preview_Image.jpg\"
+        alt=\"NLS - No Life Studios\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/no-life-studios\">NLS - No Life Studios</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-09-30T07:00:16+00:00\">Sep
+        30 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t19
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>A band of unlikely
+        modders that have nothing better to do with their time!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/hazard-team\"
+        title=\"Hazard Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1861/crop_120x90/ht.jpg\"
+        alt=\"Hazard Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/hazard-team\">Hazard Team</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-08-17T13:17:35+00:00\">Aug 17 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t3 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We're
+        making mods for Half-Life trying to stick to the canonical plot of Half-Life
+        series and expand it with our own additions.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/the-creative-assembly\"
+        title=\"Creative Assembly\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1252/crop_120x90/preview.jpg\"
+        alt=\"Creative Assembly\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/the-creative-assembly\">Creative Assembly</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-08-24T15:30:26+00:00\">Aug
+        24 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t2
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Creative Assembly
+        is a British video game developer established in 1987 by Tim Ansell. Although
+        primarily based in the West Sussex town of Horsham, the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/call-of-duty-modern-operations\"
+        title=\"Call Of Duty - Modern Operations\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/35/34278/crop_120x90/myWL0ig76C4.jpg\"
+        alt=\"Call Of Duty - Modern Operations\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/call-of-duty-modern-operations\">Call Of
+        Duty - Modern Operations</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-04-11T15:28:52+00:00\">Apr 11 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t11 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>You
+        will experience an innovative Call Of Duty - Modern Operations which includes
+        the following modes: Special Ops, Zombie Mode and Survival Mode. With...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/valve\" title=\"Valve\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/3/crop_120x90/valve-software.jpg\"
+        alt=\"Valve\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/valve\">Valve</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-12-18T13:11:35+00:00\">Dec 18 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t6 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Valve
+        the company behind the games such as Half Life and Half Life 2 is located
+        in Bellevue, Washington. They are a exciting and dynamic company well...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/company\">More
+        groups &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo groups were found
+        matching the criteria specified. We suggest you try the <a href=\"/company\">group
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div>
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"footermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_LB_2\" data-dfp-sizes=\"728x90\"
+        id=\"div-ga-MODDB_LB_2\"></div></div> \r\n</div>\r\n \t<div style=\"clear:
+        both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5584 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/company\",\"name\":\"Company\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/company/edainmod-dev-team\",\"name\":\"Edain
+        Team\",\"image\":\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"developers\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712737070\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712737070\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\tfunction
+        cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87214d82785c422a-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:17:50 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4aCWDgCsPGWipmuYzGRMt6wp8K02naJaoH4GagUt1F2JPac%2FnKa3Dxj7%2Bar%2FGyx6QrNOclJnfqeOnDDeb9xZi8Pk4sqkmOjmgORutohpLmumaxi5d7r5et5pWGQDiUlGaZOksknNdTC5vKk%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '29454'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=48dd93e790a2e208a2959ae66dca3075; expires=Wed, 10-Apr-2024 08:27:50
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=48dd93e790a2e208a2959ae66dca3075; expires=Wed, 10-Apr-2024 08:27:50
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/company/edainmod-dev-team/images
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Edain Team
+        company - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"edain team, developer, publisher, groups, events, company, club,
+        community, programmers, artists\" />\r\n\t<meta name=\"description\" content=\"This
+        is the group of the Edain Mod Developer Team. It is mainly used to manage
+        the rights of its members on this site.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Edain Team company\" />\r\n\t<meta property=\"og:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/company/edainmod-dev-team\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Edain Team company\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/company/edainmod-dev-team\" /> \r\n\t<meta
+        property=\"twitter:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
+        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Edain Team company</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabimages\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/groups/1/1/500/Mod-DB-header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/company/edainmod-dev-team\">Edain Team</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tDeveloper
+        &amp; Publisher\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"firsttab\"><a href=\"/company/edainmod-dev-team\">summary</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/members\">members</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/articles\">articles</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/downloads\">files</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/software\">software</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/hardware\">hardware</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/engines\">engines</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/games\">games</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/mods\">mods</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/addons\">addons</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/videos\">videos</a></li><li class=\"on\"><a
+        href=\"/company/edainmod-dev-team/images\">images</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/jobs\">jobs</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>This
+        is the group of the Edain Mod Developer Team.\nIt is mainly used to manage
+        the rights of its members on this site.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox infobox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Private Company</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t\t\t\t<div class=\"body clear\">\n\t\t\t\t<div class=\"tooltip\"></div>\t\t\t\t\t\t\t\t<p>The
+        company you are trying to view is a private company for members only. You
+        can apply to join and if accepted will be able to view its contents.</p><p>Continue
+        browsing the <a href=\"/company\">company list</a>, to find the profile you
+        are after.</p>\t\t\t</div>\n\t\t\t\t\t</div>\n\t</div>\n</div><div class=\"column
+        span-all tabimages\">\t<div class=\"normalbox browsebox\" id=\"groupsbrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/team-unification\" title=\"Team
+        Unification\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/10/9103/crop_120x90/Uni_Lionhead.png\"
+        alt=\"Team Unification\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/team-unification\">Team Unification</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-03-02T18:57:18+00:00\">Mar
+        2 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t24
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Dedicated to
+        bringing many 40K faction mods to the Dawn of War 1 community through the
+        Unification Mod. Previously known as Team Thudmeizer since the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/atelier-801\"
+        title=\"Atelier 801\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6554/crop_120x90/atelier801.jpg\"
+        alt=\"Atelier 801\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/atelier-801\">Atelier 801</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2013-05-08T14:12:58+00:00\">May 8 2013</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t6 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Atelier
+        801 is a small company founded in 2011 by two persons : Jean-Baptiste Le Marchand
+        (programmer) and M\xE9lanie Christin (art director). We released...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/stellar-parallax\"
+        title=\"Stellar Parallax\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/11/10854/crop_120x90/SPLOGO1.png\"
+        alt=\"Stellar Parallax\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/stellar-parallax\">Stellar Parallax</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-12-03T21:14:45+00:00\">Dec
+        3 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t12
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>The development
+        team responsible for bringing you the Star Trek: Armada 3 and Ages of the
+        Federation total conversion modifications for Sins of a Solar...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/agent-red-productions\"
+        title=\"Agent Red Productions\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1537/crop_120x90/agrlogo.1.png\"
+        alt=\"Agent Red Productions\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/agent-red-productions\">Agent Red Productions</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2011-11-09T00:01:20+00:00\">Nov
+        9 2011</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t20
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We are a small
+        but international game development studio comprised of both casual modders
+        and aspiring game developers, all of whom are volunteers. Under...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/mentalmeisters\"
+        title=\"Mentalmeisters\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/5/4516/crop_120x90/mentalmeisters.png\"
+        alt=\"Mentalmeisters\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/mentalmeisters\">Mentalmeisters</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-04-03T11:32:14+00:00\">Apr
+        3 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t4
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Mentalmeisters
+        are the people who are currently behind the Mental Omega game project.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/infinity-ward\"
+        title=\"Infinity Ward\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/81/crop_120x90/Infinityward-logo.png\"
+        alt=\"Infinity Ward\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/infinity-ward\">Infinity Ward</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2016-07-04T09:35:29+00:00\">Jul
+        4 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNo
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>nfinity Ward,
+        Inc. is an award winning developer and wholly owned subsidiary of Activision,
+        Inc., which is headquartered in Encino, CA. IW is also the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/wallace2anjos\"
+        title=\"wallace2anjos\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6465/crop_120x90/777-.jpg\"
+        alt=\"wallace2anjos\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/wallace2anjos\">wallace2anjos</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2014-09-26T20:59:41+00:00\">Sep
+        26 2014</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t1
+        member Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>This is my hobby.\nYou
+        can choose the next mod, just send me a message on my profile or on my channel
+        on youtube .. : DD</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/company/contra-mod-team\" title=\"Contra Mod
+        Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/323/crop_120x90/Install_Final.1.jpg\"
+        alt=\"Contra Mod Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/contra-mod-team\">Contra Mod Team</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-09-09T09:41:56+00:00\">Sep
+        9 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t18
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We are the mod
+        team who created a mod for C&#038;C Generals: Zero Hour under the name &quot;Contra&quot;.
+        Team leader and Contra AUTHOR: Andrey [Creator] Pestryakov</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/east-wind-team\"
+        title=\"East Wind Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/40/39813/crop_120x90/289503357_10223990013753061_4355.jpg\"
+        alt=\"East Wind Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/east-wind-team\">East Wind Team</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-05T19:21:51+00:00\">Apr
+        5 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t3
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Team of East
+        Wind mod for Red Alert 3\nTeam of East Wind mod for Red Alert 3\n</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/no-life-studios\"
+        title=\"NLS - No Life Studios\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/70/crop_120x90/NLS_Preview_Image.jpg\"
+        alt=\"NLS - No Life Studios\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/no-life-studios\">NLS - No Life Studios</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-09-30T07:00:16+00:00\">Sep
+        30 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t19
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>A band of unlikely
+        modders that have nothing better to do with their time!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/electronic-arts\"
+        title=\"Electronic Arts\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/54/crop_120x90/ea.jpg\"
+        alt=\"Electronic Arts\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/electronic-arts\">Electronic Arts</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-01-04T07:52:23+00:00\">Jan
+        4 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t9
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>EA Games is one
+        of the leading publishers and developers of video games. Some of EAs most
+        successful products are under the 'EA Sports' label.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/call-of-duty-modern-operations\"
+        title=\"Call Of Duty - Modern Operations\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/35/34278/crop_120x90/myWL0ig76C4.jpg\"
+        alt=\"Call Of Duty - Modern Operations\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/call-of-duty-modern-operations\">Call Of
+        Duty - Modern Operations</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-04-11T15:28:52+00:00\">Apr 11 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t11 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>You
+        will experience an innovative Call Of Duty - Modern Operations which includes
+        the following modes: Special Ops, Zombie Mode and Survival Mode. With...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/company\">More
+        groups &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo groups were found
+        matching the criteria specified. We suggest you try the <a href=\"/company\">group
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div>
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"footermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_LB_2\" data-dfp-sizes=\"728x90\"
+        id=\"div-ga-MODDB_LB_2\"></div></div> \r\n</div>\r\n \t<div style=\"clear:
+        both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5584 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/company\",\"name\":\"Company\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/company/edainmod-dev-team\",\"name\":\"Edain
+        Team\",\"image\":\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"developers\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"gallery\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712737071\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712737071\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\tfunction
+        cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87214d859a23422a-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:17:51 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=aPiSXUw5M2hZW6RYI6vbr3myGB70DVaSYAn2%2FHUnnAMETcp2JS%2Fawm4ky5X8505KA%2FxGQvF2aBgcKtmsXFWh90vw0cMN%2FY3DMRVGD8G3dA7VrbOtKvHPiAZkwQWJnQwy01qSguRqWjMTcc8%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '29467'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=655104d655bddf7b5bf09fa2ad3849a0; expires=Wed, 10-Apr-2024 08:27:51
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=655104d655bddf7b5bf09fa2ad3849a0; expires=Wed, 10-Apr-2024 08:27:51
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/company/edainmod-dev-team
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Edain Team
+        company - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"edain team, developer, publisher, groups, events, company, club,
+        community, programmers, artists\" />\r\n\t<meta name=\"description\" content=\"This
+        is the group of the Edain Mod Developer Team. It is mainly used to manage
+        the rights of its members on this site.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Edain Team company\" />\r\n\t<meta property=\"og:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/company/edainmod-dev-team\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Edain Team company\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/company/edainmod-dev-team\" /> \r\n\t<meta
+        property=\"twitter:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
+        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Edain Team company</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all\">\t<div class=\"headerbox\" style=\"background-image:
+        url(https://media.moddb.com/images/groups/1/1/500/Mod-DB-header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/company/edainmod-dev-team\">Edain Team</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tDeveloper
+        &amp; Publisher\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"firsttab\"><a href=\"/company/edainmod-dev-team\">summary</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/members\">members</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/articles\">articles</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/downloads\">files</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/software\">software</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/hardware\">hardware</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/engines\">engines</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/games\">games</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/mods\">mods</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/addons\">addons</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/videos\">videos</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/images\">images</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/jobs\">jobs</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>This
+        is the group of the Edain Mod Developer Team.\nIt is mainly used to manage
+        the rights of its members on this site.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox infobox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Private Company</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t\t\t\t<div class=\"body clear\">\n\t\t\t\t<div class=\"tooltip\"></div>\t\t\t\t\t\t\t\t<p>The
+        company you are trying to view is a private company for members only. You
+        can apply to join and if accepted will be able to view its contents.</p><p>Continue
+        browsing the <a href=\"/company\">company list</a>, to find the profile you
+        are after.</p>\t\t\t</div>\n\t\t\t\t\t</div>\n\t</div>\n</div><div class=\"column
+        span-all\">\t<div class=\"normalbox browsebox\" id=\"groupsbrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/ion-storm\" title=\"Ion
+        Storm\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/52/crop_120x90/ion_storm_logo.jpg\"
+        alt=\"Ion Storm\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/ion-storm\">Ion Storm</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2013-12-11T15:11:30+00:00\">Dec 11 2013</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t1 member Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>The
+        now-defunct Ion Storm was a Texas-based company most famous for its development
+        of the highly acclaimed Deus Ex.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/agent-red-productions\"
+        title=\"Agent Red Productions\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1537/crop_120x90/agrlogo.1.png\"
+        alt=\"Agent Red Productions\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/agent-red-productions\">Agent Red Productions</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2011-11-09T00:01:20+00:00\">Nov
+        9 2011</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t20
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We are a small
+        but international game development studio comprised of both casual modders
+        and aspiring game developers, all of whom are volunteers. Under...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/westwood-studios\"
+        title=\"Westwood Studios\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/218/crop_120x90/westwood.jpg\"
+        alt=\"Westwood Studios\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/westwood-studios\">Westwood Studios</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2019-07-30T09:04:23+00:00\">Jul
+        30 2019</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNo
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Westwood Studios
+        (1985-2003) was a computer and video game developer, founded in 1985 as Westwood
+        Associates by Brett Sperry and Louis Castle and based...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/lucasarts\"
+        title=\"LucasArts\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/317/crop_120x90/lucas-arts-logo.jpg\"
+        alt=\"LucasArts\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/lucasarts\">LucasArts</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-01T04:32:28+00:00\">Apr 1 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNo members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>LucasArts
+        is a leading publisher and developer of interactive entertainment software
+        for videogame console systems and personal computers. The company...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/hazard-team\"
+        title=\"Hazard Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1861/crop_120x90/ht.jpg\"
+        alt=\"Hazard Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/hazard-team\">Hazard Team</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-08-17T13:17:35+00:00\">Aug 17 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t3 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We're
+        making mods for Half-Life trying to stick to the canonical plot of Half-Life
+        series and expand it with our own additions.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/spreading-infection\"
+        title=\"Ribcaged Entertainment\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1783/crop_120x90/riblogo1.png\"
+        alt=\"Ribcaged Entertainment\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/spreading-infection\">Ribcaged Entertainment</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2022-10-24T14:31:37+00:00\">Oct
+        24 2022</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t7
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Ribcaged Entertainment
+        (prevously Spreading Infection) is a dedicated team focused on providing the
+        public with fun playable games. We strive to perfect...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/no-life-studios\"
+        title=\"NLS - No Life Studios\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/70/crop_120x90/NLS_Preview_Image.jpg\"
+        alt=\"NLS - No Life Studios\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/no-life-studios\">NLS - No Life Studios</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-09-30T07:00:16+00:00\">Sep
+        30 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t19
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>A band of unlikely
+        modders that have nothing better to do with their time!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/wallace2anjos\"
+        title=\"wallace2anjos\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6465/crop_120x90/777-.jpg\"
+        alt=\"wallace2anjos\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/wallace2anjos\">wallace2anjos</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2014-09-26T20:59:41+00:00\">Sep
+        26 2014</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t1
+        member Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>This is my hobby.\nYou
+        can choose the next mod, just send me a message on my profile or on my channel
+        on youtube .. : DD</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/company/electronic-arts\" title=\"Electronic
+        Arts\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/54/crop_120x90/ea.jpg\"
+        alt=\"Electronic Arts\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/electronic-arts\">Electronic Arts</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-01-04T07:52:23+00:00\">Jan
+        4 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t9
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>EA Games is one
+        of the leading publishers and developers of video games. Some of EAs most
+        successful products are under the 'EA Sports' label.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/team-psykskallar\"
+        title=\"Team Psykskallar\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/705/crop_120x90/pic3_copy.PNG\"
+        alt=\"Team Psykskallar\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/team-psykskallar\">Team Psykskallar</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-11-28T22:39:26+00:00\">Nov
+        28 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t3
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>This group is
+        founded by Andreas &quot;ruMpel&quot; R\xF6nnberg. We have a really good mind
+        of creating sick mods, like Afraid of Monsters: Director's Cut and Cry...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/team-unification\"
+        title=\"Team Unification\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/10/9103/crop_120x90/Uni_Lionhead.png\"
+        alt=\"Team Unification\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/team-unification\">Team Unification</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-03-02T18:57:18+00:00\">Mar
+        2 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t24
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Dedicated to
+        bringing many 40K faction mods to the Dawn of War 1 community through the
+        Unification Mod. Previously known as Team Thudmeizer since the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/sega\" title=\"Sega\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1119/crop_120x90/sp.jpg\"
+        alt=\"Sega\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/sega\">Sega</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-02-16T19:36:32+00:00\">Feb 16 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNo members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Sega
+        Corporation is a multinational video game software and hardware development
+        company, and a former home computer and console manufacturer headquartered...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/company\">More
+        groups &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo groups were found
+        matching the criteria specified. We suggest you try the <a href=\"/company\">group
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div>
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"footermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_LB_2\" data-dfp-sizes=\"728x90\"
+        id=\"div-ga-MODDB_LB_2\"></div></div> \r\n</div>\r\n \t<div style=\"clear:
+        both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5547 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/company\",\"name\":\"Company\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/company/edainmod-dev-team\",\"name\":\"Edain
+        Team\",\"image\":\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"developers\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749766\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749766\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\tfunction
+        cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 872283747c5b0e36-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:49:26 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=u%2FIEx9sOKKSRdZH9Qo3amgh8tGY7IC28E0xjalBZhcx5Wpkux2dXfz5tqtvWivhMIIqDuMBMfUkm1WicqCm4ZhTL2oS4uem%2FxOt82yf342p5s9oQNCS1JvKEuFChRhRUAGBNve6t1k3XJ2o%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '29325'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=9206a4165a955c76de781bbdfcac8434; expires=Wed, 10-Apr-2024 11:59:26
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/company/edainmod-dev-team/images
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Edain Team
+        company - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"edain team, developer, publisher, groups, events, company, club,
+        community, programmers, artists\" />\r\n\t<meta name=\"description\" content=\"This
+        is the group of the Edain Mod Developer Team. It is mainly used to manage
+        the rights of its members on this site.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Edain Team company\" />\r\n\t<meta property=\"og:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/company/edainmod-dev-team\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Edain Team company\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"This is the group of the Edain Mod Developer Team. It is mainly
+        used to manage the rights of its members on this site.\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/company/edainmod-dev-team\" /> \r\n\t<meta
+        property=\"twitter:image\" content=\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
+        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Edain Team company</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabimages\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/groups/1/1/500/Mod-DB-header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/company/edainmod-dev-team\">Edain Team</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tDeveloper
+        &amp; Publisher\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"firsttab\"><a href=\"/company/edainmod-dev-team\">summary</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/members\">members</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/articles\">articles</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/downloads\">files</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/software\">software</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/hardware\">hardware</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/engines\">engines</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/games\">games</a></li><li
+        class=\"\"><a href=\"/company/edainmod-dev-team/mods\">mods</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/addons\">addons</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/videos\">videos</a></li><li class=\"on\"><a
+        href=\"/company/edainmod-dev-team/images\">images</a></li><li class=\"\"><a
+        href=\"/company/edainmod-dev-team/jobs\">jobs</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>This
+        is the group of the Edain Mod Developer Team.\nIt is mainly used to manage
+        the rights of its members on this site.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox infobox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Private Company</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t\t\t\t<div class=\"body clear\">\n\t\t\t\t<div class=\"tooltip\"></div>\t\t\t\t\t\t\t\t<p>The
+        company you are trying to view is a private company for members only. You
+        can apply to join and if accepted will be able to view its contents.</p><p>Continue
+        browsing the <a href=\"/company\">company list</a>, to find the profile you
+        are after.</p>\t\t\t</div>\n\t\t\t\t\t</div>\n\t</div>\n</div><div class=\"column
+        span-all tabimages\">\t<div class=\"normalbox browsebox\" id=\"groupsbrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/atelier-801\" title=\"Atelier
+        801\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6554/crop_120x90/atelier801.jpg\"
+        alt=\"Atelier 801\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/atelier-801\">Atelier 801</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2013-05-08T14:12:58+00:00\">May 8 2013</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t6 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Atelier
+        801 is a small company founded in 2011 by two persons : Jean-Baptiste Le Marchand
+        (programmer) and M\xE9lanie Christin (art director). We released...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/contra-mod-team\"
+        title=\"Contra Mod Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/323/crop_120x90/Install_Final.1.jpg\"
+        alt=\"Contra Mod Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/contra-mod-team\">Contra Mod Team</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-09-09T09:41:56+00:00\">Sep
+        9 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t18
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We are the mod
+        team who created a mod for C&#038;C Generals: Zero Hour under the name &quot;Contra&quot;.
+        Team leader and Contra AUTHOR: Andrey [Creator] Pestryakov</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/id-software\"
+        title=\"id Software\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/21/crop_120x90/id-software-logo.jpg\"
+        alt=\"id Software\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/id-software\">id Software</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-10-25T18:12:50+00:00\">Oct 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t1 member Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>id
+        Software is responsible for the Quake, Doom and Wolfenstein series of games.
+        With flexible engines, id Software have a strong mod community</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/the-creative-assembly\"
+        title=\"Creative Assembly\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1252/crop_120x90/preview.jpg\"
+        alt=\"Creative Assembly\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/the-creative-assembly\">Creative Assembly</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-08-24T15:30:26+00:00\">Aug
+        24 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t2
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Creative Assembly
+        is a British video game developer established in 1987 by Tim Ansell. Although
+        primarily based in the West Sussex town of Horsham, the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/team-unification\"
+        title=\"Team Unification\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/10/9103/crop_120x90/Uni_Lionhead.png\"
+        alt=\"Team Unification\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/team-unification\">Team Unification</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-03-02T18:57:18+00:00\">Mar
+        2 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t24
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Dedicated to
+        bringing many 40K faction mods to the Dawn of War 1 community through the
+        Unification Mod. Previously known as Team Thudmeizer since the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/call-of-duty-modern-operations\"
+        title=\"Call Of Duty - Modern Operations\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/35/34278/crop_120x90/myWL0ig76C4.jpg\"
+        alt=\"Call Of Duty - Modern Operations\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/call-of-duty-modern-operations\">Call Of
+        Duty - Modern Operations</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-04-11T15:28:52+00:00\">Apr 11 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t11 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>You
+        will experience an innovative Call Of Duty - Modern Operations which includes
+        the following modes: Special Ops, Zombie Mode and Survival Mode. With...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/mdgame\" title=\"MDGAME\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/42/41667/crop_120x90/logo.png\"
+        alt=\"MDGAME\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/mdgame\">MDGAME</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-01-20T03:57:38+00:00\">Jan 20 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t1 member Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>A
+        game production studio also plays a role in localizing games. After all, I
+        am a Chinese and currently the only one. We welcome everyone to voluntarily...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/westwood-studios\"
+        title=\"Westwood Studios\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/218/crop_120x90/westwood.jpg\"
+        alt=\"Westwood Studios\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/westwood-studios\">Westwood Studios</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2019-07-30T09:04:23+00:00\">Jul
+        30 2019</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNo
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Westwood Studios
+        (1985-2003) was a computer and video game developer, founded in 1985 as Westwood
+        Associates by Brett Sperry and Louis Castle and based...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/lucasarts\"
+        title=\"LucasArts\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/317/crop_120x90/lucas-arts-logo.jpg\"
+        alt=\"LucasArts\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/lucasarts\">LucasArts</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-01T04:32:28+00:00\">Apr 1 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNo members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>LucasArts
+        is a leading publisher and developer of interactive entertainment software
+        for videogame console systems and personal computers. The company...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/piranhabytes\"
+        title=\"Piranha Bytes\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1465/crop_120x90/Preview.jpg\"
+        alt=\"Piranha Bytes\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/piranhabytes\">Piranha Bytes</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-09-28T20:53:02+00:00\">Sep
+        28 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t3
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Pluto 13 GmbH
+        is a developer of computer games located in the Ruhrgebiet, Germany's industrial
+        heartland. Is is known for its label Piranha Bytes\xAE under...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/swr-productions\"
+        title=\"SWR Productions\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/142/crop_120x90/SWR.jpg\"
+        alt=\"SWR Productions\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/swr-productions\">SWR Productions</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2014-09-13T15:48:46+00:00\">Sep
+        13 2014</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t16
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>SWR is a modding
+        team dedicated to several mods based on EA's Game Command and Conquer Generals
+        and possibly other games in the future.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/gsc-game-world\"
+        title=\"GSC Game World\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/436/crop_120x90/gsc.1.jpg\"
+        alt=\"GSC Game World\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/gsc-game-world\">GSC Game World</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-05-16T05:56:12+00:00\">May
+        16 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t1
+        member Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>GSC Game World
+        is a Kiev-based computer game developer. Founded in 1995 in Kiev, Ukraine,
+        it released titles such as Cossacks: European Wars, American...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/company\">More
+        groups &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo groups were found
+        matching the criteria specified. We suggest you try the <a href=\"/company\">group
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div>
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"footermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_LB_2\" data-dfp-sizes=\"728x90\"
+        id=\"div-ga-MODDB_LB_2\"></div></div> \r\n</div>\r\n \t<div style=\"clear:
+        both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5547 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/company\",\"name\":\"Company\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/company/edainmod-dev-team\",\"name\":\"Edain
+        Team\",\"image\":\"https://media.moddb.com/images/groups/1/1/500/Edain.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"developers\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"gallery\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749766\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749766\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\tfunction
+        cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 872283783fc80e36-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:49:26 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=PnvnyO1EPWoVH94TGbUafSF1p%2B2SUYDS5mJQd%2BI%2FegfdnpgDTaaJhRdtE3YlB5WY2RU%2BG6tD%2BaOCGZAGZTfbnvaiStdvMb6u46%2F7sLIZMOVkOKUai%2F9ojjRKdYCt9Zxb2eCekJS0jNCV0vM%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '29561'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=6ec1685972cd45db2d68d8a3b47d801f; expires=Wed, 10-Apr-2024 11:59:26
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=6ec1685972cd45db2d68d8a3b47d801f; expires=Wed, 10-Apr-2024 11:59:26
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

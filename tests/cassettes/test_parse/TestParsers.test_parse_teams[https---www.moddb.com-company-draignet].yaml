@@ -516,8 +516,6 @@ interactions:
       - 8188e4db3bbed646-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -532,10 +530,1169 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '48079'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=700e579fe3b44dcd431796a1124c1075; expires=Thu, 19-Oct-2023 12:16:15
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/company/draignet
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>DraigNET
+        company - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"draignet, developer, publisher, groups, events, company, club, community,
+        programmers, artists\" />\r\n\t<meta name=\"description\" content=\"DraigNET
+        is a private limited company set up primarily as a website designer and community
+        host specialising in the home-grown gaming industry.\" />\r\n\t<meta name=\"robots\"
+        content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"DraigNET company\" />\r\n\t<meta property=\"og:description\"
+        content=\"DraigNET is a private limited company set up primarily as a website
+        designer and community host specialising in the home-grown gaming industry.\"
+        />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\" />\r\n\t \r\n\t<meta
+        property=\"og:url\" content=\"https://www.moddb.com/company/draignet\" />
+        \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/groups/1/7/6959/PreviewImg.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"DraigNET company\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"DraigNET is a private limited company set up primarily as a website
+        designer and community host specialising in the home-grown gaming industry.\"
+        />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/company/draignet\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/groups/1/7/6959/PreviewImg.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>DraigNET company</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabsummary\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/groups/1/7/6959/ProfHeader.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/company/draignet\">DraigNET</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tDeveloper
+        &amp; Publisher\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"on firsttab\"><a href=\"/company/draignet\">summary</a></li><li
+        class=\"off\"><a href=\"/company/draignet/members\">members</a></li><li class=\"off\"><a
+        href=\"/company/draignet/articles\">articles</a></li><li class=\"\"><a href=\"/company/draignet/engines\">engines</a></li><li
+        class=\"off\"><a href=\"/company/draignet/videos\">videos</a></li><li class=\"off\"><a
+        href=\"/company/draignet/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>DraigNET is the lead project management for several
+        currently active projects. These include game development, website management,
+        and software engineering.<br /> DraigNET covers all aspects of home-grown
+        game development as well as community support for gaming clans, groups, and
+        automotive communities.</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"enginesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span class=\"heading\">Engines</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/dragonsource\" title=\"DragonSource\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/394/crop_120x90/1024x768.jpg\"
+        alt=\"DragonSource\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/dragonsource\">DragonSource</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-11-06T14:15:23+00:00\">Nov 6 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2012-02\">Released 2012</time>
+        Public Domain licence \t\t\t</span>\r\n\t\t\t<p>Visual Basic 6 and DirectX
+        7 based multi-player engine.</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        engines were found matching the criteria specified. We suggest you try the
+        <a href=\"/company/draignet/engines\">engine list</a> with no filter applied,
+        to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/company/draignet/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"df708945c29bcda246744207edac0328\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"groupsbrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/the-creative-assembly\"
+        title=\"Creative Assembly\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1252/crop_120x90/preview.jpg\"
+        alt=\"Creative Assembly\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/the-creative-assembly\">Creative Assembly</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-08-24T15:30:26+00:00\">Aug
+        24 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t2
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Creative Assembly
+        is a British video game developer established in 1987 by Tim Ansell. Although
+        primarily based in the West Sussex town of Horsham, the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/atelier-801\"
+        title=\"Atelier 801\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/7/6554/crop_120x90/atelier801.jpg\"
+        alt=\"Atelier 801\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/atelier-801\">Atelier 801</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2013-05-08T14:12:58+00:00\">May 8 2013</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t6 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Atelier
+        801 is a small company founded in 2011 by two persons : Jean-Baptiste Le Marchand
+        (programmer) and M\xE9lanie Christin (art director). We released...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/agent-red-productions\"
+        title=\"Agent Red Productions\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1537/crop_120x90/agrlogo.1.png\"
+        alt=\"Agent Red Productions\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/agent-red-productions\">Agent Red Productions</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2011-11-09T00:01:20+00:00\">Nov
+        9 2011</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t20
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We are a small
+        but international game development studio comprised of both casual modders
+        and aspiring game developers, all of whom are volunteers. Under...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/contra-mod-team\"
+        title=\"Contra Mod Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/323/crop_120x90/Install_Final.1.jpg\"
+        alt=\"Contra Mod Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/contra-mod-team\">Contra Mod Team</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-09-09T09:41:56+00:00\">Sep
+        9 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t18
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We are the mod
+        team who created a mod for C&#038;C Generals: Zero Hour under the name &quot;Contra&quot;.
+        Team leader and Contra AUTHOR: Andrey [Creator] Pestryakov</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/piranhabytes\"
+        title=\"Piranha Bytes\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1465/crop_120x90/Preview.jpg\"
+        alt=\"Piranha Bytes\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/piranhabytes\">Piranha Bytes</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-09-28T20:53:02+00:00\">Sep
+        28 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t3
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Pluto 13 GmbH
+        is a developer of computer games located in the Ruhrgebiet, Germany's industrial
+        heartland. Is is known for its label Piranha Bytes\xAE under...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/hazard-team\"
+        title=\"Hazard Team\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/2/1861/crop_120x90/ht.jpg\"
+        alt=\"Hazard Team\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/company/hazard-team\">Hazard Team</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-08-17T13:17:35+00:00\">Aug 17 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t3 members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>We're
+        making mods for Half-Life trying to stick to the canonical plot of Half-Life
+        series and expand it with our own additions.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/company\">More
+        groups &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo groups were found
+        matching the criteria specified. We suggest you try the <a href=\"/company\">group
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"groupsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=6959\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=6959\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/6959\" class=\"joinicon
+        01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join company\">Join
+        company</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Privacy</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\tPublic\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Subscription</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\tMust apply to join\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=groupsgroup6959\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Email</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"mailto:admin@draignet.uk\">admin@draignet.uk</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://draignet.uk\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Draignet.uk</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Membership</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/groups/ajax/members/change/6959\"
+        class=\"joinicon 01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\">Join
+        company</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=6959\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet&title=DraigNET+company\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=DraigNET%20company&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=DraigNET+company+https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet&quote=DraigNET+company&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        developer is NOT working on content compatible with RTX Remix. Learn more
+        about <a href=\"/news/rtx-remix-on-moddb\">ModDB's collaboration with the
+        Remix community</a> to organize all compatible games,. <a href=\"/platforms/rtx/set\"
+        class=\"togglertxinfo\">Hide this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"df708945c29bcda246744207edac0328\" />\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"df708945c29bcda246744207edac0328\" />\t\t\t\t\t<div class=\"row rowtagstagcommunity
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/community\">Community</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=community&sitearea=groups&siteareaid=6959&hash=20d41328c1ea11508b8c293cd3a33e89\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=community&sitearea=groups&siteareaid=6959&hash=20d41328c1ea11508b8c293cd3a33e89&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagdeveloper clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/developer\">Developer</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=developer&sitearea=groups&siteareaid=6959&hash=20d41328c1ea11508b8c293cd3a33e89\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=developer&sitearea=groups&siteareaid=6959&hash=20d41328c1ea11508b8c293cd3a33e89&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagpublisher clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/publisher\">Publisher</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=publisher&sitearea=groups&siteareaid=6959&hash=20d41328c1ea11508b8c293cd3a33e89\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=publisher&sitearea=groups&siteareaid=6959&hash=20d41328c1ea11508b8c293cd3a33e89&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=20d41328c1ea11508b8c293cd3a33e89\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=20d41328c1ea11508b8c293cd3a33e89&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"20d41328c1ea11508b8c293cd3a33e89\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"groups\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"6959\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"groupsbuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to DraigNET by selecting a button and using the embed code provided <a href=\"#\"
+        class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/company/draignet&quot; title=&quot;View
+        DraigNET on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/groups/6959.png&quot;
+        alt=&quot;DraigNET&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/company/draignet\"
+        title=\"View DraigNET on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/groups/6959.png\"
+        alt=\"DraigNET\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row
+        clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn smallbtn\"
+        style=\"text-align: center;\"><a href=\"https://www.moddb.com/company/draignet\"
+        title=\"View DraigNET - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"DraigNET\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"groupsprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/top\">15,863 of 42,041</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/draignet/stats\">68,071
+        (1 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/draignet/watchers\">2
+        members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engines</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/draignet/engines\">1</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div> \t<div
+        style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/company\",\"name\":\"Company\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/company/draignet\",\"name\":\"DraigNET\",\"image\":\"https://media.moddb.com/images/groups/1/7/6959/PreviewImg.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"developers\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736400\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736400\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".01273214f4f917bc3d446f3d0f6bb1bdjoin\").saveUpdate(\"join\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=groups\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213d250ec40b4c-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:06:40 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=hVCMJbVzZoOvJtYUZFHIfJ9%2Bg3%2FswAzjrMsJquuIH3wrU2Kb0A9nyczRjKZTIceMD0nauiFvKw7wuaDb%2BPDVsOhmOOHjayY7qxayZ90oyNOEUOSvFx5gn3m%2FsbYYsZD2uYmUBjMQ4kbUTE4%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '46555'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=66781c7d8b11cc80e1c3b4123a16a10f; expires=Wed, 10-Apr-2024 08:16:40
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/company/draignet
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>DraigNET
+        company - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"draignet, developer, publisher, groups, events, company, club, community,
+        programmers, artists\" />\r\n\t<meta name=\"description\" content=\"DraigNET
+        is a private limited company set up primarily as a website designer and community
+        host specialising in the home-grown gaming industry.\" />\r\n\t<meta name=\"robots\"
+        content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"DraigNET company\" />\r\n\t<meta property=\"og:description\"
+        content=\"DraigNET is a private limited company set up primarily as a website
+        designer and community host specialising in the home-grown gaming industry.\"
+        />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\" />\r\n\t \r\n\t<meta
+        property=\"og:url\" content=\"https://www.moddb.com/company/draignet\" />
+        \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/groups/1/7/6959/PreviewImg.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"DraigNET company\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"DraigNET is a private limited company set up primarily as a website
+        designer and community host specialising in the home-grown gaming industry.\"
+        />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/company/draignet\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/groups/1/7/6959/PreviewImg.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>DraigNET company</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabsummary\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/groups/1/7/6959/ProfHeader.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/company/draignet\">DraigNET</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\tDeveloper
+        &amp; Publisher\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"on firsttab\"><a href=\"/company/draignet\">summary</a></li><li
+        class=\"off\"><a href=\"/company/draignet/members\">members</a></li><li class=\"off\"><a
+        href=\"/company/draignet/articles\">articles</a></li><li class=\"\"><a href=\"/company/draignet/engines\">engines</a></li><li
+        class=\"off\"><a href=\"/company/draignet/videos\">videos</a></li><li class=\"off\"><a
+        href=\"/company/draignet/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>DraigNET is the lead project management for several
+        currently active projects. These include game development, website management,
+        and software engineering.<br /> DraigNET covers all aspects of home-grown
+        game development as well as community support for gaming clans, groups, and
+        automotive communities.</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"enginesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span class=\"heading\">Engines</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/dragonsource\" title=\"DragonSource\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/394/crop_120x90/1024x768.jpg\"
+        alt=\"DragonSource\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/dragonsource\">DragonSource</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-11-06T14:15:23+00:00\">Nov 6 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2012-02\">Released 2012</time>
+        Public Domain licence \t\t\t</span>\r\n\t\t\t<p>Visual Basic 6 and DirectX
+        7 based multi-player engine.</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        engines were found matching the criteria specified. We suggest you try the
+        <a href=\"/company/draignet/engines\">engine list</a> with no filter applied,
+        to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/company/draignet/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"cdc6fd9696069cac401282c00bfffbab\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"groupsbrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/stellar-parallax\" title=\"Stellar
+        Parallax\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/11/10854/crop_120x90/SPLOGO1.png\"
+        alt=\"Stellar Parallax\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/stellar-parallax\">Stellar Parallax</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-12-03T21:14:45+00:00\">Dec
+        3 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t12
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>The development
+        team responsible for bringing you the Star Trek: Armada 3 and Ages of the
+        Federation total conversion modifications for Sins of a Solar...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/infinity-ward\"
+        title=\"Infinity Ward\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/81/crop_120x90/Infinityward-logo.png\"
+        alt=\"Infinity Ward\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/infinity-ward\">Infinity Ward</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2016-07-04T09:35:29+00:00\">Jul
+        4 2016</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNo
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>nfinity Ward,
+        Inc. is an award winning developer and wholly owned subsidiary of Activision,
+        Inc., which is headquartered in Encino, CA. IW is also the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/team-unification\"
+        title=\"Team Unification\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/10/9103/crop_120x90/Uni_Lionhead.png\"
+        alt=\"Team Unification\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/team-unification\">Team Unification</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-03-02T18:57:18+00:00\">Mar
+        2 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t24
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>Dedicated to
+        bringing many 40K faction mods to the Dawn of War 1 community through the
+        Unification Mod. Previously known as Team Thudmeizer since the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/team-psykskallar\"
+        title=\"Team Psykskallar\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/705/crop_120x90/pic3_copy.PNG\"
+        alt=\"Team Psykskallar\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/team-psykskallar\">Team Psykskallar</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-11-28T22:39:26+00:00\">Nov
+        28 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t3
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>This group is
+        founded by Andreas &quot;ruMpel&quot; R\xF6nnberg. We have a really good mind
+        of creating sick mods, like Afraid of Monsters: Director's Cut and Cry...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/swr-productions\"
+        title=\"SWR Productions\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/142/crop_120x90/SWR.jpg\"
+        alt=\"SWR Productions\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/swr-productions\">SWR Productions</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2014-09-13T15:48:46+00:00\">Sep
+        13 2014</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t16
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>SWR is a modding
+        team dedicated to several mods based on EA's Game Command and Conquer Generals
+        and possibly other games in the future.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/company/no-life-studios\"
+        title=\"NLS - No Life Studios\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/70/crop_120x90/NLS_Preview_Image.jpg\"
+        alt=\"NLS - No Life Studios\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/company/no-life-studios\">NLS - No Life Studios</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-09-30T07:00:16+00:00\">Sep
+        30 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t19
+        members Developer &amp; Publisher  \t\t\t</span>\r\n\t\t\t<p>A band of unlikely
+        modders that have nothing better to do with their time!</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/company\">More
+        groups &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo groups were found
+        matching the criteria specified. We suggest you try the <a href=\"/company\">group
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"groupsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=6959\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=groups&amp;siteareaid=6959\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"/groups/ajax/members/change/6959\" class=\"joinicon
+        01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\" title=\"Join company\">Join
+        company</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Privacy</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\tPublic\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Subscription</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\tMust apply to join\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=groupsgroup6959\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Email</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"mailto:admin@draignet.uk\">admin@draignet.uk</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://draignet.uk\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Draignet.uk</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Membership</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/groups/ajax/members/change/6959\"
+        class=\"joinicon 01273214f4f917bc3d446f3d0f6bb1bdjoin\" rel=\"nofollow\">Join
+        company</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Group watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=groups&amp;siteareaid=6959\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet&title=DraigNET+company\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=DraigNET%20company&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=DraigNET+company+https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet&quote=DraigNET+company&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fcompany%2Fdraignet\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        developer is NOT working on content compatible with RTX Remix. Learn more
+        about <a href=\"/news/rtx-remix-on-moddb\">ModDB's collaboration with the
+        Remix community</a> to organize all compatible games,. <a href=\"/platforms/rtx/set\"
+        class=\"togglertxinfo\">Hide this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"cdc6fd9696069cac401282c00bfffbab\" />\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"cdc6fd9696069cac401282c00bfffbab\" />\t\t\t\t\t<div class=\"row rowtagstagcommunity
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/community\">Community</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=community&sitearea=groups&siteareaid=6959&hash=c972d79ffa6e18689ad000028da63887\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=community&sitearea=groups&siteareaid=6959&hash=c972d79ffa6e18689ad000028da63887&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagdeveloper clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/developer\">Developer</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=developer&sitearea=groups&siteareaid=6959&hash=c972d79ffa6e18689ad000028da63887\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=developer&sitearea=groups&siteareaid=6959&hash=c972d79ffa6e18689ad000028da63887&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagpublisher clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/publisher\">Publisher</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=publisher&sitearea=groups&siteareaid=6959&hash=c972d79ffa6e18689ad000028da63887\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=publisher&sitearea=groups&siteareaid=6959&hash=c972d79ffa6e18689ad000028da63887&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=c972d79ffa6e18689ad000028da63887\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=c972d79ffa6e18689ad000028da63887&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"c972d79ffa6e18689ad000028da63887\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"groups\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"6959\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"groupsbuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to DraigNET by selecting a button and using the embed code provided <a href=\"#\"
+        class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/company/draignet&quot; title=&quot;View
+        DraigNET on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/groups/6959.png&quot;
+        alt=&quot;DraigNET&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/company/draignet\"
+        title=\"View DraigNET on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/groups/6959.png\"
+        alt=\"DraigNET\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row
+        clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn smallbtn\"
+        style=\"text-align: center;\"><a href=\"https://www.moddb.com/company/draignet\"
+        title=\"View DraigNET - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"DraigNET\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"groupsprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/top\">8,272 of 42,042</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/draignet/stats\">68,072
+        (2 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/draignet/watchers\">2
+        members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engines</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/draignet/engines\">1</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div> \t<div
+        style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5424 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/company\",\"name\":\"Company\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/company/draignet\",\"name\":\"DraigNET\",\"image\":\"https://media.moddb.com/images/groups/1/7/6959/PreviewImg.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=groups\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"developers\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749093\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749093\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".01273214f4f917bc3d446f3d0f6bb1bdjoin\").saveUpdate(\"join\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=groups\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87227308fd3e0bfd-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:38:13 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=eeKQOGBC%2FlfUcPY6njL3qJzunVyF1Jmf2z25ytidVBy0tpnO9TbtY79qJZzXrLB3t%2BJsy%2BJUnnDf9rvzSUhhwzvNDsqGs6ysf3rSljGjGSS1K0iDdH0zqN5gKKdzyvaHDLWlP4Eps86L2RY%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '46516'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=bd22a535122a9dc1fd9f473f78ea89be; expires=Wed, 10-Apr-2024 11:48:13
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

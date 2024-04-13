@@ -931,8 +931,6 @@ interactions:
       - 8188ec1ebd833c81-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -947,12 +945,1946 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '80625'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
       - masterchief=8b1af644e2a35d69118da9ae2e3b83ef; expires=Thu, 19-Oct-2023 12:21:13
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/polls/default-v5-theme-should-be
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Default
+        v5 theme should be - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta
+        name=\"keywords\" content=\"default v5 theme should be, poll, opinion, vote,
+        select, elect, survey, question, discussion\" />\r\n\t<meta name=\"description\"
+        content=\"View the ModDB  poll Default v5 theme should be\" />\r\n\t<meta
+        name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\"
+        content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\" content=\"Default
+        v5 theme should be\" />\r\n\t<meta property=\"og:description\" content=\"View
+        the ModDB  poll Default v5 theme should be\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"article\" />
+        \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/polls/default-v5-theme-should-be\"
+        /> \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Default v5 theme should be\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"View the ModDB  poll Default v5 theme should be\" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/polls/default-v5-theme-should-be\"
+        /> \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Default v5 theme should be</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-300-alt first\">\t<div class=\"normalbox
+        pollbox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2407\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Default
+        v5 theme should be</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"inner\">\n\t\t\t<div
+        class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t<p class=\"question\">Poll started by <a href=\"/members/feillyne\">feillyne</a>
+        with 1,942 votes and 29 comments. Browse the <a href=\"/polls\">poll archive</a>.</p>\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 51%;\">&nbsp;51%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(986 votes)</span>Classic light theme & black font,
+        with red accents</p>\n\t\t\t\t\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t<div
+        class=\"barinner\" style=\"width: 45%;\">&nbsp;45%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(882 votes)</span>Dark, with light font, red accents</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 4%;\">&nbsp;4%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(74 votes)</span>Other (specify)</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"6365374\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" title=\"Thanoshld\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/1/231/230747/Aperture_Science_Innovators_Logo.1.png\"
+        alt=\"Thanoshld\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" class=\"author\" data-nameid=\"thanoshltbeginning\">Thanoshld</a>
+        \ - <a href=\"#6365374\" style=\"color: inherit;\"><time datetime=\"2017-01-23T22:27:32+00:00\">Jan
+        23 2017</time></a> - 1,416 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>A bit difficult to chose without
+        reference pics, but \"black font\" really helps, both with the eyes (noticing
+        the main content better), and with mobile phones, since black doesn't consume
+        as much power as any other color.</p>\n<p>Seen the v.5 preview, good work
+        guys ;) .\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6365374\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6365374\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6365374\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+19
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6366391\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/shepard62fr\"
+        title=\"shepard62fr\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/279/278843/80786b2ee75ddec7594f7142b3574c99.png\"
+        alt=\"shepard62fr\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/shepard62fr\" class=\"author\" data-nameid=\"shepard62fr\">shepard62fr</a>
+        \ - <a href=\"#6366391\" style=\"color: inherit;\"><time datetime=\"2017-01-24T15:26:02+00:00\">Jan
+        24 2017</time></a> - 491 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Why not both ? ^^\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6366391\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6366391\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6366391\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6419410\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/aple\"
+        title=\"Templarfreak\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/300/299822/memecancerslendy4.png\"
+        alt=\"Templarfreak\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/aple\" class=\"author\" data-nameid=\"aple\">Templarfreak</a>
+        \ - <a href=\"#6419410\" style=\"color: inherit;\"><time datetime=\"2017-02-27T15:25:31+00:00\">Feb
+        27 2017</time></a> - 6,721 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Both being default? How would that
+        work? From what I can tell the will both be there as a choice but one is just
+        going to be the default.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6419410\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6419410\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6419410\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6427272\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/jerikoh\"
+        title=\"Jerik\xF8h\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/448/447413/JerikohGif.gif\"
+        alt=\"Jerik\xF8h\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/jerikoh\" class=\"author\" data-nameid=\"jerikoh\">Jerik\xF8h</a>
+        \ - <a href=\"#6427272\" style=\"color: inherit;\"><time datetime=\"2017-03-05T04:44:22+00:00\">Mar
+        5 2017</time></a> - 298 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>quantum physics bro ( \u0361\xB0
+        \u035C\u0296 \u0361\xB0)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6427272\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6427272\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6427272\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+13
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368223\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/court-jestah\"
+        title=\"Court_jestah\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3762/3761644/15094465_1788229684727533_448499.jpg\"
+        alt=\"Court_jestah\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/court-jestah\" class=\"author\" data-nameid=\"court-jestah\">Court_jestah</a>
+        \ - <a href=\"#6368223\" style=\"color: inherit;\"><time datetime=\"2017-01-25T19:17:13+00:00\">Jan
+        25 2017</time></a> - 12 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>We should get to choose the theme
+        in our settings.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6368223\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368223\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6368223\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+15
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368286\" class=\"row rowdeveloper\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6368286\" style=\"color:
+        inherit;\"><time datetime=\"2017-01-25T20:04:33+00:00\">Jan 25 2017</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p><a rel=\"nofollow\" href=\"/members/shepard62fr\">shepard62fr</a>,
+        <a rel=\"nofollow\" href=\"/members/court-jestah\">Court_jestah</a>, that
+        is not the point. The question is what theme should be the startup/default
+        one. Whether there will be more themes (and not just one) to choose from is
+        an entirely different question...\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6368286\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368286&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368574\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/shepard62fr\"
+        title=\"shepard62fr\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/279/278843/80786b2ee75ddec7594f7142b3574c99.png\"
+        alt=\"shepard62fr\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/shepard62fr\" class=\"author\" data-nameid=\"shepard62fr\">shepard62fr</a>
+        \ - <a href=\"#6368574\" style=\"color: inherit;\"><time datetime=\"2017-01-25T23:00:06+00:00\">Jan
+        26 2017</time></a> - 491 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Oops, I read too fast sorry ^^</p>\n<p>I
+        would personally choose the \"dark\" theme because my eyes are more comfortable
+        with darkness rather than brightness. My Linux desktop and nearly all of my
+        programming tools are dark themes for that reason. However, as the default
+        theme, I would say the current \"classic\" one because it's what members (and
+        probably guests) are the most acquainted of and some of them might be frustrated
+        to get used to.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6368574\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368574\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6368574\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368623\" class=\"row rowdeveloper reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6368623\" style=\"color:
+        inherit;\"><time datetime=\"2017-01-25T23:38:38+00:00\">Jan 26 2017</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>That does not necessarily mean they
+        like the light theme, or that they would have liked the light one more if
+        they had a choice. They are simply used to it, which means nothing. ;-) That
+        actually makes it sound bad, oh, something that you need getting used to or
+        forced to be acquainted with (because you have no choice) while you really
+        do not like it.</p>\n<p>Same here, I even have YouTube and Google in black
+        (browser extensions FTW) so totally loving the v4 layout (and v5 seems good
+        enough too), but hate its visual, newspaper-like side. Perhaps a dark theme
+        (just like Nexus/Steam/Discord), would do the site some good.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6368623\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368623&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6455751\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/ovrlurd98\"
+        title=\"ovrlurd98\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1521/1520719/Clan_Hells_Horses.jpg\"
+        alt=\"ovrlurd98\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/ovrlurd98\" class=\"author\" data-nameid=\"ovrlurd98\">ovrlurd98</a>
+        \ - <a href=\"#6455751\" style=\"color: inherit;\"><time datetime=\"2017-03-26T00:47:13+00:00\">Mar
+        26 2017</time></a> - 37 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>What extensions do you use to change
+        the colors of Google and YouTube?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6455751\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6455751\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6455751\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6718378\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/rrtaya-tsamsiyu\"
+        title=\"Rrtaya_Tsamsiyu\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/977/976101/me.jpg\"
+        alt=\"Rrtaya_Tsamsiyu\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/rrtaya-tsamsiyu\" class=\"author\" data-nameid=\"rrtaya-tsamsiyu\">Rrtaya_Tsamsiyu</a>
+        \ - <a href=\"#6718378\" style=\"color: inherit;\"><time datetime=\"2017-10-12T07:00:52+00:00\">Oct
+        12 2017</time></a> - 244 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>\"they are simply used to it, which
+        means nothing\"<br />\nThat's what Coca-Cola thought when they tried coming
+        up with new coke, lol. Everyone liked it better, but everyone wanted the old
+        coke back.<br />\nPS; sorry if your comment was meant jokingly\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6718378\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6718378\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6718378\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370078\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest2.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6370078\" style=\"color: inherit;\"><time datetime=\"2017-01-26T23:44:43+00:00\">Jan
+        27 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>i think it should be dark but with
+        BLUE or GREEN\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6370078\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370078\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370078\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370615\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/knezevic1\"
+        title=\"Knez\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1410/1409417/images.jpg\"
+        alt=\"Knez\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/knezevic1\" class=\"author\" data-nameid=\"knezevic1\">Knez</a>
+        \ - <a href=\"#6370615\" style=\"color: inherit;\"><time datetime=\"2017-01-27T12:26:23+00:00\">Jan
+        27 2017</time></a> - 1,416 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>There won't be either blue or green.
+        Green is associated to IndieDB and red is associated with ModDB. Therefore
+        it must be red.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6370615\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370615\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370615\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+12
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370212\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/eyesshut\"
+        title=\"EyesShut\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3007/3006131/lucid_worlds_icon.png\"
+        alt=\"EyesShut\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/eyesshut\" class=\"author\" data-nameid=\"eyesshut\">EyesShut</a>
+        \ - <a href=\"#6370212\" style=\"color: inherit;\"><time datetime=\"2017-01-27T02:03:01+00:00\">Jan
+        27 2017</time></a> - 64 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Having a dark theme is better for
+        the eyes and makes it easier to read text.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6370212\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370212\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370212\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370260\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/sonkakarotto\"
+        title=\"sonkakarotto\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4043/4042071/13615421_486285101573699_2819124.jpg\"
+        alt=\"sonkakarotto\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/sonkakarotto\" class=\"author\" data-nameid=\"sonkakarotto\">sonkakarotto</a>
+        \ - <a href=\"#6370260\" style=\"color: inherit;\"><time datetime=\"2017-01-27T02:59:50+00:00\">Jan
+        27 2017</time></a> - 2 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>anou...\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6370260\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370260\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370260\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6373412\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/dunejumper\"
+        title=\"Dune_Jumper\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/527/526557/Normal_-_Copy.jpg\"
+        alt=\"Dune_Jumper\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/dunejumper\" class=\"author\" data-nameid=\"dunejumper\">Dune_Jumper</a>
+        \ - <a href=\"#6373412\" style=\"color: inherit;\"><time datetime=\"2017-01-29T04:20:15+00:00\">Jan
+        29 2017</time></a> - 1,585 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I prefer the dark theme ModDB currently
+        has. But why not make it optional? Lots of websites have day and night mode.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6373412\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6373412\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6373412\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+6
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6373712\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6373712\" style=\"color:
+        inherit;\"><time datetime=\"2017-01-29T11:05:20+00:00\">Jan 29 2017</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>What dark theme? Currently ModDB
+        has a light theme and only dark and red accents?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6373712\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6373712&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6374816\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/dunejumper\"
+        title=\"Dune_Jumper\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/527/526557/Normal_-_Copy.jpg\"
+        alt=\"Dune_Jumper\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/dunejumper\" class=\"author\" data-nameid=\"dunejumper\">Dune_Jumper</a>
+        \ - <a href=\"#6374816\" style=\"color: inherit;\"><time datetime=\"2017-01-30\">Jan
+        30 2017</time></a> - 1,585 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Oh, I mean the black backdrop. v5
+        has light grey.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6374816\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6374816\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6374816\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6378124\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/beskamir\"
+        title=\"Beskamir\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/554/553657/Geralt_3.jpg\"
+        alt=\"Beskamir\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/beskamir\" class=\"author\" data-nameid=\"beskamir\">Beskamir</a>
+        \ - <a href=\"#6378124\" style=\"color: inherit;\"><time datetime=\"2017-02-01T04:08:36+00:00\">Feb
+        1 2017</time></a> - 6,998 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Wow this poll is conflicted! Clearly
+        though dark themes are superior to light themes :P <span class=\"spoiler\">Join
+        the dark side, we've got better looking themes</span>\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6378124\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6378124\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6378124\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6390598\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/frohman11\"
+        title=\"Kasumi\_Krystal\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/338/337179/modavatar.jpg\"
+        alt=\"Kasumi\_Krystal\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/frohman11\" class=\"author\" data-nameid=\"frohman11\">Kasumi\_Krystal</a>
+        \ - <a href=\"#6390598\" style=\"color: inherit;\"><time datetime=\"2017-02-08T23:14:54+00:00\">Feb
+        9 2017</time></a> - 1,446 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Specify :<br />\nSame as the Classic
+        light theme &#038; black font, but with the ability to select accents.</p>\n<p>(Believe
+        it or no I would actually like a 0,59,11 accent)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6390598\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6390598\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6390598\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6408458\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/rohirim91\"
+        title=\"Rohirim91\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/793/792082/20140325_162527-1.jpg\"
+        alt=\"Rohirim91\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/rohirim91\" class=\"author\" data-nameid=\"rohirim91\">Rohirim91</a>
+        \ - <a href=\"#6408458\" style=\"color: inherit;\"><time datetime=\"2017-02-20T13:39:11+00:00\">Feb
+        20 2017</time></a> - 837 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>You should have included some concepts
+        for both options, because its hard to make a decision without them. My opinions
+        is that the site should have clean edges as it has now, but with some effects
+        that give it depth and a 3Dish look, to make it look more modern. It should
+        with a dark theme, but not too dark. Something like dark theme but with some
+        brigther and strong colored red elements here and there again with similar
+        effects.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6408458\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6408458\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6408458\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6414147\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/kalradian\"
+        title=\"Krieger_Kalradiens\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3655/3654118/What_a_nice_guy.jpg\"
+        alt=\"Krieger_Kalradiens\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/kalradian\" class=\"author\" data-nameid=\"kalradian\">Krieger_Kalradiens</a>
+        \ - <a href=\"#6414147\" style=\"color: inherit;\"><time datetime=\"2017-02-23T21:48:34+00:00\">Feb
+        23 2017</time></a> - 569 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>The normal theme is in the colours
+        of the second and third Reich...but I like it :D\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6414147\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6414147\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6414147\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6434455\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/kentuckyfriedspy\"
+        title=\"KentuckyFriedSpy\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/411/410785/YoutubeIcon.jpg\"
+        alt=\"KentuckyFriedSpy\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/kentuckyfriedspy\" class=\"author\" data-nameid=\"kentuckyfriedspy\">KentuckyFriedSpy</a>
+        \ - <a href=\"#6434455\" style=\"color: inherit;\"><time datetime=\"2017-03-10T15:24:36+00:00\">Mar
+        10 2017</time></a> - 99 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>White on red with black fonts, mirrors
+        edge style imo would look nice\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6434455\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6434455\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6434455\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6546642\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/felix-argyle1\"
+        title=\"Felix-Argyle\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4098/4097045/JPEG_20190915_135350.jpg\"
+        alt=\"Felix-Argyle\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/felix-argyle1\" class=\"author\" data-nameid=\"felix-argyle1\">Felix-Argyle</a>
+        \ - <a href=\"#6546642\" style=\"color: inherit;\"><time datetime=\"2017-05-29T17:26:36+00:00\">May
+        29 2017</time></a> - 444 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I dont know which is better. I just
+        pick the first one\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6546642\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6546642\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6546642\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6596978\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/m30w\"
+        title=\"m30w\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"m30w\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/m30w\" class=\"author\" data-nameid=\"m30w\">m30w</a>  - <a
+        href=\"#6596978\" style=\"color: inherit;\"><time datetime=\"2017-07-08T01:57:20+00:00\">Jul
+        8 2017</time></a> - 37 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Dark, with light font, &lt;user defined
+        color&gt; accents. i would choose blue.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6596978\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6596978\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6596978\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6609656\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/ziani-fromspess\"
+        title=\"Ziani_FromSpess\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1629/1628735/Primarch_Corax.jpg\"
+        alt=\"Ziani_FromSpess\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/ziani-fromspess\" class=\"author\" data-nameid=\"ziani-fromspess\">Ziani_FromSpess</a>
+        \ - <a href=\"#6609656\" style=\"color: inherit;\"><time datetime=\"2017-07-18T09:10:27+00:00\">Jul
+        18 2017</time></a> - 558 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Specify: a sleeker dark theme, with
+        gradient Grey, &#038; a less saturated Red. Gradients please. The Black+Red
+        combo is a bit depressing &#038; eye-hurting after extensive browsing.<br
+        />\nThank you!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6609656\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6609656\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6609656\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6711210\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/semvision\"
+        title=\"SemVision\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/392/391321/Untitled.png\"
+        alt=\"SemVision\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/semvision\" class=\"author\" data-nameid=\"semvision\">SemVision</a>
+        \ - <a href=\"#6711210\" style=\"color: inherit;\"><time datetime=\"2017-10-05T22:07:16+00:00\">Oct
+        6 2017</time></a> - 504 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hot pink and pastel colors.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6711210\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6711210\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6711210\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6720144\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest3.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6720144\" style=\"color: inherit;\"><time datetime=\"2017-10-13T21:26:03+00:00\">Oct
+        13 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>i think it should be a modern, sleek
+        look similar to youtube's current look, but with a differant color of accents
+        so as not to be accidentally sued.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6720144\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6720144\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6720144\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6720759\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/commissar1032\"
+        title=\"Commissar1032\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/174/173973/MODDB_AVATAR.jpg\"
+        alt=\"Commissar1032\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/commissar1032\" class=\"author\" data-nameid=\"commissar1032\">Commissar1032</a>
+        \ - <a href=\"#6720759\" style=\"color: inherit;\"><time datetime=\"2017-10-14T13:05:37+00:00\">Oct
+        14 2017</time></a> - 489 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>What is black font for $5 Bob?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6720759\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6720759\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6720759\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6773176\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/alanbrose\"
+        title=\"alanberserkrose\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3364/3363653/ABR.png\"
+        alt=\"alanberserkrose\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/alanbrose\" class=\"author\" data-nameid=\"alanbrose\">alanberserkrose</a>
+        \ - <a href=\"#6773176\" style=\"color: inherit;\"><time datetime=\"2017-12-01T16:56:20+00:00\">Dec
+        1 2017</time></a> - 1,183 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>light font on dark may be hard to
+        read.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6773176\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6773176\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6773176\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/default-v5-theme-should-be/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"cf5d66428ae42c19f2674e208ee5996b\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"pollsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Poll</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2407\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be&title=Default+v5+theme+should+be\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Default%20v5%20theme%20should%20be&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Default+v5+theme+should+be+https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be&quote=Default+v5+theme+should+be&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinkspolls\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Hot Polls</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row rowavatar
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\" title=\"INtense!\"
+        class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/your-aims-in-2012\" class=\"heading\">Your
+        aims in 2012</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t24,422
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/tkaza\"
+        title=\"TKAzA\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/63/62828/avitar2.png\"
+        alt=\"TKAzA\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-long-have-you-been-modding\"
+        class=\"heading\">How long have you been modding?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t23,225 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/i-prefer-my-mods-to-be\"
+        class=\"heading\">I prefer my mods to be...</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t13,660
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-do-think-about-free-to-play-games\"
+        class=\"heading\">What do think about free to play games?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t12,502 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/kralichddg\"
+        title=\"Kralich/David\" class=\"image\"><img src=\"https://media.moddb.com/images/members/4/3603/3602558/Dearth_Nadir.jpg\"
+        alt=\"Kralich/David\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/best-modern-moty-winners-2012-2021-of-all-time\"
+        class=\"heading\">What are the best Modern MOTY winners (2012 - 2021) of all
+        time?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t11,039
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/would-you-mod-console-games-if-the-platform-was-open-like-the-pc\"
+        class=\"heading\">Would you mod console games if the platform was open like
+        the PC?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t10,607
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/you-want-to-design-games-in-the-future-as\"
+        class=\"heading\">You want to design games in the future as...</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t10,174 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/do-you-own-a-smartphone\"
+        class=\"heading\">Do you own a smartphone?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t9,591
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-do-you-set-your-resolution-for-pc-gaming\"
+        class=\"heading\">How do you set your resolution for PC gaming?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,567 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/lodle\"
+        title=\"lodle\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/161/160045/monkey_small.gif\"
+        alt=\"lodle\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-version-of-mac-os-x-do-you-use\"
+        class=\"heading\">What version of Mac OS X do you use?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,222 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/default-v5-theme-should-be\",\"name\":\"Default
+        v5 theme should be\"}}]}</script>\n<script src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\ttags:
+        [\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736425\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736425\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213dbf6e72b7ef-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:07:05 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=tfaUWGKFdXt5aBu1nsh596Nk4r9N1r7%2FMv%2FprOz7Z%2BHtDOgPACzvvYa2lEQMbN2887ry3T3%2FDAW7JMKuxiNj3SDQ3%2FDuji7UrXmz5ayO0SgU29%2BJNELrKgFSQhErrUwgOtcPN%2FzttXuDnbk%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '76041'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=6f207caf884c0357b75b687d56c4feed; expires=Wed, 10-Apr-2024 08:17:05
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=6f207caf884c0357b75b687d56c4feed; expires=Wed, 10-Apr-2024 08:17:05
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/polls/default-v5-theme-should-be
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Default
+        v5 theme should be - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta
+        name=\"keywords\" content=\"default v5 theme should be, poll, opinion, vote,
+        select, elect, survey, question, discussion\" />\r\n\t<meta name=\"description\"
+        content=\"View the ModDB  poll Default v5 theme should be\" />\r\n\t<meta
+        name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\"
+        content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\" content=\"Default
+        v5 theme should be\" />\r\n\t<meta property=\"og:description\" content=\"View
+        the ModDB  poll Default v5 theme should be\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"article\" />
+        \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/polls/default-v5-theme-should-be\"
+        /> \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Default v5 theme should be\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"View the ModDB  poll Default v5 theme should be\" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/polls/default-v5-theme-should-be\"
+        /> \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Default v5 theme should be</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-300-alt first\">\t<div class=\"normalbox
+        pollbox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2407\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Default
+        v5 theme should be</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"inner\">\n\t\t\t<div
+        class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t<p class=\"question\">Poll started by <a href=\"/members/feillyne\">feillyne</a>
+        with 1,942 votes and 29 comments. Browse the <a href=\"/polls\">poll archive</a>.</p>\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 51%;\">&nbsp;51%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(986 votes)</span>Classic light theme & black font,
+        with red accents</p>\n\t\t\t\t\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t<div
+        class=\"barinner\" style=\"width: 45%;\">&nbsp;45%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(882 votes)</span>Dark, with light font, red accents</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 4%;\">&nbsp;4%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(74 votes)</span>Other (specify)</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"6365374\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" title=\"Thanoshld\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/1/231/230747/Aperture_Science_Innovators_Logo.1.png\"
+        alt=\"Thanoshld\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" class=\"author\" data-nameid=\"thanoshltbeginning\">Thanoshld</a>
+        \ - <a href=\"#6365374\" style=\"color: inherit;\"><time datetime=\"2017-01-23T22:27:32+00:00\">Jan
+        23 2017</time></a> - 1,416 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>A bit difficult to chose without
+        reference pics, but \"black font\" really helps, both with the eyes (noticing
+        the main content better), and with mobile phones, since black doesn't consume
+        as much power as any other color.</p>\n<p>Seen the v.5 preview, good work
+        guys ;) .\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6365374\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6365374\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6365374\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+19
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6366391\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/shepard62fr\"
+        title=\"shepard62fr\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/279/278843/80786b2ee75ddec7594f7142b3574c99.png\"
+        alt=\"shepard62fr\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/shepard62fr\" class=\"author\" data-nameid=\"shepard62fr\">shepard62fr</a>
+        \ - <a href=\"#6366391\" style=\"color: inherit;\"><time datetime=\"2017-01-24T15:26:02+00:00\">Jan
+        24 2017</time></a> - 491 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Why not both ? ^^\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6366391\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6366391\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6366391\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6419410\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/aple\"
+        title=\"Templarfreak\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/300/299822/memecancerslendy4.png\"
+        alt=\"Templarfreak\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/aple\" class=\"author\" data-nameid=\"aple\">Templarfreak</a>
+        \ - <a href=\"#6419410\" style=\"color: inherit;\"><time datetime=\"2017-02-27T15:25:31+00:00\">Feb
+        27 2017</time></a> - 6,721 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Both being default? How would that
+        work? From what I can tell the will both be there as a choice but one is just
+        going to be the default.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6419410\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6419410\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6419410\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6427272\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/jerikoh\"
+        title=\"Jerik\xF8h\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/448/447413/JerikohGif.gif\"
+        alt=\"Jerik\xF8h\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/jerikoh\" class=\"author\" data-nameid=\"jerikoh\">Jerik\xF8h</a>
+        \ - <a href=\"#6427272\" style=\"color: inherit;\"><time datetime=\"2017-03-05T04:44:22+00:00\">Mar
+        5 2017</time></a> - 298 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>quantum physics bro ( \u0361\xB0
+        \u035C\u0296 \u0361\xB0)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6427272\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6427272\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6427272\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+13
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368223\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/court-jestah\"
+        title=\"Court_jestah\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3762/3761644/15094465_1788229684727533_448499.jpg\"
+        alt=\"Court_jestah\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/court-jestah\" class=\"author\" data-nameid=\"court-jestah\">Court_jestah</a>
+        \ - <a href=\"#6368223\" style=\"color: inherit;\"><time datetime=\"2017-01-25T19:17:13+00:00\">Jan
+        25 2017</time></a> - 12 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>We should get to choose the theme
+        in our settings.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6368223\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368223\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6368223\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+15
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368286\" class=\"row rowdeveloper\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6368286\" style=\"color:
+        inherit;\"><time datetime=\"2017-01-25T20:04:33+00:00\">Jan 25 2017</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p><a rel=\"nofollow\" href=\"/members/shepard62fr\">shepard62fr</a>,
+        <a rel=\"nofollow\" href=\"/members/court-jestah\">Court_jestah</a>, that
+        is not the point. The question is what theme should be the startup/default
+        one. Whether there will be more themes (and not just one) to choose from is
+        an entirely different question...\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6368286\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368286&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368574\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/shepard62fr\"
+        title=\"shepard62fr\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/279/278843/80786b2ee75ddec7594f7142b3574c99.png\"
+        alt=\"shepard62fr\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/shepard62fr\" class=\"author\" data-nameid=\"shepard62fr\">shepard62fr</a>
+        \ - <a href=\"#6368574\" style=\"color: inherit;\"><time datetime=\"2017-01-25T23:00:06+00:00\">Jan
+        26 2017</time></a> - 491 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Oops, I read too fast sorry ^^</p>\n<p>I
+        would personally choose the \"dark\" theme because my eyes are more comfortable
+        with darkness rather than brightness. My Linux desktop and nearly all of my
+        programming tools are dark themes for that reason. However, as the default
+        theme, I would say the current \"classic\" one because it's what members (and
+        probably guests) are the most acquainted of and some of them might be frustrated
+        to get used to.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6368574\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368574\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6368574\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6368623\" class=\"row rowdeveloper reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6368623\" style=\"color:
+        inherit;\"><time datetime=\"2017-01-25T23:38:38+00:00\">Jan 26 2017</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>That does not necessarily mean they
+        like the light theme, or that they would have liked the light one more if
+        they had a choice. They are simply used to it, which means nothing. ;-) That
+        actually makes it sound bad, oh, something that you need getting used to or
+        forced to be acquainted with (because you have no choice) while you really
+        do not like it.</p>\n<p>Same here, I even have YouTube and Google in black
+        (browser extensions FTW) so totally loving the v4 layout (and v5 seems good
+        enough too), but hate its visual, newspaper-like side. Perhaps a dark theme
+        (just like Nexus/Steam/Discord), would do the site some good.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6368623\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6368623&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6455751\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/ovrlurd98\"
+        title=\"ovrlurd98\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1521/1520719/Clan_Hells_Horses.jpg\"
+        alt=\"ovrlurd98\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/ovrlurd98\" class=\"author\" data-nameid=\"ovrlurd98\">ovrlurd98</a>
+        \ - <a href=\"#6455751\" style=\"color: inherit;\"><time datetime=\"2017-03-26T00:47:13+00:00\">Mar
+        26 2017</time></a> - 37 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>What extensions do you use to change
+        the colors of Google and YouTube?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6455751\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6455751\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6455751\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6718378\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/rrtaya-tsamsiyu\"
+        title=\"Rrtaya_Tsamsiyu\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/977/976101/me.jpg\"
+        alt=\"Rrtaya_Tsamsiyu\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/rrtaya-tsamsiyu\" class=\"author\" data-nameid=\"rrtaya-tsamsiyu\">Rrtaya_Tsamsiyu</a>
+        \ - <a href=\"#6718378\" style=\"color: inherit;\"><time datetime=\"2017-10-12T07:00:52+00:00\">Oct
+        12 2017</time></a> - 244 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>\"they are simply used to it, which
+        means nothing\"<br />\nThat's what Coca-Cola thought when they tried coming
+        up with new coke, lol. Everyone liked it better, but everyone wanted the old
+        coke back.<br />\nPS; sorry if your comment was meant jokingly\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6718378\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6718378\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6718378\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370078\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest2.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6370078\" style=\"color: inherit;\"><time datetime=\"2017-01-26T23:44:43+00:00\">Jan
+        27 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>i think it should be dark but with
+        BLUE or GREEN\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6370078\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370078\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370078\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370615\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/knezevic1\"
+        title=\"Knez\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1410/1409417/images.jpg\"
+        alt=\"Knez\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/knezevic1\" class=\"author\" data-nameid=\"knezevic1\">Knez</a>
+        \ - <a href=\"#6370615\" style=\"color: inherit;\"><time datetime=\"2017-01-27T12:26:23+00:00\">Jan
+        27 2017</time></a> - 1,416 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>There won't be either blue or green.
+        Green is associated to IndieDB and red is associated with ModDB. Therefore
+        it must be red.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6370615\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370615\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370615\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+12
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370212\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/eyesshut\"
+        title=\"EyesShut\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3007/3006131/lucid_worlds_icon.png\"
+        alt=\"EyesShut\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/eyesshut\" class=\"author\" data-nameid=\"eyesshut\">EyesShut</a>
+        \ - <a href=\"#6370212\" style=\"color: inherit;\"><time datetime=\"2017-01-27T02:03:01+00:00\">Jan
+        27 2017</time></a> - 64 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Having a dark theme is better for
+        the eyes and makes it easier to read text.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6370212\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370212\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370212\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6370260\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/sonkakarotto\"
+        title=\"sonkakarotto\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4043/4042071/13615421_486285101573699_2819124.jpg\"
+        alt=\"sonkakarotto\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/sonkakarotto\" class=\"author\" data-nameid=\"sonkakarotto\">sonkakarotto</a>
+        \ - <a href=\"#6370260\" style=\"color: inherit;\"><time datetime=\"2017-01-27T02:59:50+00:00\">Jan
+        27 2017</time></a> - 2 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>anou...\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6370260\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6370260\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6370260\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6373412\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/dunejumper\"
+        title=\"Dune_Jumper\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/527/526557/Normal_-_Copy.jpg\"
+        alt=\"Dune_Jumper\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/dunejumper\" class=\"author\" data-nameid=\"dunejumper\">Dune_Jumper</a>
+        \ - <a href=\"#6373412\" style=\"color: inherit;\"><time datetime=\"2017-01-29T04:20:15+00:00\">Jan
+        29 2017</time></a> - 1,585 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I prefer the dark theme ModDB currently
+        has. But why not make it optional? Lots of websites have day and night mode.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6373412\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6373412\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6373412\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+6
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6373712\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6373712\" style=\"color:
+        inherit;\"><time datetime=\"2017-01-29T11:05:20+00:00\">Jan 29 2017</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>What dark theme? Currently ModDB
+        has a light theme and only dark and red accents?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6373712\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6373712&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6374816\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/dunejumper\"
+        title=\"Dune_Jumper\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/527/526557/Normal_-_Copy.jpg\"
+        alt=\"Dune_Jumper\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/dunejumper\" class=\"author\" data-nameid=\"dunejumper\">Dune_Jumper</a>
+        \ - <a href=\"#6374816\" style=\"color: inherit;\"><time datetime=\"2017-01-30\">Jan
+        30 2017</time></a> - 1,585 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Oh, I mean the black backdrop. v5
+        has light grey.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6374816\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6374816\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6374816\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6378124\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/beskamir\"
+        title=\"Beskamir\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/554/553657/Geralt_3.jpg\"
+        alt=\"Beskamir\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/beskamir\" class=\"author\" data-nameid=\"beskamir\">Beskamir</a>
+        \ - <a href=\"#6378124\" style=\"color: inherit;\"><time datetime=\"2017-02-01T04:08:36+00:00\">Feb
+        1 2017</time></a> - 6,998 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Wow this poll is conflicted! Clearly
+        though dark themes are superior to light themes :P <span class=\"spoiler\">Join
+        the dark side, we've got better looking themes</span>\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6378124\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6378124\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6378124\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6390598\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/frohman11\"
+        title=\"Kasumi\_Krystal\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/338/337179/modavatar.jpg\"
+        alt=\"Kasumi\_Krystal\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/frohman11\" class=\"author\" data-nameid=\"frohman11\">Kasumi\_Krystal</a>
+        \ - <a href=\"#6390598\" style=\"color: inherit;\"><time datetime=\"2017-02-08T23:14:54+00:00\">Feb
+        9 2017</time></a> - 1,446 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Specify :<br />\nSame as the Classic
+        light theme &#038; black font, but with the ability to select accents.</p>\n<p>(Believe
+        it or no I would actually like a 0,59,11 accent)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6390598\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6390598\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6390598\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6408458\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/rohirim91\"
+        title=\"Rohirim91\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/793/792082/20140325_162527-1.jpg\"
+        alt=\"Rohirim91\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/rohirim91\" class=\"author\" data-nameid=\"rohirim91\">Rohirim91</a>
+        \ - <a href=\"#6408458\" style=\"color: inherit;\"><time datetime=\"2017-02-20T13:39:11+00:00\">Feb
+        20 2017</time></a> - 837 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>You should have included some concepts
+        for both options, because its hard to make a decision without them. My opinions
+        is that the site should have clean edges as it has now, but with some effects
+        that give it depth and a 3Dish look, to make it look more modern. It should
+        with a dark theme, but not too dark. Something like dark theme but with some
+        brigther and strong colored red elements here and there again with similar
+        effects.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6408458\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6408458\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6408458\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6414147\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/kalradian\"
+        title=\"Krieger_Kalradiens\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3655/3654118/What_a_nice_guy.jpg\"
+        alt=\"Krieger_Kalradiens\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/kalradian\" class=\"author\" data-nameid=\"kalradian\">Krieger_Kalradiens</a>
+        \ - <a href=\"#6414147\" style=\"color: inherit;\"><time datetime=\"2017-02-23T21:48:34+00:00\">Feb
+        23 2017</time></a> - 569 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>The normal theme is in the colours
+        of the second and third Reich...but I like it :D\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6414147\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6414147\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6414147\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6434455\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/kentuckyfriedspy\"
+        title=\"KentuckyFriedSpy\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/411/410785/YoutubeIcon.jpg\"
+        alt=\"KentuckyFriedSpy\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/kentuckyfriedspy\" class=\"author\" data-nameid=\"kentuckyfriedspy\">KentuckyFriedSpy</a>
+        \ - <a href=\"#6434455\" style=\"color: inherit;\"><time datetime=\"2017-03-10T15:24:36+00:00\">Mar
+        10 2017</time></a> - 99 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>White on red with black fonts, mirrors
+        edge style imo would look nice\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6434455\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6434455\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6434455\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6546642\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/felix-argyle1\"
+        title=\"Felix-Argyle\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4098/4097045/JPEG_20190915_135350.jpg\"
+        alt=\"Felix-Argyle\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/felix-argyle1\" class=\"author\" data-nameid=\"felix-argyle1\">Felix-Argyle</a>
+        \ - <a href=\"#6546642\" style=\"color: inherit;\"><time datetime=\"2017-05-29T17:26:36+00:00\">May
+        29 2017</time></a> - 444 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I dont know which is better. I just
+        pick the first one\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6546642\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6546642\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6546642\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6596978\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/m30w\"
+        title=\"m30w\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"m30w\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/m30w\" class=\"author\" data-nameid=\"m30w\">m30w</a>  - <a
+        href=\"#6596978\" style=\"color: inherit;\"><time datetime=\"2017-07-08T01:57:20+00:00\">Jul
+        8 2017</time></a> - 37 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Dark, with light font, &lt;user defined
+        color&gt; accents. i would choose blue.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6596978\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6596978\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6596978\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6609656\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/ziani-fromspess\"
+        title=\"Ziani_FromSpess\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1629/1628735/Primarch_Corax.jpg\"
+        alt=\"Ziani_FromSpess\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/ziani-fromspess\" class=\"author\" data-nameid=\"ziani-fromspess\">Ziani_FromSpess</a>
+        \ - <a href=\"#6609656\" style=\"color: inherit;\"><time datetime=\"2017-07-18T09:10:27+00:00\">Jul
+        18 2017</time></a> - 558 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Specify: a sleeker dark theme, with
+        gradient Grey, &#038; a less saturated Red. Gradients please. The Black+Red
+        combo is a bit depressing &#038; eye-hurting after extensive browsing.<br
+        />\nThank you!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6609656\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6609656\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6609656\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6711210\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/semvision\"
+        title=\"SemVision\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/392/391321/Untitled.png\"
+        alt=\"SemVision\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/semvision\" class=\"author\" data-nameid=\"semvision\">SemVision</a>
+        \ - <a href=\"#6711210\" style=\"color: inherit;\"><time datetime=\"2017-10-05T22:07:16+00:00\">Oct
+        6 2017</time></a> - 504 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hot pink and pastel colors.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6711210\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6711210\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6711210\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6720144\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest3.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6720144\" style=\"color: inherit;\"><time datetime=\"2017-10-13T21:26:03+00:00\">Oct
+        13 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>i think it should be a modern, sleek
+        look similar to youtube's current look, but with a differant color of accents
+        so as not to be accidentally sued.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6720144\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6720144\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6720144\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6720759\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/commissar1032\"
+        title=\"Commissar1032\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/174/173973/MODDB_AVATAR.jpg\"
+        alt=\"Commissar1032\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/commissar1032\" class=\"author\" data-nameid=\"commissar1032\">Commissar1032</a>
+        \ - <a href=\"#6720759\" style=\"color: inherit;\"><time datetime=\"2017-10-14T13:05:37+00:00\">Oct
+        14 2017</time></a> - 489 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>What is black font for $5 Bob?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6720759\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6720759\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6720759\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6773176\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/alanbrose\"
+        title=\"alanberserkrose\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3364/3363653/ABR.png\"
+        alt=\"alanberserkrose\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/alanbrose\" class=\"author\" data-nameid=\"alanbrose\">alanberserkrose</a>
+        \ - <a href=\"#6773176\" style=\"color: inherit;\"><time datetime=\"2017-12-01T16:56:20+00:00\">Dec
+        1 2017</time></a> - 1,183 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>light font on dark may be hard to
+        read.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6773176\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6773176\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6773176\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/default-v5-theme-should-be/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"88d03018675bf6d5b264dce759310192\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"pollsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Poll</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2407\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be&title=Default+v5+theme+should+be\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Default%20v5%20theme%20should%20be&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Default+v5+theme+should+be+https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be&quote=Default+v5+theme+should+be&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fdefault-v5-theme-should-be\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinkspolls\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Hot Polls</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row rowavatar
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\" title=\"INtense!\"
+        class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/your-aims-in-2012\" class=\"heading\">Your
+        aims in 2012</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t24,422
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/tkaza\"
+        title=\"TKAzA\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/63/62828/avitar2.png\"
+        alt=\"TKAzA\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-long-have-you-been-modding\"
+        class=\"heading\">How long have you been modding?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t23,225 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/i-prefer-my-mods-to-be\"
+        class=\"heading\">I prefer my mods to be...</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t13,660
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-do-think-about-free-to-play-games\"
+        class=\"heading\">What do think about free to play games?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t12,502 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/kralichddg\"
+        title=\"Kralich/David\" class=\"image\"><img src=\"https://media.moddb.com/images/members/4/3603/3602558/Dearth_Nadir.jpg\"
+        alt=\"Kralich/David\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/best-modern-moty-winners-2012-2021-of-all-time\"
+        class=\"heading\">What are the best Modern MOTY winners (2012 - 2021) of all
+        time?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t11,039
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/would-you-mod-console-games-if-the-platform-was-open-like-the-pc\"
+        class=\"heading\">Would you mod console games if the platform was open like
+        the PC?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t10,607
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/you-want-to-design-games-in-the-future-as\"
+        class=\"heading\">You want to design games in the future as...</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t10,174 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/do-you-own-a-smartphone\"
+        class=\"heading\">Do you own a smartphone?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t9,591
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-do-you-set-your-resolution-for-pc-gaming\"
+        class=\"heading\">How do you set your resolution for PC gaming?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,567 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/lodle\"
+        title=\"lodle\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/161/160045/monkey_small.gif\"
+        alt=\"lodle\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-version-of-mac-os-x-do-you-use\"
+        class=\"heading\">What version of Mac OS X do you use?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,222 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5424 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/default-v5-theme-should-be\",\"name\":\"Default
+        v5 theme should be\"}}]}</script>\n<script src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\ttags:
+        [\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749123\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749123\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 872273c20ea1b79d-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:38:43 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ujydd1uW2wPtXE6NLZ2sORMFnVneUTO15iL1ZcR1bi0PkIM7a%2FBtjaZ7LEFO4uDt3fWLp4J3CAS5xxMZzRp9sgvCj5P98OrGkbV1NpoLmdyetRSQu%2BKHRFI%2F86nfYw3smCqmqT7kr7JhOWc%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '76041'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=ac566b664c0398f4edf2e485f4ad8e12; expires=Wed, 10-Apr-2024 11:48:43
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=ac566b664c0398f4edf2e485f4ad8e12; expires=Wed, 10-Apr-2024 11:48:43
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

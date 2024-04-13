@@ -105,7 +105,10 @@ class Ratelimit:
         self.initial_call = datetime.datetime.min
         self.call_count = 0
 
-    def reset(self, now: datetime.datetime):
+    def reset(self, now: datetime.datetime = None):
+        if now is None:
+            now = datetime.datetime.now()
+
         self.initial_call = now
         self.call_count = 0
 

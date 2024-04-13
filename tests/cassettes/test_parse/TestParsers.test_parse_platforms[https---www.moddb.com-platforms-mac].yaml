@@ -955,8 +955,6 @@ interactions:
       - 8188e5976ddc2a19-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -971,10 +969,1860 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '82382'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=1b89e746aa891a6c375c56062d78d71e; expires=Thu, 19-Oct-2023 12:16:46
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/platforms/mac
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Mac platform
+        - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"mac, platforms, view\" />\r\n\t<meta name=\"description\" content=\"Macintosh,
+        commonly known as Mac, is a brand name which covers several lines of personal
+        computers designed, developed, and marketed by Apple Inc. Though Apple has
+        never actively encouraged the development of games for its platform, many
+        developers have...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Mac platform\" />\r\n\t<meta property=\"og:description\"
+        content=\"Macintosh, commonly known as Mac, is a brand name which covers several
+        lines of personal computers designed, developed, and marketed by Apple Inc.
+        Though Apple has never actively encouraged the development of games for its
+        platform, many developers have...\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"product\" />
+        \r\n\t \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Mac platform\" />\r\n\t<meta property=\"twitter:description\" content=\"Macintosh,
+        commonly known as Mac, is a brand name which covers several lines of personal
+        computers designed, developed, and marketed by Apple Inc. Though Apple has
+        never actively encouraged the development of games for its platform, many
+        developers have...\" />\r\n\t \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\"
+        media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Mac platform</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/Product\"><div
+        class=\"column span-all tabsummary\">\t<div class=\"headerbox\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2
+        itemprop=\"name\"><a href=\"/platforms/mac\" itemprop=\"mainEntityOfPage\">Mac</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span
+        itemprop=\"brand\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/company/apple\" itemprop=\"url\"><span itemprop=\"name\">Apple</span></a></span>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/platforms/mac\">summary</a></li><li class=\"\"><a
+        href=\"/platforms/mac/hardware\">hardware</a></li><li class=\"\"><a href=\"/platforms/mac/software\">software</a></li><li
+        class=\"\"><a href=\"/platforms/mac/engines\">engines</a></li><li class=\"\"><a
+        href=\"/platforms/mac/games\">games</a></li><li class=\"\"><a href=\"/platforms/mac/mods\">mods</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"Macintosh, commonly known as Mac, is a
+        brand name which covers several lines of personal computers designed, developed,
+        and marketed by Apple Inc. Though Apple has never actively encouraged the
+        development of games for its platform, many developers have ported titles
+        or made their own for this platform to address this shortcoming.\" />\t<div
+        class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>Like Linux, the number of (exclusive) triple
+        AAA game titles released on the Mac platform can be counted on one hand (Marathon
+        anyone!?). Despite this, thanks to the large install base many indie developers
+        have decided to address this shortcoming by creating or porting existing games
+        onto this platform. However now that the Mac has moved from an IBM chipset
+        to the i386 and can dual boot the Windows OS, creating games specifically
+        for this platform really has to be questioned.\n</p>\n</div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"hardwarebrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span class=\"heading\">
+        Hardware</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/hardware/oculus-rift\" title=\"Oculus Rift\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/29/crop_120x90/rift_hero.jpg\"
+        alt=\"Oculus Rift\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-rift\">Oculus Rift</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-02-14T17:45:05+00:00\">Feb 14 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-03\">Released 2016</time>
+        <a href=\"/company/oculus\">Oculus</a> Headset  \t\t\t</span>\r\n\t\t\t<p>The
+        Rift is unlike anything you\u2019ve ever experienced. Whether you\u2019re
+        stepping into your favorite game, watching an immersive VR movie, jumping
+        to a...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/hardware/htc-vive\" title=\"HTC Vive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/111/crop_120x90/VR_Web_Product_HMD.4.1.png\"
+        alt=\"HTC Vive\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/htc-vive\">HTC Vive</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-02-14T17:45:05+00:00\">Feb 14 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-04-04\">Released 2016</time>
+        <a href=\"/company/htc\">HTC</a> Headset  \t\t\t</span>\r\n\t\t\t<p>Vive is
+        brought to you by HTC and Valve. Uniting passion, talent, and innovation,
+        Vive delivers on the promise of VR with best-in-class technology and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/oculus-dk1\"
+        title=\"Oculus DK1\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/1/crop_120x90/dk1-product.jpg\"
+        alt=\"Oculus DK1\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-dk1\">Oculus DK1</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-01-24T03:15:32+00:00\">Jan 24 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2012-12-30\">Released 2012</time>
+        <a href=\"/company/oculus\">Oculus</a> Headset  \t\t\t</span>\r\n\t\t\t<p>The
+        Oculus Rift is a virtual reality headset that lets players step inside their
+        favorite games and virtual worlds.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/oculus-dk2\"
+        title=\"Oculus DK2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/2/crop_120x90/preview.jpg\"
+        alt=\"Oculus DK2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-dk2\">Oculus DK2</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-01-24T03:15:32+00:00\">Jan 24 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-07\">Released 2014</time>
+        <a href=\"/company/oculus\">Oculus</a> Headset  \t\t\t</span>\r\n\t\t\t<p>DK2
+        is the latest development kit for the Rift that allows developers to build
+        amazing games and experiences.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/htc-vive-de\" title=\"HTC
+        Vive Developer Edition\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/3/crop_120x90/HTC-Vive_White.jpg\"
+        alt=\"HTC Vive Developer Edition\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/hardware/htc-vive-de\">HTC Vive Developer Edition</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-01-24T03:15:32+00:00\">Jan
+        24 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2015-11\">Released 2015</time> <a href=\"/company/htc\">HTC</a>
+        Headset  \t\t\t</span>\r\n\t\t\t<p>Imagine standing on the bridge of a starship
+        rocketing across the galaxy, or strolling through the streets of ancient Rome,
+        or shrinking down to subatomic...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/meta-1-dk\"
+        title=\"Meta DK1\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/39/crop_120x90/metadk1.jpg\"
+        alt=\"Meta DK1\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/meta-1-dk\">Meta DK1</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-11-15T15:09:55+00:00\">Nov 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> <a href=\"/company/meta-company\">Meta
+        Company</a> Headset  \t\t\t</span>\r\n\t\t\t<p>The Meta 1 Developer Kit brings
+        superhero tech to life. Experience a room full of interactive 3D holograms.
+        The first computing device that gives you...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/oculus-touch\"
+        title=\"Oculus Touch\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/50/crop_120x90/Oculus-Touch-5.1.jpg\"
+        alt=\"Oculus Touch\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-touch\">Oculus Touch</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-10-21T20:40:53+00:00\">Oct 21 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-12-06\">Released 2016</time>
+        <a href=\"/company/oculus\">Oculus</a> Controller  \t\t\t</span>\r\n\t\t\t<p>We\u2019ve
+        created Oculus Touch, a new pair of tracked controllers that let you take
+        your VR games and experiences further than ever before.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/steam-controller\"
+        title=\"Steam Controller\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/49/crop_120x90/prv.jpg\"
+        alt=\"Steam Controller\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/hardware/steam-controller\">Steam Controller</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-06-22\">Jun 22 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> <a href=\"/company/valve\">Valve</a>
+        Controller  \t\t\t</span>\r\n\t\t\t<p>Experience a new level of precise control
+        for your favorite games. The Steam Controller lets you play your entire collection
+        of Steam games on your TV\u2014even...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/osvr\" title=\"OSVR\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/preview.jpg\"
+        alt=\"OSVR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/osvr\">OSVR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-05-18T04:54:37+00:00\">May 18 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2015-07\">Released 2015</time>
+        <a href=\"/company/razer\">Razer</a> Headset  \t\t\t</span>\r\n\t\t\t<p>Razer
+        is part of the Open-Source Virtual Reality (OSVR) ecosystem, a new standard
+        in VR gaming to push the VR gaming experience forward and supporting...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/sulon-q\" title=\"Sulon
+        Q\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/114/crop_120x90/sulon-q-ed.jpg\"
+        alt=\"Sulon Q\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/sulon-q\">Sulon Q</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-10-08T20:26:30+00:00\">Oct 8 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-04\">Released 2016</time>
+        <a href=\"/company/amd\">AMD</a> Headset  \t\t\t</span>\r\n\t\t\t<p>Introducing
+        the Sulon Q, powered by AMD. The first and only all-in-one, tether-free, \u201Cwear
+        and play\u201D spatially-aware headset for VR and AR.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/hardware\">More
+        hardware &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo hardware were found
+        matching the criteria specified. We suggest you try the <a href=\"/platforms/mac/hardware\">hardware
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"softwarebrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Software</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/blender\" title=\"Blender\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/57/crop_120x90/p.jpg\"
+        alt=\"Blender\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/blender\">Blender</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-09-15\">Sep 15 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"1998-01-02\">Released 1998</time> 3D Graphics  \t\t\t</span>\r\n\t\t\t<p>Blender
+        is a free and open source 3D creation suite. It supports the entirety of the
+        3D pipeline \u2014 modeling, rigging, animation, simulation, rendering...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/bitmap2material-3\"
+        title=\"Bitmap2Material 3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/p.jpg\"
+        alt=\"Bitmap2Material 3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/bitmap2material-3\">Bitmap2Material 3</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2020-02-25T18:02:24+00:00\">Feb
+        25 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2014-09-30\">Released 2014</time> UV Mapping and Unwrapping  \t\t\t</span>\r\n\t\t\t<p>Bitmap2Material
+        is an incredibly powerful tool that helps you generate full, seamlessly tiling
+        materials from any bitmap image, right within your favorite...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/axis-game-factorys-agfpro-v3\"
+        title=\"Axis Game Factory's AGFPRO v3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/63/crop_120x90/prv.jpg\"
+        alt=\"Axis Game Factory's AGFPRO v3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/axis-game-factorys-agfpro-v3\">Axis Game
+        Factory's AGFPRO v3</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-25T18:01:46+00:00\">Feb 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2013-11-19\">Released 2013</time>
+        Heightmap or Terrain Generator  \t\t\t</span>\r\n\t\t\t<p>A comprehensive
+        toolset designed to provide game developers and enthusiasts with a powerful
+        and rapid level creation, terrain/vegetation editing, lighting...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/wing-ide-5\"
+        title=\"Wing IDE 5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/58/crop_120x90/p.jpg\"
+        alt=\"Wing IDE 5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/wing-ide-5\">Wing IDE 5</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-25T17:56:56+00:00\">Feb 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-04-30\">Released 2014</time>
+        IDE  \t\t\t</span>\r\n\t\t\t<p>Wing IDE is an integrated development environment
+        that makes programming in Python fast and easy. Wing IDE delivers many powerful
+        features for editing...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/harfang-3d\" title=\"Harfang
+        3D\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/1uMoLEGP6.jpg\"
+        alt=\"Harfang 3D\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/harfang-3d\">Harfang 3D</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-04-15T09:02:22+00:00\">Apr 15 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-03\">Released 2016</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Harfang is a high-end package to create 3D or
+        2D applications. It provides a comprehensive API, including physics, VR, pathfinding,
+        audio, video. Harfang...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/houdini\" title=\"Houdini\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/43/crop_120x90/Houdini.png\"
+        alt=\"Houdini\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/houdini\">Houdini</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-12-09T05:23:35+00:00\">Dec 9 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"1996-08\">Released 1996</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Houdini is a procedural-based 3D animation,
+        VFX and game development software package. Houdini lets artists create more
+        and work more efficiently.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/overdose\" title=\"OVERDOSE\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/27/crop_120x90/OVR.png\"
+        alt=\"OVERDOSE\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/overdose\">OVERDOSE</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-06-19T16:46:52+00:00\">Jun 19 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> VR  \t\t\t</span>\r\n\t\t\t<p>OVERDOSE.
+        is a VR app That Makes your phone cardboard into an HTC VIVE or an Oculus
+        Rift. Simply connecting it by Downloading the PC and mobile app and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/spine\" title=\"Spine\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/16/crop_120x90/preview.jpg\"
+        alt=\"Spine\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/spine\">Spine</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-31T03:21:44+00:00\">Mar 31 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2013-01-18\">Released 2013</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Spine is an animation tool that focuses specifically
+        on 2D animation for games. Spine aims to have an efficient, streamlined workflow,
+        both for creating...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/software/janusvr\" title=\"JanusVR\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/8/crop_120x90/a8704d054a0c62c4facf0792978179d0.png\"
+        alt=\"JanusVR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/janusvr\">JanusVR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-28T01:08:03+00:00\">Mar 28 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2013-05\">Released 2013</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>JanusVR combines the power of the internet with
+        the potential of virtual reality. Websites become immersive spaces linked
+        by portals, where users can...</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        software were found matching the criteria specified. We suggest you try the
+        <a href=\"/platforms/mac/software\">software list</a> with no filter applied,
+        to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"enginesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Engines</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/custom-built\" title=\"Custom\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/1/crop_120x90/preview.PNG\"
+        alt=\"Custom\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/custom-built\">Custom</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T00:58:41+00:00\">7hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2007-09\">Released 2007</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>The engine used to build this
+        game was a once-off creation, designed explicitly to run this particular title.
+        This is not a _real_ game engine, this is...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/unity\" title=\"Unity\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/142/crop_120x90/Unity4.jpg\"
+        alt=\"Unity\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/unity\">Unity</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T05:30:44+00:00\">Apr 9 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2005-05-30\">Released 2005</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>Unity is a multiplatform game
+        development tool, designed from the start to ease creation. A fully integrated
+        professional application, Unity just happens...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/unreal-engine-5\"
+        title=\"Unreal Engine 5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/2/1020/crop_120x90/Unreal_Engine_blog_a-first-look-.jpg\"
+        alt=\"Unreal Engine 5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/unreal-engine-5\">Unreal Engine 5</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-08T00:19:55+00:00\">Apr
+        8 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>The world\u2019s most open and
+        advanced real-time 3D creation tool, Unreal Engine 5 will be available in
+        preview in early 2021, and in full release late...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/godot-engine\"
+        title=\"Godot\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/633/crop_120x90/godot_logo_big.png\"
+        alt=\"Godot\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/godot-engine\">Godot</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-07T14:21:54+00:00\">Apr 7 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-02-14\">Released 2014</time>
+        MIT licence \t\t\t</span>\r\n\t\t\t<p>Godot is a fully featured, open source,
+        MIT licensed, game engine. It focuses on having great tools, and a visual
+        oriented workflow that can export to...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/gdevelop-5\"
+        title=\"GDevelop 5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/2/1115/crop_120x90/u6e8n.png\"
+        alt=\"GDevelop 5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/gdevelop-5\">GDevelop 5</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-06T12:00:19+00:00\">Apr 6 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2018-01-20\">Released 2018</time>
+        Creative Commons licence \t\t\t</span>\r\n\t\t\t<p>GDevelop is a 2D and 3D
+        cross-platform, free and open-source game engine, which mainly focuses on
+        creating PC and mobile games, as well as HTML5 games...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/unreal-engine-4\"
+        title=\"Unreal Engine 4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/456/crop_120x90/prv.jpg\"
+        alt=\"Unreal Engine 4\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/unreal-engine-4\">Unreal Engine 4</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-04T02:51:53+00:00\">Apr
+        4 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2014-03-19\">Released 2014</time> Commercial licence \t\t\t</span>\r\n\t\t\t<p>The
+        most world-class game engine to date, Unreal Engine 4 gives you the power
+        to do more than ever before. Bring your creative visions to life directly...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/gamemaker-studio-2\"
+        title=\"GameMaker Studio 2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/854/crop_120x90/gamemaker_studio_2.jpg\"
+        alt=\"GameMaker Studio 2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/gamemaker-studio-2\">GameMaker Studio 2</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-02T16:36:10+00:00\">Apr
+        2 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2017-03-09\">Released 2017</time> Commercial licence \t\t\t</span>\r\n\t\t\t<p>GameMaker
+        Studio 2 is the latest and greatest incarnation of GameMaker! It has everything
+        you need to take your idea from a concept to a finished game...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/official-hamster-republic-rpg-creation-engine\"
+        title=\"Official Hamster Republic RPG Creation Engine\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/engines/1/1/260/crop_120x90/Ohrrpgce.png\"
+        alt=\"Official Hamster Republic RPG Creation Engine\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/engines/official-hamster-republic-rpg-creation-engine\">Official
+        Hamster Republic RPG Creation Engine</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-01T07:37:15+00:00\">Apr 1 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"1998-01\">Released 1998</time>
+        GPL licence \t\t\t</span>\r\n\t\t\t<p>O.H.R.RPG.C.E., which stands for Official
+        Hamster Republic Role Playing Game Construction Engine, is a free open-source
+        utility that you can use to create...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/arcadebox\"
+        title=\"ArcadeBox\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/2/1144/crop_120x90/arcade_box_logo.png\"
+        alt=\"ArcadeBox\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/arcadebox\">ArcadeBox</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-01T02:17:26+00:00\">Apr 1 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2024-04\">Released Apr 1,
+        2024</time> GPL licence \t\t\t</span>\r\n\t\t\t<p>ArcadeBox is an easy to
+        use, codeless, open source and cross platform game engine developed by hanisoftwares
+        and cutawayshot games for their games, its...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/construct-3\"
+        title=\"Construct 3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/938/crop_120x90/c3logo.jpg\"
+        alt=\"Construct 3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/construct-3\">Construct 3</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-30T12:29:14+00:00\">Mar 30 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2017-03-29\">Released 2017</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>With Construct, building games
+        is as fun as playing them.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\"
+        style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/engines\">More
+        engines &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo engines were found
+        matching the criteria specified. We suggest you try the <a href=\"/platforms/mac/engines\">engine
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"gamesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Games</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/operation-half-real\" title=\"Half-Life
+        Beyond\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/12/11926/crop_120x90/IMG_20231016_234326.jpg\"
+        alt=\"Half-Life Beyond\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/operation-half-real\">Half-Life Beyond</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T01:11:09+00:00\">6hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Fight to survive the horrors
+        from the world beyond, in this Singleplayer and Multiplayer First-person shooter
+        set in the Half-Life universe.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/sleeper-lab\" title=\"Sleeper
+        Lab\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84259/crop_120x90/Screenshot_2024-04-09_at_7.34.38.png\"
+        alt=\"Sleeper Lab\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/sleeper-lab\">Sleeper Lab</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09\">8hours ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Stealth  \t\t\t</span>\r\n\t\t\t<p>This is a stealth horror game based around
+        the concept of spatial audio! Using both Unity\u2019s built in audio spatialization
+        tools and the Steam Audio...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/rocket\" title=\"Rocket!\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82095/crop_120x90/logo_pure.png\"
+        alt=\"Rocket!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/rocket\">Rocket!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T17:26:40+00:00\">14hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2024-02-19\">Early Access
+        Feb 19, 2024</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Rocket is a Bullet Hell,
+        High Stakes Arcade Shooter &#038; Score Chaser. Use your skills to survive
+        the onslaught of asteroids, enemies, black holes and the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/cube-defender-of-the-polyverse\"
+        title=\"Cube: Defender of the Polyverse\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/21/20142/crop_120x90/10.jpg\"
+        alt=\"Cube: Defender of the Polyverse\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/cube-defender-of-the-polyverse\">Cube: Defender
+        of the Polyverse</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T13:18:50+00:00\">18hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Adventure  \t\t\t</span>\r\n\t\t\t<p>The
+        world is torn to shreds by an evil force. Polygons tremble at the thought
+        of The Dreaded Cone. All except for Cube. Pick up your control switch and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/duke-nukem-manhattan-project\"
+        title=\"Duke Nukem: Manhattan Project\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/27/26192/crop_120x90/MPpreview.png\"
+        alt=\"Duke Nukem: Manhattan Project\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/duke-nukem-manhattan-project\">Duke Nukem:
+        Manhattan Project</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T10:44:45+00:00\">21hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2002-05-19\">Released 2002</time>
+        Platformer  \t\t\t</span>\r\n\t\t\t<p>Duke Nukem takes his Mighty Boot to
+        the Big Apple. Using GLOPP (Gluon Liquid Omega-Phased Plasma), the maniacal
+        mech Morphix has transformed the creatures...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/8-ball-brawl\"
+        title=\"8-Ball Brawl\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84256/crop_120x90/stsmall507x507-pad600x600f8f.jpg\"
+        alt=\"8-Ball Brawl\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/8-ball-brawl\">8-Ball Brawl</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T05:30:43+00:00\">Apr 9 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Party  \t\t\t</span>\r\n\t\t\t<p>Players
+        must play the best pool of their lives to save themselves from an unruly biker
+        gang. Buy drink powerups, disrupt your opponent and score points...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/fumes\" title=\"FUMES\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/84/83737/crop_120x90/a2.jpg\"
+        alt=\"FUMES\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/fumes\">FUMES</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-08T20:28:51+00:00\">Apr 8 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Third Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Arm
+        your vehicle with deadly weapons and roam endless wastelands in this fast-paced
+        car combat game. Collect upgrades for your car to melt enemies and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/the-z-experiment\"
+        title=\"The Z Experiment\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84113/crop_120x90/ScreenShot00046.png\"
+        alt=\"The Z Experiment\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/the-z-experiment\">The Z Experiment</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-08T15:33:48+00:00\">Apr
+        8 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>What Is &quot;The Z Experiment&quot;
+        : It's a living, breathing world where every job, every interaction, and every
+        decision contributes to an ever-evolving thrill...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/kai-lost-waters\"
+        title=\"Kai: Lost Waters\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84253/crop_120x90/KaiTitleScreenshot.png\"
+        alt=\"Kai: Lost Waters\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/kai-lost-waters\">Kai: Lost Waters</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-08T07:57:26+00:00\">Apr
+        8 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Puzzle  \t\t\t</span>\r\n\t\t\t<p>Kai awakens in a mysterious cavern and has
+        no memories of their past except one thing: they have the ability to bend
+        water at their will. Scattered throughout...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/wings-of-destiny\"
+        title=\"Wings of Destiny\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84251/crop_120x90/logo1.png\"
+        alt=\"Wings of Destiny\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/wings-of-destiny\">Wings of Destiny</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-08T06:20:01+00:00\">Apr
+        8 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-22\">Coming Apr 22, 2024</time> Platformer  \t\t\t</span>\r\n\t\t\t<p>This
+        is a two player asymmetric co-op platform game for my capstone project. One
+        player controls a warrior who can walk, jump, and attack enemies using...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/games\">More
+        games &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo games were found
+        matching the criteria specified. We suggest you try the <a href=\"/platforms/mac/games\">game
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"modsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Mods</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/the-numbers\" title=\"The Numbers\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/58/57563/crop_120x90/theNumbers.jpg\"
+        alt=\"The Numbers\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a
+        href=\"/games/amnesia-the-dark-descent\" title=\"Amnesia: The Dark Descent\"><img
+        src=\"https://media.moddb.com/images/games/1/14/13339/icon.jpg\" alt=\"Amnesia:
+        The Dark Descent\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/the-numbers\">The Numbers</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T07:02:11+00:00\">1hour
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Adventure  \t\t\t</span>\r\n\t\t\t<p>Four numbers; Why do they repeat? Her
+        voice; Why do you still hear it? Find your own way to the answers. \u201CCome
+        to me\u201D</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/mods/tiny-units-warcraft-iii\" title=\"Tiny
+        Units - Warcraft 3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/25/24750/crop_120x90/mod_changes_3.jpg\"
+        alt=\"Tiny Units - Warcraft 3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/warcraft-iii-frozen-throne\" title=\"Warcraft III:
+        Frozen Throne\"><img src=\"https://media.moddb.com/images/games/1/12/11109/frozenthrone_icon.png\"
+        alt=\"Warcraft III: Frozen Throne\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/tiny-units-warcraft-iii\">Tiny
+        Units - Warcraft 3</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T04:15:32+00:00\">3hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-03-04\">Released 2014</time>
+        Real Time Strategy  \t\t\t</span>\r\n\t\t\t<p>RECOMENDED ONLY FOR WARCRAFT
+        3 PATCH 1.2.7 b. (CLASSIC WARCRAFT 3 - THE FROZEN THRONE). THIS WARCRAFT 3
+        ALL OBJECT DATA WORKS ON VERSION 1.3.2 OR REFORGED...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/laser-tag-2004-viii\"
+        title=\"Laser Tag 2004 VIII\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61808/crop_120x90/Lasertag.png\"
+        alt=\"Laser Tag 2004 VIII\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/vampire-the-masquerade-redemption\" title=\"Vampire:
+        The Masquerade \u2013 Redemption\"><img src=\"https://media.moddb.com/images/games/1/34/33435/ao_icon.1.png\"
+        alt=\"Vampire: The Masquerade \u2013 Redemption\" width=\"32\" height=\"32\"
+        style=\"float: right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/laser-tag-2004-viii\">Laser Tag 2004 VIII</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T00:57:40+00:00\">7hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2004-04-08\">Released 2004</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>Welcome
+        to the best version of Laser Tag Modification V.8: The Shadow Of Laos Mafia.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/redridge\" title=\"Half-Rats:
+        Redridge\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/54/53269/crop_120x90/20240130151230_1.jpg\"
+        alt=\"Half-Rats: Redridge\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/redridge\">Half-Rats:
+        Redridge</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T00:03:01+00:00\">8hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2025-10-31\">Coming 2025</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>August,
+        1999. You're a fresh college grad passing the time in your parents' rural
+        retreat before the tourist season picks up and your first job as &quot;Junior...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/world-trade-center\"
+        title=\"^ Action at the World Trade Center ^\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/52/51540/crop_120x90/channels4_profile_v01_1024_1.png\"
+        alt=\"^ Action at the World Trade Center ^\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/quake\" title=\"Quake\"><img src=\"https://media.moddb.com/images/games/1/1/2/Quake.png\"
+        alt=\"Quake\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/world-trade-center\">^
+        Action at the World Trade Center ^</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T00:01:48+00:00\">8hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Hello.
+        I present to you my first mod. World Trade Center for Quake, Half-Life, Half-Life
+        2 games. The goal of the project is to make a complete copy with...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/horror-mod-doom-war-of-the-worlds-aliens-etc\"
+        title=\"Horror Mod Map Addon for Cameo (Doom, War of the Worlds, Aliens, etc)\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61806/crop_120x90/game-art-doom-shotgun.jpg\"
+        alt=\"Horror Mod Map Addon for Cameo (Doom, War of the Worlds, Aliens, etc)\"
+        /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/openra\"
+        title=\"OpenRA\"><img src=\"https://media.moddb.com/images/games/1/15/14718/soviet-logo.png\"
+        alt=\"OpenRA\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/horror-mod-doom-war-of-the-worlds-aliens-etc\">Horror
+        Mod Map Addon for Cameo (Doom, War of the Worlds, Aliens, etc)</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-09T22:42:27+00:00\">9hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09\">Released Apr 9, 2024</time> Real Time Strategy  \t\t\t</span>\r\n\t\t\t<p>A
+        long time ago there was a famous map called Purgatory, It had monsters from
+        different games for OpenRA. Monsters from Doom, Aliens from Alien, War of...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/count-your-ammo\"
+        title=\"Count Your Ammo\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61805/crop_120x90/yes.jpg\"
+        alt=\"Count Your Ammo\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/count-your-ammo\">Count
+        Your Ammo</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-09T22:02:28+00:00\">10hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09\">Released Apr 9, 2024</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>This
+        is a single map mod. It is my first map that I made. Make sure to keep track
+        of your ammo.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/mods/critical-dynamics\" title=\"Critical Dynamics\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/61/60799/crop_120x90/logo_wide.png\"
+        alt=\"Critical Dynamics\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/critical-dynamics\">Critical
+        Dynamics</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-09T21:40:55+00:00\">10hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09\">Released Apr 9, 2024</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>The
+        resonance cascade seen from the eyes of a young intern working near Sector\_C.
+        A vanilla-ish Half-Life single-player campaign. It is short, half-assed...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/age-of-doom\" title=\"Doom
+        v1.33 | Age of DOOM\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/52/51195/crop_120x90/Doom_Redux_ModDB_Logo.jpg\"
+        alt=\"Doom v1.33 | Age of DOOM\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/doom\" title=\"Doom\"><img src=\"https://media.moddb.com/images/games/1/1/26/doom_icon.png\"
+        alt=\"Doom\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/age-of-doom\">Doom v1.33
+        | Age of DOOM</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-09T21:11:49+00:00\">10hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2023-11-09\">Released Nov 9, 2023</time> Tactical Shooter  \t\t\t</span>\r\n\t\t\t<p>Standalone
+        mod. Play Doom in the Age of Empires 2 game engine. Doom Remake as Isometric
+        Shooter and Tactical Shooter game. Old school, retro, boomer shooter...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/half-life-delta\"
+        title=\"Delta Particles\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/19/18123/crop_120x90/capsule_moddb.1.jpg\"
+        alt=\"Delta Particles\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/half-life-delta\">Delta
+        Particles</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-09T20:36:57+00:00\">11hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2021-10-29\">Released 2021</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>You
+        take the role of Nick Farrel, a technical engineer in Delta Base - the complex
+        that competes with Black Mesa in various research fields including...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/mods\">More
+        mods &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo mods were found
+        matching the criteria specified. We suggest you try the <a href=\"/platforms/mac/mods\">mod
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"5841560\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#5841560\" style=\"color: inherit;\"><time datetime=\"2016-03-21T16:59:08+00:00\">Mar
+        21 2016</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>i hate life</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"5841560\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=5841560\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=5841560\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/platforms/mac/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"3d0623b11b18ef61c99f7a734a9b4668\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div id=\"platformfilteroff\" class=\"errorbox\">Filter
+        ModDB to show only <a href=\"/platforms/mac/set\" class=\"toggleplatform\">Mac
+        content</a>.</div>\r\n<div id=\"platformfilteron\" class=\"successbox\" style=\"display:
+        none;\">ModDB is showing only <span class=\"platformname\"></span> content,
+        <a href=\"/platforms/all\" class=\"toggleplatform\">turn this off</a>.</div>\r\n<div
+        style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox nextmediaboxtop\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\"
+        data-dfp-sizes=\"300x250, 300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div>
+        \r\n</div>\r\n\t<div class=\"normalbox menubox\" id=\"platformsinfo\">\n\t\t\t\t<div
+        class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"options\">\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Company</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/apple\">Apple</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.apple.com\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Apple.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"1991-09-15\" itemprop=\"releaseDate\">Released
+        1991</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac&title=Mac+platform\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Mac%20platform&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Mac+platform+https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac&quote=Mac+platform&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"platformsprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Hardware</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/hardware\">24</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Software</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/software\">9</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engines</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/engines\">315</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Games</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/games\">15,985</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Mods</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/mods\">9,048</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/platforms\",\"name\":\"Platforms\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/platforms/mac\",\"name\":\"Mac\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=platforms\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\ttags:
+        [\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736412\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736412\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\ttogglePlatform = function(currentoption, response)
+        {\r\n\t\t\tif(response[\"platform\"]) {\r\n\t\t\t\t$(\"#platformfilteroff\").hide();\r\n\t\t\t\t$(\"#platformfilteron\").show().find(\".platformname\").text(response[\"platform\"]);\r\n\t\t\t}
+        else if(response[\"success\"]) {\r\n\t\t\t\t$(\"#platformfilteron\").hide();\r\n\t\t\t\t$(\"#platformfilteroff\").show();\r\n\t\t\t}\r\n\t\t};\r\n\t\t$(\".toggleplatform\").saveUpdate(\"toggleplatform\",
+        togglePlatform);\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status =
+        CookieScript.instance.currentState().categories.includes(\"targeting\") ?
+        \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213d714d9db728-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:06:53 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=q9QIvVNt%2F%2FQr2JQlrBnCNfuvIRXTikl7aiFhei1EK2MVd2rjiT8zOr2H3h0nY7qN0%2FBbMHAKNus2GEe6A%2FtzxODNv20paiU%2FRaWf8fgmy%2FIOzsP4czNJLt7gBdnlwmOvOXGJldm0PtNxJk4%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '73593'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=f00b7a96e5d23e4ee2cd05e33eabee77; expires=Wed, 10-Apr-2024 08:16:52
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/platforms/mac
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Mac platform
+        - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"mac, platforms, view\" />\r\n\t<meta name=\"description\" content=\"Macintosh,
+        commonly known as Mac, is a brand name which covers several lines of personal
+        computers designed, developed, and marketed by Apple Inc. Though Apple has
+        never actively encouraged the development of games for its platform, many
+        developers have...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Mac platform\" />\r\n\t<meta property=\"og:description\"
+        content=\"Macintosh, commonly known as Mac, is a brand name which covers several
+        lines of personal computers designed, developed, and marketed by Apple Inc.
+        Though Apple has never actively encouraged the development of games for its
+        platform, many developers have...\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"product\" />
+        \r\n\t \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Mac platform\" />\r\n\t<meta property=\"twitter:description\" content=\"Macintosh,
+        commonly known as Mac, is a brand name which covers several lines of personal
+        computers designed, developed, and marketed by Apple Inc. Though Apple has
+        never actively encouraged the development of games for its platform, many
+        developers have...\" />\r\n\t \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\"
+        media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Mac platform</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/Product\"><div
+        class=\"column span-all tabsummary\">\t<div class=\"headerbox\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2
+        itemprop=\"name\"><a href=\"/platforms/mac\" itemprop=\"mainEntityOfPage\">Mac</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span
+        itemprop=\"brand\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/company/apple\" itemprop=\"url\"><span itemprop=\"name\">Apple</span></a></span>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/platforms/mac\">summary</a></li><li class=\"\"><a
+        href=\"/platforms/mac/hardware\">hardware</a></li><li class=\"\"><a href=\"/platforms/mac/software\">software</a></li><li
+        class=\"\"><a href=\"/platforms/mac/engines\">engines</a></li><li class=\"\"><a
+        href=\"/platforms/mac/games\">games</a></li><li class=\"\"><a href=\"/platforms/mac/mods\">mods</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"Macintosh, commonly known as Mac, is a
+        brand name which covers several lines of personal computers designed, developed,
+        and marketed by Apple Inc. Though Apple has never actively encouraged the
+        development of games for its platform, many developers have ported titles
+        or made their own for this platform to address this shortcoming.\" />\t<div
+        class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>Like Linux, the number of (exclusive) triple
+        AAA game titles released on the Mac platform can be counted on one hand (Marathon
+        anyone!?). Despite this, thanks to the large install base many indie developers
+        have decided to address this shortcoming by creating or porting existing games
+        onto this platform. However now that the Mac has moved from an IBM chipset
+        to the i386 and can dual boot the Windows OS, creating games specifically
+        for this platform really has to be questioned.\n</p>\n</div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"hardwarebrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span class=\"heading\">
+        Hardware</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/hardware/oculus-rift\" title=\"Oculus Rift\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/29/crop_120x90/rift_hero.jpg\"
+        alt=\"Oculus Rift\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-rift\">Oculus Rift</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-02-14T17:45:05+00:00\">Feb 14 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-03\">Released 2016</time>
+        <a href=\"/company/oculus\">Oculus</a> Headset  \t\t\t</span>\r\n\t\t\t<p>The
+        Rift is unlike anything you\u2019ve ever experienced. Whether you\u2019re
+        stepping into your favorite game, watching an immersive VR movie, jumping
+        to a...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/hardware/htc-vive\" title=\"HTC Vive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/111/crop_120x90/VR_Web_Product_HMD.4.1.png\"
+        alt=\"HTC Vive\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/htc-vive\">HTC Vive</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-02-14T17:45:05+00:00\">Feb 14 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-04-04\">Released 2016</time>
+        <a href=\"/company/htc\">HTC</a> Headset  \t\t\t</span>\r\n\t\t\t<p>Vive is
+        brought to you by HTC and Valve. Uniting passion, talent, and innovation,
+        Vive delivers on the promise of VR with best-in-class technology and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/oculus-dk1\"
+        title=\"Oculus DK1\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/1/crop_120x90/dk1-product.jpg\"
+        alt=\"Oculus DK1\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-dk1\">Oculus DK1</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-01-24T03:15:32+00:00\">Jan 24 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2012-12-30\">Released 2012</time>
+        <a href=\"/company/oculus\">Oculus</a> Headset  \t\t\t</span>\r\n\t\t\t<p>The
+        Oculus Rift is a virtual reality headset that lets players step inside their
+        favorite games and virtual worlds.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/oculus-dk2\"
+        title=\"Oculus DK2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/2/crop_120x90/preview.jpg\"
+        alt=\"Oculus DK2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-dk2\">Oculus DK2</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-01-24T03:15:32+00:00\">Jan 24 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-07\">Released 2014</time>
+        <a href=\"/company/oculus\">Oculus</a> Headset  \t\t\t</span>\r\n\t\t\t<p>DK2
+        is the latest development kit for the Rift that allows developers to build
+        amazing games and experiences.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/htc-vive-de\" title=\"HTC
+        Vive Developer Edition\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/3/crop_120x90/HTC-Vive_White.jpg\"
+        alt=\"HTC Vive Developer Edition\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/hardware/htc-vive-de\">HTC Vive Developer Edition</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-01-24T03:15:32+00:00\">Jan
+        24 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2015-11\">Released 2015</time> <a href=\"/company/htc\">HTC</a>
+        Headset  \t\t\t</span>\r\n\t\t\t<p>Imagine standing on the bridge of a starship
+        rocketing across the galaxy, or strolling through the streets of ancient Rome,
+        or shrinking down to subatomic...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/meta-1-dk\"
+        title=\"Meta DK1\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/39/crop_120x90/metadk1.jpg\"
+        alt=\"Meta DK1\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/meta-1-dk\">Meta DK1</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-11-15T15:09:55+00:00\">Nov 15 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> <a href=\"/company/meta-company\">Meta
+        Company</a> Headset  \t\t\t</span>\r\n\t\t\t<p>The Meta 1 Developer Kit brings
+        superhero tech to life. Experience a room full of interactive 3D holograms.
+        The first computing device that gives you...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/oculus-touch\"
+        title=\"Oculus Touch\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/50/crop_120x90/Oculus-Touch-5.1.jpg\"
+        alt=\"Oculus Touch\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/oculus-touch\">Oculus Touch</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-10-21T20:40:53+00:00\">Oct 21 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-12-06\">Released 2016</time>
+        <a href=\"/company/oculus\">Oculus</a> Controller  \t\t\t</span>\r\n\t\t\t<p>We\u2019ve
+        created Oculus Touch, a new pair of tracked controllers that let you take
+        your VR games and experiences further than ever before.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/steam-controller\"
+        title=\"Steam Controller\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/49/crop_120x90/prv.jpg\"
+        alt=\"Steam Controller\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/hardware/steam-controller\">Steam Controller</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-06-22\">Jun 22 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> <a href=\"/company/valve\">Valve</a>
+        Controller  \t\t\t</span>\r\n\t\t\t<p>Experience a new level of precise control
+        for your favorite games. The Steam Controller lets you play your entire collection
+        of Steam games on your TV\u2014even...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/osvr\" title=\"OSVR\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/preview.jpg\"
+        alt=\"OSVR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/osvr\">OSVR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-05-18T04:54:37+00:00\">May 18 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2015-07\">Released 2015</time>
+        <a href=\"/company/razer\">Razer</a> Headset  \t\t\t</span>\r\n\t\t\t<p>Razer
+        is part of the Open-Source Virtual Reality (OSVR) ecosystem, a new standard
+        in VR gaming to push the VR gaming experience forward and supporting...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/hardware/sulon-q\" title=\"Sulon
+        Q\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/114/crop_120x90/sulon-q-ed.jpg\"
+        alt=\"Sulon Q\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/hardware/sulon-q\">Sulon Q</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-10-08T20:26:30+00:00\">Oct 8 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-04\">Released 2016</time>
+        <a href=\"/company/amd\">AMD</a> Headset  \t\t\t</span>\r\n\t\t\t<p>Introducing
+        the Sulon Q, powered by AMD. The first and only all-in-one, tether-free, \u201Cwear
+        and play\u201D spatially-aware headset for VR and AR.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/hardware\">More
+        hardware &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo hardware were found
+        matching the criteria specified. We suggest you try the <a href=\"/platforms/mac/hardware\">hardware
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"softwarebrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Software</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/blender\" title=\"Blender\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/57/crop_120x90/p.jpg\"
+        alt=\"Blender\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/blender\">Blender</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-09-15\">Sep 15 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"1998-01-02\">Released 1998</time> 3D Graphics  \t\t\t</span>\r\n\t\t\t<p>Blender
+        is a free and open source 3D creation suite. It supports the entirety of the
+        3D pipeline \u2014 modeling, rigging, animation, simulation, rendering...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/bitmap2material-3\"
+        title=\"Bitmap2Material 3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/64/crop_120x90/p.jpg\"
+        alt=\"Bitmap2Material 3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/bitmap2material-3\">Bitmap2Material 3</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2020-02-25T18:02:24+00:00\">Feb
+        25 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2014-09-30\">Released 2014</time> UV Mapping and Unwrapping  \t\t\t</span>\r\n\t\t\t<p>Bitmap2Material
+        is an incredibly powerful tool that helps you generate full, seamlessly tiling
+        materials from any bitmap image, right within your favorite...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/axis-game-factorys-agfpro-v3\"
+        title=\"Axis Game Factory's AGFPRO v3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/63/crop_120x90/prv.jpg\"
+        alt=\"Axis Game Factory's AGFPRO v3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/axis-game-factorys-agfpro-v3\">Axis Game
+        Factory's AGFPRO v3</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-25T18:01:46+00:00\">Feb 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2013-11-19\">Released 2013</time>
+        Heightmap or Terrain Generator  \t\t\t</span>\r\n\t\t\t<p>A comprehensive
+        toolset designed to provide game developers and enthusiasts with a powerful
+        and rapid level creation, terrain/vegetation editing, lighting...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/wing-ide-5\"
+        title=\"Wing IDE 5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/58/crop_120x90/p.jpg\"
+        alt=\"Wing IDE 5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/wing-ide-5\">Wing IDE 5</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-25T17:56:56+00:00\">Feb 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-04-30\">Released 2014</time>
+        IDE  \t\t\t</span>\r\n\t\t\t<p>Wing IDE is an integrated development environment
+        that makes programming in Python fast and easy. Wing IDE delivers many powerful
+        features for editing...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/harfang-3d\" title=\"Harfang
+        3D\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/36/crop_120x90/1uMoLEGP6.jpg\"
+        alt=\"Harfang 3D\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/harfang-3d\">Harfang 3D</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-04-15T09:02:22+00:00\">Apr 15 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2016-03\">Released 2016</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Harfang is a high-end package to create 3D or
+        2D applications. It provides a comprehensive API, including physics, VR, pathfinding,
+        audio, video. Harfang...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/houdini\" title=\"Houdini\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/43/crop_120x90/Houdini.png\"
+        alt=\"Houdini\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/houdini\">Houdini</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-12-09T05:23:35+00:00\">Dec 9 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"1996-08\">Released 1996</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Houdini is a procedural-based 3D animation,
+        VFX and game development software package. Houdini lets artists create more
+        and work more efficiently.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/overdose\" title=\"OVERDOSE\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/27/crop_120x90/OVR.png\"
+        alt=\"OVERDOSE\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/overdose\">OVERDOSE</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-06-19T16:46:52+00:00\">Jun 19 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> VR  \t\t\t</span>\r\n\t\t\t<p>OVERDOSE.
+        is a VR app That Makes your phone cardboard into an HTC VIVE or an Oculus
+        Rift. Simply connecting it by Downloading the PC and mobile app and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/spine\" title=\"Spine\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/16/crop_120x90/preview.jpg\"
+        alt=\"Spine\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/spine\">Spine</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-31T03:21:44+00:00\">Mar 31 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2013-01-18\">Released 2013</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Spine is an animation tool that focuses specifically
+        on 2D animation for games. Spine aims to have an efficient, streamlined workflow,
+        both for creating...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/software/janusvr\" title=\"JanusVR\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/software/1/1/8/crop_120x90/a8704d054a0c62c4facf0792978179d0.png\"
+        alt=\"JanusVR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/software/janusvr\">JanusVR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-28T01:08:03+00:00\">Mar 28 2016</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2013-05\">Released 2013</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>JanusVR combines the power of the internet with
+        the potential of virtual reality. Websites become immersive spaces linked
+        by portals, where users can...</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        software were found matching the criteria specified. We suggest you try the
+        <a href=\"/platforms/mac/software\">software list</a> with no filter applied,
+        to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"enginesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Engines</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/unreal-engine-5\" title=\"Unreal
+        Engine 5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/2/1020/crop_120x90/Unreal_Engine_blog_a-first-look-.jpg\"
+        alt=\"Unreal Engine 5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/unreal-engine-5\">Unreal Engine 5</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T09:34:49+00:00\">2hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>The world\u2019s most open and
+        advanced real-time 3D creation tool, Unreal Engine 5 will be available in
+        preview in early 2021, and in full release late...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/unity\" title=\"Unity\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/142/crop_120x90/Unity4.jpg\"
+        alt=\"Unity\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/unity\">Unity</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T09:33:11+00:00\">2hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2005-05-30\">Released 2005</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>Unity is a multiplatform game
+        development tool, designed from the start to ease creation. A fully integrated
+        professional application, Unity just happens...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/custom-built\"
+        title=\"Custom\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/1/crop_120x90/preview.PNG\"
+        alt=\"Custom\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/custom-built\">Custom</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T00:58:41+00:00\">10hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2007-09\">Released 2007</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>The engine used to build this
+        game was a once-off creation, designed explicitly to run this particular title.
+        This is not a _real_ game engine, this is...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/godot-engine\"
+        title=\"Godot\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/633/crop_120x90/godot_logo_big.png\"
+        alt=\"Godot\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/godot-engine\">Godot</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-07T14:21:54+00:00\">Apr 7 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-02-14\">Released 2014</time>
+        MIT licence \t\t\t</span>\r\n\t\t\t<p>Godot is a fully featured, open source,
+        MIT licensed, game engine. It focuses on having great tools, and a visual
+        oriented workflow that can export to...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/gdevelop-5\"
+        title=\"GDevelop 5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/2/1115/crop_120x90/u6e8n.png\"
+        alt=\"GDevelop 5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/gdevelop-5\">GDevelop 5</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-06T12:00:19+00:00\">Apr 6 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2018-01-20\">Released 2018</time>
+        Creative Commons licence \t\t\t</span>\r\n\t\t\t<p>GDevelop is a 2D and 3D
+        cross-platform, free and open-source game engine, which mainly focuses on
+        creating PC and mobile games, as well as HTML5 games...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/unreal-engine-4\"
+        title=\"Unreal Engine 4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/456/crop_120x90/prv.jpg\"
+        alt=\"Unreal Engine 4\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/unreal-engine-4\">Unreal Engine 4</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-04T02:51:53+00:00\">Apr
+        4 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2014-03-19\">Released 2014</time> Commercial licence \t\t\t</span>\r\n\t\t\t<p>The
+        most world-class game engine to date, Unreal Engine 4 gives you the power
+        to do more than ever before. Bring your creative visions to life directly...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/gamemaker-studio-2\"
+        title=\"GameMaker Studio 2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/854/crop_120x90/gamemaker_studio_2.jpg\"
+        alt=\"GameMaker Studio 2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/gamemaker-studio-2\">GameMaker Studio 2</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-02T16:36:10+00:00\">Apr
+        2 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2017-03-09\">Released 2017</time> Commercial licence \t\t\t</span>\r\n\t\t\t<p>GameMaker
+        Studio 2 is the latest and greatest incarnation of GameMaker! It has everything
+        you need to take your idea from a concept to a finished game...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/official-hamster-republic-rpg-creation-engine\"
+        title=\"Official Hamster Republic RPG Creation Engine\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/engines/1/1/260/crop_120x90/Ohrrpgce.png\"
+        alt=\"Official Hamster Republic RPG Creation Engine\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/engines/official-hamster-republic-rpg-creation-engine\">Official
+        Hamster Republic RPG Creation Engine</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-01T07:37:15+00:00\">Apr 1 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"1998-01\">Released 1998</time>
+        GPL licence \t\t\t</span>\r\n\t\t\t<p>O.H.R.RPG.C.E., which stands for Official
+        Hamster Republic Role Playing Game Construction Engine, is a free open-source
+        utility that you can use to create...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/arcadebox\"
+        title=\"ArcadeBox\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/2/1144/crop_120x90/arcade_box_logo.png\"
+        alt=\"ArcadeBox\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/arcadebox\">ArcadeBox</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-01T02:17:26+00:00\">Apr 1 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2024-04\">Released Apr 1,
+        2024</time> GPL licence \t\t\t</span>\r\n\t\t\t<p>ArcadeBox is an easy to
+        use, codeless, open source and cross platform game engine developed by hanisoftwares
+        and cutawayshot games for their games, its...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/construct-3\"
+        title=\"Construct 3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/938/crop_120x90/c3logo.jpg\"
+        alt=\"Construct 3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/engines/construct-3\">Construct 3</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-30T12:29:14+00:00\">Mar 30 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2017-03-29\">Released 2017</time>
+        Commercial licence \t\t\t</span>\r\n\t\t\t<p>With Construct, building games
+        is as fun as playing them.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\"
+        style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/engines\">More
+        engines &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo engines were found
+        matching the criteria specified. We suggest you try the <a href=\"/platforms/mac/engines\">engine
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"gamesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Games</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/operation-half-real\" title=\"Half-Life
+        Beyond\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/12/11926/crop_120x90/IMG_20231016_234326.jpg\"
+        alt=\"Half-Life Beyond\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/operation-half-real\">Half-Life Beyond</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T01:11:09+00:00\">10hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Fight to survive the horrors
+        from the world beyond, in this Singleplayer and Multiplayer First-person shooter
+        set in the Half-Life universe.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/sleeper-lab\" title=\"Sleeper
+        Lab\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84259/crop_120x90/Screenshot_2024-04-09_at_7.34.38.png\"
+        alt=\"Sleeper Lab\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/sleeper-lab\">Sleeper Lab</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09\">12hours ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Stealth  \t\t\t</span>\r\n\t\t\t<p>This is a stealth horror game based around
+        the concept of spatial audio! Using both Unity\u2019s built in audio spatialization
+        tools and the Steam Audio...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/rocket\" title=\"Rocket!\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82095/crop_120x90/logo_pure.png\"
+        alt=\"Rocket!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/rocket\">Rocket!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T17:26:40+00:00\">18hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2024-02-19\">Early Access
+        Feb 19, 2024</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Rocket is a Bullet Hell,
+        High Stakes Arcade Shooter &#038; Score Chaser. Use your skills to survive
+        the onslaught of asteroids, enemies, black holes and the...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/cube-defender-of-the-polyverse\"
+        title=\"Cube: Defender of the Polyverse\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/21/20142/crop_120x90/10.jpg\"
+        alt=\"Cube: Defender of the Polyverse\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/cube-defender-of-the-polyverse\">Cube: Defender
+        of the Polyverse</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T13:18:50+00:00\">22hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Adventure  \t\t\t</span>\r\n\t\t\t<p>The
+        world is torn to shreds by an evil force. Polygons tremble at the thought
+        of The Dreaded Cone. All except for Cube. Pick up your control switch and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/duke-nukem-manhattan-project\"
+        title=\"Duke Nukem: Manhattan Project\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/27/26192/crop_120x90/MPpreview.png\"
+        alt=\"Duke Nukem: Manhattan Project\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/duke-nukem-manhattan-project\">Duke Nukem:
+        Manhattan Project</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T10:44:45+00:00\">Apr 9 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2002-05-19\">Released 2002</time>
+        Platformer  \t\t\t</span>\r\n\t\t\t<p>Duke Nukem takes his Mighty Boot to
+        the Big Apple. Using GLOPP (Gluon Liquid Omega-Phased Plasma), the maniacal
+        mech Morphix has transformed the creatures...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/8-ball-brawl\"
+        title=\"8-Ball Brawl\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84256/crop_120x90/stsmall507x507-pad600x600f8f.jpg\"
+        alt=\"8-Ball Brawl\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/8-ball-brawl\">8-Ball Brawl</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09T05:30:43+00:00\">Apr 9 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Party  \t\t\t</span>\r\n\t\t\t<p>Players
+        must play the best pool of their lives to save themselves from an unruly biker
+        gang. Buy drink powerups, disrupt your opponent and score points...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/fumes\" title=\"FUMES\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/84/83737/crop_120x90/a2.jpg\"
+        alt=\"FUMES\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/fumes\">FUMES</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-08T20:28:51+00:00\">Apr 8 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Third Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Arm
+        your vehicle with deadly weapons and roam endless wastelands in this fast-paced
+        car combat game. Collect upgrades for your car to melt enemies and...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/the-z-experiment\"
+        title=\"The Z Experiment\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84113/crop_120x90/ScreenShot00046.png\"
+        alt=\"The Z Experiment\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/the-z-experiment\">The Z Experiment</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-08T15:33:48+00:00\">Apr
+        8 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>What Is &quot;The Z Experiment&quot;
+        : It's a living, breathing world where every job, every interaction, and every
+        decision contributes to an ever-evolving thrill...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/kai-lost-waters\"
+        title=\"Kai: Lost Waters\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84253/crop_120x90/KaiTitleScreenshot.png\"
+        alt=\"Kai: Lost Waters\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/kai-lost-waters\">Kai: Lost Waters</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-08T07:57:26+00:00\">Apr
+        8 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Puzzle  \t\t\t</span>\r\n\t\t\t<p>Kai awakens in a mysterious cavern and has
+        no memories of their past except one thing: they have the ability to bend
+        water at their will. Scattered throughout...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/wings-of-destiny\"
+        title=\"Wings of Destiny\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84251/crop_120x90/logo1.png\"
+        alt=\"Wings of Destiny\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/wings-of-destiny\">Wings of Destiny</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-08T06:20:01+00:00\">Apr
+        8 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-22\">Coming Apr 22, 2024</time> Platformer  \t\t\t</span>\r\n\t\t\t<p>This
+        is a two player asymmetric co-op platform game for my capstone project. One
+        player controls a warrior who can walk, jump, and attack enemies using...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/games\">More
+        games &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo games were found
+        matching the criteria specified. We suggest you try the <a href=\"/platforms/mac/games\">game
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"modsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\"> Mods</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/hard-duty-second-edition\" title=\"Hard Duty [SECOND EDITION]\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/59/58322/crop_120x90/Hard_Duty_Logo_Highlights.png\"
+        alt=\"Hard Duty [SECOND EDITION]\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/hard-duty-second-edition\">Hard
+        Duty [SECOND EDITION]</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T09:46:28+00:00\">1hour ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>In
+        Hard Duty, you play as Henry Jefferson. Barely acquiring his PhD in theoretical
+        physics, distant and silent, after the mysterious disappearance of...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/doom-mods-engine\"
+        title=\"Doom Mods &#038; Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61514/crop_120x90/tkbs-logo.png\"
+        alt=\"Doom Mods &#038; Engine\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/doom\" title=\"Doom\"><img src=\"https://media.moddb.com/images/games/1/1/26/doom_icon.png\"
+        alt=\"Doom\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/doom-mods-engine\">Doom
+        Mods &#038; Engine</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T09:15:15+00:00\">2hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2024-03-18\">Released Mar
+        18, 2024</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>All My Doom
+        Mods and Engine in one place. Provides various mods, features and improvements
+        that are generally accepted as common practices, Should be...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/destructible-house-rtx\"
+        title=\"Destructible House RTX\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61812/crop_120x90/Screenshot_2024-04-10_002257.png\"
+        alt=\"Destructible House RTX\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/garrys-mod-10\" title=\"Garry's Mod\"><img src=\"https://media.moddb.com/images/games/1/1/233/gmod.1.png\"
+        alt=\"Garry's Mod\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/destructible-house-rtx\">Destructible
+        House RTX</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T07:26:13+00:00\">4hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10\">Released Apr 10, 2024</time> First Person Shooter
+        \ \t\t\t</span>\r\n\t\t\t<p>Garrysmod's Destructible House remixed using Nvidia's
+        RTX-Remix.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/mods/the-numbers\" title=\"The Numbers\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/mods/1/58/57563/crop_120x90/theNumbers.jpg\"
+        alt=\"The Numbers\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a
+        href=\"/games/amnesia-the-dark-descent\" title=\"Amnesia: The Dark Descent\"><img
+        src=\"https://media.moddb.com/images/games/1/14/13339/icon.jpg\" alt=\"Amnesia:
+        The Dark Descent\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/the-numbers\">The Numbers</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T07:02:11+00:00\">4hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Adventure  \t\t\t</span>\r\n\t\t\t<p>Four numbers; Why do they repeat? Her
+        voice; Why do you still hear it? Find your own way to the answers. \u201CCome
+        to me\u201D</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/mods/tiny-units-warcraft-iii\" title=\"Tiny
+        Units - Warcraft 3\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/25/24750/crop_120x90/mod_changes_3.jpg\"
+        alt=\"Tiny Units - Warcraft 3\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/warcraft-iii-frozen-throne\" title=\"Warcraft III:
+        Frozen Throne\"><img src=\"https://media.moddb.com/images/games/1/12/11109/frozenthrone_icon.png\"
+        alt=\"Warcraft III: Frozen Throne\" width=\"32\" height=\"32\" style=\"float:
+        right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/tiny-units-warcraft-iii\">Tiny
+        Units - Warcraft 3</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T04:15:32+00:00\">7hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2014-03-04\">Released 2014</time>
+        Real Time Strategy  \t\t\t</span>\r\n\t\t\t<p>RECOMENDED ONLY FOR WARCRAFT
+        3 PATCH 1.2.7 b. (CLASSIC WARCRAFT 3 - THE FROZEN THRONE). THIS WARCRAFT 3
+        ALL OBJECT DATA WORKS ON VERSION 1.3.2 OR REFORGED...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/laser-tag-2004-viii\"
+        title=\"Laser Tag 2004 VIII\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61808/crop_120x90/Lasertag.png\"
+        alt=\"Laser Tag 2004 VIII\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/vampire-the-masquerade-redemption\" title=\"Vampire:
+        The Masquerade \u2013 Redemption\"><img src=\"https://media.moddb.com/images/games/1/34/33435/ao_icon.1.png\"
+        alt=\"Vampire: The Masquerade \u2013 Redemption\" width=\"32\" height=\"32\"
+        style=\"float: right; padding-left: 4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/laser-tag-2004-viii\">Laser Tag 2004 VIII</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T00:57:40+00:00\">10hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2004-04-08\">Released 2004</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>Welcome
+        to the best version of Laser Tag Modification V.8: The Shadow Of Laos Mafia.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/redridge\" title=\"Half-Rats:
+        Redridge\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/54/53269/crop_120x90/20240130151230_1.jpg\"
+        alt=\"Half-Rats: Redridge\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/redridge\">Half-Rats:
+        Redridge</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-10T00:03:01+00:00\">11hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2025-10-31\">Coming 2025</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>August,
+        1999. You're a fresh college grad passing the time in your parents' rural
+        retreat before the tourist season picks up and your first job as &quot;Junior...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/world-trade-center\"
+        title=\"^ Action at the World Trade Center ^\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/52/51540/crop_120x90/channels4_profile_v01_1024_1.png\"
+        alt=\"^ Action at the World Trade Center ^\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/quake\" title=\"Quake\"><img src=\"https://media.moddb.com/images/games/1/1/2/Quake.png\"
+        alt=\"Quake\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/world-trade-center\">^
+        Action at the World Trade Center ^</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-10T00:01:48+00:00\">11hours ago</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Hello.
+        I present to you my first mod. World Trade Center for Quake, Half-Life, Half-Life
+        2 games. The goal of the project is to make a complete copy with...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/horror-mod-doom-war-of-the-worlds-aliens-etc\"
+        title=\"Horror Mod Map Addon for Cameo (Doom, War of the Worlds, Aliens, etc)\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61806/crop_120x90/game-art-doom-shotgun.jpg\"
+        alt=\"Horror Mod Map Addon for Cameo (Doom, War of the Worlds, Aliens, etc)\"
+        /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<a href=\"/games/openra\"
+        title=\"OpenRA\"><img src=\"https://media.moddb.com/images/games/1/15/14718/soviet-logo.png\"
+        alt=\"OpenRA\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/horror-mod-doom-war-of-the-worlds-aliens-etc\">Horror
+        Mod Map Addon for Cameo (Doom, War of the Worlds, Aliens, etc)</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-09T22:42:27+00:00\">12hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09\">Released Apr 9, 2024</time> Real Time Strategy  \t\t\t</span>\r\n\t\t\t<p>A
+        long time ago there was a famous map called Purgatory, It had monsters from
+        different games for OpenRA. Monsters from Doom, Aliens from Alien, War of...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/count-your-ammo\"
+        title=\"Count Your Ammo\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/62/61805/crop_120x90/yes.jpg\"
+        alt=\"Count Your Ammo\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<a href=\"/games/half-life\" title=\"Half-Life\"><img src=\"https://media.moddb.com/images/games/1/1/1/half-life.png\"
+        alt=\"Half-Life\" width=\"32\" height=\"32\" style=\"float: right; padding-left:
+        4px;\" /></a>\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/mods/count-your-ammo\">Count
+        Your Ammo</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-04-09T22:02:28+00:00\">13hours
+        ago</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2024-04-09\">Released Apr 9, 2024</time> First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>This
+        is a single map mod. It is my first map that I made. Make sure to keep track
+        of your ammo.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\" style=\"text-align:
+        right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/platforms/mac/mods\">More mods &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        mods were found matching the criteria specified. We suggest you try the <a
+        href=\"/platforms/mac/mods\">mod list</a> with no filter applied, to browse
+        all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"5841560\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#5841560\" style=\"color: inherit;\"><time datetime=\"2016-03-21T16:59:08+00:00\">Mar
+        21 2016</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>i hate life</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"5841560\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=5841560\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=5841560\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/platforms/mac/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"7b618ef6118bdc5603d484a48cf1414c\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div id=\"platformfilteroff\" class=\"errorbox\">Filter
+        ModDB to show only <a href=\"/platforms/mac/set\" class=\"toggleplatform\">Mac
+        content</a>.</div>\r\n<div id=\"platformfilteron\" class=\"successbox\" style=\"display:
+        none;\">ModDB is showing only <span class=\"platformname\"></span> content,
+        <a href=\"/platforms/all\" class=\"toggleplatform\">turn this off</a>.</div>\r\n<div
+        style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox nextmediaboxtop\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\"
+        data-dfp-sizes=\"300x250, 300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div>
+        \r\n</div>\r\n\t<div class=\"normalbox menubox\" id=\"platformsinfo\">\n\t\t\t\t<div
+        class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"options\">\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Company</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/apple\">Apple</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.apple.com\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Apple.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"1991-09-15\" itemprop=\"releaseDate\">Released
+        1991</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac&title=Mac+platform\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Mac%20platform&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Mac+platform+https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac&quote=Mac+platform&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fplatforms%2Fmac\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"platformsprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Hardware</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/hardware\">24</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Software</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/software\">9</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engines</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/engines\">315</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Games</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/games\">15,985</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Mods</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/mac/mods\">9,048</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5424 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/platforms\",\"name\":\"Platforms\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/platforms/mac\",\"name\":\"Mac\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=platforms\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\ttags:
+        [\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749107\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749107\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\ttogglePlatform = function(currentoption, response)
+        {\r\n\t\t\tif(response[\"platform\"]) {\r\n\t\t\t\t$(\"#platformfilteroff\").hide();\r\n\t\t\t\t$(\"#platformfilteron\").show().find(\".platformname\").text(response[\"platform\"]);\r\n\t\t\t}
+        else if(response[\"success\"]) {\r\n\t\t\t\t$(\"#platformfilteron\").hide();\r\n\t\t\t\t$(\"#platformfilteroff\").show();\r\n\t\t\t}\r\n\t\t};\r\n\t\t$(\".toggleplatform\").saveUpdate(\"toggleplatform\",
+        togglePlatform);\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status =
+        CookieScript.instance.currentState().categories.includes(\"targeting\") ?
+        \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8722735f4c4993be-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:38:27 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=2yYeWkGWw%2FhBIjTv25ZqukiMY7j7B7FezfMywcRWefnZqNMg2TpF6yZrkqZRlQImxxRRtDXxASnEWqmeBpWxgoIHto%2FQbFnr59s%2FDl8KV3dIvhI7BLNL96%2Bri2ivvjQZyy%2BJ87MkWmdcd%2Bo%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '73577'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=c233fd9c19de7a0aacd5079b7e84c1e4; expires=Wed, 10-Apr-2024 11:48:27
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

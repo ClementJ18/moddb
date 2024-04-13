@@ -680,8 +680,6 @@ interactions:
       - 8188d6796fc62a4a-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -696,12 +694,1487 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '61288'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
       - masterchief=28c49d979256b8ee37e439abe5a2455f; expires=Thu, 19-Oct-2023 12:06:26
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/mods/armory-world-of-warcraft
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Armory
+        mod for World of Warcraft - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"armory mod, world of warcraft, total
+        conversion, addon, development, indie, extension, creation, episode, chapter,
+        expansion pack, single, multiplayer, realism, role, playing\" />\r\n\t<meta
+        name=\"description\" content=\"An update to the Armory mod by Warmexx.           \"
+        />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta
+        property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\"
+        content=\"Armory mod for World of Warcraft\" />\r\n\t<meta property=\"og:description\"
+        content=\"An update to the Armory mod by Warmexx.           \" />\r\n\t<meta
+        property=\"og:site_name\" content=\"ModDB\" />\r\n\t<meta property=\"og:type\"
+        content=\"game\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/mods/armory-world-of-warcraft\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Armory mod for World of Warcraft\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"An update to the Armory mod by Warmexx.           \" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/mods/armory-world-of-warcraft\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/mods/armory-world-of-warcraft/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Armory mod for World of Warcraft feed\"
+        />\t<script async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single
+        Player\",\"Multiplayer\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Simulation\",\"RPG\"],\"name\":
+        \"World of Warcraft\",\"platforms\":[\"Mac\",\"PC\",\"Windows\"]}],\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Armory mod for World of Warcraft</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/add\">add mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Game, Mod\" /><meta itemprop=\"operatingSystem\" content=\"Windows\"
+        /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/mods/armory-world-of-warcraft\"
+        itemprop=\"mainEntityOfPage\">Armory</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/games/world-of-warcraft\">World of Warcraft mod</a> | <time datetime=\"2007-12-17\"
+        itemprop=\"datePublished\">Released 2007</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/mods/armory-world-of-warcraft\">summary</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/articles\">articles</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/reviews\">reviews</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/downloads\">files</a></li><li
+        class=\"\"><a href=\"/mods/armory-world-of-warcraft/addons\">addons</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/videos\">videos</a></li><li
+        class=\"\"><a href=\"/mods/armory-world-of-warcraft/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"An update to the Armory mod by Warmexx.
+        \          \" />\t<div class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div id=\"profiledescription\"><p>In
+        short</p>\n<p>. All armory information as seen on the offical site from Blizzard
+        Entertainment, in game, for all your characters, on all realms<br /> . Information
+        about all skills of your characters, including professions with recipies<br
+        /> . Searchable inventory, including bags, bank and mailbox<br /> . Quest
+        logs of all your characters</p>\n<p>Features</p>\n<p>. Overview of location,
+        stats, equipment, reputation, skill levels, talents and honor per character<br
+        /> . Overview of inventory items, including bag, bank and mail contents per
+        character and overall<br /> . Overview of quests per character<br /> . Overview
+        of profession recipes per character<br /> . Searchable inventory per character
+        or overall<br /> . Searchable professions by level (e.g. '10' or '10-20')
+        or recipe name<br /> . Multiple realm support<br /> . Copy link in chat frame
+        support (shift-click in equipment, inventory, recipes and quests)<br /> .
+        Gold per character and faction total<br /> . Configurable inventory item expiration
+        scanning at start-up and on-demand<br /> . Draggable frames<br /> . Titan,
+        FuBar, Auctioneer (EnhTooltip) and oGlow support<br /> . EquipCompare compatible
+        (needs a patched version of EQC; see <a  href=\"http://www.wow-neighbours.com\">Wow-neighbours.com</a>)</p>\n<p>Startup</p>\n<p>There
+        are four different ways in which you can start Armory.</p>\n<p>1) /armory<br
+        /> 2) /ar<br /> 3) Bind a key in the key bindings section e.g. shift-a<br
+        /> 4) Use Titan or FuBar integration</p>\n<p>Data Collection</p>\n<p>Once
+        Armory is enabled as a WoW add-on it will scan and keep track of your playing
+        character's data. But some information can only be reached when you actually
+        open a game window. Before you do so Armory will not be aware of any information
+        contained in it. Game windows concerned are the bank, mailbox, and your skill
+        windows (i.e. professions). Once opened Armory will contain their data.</p>\n<p>Options</p>\n<p>Armory's
+        options are set by using the command-line. To get an overview type '/ar help'.
+        When using Titan or FuBar integration some options are also available in the
+        icon's context menu.</p>\n<p>Configuration</p>\n<p>Although you don't need
+        to configure Armory before using it, there are some settings you can change:</p>\n<p>/ar
+        set expdays [numdays]*<br /> Armory will check the inbox items in the inventory
+        when you enter WoW by examining the expiration date of the mail message containing
+        that item. You will get warned for items that expire within [numdays]. Set
+        this to 0 to switch this feature of. The default is 3 days.<br /> Example:
+        /ar set expdays 1</p>\n<p>/ar set savesac on|off*<br /> Set this to on if
+        you want Armory to remember the 'Search all characters' option in the inventory
+        list view. The default is off.<br /> Example: /ar set savesac on</p>\n<p>/ar
+        set savelcv on|off*<br /> Set this to on if you want Armory to remember the
+        last character viewed between sessions. The default is off.<br /> Example:
+        /ar set savelcv on</p>\n<p>* Using /ar set xxx without specifying a value
+        will display the current setting, e.g. '/ar set expdays' will show for example
+        'current setting: 3'.</p>\n<p>Maintenance</p>\n<p>There are some command-line
+        options you can use to delete characters from your database:</p>\n<p>/ar delete
+        all<br /> Deletes all characters in the database. The playing character will
+        be rescanned.<br /> Example: /ar delete all</p>\n<p>/ar delete realm [name]<br
+        /> Deletes all characters that belong to the specified realm. If [name] is
+        not provided the current realm will be assumed. If the playing character is
+        part of the realm deleted, it will be rescanned.<br /> Example: /ar delete
+        realm MyRealm (case sensitive)</p>\n<p>/ar delete char [name] [realm]<br />
+        Deletes the specified character from the database. If [name] is omitted the
+        playing character will be deleted first and then rescanned. If [realm] is
+        not specified the current realm will be assumed.<br /> Example: /ar delete
+        char MyChar MyRealm (case sensitive)</p>\n<p>Localization</p>\n<p>Currently
+        Armory only supports the English locale, but it is written with localization
+        in mind.<br /> If you want to translate Armory you have to create a localized
+        version of the 'Localization.lua' file that can be found in Armory's install
+        directory (see <a  href=\"http://www.wowwiki.com\">Wowwiki.com</a> for more
+        details about localization). Send me a copy if you like your work to be included
+        in a next release. But please test it thoroughly first because it will be
+        likely that I don't understand a word you're writing and can't make changes
+        when things won't fit for example.</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/images/image2#imagebox\"
+        title=\"Image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236642.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft/images/image1#imagebox\" title=\"Image\"><img
+        src=\"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236641.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft/images/image0#imagebox\" title=\"Image\"><img
+        src=\"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236640.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t\t\t\t<li><span
+        class=\"empty\" title=\"No image uploaded\"></span></li>\r\n\t\t\t\t\t\t<li><span
+        class=\"empty\" title=\"No image uploaded\"></span></li>\r\n\t\t\t\t\t\t<li><span
+        class=\"empty\" title=\"No image uploaded\"></span></li>\r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next nextoff\"><a href=\"#\" title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\t</ul>\r\n\t</div>\r\n</div><div class=\"column span-300-alt first
+        tabsummary\">\t<div class=\"normalbox menubox\" id=\"embedbuttons\">\n\t\t\t\t<div
+        class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t<p>To
+        promote Armory and <a href=\"/mods/armory-world-of-warcraft/stats\">grow its
+        popularity</a> (<a href=\"/mods/top\">top mods</a>), use the embed code provided
+        on your homepage, blog, forums and elsewhere you desire. Or try <a href=\"#\"
+        class=\"togglewidget\">our widget</a>.</p>\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"display:
+        none;\">\n\t\t\t\t\t\t<textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        100%; height: 44px;\" class=\"text\" >&lt;iframe width=&quot;600&quot; height=&quot;180&quot;
+        src=&quot;https://www.moddb.com/mods/armory-world-of-warcraft/widget&quot;
+        frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;&gt;Armory
+        mod - ModDB&lt;/a&gt;</textarea><div class=\"sharewidget\" style=\"text-align:
+        center;\"></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea
+        name=\"\" cols=\"90\" rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\"
+        >&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;
+        title=&quot;View Armory on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/popularity/medium/mods/40320.png&quot;
+        alt=&quot;Armory&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/armory-world-of-warcraft\"
+        title=\"View Armory on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/mods/40320.png\"
+        alt=\"Armory\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;
+        title=&quot;View Armory on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/rating/medium/mods/40320.png&quot; alt=&quot;Armory&quot;
+        /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft\" title=\"View Armory on ModDB\"><img
+        src=\"https://button.moddb.com/rating/medium/mods/40320.png\" alt=\"Armory\"
+        /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;
+        title=&quot;View Armory on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://media.moddb.com/images/global/moddb.png&quot; alt=&quot;Armory&quot;
+        /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft\" title=\"View Armory - ModDB\"><img
+        src=\"https://media.moddb.com/images/global/moddb.png\" alt=\"Armory\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo articles were found matching the criteria specified.
+        We suggest you try the <a href=\"/mods/armory-world-of-warcraft/articles\">article
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"downloadsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"https://rss.moddb.com/mods/armory-world-of-warcraft/downloads/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Files</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft/addons/armory-2-3-4\" title=\"Armory
+        2.3.4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/153/152395/crop_120x90/00236640.jpg\"
+        alt=\"Armory 2.3.4\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/armory-world-of-warcraft/addons/armory-2-3-4\">Armory 2.3.4</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2007-12-17\">Dec 17 2007</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tWeapon Model  \t\t\t</span>\r\n\t\t\t<p>An
+        update to the Armory mod by Warmexx.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/addons/armory-v2-2-0\"
+        title=\"Armory v2.2.0\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/153/152457/crop_120x90/00235364.jpg\"
+        alt=\"Armory v2.2.0\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/armory-world-of-warcraft/addons/armory-v2-2-0\">Armory
+        v2.2.0</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2007-12-10\">Dec
+        10 2007</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tWeapon
+        Model  \t\t\t</span>\r\n\t\t\t<p>An update to the Armory addon.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/addons/armory-2-1-5\"
+        title=\"Armory 2.1.5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/153/152505/crop_120x90/00234660.jpg\"
+        alt=\"Armory 2.1.5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/armory-world-of-warcraft/addons/armory-2-1-5\">Armory 2.1.5</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2007-12-06\">Dec 6 2007</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tWeapon Model  \t\t\t</span>\r\n\t\t\t<p>This
+        mod adds several features pertaining to the armory aspect of the game.  See
+        full details for the scoop.</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        files were found matching the criteria specified. We suggest you try the <a
+        href=\"/mods/armory-world-of-warcraft/downloads\">file list</a> with no filter
+        applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/mods/armory-world-of-warcraft/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"8433736477dadcab599c2db3c344fb90\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"modsbrowserecommended\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/sw-stats\" title=\"SW Stats\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40682/crop_120x90/00223085.jpg\"
+        alt=\"SW Stats\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/sw-stats\">SW Stats</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-11-01T15:19:51+00:00\">Nov 1 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2007-10-08\">Released 2007</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>A damage/Heal meter addon mod that
+        allows for a range of customizations.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/target-class\"
+        title=\"Target Class\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40178/crop_120x90/00243814.jpg\"
+        alt=\"Target Class\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/target-class\">Target Class</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-11-01T06:53:14+00:00\">Nov 1 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2008-01-29\">Released 2008</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>Displays the class of enemy targeted.
+        Target Class Ever wondered what class you have targeted, What type of caster,
+        what to expect next? Death coil, hammer...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/atlasquest\" title=\"AtlasQuest\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40390/crop_120x90/00233770.jpg\"
+        alt=\"AtlasQuest\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/atlasquest\">AtlasQuest</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-11-01T06:03:15+00:00\">Nov 1 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2007-11-30\">Released 2007</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>This is an addon for Atlas or AlphaMap
+        that displays a list of</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/gmdx\" title=\"GMDX\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/mods/1/23/22166/crop_120x90/gmdx.png\"
+        alt=\"GMDX\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/gmdx\">GMDX</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-07T03:44:53+00:00\">Mar 7 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2017-07-08\">Released 2017</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>GMDX is an award-winning large-scale
+        modification for the 2000 PC classic Deus Ex. GMDX addresses the many flaws
+        of the game, polishes it to a very high...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/gurubashi-catacombs\"
+        title=\"Gurubashi Catacombs\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/51/50563/crop_120x90/logomoddb.png\"
+        alt=\"Gurubashi Catacombs\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/gurubashi-catacombs\">Gurubashi Catacombs</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-07-04T10:14:23+00:00\">Jul
+        4 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2021-07-04\">Released 2021</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>I
+        decided to finish abandoned Blizzard idea of Gurubashi Catacombs - A first
+        World of Warcraft arena planned for classic WoW.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/btex\" title=\"Btex\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/40/39146/crop_120x90/00283513.jpg\"
+        alt=\"Btex\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/btex\">Btex</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-11-01T06:15:10+00:00\">Nov 1 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2008-11-03\">Released 2008</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>This mod by tiggy is a very lightweight
+        addon for World Of Warcraft providing Background texture at the bottom of
+        the screen.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\" style=\"text-align:
+        right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/mods\">More mods &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        mods were found matching the criteria specified. We suggest you try the <a
+        href=\"/mods\">mod list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"modsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=mods&amp;siteareaid=40320\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=mods&amp;siteareaid=40320\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/world-of-warcraft\"><img
+        src=\"https://media.moddb.com/images/games/1/1/147/wow-icon.png\" alt=\"World
+        of Warcraft\" width=\"32\" height=\"32\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Game</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/world-of-warcraft\">World
+        of Warcraft</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Creator</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"author\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/members/gamewatcher\" itemprop=\"url\"><span itemprop=\"name\">GameWatcher</span></a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=GameWatcher\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2007-12-17\">Released 2007</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Mod watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=mods&amp;siteareaid=40320\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft&title=Armory+mod+for+World+of+Warcraft\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Armory%20mod%20for%20World%20of%20Warcraft&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Armory+mod+for+World+of+Warcraft+https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft&quote=Armory+mod+for+World+of+Warcraft&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        mod is NOT using RTX Remix. Learn more about <a href=\"/news/rtx-remix-on-moddb\">ModDB's
+        collaboration with the Remix community</a> to organize all compatible games,
+        and <a href=\"/games/world-of-warcraft#rtxremix\">World of Warcraft's</a>
+        support for RTX. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"0\" />-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 0%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">0</span>
+        votes submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"mods\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"40320\" /><input type=\"hidden\" name=\"hash\" value=\"53000d87a52648880c66d431848eb52f\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"normalbox menubox\"
+        id=\"modsstyle\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Style</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"inner\">\n\t\t\t<div
+        class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"table tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Genre</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"genre\"><a href=\"/mods?filter=t&amp;genre=11\"
+        rel=\"nofollow\">Role Playing</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Theme</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods?filter=t&amp;theme=8\" rel=\"nofollow\">Realism</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Players</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods?filter=t&amp;players=3\"
+        rel=\"nofollow\">Single &amp; Multiplayer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"8433736477dadcab599c2db3c344fb90\" />\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"8433736477dadcab599c2db3c344fb90\" />\t\t\t\t\t<div class=\"row rowtagsdemo
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/TAGID\">TAGID</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=e0b46227a2a01ea71fb3f733b36a4870\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=e0b46227a2a01ea71fb3f733b36a4870&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"e0b46227a2a01ea71fb3f733b36a4870\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"mods\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"40320\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox menubox\" id=\"modsprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/top\">34,670 of 56,766</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/stats\">1,491
+        (1 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2018-11-01T06:57:15+00:00\"
+        itemprop=\"dateModified\">5 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Addons</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/addons\">3</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5158 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/world-of-warcraft\",\"name\":\"World
+        of Warcraft\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/world-of-warcraft/mods\",\"name\":\"Mods\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/mods/armory-world-of-warcraft\",\"name\":\"Armory\",\"image\":\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=mods\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"mods\",\r\n\t\t\t\t\t\ttags:
+        [\"single-player\",\"multiplayer\",\"modern-day\",\"simulation\",\"rpg\",\"mac\",\"pc\",\"windows\"],\r\n\t\t\t\t\t\tgames:
+        [\"world-of-warcraft\"],\r\n\t\t\t\t\t\tplayers: [\"single\",\"multi\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736075\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736075\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = [];\r\n\t\t\t\tvar shownvideo = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/mods/armory-world-of-warcraft/images/image2#imagebox\", \"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236642.jpg\",
+        2019723, \"Image\", \"image\"); slidearr[1][1] = new Array(0, \"/mods/armory-world-of-warcraft/images/image1#imagebox\",
+        \"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236641.jpg\",
+        2019722, \"Image\", \"image\"); slidearr[1][2] = new Array(0, \"/mods/armory-world-of-warcraft/images/image0#imagebox\",
+        \"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236640.jpg\",
+        2019721, \"Image\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 1, 6, slidearr, \"\", true);\n\r\n\t\t\t$(\".togglewidget\").click(function()
+        {\r\n\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").closest(\".row\").slideToggle();\r\n\t\t\t\t\r\n\t\t\t\tif($(this).closest(\".body\").find(\".sharewidget\").html().length
+        == 0) {\r\n\t\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").html($(this).closest(\".body\").find(\".sharewidget\").prev().val().replace(/\\<br\\>\\<a
+        href=.*?\\<\\/a\\>/, \"\"));\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\treturn false;\r\n\t\t\t});\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n$(\"form.ratingform\").rating(\"\",
+        20, 20);\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=mods\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 872135341dde6628-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:01:15 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=mfcRr3ddEoaKxHxIjkeG5Abxd2ejTts%2F%2Fcr77Az5h23zix4ja6xoTB6eMdQC5igzrh%2FOOs3hp%2Fa%2B0akjOgYjfjeDqUk20jomWevPTJupg%2BPpisV3VB4VchXoV6H2Apl270%2BBY%2BNlEW%2BtdpE%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '59196'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=2edcaf0ba9e557f7f42aba5c1b7a58ec; expires=Wed, 10-Apr-2024 08:11:15
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/mods/armory-world-of-warcraft
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Armory
+        mod for World of Warcraft - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"armory mod, world of warcraft, total
+        conversion, addon, development, indie, extension, creation, episode, chapter,
+        expansion pack, single, multiplayer, realism, role, playing\" />\r\n\t<meta
+        name=\"description\" content=\"An update to the Armory mod by Warmexx.           \"
+        />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta
+        property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\"
+        content=\"Armory mod for World of Warcraft\" />\r\n\t<meta property=\"og:description\"
+        content=\"An update to the Armory mod by Warmexx.           \" />\r\n\t<meta
+        property=\"og:site_name\" content=\"ModDB\" />\r\n\t<meta property=\"og:type\"
+        content=\"game\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/mods/armory-world-of-warcraft\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Armory mod for World of Warcraft\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"An update to the Armory mod by Warmexx.           \" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/mods/armory-world-of-warcraft\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/mods/armory-world-of-warcraft/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Armory mod for World of Warcraft feed\"
+        />\t<script async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single
+        Player\",\"Multiplayer\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Simulation\",\"RPG\"],\"name\":
+        \"World of Warcraft\",\"platforms\":[\"Mac\",\"PC\",\"Windows\"]}],\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Armory mod for World of Warcraft</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/add\">add mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Game, Mod\" /><meta itemprop=\"operatingSystem\" content=\"Windows\"
+        /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/mods/armory-world-of-warcraft\"
+        itemprop=\"mainEntityOfPage\">Armory</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/games/world-of-warcraft\">World of Warcraft mod</a> | <time datetime=\"2007-12-17\"
+        itemprop=\"datePublished\">Released 2007</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/mods/armory-world-of-warcraft\">summary</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/articles\">articles</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/reviews\">reviews</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/downloads\">files</a></li><li
+        class=\"\"><a href=\"/mods/armory-world-of-warcraft/addons\">addons</a></li><li
+        class=\"off\"><a href=\"/mods/armory-world-of-warcraft/videos\">videos</a></li><li
+        class=\"\"><a href=\"/mods/armory-world-of-warcraft/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"An update to the Armory mod by Warmexx.
+        \          \" />\t<div class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div id=\"profiledescription\"><p>In
+        short</p>\n<p>. All armory information as seen on the offical site from Blizzard
+        Entertainment, in game, for all your characters, on all realms<br /> . Information
+        about all skills of your characters, including professions with recipies<br
+        /> . Searchable inventory, including bags, bank and mailbox<br /> . Quest
+        logs of all your characters</p>\n<p>Features</p>\n<p>. Overview of location,
+        stats, equipment, reputation, skill levels, talents and honor per character<br
+        /> . Overview of inventory items, including bag, bank and mail contents per
+        character and overall<br /> . Overview of quests per character<br /> . Overview
+        of profession recipes per character<br /> . Searchable inventory per character
+        or overall<br /> . Searchable professions by level (e.g. '10' or '10-20')
+        or recipe name<br /> . Multiple realm support<br /> . Copy link in chat frame
+        support (shift-click in equipment, inventory, recipes and quests)<br /> .
+        Gold per character and faction total<br /> . Configurable inventory item expiration
+        scanning at start-up and on-demand<br /> . Draggable frames<br /> . Titan,
+        FuBar, Auctioneer (EnhTooltip) and oGlow support<br /> . EquipCompare compatible
+        (needs a patched version of EQC; see <a  href=\"http://www.wow-neighbours.com\">Wow-neighbours.com</a>)</p>\n<p>Startup</p>\n<p>There
+        are four different ways in which you can start Armory.</p>\n<p>1) /armory<br
+        /> 2) /ar<br /> 3) Bind a key in the key bindings section e.g. shift-a<br
+        /> 4) Use Titan or FuBar integration</p>\n<p>Data Collection</p>\n<p>Once
+        Armory is enabled as a WoW add-on it will scan and keep track of your playing
+        character's data. But some information can only be reached when you actually
+        open a game window. Before you do so Armory will not be aware of any information
+        contained in it. Game windows concerned are the bank, mailbox, and your skill
+        windows (i.e. professions). Once opened Armory will contain their data.</p>\n<p>Options</p>\n<p>Armory's
+        options are set by using the command-line. To get an overview type '/ar help'.
+        When using Titan or FuBar integration some options are also available in the
+        icon's context menu.</p>\n<p>Configuration</p>\n<p>Although you don't need
+        to configure Armory before using it, there are some settings you can change:</p>\n<p>/ar
+        set expdays [numdays]*<br /> Armory will check the inbox items in the inventory
+        when you enter WoW by examining the expiration date of the mail message containing
+        that item. You will get warned for items that expire within [numdays]. Set
+        this to 0 to switch this feature of. The default is 3 days.<br /> Example:
+        /ar set expdays 1</p>\n<p>/ar set savesac on|off*<br /> Set this to on if
+        you want Armory to remember the 'Search all characters' option in the inventory
+        list view. The default is off.<br /> Example: /ar set savesac on</p>\n<p>/ar
+        set savelcv on|off*<br /> Set this to on if you want Armory to remember the
+        last character viewed between sessions. The default is off.<br /> Example:
+        /ar set savelcv on</p>\n<p>* Using /ar set xxx without specifying a value
+        will display the current setting, e.g. '/ar set expdays' will show for example
+        'current setting: 3'.</p>\n<p>Maintenance</p>\n<p>There are some command-line
+        options you can use to delete characters from your database:</p>\n<p>/ar delete
+        all<br /> Deletes all characters in the database. The playing character will
+        be rescanned.<br /> Example: /ar delete all</p>\n<p>/ar delete realm [name]<br
+        /> Deletes all characters that belong to the specified realm. If [name] is
+        not provided the current realm will be assumed. If the playing character is
+        part of the realm deleted, it will be rescanned.<br /> Example: /ar delete
+        realm MyRealm (case sensitive)</p>\n<p>/ar delete char [name] [realm]<br />
+        Deletes the specified character from the database. If [name] is omitted the
+        playing character will be deleted first and then rescanned. If [realm] is
+        not specified the current realm will be assumed.<br /> Example: /ar delete
+        char MyChar MyRealm (case sensitive)</p>\n<p>Localization</p>\n<p>Currently
+        Armory only supports the English locale, but it is written with localization
+        in mind.<br /> If you want to translate Armory you have to create a localized
+        version of the 'Localization.lua' file that can be found in Armory's install
+        directory (see <a  href=\"http://www.wowwiki.com\">Wowwiki.com</a> for more
+        details about localization). Send me a copy if you like your work to be included
+        in a next release. But please test it thoroughly first because it will be
+        likely that I don't understand a word you're writing and can't make changes
+        when things won't fit for example.</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/images/image2#imagebox\"
+        title=\"Image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236642.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft/images/image1#imagebox\" title=\"Image\"><img
+        src=\"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236641.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft/images/image0#imagebox\" title=\"Image\"><img
+        src=\"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236640.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t\t\t\t<li><span
+        class=\"empty\" title=\"No image uploaded\"></span></li>\r\n\t\t\t\t\t\t<li><span
+        class=\"empty\" title=\"No image uploaded\"></span></li>\r\n\t\t\t\t\t\t<li><span
+        class=\"empty\" title=\"No image uploaded\"></span></li>\r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next nextoff\"><a href=\"#\" title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\t</ul>\r\n\t</div>\r\n</div><div class=\"column span-300-alt first
+        tabsummary\">\t<div class=\"normalbox menubox\" id=\"embedbuttons\">\n\t\t\t\t<div
+        class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t<p>To
+        promote Armory and <a href=\"/mods/armory-world-of-warcraft/stats\">grow its
+        popularity</a> (<a href=\"/mods/top\">top mods</a>), use the embed code provided
+        on your homepage, blog, forums and elsewhere you desire. Or try <a href=\"#\"
+        class=\"togglewidget\">our widget</a>.</p>\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"display:
+        none;\">\n\t\t\t\t\t\t<textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        100%; height: 44px;\" class=\"text\" >&lt;iframe width=&quot;600&quot; height=&quot;180&quot;
+        src=&quot;https://www.moddb.com/mods/armory-world-of-warcraft/widget&quot;
+        frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;&gt;Armory
+        mod - ModDB&lt;/a&gt;</textarea><div class=\"sharewidget\" style=\"text-align:
+        center;\"></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea
+        name=\"\" cols=\"90\" rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\"
+        >&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;
+        title=&quot;View Armory on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/popularity/medium/mods/40320.png&quot;
+        alt=&quot;Armory&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/armory-world-of-warcraft\"
+        title=\"View Armory on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/mods/40320.png\"
+        alt=\"Armory\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;
+        title=&quot;View Armory on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/rating/medium/mods/40320.png&quot; alt=&quot;Armory&quot;
+        /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft\" title=\"View Armory on ModDB\"><img
+        src=\"https://button.moddb.com/rating/medium/mods/40320.png\" alt=\"Armory\"
+        /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/mods/armory-world-of-warcraft&quot;
+        title=&quot;View Armory on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://media.moddb.com/images/global/moddb.png&quot; alt=&quot;Armory&quot;
+        /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft\" title=\"View Armory - ModDB\"><img
+        src=\"https://media.moddb.com/images/global/moddb.png\" alt=\"Armory\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo articles were found matching the criteria specified.
+        We suggest you try the <a href=\"/mods/armory-world-of-warcraft/articles\">article
+        list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"downloadsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"https://rss.moddb.com/mods/armory-world-of-warcraft/downloads/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Files</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/armory-world-of-warcraft/addons/armory-2-3-4\" title=\"Armory
+        2.3.4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/153/152395/crop_120x90/00236640.jpg\"
+        alt=\"Armory 2.3.4\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/armory-world-of-warcraft/addons/armory-2-3-4\">Armory 2.3.4</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2007-12-17\">Dec 17 2007</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tWeapon Model  \t\t\t</span>\r\n\t\t\t<p>An
+        update to the Armory mod by Warmexx.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/addons/armory-v2-2-0\"
+        title=\"Armory v2.2.0\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/153/152457/crop_120x90/00235364.jpg\"
+        alt=\"Armory v2.2.0\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/armory-world-of-warcraft/addons/armory-v2-2-0\">Armory
+        v2.2.0</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2007-12-10\">Dec
+        10 2007</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tWeapon
+        Model  \t\t\t</span>\r\n\t\t\t<p>An update to the Armory addon.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/addons/armory-2-1-5\"
+        title=\"Armory 2.1.5\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/downloads/1/153/152505/crop_120x90/00234660.jpg\"
+        alt=\"Armory 2.1.5\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/armory-world-of-warcraft/addons/armory-2-1-5\">Armory 2.1.5</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2007-12-06\">Dec 6 2007</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tWeapon Model  \t\t\t</span>\r\n\t\t\t<p>This
+        mod adds several features pertaining to the armory aspect of the game.  See
+        full details for the scoop.</p>\t\t</div>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        files were found matching the criteria specified. We suggest you try the <a
+        href=\"/mods/armory-world-of-warcraft/downloads\">file list</a> with no filter
+        applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/mods/armory-world-of-warcraft/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"5ca7e9e7e6f4366ba069f90b560782f3\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"modsbrowserecommended\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/atlasquest\" title=\"AtlasQuest\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40390/crop_120x90/00233770.jpg\"
+        alt=\"AtlasQuest\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/atlasquest\">AtlasQuest</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2018-11-01T06:03:15+00:00\">Nov 1 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2007-11-30\">Released 2007</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>This is an addon for Atlas or AlphaMap
+        that displays a list of</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/natur-enemycastbar\" title=\"Natur
+        EnemyCastBar\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40686/crop_120x90/00223064.jpg\"
+        alt=\"Natur EnemyCastBar\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/natur-enemycastbar\">Natur EnemyCastBar</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-11-01T15:28:16+00:00\">Nov
+        1 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2007-10-08\">Released 2007</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>This
+        mod brings Natur EnemyCastBar up to version 8.6.0, and adds support for WoW
+        2.2.0.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/titan-panel-factions\" title=\"Titan Panel Factions\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/mods/1/39/38882/crop_120x90/00303506.jpg\"
+        alt=\"Titan Panel Factions\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/titan-panel-factions\">Titan Panel Factions</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-11-01T06:06:04+00:00\">Nov
+        1 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2009-03-20\">Released 2009</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>This
+        mod by Phanx (Updated by Omega) adds basic faction reputation display to Titan
+        Panel.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/mods/deadly-boss-mods-world-of-warcraft-wrath-of-the-lich-king\" title=\"Deadly
+        Boss Mods\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/39/38178/crop_120x90/00376990.jpg\"
+        alt=\"Deadly Boss Mods\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/deadly-boss-mods-world-of-warcraft-wrath-of-the-lich-king\">Deadly
+        Boss Mods</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-11-01T06:03:55+00:00\">Nov
+        1 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2011-11-04\">Released 2011</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>*
+        Boss mods for all raid bosses. Updates the Ruby Sanctum boss mods which are
+        currently still based on PTR data and it also fixes some issues caused by...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/fallout-fixt\"
+        title=\"Fallout Fixt\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/28/27475/crop_120x90/falloutw.jpg\"
+        alt=\"Fallout Fixt\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/mods/fallout-fixt\">Fallout Fixt</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2022-10-05T15:37:35+00:00\">Oct 5 2022</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2010-12-15\">Released 2010</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>Fallout Fixt exists to enhance, expand
+        and improve Fallout. This includes fixing bugs, restoring content, modifying
+        balance, adding features, and many...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/mods/ackis-recipe-list\"
+        title=\"Ackis Recipe List\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/41/40349/crop_120x90/00235518.jpg\"
+        alt=\"Ackis Recipe List\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/mods/ackis-recipe-list\">Ackis Recipe List</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-11-01\">Nov 1 2018</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2007-12-11\">Released 2007</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>An update to the Ackis Recipe List
+        mod.  This mod will scan an open trade skill and print out a list of missing
+        recipes.</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\" style=\"text-align:
+        right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/mods\">More mods &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        mods were found matching the criteria specified. We suggest you try the <a
+        href=\"/mods\">mod list</a> with no filter applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"modsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=mods&amp;siteareaid=40320\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=mods&amp;siteareaid=40320\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/world-of-warcraft\"><img
+        src=\"https://media.moddb.com/images/games/1/1/147/wow-icon.png\" alt=\"World
+        of Warcraft\" width=\"32\" height=\"32\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Game</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/world-of-warcraft\">World
+        of Warcraft</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Creator</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"author\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/members/gamewatcher\" itemprop=\"url\"><span itemprop=\"name\">GameWatcher</span></a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=GameWatcher\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2007-12-17\">Released 2007</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Mod watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=mods&amp;siteareaid=40320\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft&title=Armory+mod+for+World+of+Warcraft\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Armory%20mod%20for%20World%20of%20Warcraft&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Armory+mod+for+World+of+Warcraft+https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft&quote=Armory+mod+for+World+of+Warcraft&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fmods%2Farmory-world-of-warcraft\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        mod is NOT using RTX Remix. Learn more about <a href=\"/news/rtx-remix-on-moddb\">ModDB's
+        collaboration with the Remix community</a> to organize all compatible games,
+        and <a href=\"/games/world-of-warcraft#rtxremix\">World of Warcraft's</a>
+        support for RTX. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"0\" />-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 0%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">0</span>
+        votes submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"mods\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"40320\" /><input type=\"hidden\" name=\"hash\" value=\"53000d87a52648880c66d431848eb52f\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"normalbox menubox\"
+        id=\"modsstyle\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Style</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"inner\">\n\t\t\t<div
+        class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"table tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Genre</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"genre\"><a href=\"/mods?filter=t&amp;genre=11\"
+        rel=\"nofollow\">Role Playing</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Theme</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods?filter=t&amp;theme=8\" rel=\"nofollow\">Realism</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Players</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods?filter=t&amp;players=3\"
+        rel=\"nofollow\">Single &amp; Multiplayer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"5ca7e9e7e6f4366ba069f90b560782f3\" />\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"5ca7e9e7e6f4366ba069f90b560782f3\" />\t\t\t\t\t<div class=\"row rowtagsdemo
+        clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/TAGID\">TAGID</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=68db7f9171781a2b25490be0cad2503b\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=68db7f9171781a2b25490be0cad2503b&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"68db7f9171781a2b25490be0cad2503b\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"mods\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"40320\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox menubox\" id=\"modsprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/top\">27,684 of 56,767</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/stats\">1,492
+        (2 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2018-11-01T06:57:15+00:00\"
+        itemprop=\"dateModified\">5 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Addons</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/armory-world-of-warcraft/addons\">3</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5344 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/world-of-warcraft\",\"name\":\"World
+        of Warcraft\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/world-of-warcraft/mods\",\"name\":\"Mods\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/mods/armory-world-of-warcraft\",\"name\":\"Armory\",\"image\":\"https://media.moddb.com/images/mods/1/41/40320/00236640.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=mods\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"mods\",\r\n\t\t\t\t\t\ttags:
+        [\"single-player\",\"multiplayer\",\"modern-day\",\"simulation\",\"rpg\",\"mac\",\"pc\",\"windows\"],\r\n\t\t\t\t\t\tgames:
+        [\"world-of-warcraft\"],\r\n\t\t\t\t\t\tplayers: [\"single\",\"multi\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712748766\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712748766\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = [];\r\n\t\t\t\tvar shownvideo = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/mods/armory-world-of-warcraft/images/image2#imagebox\", \"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236642.jpg\",
+        2019723, \"Image\", \"image\"); slidearr[1][1] = new Array(0, \"/mods/armory-world-of-warcraft/images/image1#imagebox\",
+        \"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236641.jpg\",
+        2019722, \"Image\", \"image\"); slidearr[1][2] = new Array(0, \"/mods/armory-world-of-warcraft/images/image0#imagebox\",
+        \"https://media.moddb.com/cache/images/mods/1/41/40320/crop_120x90/00236640.jpg\",
+        2019721, \"Image\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 1, 6, slidearr, \"\", true);\n\r\n\t\t\t$(\".togglewidget\").click(function()
+        {\r\n\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").closest(\".row\").slideToggle();\r\n\t\t\t\t\r\n\t\t\t\tif($(this).closest(\".body\").find(\".sharewidget\").html().length
+        == 0) {\r\n\t\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").html($(this).closest(\".body\").find(\".sharewidget\").prev().val().replace(/\\<br\\>\\<a
+        href=.*?\\<\\/a\\>/, \"\"));\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\treturn false;\r\n\t\t\t});\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n$(\"form.ratingform\").rating(\"\",
+        20, 20);\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=mods\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87226b0b5a8e0e10-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:32:46 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=mP1LC%2Fq4SsH7KaG0B1s79ZxEAlejDmEsVIZktCNJQYkkCVAGclOMDhH26OHfPrqpi5fGOOGZ47AdyMfQlYBlujEXeK%2Fo7AkxIF0tN9jeKQWUG%2FQ%2BecjEq7c9WDfwh1gIG7RC%2F%2BpVDFa9wP4%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '59415'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=ae8eaf5fd8e2d46d142b37b372ca95f8; expires=Wed, 10-Apr-2024 11:42:46
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

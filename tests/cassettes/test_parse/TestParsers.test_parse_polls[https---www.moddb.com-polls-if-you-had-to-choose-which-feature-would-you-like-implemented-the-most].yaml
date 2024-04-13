@@ -768,8 +768,6 @@ interactions:
       - 8188ec186be92a80-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -784,12 +782,1582 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '68492'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
       - masterchief=006d9759cd6f81bf87f4985885781ab0; expires=Thu, 19-Oct-2023 12:21:12
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>If you
+        had to choose, which feature would you like implemented the most? - ModDB</title>\r\n\t<meta
+        charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\" content=\"if you had
+        to choose which feature would you like implemented the most, poll, opinion,
+        vote, select, elect, survey, question, discussion\" />\r\n\t<meta name=\"description\"
+        content=\"View the ModDB  poll If you had to choose, which feature would you
+        like implemented the most?\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"If you had to choose, which feature would
+        you like implemented the most?\" />\r\n\t<meta property=\"og:description\"
+        content=\"View the ModDB  poll If you had to choose, which feature would you
+        like implemented the most?\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\"
+        />\r\n\t<meta property=\"og:type\" content=\"article\" /> \r\n\t<meta property=\"og:url\"
+        content=\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        /> \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"If you had to choose, which feature would you like implemented the
+        most?\" />\r\n\t<meta property=\"twitter:description\" content=\"View the
+        ModDB  poll If you had to choose, which feature would you like implemented
+        the most?\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        /> \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>If you had to choose, which feature would you
+        like implemented the most?</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB
+        Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a
+        href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New
+        this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-300-alt first\">\t<div class=\"normalbox
+        pollbox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2483\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">If
+        you had to choose, which feature would you like implemented the most?</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t<p class=\"question\">Poll started by <a href=\"/members/feillyne\">feillyne</a>
+        with 1,183 votes and 17 comments. Browse the <a href=\"/polls\">poll archive</a>.</p>\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 9%;\">&nbsp;9%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(109 votes)</span>Image and video votes or ratings</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 16%;\">&nbsp;16%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(195 votes)</span>Game, mod profile polls</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(40 votes)</span>Reorderable media gallery</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(37 votes)</span>Member ignore, guest block</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 5%;\">&nbsp;5%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(56 votes)</span>Customizable profiles</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 35%;\">&nbsp;35%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(414 votes)</span>Mod of the Month, Game of the Month</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 4%;\">&nbsp;4%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(43 votes)</span>Member activity rewards</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 1%;\">&nbsp;1%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(11 votes)</span>Auto-authed (auto-archived) and scheduled
+        news</p>\n\t\t\t\t\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\"
+        style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p> <span
+        class=\"votes\">(36 votes)</span>Web, flash games playable or embeddable</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(39 votes)</span>Live game stream integration</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 11%;\">&nbsp;11%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(127 votes)</span>Patreon, Paypal, crowdfunding (etc)
+        integration</p>\n\t\t\t\t\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t<div
+        class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(40 votes)</span>Upgraded forums</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(36 votes)</span>Other</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"6900020\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" title=\"Thanoshld\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/1/231/230747/Aperture_Science_Innovators_Logo.1.png\"
+        alt=\"Thanoshld\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" class=\"author\" data-nameid=\"thanoshltbeginning\">Thanoshld</a>
+        \ - <a href=\"#6900020\" style=\"color: inherit;\"><time datetime=\"2018-03-07T20:09:01+00:00\">Mar
+        7 2018</time></a> - 1,416 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other: finally getting a notification
+        whenever someone posts a new comment in our profile/image-video gallery/mod
+        page etc. Also, mod and game of the month also seem like an interesting way
+        to promote member and creator activity.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6900020\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6900020\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6900020\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+33
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6913146\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/eyesshut\"
+        title=\"EyesShut\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3007/3006131/lucid_worlds_icon.png\"
+        alt=\"EyesShut\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/eyesshut\" class=\"author\" data-nameid=\"eyesshut\">EyesShut</a>
+        \ - <a href=\"#6913146\" style=\"color: inherit;\"><time datetime=\"2018-03-19T01:18:38+00:00\">Mar
+        19 2018</time></a> - 64 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I forgot about that, but that would
+        absolutely make keeping track of feedback a lot easier - especially for new
+        comments on older \"buried\" media.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6913146\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6913146\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6913146\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+12
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6945374\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/fva\"
+        title=\"fva\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3399/3398919/dragon_3.png\"
+        alt=\"fva\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/fva\" class=\"author\" data-nameid=\"fva\">fva</a>  - <a href=\"#6945374\"
+        style=\"color: inherit;\"><time datetime=\"2018-04-16T23:36:21+00:00\">Apr
+        17 2018</time></a> - 142 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>This. A better notification system
+        would be very welcome.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6945374\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6945374\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6945374\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+6
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6905038\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/dietonightlive4ever\"
+        title=\"dietonightlive4ever\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"dietonightlive4ever\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/dietonightlive4ever\" class=\"author\" data-nameid=\"dietonightlive4ever\">dietonightlive4ever</a>
+        \ - <a href=\"#6905038\" style=\"color: inherit;\"><time datetime=\"2018-03-12T03:23:30+00:00\">Mar
+        12 2018</time></a> - 1 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>If you do a mod of the month you
+        should have a top 10 or top 25 of the month.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6905038\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6905038\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6905038\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6908344\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/bumbum1991\"
+        title=\"bumbum1991\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/423/422540/im_smiling.jpg\"
+        alt=\"bumbum1991\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/bumbum1991\" class=\"author\" data-nameid=\"bumbum1991\">bumbum1991</a>
+        \ - <a href=\"#6908344\" style=\"color: inherit;\"><time datetime=\"2018-03-15T09:15:46+00:00\">Mar
+        15 2018</time></a> - 47 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I think top 5 is enough. I mean,
+        25 is like the total number of active mods during a month, right?</p>\n<p>Now
+        the thing is how to implement this? By popular vote? By the number of active
+        users? Or else I expect to see COC being on top every month; not a bad thing
+        though.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6908344\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6908344\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6908344\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6917040\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/argeomer\"
+        title=\"Argeomer\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1407/1406116/tom_meme.jpg\"
+        alt=\"Argeomer\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/argeomer\" class=\"author\" data-nameid=\"argeomer\">Argeomer</a>
+        \ - <a href=\"#6917040\" style=\"color: inherit;\"><time datetime=\"2018-03-22T14:36:56+00:00\">Mar
+        22 2018</time></a> - 5,578 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Why not everything and more?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6917040\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6917040\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6917040\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6917454\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6917454\" style=\"color:
+        inherit;\"><time datetime=\"2018-03-22T21:09:29+00:00\">Mar 22 2018</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>One at a time. Usually, when you
+        want everything, you get nothing...\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6917454\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6917454&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+7
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6917457\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/argeomer\"
+        title=\"Argeomer\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1407/1406116/tom_meme.jpg\"
+        alt=\"Argeomer\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/argeomer\" class=\"author\" data-nameid=\"argeomer\">Argeomer</a>
+        \ - <a href=\"#6917457\" style=\"color: inherit;\"><time datetime=\"2018-03-22T21:13:30+00:00\">Mar
+        22 2018</time></a> - 5,578 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>why you so mean? :'(<br />\nLet's
+        have everything and let the mess begin :D MUUAHAHAHA\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6917457\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6917457\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6917457\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6942866\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/chromeangel\"
+        title=\"ChromeAngel\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/37/36516/Avatar512.png\"
+        alt=\"ChromeAngel\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/chromeangel\" class=\"author\" data-nameid=\"chromeangel\">ChromeAngel</a>
+        \ - <a href=\"#6942866\" style=\"color: inherit;\"><time datetime=\"2018-04-14T18:35:47+00:00\">Apr
+        14 2018</time></a> - 708 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other.  I'd like to have mod Images
+        displayed at native resolution by default, rather than having to click a tiny
+        little link to open zoom and every one.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6942866\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6942866\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6942866\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6942869\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/chromeangel\"
+        title=\"ChromeAngel\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/37/36516/Avatar512.png\"
+        alt=\"ChromeAngel\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/chromeangel\" class=\"author\" data-nameid=\"chromeangel\">ChromeAngel</a>
+        \ - <a href=\"#6942869\" style=\"color: inherit;\"><time datetime=\"2018-04-14T18:37:08+00:00\">Apr
+        14 2018</time></a> - 708 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other.  I'd like to see the number
+        of times downloaded and number of comments on a File's download widget.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6942869\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6942869\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6942869\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6942874\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/chromeangel\"
+        title=\"ChromeAngel\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/37/36516/Avatar512.png\"
+        alt=\"ChromeAngel\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/chromeangel\" class=\"author\" data-nameid=\"chromeangel\">ChromeAngel</a>
+        \ - <a href=\"#6942874\" style=\"color: inherit;\"><time datetime=\"2018-04-14T18:39:15+00:00\">Apr
+        14 2018</time></a> - 708 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other.  I'd like to be able to pick
+        which 10/10 review is shown on my mod's homepage.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6942874\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6942874\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6942874\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6953555\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/aple\"
+        title=\"Templarfreak\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/300/299822/memecancerslendy4.png\"
+        alt=\"Templarfreak\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/aple\" class=\"author\" data-nameid=\"aple\">Templarfreak</a>
+        \ - <a href=\"#6953555\" style=\"color: inherit;\"><time datetime=\"2018-04-24T16:12:46+00:00\">Apr
+        24 2018</time></a> - 6,721 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>In this order, this is what I would
+        prioritize:</p>\n<p>Live Stream Integration, Image Voting Rating System, Game
+        / Mod Profile Polls, Mod / Game of the Month, Auto-Auth, Web Games, Patreon
+        / Other stuff.</p>\n<p>Live Stream integration would be an invalulable tool
+        for this website and make it feel more lively. It would be a very useful thing
+        to have today with so many people Livestreaming their mods all the time. It
+        would be an added bonus to have Updates push when a mod goes \"live\" so people
+        can come in and catch it, too. This way, maybe someone could use a much lesser
+        known Streaming platform that they perfer, or perhaps use some weird thing
+        for Livestreaming like a Google Hangout or something. It would be especially
+        nice if Moddb could just have built-in livestreaming, but I think that's probably
+        not a viable option.</p>\n<p>The only other thing I think is A+ material on
+        this list is Image Voting. This would have to come with detailed statistics
+        for the mod page owner, so they can get a bigger picture of what is liked
+        or disliked from the comments and the voting system. This is useful information
+        for developers.</p>\n<p>All the other provided options, I don't care much
+        for. I think an upgraded Forum would be the most useless change to this website
+        ever. Hardly anybody ever uses the forums on this website because comment
+        sections like this are just so much more reliable and useful and much better
+        organized.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6953555\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6953555\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6953555\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6961582\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/wallacewm\"
+        title=\"Tabajara77\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/667/666562/avatar_wall.1.png\"
+        alt=\"Tabajara77\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/wallacewm\" class=\"author\" data-nameid=\"wallacewm\">Tabajara77</a>
+        \ - <a href=\"#6961582\" style=\"color: inherit;\"><time datetime=\"2018-05-02T14:41:53+00:00\">May
+        2 2018</time></a> - 309 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Ops, I wasn't logged in. </p>\n<p>I
+        do think, for a modding community website, it's about time we have some kind
+        of rating system for screenshots and videos published by mod/indie developers.
+        Plus, a \"best of the week/month\" media collected by that rating system.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6961582\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6961582\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6961582\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6971885\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/ziani-fromspess\"
+        title=\"Ziani_FromSpess\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1629/1628735/Primarch_Corax.jpg\"
+        alt=\"Ziani_FromSpess\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/ziani-fromspess\" class=\"author\" data-nameid=\"ziani-fromspess\">Ziani_FromSpess</a>
+        \ - <a href=\"#6971885\" style=\"color: inherit;\"><time datetime=\"2018-05-12T15:33:40+00:00\">May
+        12 2018</time></a> - 558 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>A VERY important feature: to have
+        mod Images displayed at native resolution by default, rather than having to
+        click a tiny little link to open zoom and every one. Or, to make native resolution
+        available by simply clicking the image.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6971885\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6971885\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6971885\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6978232\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/thundercraft1\"
+        title=\"Thundercraft\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4138/4137925/Thundercraft_140x140.jpg\"
+        alt=\"Thundercraft\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/thundercraft1\" class=\"author\" data-nameid=\"thundercraft1\">Thundercraft</a>
+        \ - <a href=\"#6978232\" style=\"color: inherit;\"><time datetime=\"2018-05-18T23:44:15+00:00\">May
+        19 2018</time></a> - 3 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Moddb should take a page from Nexus
+        and allow users to bookmark their favorite games.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6978232\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6978232\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6978232\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7003430\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/sigill\"
+        title=\"SIGILL\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/204/203157/MetalspySTALKER5050.png\"
+        alt=\"SIGILL\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/sigill\" class=\"author\" data-nameid=\"sigill\">SIGILL</a>
+        \ - <a href=\"#7003430\" style=\"color: inherit;\"><time datetime=\"2018-06-12T21:56:15+00:00\">Jun
+        12 2018</time></a> - 1,157 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>To be honest I doubt 'a new feature'
+        is going to be worth implementing, regardless of which one it is. ModDB forums
+        seem to have changed into advertisement/recruiting forums and a lot of mods
+        that are worth checking out are also hosted on other, more modern and better
+        supported websites.</p>\n<p>Anyway, apparently I felt the need to indirectly
+        express my sadness about what ModDB has become. If only it would be possible
+        to implement a 'make it the way it was back in 2008' feature :)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7003430\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7003430\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7003430\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7010353\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/pvt-pirate\"
+        title=\"Pvt_Pirate\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/181/180517/CHE_GUEVARA50x50.gif\"
+        alt=\"Pvt_Pirate\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/pvt-pirate\" class=\"author\" data-nameid=\"pvt-pirate\">Pvt_Pirate</a>
+        \ - <a href=\"#7010353\" style=\"color: inherit;\"><time datetime=\"2018-06-20T17:34:39+00:00\">Jun
+        20 2018</time></a> - 377 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>making a game list in my profile
+        and being able to filter mods for all my games only.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7010353\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7010353\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7010353\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"c09f4d441c4ac4be233ccf204161c1c8\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"pollsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Poll</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2483\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most&title=If+you+had+to+choose%2C+which+feature+would+you+like+implemented+the+most%3F\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=If%20you%20had%20to%20choose%2C%20which%20feature%20would%20you%20like%20implemented%20the%20most%3F&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=If+you+had+to+choose%2C+which+feature+would+you+like+implemented+the+most%3F+https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most&quote=If+you+had+to+choose%2C+which+feature+would+you+like+implemented+the+most%3F&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinkspolls\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Hot Polls</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row rowavatar
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\" title=\"INtense!\"
+        class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/your-aims-in-2012\" class=\"heading\">Your
+        aims in 2012</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t24,422
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/tkaza\"
+        title=\"TKAzA\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/63/62828/avitar2.png\"
+        alt=\"TKAzA\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-long-have-you-been-modding\"
+        class=\"heading\">How long have you been modding?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t23,225 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/i-prefer-my-mods-to-be\"
+        class=\"heading\">I prefer my mods to be...</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t13,660
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-do-think-about-free-to-play-games\"
+        class=\"heading\">What do think about free to play games?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t12,502 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/kralichddg\"
+        title=\"Kralich/David\" class=\"image\"><img src=\"https://media.moddb.com/images/members/4/3603/3602558/Dearth_Nadir.jpg\"
+        alt=\"Kralich/David\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/best-modern-moty-winners-2012-2021-of-all-time\"
+        class=\"heading\">What are the best Modern MOTY winners (2012 - 2021) of all
+        time?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t11,039
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/would-you-mod-console-games-if-the-platform-was-open-like-the-pc\"
+        class=\"heading\">Would you mod console games if the platform was open like
+        the PC?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t10,607
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/you-want-to-design-games-in-the-future-as\"
+        class=\"heading\">You want to design games in the future as...</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t10,174 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/do-you-own-a-smartphone\"
+        class=\"heading\">Do you own a smartphone?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t9,591
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-do-you-set-your-resolution-for-pc-gaming\"
+        class=\"heading\">How do you set your resolution for PC gaming?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,567 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/lodle\"
+        title=\"lodle\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/161/160045/monkey_small.gif\"
+        alt=\"lodle\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-version-of-mac-os-x-do-you-use\"
+        class=\"heading\">What version of Mac OS X do you use?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,222 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most\",\"name\":\"If
+        you had to choose, which feature would you like implemented the most?\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\ttags:
+        [\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736424\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736424\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213dbb391500b6-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:07:04 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ywtD2FI6ZWA9eC7WlSjpzPcupBG437ASc3DcHoi3enDTr3BNCt%2FoBwuAohx9ke2eeEZg1UhKXO7%2F%2BQDHlQWtfh7rE3SSMInvu7NjzXnCVfjAt4JBcbFkEFLbigtljIvnxVcMpfrTXlB8FAk%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '62375'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=81b1bcaf68d0ac8cd351c6719fe27904; expires=Wed, 10-Apr-2024 08:17:04
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=81b1bcaf68d0ac8cd351c6719fe27904; expires=Wed, 10-Apr-2024 08:17:04
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>If you
+        had to choose, which feature would you like implemented the most? - ModDB</title>\r\n\t<meta
+        charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\" content=\"if you had
+        to choose which feature would you like implemented the most, poll, opinion,
+        vote, select, elect, survey, question, discussion\" />\r\n\t<meta name=\"description\"
+        content=\"View the ModDB  poll If you had to choose, which feature would you
+        like implemented the most?\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"If you had to choose, which feature would
+        you like implemented the most?\" />\r\n\t<meta property=\"og:description\"
+        content=\"View the ModDB  poll If you had to choose, which feature would you
+        like implemented the most?\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\"
+        />\r\n\t<meta property=\"og:type\" content=\"article\" /> \r\n\t<meta property=\"og:url\"
+        content=\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        /> \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"If you had to choose, which feature would you like implemented the
+        most?\" />\r\n\t<meta property=\"twitter:description\" content=\"View the
+        ModDB  poll If you had to choose, which feature would you like implemented
+        the most?\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        /> \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t\t<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>If you had to choose, which feature would you
+        like implemented the most?</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB
+        Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a
+        href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New
+        this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-300-alt first\">\t<div class=\"normalbox
+        pollbox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2483\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">If
+        you had to choose, which feature would you like implemented the most?</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t<p class=\"question\">Poll started by <a href=\"/members/feillyne\">feillyne</a>
+        with 1,183 votes and 17 comments. Browse the <a href=\"/polls\">poll archive</a>.</p>\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 9%;\">&nbsp;9%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(109 votes)</span>Image and video votes or ratings</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 16%;\">&nbsp;16%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(195 votes)</span>Game, mod profile polls</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(40 votes)</span>Reorderable media gallery</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(37 votes)</span>Member ignore, guest block</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 5%;\">&nbsp;5%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(56 votes)</span>Customizable profiles</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 35%;\">&nbsp;35%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(414 votes)</span>Mod of the Month, Game of the Month</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 4%;\">&nbsp;4%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(43 votes)</span>Member activity rewards</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 1%;\">&nbsp;1%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(11 votes)</span>Auto-authed (auto-archived) and scheduled
+        news</p>\n\t\t\t\t\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\"
+        style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p> <span
+        class=\"votes\">(36 votes)</span>Web, flash games playable or embeddable</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(39 votes)</span>Live game stream integration</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 11%;\">&nbsp;11%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(127 votes)</span>Patreon, Paypal, crowdfunding (etc)
+        integration</p>\n\t\t\t\t\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t<div
+        class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(40 votes)</span>Upgraded forums</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t<div class=\"barinner\" style=\"width: 3%;\">&nbsp;3%</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p>
+        <span class=\"votes\">(36 votes)</span>Other</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"6900020\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" title=\"Thanoshld\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/1/231/230747/Aperture_Science_Innovators_Logo.1.png\"
+        alt=\"Thanoshld\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/thanoshltbeginning\" class=\"author\" data-nameid=\"thanoshltbeginning\">Thanoshld</a>
+        \ - <a href=\"#6900020\" style=\"color: inherit;\"><time datetime=\"2018-03-07T20:09:01+00:00\">Mar
+        7 2018</time></a> - 1,416 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other: finally getting a notification
+        whenever someone posts a new comment in our profile/image-video gallery/mod
+        page etc. Also, mod and game of the month also seem like an interesting way
+        to promote member and creator activity.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6900020\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6900020\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6900020\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+33
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6913146\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/eyesshut\"
+        title=\"EyesShut\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3007/3006131/lucid_worlds_icon.png\"
+        alt=\"EyesShut\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/eyesshut\" class=\"author\" data-nameid=\"eyesshut\">EyesShut</a>
+        \ - <a href=\"#6913146\" style=\"color: inherit;\"><time datetime=\"2018-03-19T01:18:38+00:00\">Mar
+        19 2018</time></a> - 64 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I forgot about that, but that would
+        absolutely make keeping track of feedback a lot easier - especially for new
+        comments on older \"buried\" media.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6913146\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6913146\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6913146\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+12
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6945374\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/fva\"
+        title=\"fva\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3399/3398919/dragon_3.png\"
+        alt=\"fva\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/fva\" class=\"author\" data-nameid=\"fva\">fva</a>  - <a href=\"#6945374\"
+        style=\"color: inherit;\"><time datetime=\"2018-04-16T23:36:21+00:00\">Apr
+        17 2018</time></a> - 142 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>This. A better notification system
+        would be very welcome.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6945374\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6945374\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6945374\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+6
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6905038\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/dietonightlive4ever\"
+        title=\"dietonightlive4ever\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"dietonightlive4ever\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/dietonightlive4ever\" class=\"author\" data-nameid=\"dietonightlive4ever\">dietonightlive4ever</a>
+        \ - <a href=\"#6905038\" style=\"color: inherit;\"><time datetime=\"2018-03-12T03:23:30+00:00\">Mar
+        12 2018</time></a> - 1 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>If you do a mod of the month you
+        should have a top 10 or top 25 of the month.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6905038\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6905038\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6905038\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6908344\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/bumbum1991\"
+        title=\"bumbum1991\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/423/422540/im_smiling.jpg\"
+        alt=\"bumbum1991\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/bumbum1991\" class=\"author\" data-nameid=\"bumbum1991\">bumbum1991</a>
+        \ - <a href=\"#6908344\" style=\"color: inherit;\"><time datetime=\"2018-03-15T09:15:46+00:00\">Mar
+        15 2018</time></a> - 47 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I think top 5 is enough. I mean,
+        25 is like the total number of active mods during a month, right?</p>\n<p>Now
+        the thing is how to implement this? By popular vote? By the number of active
+        users? Or else I expect to see COC being on top every month; not a bad thing
+        though.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6908344\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6908344\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6908344\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6917040\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/argeomer\"
+        title=\"Argeomer\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1407/1406116/tom_meme.jpg\"
+        alt=\"Argeomer\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/argeomer\" class=\"author\" data-nameid=\"argeomer\">Argeomer</a>
+        \ - <a href=\"#6917040\" style=\"color: inherit;\"><time datetime=\"2018-03-22T14:36:56+00:00\">Mar
+        22 2018</time></a> - 5,578 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Why not everything and more?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6917040\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6917040\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6917040\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6917454\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/feillyne\"
+        title=\"feillyne\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/283/282946/al_skyrim_blacksacrament_avatar.png\"
+        alt=\"feillyne\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/feillyne\" class=\"author\"
+        data-nameid=\"feillyne\">feillyne</a>  - <a href=\"#6917454\" style=\"color:
+        inherit;\"><time datetime=\"2018-03-22T21:09:29+00:00\">Mar 22 2018</time></a>
+        - 5,816 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>One at a time. Usually, when you
+        want everything, you get nothing...\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6917454\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6917454&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+7
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6917457\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/argeomer\"
+        title=\"Argeomer\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1407/1406116/tom_meme.jpg\"
+        alt=\"Argeomer\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/argeomer\" class=\"author\" data-nameid=\"argeomer\">Argeomer</a>
+        \ - <a href=\"#6917457\" style=\"color: inherit;\"><time datetime=\"2018-03-22T21:13:30+00:00\">Mar
+        22 2018</time></a> - 5,578 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>why you so mean? :'(<br />\nLet's
+        have everything and let the mess begin :D MUUAHAHAHA\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6917457\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6917457\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6917457\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6942866\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/chromeangel\"
+        title=\"ChromeAngel\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/37/36516/Avatar512.png\"
+        alt=\"ChromeAngel\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/chromeangel\" class=\"author\" data-nameid=\"chromeangel\">ChromeAngel</a>
+        \ - <a href=\"#6942866\" style=\"color: inherit;\"><time datetime=\"2018-04-14T18:35:47+00:00\">Apr
+        14 2018</time></a> - 708 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other.  I'd like to have mod Images
+        displayed at native resolution by default, rather than having to click a tiny
+        little link to open zoom and every one.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6942866\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6942866\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6942866\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6942869\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/chromeangel\"
+        title=\"ChromeAngel\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/37/36516/Avatar512.png\"
+        alt=\"ChromeAngel\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/chromeangel\" class=\"author\" data-nameid=\"chromeangel\">ChromeAngel</a>
+        \ - <a href=\"#6942869\" style=\"color: inherit;\"><time datetime=\"2018-04-14T18:37:08+00:00\">Apr
+        14 2018</time></a> - 708 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other.  I'd like to see the number
+        of times downloaded and number of comments on a File's download widget.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6942869\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6942869\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6942869\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6942874\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/chromeangel\"
+        title=\"ChromeAngel\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/37/36516/Avatar512.png\"
+        alt=\"ChromeAngel\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/chromeangel\" class=\"author\" data-nameid=\"chromeangel\">ChromeAngel</a>
+        \ - <a href=\"#6942874\" style=\"color: inherit;\"><time datetime=\"2018-04-14T18:39:15+00:00\">Apr
+        14 2018</time></a> - 708 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Other.  I'd like to be able to pick
+        which 10/10 review is shown on my mod's homepage.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6942874\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6942874\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6942874\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6953555\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/aple\"
+        title=\"Templarfreak\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/300/299822/memecancerslendy4.png\"
+        alt=\"Templarfreak\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/aple\" class=\"author\" data-nameid=\"aple\">Templarfreak</a>
+        \ - <a href=\"#6953555\" style=\"color: inherit;\"><time datetime=\"2018-04-24T16:12:46+00:00\">Apr
+        24 2018</time></a> - 6,721 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>In this order, this is what I would
+        prioritize:</p>\n<p>Live Stream Integration, Image Voting Rating System, Game
+        / Mod Profile Polls, Mod / Game of the Month, Auto-Auth, Web Games, Patreon
+        / Other stuff.</p>\n<p>Live Stream integration would be an invalulable tool
+        for this website and make it feel more lively. It would be a very useful thing
+        to have today with so many people Livestreaming their mods all the time. It
+        would be an added bonus to have Updates push when a mod goes \"live\" so people
+        can come in and catch it, too. This way, maybe someone could use a much lesser
+        known Streaming platform that they perfer, or perhaps use some weird thing
+        for Livestreaming like a Google Hangout or something. It would be especially
+        nice if Moddb could just have built-in livestreaming, but I think that's probably
+        not a viable option.</p>\n<p>The only other thing I think is A+ material on
+        this list is Image Voting. This would have to come with detailed statistics
+        for the mod page owner, so they can get a bigger picture of what is liked
+        or disliked from the comments and the voting system. This is useful information
+        for developers.</p>\n<p>All the other provided options, I don't care much
+        for. I think an upgraded Forum would be the most useless change to this website
+        ever. Hardly anybody ever uses the forums on this website because comment
+        sections like this are just so much more reliable and useful and much better
+        organized.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6953555\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6953555\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6953555\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6961582\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/wallacewm\"
+        title=\"Tabajara77\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/667/666562/avatar_wall.1.png\"
+        alt=\"Tabajara77\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/wallacewm\" class=\"author\" data-nameid=\"wallacewm\">Tabajara77</a>
+        \ - <a href=\"#6961582\" style=\"color: inherit;\"><time datetime=\"2018-05-02T14:41:53+00:00\">May
+        2 2018</time></a> - 309 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Ops, I wasn't logged in. </p>\n<p>I
+        do think, for a modding community website, it's about time we have some kind
+        of rating system for screenshots and videos published by mod/indie developers.
+        Plus, a \"best of the week/month\" media collected by that rating system.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6961582\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6961582\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6961582\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6971885\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/ziani-fromspess\"
+        title=\"Ziani_FromSpess\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1629/1628735/Primarch_Corax.jpg\"
+        alt=\"Ziani_FromSpess\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/ziani-fromspess\" class=\"author\" data-nameid=\"ziani-fromspess\">Ziani_FromSpess</a>
+        \ - <a href=\"#6971885\" style=\"color: inherit;\"><time datetime=\"2018-05-12T15:33:40+00:00\">May
+        12 2018</time></a> - 558 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>A VERY important feature: to have
+        mod Images displayed at native resolution by default, rather than having to
+        click a tiny little link to open zoom and every one. Or, to make native resolution
+        available by simply clicking the image.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6971885\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6971885\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6971885\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6978232\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/thundercraft1\"
+        title=\"Thundercraft\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4138/4137925/Thundercraft_140x140.jpg\"
+        alt=\"Thundercraft\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/thundercraft1\" class=\"author\" data-nameid=\"thundercraft1\">Thundercraft</a>
+        \ - <a href=\"#6978232\" style=\"color: inherit;\"><time datetime=\"2018-05-18T23:44:15+00:00\">May
+        19 2018</time></a> - 3 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Moddb should take a page from Nexus
+        and allow users to bookmark their favorite games.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6978232\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6978232\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6978232\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7003430\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/sigill\"
+        title=\"SIGILL\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/204/203157/MetalspySTALKER5050.png\"
+        alt=\"SIGILL\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/sigill\" class=\"author\" data-nameid=\"sigill\">SIGILL</a>
+        \ - <a href=\"#7003430\" style=\"color: inherit;\"><time datetime=\"2018-06-12T21:56:15+00:00\">Jun
+        12 2018</time></a> - 1,157 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>To be honest I doubt 'a new feature'
+        is going to be worth implementing, regardless of which one it is. ModDB forums
+        seem to have changed into advertisement/recruiting forums and a lot of mods
+        that are worth checking out are also hosted on other, more modern and better
+        supported websites.</p>\n<p>Anyway, apparently I felt the need to indirectly
+        express my sadness about what ModDB has become. If only it would be possible
+        to implement a 'make it the way it was back in 2008' feature :)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7003430\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7003430\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7003430\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7010353\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/pvt-pirate\"
+        title=\"Pvt_Pirate\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/1/181/180517/CHE_GUEVARA50x50.gif\"
+        alt=\"Pvt_Pirate\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/pvt-pirate\" class=\"author\" data-nameid=\"pvt-pirate\">Pvt_Pirate</a>
+        \ - <a href=\"#7010353\" style=\"color: inherit;\"><time datetime=\"2018-06-20T17:34:39+00:00\">Jun
+        20 2018</time></a> - 377 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>making a game list in my profile
+        and being able to filter mods for all my games only.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7010353\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7010353\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7010353\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"e843a2248824802fbfcd8abbffdf1144\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"pollsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Poll</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/polls\">Polls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2483\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most&title=If+you+had+to+choose%2C+which+feature+would+you+like+implemented+the+most%3F\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=If%20you%20had%20to%20choose%2C%20which%20feature%20would%20you%20like%20implemented%20the%20most%3F&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=If+you+had+to+choose%2C+which+feature+would+you+like+implemented+the+most%3F+https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most&quote=If+you+had+to+choose%2C+which+feature+would+you+like+implemented+the+most%3F&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fpolls%2Fif-you-had-to-choose-which-feature-would-you-like-implemented-the-most\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinkspolls\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Hot Polls</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row rowavatar
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\" title=\"INtense!\"
+        class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/your-aims-in-2012\" class=\"heading\">Your
+        aims in 2012</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t24,422
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/tkaza\"
+        title=\"TKAzA\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/63/62828/avitar2.png\"
+        alt=\"TKAzA\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-long-have-you-been-modding\"
+        class=\"heading\">How long have you been modding?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t23,225 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/i-prefer-my-mods-to-be\"
+        class=\"heading\">I prefer my mods to be...</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t13,660
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-do-think-about-free-to-play-games\"
+        class=\"heading\">What do think about free to play games?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t12,502 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/kralichddg\"
+        title=\"Kralich/David\" class=\"image\"><img src=\"https://media.moddb.com/images/members/4/3603/3602558/Dearth_Nadir.jpg\"
+        alt=\"Kralich/David\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/best-modern-moty-winners-2012-2021-of-all-time\"
+        class=\"heading\">What are the best Modern MOTY winners (2012 - 2021) of all
+        time?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t11,039
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/would-you-mod-console-games-if-the-platform-was-open-like-the-pc\"
+        class=\"heading\">Would you mod console games if the platform was open like
+        the PC?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t10,607
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/you-want-to-design-games-in-the-future-as\"
+        class=\"heading\">You want to design games in the future as...</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t10,174 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/intense\"
+        title=\"INtense!\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/1/1/avatarsml.jpg\"
+        alt=\"INtense!\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/do-you-own-a-smartphone\"
+        class=\"heading\">Do you own a smartphone?</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\t9,591
+        votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/henley\"
+        title=\"Henley\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/209/208595/baba.1.jpg\"
+        alt=\"Henley\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/how-do-you-set-your-resolution-for-pc-gaming\"
+        class=\"heading\">How do you set your resolution for PC gaming?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,567 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row rowavatar clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/members/lodle\"
+        title=\"lodle\" class=\"image\"><img src=\"https://media.moddb.com/images/members/1/161/160045/monkey_small.gif\"
+        alt=\"lodle\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/polls/what-version-of-mac-os-x-do-you-use\"
+        class=\"heading\">What version of Mac OS X do you use?</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t7,222 votes\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5424 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/polls\",\"name\":\"Polls\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/polls/if-you-had-to-choose-which-feature-would-you-like-implemented-the-most\",\"name\":\"If
+        you had to choose, which feature would you like implemented the most?\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=community\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"content\",\r\n\t\t\t\t\t\tchannel: \"articles\",\r\n\t\t\t\t\t\ttags:
+        [\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749122\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749122\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 872273bdcab10a68-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:38:42 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=xrPLjF14bteF%2BF2uz1S0SCKtiqsOy3eJcVZSvlBDfjpXG5dKDXKShWMJXW4gzwtTbx99Sm8C7wyfC9eNLifmbFXt8raD%2FK%2BZZWo%2B%2B8fZJj8RKT5BTXQPrBG7wPJ%2BW2GeFLRCyOJ9f7gx%2Fq8%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '62375'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=e196be201b3b3e36d7b7eac92ad6c016; expires=Wed, 10-Apr-2024 11:48:42
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=e196be201b3b3e36d7b7eac92ad6c016; expires=Wed, 10-Apr-2024 11:48:42
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

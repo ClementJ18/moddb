@@ -588,8 +588,6 @@ interactions:
       - 8188e5d8cf71d4fe-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -604,12 +602,1296 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '53849'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
       - masterchief=7e4f46307f9642d37b515a998d36d0b0; expires=Thu, 19-Oct-2023 12:16:56
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/hardware/sprintr
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>SprintR
+        hardware - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"sprintr, vr, controller, virtual reality, augmented reality, hardware,
+        headsets, haptics, controllers, input, keyboard, handheld, feedback, developers,
+        creation, gear\" />\r\n\t<meta name=\"description\" content=\"SprintR puts
+        VR movement where it belongs, at your feet. SprintR is a wireless foot-pad
+        that lets you easily walk, run, and jump in VR. It not only feels natural,
+        but also frees up your hands for all sorts of new experiences. Used in combination
+        with...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"SprintR hardware\" />\r\n\t<meta property=\"og:description\"
+        content=\"SprintR puts VR movement where it belongs, at your feet. SprintR
+        is a wireless foot-pad that lets you easily walk, run, and jump in VR. It
+        not only feels natural, but also frees up your hands for all sorts of new
+        experiences. Used in combination with...\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"hardware\"
+        /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/hardware/sprintr\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"SprintR hardware\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"SprintR puts VR movement where it belongs, at your feet. SprintR
+        is a wireless foot-pad that lets you easily walk, run, and jump in VR. It
+        not only feels natural, but also frees up your hands for all sorts of new
+        experiences. Used in combination with...\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/hardware/sprintr\" /> \r\n\t<meta property=\"twitter:image\"
+        content=\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\" />
+        \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/hardware/sprintr/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"SprintR hardware feed\" />\t<script async
+        src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>SprintR hardware</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/Product\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"image\" content=\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/hardware/sprintr\"
+        itemprop=\"mainEntityOfPage\">SprintR</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/company/exis\">Exis</a> | <time itemprop=\"releaseDate\">TBD</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/hardware/sprintr\">summary</a></li><li class=\"off\"><a
+        href=\"/hardware/sprintr/articles\">articles</a></li><li class=\"off\"><a
+        href=\"/hardware/sprintr/downloads\">files</a></li><li class=\"off\"><a href=\"/hardware/sprintr/games\">games</a></li><li
+        class=\"\"><a href=\"/hardware/sprintr/videos\">videos</a></li><li class=\"\"><a
+        href=\"/hardware/sprintr/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"SprintR puts VR movement where it belongs,
+        at your feet. SprintR is a wireless foot-pad that lets you easily walk, run,
+        and jump in VR. It not only feels natural, but also frees up your hands for
+        all sorts of new experiences. Used in combination with a game-pad or hand
+        sensing tech, SprintR becomes a full avatar control solution for VR.\" />\t<div
+        class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p><strong>The problem:</strong> Game-pads and handheld
+        controllers offer limited and unnatural movement for virtual reality (VR).
+        One current solution is to move in the direction the head is looking, which
+        is awkward at best. The added presence of head movement, and the separation
+        of movement from interaction is critical to new VR experiences, and existing
+        input methods simply fall short. Any hand held devices used for movement cause
+        an avoidable disconnect in VR.</p>\n<p>Using a game-pad to move and control
+        a prop, like a weapon, is disorienting in VR. Aiming is confusing because
+        the player has a hard time reconciling the weapon position with their field
+        of view. Traditional games are able to lock the gun/hands to the camera, but
+        this is extremely unnatural in virtual reality.</p>\n<p><strong>The solution:</strong>
+        <strong>SprintR</strong> puts VR movement where it belongs, at your feet.
+        <strong>SprintR</strong> is a wireless foot-pad that lets you easily walk,
+        run, and jump in VR. It not only feels natural, but also frees up your hands
+        for all sorts of new experiences. Used in combination with a game-pad or hand
+        sensing tech, <strong>SprintR</strong> becomes a full avatar control solution
+        for VR.</p>\n<p><strong>Benefits:</strong> Since <strong>SprintR</strong>
+        is portable, it&rsquo;s perfect for desk or in-front of the couch gaming.
+        The form factor suits any foot size or type. Additionally, <strong>SprintR</strong>
+        comes in wired and wireless varieties; it&rsquo;s perfect for PC and Consoles.</p>\n<ul>\n<li>Players
+        can walk, run, and jump using SprintR.</li>\n<li>SprintR is wireless and portable,
+        perfect for gaming from the couch.</li>\n<li>Helps reduce motion sickness
+        with added body presence.</li>\n<li>Low impact: No need to run in-place and
+        sweat through your HMD.</li>\n<li>Haptics/Feedback via rumble.</li>\n</ul></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/hardware/sprintr/videos/gdc-2016-sprintr#imagebox\"
+        title=\"GDC 2016 SprintR\"><span class=\"play\" data-id=\"1536684\"></span><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/gdc-2016-sprintr.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/side#imagebox\" title=\"Side\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Side.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/perspective#imagebox\" title=\"Perspective\"><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Perspective.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/front#imagebox\" title=\"Front\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Front.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/types#imagebox\" title=\"Types\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/2_Types.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/logo#imagebox\" title=\"Logo\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/1Logo.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next nextoff\"><a href=\"#\" title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\t</ul>\r\n\t</div>\r\n</div><div class=\"column span-300-alt first
+        tabsummary\">\t<div class=\"normalbox menubox\" id=\"embedbuttons\">\n\t\t\t\t<div
+        class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t<p>To
+        promote SprintR and <a href=\"/hardware/sprintr/stats\">grow its popularity</a>
+        (<a href=\"/hardware/top\">top hardware</a>), use the embed code provided
+        on your homepage, blog, forums and elsewhere you desire. Or try <a href=\"#\"
+        class=\"togglewidget\">our widget</a>.</p>\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"display:
+        none;\">\n\t\t\t\t\t\t<textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        100%; height: 44px;\" class=\"text\" >&lt;iframe width=&quot;600&quot; height=&quot;180&quot;
+        src=&quot;https://www.moddb.com/hardware/sprintr/widget&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a
+        href=&quot;https://www.moddb.com/hardware/sprintr&quot;&gt;SprintR hardware
+        - ModDB&lt;/a&gt;</textarea><div class=\"sharewidget\" style=\"text-align:
+        center;\"></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea
+        name=\"\" cols=\"90\" rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\"
+        >&lt;a href=&quot;https://www.moddb.com/hardware/sprintr&quot; title=&quot;View
+        SprintR on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/hardware/104.png&quot;
+        alt=&quot;SprintR&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/sprintr\" title=\"View
+        SprintR on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/hardware/104.png\"
+        alt=\"SprintR\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/hardware/sprintr&quot;
+        title=&quot;View SprintR on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://media.moddb.com/images/global/moddb.png&quot; alt=&quot;SprintR&quot;
+        /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/hardware/sprintr\" title=\"View SprintR - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"SprintR\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/hardware/sprintr/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo articles were found matching the criteria specified.
+        We suggest you try the <a href=\"/hardware/sprintr/articles\">article list</a>
+        with no filter applied, to browse all available. <a href=\"/hardware/sprintr/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/hardware/sprintr/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"01672a78b179a7a07d8a6b994ddabd4b\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"hardwarebrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo hardware were found matching the criteria specified.
+        We suggest you try the <a href=\"/hardware\">hardware list</a> with no filter
+        applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"hardwareinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=104\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=hardware&amp;siteareaid=104\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware?filter=t&amp;category=3\"
+        rel=\"nofollow\">Controller</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/vr\" title=\"VR\">VR</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/exis\">Exis</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=hardwaregroup8086\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.exisinteractive.com/sprintr/\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Exisinteractive.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time>TBD</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Hardware watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=104\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr&title=SprintR+hardware\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=SprintR%20hardware&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=SprintR+hardware+https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr&quote=SprintR+hardware&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        hardware cannot be used to power RTX Remix experiences. Learn more about <a
+        href=\"/news/rtx-remix-on-moddb\">ModDB's collaboration with the Remix community</a>
+        to organize all compatible games,. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"01672a78b179a7a07d8a6b994ddabd4b\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/exisinteractive\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@exisinteractive</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1327698743706095616 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Some Wyvern riding fun <a href=\"https://search.twitter.com/search?q=screenshotsaturday\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#screenshotsaturday</a>
+        <a href=\"https://search.twitter.com/search?q=UnrealEngine\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#UnrealEngine</a> <a href=\"https://search.twitter.com/search?q=IndieGameDev\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#IndieGameDev</a> <a
+        rel=\"nofollow\"  href=\"https://t.co/aA9rRxtM1H\">T.co</a></p><p class=\"helper\">Nov
+        14 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1322951855454912513
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Assassin dismounts
+        and prepares for the enemy.  <a rel=\"nofollow\"  href=\"https://store.steampowered.com/app/1004470/Threshold_Tech_vs_Magic/\">Store.steampowered.com</a>\n\n<a
+        href=\"https://search.twitter.com/search?q=screenshotsaturday\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#screenshotsaturday</a> <a href=\"https://search.twitter.com/search?q=indiegame\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#indiegame</a> <a href=\"https://search.twitter.com/search?q=UE4\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#UE4</a> <a rel=\"nofollow\"
+        \ href=\"https://t.co/HIsZAy5jJ4\">T.co</a></p><p class=\"helper\">Nov 1 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1320870844764057600 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Hey all, Exis has temporarily Evacuated the <a href=\"https://search.twitter.com/search?q=Irvine\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#Irvine</a> area due
+        to the <a href=\"https://search.twitter.com/search?q=silveradowildfires\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#silveradowildfires</a>.
+        We'll be back in action as\u2026 <a rel=\"nofollow\"  href=\"https://t.co/ynAjnvgRN3\">T.co</a></p><p
+        class=\"helper\">Oct 27 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1320033579863166976 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>We're hiring Mobile game designers, artists, programmers,
+        and more!\n\n<a href=\"https://search.twitter.com/search?q=gamedevelopment\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#gamedevelopment</a>
+        <a href=\"https://search.twitter.com/search?q=gamejobs\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#gamejobs</a> <a href=\"https://search.twitter.com/search?q=unity3d\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#unity3d</a> <a rel=\"nofollow\"
+        \ href=\"https://t.co/Xl6PLDbfAg\">T.co</a></p><p class=\"helper\">Oct 24
+        2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1299734774098006016
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Secret tunnel....though
+        the mountain, Secret Secret Secret Secret  tunneeeeeeeeel!   <a href=\"https://search.twitter.com/search?q=screenshotsaturday\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#screenshotsaturday</a>\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/0HZA5qAkBx\">T.co</a></p><p class=\"helper\">Aug
+        29 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1278410968561672195
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>I posted a
+        concept of the Summoner previously, here's a video of the finished model Cloth/Animation
+        test with ALS:\u2026 <a rel=\"nofollow\"  href=\"https://t.co/kQfxPNJwRS\">T.co</a></p><p
+        class=\"helper\">Jul 1 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1261400105602576385 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Gear up and clear out an alien invasion: Majestic-12!\n\n\U0001F30ERemote
+        Play Compatible!\n\U0001F47E4-player co-op run-&amp;-gun\n\U0001F93C\u200D\u2640\uFE0FSurvi\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/59fTOSTyP4\">T.co</a></p><p class=\"helper\">May
+        15 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1260752464828981248
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/ExisInteractive\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@ExisInteractive</a>:
+        CHECK IT OUT GUYS I PORTED <a href=\"https://search.twitter.com/search?q=TechVsMagic\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#TechVsMagic</a> TO
+        TELNET CLIENTS\n\nIF YOU LIKE GRAND INQUISITOR ZORK YOULL LOVE THIS <a rel=\"nofollow\"
+        \ href=\"https://t.co/m2zbL43WiC\">T.co</a></p><p class=\"helper\">May 14
+        2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"01672a78b179a7a07d8a6b994ddabd4b\" />\t\t\t\t\t<div class=\"row rowtagstagcontroller
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/controller\">Controller</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=controller&sitearea=hardware&siteareaid=104&hash=e3bf90af6f4ea9a33f00b20cad9edae9\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=controller&sitearea=hardware&siteareaid=104&hash=e3bf90af6f4ea9a33f00b20cad9edae9&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagvr clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/vr\">VR</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=104&hash=e3bf90af6f4ea9a33f00b20cad9edae9\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=104&hash=e3bf90af6f4ea9a33f00b20cad9edae9&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=e3bf90af6f4ea9a33f00b20cad9edae9\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=e3bf90af6f4ea9a33f00b20cad9edae9&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"e3bf90af6f4ea9a33f00b20cad9edae9\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"hardware\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"104\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox menubox\" id=\"hardwareprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/top\">18 of 142</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/sprintr/stats\">760
+        (1 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2016-04-11T04:58:36+00:00\"
+        itemprop=\"dateModified\">8 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/sprintr/watchers\">1
+        member</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/hardware\",\"name\":\"Hardware\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/hardware/sprintr\",\"name\":\"SprintR\",\"image\":\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=hardware\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"hardware\",\r\n\t\t\t\t\t\ttags:
+        [\"hardware\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers: [\"\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736418\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736418\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"1536684\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1536684?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/hardware/sprintr/videos/gdc-2016-sprintr#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/gdc-2016-sprintr.mp4.jpg\",
+        1536684, \"GDC 2016 SprintR\", \"video\"); slidearr[1][1] = new Array(0, \"/hardware/sprintr/images/side#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Side.png\",
+        1361738, \"Side\", \"image\"); slidearr[1][2] = new Array(0, \"/hardware/sprintr/images/perspective#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Perspective.png\",
+        1361737, \"Perspective\", \"image\"); slidearr[1][3] = new Array(0, \"/hardware/sprintr/images/front#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Front.png\",
+        1361736, \"Front\", \"image\"); slidearr[1][4] = new Array(0, \"/hardware/sprintr/images/types#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/2_Types.jpg\",
+        1361735, \"Types\", \"image\"); slidearr[1][5] = new Array(0, \"/hardware/sprintr/images/logo#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/1Logo.jpg\",
+        1361727, \"Logo\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 1, 6, slidearr, \"/hardware/sprintr/images/add\", true);\n\r\n\t\t\t$(\".togglewidget\").click(function()
+        {\r\n\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").closest(\".row\").slideToggle();\r\n\t\t\t\t\r\n\t\t\t\tif($(this).closest(\".body\").find(\".sharewidget\").html().length
+        == 0) {\r\n\t\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").html($(this).closest(\".body\").find(\".sharewidget\").prev().val().replace(/\\<br\\>\\<a
+        href=.*?\\<\\/a\\>/, \"\"));\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\treturn false;\r\n\t\t\t});\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=hardware\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213d928f0ab725-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:06:58 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ym7A5uvAkUt5GeJV5eQVrMyjI1qNx7lVrPMhF55dd76GbYov28PG%2BWEmb0qYA4OQtVKB6DRI63jVzNsR0WtWqbOIFMT6OHYyjc6z6mfS2hNAc8z522RK3mLTFTo2XdiXUl8%2BP%2BjpM%2Bz1DIs%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '51469'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=aef5523b9c60c710a32fa0bf716d7da1; expires=Wed, 10-Apr-2024 08:16:58
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=aef5523b9c60c710a32fa0bf716d7da1; expires=Wed, 10-Apr-2024 08:16:58
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/hardware/sprintr
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>SprintR
+        hardware - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"sprintr, vr, controller, virtual reality, augmented reality, hardware,
+        headsets, haptics, controllers, input, keyboard, handheld, feedback, developers,
+        creation, gear\" />\r\n\t<meta name=\"description\" content=\"SprintR puts
+        VR movement where it belongs, at your feet. SprintR is a wireless foot-pad
+        that lets you easily walk, run, and jump in VR. It not only feels natural,
+        but also frees up your hands for all sorts of new experiences. Used in combination
+        with...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"SprintR hardware\" />\r\n\t<meta property=\"og:description\"
+        content=\"SprintR puts VR movement where it belongs, at your feet. SprintR
+        is a wireless foot-pad that lets you easily walk, run, and jump in VR. It
+        not only feels natural, but also frees up your hands for all sorts of new
+        experiences. Used in combination with...\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"hardware\"
+        /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/hardware/sprintr\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"SprintR hardware\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"SprintR puts VR movement where it belongs, at your feet. SprintR
+        is a wireless foot-pad that lets you easily walk, run, and jump in VR. It
+        not only feels natural, but also frees up your hands for all sorts of new
+        experiences. Used in combination with...\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/hardware/sprintr\" /> \r\n\t<meta property=\"twitter:image\"
+        content=\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\" />
+        \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/hardware/sprintr/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"SprintR hardware feed\" />\t<script async
+        src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>SprintR hardware</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/Product\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"image\" content=\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/hardware/sprintr\"
+        itemprop=\"mainEntityOfPage\">SprintR</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/company/exis\">Exis</a> | <time itemprop=\"releaseDate\">TBD</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/hardware/sprintr\">summary</a></li><li class=\"off\"><a
+        href=\"/hardware/sprintr/articles\">articles</a></li><li class=\"off\"><a
+        href=\"/hardware/sprintr/downloads\">files</a></li><li class=\"off\"><a href=\"/hardware/sprintr/games\">games</a></li><li
+        class=\"\"><a href=\"/hardware/sprintr/videos\">videos</a></li><li class=\"\"><a
+        href=\"/hardware/sprintr/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"SprintR puts VR movement where it belongs,
+        at your feet. SprintR is a wireless foot-pad that lets you easily walk, run,
+        and jump in VR. It not only feels natural, but also frees up your hands for
+        all sorts of new experiences. Used in combination with a game-pad or hand
+        sensing tech, SprintR becomes a full avatar control solution for VR.\" />\t<div
+        class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p><strong>The problem:</strong> Game-pads and handheld
+        controllers offer limited and unnatural movement for virtual reality (VR).
+        One current solution is to move in the direction the head is looking, which
+        is awkward at best. The added presence of head movement, and the separation
+        of movement from interaction is critical to new VR experiences, and existing
+        input methods simply fall short. Any hand held devices used for movement cause
+        an avoidable disconnect in VR.</p>\n<p>Using a game-pad to move and control
+        a prop, like a weapon, is disorienting in VR. Aiming is confusing because
+        the player has a hard time reconciling the weapon position with their field
+        of view. Traditional games are able to lock the gun/hands to the camera, but
+        this is extremely unnatural in virtual reality.</p>\n<p><strong>The solution:</strong>
+        <strong>SprintR</strong> puts VR movement where it belongs, at your feet.
+        <strong>SprintR</strong> is a wireless foot-pad that lets you easily walk,
+        run, and jump in VR. It not only feels natural, but also frees up your hands
+        for all sorts of new experiences. Used in combination with a game-pad or hand
+        sensing tech, <strong>SprintR</strong> becomes a full avatar control solution
+        for VR.</p>\n<p><strong>Benefits:</strong> Since <strong>SprintR</strong>
+        is portable, it&rsquo;s perfect for desk or in-front of the couch gaming.
+        The form factor suits any foot size or type. Additionally, <strong>SprintR</strong>
+        comes in wired and wireless varieties; it&rsquo;s perfect for PC and Consoles.</p>\n<ul>\n<li>Players
+        can walk, run, and jump using SprintR.</li>\n<li>SprintR is wireless and portable,
+        perfect for gaming from the couch.</li>\n<li>Helps reduce motion sickness
+        with added body presence.</li>\n<li>Low impact: No need to run in-place and
+        sweat through your HMD.</li>\n<li>Haptics/Feedback via rumble.</li>\n</ul></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/hardware/sprintr/videos/gdc-2016-sprintr#imagebox\"
+        title=\"GDC 2016 SprintR\"><span class=\"play\" data-id=\"1536684\"></span><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/gdc-2016-sprintr.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/side#imagebox\" title=\"Side\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Side.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/perspective#imagebox\" title=\"Perspective\"><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Perspective.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/front#imagebox\" title=\"Front\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Front.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/types#imagebox\" title=\"Types\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/2_Types.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/sprintr/images/logo#imagebox\" title=\"Logo\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/1Logo.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next nextoff\"><a href=\"#\" title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\t</ul>\r\n\t</div>\r\n</div><div class=\"column span-300-alt first
+        tabsummary\">\t<div class=\"normalbox menubox\" id=\"embedbuttons\">\n\t\t\t\t<div
+        class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t<p>To
+        promote SprintR and <a href=\"/hardware/sprintr/stats\">grow its popularity</a>
+        (<a href=\"/hardware/top\">top hardware</a>), use the embed code provided
+        on your homepage, blog, forums and elsewhere you desire. Or try <a href=\"#\"
+        class=\"togglewidget\">our widget</a>.</p>\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"display:
+        none;\">\n\t\t\t\t\t\t<textarea name=\"\" cols=\"90\" rows=\"12\" style=\"width:
+        100%; height: 44px;\" class=\"text\" >&lt;iframe width=&quot;600&quot; height=&quot;180&quot;
+        src=&quot;https://www.moddb.com/hardware/sprintr/widget&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a
+        href=&quot;https://www.moddb.com/hardware/sprintr&quot;&gt;SprintR hardware
+        - ModDB&lt;/a&gt;</textarea><div class=\"sharewidget\" style=\"text-align:
+        center;\"></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea
+        name=\"\" cols=\"90\" rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\"
+        >&lt;a href=&quot;https://www.moddb.com/hardware/sprintr&quot; title=&quot;View
+        SprintR on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/hardware/104.png&quot;
+        alt=&quot;SprintR&quot; /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/sprintr\" title=\"View
+        SprintR on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/hardware/104.png\"
+        alt=\"SprintR\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5><textarea name=\"\" cols=\"90\"
+        rows=\"12\" style=\"width: 320px; height: 44px;\" class=\"text\" >&lt;a href=&quot;https://www.moddb.com/hardware/sprintr&quot;
+        title=&quot;View SprintR on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://media.moddb.com/images/global/moddb.png&quot; alt=&quot;SprintR&quot;
+        /&gt;&lt;/a&gt;</textarea></h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<a
+        href=\"/hardware/sprintr\" title=\"View SprintR - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"SprintR\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/hardware/sprintr/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo articles were found matching the criteria specified.
+        We suggest you try the <a href=\"/hardware/sprintr/articles\">article list</a>
+        with no filter applied, to browse all available. <a href=\"/hardware/sprintr/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/hardware/sprintr/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"963acf5fedba28c5e3f36a304bef2259\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"hardwarebrowserecommended\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">You may also like</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p class=\"viewbrowse\" style=\"margin-top:
+        1em;\">\r\n\t\t\t\t\tNo hardware were found matching the criteria specified.
+        We suggest you try the <a href=\"/hardware\">hardware list</a> with no filter
+        applied, to browse all available.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"hardwareinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=104\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=hardware&amp;siteareaid=104\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware?filter=t&amp;category=3\"
+        rel=\"nofollow\">Controller</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/vr\" title=\"VR\">VR</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/exis\">Exis</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=hardwaregroup8086\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.exisinteractive.com/sprintr/\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Exisinteractive.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time>TBD</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Hardware watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=104\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr&title=SprintR+hardware\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=SprintR%20hardware&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=SprintR+hardware+https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr&quote=SprintR+hardware&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fsprintr\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        hardware cannot be used to power RTX Remix experiences. Learn more about <a
+        href=\"/news/rtx-remix-on-moddb\">ModDB's collaboration with the Remix community</a>
+        to organize all compatible games,. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"963acf5fedba28c5e3f36a304bef2259\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/exisinteractive\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@exisinteractive</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1327698743706095616 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Some Wyvern riding fun <a href=\"https://search.twitter.com/search?q=screenshotsaturday\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#screenshotsaturday</a>
+        <a href=\"https://search.twitter.com/search?q=UnrealEngine\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#UnrealEngine</a> <a href=\"https://search.twitter.com/search?q=IndieGameDev\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#IndieGameDev</a> <a
+        rel=\"nofollow\"  href=\"https://t.co/aA9rRxtM1H\">T.co</a></p><p class=\"helper\">Nov
+        14 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1322951855454912513
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Assassin dismounts
+        and prepares for the enemy.  <a rel=\"nofollow\"  href=\"https://store.steampowered.com/app/1004470/Threshold_Tech_vs_Magic/\">Store.steampowered.com</a>\n\n<a
+        href=\"https://search.twitter.com/search?q=screenshotsaturday\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#screenshotsaturday</a> <a href=\"https://search.twitter.com/search?q=indiegame\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#indiegame</a> <a href=\"https://search.twitter.com/search?q=UE4\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#UE4</a> <a rel=\"nofollow\"
+        \ href=\"https://t.co/HIsZAy5jJ4\">T.co</a></p><p class=\"helper\">Nov 1 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1320870844764057600 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Hey all, Exis has temporarily Evacuated the <a href=\"https://search.twitter.com/search?q=Irvine\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#Irvine</a> area due
+        to the <a href=\"https://search.twitter.com/search?q=silveradowildfires\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#silveradowildfires</a>.
+        We'll be back in action as\u2026 <a rel=\"nofollow\"  href=\"https://t.co/ynAjnvgRN3\">T.co</a></p><p
+        class=\"helper\">Oct 27 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1320033579863166976 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>We're hiring Mobile game designers, artists, programmers,
+        and more!\n\n<a href=\"https://search.twitter.com/search?q=gamedevelopment\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#gamedevelopment</a>
+        <a href=\"https://search.twitter.com/search?q=gamejobs\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#gamejobs</a> <a href=\"https://search.twitter.com/search?q=unity3d\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#unity3d</a> <a rel=\"nofollow\"
+        \ href=\"https://t.co/Xl6PLDbfAg\">T.co</a></p><p class=\"helper\">Oct 24
+        2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1299734774098006016
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Secret tunnel....though
+        the mountain, Secret Secret Secret Secret  tunneeeeeeeeel!   <a href=\"https://search.twitter.com/search?q=screenshotsaturday\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#screenshotsaturday</a>\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/0HZA5qAkBx\">T.co</a></p><p class=\"helper\">Aug
+        29 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1278410968561672195
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>I posted a
+        concept of the Summoner previously, here's a video of the finished model Cloth/Animation
+        test with ALS:\u2026 <a rel=\"nofollow\"  href=\"https://t.co/kQfxPNJwRS\">T.co</a></p><p
+        class=\"helper\">Jul 1 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1261400105602576385 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Gear up and clear out an alien invasion: Majestic-12!\n\n\U0001F30ERemote
+        Play Compatible!\n\U0001F47E4-player co-op run-&amp;-gun\n\U0001F93C\u200D\u2640\uFE0FSurvi\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/59fTOSTyP4\">T.co</a></p><p class=\"helper\">May
+        15 2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1260752464828981248
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/ExisInteractive\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@ExisInteractive</a>:
+        CHECK IT OUT GUYS I PORTED <a href=\"https://search.twitter.com/search?q=TechVsMagic\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#TechVsMagic</a> TO
+        TELNET CLIENTS\n\nIF YOU LIKE GRAND INQUISITOR ZORK YOULL LOVE THIS <a rel=\"nofollow\"
+        \ href=\"https://t.co/m2zbL43WiC\">T.co</a></p><p class=\"helper\">May 14
+        2020</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"963acf5fedba28c5e3f36a304bef2259\" />\t\t\t\t\t<div class=\"row rowtagstagcontroller
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/controller\">Controller</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=controller&sitearea=hardware&siteareaid=104&hash=bd03bc07fdd638f770280ede62984f32\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=controller&sitearea=hardware&siteareaid=104&hash=bd03bc07fdd638f770280ede62984f32&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagvr clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/vr\">VR</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=104&hash=bd03bc07fdd638f770280ede62984f32\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=104&hash=bd03bc07fdd638f770280ede62984f32&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=bd03bc07fdd638f770280ede62984f32\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=bd03bc07fdd638f770280ede62984f32&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"bd03bc07fdd638f770280ede62984f32\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"hardware\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"104\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox menubox\" id=\"hardwareprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/top\">12 of 142</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/sprintr/stats\">761
+        (2 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2016-04-11T04:58:36+00:00\"
+        itemprop=\"dateModified\">8 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/sprintr/watchers\">1
+        member</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5424 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/hardware\",\"name\":\"Hardware\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/hardware/sprintr\",\"name\":\"SprintR\",\"image\":\"https://media.moddb.com/images/hardware/1/1/104/preview.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=hardware\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"hardware\",\r\n\t\t\t\t\t\ttags:
+        [\"hardware\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers: [\"\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749115\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749115\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"1536684\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1536684?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/hardware/sprintr/videos/gdc-2016-sprintr#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/gdc-2016-sprintr.mp4.jpg\",
+        1536684, \"GDC 2016 SprintR\", \"video\"); slidearr[1][1] = new Array(0, \"/hardware/sprintr/images/side#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Side.png\",
+        1361738, \"Side\", \"image\"); slidearr[1][2] = new Array(0, \"/hardware/sprintr/images/perspective#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Perspective.png\",
+        1361737, \"Perspective\", \"image\"); slidearr[1][3] = new Array(0, \"/hardware/sprintr/images/front#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/Front.png\",
+        1361736, \"Front\", \"image\"); slidearr[1][4] = new Array(0, \"/hardware/sprintr/images/types#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/2_Types.jpg\",
+        1361735, \"Types\", \"image\"); slidearr[1][5] = new Array(0, \"/hardware/sprintr/images/logo#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/104/crop_120x90/1Logo.jpg\",
+        1361727, \"Logo\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 1, 6, slidearr, \"/hardware/sprintr/images/add\", true);\n\r\n\t\t\t$(\".togglewidget\").click(function()
+        {\r\n\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").closest(\".row\").slideToggle();\r\n\t\t\t\t\r\n\t\t\t\tif($(this).closest(\".body\").find(\".sharewidget\").html().length
+        == 0) {\r\n\t\t\t\t\t$(this).closest(\".body\").find(\".sharewidget\").html($(this).closest(\".body\").find(\".sharewidget\").prev().val().replace(/\\<br\\>\\<a
+        href=.*?\\<\\/a\\>/, \"\"));\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\treturn false;\r\n\t\t\t});\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=hardware\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8722738ecfe89fd0-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:38:35 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=EJhtLXtVpsTLNUOlpubPeuztDf33EKmg2cBpG0Rho87h2%2BCIvtcugXoRYS2DgHI%2F6ClRZNFWPX2R%2BXycTeuoMHg1DmgXOf4jlIVK5N9n1SVQDxQ%2BZ4x18Rz3EWUsjto9Cl79slO60v83%2Bc4%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '51469'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=d11d2a1b38821e816389f805a5fb5ee1; expires=Wed, 10-Apr-2024 11:48:35
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=d11d2a1b38821e816389f805a5fb5ee1; expires=Wed, 10-Apr-2024 11:48:35
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

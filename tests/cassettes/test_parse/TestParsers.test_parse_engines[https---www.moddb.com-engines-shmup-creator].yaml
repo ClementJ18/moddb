@@ -866,8 +866,6 @@ interactions:
       - 8188d72a4e4f1543-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -882,10 +880,1882 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '77760'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=e78b13a02adcbf5b6caf26a55b2c2101; expires=Thu, 19-Oct-2023 12:06:55
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/engines/shmup-creator
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>SHMUP Creator
+        engine - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"shmup creator, Commercial, video game engine, indie game, 3d, render,
+        builder, tool, graphics, networking, make game, kit game, develop, application\"
+        />\r\n\t<meta name=\"description\" content=\"The Shmup Creator is a tool that
+        will help you create your own shoot'em up and easily build your levels without
+        coding at all!\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"SHMUP Creator engine\" />\r\n\t<meta property=\"og:description\"
+        content=\"The Shmup Creator is a tool that will help you create your own shoot'em
+        up and easily build your levels without coding at all!\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"product\" />
+        \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/engines/shmup-creator\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/engines/1/1/923/header.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"SHMUP Creator engine\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"The Shmup Creator is a tool that will help you create your own shoot'em
+        up and easily build your levels without coding at all!\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/engines/shmup-creator\" /> \r\n\t<meta property=\"twitter:image\"
+        content=\"https://media.moddb.com/images/engines/1/1/923/header.png\" /> \r\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/engines/shmup-creator/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"SHMUP Creator engine feed\" />\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>SHMUP Creator engine</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"on\"><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Game Engine\" /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/engines/1/1/923/header.png\"
+        />\t<div class=\"headerbox\" style=\"background-image: url(https://media.moddb.com/images/engines/1/1/923/header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2
+        itemprop=\"name\"><a href=\"/engines/shmup-creator\" itemprop=\"mainEntityOfPage\">SHMUP
+        Creator</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span itemprop=\"publisher\"
+        itemscope itemtype=\"https://schema.org/Organization\"><a href=\"/company/bulo-studio\"
+        itemprop=\"url\"><span itemprop=\"name\">Bulo studio</span></a></span> | <time
+        itemprop=\"datePublished\">TBD</time>\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"on firsttab\"><a href=\"/engines/shmup-creator\">summary</a></li><li
+        class=\"\"><a href=\"/engines/shmup-creator/articles\">articles</a></li><li
+        class=\"\"><a href=\"/engines/shmup-creator/games\">games</a></li><li class=\"\"><a
+        href=\"/engines/shmup-creator/downloads\">files</a></li><li class=\"off\"><a
+        href=\"/engines/shmup-creator/videos\">videos</a></li><li class=\"\"><a href=\"/engines/shmup-creator/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"The Shmup Creator is a tool that will help
+        you create your own shoot'em up and easily build your levels without coding
+        at all!\" />\t<div class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div id=\"profiledescription\"><p>The
+        <strong>Shmup Creator</strong> is a tool that will help you create your own
+        shoot'em up and easily build your levels without coding at all!</p>\n<h3><strong>Everything
+        is drag-and-drop</strong></h3>\n<p>No script, no code: use your mouse and
+        the menu to create complex games.<strong><br /></strong>We are trying hard
+        to make an easy, but powerful tool that anybody can use.<strong><br /></strong></p>\n<h3><strong>some
+        features:</strong></h3>\n<p>. create 2D or 3D games<br />. vertical or horizontal
+        shmups<br />. state of the art 3D engine: shadows, shaders, particle effects,
+        post processing&hellip;<br />. scoring systems<br />. bullets patterns editor<br
+        />. game logic using triggers</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/images/shmupcreator-screenshot-019#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_10.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-018#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_09.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-017#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_08.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-016#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_07.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-015#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_06.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-014#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_05.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/engines/shmup-creator/images/shmupcreator-screenshot-013#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/engines/shmup-creator/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/engines/shmup-creator/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-demo-levels\">SHMUP
+        Creator demo levels</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-12-21\">Dec 21 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row rowcontent
+        rowcontentnext clear\" style=\"padding-left: 0; padding-right: 0;\">\r\n\t\t<p><img
+        src=\"https://media.indiedb.com/images/members/3/2906/2905112/profile/BuloStudio_2020_june_ban.jpg\"
+        alt=\"BuloStudio 2020 june ban\" width=\"610\" height=\"148\" /><br /><br
+        />The <strong>SHMUP Creator</strong> will be released in a few weeks!<br />You
+        can wishlist: <a  href=\"https://store.steampowered.com/app/1289520/SHMUP_Creator/\">Store.steampowered.com</a></p>\n<p>In
+        the meantime, we can show you some levels examples made with the tool:<br
+        /><br /></p>\n<p><strong>BLADE OF DEATH</strong></p>\n<p>Blades Of Death is
+        the SHMUP Creator 3D example level. It was the first real level made with
+        the SHMUP Creator (it was playable at the STUNFEST game festival a few years
+        ago) and was really a cornerstone of the SC development: working on a real
+        game level helped us debug and polish a lot of things, and making the level
+        was fast and fun. <br />Actually, it was quite a relief: it's one thing to
+        work on a tool, try to imagine what features are needed, how to implement
+        them the best we can, to work on usability and design, but it's another thing
+        to really use it, like a future user, and really create something with it.
+        <br />And it worked.</p>\n<p><iframe src=\"//www.youtube.com/embed/nwvomQOh0Mg\"
+        width=\"600\" height=\"336\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p><strong><br
+        />WINGS BLASTER</strong></p>\n<p>At last, we completed the 2D example game!<br
+        />It took a long time, mainly because fixing bugs was our priority. Also,
+        we completed the level structure and all the graphic assets a long time ago,
+        but I was stuck on the level design... I had no idea how to make an exciting
+        level: it's hard to focus on everything, coding, marketing, graphics, and
+        still have room for inspiration...</p>\n<p><iframe src=\"//www.youtube.com/embed/N29aLpEevL4\"
+        width=\"600\" height=\"336\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p><br
+        />We asked Alec, our main tester (and creator of his own full shoot 'em up
+        Nanoforce (link: <a  href=\"https://www.youtube.com/channel/UCt-kQY_wjY9IoJ7eRlYtMDQ/videos\">Youtube.com</a>),
+        made with the SHMUP Creator!) to help us, and he did and delivered :)<br />He
+        added an intro, a lot of cinematic animations (moving asteroids, explosions,
+        moving walls...), secret items, mid-level boss... <br />All this in a few
+        hours. Alec is a power user, but it just means the SHMUP Creator is efficient
+        and fast :)<br /><br /></p>\n<p><strong>DANMAKU TESTS</strong></p>\n<p><iframe
+        src=\"//www.youtube.com/embed/fsS6CTlBlZk\" width=\"600\" height=\"336\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p>We
+        didn't make a complete bullet hell example level, but we made small test scenes
+        to see if it was possible to make a DoDonPachi game with the SHMUP Creator.
+        Spoiler: it's possible :)<br />Although it's a lot of work: it's easy to create
+        bullet patterns and enemies paths in the editor, but the timing in this kind
+        of game is everything. Fortunately, in the editor, you can place an enemy,
+        press play to try the game, stop, move it a little bit on the left, press
+        play and try it again... It's really fast and easy to iterate.</p>\n<p><img
+        src=\"https://media.indiedb.com/images/members/3/2906/2905112/profile/SHMUPCreator_screenshot_10.jpg\"
+        alt=\"SHMUPCreator screenshot 10\" width=\"600\" /></p>\n<p><img src=\"https://media.indiedb.com/images/members/3/2906/2905112/profile/SHMUPCreator_screenshot_07.jpg\"
+        alt=\"SHMUPCreator screenshot 07\" width=\"600\" /></p>\n<p>Some links:<br
+        /><strong>Steam </strong>(wishlist !!!): <a href=\"https://store.steampowered.com/app/1289520/SHMUP_Creator/\"
+        class=\"postlink\">Store.steampowered.com</a><br /><strong>Youtube</strong>:
+        <a href=\"https://www.youtube.com/user/bulostudio/videos\" class=\"postlink\">Youtube.com</a><br
+        /><strong>Twitter</strong>: <a href=\"https://twitter.com/bulostudio\" class=\"postlink\">Twitter.com</a><br
+        /><strong>Nanofroce</strong>, a game made with this tool: <a href=\"https://shmups.system11.org/viewtopic.php?f=9&amp;t=67411\"
+        class=\"postlink\">Shmups.system11.org</a></p>\n<p>See you soon!<br />S.</p>\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/shmup-creator-trailer-and-steam-page-are-live\"
+        title=\"SHMUP Creator Trailer and Steam page are live!\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/296/295138/crop_120x90/montage_Convert_to_MP4.mp4_snaps.jpg\"
+        alt=\"SHMUP Creator Trailer and Steam page are live!\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-trailer-and-steam-page-are-live\">SHMUP
+        Creator Trailer and Steam page are live!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-06-02\">Jun 2 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>At last! After years of work, the trailer for
+        our project is complete! And we opened the Steam store at the same time. It's
+        an emotional moment :)</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/july-update-and-shmup-creator-tote-bags\"
+        title=\"July update and SHMUP Creator tote bags\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/286/285205/crop_120x90/header_1024.jpg\"
+        alt=\"July update and SHMUP Creator tote bags\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/july-update-and-shmup-creator-tote-bags\">July
+        update and SHMUP Creator tote bags</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-08-25T10:32:50+00:00\">Aug 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>Still working
+        on the beta, we are creating some tote bags in the meantime.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/shmup-creator-we-started-the-beta\"
+        title=\"SHMUP Creator: We started the beta!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/284/283811/crop_120x90/discord_SC.jpg\"
+        alt=\"SHMUP Creator: We started the beta!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-we-started-the-beta\">SHMUP
+        Creator: We started the beta!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-07-15T12:30:35+00:00\">Jul 15 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>After years
+        of part-time work, we at last started the closed beta of the SHMUP Creator.
+        This is emotional and we hope to release the tool this year.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/shmup-creator-february-update\"
+        title=\"SHMUP Creator: February update\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/278/277192/crop_120x90/bullets_collisions.jpg\"
+        alt=\"SHMUP Creator: February update\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-february-update\">SHMUP
+        Creator: February update</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-15\">Feb 15 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        <a href=\"/engines/shmup-creator/news/shmup-creator-february-update\" class=\"commenticon\">2
+        comments</a>  \t\t\t</span>\r\n\t\t\t<p>A new update about the dev of the
+        SHMUP Creator. I spent a lot of time optimizing the bullets engine, and the
+        result is 10.000 bullets at 60 fps on my...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/engines/shmup-creator/articles/add\">Post
+        article</a> | <a href=\"/engines/shmup-creator/articles\">More articles &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        articles were found matching the criteria specified. We suggest you try the
+        <a href=\"/engines/shmup-creator/articles\">article list</a> with no filter
+        applied, to browse all available. <a href=\"/engines/shmup-creator/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"gamesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/games/add/?engine=923#gamesform\"
+        class=\"addicon\"  title=\"Add game\">Add game</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Games</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/games/atomanta\" title=\"Atomanta\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84188/crop_120x90/ipkujikujio.png\"
+        alt=\"Atomanta\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/atomanta\">Atomanta</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-26T03:32:30+00:00\">Mar 26 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Atomanta
+        is a work-in-progress bullet hell SHMUP developed by Remorasoft.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/tastrion\" title=\"Tastrion\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82040/crop_120x90/vwdasd.png\"
+        alt=\"Tastrion\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/tastrion\">Tastrion</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-25T14:02:49+00:00\">Mar 25 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2024-03-24\">Released Mar
+        24, 2024</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Tastrion is a Shoot-Em-Up
+        inspired by games from old-school titles such as Arrow Flash, Gaiares, and
+        R-type. The goal of the game is to complete 8 progressively...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/interstellar-sentinel\"
+        title=\"Interstellar Sentinel\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82047/crop_120x90/logo.jpg\"
+        alt=\"Interstellar Sentinel\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/interstellar-sentinel\">Interstellar Sentinel</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-08-20T08:47:36+00:00\">Aug
+        20 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2023-08-02\">Released Aug 2, 2023</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Interstellar
+        Sentinel is an action-packed shoot'em up that takes you on a sci-fi fantasy
+        journey through legions of monsters, demons, and cosmic mind-ripping...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/games/add/?engine=923\">Add
+        game &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo games were found
+        matching the criteria specified. We suggest you try the <a href=\"/engines/shmup-creator/games\">game
+        list</a> with no filter applied, to browse all available. <a href=\"/games/add/?engine=923\">Add
+        game</a> and help us achieve our mission of showcasing the best content from
+        all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"8608390\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/drbosskey\" title=\"drbosskey\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"drbosskey\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/drbosskey\" class=\"author\" data-nameid=\"drbosskey\">drbosskey</a>
+        \ - <a href=\"#8608390\" style=\"color: inherit;\"><time datetime=\"2023-08-20T17:19:28+00:00\">Aug
+        20 2023</time></a> - 1 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>The developer and engine are alive
+        and well! I just released my first dream game, Interstellar Sentinel, with
+        it, and it has been a fantastic experience with what you can do with the engine.
+        Join our community, it's one of my favorite places on the internet for shmup
+        developers and dreamers!</p>\n<p>Here is my game: <a rel=\"nofollow\"  href=\"https://store.steampowered.com/app/2426610/Interstellar_Sentinel/\">Store.steampowered.com</a>\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8608390\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8608390\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8608390\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7543704\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest2.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#7543704\" style=\"color: inherit;\"><time datetime=\"2020-01-27T14:22:51+00:00\">Jan
+        27 2020</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>so what happened to this?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7543704\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7543704\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7543704\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6999144\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6999144\" style=\"color: inherit;\"><time datetime=\"2018-06-08T10:39:46+00:00\">Jun
+        8 2018</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Good to hear you're back on track.
+        Things happen, understandably (Congratulations on the new job); just happy
+        that this project isn't abandoned. Keep up the good work, and can't wait for
+        the next update. I'm excited to make me some shmups. <a rel=\"nofollow\" href=\"/tags/hype\">#hype</a>\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6999144\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6999144\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6999144\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7014086\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/suny2000\"
+        title=\"suny2000\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/3/2906/2905112/suny.gif\"
+        alt=\"suny2000\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/suny2000\" class=\"author\"
+        data-nameid=\"suny2000\">suny2000</a>  - <a href=\"#7014086\" style=\"color:
+        inherit;\"><time datetime=\"2018-06-24T13:37:43+00:00\">Jun 24 2018</time></a>
+        - 2 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Thanks
+        a lot for your comment!<br />\nI'll post a new update next week.<br />\nCheers,<br
+        />\nS.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"7014086\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7014086&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/engines/shmup-creator/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"21580c64a0cc9f94dd7a00fe679e7fd8\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"enginesinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=engines&amp;siteareaid=923\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=engines&amp;siteareaid=923\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"operatingSystem\"><a href=\"/platforms/windows\"
+        title=\"Windows\">Windows</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Company</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/bulo-studio\">Bulo studio</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=enginesgroup15540\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://bulostudio.com\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Bulostudio.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Licence</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines?filter=t&amp;licence=1\"
+        rel=\"nofollow\">Commercial</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time>TBD</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engine watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=engines&amp;siteareaid=923\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator&title=SHMUP+Creator+engine\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=SHMUP%20Creator%20engine&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=SHMUP+Creator+engine+https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator&quote=SHMUP+Creator+engine&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        engine is NOT compatible with RTX Remix. Learn more about <a href=\"/news/rtx-remix-on-moddb\">ModDB's
+        collaboration with the Remix community</a> to organize all compatible games,.
+        <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Mod SDK & Community</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"padding-top:
+        1em; padding-bottom: 0;\">\n\t\t\t\t\t\tBuilt a <a href=\"https://mod.io\"
+        target=\"_blank\">game for SHMUP Creator and want to support mods</a>? Try
+        mod.io, a cross-platform mod SDK created by ModDB which makes it easy to get
+        a mod community up and running in-game. <a href=\"https://mod.io\">Currently
+        seeking games</a> to integrate and promote\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"padding: 0;\">\n\t\t\t\t\t\t<div style=\"text-align:
+        center;\"><a href=\"https://mod.io\" title=\"Cross Platform Mod API and SDK
+        for game developers\" target=\"_blank\"><img src=\"https://media.moddb.com/images/members/1/1/1/profile/modio_menu_bottom.png\"
+        alt=\"Mod API\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"21580c64a0cc9f94dd7a00fe679e7fd8\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/bulostudio\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@bulostudio</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678766204486574083 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/VoodooGames80\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@VoodooGames80</a>: Ok after a few months...
+        we are back on Twitter! \\o/\nAnd still working on our little <a href=\"https://search.twitter.com/search?q=shmup\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#shmup</a> <a href=\"https://search.twitter.com/search?q=Jezebel\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#Jezebel</a> made with\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/lLvmdOV3ga\">T.co</a></p><p class=\"helper\">Jul
+        11 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678431093379198976
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/colossal_cedric\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@colossal_cedric</a>:
+        Little improvements about water. I will update soon.  <a href=\"https://search.twitter.com/search?q=nanoforce\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#nanoforce</a> \n<a
+        href=\"https://search.twitter.com/search?q=shmupcreator\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#shmupcreator</a> \n<a href=\"https://search.twitter.com/search?q=shmup\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#shmup</a>\n<a href=\"https://search.twitter.com/search?q=steam\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#steam</a> <a rel=\"nofollow\"
+        \ href=\"https://t.co/DshmZqCoEP\">T.co</a></p><p class=\"helper\">Jul 10
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678279045581099008
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/DrBossKey\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@DrBossKey</a>: <a
+        \ href=\"https://www.youtube.com/watch?v=0TGFJb3Sfcg\">Youtube.com</a></p><p
+        class=\"helper\">Jul 10 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677577023118626817 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/colossal_cedric\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@colossal_cedric</a>:
+        Last boss became almost invincible (bug in all modes) but it's fixed now.\n\nThank
+        you for your feedback, your suppor\u2026 <a rel=\"nofollow\"  href=\"https://t.co/kmO5yv7st8\">T.co</a></p><p
+        class=\"helper\">Jul 8 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677433191156654087 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/quincemellon\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@quincemellon</a>: \u3061\u3089\u308A\u3068\u30BB\u30AF\u30B7\u30FC\u306ASTG&quot;Stan\xC7act(\u30B9\u30BF\u30F3\u30B5\u30AF\u30C8)&quot;\u30C7\u30E2\u7248\u516C\u958B\u4E2D\u3067\u3059\u3002\n\nDLsite:https://dlsite.jp/maant/RJ01067139/?utm_content=RJ01067139&#038;locale=ja_JP\n\n<a
+        rel=\"nofollow\"  href=\"http://itch.io:\">Itch.io:</a>\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/OuKXFP87eV\">T.co</a></p><p class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677433161708367872 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/colossal_cedric\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@colossal_cedric</a>:
+        Major update is coming....not so fast....It will be tough, dont hesitate to
+        train with the main game.\n\n9.99 usd pc\u2026 <a rel=\"nofollow\"  href=\"https://t.co/A2oto7xY4T\">T.co</a></p><p
+        class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677312761888493571 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/spadgy_OTA\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@spadgy_OTA</a>: My favourite game series?
+        Probably Raiden.\n\nSo I\u2019m very excited to see my 6-page history of the
+        iconic shmup series\u2026 <a rel=\"nofollow\"  href=\"https://t.co/qBnQZyINbB\">T.co</a></p><p
+        class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677312587011072003 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/quincemellon\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@quincemellon</a>: \u30A8\u30ED\u30B2\u3068\u9957\u306B\u3082\u30C7\u30E2\u7248\u3092\u7F6E\u3044\u3066\u3044\u307E\u3059\u306E\u3067\u3088\u308D\u3057\u304F\u304A\u9858\u3044\u3057\u307E\u3059\u3002\nStan\xC7act(\u30B9\u30BF\u30F3\u30B5\u30AF\u30C8)
+        -Sexy Tenacious Girls- \u4F53\u9A13\u7248(\u03B1\u7248)\n<a rel=\"nofollow\"
+        \ href=\"https://elog.tokyo/shooting/game_1179.html\">Elog.tokyo</a></p><p
+        class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"21580c64a0cc9f94dd7a00fe679e7fd8\" />\t\t\t\t\t<div class=\"row rowtagstaghype
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/hype\">hype</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=hype&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=hype&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagshmup clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/shmup\">shmup</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=shmup&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=shmup&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagdanmaku clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/danmaku\">danmaku</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=danmaku&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=danmaku&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagdraganddrop clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/drag-and-drop\">Drag and Drop</a><span style=\"float: right;\"><a
+        href=\"/tags/ajax/add?tag=drag-and-drop&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=drag-and-drop&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagcreator clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/creator\">creator</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=creator&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=creator&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagshootemup clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/shoot-em-up\">shoot em up</a><span style=\"float: right;\"><a
+        href=\"/tags/ajax/add?tag=shoot-em-up&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=shoot-em-up&sitearea=engines&siteareaid=923&hash=22e5d98e57b56daf4cedca854455b337&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=22e5d98e57b56daf4cedca854455b337\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=22e5d98e57b56daf4cedca854455b337&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"22e5d98e57b56daf4cedca854455b337\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"engines\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"923\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"enginesbuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to SHMUP Creator by selecting a button and using the embed code provided <a
+        href=\"#\" class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/engines/shmup-creator&quot;
+        title=&quot;View SHMUP Creator on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/popularity/medium/engines/923.png&quot;
+        alt=&quot;SHMUP Creator&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/engines/shmup-creator\"
+        title=\"View SHMUP Creator on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/engines/923.png\"
+        alt=\"SHMUP Creator\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn
+        smallbtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/engines/shmup-creator\"
+        title=\"View SHMUP Creator - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"SHMUP Creator\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"enginesprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/top\">66 of 987</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/stats\">29,690
+        (10 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2024-03-26T03:32:32+00:00\"
+        itemprop=\"dateModified\">2 weeks ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/watchers\">9
+        members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Games</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/games\">3</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Files</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/downloads\">1</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Articles</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/articles\">17</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinksengines\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">You may also
+        like</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inner\">\r\n\t\t<div
+        class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines\" class=\"button\">View
+        All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/top\" class=\"button buttonalt\">Top
+        Engines</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"row
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/sage-strategy-action-game-engine\"
+        title=\"SAGE (Strategy Action Game Engine)\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/36/crop_120x90/Angmar_Fortress_.jpg\"
+        alt=\"SAGE (Strategy Action Game Engine)\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/engines/sage-strategy-action-game-engine\"
+        class=\"heading\">SAGE (Strategy Action Game Engine)</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tProprietary <time datetime=\"2001-06-14\">Released
+        2001</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/unity\" title=\"Unity\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/142/crop_120x90/Unity4.jpg\"
+        alt=\"Unity\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/unity\" class=\"heading\">Unity</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tCommercial
+        <time datetime=\"2005-05-30\">Released 2005</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/xash3d-fwgs-engine\"
+        title=\"Xash3D FWGS Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/972/crop_120x90/icon_1024_new.png\"
+        alt=\"Xash3D FWGS Engine\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/xash3d-fwgs-engine\" class=\"heading\">Xash3D FWGS Engine</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tGPL <time datetime=\"2015-04\">Released
+        2015</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/xash3d-engine\"
+        title=\"Xash3D Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/312/crop_120x90/main.jpg\"
+        alt=\"Xash3D Engine\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/xash3d-engine\" class=\"heading\">Xash3D Engine</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tGPL <time datetime=\"2011-04-23\">Released
+        2011</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/corel-click-create\"
+        title=\"Corel Click &#038; Create\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/2/1143/crop_120x90/clickncreate2x.png\"
+        alt=\"Corel Click &#038; Create\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/corel-click-create\" class=\"heading\">Corel Click &#038;
+        Create</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tCommercial
+        <time datetime=\"1996-05-26\">Released 1996</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/doom-engine\"
+        title=\"Doom Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/21/crop_120x90/idtech1-icon.jpg\"
+        alt=\"Doom Engine\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/doom-engine\" class=\"heading\">Doom Engine</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tGPL <time datetime=\"1993-12-10\">Released
+        1993</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5158 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/engines\",\"name\":\"Engines\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/engines/shmup-creator\",\"name\":\"SHMUP
+        Creator\",\"image\":\"https://media.moddb.com/images/engines/1/1/923/header.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=engines\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736091\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736091\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = [];\r\n\t\t\t\tvar shownvideo = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/engines/shmup-creator/images/shmupcreator-screenshot-019#imagebox\", \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_10.jpg\",
+        2319000, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][1] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-018#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_09.jpg\",
+        2318999, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][2] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-017#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_08.jpg\",
+        2318998, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][3] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-016#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_07.jpg\",
+        2318997, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][4] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-015#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_06.jpg\",
+        2318996, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][5] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-014#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_05.jpg\",
+        2318995, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2] = new Array(6);slidearr[2][0]
+        = new Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-013#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_04.jpg\",
+        2318994, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2][1] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-012#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_03.jpg\",
+        2318993, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2][2] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-011#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_02.jpg\",
+        2318992, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2][3] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-01#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_01.jpg\",
+        2318991, \"SHMUPCreator screenshot 01\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"/engines/shmup-creator/images/add\", true);\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=engines\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213599399f669d-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:01:31 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=12kh4TdQXKkAkV2AJg7xWzp3F1Pc6XIN8O3ORjpag%2B0YSKg9hyOJQ8D0H7jxTkhGDLPT99Ums%2BeabtGbd8Xc7G6TccMDeFLxhtQx2gob7OJeBeXfME1%2Fr4ps6eSEa7JvjkUt%2FamMr%2FT%2FXkQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '76780'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=e371f32e5b330e26cc1b08ee28114f98; expires=Wed, 10-Apr-2024 08:11:31
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=e371f32e5b330e26cc1b08ee28114f98; expires=Wed, 10-Apr-2024 08:11:31
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/engines/shmup-creator
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>SHMUP Creator
+        engine - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"shmup creator, Commercial, video game engine, indie game, 3d, render,
+        builder, tool, graphics, networking, make game, kit game, develop, application\"
+        />\r\n\t<meta name=\"description\" content=\"The Shmup Creator is a tool that
+        will help you create your own shoot'em up and easily build your levels without
+        coding at all!\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"SHMUP Creator engine\" />\r\n\t<meta property=\"og:description\"
+        content=\"The Shmup Creator is a tool that will help you create your own shoot'em
+        up and easily build your levels without coding at all!\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"product\" />
+        \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/engines/shmup-creator\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/engines/1/1/923/header.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"SHMUP Creator engine\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"The Shmup Creator is a tool that will help you create your own shoot'em
+        up and easily build your levels without coding at all!\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/engines/shmup-creator\" /> \r\n\t<meta property=\"twitter:image\"
+        content=\"https://media.moddb.com/images/engines/1/1/923/header.png\" /> \r\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/engines/shmup-creator/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"SHMUP Creator engine feed\" />\t<script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Developer\"],\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>SHMUP Creator engine</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"on\"><a
+        href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/add\">add
+        engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/add\">add dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/add\">add
+        group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a
+        href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/jobs/add\">post
+        job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Game Engine\" /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/engines/1/1/923/header.png\"
+        />\t<div class=\"headerbox\" style=\"background-image: url(https://media.moddb.com/images/engines/1/1/923/header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2
+        itemprop=\"name\"><a href=\"/engines/shmup-creator\" itemprop=\"mainEntityOfPage\">SHMUP
+        Creator</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span itemprop=\"publisher\"
+        itemscope itemtype=\"https://schema.org/Organization\"><a href=\"/company/bulo-studio\"
+        itemprop=\"url\"><span itemprop=\"name\">Bulo studio</span></a></span> | <time
+        itemprop=\"datePublished\">TBD</time>\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"on firsttab\"><a href=\"/engines/shmup-creator\">summary</a></li><li
+        class=\"\"><a href=\"/engines/shmup-creator/articles\">articles</a></li><li
+        class=\"\"><a href=\"/engines/shmup-creator/games\">games</a></li><li class=\"\"><a
+        href=\"/engines/shmup-creator/downloads\">files</a></li><li class=\"off\"><a
+        href=\"/engines/shmup-creator/videos\">videos</a></li><li class=\"\"><a href=\"/engines/shmup-creator/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"The Shmup Creator is a tool that will help
+        you create your own shoot'em up and easily build your levels without coding
+        at all!\" />\t<div class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div id=\"profiledescription\"><p>The
+        <strong>Shmup Creator</strong> is a tool that will help you create your own
+        shoot'em up and easily build your levels without coding at all!</p>\n<h3><strong>Everything
+        is drag-and-drop</strong></h3>\n<p>No script, no code: use your mouse and
+        the menu to create complex games.<strong><br /></strong>We are trying hard
+        to make an easy, but powerful tool that anybody can use.<strong><br /></strong></p>\n<h3><strong>some
+        features:</strong></h3>\n<p>. create 2D or 3D games<br />. vertical or horizontal
+        shmups<br />. state of the art 3D engine: shadows, shaders, particle effects,
+        post processing&hellip;<br />. scoring systems<br />. bullets patterns editor<br
+        />. game logic using triggers</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/images/shmupcreator-screenshot-019#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_10.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-018#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_09.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-017#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_08.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-016#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_07.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-015#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_06.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/engines/shmup-creator/images/shmupcreator-screenshot-014#imagebox\"
+        title=\"SHMUPCreator screenshot 01\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_05.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/engines/shmup-creator/images/shmupcreator-screenshot-013#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/engines/shmup-creator/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/engines/shmup-creator/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-demo-levels\">SHMUP
+        Creator demo levels</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-12-21\">Dec 21 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row rowcontent
+        rowcontentnext clear\" style=\"padding-left: 0; padding-right: 0;\">\r\n\t\t<p><img
+        src=\"https://media.indiedb.com/images/members/3/2906/2905112/profile/BuloStudio_2020_june_ban.jpg\"
+        alt=\"BuloStudio 2020 june ban\" width=\"610\" height=\"148\" /><br /><br
+        />The <strong>SHMUP Creator</strong> will be released in a few weeks!<br />You
+        can wishlist: <a  href=\"https://store.steampowered.com/app/1289520/SHMUP_Creator/\">Store.steampowered.com</a></p>\n<p>In
+        the meantime, we can show you some levels examples made with the tool:<br
+        /><br /></p>\n<p><strong>BLADE OF DEATH</strong></p>\n<p>Blades Of Death is
+        the SHMUP Creator 3D example level. It was the first real level made with
+        the SHMUP Creator (it was playable at the STUNFEST game festival a few years
+        ago) and was really a cornerstone of the SC development: working on a real
+        game level helped us debug and polish a lot of things, and making the level
+        was fast and fun. <br />Actually, it was quite a relief: it's one thing to
+        work on a tool, try to imagine what features are needed, how to implement
+        them the best we can, to work on usability and design, but it's another thing
+        to really use it, like a future user, and really create something with it.
+        <br />And it worked.</p>\n<p><iframe src=\"//www.youtube.com/embed/nwvomQOh0Mg\"
+        width=\"600\" height=\"336\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p><strong><br
+        />WINGS BLASTER</strong></p>\n<p>At last, we completed the 2D example game!<br
+        />It took a long time, mainly because fixing bugs was our priority. Also,
+        we completed the level structure and all the graphic assets a long time ago,
+        but I was stuck on the level design... I had no idea how to make an exciting
+        level: it's hard to focus on everything, coding, marketing, graphics, and
+        still have room for inspiration...</p>\n<p><iframe src=\"//www.youtube.com/embed/N29aLpEevL4\"
+        width=\"600\" height=\"336\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p><br
+        />We asked Alec, our main tester (and creator of his own full shoot 'em up
+        Nanoforce (link: <a  href=\"https://www.youtube.com/channel/UCt-kQY_wjY9IoJ7eRlYtMDQ/videos\">Youtube.com</a>),
+        made with the SHMUP Creator!) to help us, and he did and delivered :)<br />He
+        added an intro, a lot of cinematic animations (moving asteroids, explosions,
+        moving walls...), secret items, mid-level boss... <br />All this in a few
+        hours. Alec is a power user, but it just means the SHMUP Creator is efficient
+        and fast :)<br /><br /></p>\n<p><strong>DANMAKU TESTS</strong></p>\n<p><iframe
+        src=\"//www.youtube.com/embed/fsS6CTlBlZk\" width=\"600\" height=\"336\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p>We
+        didn't make a complete bullet hell example level, but we made small test scenes
+        to see if it was possible to make a DoDonPachi game with the SHMUP Creator.
+        Spoiler: it's possible :)<br />Although it's a lot of work: it's easy to create
+        bullet patterns and enemies paths in the editor, but the timing in this kind
+        of game is everything. Fortunately, in the editor, you can place an enemy,
+        press play to try the game, stop, move it a little bit on the left, press
+        play and try it again... It's really fast and easy to iterate.</p>\n<p><img
+        src=\"https://media.indiedb.com/images/members/3/2906/2905112/profile/SHMUPCreator_screenshot_10.jpg\"
+        alt=\"SHMUPCreator screenshot 10\" width=\"600\" /></p>\n<p><img src=\"https://media.indiedb.com/images/members/3/2906/2905112/profile/SHMUPCreator_screenshot_07.jpg\"
+        alt=\"SHMUPCreator screenshot 07\" width=\"600\" /></p>\n<p>Some links:<br
+        /><strong>Steam </strong>(wishlist !!!): <a href=\"https://store.steampowered.com/app/1289520/SHMUP_Creator/\"
+        class=\"postlink\">Store.steampowered.com</a><br /><strong>Youtube</strong>:
+        <a href=\"https://www.youtube.com/user/bulostudio/videos\" class=\"postlink\">Youtube.com</a><br
+        /><strong>Twitter</strong>: <a href=\"https://twitter.com/bulostudio\" class=\"postlink\">Twitter.com</a><br
+        /><strong>Nanofroce</strong>, a game made with this tool: <a href=\"https://shmups.system11.org/viewtopic.php?f=9&amp;t=67411\"
+        class=\"postlink\">Shmups.system11.org</a></p>\n<p>See you soon!<br />S.</p>\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/shmup-creator-trailer-and-steam-page-are-live\"
+        title=\"SHMUP Creator Trailer and Steam page are live!\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/296/295138/crop_120x90/montage_Convert_to_MP4.mp4_snaps.jpg\"
+        alt=\"SHMUP Creator Trailer and Steam page are live!\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-trailer-and-steam-page-are-live\">SHMUP
+        Creator Trailer and Steam page are live!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-06-02\">Jun 2 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>At last! After years of work, the trailer for
+        our project is complete! And we opened the Steam store at the same time. It's
+        an emotional moment :)</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/july-update-and-shmup-creator-tote-bags\"
+        title=\"July update and SHMUP Creator tote bags\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/286/285205/crop_120x90/header_1024.jpg\"
+        alt=\"July update and SHMUP Creator tote bags\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/july-update-and-shmup-creator-tote-bags\">July
+        update and SHMUP Creator tote bags</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-08-25T10:32:50+00:00\">Aug 25 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>Still working
+        on the beta, we are creating some tote bags in the meantime.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/shmup-creator-we-started-the-beta\"
+        title=\"SHMUP Creator: We started the beta!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/284/283811/crop_120x90/discord_SC.jpg\"
+        alt=\"SHMUP Creator: We started the beta!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-we-started-the-beta\">SHMUP
+        Creator: We started the beta!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-07-15T12:30:35+00:00\">Jul 15 2020</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>After years
+        of part-time work, we at last started the closed beta of the SHMUP Creator.
+        This is emotional and we hope to release the tool this year.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/engines/shmup-creator/news/shmup-creator-february-update\"
+        title=\"SHMUP Creator: February update\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/278/277192/crop_120x90/bullets_collisions.jpg\"
+        alt=\"SHMUP Creator: February update\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/engines/shmup-creator/news/shmup-creator-february-update\">SHMUP
+        Creator: February update</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2020-02-15\">Feb 15 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        <a href=\"/engines/shmup-creator/news/shmup-creator-february-update\" class=\"commenticon\">2
+        comments</a>  \t\t\t</span>\r\n\t\t\t<p>A new update about the dev of the
+        SHMUP Creator. I spent a lot of time optimizing the bullets engine, and the
+        result is 10.000 bullets at 60 fps on my...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/engines/shmup-creator/articles/add\">Post
+        article</a> | <a href=\"/engines/shmup-creator/articles\">More articles &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        articles were found matching the criteria specified. We suggest you try the
+        <a href=\"/engines/shmup-creator/articles\">article list</a> with no filter
+        applied, to browse all available. <a href=\"/engines/shmup-creator/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"gamesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/games/add/?engine=923#gamesform\"
+        class=\"addicon\"  title=\"Add game\">Add game</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Games</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/games/atomanta\" title=\"Atomanta\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/85/84188/crop_120x90/ipkujikujio.png\"
+        alt=\"Atomanta\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/atomanta\">Atomanta</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-26T03:32:30+00:00\">Mar 26 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time>TBD</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Atomanta
+        is a work-in-progress bullet hell SHMUP developed by Remorasoft.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/tastrion\" title=\"Tastrion\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82040/crop_120x90/vwdasd.png\"
+        alt=\"Tastrion\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/tastrion\">Tastrion</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-25T14:02:49+00:00\">Mar 25 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2024-03-24\">Released Mar
+        24, 2024</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Tastrion is a Shoot-Em-Up
+        inspired by games from old-school titles such as Arrow Flash, Gaiares, and
+        R-type. The goal of the game is to complete 8 progressively...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/interstellar-sentinel\"
+        title=\"Interstellar Sentinel\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82047/crop_120x90/logo.jpg\"
+        alt=\"Interstellar Sentinel\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/interstellar-sentinel\">Interstellar Sentinel</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-08-20T08:47:36+00:00\">Aug
+        20 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2023-08-02\">Released Aug 2, 2023</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Interstellar
+        Sentinel is an action-packed shoot'em up that takes you on a sci-fi fantasy
+        journey through legions of monsters, demons, and cosmic mind-ripping...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/games/add/?engine=923\">Add
+        game &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo games were found
+        matching the criteria specified. We suggest you try the <a href=\"/engines/shmup-creator/games\">game
+        list</a> with no filter applied, to browse all available. <a href=\"/games/add/?engine=923\">Add
+        game</a> and help us achieve our mission of showcasing the best content from
+        all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"8608390\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/drbosskey\" title=\"drbosskey\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"drbosskey\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/drbosskey\" class=\"author\" data-nameid=\"drbosskey\">drbosskey</a>
+        \ - <a href=\"#8608390\" style=\"color: inherit;\"><time datetime=\"2023-08-20T17:19:28+00:00\">Aug
+        20 2023</time></a> - 1 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>The developer and engine are alive
+        and well! I just released my first dream game, Interstellar Sentinel, with
+        it, and it has been a fantastic experience with what you can do with the engine.
+        Join our community, it's one of my favorite places on the internet for shmup
+        developers and dreamers!</p>\n<p>Here is my game: <a rel=\"nofollow\"  href=\"https://store.steampowered.com/app/2426610/Interstellar_Sentinel/\">Store.steampowered.com</a>\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8608390\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8608390\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8608390\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7543704\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest2.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#7543704\" style=\"color: inherit;\"><time datetime=\"2020-01-27T14:22:51+00:00\">Jan
+        27 2020</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>so what happened to this?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"7543704\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7543704\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=7543704\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6999144\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6999144\" style=\"color: inherit;\"><time datetime=\"2018-06-08T10:39:46+00:00\">Jun
+        8 2018</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Good to hear you're back on track.
+        Things happen, understandably (Congratulations on the new job); just happy
+        that this project isn't abandoned. Keep up the good work, and can't wait for
+        the next update. I'm excited to make me some shmups. <a rel=\"nofollow\" href=\"/tags/hype\">#hype</a>\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6999144\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6999144\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6999144\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"7014086\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/suny2000\"
+        title=\"suny2000\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/3/2906/2905112/suny.gif\"
+        alt=\"suny2000\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/suny2000\" class=\"author\"
+        data-nameid=\"suny2000\">suny2000</a>  - <a href=\"#7014086\" style=\"color:
+        inherit;\"><time datetime=\"2018-06-24T13:37:43+00:00\">Jun 24 2018</time></a>
+        - 2 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Thanks
+        a lot for your comment!<br />\nI'll post a new update next week.<br />\nCheers,<br
+        />\nS.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"7014086\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=7014086&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/engines/shmup-creator/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"6f0c446ad41cc9b87d79ca0303fcc492\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"enginesinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=engines&amp;siteareaid=923\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=engines&amp;siteareaid=923\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"operatingSystem\"><a href=\"/platforms/windows\"
+        title=\"Windows\">Windows</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Company</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/bulo-studio\">Bulo studio</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=enginesgroup15540\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://bulostudio.com\" rel=\"noopener
+        noreferrer\" target=\"_blank\">Bulostudio.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Licence</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines?filter=t&amp;licence=1\"
+        rel=\"nofollow\">Commercial</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time>TBD</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engine watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=engines&amp;siteareaid=923\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator&title=SHMUP+Creator+engine\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=SHMUP%20Creator%20engine&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=SHMUP+Creator+engine+https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator&quote=SHMUP+Creator+engine&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fengines%2Fshmup-creator\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        engine is NOT compatible with RTX Remix. Learn more about <a href=\"/news/rtx-remix-on-moddb\">ModDB's
+        collaboration with the Remix community</a> to organize all compatible games,.
+        <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Mod SDK & Community</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\" style=\"padding-top:
+        1em; padding-bottom: 0;\">\n\t\t\t\t\t\tBuilt a <a href=\"https://mod.io\"
+        target=\"_blank\">game for SHMUP Creator and want to support mods</a>? Try
+        mod.io, a cross-platform mod SDK created by ModDB which makes it easy to get
+        a mod community up and running in-game. <a href=\"https://mod.io\">Currently
+        seeking games</a> to integrate and promote\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"padding: 0;\">\n\t\t\t\t\t\t<div style=\"text-align:
+        center;\"><a href=\"https://mod.io\" title=\"Cross Platform Mod API and SDK
+        for game developers\" target=\"_blank\"><img src=\"https://media.moddb.com/images/members/1/1/1/profile/modio_menu_bottom.png\"
+        alt=\"Mod API\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"6f0c446ad41cc9b87d79ca0303fcc492\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/bulostudio\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@bulostudio</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678766204486574083 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/VoodooGames80\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@VoodooGames80</a>: Ok after a few months...
+        we are back on Twitter! \\o/\nAnd still working on our little <a href=\"https://search.twitter.com/search?q=shmup\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#shmup</a> <a href=\"https://search.twitter.com/search?q=Jezebel\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#Jezebel</a> made with\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/lLvmdOV3ga\">T.co</a></p><p class=\"helper\">Jul
+        11 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678431093379198976
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/colossal_cedric\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@colossal_cedric</a>:
+        Little improvements about water. I will update soon.  <a href=\"https://search.twitter.com/search?q=nanoforce\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#nanoforce</a> \n<a
+        href=\"https://search.twitter.com/search?q=shmupcreator\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">#shmupcreator</a> \n<a href=\"https://search.twitter.com/search?q=shmup\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#shmup</a>\n<a href=\"https://search.twitter.com/search?q=steam\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">#steam</a> <a rel=\"nofollow\"
+        \ href=\"https://t.co/DshmZqCoEP\">T.co</a></p><p class=\"helper\">Jul 10
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678279045581099008
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/DrBossKey\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@DrBossKey</a>: <a
+        \ href=\"https://www.youtube.com/watch?v=0TGFJb3Sfcg\">Youtube.com</a></p><p
+        class=\"helper\">Jul 10 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677577023118626817 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/colossal_cedric\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@colossal_cedric</a>:
+        Last boss became almost invincible (bug in all modes) but it's fixed now.\n\nThank
+        you for your feedback, your suppor\u2026 <a rel=\"nofollow\"  href=\"https://t.co/kmO5yv7st8\">T.co</a></p><p
+        class=\"helper\">Jul 8 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677433191156654087 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/quincemellon\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@quincemellon</a>: \u3061\u3089\u308A\u3068\u30BB\u30AF\u30B7\u30FC\u306ASTG&quot;Stan\xC7act(\u30B9\u30BF\u30F3\u30B5\u30AF\u30C8)&quot;\u30C7\u30E2\u7248\u516C\u958B\u4E2D\u3067\u3059\u3002\n\nDLsite:https://dlsite.jp/maant/RJ01067139/?utm_content=RJ01067139&#038;locale=ja_JP\n\n<a
+        rel=\"nofollow\"  href=\"http://itch.io:\">Itch.io:</a>\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/OuKXFP87eV\">T.co</a></p><p class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677433161708367872 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/colossal_cedric\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@colossal_cedric</a>:
+        Major update is coming....not so fast....It will be tough, dont hesitate to
+        train with the main game.\n\n9.99 usd pc\u2026 <a rel=\"nofollow\"  href=\"https://t.co/A2oto7xY4T\">T.co</a></p><p
+        class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677312761888493571 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/spadgy_OTA\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@spadgy_OTA</a>: My favourite game series?
+        Probably Raiden.\n\nSo I\u2019m very excited to see my 6-page history of the
+        iconic shmup series\u2026 <a rel=\"nofollow\"  href=\"https://t.co/qBnQZyINbB\">T.co</a></p><p
+        class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1677312587011072003 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>RT <a href=\"https://twitter.com/quincemellon\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\">@quincemellon</a>: \u30A8\u30ED\u30B2\u3068\u9957\u306B\u3082\u30C7\u30E2\u7248\u3092\u7F6E\u3044\u3066\u3044\u307E\u3059\u306E\u3067\u3088\u308D\u3057\u304F\u304A\u9858\u3044\u3057\u307E\u3059\u3002\nStan\xC7act(\u30B9\u30BF\u30F3\u30B5\u30AF\u30C8)
+        -Sexy Tenacious Girls- \u4F53\u9A13\u7248(\u03B1\u7248)\n<a rel=\"nofollow\"
+        \ href=\"https://elog.tokyo/shooting/game_1179.html\">Elog.tokyo</a></p><p
+        class=\"helper\">Jul 7 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"6f0c446ad41cc9b87d79ca0303fcc492\" />\t\t\t\t\t<div class=\"row rowtagstaghype
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/hype\">hype</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=hype&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=hype&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagshmup clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/shmup\">shmup</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=shmup&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=shmup&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagdanmaku clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/danmaku\">danmaku</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=danmaku&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=danmaku&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagdraganddrop clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/drag-and-drop\">Drag and Drop</a><span style=\"float: right;\"><a
+        href=\"/tags/ajax/add?tag=drag-and-drop&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=drag-and-drop&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagcreator clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/creator\">creator</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=creator&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=creator&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagshootemup clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/shoot-em-up\">shoot em up</a><span style=\"float: right;\"><a
+        href=\"/tags/ajax/add?tag=shoot-em-up&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=shoot-em-up&sitearea=engines&siteareaid=923&hash=a189c24c898f55af9af1f7870df90474&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=a189c24c898f55af9af1f7870df90474\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=a189c24c898f55af9af1f7870df90474&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"a189c24c898f55af9af1f7870df90474\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"engines\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"923\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"enginesbuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to SHMUP Creator by selecting a button and using the embed code provided <a
+        href=\"#\" class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/engines/shmup-creator&quot;
+        title=&quot;View SHMUP Creator on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://button.moddb.com/popularity/medium/engines/923.png&quot;
+        alt=&quot;SHMUP Creator&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/engines/shmup-creator\"
+        title=\"View SHMUP Creator on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/engines/923.png\"
+        alt=\"SHMUP Creator\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn
+        smallbtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/engines/shmup-creator\"
+        title=\"View SHMUP Creator - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"SHMUP Creator\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"enginesprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/top\">80 of 987</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/stats\">29,692
+        (12 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2024-03-26T03:32:32+00:00\"
+        itemprop=\"dateModified\">2 weeks ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/watchers\">9
+        members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Games</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/games\">3</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Files</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/downloads\">1</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Articles</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/shmup-creator/articles\">17</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinksengines\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">You may also
+        like</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inner\">\r\n\t\t<div
+        class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines\" class=\"button\">View
+        All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/top\" class=\"button buttonalt\">Top
+        Engines</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"row
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/clausewitz-engine\" title=\"Clausewitz
+        Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/451/crop_120x90/preview.jpg\"
+        alt=\"Clausewitz Engine\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/clausewitz-engine\" class=\"heading\">Clausewitz Engine</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tProprietary <time datetime=\"2007-01-23\">Released
+        2007</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/fpsc\" title=\"FPSC\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/15/crop_120x90/001.jpg\"
+        alt=\"FPSC\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/fpsc\" class=\"heading\">FPSC</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tCommercial
+        <time datetime=\"2005-12\">Released 2005</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/goldsource\"
+        title=\"GoldSrc\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/16/crop_120x90/goldsrc_preview.jpg\"
+        alt=\"GoldSrc\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/goldsource\" class=\"heading\">GoldSrc</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tCommercial <time datetime=\"1998-11-17\">Released
+        1998</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/unreal-development-kit\"
+        title=\"Unreal Development Kit\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/201/crop_120x90/Preview.jpg\"
+        alt=\"Unreal Development Kit\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/unreal-development-kit\" class=\"heading\">Unreal Development
+        Kit</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tCommercial
+        <time datetime=\"2009-10-31\">Released 2009</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/essence-engine\"
+        title=\"Essence Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/56/crop_120x90/Essence_shot.jpg\"
+        alt=\"Essence Engine\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/essence-engine\" class=\"heading\">Essence Engine</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tProprietary <time datetime=\"2006-09-10\">Released
+        2006</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/engines/zdoom\" title=\"ZDoom\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/699/crop_120x90/zdoom.jpg\"
+        alt=\"ZDoom\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/zdoom\" class=\"heading\">ZDoom</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tPublic
+        Domain <time datetime=\"2013-07\">Released 2013</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5344 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/engines\",\"name\":\"Engines\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/engines/shmup-creator\",\"name\":\"SHMUP
+        Creator\",\"image\":\"https://media.moddb.com/images/engines/1/1/923/header.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=engines\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\ttags:
+        [\"developer\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames: [\"\"],\r\n\t\t\t\t\t\tplayers:
+        [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712748784\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712748784\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = [];\r\n\t\t\t\tvar shownvideo = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/engines/shmup-creator/images/shmupcreator-screenshot-019#imagebox\", \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_10.jpg\",
+        2319000, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][1] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-018#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_09.jpg\",
+        2318999, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][2] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-017#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_08.jpg\",
+        2318998, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][3] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-016#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_07.jpg\",
+        2318997, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][4] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-015#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_06.jpg\",
+        2318996, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[1][5] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-014#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_05.jpg\",
+        2318995, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2] = new Array(6);slidearr[2][0]
+        = new Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-013#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_04.jpg\",
+        2318994, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2][1] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-012#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_03.jpg\",
+        2318993, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2][2] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-011#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_02.jpg\",
+        2318992, \"SHMUPCreator screenshot 01\", \"image\"); slidearr[2][3] = new
+        Array(0, \"/engines/shmup-creator/images/shmupcreator-screenshot-01#imagebox\",
+        \"https://media.moddb.com/cache/images/engines/1/1/923/crop_120x90/SHMUPCreator_screenshot_01.jpg\",
+        2318991, \"SHMUPCreator screenshot 01\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"/engines/shmup-creator/images/add\", true);\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\t\t\tvar tagperforming
+        = false;\r\n\t\r\n\t\t\t\ttagVote = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=engines\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87226b7ec8050b48-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:33:05 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=WSo3anBvzjYJzygQTkbrHsGA62hvlxZybDQBlVOzbM9b0JMgg66daBSZAIIbWMNID9bNIRfQusy%2FSfeSNvqixTxmLWwqm4c99DWrYeq3ypXn8eoBgKrTwSC44HQ%2BPvPsoBeCFou0Tehxxg8%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '76623'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=d1892676f5f123f8e055a970d8c74be5; expires=Wed, 10-Apr-2024 11:43:04
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=d1892676f5f123f8e055a970d8c74be5; expires=Wed, 10-Apr-2024 11:43:04
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

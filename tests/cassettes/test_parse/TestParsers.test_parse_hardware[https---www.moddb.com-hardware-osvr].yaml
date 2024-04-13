@@ -866,8 +866,6 @@ interactions:
       - 8188e5df693502a8-CDG
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - text/html; charset=UTF-8
       Date:
@@ -882,12 +880,1906 @@ interactions:
       - chunked
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '75738'
       content-security-policy:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
         secure; HttpOnly; SameSite=Lax
       - masterchief=99937528844c0064840760250b5dc4dc; expires=Thu, 19-Oct-2023 12:16:57
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/hardware/osvr
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>OSVR hardware
+        - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"osvr, windows, mac, linux, vr, android, headset, virtual reality,
+        augmented reality, hardware, headsets, haptics, controllers, input, keyboard,
+        handheld, feedback, developers, creation, gear\" />\r\n\t<meta name=\"description\"
+        content=\"Razer is part of the Open-Source Virtual Reality (OSVR) ecosystem,
+        a new standard in VR gaming to push the VR gaming experience forward and supporting
+        the venture with the OSVR Hacker Dev Kit, a virtual reality device and open-source
+        software that enables...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"OSVR hardware\" />\r\n\t<meta property=\"og:description\"
+        content=\"Razer is part of the Open-Source Virtual Reality (OSVR) ecosystem,
+        a new standard in VR gaming to push the VR gaming experience forward and supporting
+        the venture with the OSVR Hacker Dev Kit, a virtual reality device and open-source
+        software that enables...\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\"
+        />\r\n\t<meta property=\"og:type\" content=\"hardware\" /> \r\n\t<meta property=\"og:url\"
+        content=\"https://www.moddb.com/hardware/osvr\" /> \r\n\t<meta property=\"og:image\"
+        content=\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\" /> \r\n\t
+        \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\" />\r\n\t<meta
+        property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"OSVR hardware\" />\r\n\t<meta property=\"twitter:description\" content=\"Razer
+        is part of the Open-Source Virtual Reality (OSVR) ecosystem, a new standard
+        in VR gaming to push the VR gaming experience forward and supporting the venture
+        with the OSVR Hacker Dev Kit, a virtual reality device and open-source software
+        that enables...\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/hardware/osvr\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/hardware/osvr/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"OSVR hardware feed\" />\t<script async
+        src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>OSVR hardware</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/Product\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"image\" content=\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/hardware/osvr\"
+        itemprop=\"mainEntityOfPage\">OSVR</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/company/razer\">Razer</a> | <time datetime=\"2015-07\" itemprop=\"releaseDate\">Released
+        2015</time>\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"on firsttab\"><a href=\"/hardware/osvr\">summary</a></li><li
+        class=\"\"><a href=\"/hardware/osvr/articles\">articles</a></li><li class=\"off\"><a
+        href=\"/hardware/osvr/reviews\">reviews</a></li><li class=\"\"><a href=\"/hardware/osvr/downloads\">files</a></li><li
+        class=\"\"><a href=\"/hardware/osvr/software\">software</a></li><li class=\"\"><a
+        href=\"/hardware/osvr/games\">games</a></li><li class=\"\"><a href=\"/hardware/osvr/videos\">videos</a></li><li
+        class=\"\"><a href=\"/hardware/osvr/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"Razer is part of the Open-Source Virtual
+        Reality (OSVR) ecosystem, a new standard in VR gaming to push the VR gaming
+        experience forward and supporting the venture with the OSVR Hacker Dev Kit,
+        a virtual reality device and open-source software that enables programming
+        for any variety of VR technology.\" />\t<div class=\"headernormalbox normalbox
+        normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div class=\"body
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>Razer is part of the Open-Source Virtual Reality
+        (OSVR) ecosystem, a new standard in VR gaming to push the VR gaming experience
+        forward and supporting the venture with the OSVR Hacker Dev Kit, a virtual
+        reality device and open-source software that enables programming for any variety
+        of VR technology.</p>\n<h2><strong>WHAT IS OSVR?</strong></h2>\n<p>OSVR&trade;
+        stands for Open Source Virtual Reality. It is an ecosystem designed from the
+        ground up to set an open standard for Virtual Reality input devices, games
+        and output with the sole goal of providing the best possible game experience
+        in the Virtual Reality space. Supported by Industry Leaders and focused on
+        gaming, the OSVR framework rallies gamers worldwide together to push the boundaries
+        of VR-Gaming.</p>\n<h3>Hardware &amp; Software</h3>\n<p>This OSVR platform
+        is fully open-source, so regardless of whether you&rsquo;re interested in
+        working with hardware developmental kit designs, or software plugins for everything
+        from motion control, to game engines, and even stereoscopic video output,
+        you&rsquo;ll have complete access to all you need.</p>\n<h3>Focused on the
+        VR Gaming experience</h3>\n<p>The future of gaming is upon us, and the technology
+        to be immersed in your favorite game world is at hand. To offer more gamers
+        the opportunity to experience the exhilaration of VR-Gaming, the OSVR platform
+        is focused on providing game engine plugins for all to use. A dedicated team
+        of game developers, peripheral manufacturers, and virtual reality experts
+        meticulously architected this platform, to help even more games enter this
+        new dimension.</p>\n<h3>Supported by Industry Leaders</h3>\n<p>At the forefront
+        of the next gaming revolution, are industry leaders from every space. With
+        big names such as Unity, Unreal, Bosch, Razer, Sixense, and Leap Motion, all
+        lending their specialized expertise, this OSVR platform promises to blaze
+        a trail in gaming like nothing the world has ever seen.</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/hardware/osvr/videos/what-is-osvr#imagebox\"
+        title=\"What is OSVR?\"><span class=\"play\" data-id=\"1354689\"></span><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/what-is-osvr-open-source-virtual-reality.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/razer-osvr-hdk2#imagebox\" title=\"Razer OSVR
+        HDK2\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-carousel-hdk2.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit4#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-04.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit3#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-03.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit2#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-02.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit1#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-01.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/hardware/osvr/images/osvr-hacker-dev-kit#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/hardware/osvr/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/hardware/osvr/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Related Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/achievement-unlocked1\">Achievement
+        Unlocked</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-03-31T21:59:59+00:00\">Mar
+        31 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/mythlink\" title=\"Game\">Mythlink</a>   \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>No April Fools prank this year, instead just some new unlockable
+        content in Mythlink, available now! That's right, after last month's addition
+        of Steam community content to the game, it was time to round out the rest
+        of the release and push out one more key piece of digital bling into the ecosystem.
+        That is, of course, game achievements!</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.indiedb.com/images/articles/1/315/314469/auto/TotalAchievements.png\"
+        alt=\"\" /></p>\n<p><br /></p>\n</div>\n<p>A grand total of 15 achievements
+        are now ripe for the taking within Mythlink. There is a healthy mix of challenge
+        ranging from fairly easy to pretty difficult. Let's take a look at what these
+        achievements entail, including a sneak peak into how to unlock the hidden
+        achievements!</p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.indiedb.com/images/articles/1/315/314469/auto/NonHiddenAchievement.png\"
+        alt=\"\" width=\"600\" height=\"600\" /></p>\n<p><br /></p>\n</div>\n<p>These
+        should be pretty self explanatory. Unlock each of the Mythlinks, get some
+        killer high scores, and win some online matches. Simple enough, right? Right.
+        But don't underestimate some of those score thresholds! While they are far
+        from impossible, it will definitely take some skill and practice to unlock
+        them all.</p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.indiedb.com/images/articles/1/315/314469/auto/HiddenAchievements.png\"
+        alt=\"\" /> </p>\n<p><br /></p>\n</div>\n<p>Readers of this blog will get
+        the inside scoop on how to unlock the two hidden achievements as well. One
+        of them deals with cracking the glass boxes in the menus, which I bet you
+        didn't even know you could do! The other will get unlocked through a random
+        event while playing Baller Dodge. Don't worry, you'll get it eventually!</p>\n<p>Pretty
+        short update this month. Next month we'll cover more details on one of the
+        Mythlinks not yet covered! What could that mean I wonder...a new Mythlink?
+        I did say no April Fools pranks this year...or did I?</p>\n<p>Yes. Yes, I
+        did.</p>\n<p>See you then!</p>\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/emoticons-and-badges-and-cards-oh-my\"
+        title=\"Emoticons and Badges and Cards, Oh My!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/314/313615/crop_120x90/HeaderImage.png\"
+        alt=\"Emoticons and Badges and Cards, Oh My!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/emoticons-and-badges-and-cards-oh-my\">Emoticons
+        and Badges and Cards, Oh My!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-02-28T23:59:59+00:00\">Mar 1 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Game\">Mythlink</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>Announcing the newly added Steam Community Items
+        for Mythlink</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/mythlink-has-been-released\"
+        title=\"Mythlink Has Been Released!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/313/312590/crop_120x90/SteamHeader.png\"
+        alt=\"Mythlink Has Been Released!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/mythlink-has-been-released\">Mythlink
+        Has Been Released!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-01-19T01:50:43+00:00\">Jan 19 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Game\">Mythlink</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>Mythlink is now available on Steam! Download
+        the game today!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/players-choice-2022-best-upcoming-indie\"
+        title=\"Player's Choice: 2022 Best Upcoming Indie\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/313/312009/crop_120x90/Indie_DB_Rank.PNG\"
+        alt=\"Player's Choice: 2022 Best Upcoming Indie\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/players-choice-2022-best-upcoming-indie\">Player's
+        Choice: 2022 Best Upcoming Indie</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2022-12-28T01:26:51+00:00\">Dec 28 2022</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Game\">Mythlink</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>Results of the Indie DB Indie of the Year competition</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/is-seeing-believing\"
+        title=\"Is Seeing Believing?\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/312/311895/crop_120x90/Jan20ReleaseDate.jpg\"
+        alt=\"Is Seeing Believing?\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/is-seeing-believing\">Is Seeing
+        Believing?</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2022-12-23T20:59:59+00:00\">Dec
+        23 2022</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/mythlink\" title=\"Game\">Mythlink</a>   \t\t\t</span>\r\n\t\t\t<p>A
+        &quot;fun&quot; holiday poem detailing the new release date of Mythlink!</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/hardware/osvr/articles/add\">Post
+        article</a> | <a href=\"/hardware/osvr/articles\">More articles &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        articles were found matching the criteria specified. We suggest you try the
+        <a href=\"/hardware/osvr/articles\">article list</a> with no filter applied,
+        to browse all available. <a href=\"/hardware/osvr/articles/add\">Post article</a>
+        and help us achieve our mission of showcasing the best content from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"softwarebrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/software/add/?hardware=4#softwareform\"
+        class=\"addicon\"  title=\"Add software\">Add software</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Software</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/project-neptune-vr\" title=\"Project
+        Neptune VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/55/crop_120x90/VRLOGO-S.png\"
+        alt=\"Project Neptune VR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/project-neptune-vr\">Project Neptune VR</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-11-27T17:31:11+00:00\">Nov
+        27 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Project Neptune VR is the virtual reality demo
+        of our main machine, the Project Neptune ARC. In this virtual reality simulation,
+        users will be able to...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/hybrid-core-engine\" title=\"Hybrid
+        Core Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/46/crop_120x90/1.jpg\"
+        alt=\"Hybrid Core Engine\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/hybrid-core-engine\">Hybrid Core Engine</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2017-03-30T23:16:11+00:00\">Mar
+        31 2017</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>ENG: Hybrid Core Engine was born from the fusion
+        between FPS Creator (by The Game Creators, now free) and FireXshader 2 (an
+        addon graphic mod developed...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\"
+        style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/software/add/?hardware=4\">Add
+        software &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo software were found
+        matching the criteria specified. We suggest you try the <a href=\"/hardware/osvr/software\">software
+        list</a> with no filter applied, to browse all available. <a href=\"/software/add/?hardware=4\">Add
+        software</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"gamesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/games/add/?hardware=4#gamesform\"
+        class=\"addicon\"  title=\"Add game\">Add game</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Games</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/games/taraniawarsonline\" title=\"Tarania Wars Online\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/games/1/42/41295/crop_120x90/1_1_-_Copy.jpg\"
+        alt=\"Tarania Wars Online\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/taraniawarsonline\">Tarania Wars Online</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-09-23T18:35:09+00:00\">Sep
+        23 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>The Next Generation of an Online Game.
+        Developer: Jojishi Productions(Solo Dev) Type Of Game: Medieval, Futuristic,
+        Action, Adventure, Online. Game Name...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Mythlink\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/80/79398/crop_120x90/logo.jpg\"
+        alt=\"Mythlink\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/mythlink\">Mythlink</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-04-30T17:37:33+00:00\">Apr 30 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2023-01-20\">Released Jan
+        20, 2023</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Mythlink is an upcoming
+        VR-only monster battling game. Players can level up and battle with their
+        Mythlink in hopes to create the best Mythlink Unity...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/hall-of-science\"
+        title=\"Hall of Science\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/50/49280/crop_120x90/CRYENGINE_04_07_2022_13_59_54.png\"
+        alt=\"Hall of Science\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/hall-of-science\">Hall of Science</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-02-20T16:47:49+00:00\">Feb
+        20 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-31\">Early Access 2016</time> Educational  \t\t\t</span>\r\n\t\t\t<p>Hall
+        of Science is a educational museum simulator game where scientists past and
+        present have their scientific accomplishments displayed for all to learn...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/plasmatic\" title=\"PLASMATIC\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/80/79046/crop_120x90/ao_hero_capsule.1.jpg\"
+        alt=\"PLASMATIC\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/plasmatic\">PLASMATIC</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2022-05-19T12:16:14+00:00\">May 19 2022</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2022-06-22\">Released Jun
+        2022</time> Virtual Life  \t\t\t</span>\r\n\t\t\t<p>Plasmatic is a virtual,
+        utopian space into which our society has voluntarily moved. We wake up from
+        it unexpectedly. Our goal is to repair the main simulation...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/house-of-the-dying-sun\"
+        title=\"House of the Dying Sun\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/60/59583/crop_120x90/house_of_p.jpg\"
+        alt=\"House of the Dying Sun\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/house-of-the-dying-sun\">House of the Dying
+        Sun</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2022-01-31\">Jan
+        31 2022</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2016-11\">Released 2016</time> Futuristic Sim  \t\t\t</span>\r\n\t\t\t<p>House
+        of the Dying Sun is a tactical space shooter that puts you in the cockpit
+        of the Empire's most deadly interceptor and in command of the Harbinger...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/tainted-fate\"
+        title=\"Tainted Fate\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/18/17746/crop_120x90/TFate_Logo_Final_Mladen.jpg\"
+        alt=\"Tainted Fate\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/tainted-fate\">Tainted Fate</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-12-01T17:48:03+00:00\">Dec 1 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2020-10-29\">Released 2020</time>
+        Adventure  \t\t\t</span>\r\n\t\t\t<p>Tainted Fate is a horror game for VR
+        devices in which you are the horror. Unwillingly summoned from the depths
+        of the nether onto a remote island serving...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/unreal-vr\" title=\"Unreal
+        VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/66/65073/crop_120x90/Splash.3.png\"
+        alt=\"Unreal VR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/unreal-vr\">Unreal VR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-08-18T21:14:55+00:00\">Aug 18 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"1998-05-22\">Released 1998</time>
+        First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Open-source project for total
+        conversion of the legendary Unreal Gold (1998) in Unreal Engine 4 with VR
+        support.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/games/girls-civilization-2\" title=\"Girls' civilization 2\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/games/1/77/76676/crop_120x90/logo.jpg\"
+        alt=\"Girls' civilization 2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/girls-civilization-2\">Girls' civilization
+        2</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-05-18T04:54:36+00:00\">May
+        18 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2021-02-10\">Early Access 2021</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>Oculus
+        quest is blurry in this game. Vive is way clearer. All people in this game
+        are adult individuals who understand society and can work without help...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/playground-vr\"
+        title=\"Playground VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/76/75918/crop_120x90/Etef7XYWYAIX5-c.png\"
+        alt=\"Playground VR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/playground-vr\">Playground VR</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-02-20T08:18:51+00:00\">Feb
+        20 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2021-02-26\">Early Access 2021</time> Adventure  \t\t\t</span>\r\n\t\t\t<p>Playground
+        VR It is an open world game where you can experience the beautiful essence
+        of VR. Do you want to fly a balloon? Fly! Are you not afraid to...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/stack-defense\"
+        title=\"Stack Defense\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/76/75673/crop_120x90/Area1_Logo_512.jpg\"
+        alt=\"Stack Defense\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/stack-defense\">Stack Defense</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-01-08T15:30:27+00:00\">Jan
+        8 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2020-12-22\">Early Access 2020</time> Party  \t\t\t</span>\r\n\t\t\t<p>Play
+        this VR game with friends and others. Protect your stack and destroy the blocks
+        of your opponents. Win the game by having the biggest stack at the...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/games/add/?hardware=4\">Add
+        game</a> | <a href=\"/hardware/osvr/games\">More games &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        games were found matching the criteria specified. We suggest you try the <a
+        href=\"/hardware/osvr/games\">game list</a> with no filter applied, to browse
+        all available. <a href=\"/games/add/?hardware=4\">Add game</a> and help us
+        achieve our mission of showcasing the best content from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"6662898\"
+        class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div
+        class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\" title=\"Guest\"
+        class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6662898\" style=\"color: inherit;\"><time datetime=\"2017-08-28T11:19:13+00:00\">Aug
+        28 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hello!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6662898\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6662898\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6662898\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6655970\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest9.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6655970\" style=\"color: inherit;\"><time datetime=\"2017-08-23T10:29:07+00:00\">Aug
+        23 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hello!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6655970\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6655970\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6655970\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6654447\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6654447\" style=\"color: inherit;\"><time datetime=\"2017-08-22T04:28:19+00:00\">Aug
+        22 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hello!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6654447\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6654447\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6654447\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6653740\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest7.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6653740\" style=\"color: inherit;\"><time datetime=\"2017-08-21T15:38:30+00:00\">Aug
+        21 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I am sure this post has touched all
+        the internet people, its really really nice post on building up new web site.
+        gkgfeaeffbadkbbc\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6653740\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6653740\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6653740\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/hardware/osvr/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"0c0c4e626e9b11d638845d0b56325efc\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"hardwareinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=4\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=hardware&amp;siteareaid=4\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware?filter=t&amp;category=1\"
+        rel=\"nofollow\">Headset</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/windows\" title=\"Windows\">Windows</a>,
+        <a href=\"/platforms/mac\" title=\"Mac\">Mac</a>, <a href=\"/platforms/linux\"
+        title=\"Linux\">Linux</a>, <a href=\"/platforms/vr\" title=\"VR\">VR</a>,
+        <a href=\"/platforms/android\" title=\"Android\">Android</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/razer\">Razer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=hardwaregroup18780\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.razerzone.com/osvr\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Razerzone.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2015-07\">Released 2015</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Hardware watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=4\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr&title=OSVR+hardware\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=OSVR%20hardware&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=OSVR+hardware+https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr&quote=OSVR+hardware&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        hardware cannot be used to power RTX Remix experiences. Learn more about <a
+        href=\"/news/rtx-remix-on-moddb\">ModDB's collaboration with the Remix community</a>
+        to organize all compatible games,. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"0\" />-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 0%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">0</span>
+        votes submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"hardware\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"4\" /><input type=\"hidden\" name=\"hash\" value=\"a0d69b95ee9b28569d7fe0c8550aa0be\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"normalbox formbox\"
+        id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        id=\"twitterform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"0c0c4e626e9b11d638845d0b56325efc\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/razer\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@razer</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1679143909098946562 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Fitted with a high-performance adaptive light sensor,
+        the Razer Kiyo Pro detects how bright or dark your surroundin\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/A2NFb4Gdee\">T.co</a></p><p class=\"helper\">Jul 12
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1679034382395244545
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Classic 10/10
+        in my book <a rel=\"nofollow\"  href=\"https://t.co/htEVjic7up\">T.co</a></p><p
+        class=\"helper\">Jul 12 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678917143302111234 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>From its brilliant display and compact aluminum chassis,
+        to cutting edge specs that want for nothing, the Razer Bla\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/Eot8xG0xvW\">T.co</a></p><p class=\"helper\">Jul 12
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678785128615534592
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>For on-the-go
+        gamers who crave style and utility as much as play, meet your needs with the
+        new Razer Xanthus collec\u2026 <a rel=\"nofollow\"  href=\"https://t.co/SB2OaHma4k\">T.co</a></p><p
+        class=\"helper\">Jul 11 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678655142692790273 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Looking quite dapper tho <a rel=\"nofollow\"  href=\"https://t.co/ajGAoWZ4El\">T.co</a></p><p
+        class=\"helper\">Jul 11 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678560048879132674 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Ready to enter the ring? Stand a chance to score an
+        AEW: Fight Forever game key or win big from our 3.2 million Raz\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/uJxD28Wm1W\">T.co</a></p><p class=\"helper\">Jul 11
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678482612229406720
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/Sensorialex\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@Sensorialex</a>: Hey
+        everyone \U0001F44B\nI just wanted to give a big shoutout and say thank you
+        to <a href=\"https://twitter.com/Razer\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@Razer</a> for the incredible gift package! \nI\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/CF5Ob8782K\">T.co</a></p><p class=\"helper\">Jul
+        10 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"0c0c4e626e9b11d638845d0b56325efc\" />\t\t\t\t\t<div class=\"row rowtagstagheadset
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/headset\">Headset</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=headset&sitearea=hardware&siteareaid=4&hash=e39d0290ef0b5f4d562f3f252132a07b\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=headset&sitearea=hardware&siteareaid=4&hash=e39d0290ef0b5f4d562f3f252132a07b&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagvr clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/vr\">VR</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=4&hash=e39d0290ef0b5f4d562f3f252132a07b\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=4&hash=e39d0290ef0b5f4d562f3f252132a07b&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=e39d0290ef0b5f4d562f3f252132a07b\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=e39d0290ef0b5f4d562f3f252132a07b&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"e39d0290ef0b5f4d562f3f252132a07b\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"hardware\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"4\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"hardwarebuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to OSVR by selecting a button and using the embed code provided <a href=\"#\"
+        class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/hardware/osvr&quot; title=&quot;View
+        OSVR on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/hardware/4.png&quot;
+        alt=&quot;OSVR&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/hardware/osvr\"
+        title=\"View OSVR on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/hardware/4.png\"
+        alt=\"OSVR\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row
+        clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn ratingbtn\"
+        style=\"text-align: center;\"><a href=\"https://www.moddb.com/hardware/osvr\"
+        title=\"View OSVR on ModDB\"><img src=\"https://button.moddb.com/rating/medium/hardware/4.png\"
+        alt=\"OSVR\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row
+        clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn smallbtn\"
+        style=\"text-align: center;\"><a href=\"https://www.moddb.com/hardware/osvr\"
+        title=\"View OSVR - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"OSVR\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"hardwareprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/top\">19 of 142</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/stats\">60,139
+        (1 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2021-05-18T04:54:37+00:00\"
+        itemprop=\"dateModified\">2 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/watchers\">14 members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Files</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/downloads\">16</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Articles</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/articles\">53</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5661 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/hardware\",\"name\":\"Hardware\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/hardware/osvr\",\"name\":\"OSVR\",\"image\":\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=hardware\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"hardware\",\r\n\t\t\t\t\t\ttags:
+        [\"hardware\",\"mobile\",\"android\",\"linux\",\"pc\",\"mac\",\"windows\"],\r\n\t\t\t\t\t\tgames:
+        [\"\"],\r\n\t\t\t\t\t\tplayers: [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712736418\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712736418\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"1354689\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1354689?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/hardware/osvr/videos/what-is-osvr#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/what-is-osvr-open-source-virtual-reality.mp4.jpg\",
+        1354689, \"What is OSVR?\", \"video\"); slidearr[1][1] = new Array(0, \"/hardware/osvr/images/razer-osvr-hdk2#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-carousel-hdk2.jpg\",
+        1635586, \"Razer OSVR HDK2\", \"image\"); slidearr[1][2] = new Array(0, \"/hardware/osvr/images/osvr-hacker-dev-kit4#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-04.png\",
+        1354685, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[1][3] = new Array(0,
+        \"/hardware/osvr/images/osvr-hacker-dev-kit3#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-03.png\",
+        1354684, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[1][4] = new Array(0,
+        \"/hardware/osvr/images/osvr-hacker-dev-kit2#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-02.png\",
+        1354683, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[1][5] = new Array(0,
+        \"/hardware/osvr/images/osvr-hacker-dev-kit1#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-01.png\",
+        1354682, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[2] = new Array(6);slidearr[2][0]
+        = new Array(0, \"/hardware/osvr/images/osvr-hacker-dev-kit#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/byo-bg.jpg\",
+        1354681, \"OSVR Hacker Dev Kit\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"\", true);\n\r\n\t\t\t\tviewBrowse = function(currentoption,
+        response) {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tif(response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"]) {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n$(\"form.ratingform\").rating(\"\",
+        20, 20);\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=hardware\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87213d965ae5b8b5-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 08:06:58 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=sqpZ7etZXC2sVXc3Q7ovCGuBaBZYkuOWD2ge0jA%2BjtGo%2BzNeGXqyYKtsv4vBZZnHGPistzS%2B39OUO66E%2BJvn4HGtv3Q8XoKcQDcXz6rSSf9zqm4TpLG%2FuigedF%2Fau9%2FNsK0qzhH%2BPFL4%2FQ8%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '75856'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=2b0aa2009f83932208aaf4ffc4be2887; expires=Wed, 10-Apr-2024 08:16:58
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=2b0aa2009f83932208aaf4ffc4be2887; expires=Wed, 10-Apr-2024 08:16:58
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/hardware/osvr
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>OSVR hardware
+        - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\"
+        content=\"osvr, windows, mac, linux, vr, android, headset, virtual reality,
+        augmented reality, hardware, headsets, haptics, controllers, input, keyboard,
+        handheld, feedback, developers, creation, gear\" />\r\n\t<meta name=\"description\"
+        content=\"Razer is part of the Open-Source Virtual Reality (OSVR) ecosystem,
+        a new standard in VR gaming to push the VR gaming experience forward and supporting
+        the venture with the OSVR Hacker Dev Kit, a virtual reality device and open-source
+        software that enables...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"OSVR hardware\" />\r\n\t<meta property=\"og:description\"
+        content=\"Razer is part of the Open-Source Virtual Reality (OSVR) ecosystem,
+        a new standard in VR gaming to push the VR gaming experience forward and supporting
+        the venture with the OSVR Hacker Dev Kit, a virtual reality device and open-source
+        software that enables...\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\"
+        />\r\n\t<meta property=\"og:type\" content=\"hardware\" /> \r\n\t<meta property=\"og:url\"
+        content=\"https://www.moddb.com/hardware/osvr\" /> \r\n\t<meta property=\"og:image\"
+        content=\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\" /> \r\n\t
+        \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\" />\r\n\t<meta
+        property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"OSVR hardware\" />\r\n\t<meta property=\"twitter:description\" content=\"Razer
+        is part of the Open-Source Virtual Reality (OSVR) ecosystem, a new standard
+        in VR gaming to push the VR gaming experience forward and supporting the venture
+        with the OSVR Hacker Dev Kit, a virtual reality device and open-source software
+        that enables...\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/hardware/osvr\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/hardware/osvr/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"OSVR hardware feed\" />\t<script async
+        src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1017</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>OSVR hardware</h1>\r\n\t\t<a href=\"/\" class=\"logo\"
+        title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/Product\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"image\" content=\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\"
+        />\t<div class=\"headerbox\">\r\n\t\t<div class=\"headercorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2 itemprop=\"name\"><a href=\"/hardware/osvr\"
+        itemprop=\"mainEntityOfPage\">OSVR</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/company/razer\">Razer</a> | <time datetime=\"2015-07\" itemprop=\"releaseDate\">Released
+        2015</time>\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"on firsttab\"><a href=\"/hardware/osvr\">summary</a></li><li
+        class=\"\"><a href=\"/hardware/osvr/articles\">articles</a></li><li class=\"off\"><a
+        href=\"/hardware/osvr/reviews\">reviews</a></li><li class=\"\"><a href=\"/hardware/osvr/downloads\">files</a></li><li
+        class=\"\"><a href=\"/hardware/osvr/software\">software</a></li><li class=\"\"><a
+        href=\"/hardware/osvr/games\">games</a></li><li class=\"\"><a href=\"/hardware/osvr/videos\">videos</a></li><li
+        class=\"\"><a href=\"/hardware/osvr/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"Razer is part of the Open-Source Virtual
+        Reality (OSVR) ecosystem, a new standard in VR gaming to push the VR gaming
+        experience forward and supporting the venture with the OSVR Hacker Dev Kit,
+        a virtual reality device and open-source software that enables programming
+        for any variety of VR technology.\" />\t<div class=\"headernormalbox normalbox
+        normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div class=\"body
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><p>Razer is part of the Open-Source Virtual Reality
+        (OSVR) ecosystem, a new standard in VR gaming to push the VR gaming experience
+        forward and supporting the venture with the OSVR Hacker Dev Kit, a virtual
+        reality device and open-source software that enables programming for any variety
+        of VR technology.</p>\n<h2><strong>WHAT IS OSVR?</strong></h2>\n<p>OSVR&trade;
+        stands for Open Source Virtual Reality. It is an ecosystem designed from the
+        ground up to set an open standard for Virtual Reality input devices, games
+        and output with the sole goal of providing the best possible game experience
+        in the Virtual Reality space. Supported by Industry Leaders and focused on
+        gaming, the OSVR framework rallies gamers worldwide together to push the boundaries
+        of VR-Gaming.</p>\n<h3>Hardware &amp; Software</h3>\n<p>This OSVR platform
+        is fully open-source, so regardless of whether you&rsquo;re interested in
+        working with hardware developmental kit designs, or software plugins for everything
+        from motion control, to game engines, and even stereoscopic video output,
+        you&rsquo;ll have complete access to all you need.</p>\n<h3>Focused on the
+        VR Gaming experience</h3>\n<p>The future of gaming is upon us, and the technology
+        to be immersed in your favorite game world is at hand. To offer more gamers
+        the opportunity to experience the exhilaration of VR-Gaming, the OSVR platform
+        is focused on providing game engine plugins for all to use. A dedicated team
+        of game developers, peripheral manufacturers, and virtual reality experts
+        meticulously architected this platform, to help even more games enter this
+        new dimension.</p>\n<h3>Supported by Industry Leaders</h3>\n<p>At the forefront
+        of the next gaming revolution, are industry leaders from every space. With
+        big names such as Unity, Unreal, Bosch, Razer, Sixense, and Leap Motion, all
+        lending their specialized expertise, this OSVR platform promises to blaze
+        a trail in gaming like nothing the world has ever seen.</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/hardware/osvr/videos/what-is-osvr#imagebox\"
+        title=\"What is OSVR?\"><span class=\"play\" data-id=\"1354689\"></span><img
+        src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/what-is-osvr-open-source-virtual-reality.mp4.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/razer-osvr-hdk2#imagebox\" title=\"Razer OSVR
+        HDK2\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-carousel-hdk2.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit4#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-04.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit3#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-03.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit2#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-02.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/hardware/osvr/images/osvr-hacker-dev-kit1#imagebox\" title=\"OSVR
+        Hacker Dev Kit\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-01.png\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/hardware/osvr/images/osvr-hacker-dev-kit#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox browsebox\"
+        id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/hardware/osvr/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/hardware/osvr/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Related Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/achievement-unlocked1\">Achievement
+        Unlocked</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-03-31T21:59:59+00:00\">Mar
+        31 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/mythlink\" title=\"Game\">Mythlink</a>   \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>No April Fools prank this year, instead just some new unlockable
+        content in Mythlink, available now! That's right, after last month's addition
+        of Steam community content to the game, it was time to round out the rest
+        of the release and push out one more key piece of digital bling into the ecosystem.
+        That is, of course, game achievements!</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.indiedb.com/images/articles/1/315/314469/auto/TotalAchievements.png\"
+        alt=\"\" /></p>\n<p><br /></p>\n</div>\n<p>A grand total of 15 achievements
+        are now ripe for the taking within Mythlink. There is a healthy mix of challenge
+        ranging from fairly easy to pretty difficult. Let's take a look at what these
+        achievements entail, including a sneak peak into how to unlock the hidden
+        achievements!</p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.indiedb.com/images/articles/1/315/314469/auto/NonHiddenAchievement.png\"
+        alt=\"\" width=\"600\" height=\"600\" /></p>\n<p><br /></p>\n</div>\n<p>These
+        should be pretty self explanatory. Unlock each of the Mythlinks, get some
+        killer high scores, and win some online matches. Simple enough, right? Right.
+        But don't underestimate some of those score thresholds! While they are far
+        from impossible, it will definitely take some skill and practice to unlock
+        them all.</p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.indiedb.com/images/articles/1/315/314469/auto/HiddenAchievements.png\"
+        alt=\"\" /> </p>\n<p><br /></p>\n</div>\n<p>Readers of this blog will get
+        the inside scoop on how to unlock the two hidden achievements as well. One
+        of them deals with cracking the glass boxes in the menus, which I bet you
+        didn't even know you could do! The other will get unlocked through a random
+        event while playing Baller Dodge. Don't worry, you'll get it eventually!</p>\n<p>Pretty
+        short update this month. Next month we'll cover more details on one of the
+        Mythlinks not yet covered! What could that mean I wonder...a new Mythlink?
+        I did say no April Fools pranks this year...or did I?</p>\n<p>Yes. Yes, I
+        did.</p>\n<p>See you then!</p>\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/emoticons-and-badges-and-cards-oh-my\"
+        title=\"Emoticons and Badges and Cards, Oh My!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/314/313615/crop_120x90/HeaderImage.png\"
+        alt=\"Emoticons and Badges and Cards, Oh My!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/emoticons-and-badges-and-cards-oh-my\">Emoticons
+        and Badges and Cards, Oh My!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-02-28T23:59:59+00:00\">Mar 1 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Game\">Mythlink</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>Announcing the newly added Steam Community Items
+        for Mythlink</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/mythlink-has-been-released\"
+        title=\"Mythlink Has Been Released!\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/313/312590/crop_120x90/SteamHeader.png\"
+        alt=\"Mythlink Has Been Released!\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/mythlink-has-been-released\">Mythlink
+        Has Been Released!</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-01-19T01:50:43+00:00\">Jan 19 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Game\">Mythlink</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>Mythlink is now available on Steam! Download
+        the game today!</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/players-choice-2022-best-upcoming-indie\"
+        title=\"Player's Choice: 2022 Best Upcoming Indie\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/313/312009/crop_120x90/Indie_DB_Rank.PNG\"
+        alt=\"Player's Choice: 2022 Best Upcoming Indie\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/players-choice-2022-best-upcoming-indie\">Player's
+        Choice: 2022 Best Upcoming Indie</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2022-12-28T01:26:51+00:00\">Dec 28 2022</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Game\">Mythlink</a>
+        \  \t\t\t</span>\r\n\t\t\t<p>Results of the Indie DB Indie of the Year competition</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/mythlink/news/is-seeing-believing\"
+        title=\"Is Seeing Believing?\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/312/311895/crop_120x90/Jan20ReleaseDate.jpg\"
+        alt=\"Is Seeing Believing?\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/mythlink/news/is-seeing-believing\">Is Seeing
+        Believing?</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2022-12-23T20:59:59+00:00\">Dec
+        23 2022</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/games/mythlink\" title=\"Game\">Mythlink</a>   \t\t\t</span>\r\n\t\t\t<p>A
+        &quot;fun&quot; holiday poem detailing the new release date of Mythlink!</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/hardware/osvr/articles/add\">Post
+        article</a> | <a href=\"/hardware/osvr/articles\">More articles &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        articles were found matching the criteria specified. We suggest you try the
+        <a href=\"/hardware/osvr/articles\">article list</a> with no filter applied,
+        to browse all available. <a href=\"/hardware/osvr/articles/add\">Post article</a>
+        and help us achieve our mission of showcasing the best content from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"softwarebrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/software/add/?hardware=4#softwareform\"
+        class=\"addicon\"  title=\"Add software\">Add software</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Software</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/project-neptune-vr\" title=\"Project
+        Neptune VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/55/crop_120x90/VRLOGO-S.png\"
+        alt=\"Project Neptune VR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/project-neptune-vr\">Project Neptune VR</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2018-11-27T17:31:11+00:00\">Nov
+        27 2018</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>Project Neptune VR is the virtual reality demo
+        of our main machine, the Project Neptune ARC. In this virtual reality simulation,
+        users will be able to...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/software/hybrid-core-engine\" title=\"Hybrid
+        Core Engine\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/software/1/1/46/crop_120x90/1.jpg\"
+        alt=\"Hybrid Core Engine\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/software/hybrid-core-engine\">Hybrid Core Engine</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2017-03-30T23:16:11+00:00\">Mar
+        31 2017</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        VR  \t\t\t</span>\r\n\t\t\t<p>ENG: Hybrid Core Engine was born from the fusion
+        between FPS Creator (by The Game Creators, now free) and FireXshader 2 (an
+        addon graphic mod developed...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div class=\"row\"
+        style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/software/add/?hardware=4\">Add
+        software &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo software were found
+        matching the criteria specified. We suggest you try the <a href=\"/hardware/osvr/software\">software
+        list</a> with no filter applied, to browse all available. <a href=\"/software/add/?hardware=4\">Add
+        software</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox browsebox\" id=\"gamesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/games/add/?hardware=4#gamesform\"
+        class=\"addicon\"  title=\"Add game\">Add game</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Games</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t<div
+        class=\"table\">\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/games/taraniawarsonline\" title=\"Tarania Wars Online\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/games/1/42/41295/crop_120x90/1_1_-_Copy.jpg\"
+        alt=\"Tarania Wars Online\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/taraniawarsonline\">Tarania Wars Online</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-09-23T18:35:09+00:00\">Sep
+        23 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time>TBD</time>
+        Role Playing  \t\t\t</span>\r\n\t\t\t<p>The Next Generation of an Online Game.
+        Developer: Jojishi Productions(Solo Dev) Type Of Game: Medieval, Futuristic,
+        Action, Adventure, Online. Game Name...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/mythlink\" title=\"Mythlink\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/80/79398/crop_120x90/logo.jpg\"
+        alt=\"Mythlink\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/mythlink\">Mythlink</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2023-04-30T17:37:33+00:00\">Apr 30 2023</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2023-01-20\">Released Jan
+        20, 2023</time> Arcade  \t\t\t</span>\r\n\t\t\t<p>Mythlink is an upcoming
+        VR-only monster battling game. Players can level up and battle with their
+        Mythlink in hopes to create the best Mythlink Unity...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/hall-of-science\"
+        title=\"Hall of Science\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/50/49280/crop_120x90/CRYENGINE_04_07_2022_13_59_54.png\"
+        alt=\"Hall of Science\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/hall-of-science\">Hall of Science</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2023-02-20T16:47:49+00:00\">Feb
+        20 2023</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2016-03-31\">Early Access 2016</time> Educational  \t\t\t</span>\r\n\t\t\t<p>Hall
+        of Science is a educational museum simulator game where scientists past and
+        present have their scientific accomplishments displayed for all to learn...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/plasmatic\" title=\"PLASMATIC\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/80/79046/crop_120x90/ao_hero_capsule.1.jpg\"
+        alt=\"PLASMATIC\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/plasmatic\">PLASMATIC</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2022-05-19T12:16:14+00:00\">May 19 2022</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2022-06-22\">Released Jun
+        2022</time> Virtual Life  \t\t\t</span>\r\n\t\t\t<p>Plasmatic is a virtual,
+        utopian space into which our society has voluntarily moved. We wake up from
+        it unexpectedly. Our goal is to repair the main simulation...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/house-of-the-dying-sun\"
+        title=\"House of the Dying Sun\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/60/59583/crop_120x90/house_of_p.jpg\"
+        alt=\"House of the Dying Sun\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/house-of-the-dying-sun\">House of the Dying
+        Sun</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2022-01-31\">Jan
+        31 2022</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2016-11\">Released 2016</time> Futuristic Sim  \t\t\t</span>\r\n\t\t\t<p>House
+        of the Dying Sun is a tactical space shooter that puts you in the cockpit
+        of the Empire's most deadly interceptor and in command of the Harbinger...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/tainted-fate\"
+        title=\"Tainted Fate\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/18/17746/crop_120x90/TFate_Logo_Final_Mladen.jpg\"
+        alt=\"Tainted Fate\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/tainted-fate\">Tainted Fate</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-12-01T17:48:03+00:00\">Dec 1 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"2020-10-29\">Released 2020</time>
+        Adventure  \t\t\t</span>\r\n\t\t\t<p>Tainted Fate is a horror game for VR
+        devices in which you are the horror. Unwillingly summoned from the depths
+        of the nether onto a remote island serving...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/unreal-vr\" title=\"Unreal
+        VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/66/65073/crop_120x90/Splash.3.png\"
+        alt=\"Unreal VR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/unreal-vr\">Unreal VR</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2021-08-18T21:14:55+00:00\">Aug 18 2021</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\t<time datetime=\"1998-05-22\">Released 1998</time>
+        First Person Shooter  \t\t\t</span>\r\n\t\t\t<p>Open-source project for total
+        conversion of the legendary Unreal Gold (1998) in Unreal Engine 4 with VR
+        support.</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row rowcontent clear\">\r\n\t\t\t\t<a
+        href=\"/games/girls-civilization-2\" title=\"Girls' civilization 2\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/games/1/77/76676/crop_120x90/logo.jpg\"
+        alt=\"Girls' civilization 2\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/girls-civilization-2\">Girls' civilization
+        2</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-05-18T04:54:36+00:00\">May
+        18 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2021-02-10\">Early Access 2021</time> Role Playing  \t\t\t</span>\r\n\t\t\t<p>Oculus
+        quest is blurry in this game. Vive is way clearer. All people in this game
+        are adult individuals who understand society and can work without help...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/playground-vr\"
+        title=\"Playground VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/76/75918/crop_120x90/Etef7XYWYAIX5-c.png\"
+        alt=\"Playground VR\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/playground-vr\">Playground VR</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-02-20T08:18:51+00:00\">Feb
+        20 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2021-02-26\">Early Access 2021</time> Adventure  \t\t\t</span>\r\n\t\t\t<p>Playground
+        VR It is an open world game where you can experience the beautiful essence
+        of VR. Do you want to fly a balloon? Fly! Are you not afraid to...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/stack-defense\"
+        title=\"Stack Defense\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/76/75673/crop_120x90/Area1_Logo_512.jpg\"
+        alt=\"Stack Defense\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/stack-defense\">Stack Defense</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2021-01-08T15:30:27+00:00\">Jan
+        8 2021</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<time
+        datetime=\"2020-12-22\">Early Access 2020</time> Party  \t\t\t</span>\r\n\t\t\t<p>Play
+        this VR game with friends and others. Protect your stack and destroy the blocks
+        of your opponents. Win the game by having the biggest stack at the...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/games/add/?hardware=4\">Add
+        game</a> | <a href=\"/hardware/osvr/games\">More games &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        games were found matching the criteria specified. We suggest you try the <a
+        href=\"/hardware/osvr/games\">game list</a> with no filter applied, to browse
+        all available. <a href=\"/games/add/?hardware=4\">Add game</a> and help us
+        achieve our mission of showcasing the best content from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"6662898\"
+        class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div
+        class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\" title=\"Guest\"
+        class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6662898\" style=\"color: inherit;\"><time datetime=\"2017-08-28T11:19:13+00:00\">Aug
+        28 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hello!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6662898\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6662898\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6662898\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6655970\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest9.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6655970\" style=\"color: inherit;\"><time datetime=\"2017-08-23T10:29:07+00:00\">Aug
+        23 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hello!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6655970\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6655970\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6655970\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6654447\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest8.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6654447\" style=\"color: inherit;\"><time datetime=\"2017-08-22T04:28:19+00:00\">Aug
+        22 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hello!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"6654447\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6654447\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6654447\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"6653740\" class=\"row rowguest rowspamorham\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/guest\"
+        title=\"Guest\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/guest/guest7.png\"
+        alt=\"Guest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/guest\" class=\"author\" data-nameid=\"guest\">Guest</a>  -
+        <a href=\"#6653740\" style=\"color: inherit;\"><time datetime=\"2017-08-21T15:38:30+00:00\">Aug
+        21 2017</time></a> - 687,512 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I am sure this post has touched all
+        the internet people, its really really nice post on building up new web site.
+        gkgfeaeffbadkbbc\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"6653740\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=6653740\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=6653740\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">ham
+        or spam?</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/hardware/osvr/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"006e3d6d974f93f1988af410403de8ad\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"hardwareinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=4\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=hardware&amp;siteareaid=4\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Category</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware?filter=t&amp;category=1\"
+        rel=\"nofollow\">Headset</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/windows\" title=\"Windows\">Windows</a>,
+        <a href=\"/platforms/mac\" title=\"Mac\">Mac</a>, <a href=\"/platforms/linux\"
+        title=\"Linux\">Linux</a>, <a href=\"/platforms/vr\" title=\"VR\">VR</a>,
+        <a href=\"/platforms/android\" title=\"Android\">Android</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/razer\">Razer</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=hardwaregroup18780\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.razerzone.com/osvr\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Razerzone.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2015-07\">Released 2015</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Hardware watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=hardware&amp;siteareaid=4\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr&title=OSVR+hardware\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=OSVR%20hardware&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=OSVR+hardware+https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr&quote=OSVR+hardware&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fhardware%2Fosvr\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        hardware cannot be used to power RTX Remix experiences. Learn more about <a
+        href=\"/news/rtx-remix-on-moddb\">ModDB's collaboration with the Remix community</a>
+        to organize all compatible games,. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox\" id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\" itemprop=\"aggregateRating\"
+        itemscope itemtype=\"https://schema.org/AggregateRating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span><meta
+        itemprop=\"worstRating\" content=\"1\" /><meta itemprop=\"bestRating\" content=\"10\"
+        /><meta itemprop=\"ratingValue\" content=\"0\" />-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 0%;\"></div></div>\r\n\t\t\t\t\t\t<p><span itemprop=\"ratingCount\">0</span>
+        votes submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"hardware\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"4\" /><input type=\"hidden\" name=\"hash\" value=\"a0d69b95ee9b28569d7fe0c8550aa0be\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"normalbox formbox\"
+        id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        id=\"twitterform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"006e3d6d974f93f1988af410403de8ad\" />\t\t\t\t\t<div class=\"row rowtwitterfaketwitter
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Latest posts
+        from <a href=\"https://twitter.com/razer\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@razer</a></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1679143909098946562 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Fitted with a high-performance adaptive light sensor,
+        the Razer Kiyo Pro detects how bright or dark your surroundin\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/A2NFb4Gdee\">T.co</a></p><p class=\"helper\">Jul 12
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1679034382395244545
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>Classic 10/10
+        in my book <a rel=\"nofollow\"  href=\"https://t.co/htEVjic7up\">T.co</a></p><p
+        class=\"helper\">Jul 12 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678917143302111234 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>From its brilliant display and compact aluminum chassis,
+        to cutting edge specs that want for nothing, the Razer Bla\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/Eot8xG0xvW\">T.co</a></p><p class=\"helper\">Jul 12
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678785128615534592
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>For on-the-go
+        gamers who crave style and utility as much as play, meet your needs with the
+        new Razer Xanthus collec\u2026 <a rel=\"nofollow\"  href=\"https://t.co/SB2OaHma4k\">T.co</a></p><p
+        class=\"helper\">Jul 11 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678655142692790273 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Looking quite dapper tho <a rel=\"nofollow\"  href=\"https://t.co/ajGAoWZ4El\">T.co</a></p><p
+        class=\"helper\">Jul 11 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtwitterfaketweet1678560048879132674 clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p>Ready to enter the ring? Stand a chance to score an
+        AEW: Fight Forever game key or win big from our 3.2 million Raz\u2026 <a rel=\"nofollow\"
+        \ href=\"https://t.co/uJxD28Wm1W\">T.co</a></p><p class=\"helper\">Jul 11
+        2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"row rowtwitterfaketweet1678482612229406720
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p>RT <a href=\"https://twitter.com/Sensorialex\"
+        target=\"_blank\" rel=\"nofollow noopener noreferrer\">@Sensorialex</a>: Hey
+        everyone \U0001F44B\nI just wanted to give a big shoutout and say thank you
+        to <a href=\"https://twitter.com/Razer\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\">@Razer</a> for the incredible gift package! \nI\u2026
+        <a rel=\"nofollow\"  href=\"https://t.co/CF5Ob8782K\">T.co</a></p><p class=\"helper\">Jul
+        10 2023</p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"006e3d6d974f93f1988af410403de8ad\" />\t\t\t\t\t<div class=\"row rowtagstagheadset
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/headset\">Headset</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=headset&sitearea=hardware&siteareaid=4&hash=74b478c26a7a7348b5a253a50bc23520\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=headset&sitearea=hardware&siteareaid=4&hash=74b478c26a7a7348b5a253a50bc23520&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagvr clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/vr\">VR</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=4&hash=74b478c26a7a7348b5a253a50bc23520\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=vr&sitearea=hardware&siteareaid=4&hash=74b478c26a7a7348b5a253a50bc23520&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=74b478c26a7a7348b5a253a50bc23520\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=74b478c26a7a7348b5a253a50bc23520&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"74b478c26a7a7348b5a253a50bc23520\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"hardware\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"4\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"hardwarebuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to OSVR by selecting a button and using the embed code provided <a href=\"#\"
+        class=\"moreembed\">more...</a><input type=\"text\" name=\"\" maxlength=\"500\"
+        value=\"&lt;a href=&quot;https://www.moddb.com/hardware/osvr&quot; title=&quot;View
+        OSVR on ModDB&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/hardware/4.png&quot;
+        alt=&quot;OSVR&quot; /&gt;&lt;/a&gt;\" class=\"text textembed\" style=\"margin-top:
+        5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<div
+        class=\"allbtn popularitybtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/hardware/osvr\"
+        title=\"View OSVR on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/hardware/4.png\"
+        alt=\"OSVR\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row
+        clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn ratingbtn\"
+        style=\"text-align: center;\"><a href=\"https://www.moddb.com/hardware/osvr\"
+        title=\"View OSVR on ModDB\"><img src=\"https://button.moddb.com/rating/medium/hardware/4.png\"
+        alt=\"OSVR\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row
+        clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn smallbtn\"
+        style=\"text-align: center;\"><a href=\"https://www.moddb.com/hardware/osvr\"
+        title=\"View OSVR - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"OSVR\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"hardwareprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/top\">13 of 142</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/stats\">60,140
+        (2 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2021-05-18T04:54:37+00:00\"
+        itemprop=\"dateModified\">2 years ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/watchers\">14 members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Files</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/downloads\">16</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Articles</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/hardware/osvr/articles\">53</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">5424 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/hardware\",\"name\":\"Hardware\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/hardware/osvr\",\"name\":\"OSVR\",\"image\":\"https://media.moddb.com/images/hardware/1/1/4/preview.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.rating.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=hardware\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"hardware\",\r\n\t\t\t\t\t\ttags:
+        [\"hardware\",\"mobile\",\"android\",\"linux\",\"pc\",\"mac\",\"windows\"],\r\n\t\t\t\t\t\tgames:
+        [\"\"],\r\n\t\t\t\t\t\tplayers: [\"\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1712749115\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1712749115\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"1354689\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/1354689?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/hardware/osvr/videos/what-is-osvr#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/what-is-osvr-open-source-virtual-reality.mp4.jpg\",
+        1354689, \"What is OSVR?\", \"video\"); slidearr[1][1] = new Array(0, \"/hardware/osvr/images/razer-osvr-hdk2#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-carousel-hdk2.jpg\",
+        1635586, \"Razer OSVR HDK2\", \"image\"); slidearr[1][2] = new Array(0, \"/hardware/osvr/images/osvr-hacker-dev-kit4#imagebox\",
+        \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-04.png\",
+        1354685, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[1][3] = new Array(0,
+        \"/hardware/osvr/images/osvr-hacker-dev-kit3#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-03.png\",
+        1354684, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[1][4] = new Array(0,
+        \"/hardware/osvr/images/osvr-hacker-dev-kit2#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-02.png\",
+        1354683, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[1][5] = new Array(0,
+        \"/hardware/osvr/images/osvr-hacker-dev-kit1#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/osvr-gallery-v3-01.png\",
+        1354682, \"OSVR Hacker Dev Kit\", \"image\"); slidearr[2] = new Array(6);slidearr[2][0]
+        = new Array(0, \"/hardware/osvr/images/osvr-hacker-dev-kit#imagebox\", \"https://media.moddb.com/cache/images/hardware/1/1/4/crop_120x90/byo-bg.jpg\",
+        1354681, \"OSVR Hacker Dev Kit\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"\", true);\n\r\n\t\t\t\tviewBrowse = function(currentoption,
+        response) {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tif(response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"]) {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n$(\"form.ratingform\").rating(\"\",
+        20, 20);\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=hardware\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87227392c90593c3-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 10 Apr 2024 11:38:35 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=m9haqGMA2qAsspiQEAAyBdlnq1t81BQnWEnXzUTE5tk2%2B3S%2Bgt5StxSrMpDgeF7f%2FnL7N3MiATXpO0HyN5U19UKzeqZH9OfQ3U4euPluLyMUVLb5%2BJp7S2nb6sNVwVJKxqp87rXfe8D%2BON0%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '75856'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=d7ce29c0765786ac0cad5f6223731e53; expires=Wed, 10-Apr-2024 11:48:35
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=d7ce29c0765786ac0cad5f6223731e53; expires=Wed, 10-Apr-2024 11:48:35
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
