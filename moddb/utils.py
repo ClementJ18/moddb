@@ -1,30 +1,26 @@
 import datetime
+import functools
 import inspect
 import logging
 import random
 import re
 import sys
+import time
 import uuid
-from typing import Tuple
+from typing import Optional, Sequence, Tuple, TypeVar
 from urllib.parse import urljoin
 
 import bs4
 import requests
 from bs4 import BeautifulSoup, Tag
-from pyrate_limiter import Duration, Limiter, RequestRate
+from requests import utils
 
 from .enums import MediaCategory, ThumbnailType
-from .errors import AwaitingAuthorisation, ModdbException
+from .errors import AwaitingAuthorisation, ModdbException, Ratelimited
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
 
-limiter = Limiter(
-    # request stuff slowly, like a human
-    RequestRate(1, Duration.SECOND * 1),
-    # take breaks when requesting stuff, like a human
-    RequestRate(40, Duration.MINUTE * 5),
-)
 
 time_mapping = {
     "year": 125798400,
@@ -99,6 +95,63 @@ def concat_docs(cls):
     return cls
 
 
+class Ratelimit:
+    def __init__(self, rate: float, per: float, sleep: Optional[None] = None):
+        self.rate = rate
+        self.per = per
+        self.sleep = sleep
+
+        self.last_called = datetime.datetime.min
+        self.initial_call = datetime.datetime.min
+        self.call_count = 0
+
+    def reset(self, now: datetime.datetime = None):
+        if now is None:
+            now = datetime.datetime.now()
+
+        self.initial_call = now
+        self.call_count = 0
+
+    def call(self):
+        now = datetime.datetime.now()
+
+        expiry = self.initial_call + datetime.timedelta(seconds=self.per)
+        if now > expiry:
+            LOGGER.info("Resetting ratelimit")
+            self.reset(now)
+
+        if self.call_count + 1 > self.rate:
+            remaining = (expiry - now).total_seconds()
+            if self.sleep is not None and remaining <= self.sleep:
+                LOGGER.info("Ratelimited! Sleeping for %s", remaining)
+                time.sleep(remaining)
+                self.reset(now)
+            else:
+                raise Ratelimited(f"Ratelimited please try again in {remaining}", remaining)
+
+        self.call_count += 1
+
+
+def ratelimit(*limiters: Ratelimit):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            for limiter in limiters:
+                limiter.call()
+
+            return func(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
+
+GLOBAL_LIMITER = Ratelimit(40, 300, sleep=300)
+GLOBAL_THROTLE = Ratelimit(5, 1, sleep=1)
+COMMENT_LIMITER = Ratelimit(1, 60)
+LOGIN_LIMITER = Ratelimit(1, 5)
+
+
 def get_date(d: str) -> datetime.datetime:
     """A helper function that takes a ModDB string representation of time and returns an equivalent
     datetime.datetime object. This can range from a datetime with the full year to
@@ -127,9 +180,9 @@ def get_date(d: str) -> datetime.datetime:
     return datetime.datetime.strptime(d, "%Y-%m")
 
 
-def prepare_request(req: requests.Request, session):
+def prepare_request(req: requests.Request, session: requests.Session):
     """Prepared a request with the appropriate cookies"""
-    cookies = requests.utils.dict_from_cookiejar(session.cookies)
+    cookies = utils.dict_from_cookiejar(session.cookies)
 
     if req.cookies is not None:
         req.cookies = {**req.cookies, **cookies}
@@ -165,9 +218,13 @@ def raise_for_status(response: requests.Response):
         )
 
 
-def generate_login_cookies(username, password):
+@ratelimit(LOGIN_LIMITER)
+def generate_login_cookies(username: str, password: str, session: requests.Session = None):
     """Log a user in and return the `freeman` cookie containing the login hash"""
-    resp = requests.get(f"{BASE_URL}/members/login")
+    if session is None:
+        session = sys.modules["moddb"].SESSION
+
+    resp = session.get(f"{BASE_URL}/members/login")
     html = soup(resp.text)
     form = html.find("form", attrs={"name": "membersform"})
 
@@ -183,7 +240,7 @@ def generate_login_cookies(username, password):
         "members": "Sign in",
     }
 
-    login = requests.post(
+    login = session.post(
         f"{BASE_URL}/members/login",
         data=data,
         cookies=resp.cookies,
@@ -196,7 +253,7 @@ def generate_login_cookies(username, password):
     return login.cookies
 
 
-@limiter.ratelimit("moddb", delay=True)
+@ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
 def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
@@ -211,9 +268,9 @@ def request(req: requests.Request):
         The returned response object
 
     """
-    SESSION = sys.modules["moddb"].SESSION
-    prepped = prepare_request(req, SESSION)
-    r = SESSION.send(prepped)
+    session: requests.Session = sys.modules["moddb"].SESSION
+    prepped = prepare_request(req, session)
+    r = session.send(prepped)
 
     raise_for_status(r)
     return r
@@ -264,7 +321,7 @@ def get_page(url: str, *, params: dict = {}, json: bool = False):
 
 
 def get_views(string: str) -> Tuple[int, int]:
-    """A helper function that takes a string reresentation of total something and
+    """A helper function that takes a string representation of total something and
     daily amount of that same thing and returns both as a tuple of ints.
 
     Parameters
@@ -430,7 +487,10 @@ class Object:
         self.__dict__.update(kwargs)
 
 
-def find(predicate, seq):
+D = TypeVar("D")
+
+
+def find(predicate, seq: Sequence[D]) -> Optional[D]:
     """A helper to return the first element found in the sequence
     that meets the predicate. For example: ::
 
@@ -458,7 +518,7 @@ def find(predicate, seq):
     return None
 
 
-def get(iterable, **attrs):
+def get(iterable: Sequence[D], **attrs) -> Optional[D]:
     r"""A helper that returns the first element in the iterable that meets
     all the traits passed in ``attrs``. This is an alternative for
     :func:`moddb.utils.find`.
@@ -534,3 +594,15 @@ siteareaid_mapping = {
 def get_siteareaid(key: str):
     """Get the sitearea id from an int"""
     return siteareaid_mapping.get(str(key), "none")
+
+
+number_mapping = {"k": 1_000, "m": 1_000_000}
+
+
+def unroll_number(string: str) -> int:
+    identifier = string[-1].lower()
+    if identifier.isdigit():
+        return int(string)
+
+    number = float(string[:-1]) * number_mapping[identifier]
+    return int(number)

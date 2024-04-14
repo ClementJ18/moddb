@@ -1,4 +1,5 @@
 import json
+import logging
 import re
 
 import bs4
@@ -77,7 +78,7 @@ class Job:
                 url=author["href"], name=author.string, type=ThumbnailType.member
             )
         except AttributeError:
-            LOGGER.info("Job '%s' has no author", self.name)
+            LOGGER.info("Job '%s' has no author", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.author = None
 
         self.paid = profile_raw.find("h5", string="Paid").parent.a.string == "Yes"
@@ -91,7 +92,12 @@ class Job:
             ]
         except AttributeError:
             self.tags = []
-            LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' has no tags",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         self.skill = JobSkill(int(profile_raw.find("h5", string="Skill").parent.span.a["href"][-1]))
 
@@ -103,7 +109,11 @@ class Job:
                 Thumbnail(url=x["href"], name=x["title"], type=ThumbnailType.team) for x in related
             ]
         except AttributeError:
-            LOGGER.info("Job '%s' has no related companies", self.name)
+            LOGGER.info(
+                "Job '%s' has no related companies",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.related = []
 
         self._html = html

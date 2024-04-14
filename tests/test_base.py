@@ -1,5 +1,6 @@
 import pytest
 
+from moddb.utils import LOGIN_LIMITER
 from tests.utils import sample_list
 
 try:
@@ -34,6 +35,9 @@ class TestFrontPage:
         for file in sample_list(self.fp.files, 3):
             file.parse()
 
+    def get_poll(self):
+        self.fp.get_poll()
+
 
 @pytest.mark.vcr
 class TestSearch:
@@ -56,9 +60,11 @@ class TestSearch:
 
 class TestLogin:
     def test_login(self):
+        LOGIN_LIMITER.reset()
         moddb.login(username, password)
 
     def test_bad_login(self):
+        LOGIN_LIMITER.reset()
         with pytest.raises(ValueError):
             moddb.login("tico", "ticoisgod")
 

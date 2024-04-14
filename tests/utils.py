@@ -1,6 +1,7 @@
 import json
 import os
 import random
+from typing import List, TypeVar
 from unittest.mock import patch
 
 import moddb
@@ -21,10 +22,16 @@ class FakeResponse:
         return self.json_content
 
 
-def sample_list(l: list, k: int) -> list:
+V = TypeVar("V")
+
+
+def sample_list(l: List[V], k: int, randomize: bool = False) -> List[V]:
     sample = min(k, len(l))
     if l:
-        return random.sample(l, sample)
+        if randomize:
+            return random.sample(l, sample)
+
+        return l[1:sample]
 
     return []
 
@@ -158,7 +165,7 @@ member_urls = [
 ]
 
 platform_urls = [
-    "https://www.moddb.com/platforms/pc",
+    "https://www.moddb.com/platforms/windows",
     "https://www.moddb.com/platforms/mac",
     "https://www.moddb.com/platforms/linux",
     "https://www.moddb.com/platforms/vr",

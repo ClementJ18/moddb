@@ -8,6 +8,26 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+
+v0.11.0
+-------
+Bug Fixes
+##########
+* Fixed an edge case in comment parsing
+
+New Features
+#############
+* Added `FrontPage.get_poll` to get the poll on the front page
+* Ratelimiting login request to to 1/5s
+* Ratelimited requests that are asked to raise will now raise `moddb.errors.Ratelimited`
+* Profiles now display the aggregated download count of mods and games (if they have one) under `download_count`
+
+
+Removed Features
+#################
+* Removed `FrontPage.poll` to reduce the number of requests used when calling `front_page()`
+
+
 v0.10.0
 -------
 Bug Fixes

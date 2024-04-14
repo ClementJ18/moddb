@@ -56,4 +56,11 @@ jobs:
       run: |
         bash run_tests.sh full --test-group-count 3 --test-group=3 --reruns 3 --reruns-delay 15 
       if: github.event.pull_request.base.ref == 'master'
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: Test result
+        path: report.html
+      
+
   

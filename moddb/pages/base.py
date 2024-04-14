@@ -1,3 +1,4 @@
+import logging
 import re
 from typing import List
 
@@ -73,7 +74,12 @@ class BaseMetaClass:
             self.report = join(html.find("a", string="Report")["href"])
         except TypeError:
             self.report = None
-            LOGGER.info("'%s' '%s' cannot be reported", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' cannot be reported",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         self.comments = self._get_comments(html)
 
@@ -254,7 +260,11 @@ class PageMetaClass(
             try:
                 self.stats = Statistics(html)
             except AttributeError:
-                LOGGER.info("Entity '%s' has no stats (idk why, ask moddb)", self.name)
+                LOGGER.info(
+                    "Entity '%s' has no stats (idk why, ask moddb)",
+                    self.name,
+                    exc_info=LOGGER.level >= logging.DEBUG,
+                )
                 self.stats = None
 
             if page_type != SearchCategory.engines:
@@ -272,7 +282,12 @@ class PageMetaClass(
         try:
             self.files = self._get_files(html)
         except AttributeError:
-            LOGGER.info("'%s' '%s' has no files", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' has no files",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.files = []
 
         articles_raw = None
@@ -298,6 +313,7 @@ class PageMetaClass(
                 "'%s' '%s' has no article suggestions",
                 self.__class__.__name__,
                 self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
             )
             self.articles = []
 
@@ -310,6 +326,7 @@ class PageMetaClass(
                 "'%s' '%s' has no front page article",
                 self.__class__.__name__,
                 self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
             )
 
         try:
@@ -321,7 +338,12 @@ class PageMetaClass(
             ]
         except AttributeError:
             self.tags = []
-            LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' has no tags",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         # imagebox
         try:
@@ -337,7 +359,12 @@ class PageMetaClass(
                 if x.a
             ]
         except (AttributeError, TypeError):
-            LOGGER.info("'%s' '%s' has no images", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' has no images",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.imagebox = []
 
         try:
@@ -346,7 +373,12 @@ class PageMetaClass(
             )
         except AttributeError:
             self.rating = 0.0
-            LOGGER.info("'%s' '%s' is not rated", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' is not rated",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         try:
             self._review_hash = html.find("form", class_="ratingform").find(
@@ -361,7 +393,12 @@ class PageMetaClass(
             self.summary = html.find("meta", itemprop="description")["content"]
         except TypeError:
             self.summary = None
-            LOGGER.info("'%s' '%s' has no summary", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' has no summary",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         self.description = str(html.find("div", id="profiledescription"))
 
@@ -373,6 +410,7 @@ class PageMetaClass(
                 "'%s' '%s' has no extended description",
                 self.__class__.__name__,
                 self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
             )
             self.description = None
             self.plaintext = None
@@ -553,7 +591,11 @@ class HardwareSoftwareMetaClass(
         try:
             self.stats = Statistics(html)
         except AttributeError:
-            LOGGER.info("Entity '%s' has no stats (idk why, ask moddb)", self.name)
+            LOGGER.info(
+                "Entity '%s' has no stats (idk why, ask moddb)",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.stats = None
 
         try:
@@ -562,7 +604,12 @@ class HardwareSoftwareMetaClass(
             )
         except AttributeError:
             self.rating = 0.0
-            LOGGER.info("'%s' '%s' is not rated", self.profile.category.name, self.name)
+            LOGGER.info(
+                "'%s' '%s' is not rated",
+                self.profile.category.name,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         try:
             self._review_hash = html.find("form", class_="ratingform").find(
@@ -593,6 +640,7 @@ class HardwareSoftwareMetaClass(
                 "'%s' '%s' has no article suggestions",
                 self.profile.category.name,
                 self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
             )
             self.articles = []
 
@@ -615,7 +663,9 @@ class HardwareSoftwareMetaClass(
             ]
         except AttributeError:
             self.tags = []
-            LOGGER.info("Hardware '%s' has no tags", self.name)
+            LOGGER.info(
+                "Hardware '%s' has no tags", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
 
         self.medias = self._get_media(1, html=html)
 
@@ -629,4 +679,9 @@ class HardwareSoftwareMetaClass(
                 for x in suggestions
             ]
         except AttributeError:
-            LOGGER.info("'%s' '%s' has no suggestions", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' has no suggestions",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )

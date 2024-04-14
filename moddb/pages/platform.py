@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 from typing import TYPE_CHECKING
 
 from ..boxes import PlatformStatistics, Thumbnail
@@ -94,7 +95,9 @@ class Platform(
                 name=company.string, url=company["href"], type=ThumbnailType.team
             )
         except AttributeError:
-            LOGGER.info("Platform '%s' has no company", self.name)
+            LOGGER.info(
+                "Platform '%s' has no company", self.name, exc_info=LOGGER.level >= logging.DEBUG
+            )
             self.company = None
 
         self.homepage = html.find("h5", string="Homepage").parent.span.a["href"]
@@ -112,7 +115,11 @@ class Platform(
                 "facebook": share[3]["href"],
             }
         except (AttributeError, IndexError):
-            LOGGER.info("Something funky about share box of platform '%s'", self.name)
+            LOGGER.info(
+                "Something funky about share box of platform '%s'",
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
             self.share = None
 
         self.comments = self._get_comments(html)

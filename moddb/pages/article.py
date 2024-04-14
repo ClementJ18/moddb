@@ -1,3 +1,5 @@
+import logging
+
 import bs4
 
 from ..boxes import PartialTag, Profile, Thumbnail
@@ -94,7 +96,7 @@ class Article(BaseMetaClass):
         try:
             self.profile = Profile(html)
         except AttributeError:
-            LOGGER.info("'%s' has no profile", self.name)
+            LOGGER.info("'%s' has no profile", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.profile = None
 
         try:
@@ -106,7 +108,12 @@ class Article(BaseMetaClass):
             ]
         except AttributeError:
             self.tags = []
-            LOGGER.info("'%s' '%s' has no tags", self.__class__.__name__, self.name)
+            LOGGER.info(
+                "'%s' '%s' has no tags",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
         views_raw = raw.find("h5", string="Views").parent.span.a.string
         self.views, self.today = get_views(views_raw)
