@@ -11,4 +11,5 @@ def vcr_config():
         "filter_headers": ["User-Agent", "Cookie"],
         "filter_query_parameters": ["password", "username"],
         "filter_post_data_parameters": ["password", "username"],
+        "decode_compressed_response": True
     }

@@ -162,7 +162,7 @@ member_urls = [
 ]
 
 platform_urls = [
-    "https://www.moddb.com/platforms/pc",
+    "https://www.moddb.com/platforms/windows",
     "https://www.moddb.com/platforms/mac",
     "https://www.moddb.com/platforms/linux",
     "https://www.moddb.com/platforms/vr",
