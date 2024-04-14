@@ -1149,8 +1149,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2FIeJqVdmn4KFtCN5FOYSFmuSB%2BzDF628P4aDBpaVpmCKlvjoP0%2Bz9EMmtqGUKcMLrjHgmt5le2AKjRkIVucchBey6eE0pgnP9H2SopYpzRaWmCzuvm9Uw5xwc96KAUv0ADQuzn2XGSK%2BhKs%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -1686,8 +1684,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4s3Jp%2FlXQiG0dn5G5LREGqn0e3qbfRWpxxf59A8JIp3DGRJgIR5IqAy%2BAyqgrCDeMKnhOL8uHn4jAIoXqjZ1a09w6BFolW%2FBDzUY1RW58Hvk%2BUOnLAC2fpFf%2FhnDn5TSW6DFVlNaU46G9eY%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -2223,8 +2219,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=fQ5uagvEd7iBJr3xwuqGKF9XZuEdM53S4nTUOzwqXTtY2Mu7RIiNBK2kZsA8WN2jrTdbFuO7nw2hZV5BdFIwJA5AXSInYNld7gijqpKkX5AI6x6As65BXJ95oS7BJUYPv2IgG5Ia8jbU5GM%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -2704,8 +2698,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=6wk%2Fhd04%2FqAGfgU8uYchNXEKJ1l1ONlyydmQMB95OZAXDJHckXTdoDplPb%2B%2FcHduXRv%2FEUb7ekRWz3c37o%2BVQXvkkT2rEDxlHno4CL9YrBWC6zpu7C7WMO7GCHYJmgjFUyp94nV4CINyw1Y%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -5192,8 +5184,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2B4nr8X9EqRVSgWjRhrGu72GtZg6IIagbyvZkLQ%2Fz4Y2ql1G6om%2BFOEyASMuB05DNUy7MycLU%2BFkv6xEXI3upNIdKjgq2hkvgIZpiOyvAuvlGFVkRpKfq6yK7atWj%2FHWywvTbhUKg4B6nZTg%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -5747,8 +5737,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=nG6%2BVplZrbuEm0o%2FEaMswfCwBHwqIyfOdP3E967kWD3I3EQ3UAJkBbIkMi4j3NdV2rRFG11dlb1C3oOk7IrnESDD9%2B5Pp1d15aZheZ2QCAIZScZp%2B27tEcZTj5%2Bu2tuwtcXRFLKjB05VG%2F0%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -5757,6 +5745,1328 @@ interactions:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=cb80516a5578134cf7f1abdedb3dfb65; expires=Sun, 14-Apr-2024 11:20:03
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/games/cc-generals-zero-hour/tutorials/adding-objects1
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Adding
+        Objects tutorial - C&#038;C: Generals Zero Hour - ModDB</title>\r\n\t<meta
+        charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\" content=\"cc generals
+        zero hour, adding objects, articles, information, data, gossip, feature, read,
+        view, discuss\" />\r\n\t<meta name=\"description\" content=\"In this tutorial:
+        We cover how to add players, buildings, etc. and improvements for maps.\"
+        />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta
+        property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\"
+        content=\"Adding Objects tutorial - C&#038;C: Generals Zero Hour\" />\r\n\t<meta
+        property=\"og:description\" content=\"In this tutorial: We cover how to add
+        players, buildings, etc. and improvements for maps.\" />\r\n\t<meta property=\"og:site_name\"
+        content=\"ModDB\" />\r\n\t<meta property=\"og:type\" content=\"article\" />
+        \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/adding-objects1\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/articles/1/323/322239/logo.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Adding Objects tutorial - C&#038;C: Generals Zero Hour\" />\r\n\t<meta
+        property=\"twitter:description\" content=\"In this tutorial: We cover how
+        to add players, buildings, etc. and improvements for maps.\" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/adding-objects1\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/articles/1/323/322239/logo.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/games/cc-generals-zero-hour/tutorials/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Adding Objects tutorial - C&#038;C: Generals
+        Zero Hour feed\" />\t<script src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"Electronic
+        Arts\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single Player\",\"Multiplayer\",\"Military\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Blockbuster\",\"Strategy\"],\"name\":
+        \"C&C: Generals Zero Hour\",\"platforms\":[\"PC\",\"Windows\"]}],\r\n\t\t\t\"article\":{\"date_published\":\"2024-01-01T01:09:00+01:00\",\"author\":\"ns-mars\",\"type\":\"Guide\"},\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1066</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Adding Objects tutorial - C&#038;C: Generals
+        Zero Hour</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n
+        \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabtutorials\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/games/1/1/184/tpbnr_ee.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<a
+        href=\"#rtxremix\" class=\"togglertxinfo\"><img src=\"https://static.moddb.com/html/cutoff/images/rtx/remix_compatible.png\"
+        alt=\"RTX Remix Compatible\" style=\"float: right; height: 47px; padding-top:
+        10px;\"></a>\r\n\t\t\t\t \r\n\t\t\t\t<h2><a href=\"/games/cc-generals-zero-hour\">C&#038;C:
+        Generals Zero Hour</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a href=\"/company/electronic-arts\">Electronic
+        Arts</a> | <time datetime=\"2003-09-25\">Released 2003</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"firsttab\"><a href=\"/games/cc-generals-zero-hour\">summary</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/articles\">articles</a></li><li
+        class=\"on\"><a href=\"/games/cc-generals-zero-hour/tutorials\">tutorials</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/reviews\">reviews</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/downloads\">files</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/addons\">addons</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/mods\">mods</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/videos\">videos</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>Prepare
+        to unleash the absolute latest in modern weapons technology against the world's
+        most powerful Generals in Command &#038; Conquer Generals: Zero Hour. In the
+        next era of military strategy and might, you'll need to command a more technologically
+        advanced arsenal to defeat new, more powerful enemies.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabtutorials\"><article itemscope itemtype=\"https://schema.org/TechArticle\">\r\n\t\t\t\t\t<meta
+        itemscope itemprop=\"mainEntityOfPage\"  itemtype=\"https://schema.org/WebPage\"
+        itemid=\"https://www.moddb.com/tutorials/adding-objects1\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"dateModified\" content=\"2024-01-01T12:30:14+0000\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"image\" content=\"https://media.moddb.com/images/articles/1/323/322239/logo.png\"
+        />\r\n\t\t\t\t\t<div itemprop=\"publisher\" itemscope itemtype=\"https://schema.org/Organization\">\r\n\t\t\t\t\t\t<meta
+        itemprop=\"name\" content=\"ModDB\" />\r\n\t\t\t\t\t\t<div itemprop=\"logo\"
+        itemscope itemtype=\"https://schema.org/ImageObject\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"url\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"width\" content=\"120\">\r\n\t\t\t\t\t\t\t<meta itemprop=\"height\"
+        content=\"60\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\t<div class=\"normalbox\"
+        id=\"readarticle\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=322239\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"https://rss.moddb.com/games/cc-generals-zero-hour/tutorials/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\" itemprop=\"headline\">Adding Objects</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodyarticle clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t<p
+        class=\"introductiontext\" itemprop=\"description\">In this tutorial: We cover
+        how to add players, buildings, etc. and improvements for maps.</p>\r\n\t\t\t\t\t\t\t\t<p
+        class=\"introduction\">\r\n\t\t\t\t\tPosted by <span itemprop=\"author\" itemscope
+        itemtype=\"https://schema.org/Person\"><span itemprop=\"name\"><a href=\"/members/btez\"
+        itemprop=\"url\">ns-mars</a></span></span> on <time datetime=\"2024-01-01\"
+        itemprop=\"datePublished\">Jan 1st, 2024</time> - <span itemprop=\"proficiencyLevel\">Intermediate</span>
+        Mapping/Technical \t\t\t\t</p>\r\n\t\t\t\t<div id=\"articlecontent\" itemprop=\"articleBody\"><p>First
+        start by going to <strong>EDIT-&gt;PLAYER LIST, </strong>then click <strong>ADD
+        SKIRMISH PLAYERS</strong>.</p>\n<p>This (1) enables skirmish computer players
+        on your map (easy, medium, hard enemies) and (2) added all the players to
+        your map so you don't have to manually do so every time you place a building.</p>\n<p>Now
+        that we have done that, we can add buildings. Use the <img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/objecttool.jpg\"
+        alt=\"Object Tool Icon\" width=\"18\" height=\"17\" /> object tool to get
+        the list of objects in your object property box.</p>\n<p>You should see this
+        window:</p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.moddb.com/images/articles/1/323/322239/auto/4-objectselectionopt.jpg\"
+        alt=\"Object Selection Opts Window\" width=\"333\" height=\"456\" /></p>\n<p><br
+        /></p>\n</div>\n<p>We'll start by clicking the <img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/4-civilianbutton.jpg\"
+        alt=\"Civilian\" width=\"53\" height=\"16\" /> button, then the <img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/4-structurebutton.jpg\"
+        alt=\"Structure\" width=\"79\" height=\"17\" /> button to get to civilian
+        buildings/structures.</p>\n<p>Scroll down until you see this:</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/112314-objectselectionopt.jpg\"
+        alt=\"SupplyDock, SupplyPile, SupplyPileSmall, SupplyWarehouse, ...\" width=\"320\"
+        height=\"217\" /></p>\n<p><br /></p>\n</div>\n<p>As you can see, we have all
+        the most important structures in one convenient list. We'll start with the
+        <em>supply dock</em>: put one near your first person's base area. Don't worry
+        if it looks like there are no supplies inside your supply dock: this is because
+        we can change how much supplies there are by using <strong>scripts</strong>.
+        But since this is your first map, we'll leave it at the default amount. When
+        you start up the game it will have all the supplies in it, so continue to
+        put supply docks at the places you want.</p>\n<ul>\n<li>Average Money: 2 supply
+        docks - and maybe an oil derrick - per person</li>\n<li>Wealthy: 2-3 supply
+        docks, a couple of supply piles, and 2-3 oil derricks per person. (Any more
+        than this will make a laggy, hours long game that won't be fun to play again
+        and again.)</li>\n</ul>\n<p>If you want to make your map look like a city
+        map, I recommend using supply warehouses. They're a bit slower to get cash
+        from and have a little less cash though, so unless you're making a city map/old
+        country map, I don't recommend you use them.</p>\n<p>If you want to put individual
+        supply piles on the map (~3000 dollars each), use the <strong>SupplyPileSmall</strong>
+        option, not the <strong>SupplyPile</strong> option.</p>\n<p>You may also want
+        to add artillery platforms and oil refineries and such. But be advised that
+        creating too many of these civilian buildings will likely lead to the player
+        who didn't blow all their cash on infantry to capture them winning early in
+        the game. Also, don't just give each player their own tech buildings inside
+        their base; make them leave and work for them. This makes the map more interesting.</p>\n<p>If
+        you want to add bunkers (the most popular garrison-able building), look for
+        <em>civilian bunker01</em> in the list. Don't put too many of them on the
+        map - just a couple per player. The thing that's so popular about bunkers
+        is the fact that you can put them slightly off a cliff to make its range a
+        bit longer against the units below.</p>\n<p><em>Note that tech artillery platforms
+        will not willingly attack units lower than them (i.e. if it&rsquo;s on a cliff)</em>.</p>\n<p><em>Also
+        note that if you place faction buildings (i.e. American command center) on
+        the map, they won't be transferred to the computer automatically.</em></p>\n<hr
+        />\n<p><strong>&raquo; Giving Your Map a Makeover</strong></p>\n<p>The thing
+        that takes the longest time when making maps is making it look good, so that
+        people who play it won't think it was made by an idiot. One way to do this
+        is to add roads/bridge with the <img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/roadtool.jpg\"
+        alt=\"Road Tool Icon\" width=\"20\" height=\"18\" /> road tool. Roads are
+        used in between buildings to make the map look more like it has a real town,
+        or to show a pathway from a player to the enemy's base that they might have
+        overlooked. When placing a road, you might notice it auto-links together.
+        You can make the road a broad curve, tight curve, or angled curve. I recommend
+        using broad curve (default) for most things, but sometimes tight curves look
+        better if your road turns a lot.</p>\n<p>To make the road look real, have
+        it change a direction (just a little bit) every couple inches on your computer
+        screen.</p>\n<p>Another way to make your map look good is to use the <img
+        src=\"https://media.moddb.com/images/articles/1/323/322239/auto/treetool.jpg\"
+        alt=\"Tree Tool Icon\" width=\"14\" height=\"19\" /> tree/shrubbery tool.
+        This tool is used to put trees and bushes on your map. Note: some trees might
+        appear invisible: delete these and try another type.</p>\n<p>If you're going
+        for the old worn-out look, you can use the road tool to make cracks in it.
+        You can also use the <img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/smudgetool.jpg\"
+        alt=\"Smudge Tool Icon\" width=\"20\" height=\"18\" /> smudge tool to make
+        burn marks on the ground.</p>\n<p>If you're making a city map, most likely
+        you're going to make a fence somewhere or another. Use the <img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/fencetool.jpg\"
+        alt=\"Fence Tool Icon\" width=\"16\" height=\"18\" /> fence tool to make fences
+        in a straight line, instead of placing each piece of fence by hand.</p>\n<p>If
+        you've ever noticed that when you blended some tiles together they still doesn't
+        look right, you can use the <img src=\"https://media.moddb.com/images/articles/1/323/322239/auto/blendtool.jpg\"
+        alt=\"\" width=\"18\" height=\"18\" /> blend single tile tool to fix it. This
+        works the same as the auto edge out tool, but it's for single tiles.</p>\n<p><em>CnC
+        Labs</em></p></div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</article><div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!gamer.network,1013459,1&kv_1=article,guide,developer,single-player,multiplayer,historical,military,blockbuster,strategy,pc,windows&kv_2=cc-generals-zero-hour\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"8689830\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/elixr1\" title=\"elixr1\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4617/4616647/main2.png\"
+        alt=\"elixr1\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/elixr1\" class=\"author\" data-nameid=\"elixr1\">elixr1</a>
+        \ - <a href=\"#8689830\" style=\"color: inherit;\"><time datetime=\"2024-01-01T18:10:11+00:00\">Jan
+        1 2024</time></a> - 149 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>As a senior Map Maker, I confirm
+        this is all true since that the players who never opened WorldBuilder and
+        played a very bad map won't notice or know that the map was created by map
+        starter(or we should say \"An Idiot\";) and I was just like that no matter
+        what the map is good/bad IDC.<br />\nAlso when you put the roads you can create
+        roads by textures too:) yeah this is possible you don't really need roads
+        but this is your choice after all.:)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8689830\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8689830\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8689830\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/adding-objects1/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"1f4625fc8048dacc14783eaae4a57408\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabtutorials\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"gamesinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=184\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=games&amp;siteareaid=184\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/games/1/1/184/icon.gif\"
+        alt=\"C&#038;C: Generals Zero Hour\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/windows\" title=\"Windows\">Windows</a>,
+        <a href=\"/platforms/rtx\" title=\"RTX Remix\">RTX</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer &amp; Publisher</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/electronic-arts\">Electronic
+        Arts</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engine</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/sage-strategy-action-game-engine\">SAGE
+        (Strategy Action Game Engine)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=gamesgroup54\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.ea.com/official/cc/generals/us/zerohour_feature.jsp\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Ea.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2003-09-25\">Released 2003</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Game watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=184\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLearn
+        more about this <a href=\"/games/cc-generals-zero-hour#rtxremix\">games compatiblity
+        with RTX Remix</a> and ModDB's collaboration with the Remix community to organize
+        all compatible games. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"articlesprofilemenu\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tutorial</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/cc-generals-zero-hour/tutorials\">Tutorials</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=322239\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Views</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/statistics/data/visit/articles/322239\"
+        rel=\"iframe=true;innerHeight=525;innerWidth=830\" class=\"thickbox\" title=\"Adding
+        Objects Statistics\">445 (3 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fadding-objects1&title=Adding+Objects+tutorial+-+C%26C%3A+Generals+Zero+Hour\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Adding%20Objects%20tutorial%20-%20C%26C%3A%20Generals%20Zero%20Hour&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fadding-objects1\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Adding+Objects+tutorial+-+C%26C%3A+Generals+Zero+Hour+https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fadding-objects1+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fadding-objects1&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fadding-objects1&quote=Adding+Objects+tutorial+-+C%26C%3A+Generals+Zero+Hour&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fadding-objects1\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinksgames\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Games</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/cc-generals-zero-hour\" title=\"C&#038;C: Generals Zero Hour\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/184/crop_120x90/preview.jpg\"
+        alt=\"C&#038;C: Generals Zero Hour\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/cc-generals-zero-hour\" class=\"heading\">C&#038;C: Generals
+        Zero Hour</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tReal
+        Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksengines\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Engines</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/engines/sage-strategy-action-game-engine\" title=\"SAGE (Strategy
+        Action Game Engine)\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/36/crop_120x90/Angmar_Fortress_.jpg\"
+        alt=\"SAGE (Strategy Action Game Engine)\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/engines/sage-strategy-action-game-engine\"
+        class=\"heading\">SAGE (Strategy Action Game Engine)</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tProprietary <time datetime=\"2001-06-14\">Released
+        2001</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksgroups\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Groups</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/company/electronic-arts\" title=\"Electronic Arts\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/groups/1/1/54/crop_120x90/ea.jpg\"
+        alt=\"Electronic Arts\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/company/electronic-arts\" class=\"heading\">Electronic Arts</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tDeveloper &amp; Publisher  with 9 members
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/worldbuilder\"
+        title=\"World Builder\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/41/40930/crop_120x90/logo.png\"
+        alt=\"World Builder\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/worldbuilder\" class=\"heading\">World Builder</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEducational  with 33 members \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">7745 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/cc-generals-zero-hour\",\"name\":\"C&C:
+        Generals Zero Hour\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials\",\"name\":\"Tutorials\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/adding-objects1\",\"name\":\"Adding
+        Objects\",\"image\":\"https://media.moddb.com/images/articles/1/323/322239/logo.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\ttags:
+        [\"article\",\"guide\",\"developer\",\"single-player\",\"multiplayer\",\"historical\",\"military\",\"blockbuster\",\"strategy\",\"pc\",\"windows\"],\r\n\t\t\t\t\t\tgames:
+        [\"cc-generals-zero-hour\"],\r\n\t\t\t\t\t\tplayers: [\"single\",\"multi\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1713108820\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1713108820\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\tif(localStorage.getItem(\"rtxtoggled\")
+        || window.location.hash == \"#rtxremix\" || document.referrer.match(/rtx/i))
+        { $(\"#rtxremix\").show(); }\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8744c16d7a0065f7-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 14 Apr 2024 15:33:40 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4R59bnH2gjJzpKbP56FRixUnSKjyKDwHnw%2FiZriNEWwdv%2FAbmBrkATr3UvewIub%2F0U1MIuDSl%2FoLIln3Zva3612J7W3x8mVZmv%2FgE%2Fp2KI8Hvp5L%2BQxb0n1VsGl4A%2FhtEVv%2BWBehGG3AOe0%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '47805'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=74cb88c879e8d488f4b69f34522ca31e; expires=Sun, 14-Apr-2024 15:43:40
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=74cb88c879e8d488f4b69f34522ca31e; expires=Sun, 14-Apr-2024 15:43:40
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/games/cc-generals-zero-hour/tutorials/editing-terrain
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Editing
+        Terrain tutorial - C&#038;C: Generals Zero Hour - ModDB</title>\r\n\t<meta
+        charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\" content=\"cc generals
+        zero hour, editing terrain, articles, information, data, gossip, feature,
+        read, view, discuss\" />\r\n\t<meta name=\"description\" content=\"Learn how
+        to make terrain on your map. This tutorial covers textures, mountains, water,
+        and cliffs.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Editing Terrain tutorial - C&#038;C: Generals
+        Zero Hour\" />\r\n\t<meta property=\"og:description\" content=\"Learn how
+        to make terrain on your map. This tutorial covers textures, mountains, water,
+        and cliffs.\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\" />\r\n\t<meta
+        property=\"og:type\" content=\"article\" /> \r\n\t<meta property=\"og:url\"
+        content=\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/editing-terrain\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/articles/1/320/319384/logo.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Editing Terrain tutorial - C&#038;C: Generals Zero Hour\" />\r\n\t<meta
+        property=\"twitter:description\" content=\"Learn how to make terrain on your
+        map. This tutorial covers textures, mountains, water, and cliffs.\" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/editing-terrain\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/articles/1/320/319384/logo.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/games/cc-generals-zero-hour/tutorials/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Editing Terrain tutorial - C&#038;C:
+        Generals Zero Hour feed\" />\t<script src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"Electronic
+        Arts\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single Player\",\"Multiplayer\",\"Military\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Blockbuster\",\"Strategy\"],\"name\":
+        \"C&C: Generals Zero Hour\",\"platforms\":[\"PC\",\"Windows\"]}],\r\n\t\t\t\"article\":{\"date_published\":\"2023-09-12T18:51:03+02:00\",\"author\":\"ns-mars\",\"type\":\"Guide\"},\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1069</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Editing Terrain tutorial - C&#038;C: Generals
+        Zero Hour</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n
+        \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabtutorials\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/games/1/1/184/tpbnr_ee.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<a
+        href=\"#rtxremix\" class=\"togglertxinfo\"><img src=\"https://static.moddb.com/html/cutoff/images/rtx/remix_compatible.png\"
+        alt=\"RTX Remix Compatible\" style=\"float: right; height: 47px; padding-top:
+        10px;\"></a>\r\n\t\t\t\t \r\n\t\t\t\t<h2><a href=\"/games/cc-generals-zero-hour\">C&#038;C:
+        Generals Zero Hour</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a href=\"/company/electronic-arts\">Electronic
+        Arts</a> | <time datetime=\"2003-09-25\">Released 2003</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"firsttab\"><a href=\"/games/cc-generals-zero-hour\">summary</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/articles\">articles</a></li><li
+        class=\"on\"><a href=\"/games/cc-generals-zero-hour/tutorials\">tutorials</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/reviews\">reviews</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/downloads\">files</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/addons\">addons</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/mods\">mods</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/videos\">videos</a></li><li
+        class=\"\"><a href=\"/games/cc-generals-zero-hour/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>Prepare
+        to unleash the absolute latest in modern weapons technology against the world's
+        most powerful Generals in Command &#038; Conquer Generals: Zero Hour. In the
+        next era of military strategy and might, you'll need to command a more technologically
+        advanced arsenal to defeat new, more powerful enemies.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabtutorials\"><article itemscope itemtype=\"https://schema.org/TechArticle\">\r\n\t\t\t\t\t<meta
+        itemscope itemprop=\"mainEntityOfPage\"  itemtype=\"https://schema.org/WebPage\"
+        itemid=\"https://www.moddb.com/tutorials/editing-terrain\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"dateModified\" content=\"2023-09-12T19:50:43+0000\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"image\" content=\"https://media.moddb.com/images/articles/1/320/319384/logo.png\"
+        />\r\n\t\t\t\t\t<div itemprop=\"publisher\" itemscope itemtype=\"https://schema.org/Organization\">\r\n\t\t\t\t\t\t<meta
+        itemprop=\"name\" content=\"ModDB\" />\r\n\t\t\t\t\t\t<div itemprop=\"logo\"
+        itemscope itemtype=\"https://schema.org/ImageObject\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"url\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"width\" content=\"120\">\r\n\t\t\t\t\t\t\t<meta itemprop=\"height\"
+        content=\"60\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\t<div class=\"normalbox\"
+        id=\"readarticle\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=319384\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"https://rss.moddb.com/games/cc-generals-zero-hour/tutorials/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\" itemprop=\"headline\">Editing Terrain</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodyarticle clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t<p
+        class=\"introductiontext\" itemprop=\"description\">Learn how to make terrain
+        on your map. This tutorial covers textures, mountains, water, and cliffs.</p>\r\n\t\t\t\t\t\t\t\t<p
+        class=\"introduction\">\r\n\t\t\t\t\tPosted by <span itemprop=\"author\" itemscope
+        itemtype=\"https://schema.org/Person\"><span itemprop=\"name\"><a href=\"/members/btez\"
+        itemprop=\"url\">ns-mars</a></span></span> on <time datetime=\"2023-09-12T16:51:03+00:00\"
+        itemprop=\"datePublished\">Sep 12th, 2023</time> - <span itemprop=\"proficiencyLevel\">Intermediate</span>
+        Mapping/Technical \t\t\t\t</p>\r\n\t\t\t\t<div id=\"articlecontent\" itemprop=\"articleBody\"><p>We'll
+        start off by putting a nice looking texture on the ground.</p>\n<p>World Builder
+        always starts you out with that ugly gray ground that you see. Go to your
+        <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/paintspilltool.jpg\"
+        alt=\"Paint Spill Tool\" width=\"21\" height=\"19\" /> <strong>paint spill</strong>
+        tool and pick a terrain inside of your <strong>object property box</strong>.
+        You will see a number of choices, but to start, click the <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-fieldbutton.jpg\"
+        alt=\"Field\" width=\"46\" height=\"17\" /> button and then click <strong>2%grassmediumtype3
+        </strong>and spill it on the ground. Everything should now look like this:</p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-grassterrain.jpg\"
+        alt=\"\" width=\"446\" height=\"278\" /></p>\n<p><br /></p>\n</div>\n<p>Making
+        Mountains with World Builder</p>\n<p>Now use the <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/moundtool.jpg\"
+        alt=\"Mound Tool Icon\" width=\"19\" height=\"18\" /> mound tool to create
+        some mountains. In your <strong>object property box</strong>, click Brush
+        Width: 5, Brusher Feather Width: 3, Amount to raise/lower: anywhere between
+        15 and 25 is fine for now (I usually use 25 for mountains). Note that the
+        highest height is 316 (very tall).</p>\n<p>While we're doing this, be sure
+        to turn on show impassible areas in the view menu (CTRL+I).</p>\n<p>The trick
+        to making realistic mountains is A: texture, B: how misshaped and unsymmetrical
+        it looks. I&rsquo;ll show you how easy it is to make good looking mountains.
+        Try to follow along as close as you can, or create your own style.</p>\n<p>First
+        lay down texture using the <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/largetiletool.jpg\"
+        alt=\"Large Tile Tool Icon\" width=\"18\" height=\"18\" /> large tile tool
+        like so (I used desert2 &gt; 11%clifflargetype12):</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen01.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Then
+        use the <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/autoedgetool.jpg\"
+        alt=\"Auto Edge Tool Icon\" width=\"18\" height=\"16\" /> auto edge out tool
+        (click and hold at the new texture, letting go when at the other texture)
+        and blend the tiles to make it more realistic looking. This is what you get:</p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen02.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Now,
+        use the mound tool to make some mountains (note that you can hold down the
+        mouse to use this tool, instead of repeatedly clicking).</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen03.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /> <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen04.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen05.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /> <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen06.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Be
+        sure to fill in the gaps in the middle...</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen07.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /> <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen08.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>You
+        can then press CTRL+I to see what it looks like inside the game:</p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen09.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /> <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/2-screen10.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Note:
+        A little grass on the mountain is alright. In fact, I think it makes it look
+        like the mountain has some natural moss on it.</p>\n<hr />\n<p><strong>&raquo;
+        Adding Water</strong></p>\n<p>Now, you might have noticed a blue area around
+        your map if you zoomed out far, or if you went to the edges of your map. That
+        blue area is the default water area. However, you can delete this using the
+        Delete (not backspace) button. Note that the same holds for all objects/waypoints/areas/etc.
+        The default water area is set to a height of 7. However, if you dig your land
+        to below 16, it will go into the water. This makes it confusing because the
+        terrain height and the water height are using different measurement systems.</p>\n<p>Create
+        a pool of water using the dig tool, similar to the example below:</p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/3-screen01.jpg\"
+        alt=\"\" width=\"554\" height=\"430\" /></p>\n<p><br /></p>\n</div>\n<p>That
+        is one way to make a simple pool of water. You can also make water on top
+        of a mountain, as seen in Tournament Desert. To do this, click the <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/watertool.jpg\"
+        alt=\"Water Tool Icon\" width=\"22\" height=\"16\" /> water tool and click
+        on the map about 5 times (note: you cannot zoom in/out or move the camera
+        at all while you are putting down water, for some reason). Then make a flat
+        mountain by using the mound tool and using these settings:</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/3-terrainbrushoption.jpg\"
+        alt=\"Terrain Brush Options Settings - Brush width: Size in cells: 20; Brush
+        Feather Width: Size in cells: 2; Brush Height: Amount to raise/lower: 100\"
+        width=\"332\" height=\"245\" /></p>\n<p><br /></p>\n</div>\n<p>Then move/place
+        your water handles (the little blue square things) on the cliff, like so:</p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/3-screen02.jpg\"
+        alt=\"\" width=\"458\" height=\"342\" /></p>\n<p><br /></p>\n</div>\n<p>Next,
+        dig a small hole (about 25 feet) into the middle of it.</p>\n<p>Then use the
+        object property box to raise the height of the water, like so:</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/3-screen03.jpg\"
+        alt=\"\" width=\"521\" height=\"314\" /></p>\n<p><br /></p>\n</div>\n<p>You
+        can then use your cliff skills to make it look a bit more natural:</p>\n<p><img
+        src=\"https://media.moddb.com/images/articles/1/320/319384/auto/3-screen04.jpg\"
+        alt=\"\" width=\"614\" height=\"442\" /></p>\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/3-screen05.jpg\"
+        alt=\"\" width=\"614\" height=\"442\" /></p>\n<p>If you are unsure how that
+        was just done, you should go back to the second lesson.</p>\n<p>Your map doesn't
+        have to look exactly like my sample one. In fact, I encourage you to just
+        \"go with it\" if you make a mistake. It doesn't have to be perfect, especially
+        since it's your first map. Now let's move on...</p>\n<hr />\n<p><strong>&raquo;
+        Some Mapmaking Tips</strong></p>\n<p>First of all, you should have some plan
+        for what you are doing before opening up World Builder. For each map, you
+        should start by drawing or opening up Paint (comes standard with Windows)
+        and just painting what you want it to look like.</p>\n<p>After you've taken
+        a few minutes to decide what the basis of your map is, now it's time to open
+        up World Builder.</p>\n<p>Pick your terrain/texture type from the spill paint
+        tool, and choose the one you'd like inside the object property box.</p>\n<p>For
+        this example I used the 2% grass medium type 3:</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-grassterrain3.jpg\"
+        alt=\"Grass Terrain\" width=\"163\" height=\"122\" /></p>\n<p><br /></p>\n</div>\n<p>I'd
+        start out by, not using the dig/mound tool, but by marking every section by
+        placing areas with the <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/polygontool.jpg\"
+        alt=\"Polygon/Area Tool Icon\" width=\"22\" height=\"18\" /> polygon/area
+        tool. Areas can be used to remind you where you want your mountains.</p>\n<p>Here's
+        what I did: (I put a mountain-looking texture on the areas I wanted mountains
+        as a reminder; <em>note: unlike the water tool, you can zoom in/out and move
+        the camera during the placement of areas</em>)</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen01.jpg\"
+        alt=\"First Example\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Note
+        that the simplest of ideas are usually the most enjoyable.</p>\n<p>You've
+        probably noticed that I went outside of the areas with the mountain texture.
+        That's because it doesn't need to be exact for now. You just need to be able
+        to get an image in your head about what it's going to look like. This is probably
+        the fastest/easiest way to see what you need to do. Now all we have to do
+        is color in the lines (paint the mountains).</p>\n<p>This can take anywhere
+        between 5 minutes and 2 hours to do. But for this simple 1v1 map, it only
+        took me 18 minutes. Here's what I got:</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen02.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Now
+        we have to shape it up a bit to get rid of the excess mountain textures.</p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen03.jpg\"
+        alt=\"\" width=\"250\" height=\"230\" /></p>\n<p><br /></p>\n</div>\n<p>One
+        thing you'll most likely see is that you'll have a straight line of red (impassable),
+        but then you'll have a small hole that's not red (passable). What is passable/impassible
+        terrain?</p>\n<ul>\n<li>Passable: units can cross over it</li>\n<li>Impassable:
+        units cannot go on it (i.e. mountains, water). Anything that has an angle
+        over 89.99 degrees is impassible.</li>\n</ul>\n<p>We need to make the outside
+        mountains all impassible, otherwise when units come close they'll go onto
+        the mountains. To do this we need to use the mound tool a bit more, or we
+        can use the paint large area tool and check the \"Paint passable/impassible
+        terrain\" option, shown below:</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-terrainmaterialopt.jpg\"
+        alt=\"Terrain Material Options\" width=\"334\" height=\"573\" /></p>\n<p><br
+        /></p>\n</div>\n<p>Selecting the impassible option will make everywhere you
+        paint impassible. This works vice versa with painting passable terrain.</p>\n<p>You'll
+        notice that when you click the paint passable/impassible terrain option, the
+        dialog will look like this:</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/122524-terrainmaterialopt.jpg\"
+        alt=\"Terrain Material Options: Disabled\" width=\"330\" height=\"251\" /></p>\n<p><br
+        /></p>\n</div>\n<p><strong>This is normal.</strong></p>\n<p><br />Something
+        else you might consider doing is this:</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen04.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Having
+        a small opening inside a mountain by someone's base is good for people who
+        like to use Hero units or other sneak attacks. But the opening as shown above
+        stands out, so we want to elevate it a little:</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen05.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Now
+        use the paint tool to give it its own unique pattern color to stand out. Then
+        use paint passable/impassible areas to make it passable. (If World Builder
+        won't let you paint passable use the <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-ramptool.jpg\"
+        alt=\"Ramp Tool Icon\" width=\"23\" height=\"16\" /> ramp tool to level it
+        out.)</p>\n<p>To use the ramp tool simply click and hold on the places you
+        want the ramp. Then, inside the object property box, select how wide you want
+        it, and then click place ramp.</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen06.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /> <img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen07.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>Repeat
+        until it is all flat enough to move over...</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/320/319384/auto/4-screen08.jpg\"
+        alt=\"\" width=\"410\" height=\"295\" /></p>\n<p><br /></p>\n</div>\n<p>If
+        you have trouble making it flat, use a smaller width for the ramp.</p>\n<p><strong>A
+        few general tips on how to make terrain creation easier:</strong></p>\n<ul>\n<li>You
+        can go to View-&gt;Show impassible areas, or press Ctrl+I</li>\n<li>View-&gt;Show
+        from top down view</li>\n<li>View-&gt;Show map boundaries</li>\n<li>You can
+        hold down most tools when you use them [i.e. mound and paint tools] to cover
+        large areas.</li>\n<li>If you have a mountain near the border of the map,
+        make it a little outside the border to make it look more realistic in game.
+        This will make the mountain appear as though it continues on, instead of abruptly
+        ending.</li>\n<li>When using the mound tool, the greater the brush feather
+        width is, the more the \"mound\" will resemble a \"hill\".</li>\n<li>In the
+        object property box, when selecting water areas, you can transform it into
+        a river.</li>\n<li>Ctrl+Z = Undo: undo the last thing you did (very useful)</li>\n<li>Shift+Ctrl+Z
+        = Redo: used to undo whatever you just undid by mistake</li>\n</ul>\n<p><em>CnC
+        Labs</em></p></div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</article><div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!gamer.network,1013459,1&kv_1=article,guide,developer,single-player,multiplayer,historical,military,blockbuster,strategy,pc,windows&kv_2=cc-generals-zero-hour\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"8622646\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/lithtechguru\" title=\"LithTechGuru\" class=\"avatar\"><img
+        src=\"https://media.moddb.com/images/members/5/4014/4013508/u6.png\" alt=\"LithTechGuru\"
+        width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/lithtechguru\" class=\"author\" data-nameid=\"lithtechguru\">LithTechGuru</a>
+        \ - <a href=\"#8622646\" style=\"color: inherit;\"><time datetime=\"2023-09-12T20:33:21+00:00\">Sep
+        12 2023</time></a> - 399 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Is this a new tutorial or a reupload?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8622646\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8622646\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8622646\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">-1
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8640268\" class=\"row reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/elixr1\"
+        title=\"elixr1\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4617/4616647/main2.png\"
+        alt=\"elixr1\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/elixr1\" class=\"author\" data-nameid=\"elixr1\">elixr1</a>
+        \ - <a href=\"#8640268\" style=\"color: inherit;\"><time datetime=\"2023-10-14T08:44:09+00:00\">Oct
+        14 2023</time></a> - 149 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>New tutorial\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8640268\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8640268\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8640268\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8643980\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/elixr1\"
+        title=\"elixr1\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4617/4616647/main2.png\"
+        alt=\"elixr1\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/elixr1\" class=\"author\" data-nameid=\"elixr1\">elixr1</a>
+        \ - <a href=\"#8643980\" style=\"color: inherit;\"><time datetime=\"2023-10-20T12:47:18+00:00\">Oct
+        20 2023</time></a> - 149 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>thanks so much bro I was asking a
+        lot of how the map makers make mountain bases passable and how do they even
+        do the terriran, thank you so much for this it helped me lot I appericate
+        your work, I wish if I can make tutrial on how to make cinematics to help
+        the community but idk how, can you say how you make toturials like this, anyway
+        thanks so much:)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"8643980\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8643980\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8643980\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/editing-terrain/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"93a9bf0ddc2d2bec024d2ed991d58743\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabtutorials\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"gamesinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=184\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=games&amp;siteareaid=184\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/games/1/1/184/icon.gif\"
+        alt=\"C&#038;C: Generals Zero Hour\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/windows\" title=\"Windows\">Windows</a>,
+        <a href=\"/platforms/rtx\" title=\"RTX Remix\">RTX</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer &amp; Publisher</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/electronic-arts\">Electronic
+        Arts</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engine</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/sage-strategy-action-game-engine\">SAGE
+        (Strategy Action Game Engine)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=gamesgroup54\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.ea.com/official/cc/generals/us/zerohour_feature.jsp\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Ea.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2003-09-25\">Released 2003</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Game watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=184\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLearn
+        more about this <a href=\"/games/cc-generals-zero-hour#rtxremix\">games compatiblity
+        with RTX Remix</a> and ModDB's collaboration with the Remix community to organize
+        all compatible games. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"articlesprofilemenu\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tutorial</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/cc-generals-zero-hour/tutorials\">Tutorials</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=319384\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Views</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/statistics/data/visit/articles/319384\"
+        rel=\"iframe=true;innerHeight=525;innerWidth=830\" class=\"thickbox\" title=\"Editing
+        Terrain Statistics\">770 (3 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fediting-terrain&title=Editing+Terrain+tutorial+-+C%26C%3A+Generals+Zero+Hour\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Editing%20Terrain%20tutorial%20-%20C%26C%3A%20Generals%20Zero%20Hour&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fediting-terrain\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Editing+Terrain+tutorial+-+C%26C%3A+Generals+Zero+Hour+https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fediting-terrain+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fediting-terrain&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fediting-terrain&quote=Editing+Terrain+tutorial+-+C%26C%3A+Generals+Zero+Hour&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fcc-generals-zero-hour%2Ftutorials%2Fediting-terrain\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinksgames\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Games</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/cc-generals-zero-hour\" title=\"C&#038;C: Generals Zero Hour\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/1/184/crop_120x90/preview.jpg\"
+        alt=\"C&#038;C: Generals Zero Hour\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/cc-generals-zero-hour\" class=\"heading\">C&#038;C: Generals
+        Zero Hour</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tReal
+        Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksengines\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Engines</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/engines/sage-strategy-action-game-engine\" title=\"SAGE (Strategy
+        Action Game Engine)\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/engines/1/1/36/crop_120x90/Angmar_Fortress_.jpg\"
+        alt=\"SAGE (Strategy Action Game Engine)\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/engines/sage-strategy-action-game-engine\"
+        class=\"heading\">SAGE (Strategy Action Game Engine)</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tProprietary <time datetime=\"2001-06-14\">Released
+        2001</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksgroups\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Groups</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/groups/cc-generals-mapping-and-modding-community\" title=\"C&#038;C
+        Generals Mapping And Modding Community\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/26/25506/crop_120x90/Logo_For_Cnc.png\"
+        alt=\"C&#038;C Generals Mapping And Modding Community\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/groups/cc-generals-mapping-and-modding-community\"
+        class=\"heading\">C&#038;C Generals Mapping And Modding Community</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tWeb &amp; Community  with 8 members \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/company/electronic-arts\"
+        title=\"Electronic Arts\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/1/54/crop_120x90/ea.jpg\"
+        alt=\"Electronic Arts\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/company/electronic-arts\" class=\"heading\">Electronic Arts</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tDeveloper &amp; Publisher  with 9 members
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/groups/worldbuilder\"
+        title=\"World Builder\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/groups/1/41/40930/crop_120x90/logo.png\"
+        alt=\"World Builder\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/groups/worldbuilder\" class=\"heading\">World Builder</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tEducational  with 33 members \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">7166 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/cc-generals-zero-hour\",\"name\":\"C&C:
+        Generals Zero Hour\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials\",\"name\":\"Tutorials\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/games/cc-generals-zero-hour/tutorials/editing-terrain\",\"name\":\"Editing
+        Terrain\",\"image\":\"https://media.moddb.com/images/articles/1/320/319384/logo.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\ttags:
+        [\"article\",\"guide\",\"developer\",\"single-player\",\"multiplayer\",\"historical\",\"military\",\"blockbuster\",\"strategy\",\"pc\",\"windows\"],\r\n\t\t\t\t\t\tgames:
+        [\"cc-generals-zero-hour\"],\r\n\t\t\t\t\t\tplayers: [\"single\",\"multi\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1713112174\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1713112174\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\tif(localStorage.getItem(\"rtxtoggled\")
+        || window.location.hash == \"#rtxremix\" || document.referrer.match(/rtx/i))
+        { $(\"#rtxremix\").show(); }\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar
+        status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87451351fa481c82-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 14 Apr 2024 16:29:34 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4ijpnXsMIcbYH0XmYdhGo2hP5A5tZxFrneq9eflXTr7aW2fb5VKqS%2Fp4af3O47jORddLm%2B7Lt%2BTyRtJ9qwJsykh9DgkrqdM8Ufcf3aF930a55eAX2N3TquSOlx6X1knSLQjism1XJmYzpWg%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '59230'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=a8c01ba5920536d06f5f5d688499af28; expires=Sun, 14-Apr-2024 16:39:34
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=a8c01ba5920536d06f5f5d688499af28; expires=Sun, 14-Apr-2024 16:39:34
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

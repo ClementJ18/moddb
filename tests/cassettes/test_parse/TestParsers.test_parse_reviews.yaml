@@ -680,8 +680,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Du28dFz97es45azRzdMkm23UhJNa71kn38mj9e5A4jwXH25j%2BL4HIdiCbqzsUACTxLx%2FMpxWaWBiUAQ%2BW7cNtQclDnfLUKo5yHobHisS6znWaBu7OE1VmfR7JSVtJP%2Faqy1fYlGA8h3zpik%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -2351,8 +2349,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=GkPkdqdHttZyxUjRffX5gonqY7yp3tlhYALbhO9zpQPAl5VmL%2FUQ0Je8dwsIXAJLYvBvKLZV%2FaOLfhObMBIT4LGQQKoG28ZOttlB1CC1y1a8xHuC5BzPeBW%2FqPTdLXaDAu5BIzqgYCOhPRI%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -3696,8 +3692,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=dPBjGAgLgaQ3Ul1Kv%2BTEhjYSHLFtIVhErQv3TeU2%2BAJYMmw45hyif9UQykiQ%2Bm%2BxC1NVmRIElqeDsVwu%2BIbzMs%2FIV0mheBxbJMff2dx2yLDBxmFgvTDAEWGEfZfw1Od06iK5PHEIVjUST3g%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -4244,8 +4238,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=X1mRD0jYRHdBBekyJVdrgM9%2Ba1JmD0YGa4Xw1khFbWCObnywJ%2FrJ3HTSmlhv5T40gXp6n%2FN6rrMX3tNzGzxayzBTX8BbmghdVnTuZn97%2FD51YaVp7ODOmIAuvxQsR0yw5kRylC9SmitNG3k%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -4559,6 +4551,1052 @@ interactions:
       - masterchief=6152d1527462603303c37510f39b88db; expires=Sun, 14-Apr-2024 11:47:29
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       - masterchief=6152d1527462603303c37510f39b88db; expires=Sun, 14-Apr-2024 11:47:29
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/mods/third-age-total-war/reviews/page/1?filter=t
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Reviews
+        - Third Age - Total War mod for Medieval II: Total War: Kingdoms - ModDB</title>\r\n\t<meta
+        charset=\"utf-8\">\r\n\t<meta name=\"robots\" content=\"noindex\" /> \r\n\t<meta
+        name=\"keywords\" content=\"third age total war mod for medieval ii total
+        war kingdoms, browse, search, reviews, rating, rate, articles, discussion\"
+        />\r\n\t<meta name=\"description\" content=\"Browse Third Age - Total War
+        mod for Medieval II: Total War: Kingdoms reviews to see what users think.\"
+        />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\" />\r\n\t<meta
+        property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta property=\"og:title\"
+        content=\"Reviews - Third Age - Total War mod for Medieval II: Total War:
+        Kingdoms\" />\r\n\t<meta property=\"og:description\" content=\"Browse Third
+        Age - Total War mod for Medieval II: Total War: Kingdoms reviews to see what
+        users think.\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\" />\r\n\t
+        \r\n\t \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Reviews - Third Age - Total War mod for Medieval II: Total War:
+        Kingdoms\" />\r\n\t<meta property=\"twitter:description\" content=\"Browse
+        Third Age - Total War mod for Medieval II: Total War: Kingdoms reviews to
+        see what users think.\" />\r\n\t \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\"
+        media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/mods/third-age-total-war/reviews/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Reviews - Third Age - Total War mod for
+        Medieval II: Total War: Kingdoms feed\" />\t<script src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><link
+        rel=\"next\" href=\"/mods/third-age-total-war/reviews/page/2\" /><script async
+        src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single
+        Player\",\"Multiplayer\",\"Military\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Strategy\"],\"name\":
+        \"Medieval II: Total War: Kingdoms\",\"platforms\":[\"Windows\",\"PC\"]}],\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
+        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1069</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Reviews - Third Age - Total War mod for Medieval
+        II: Total War: Kingdoms</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB
+        Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a
+        href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New
+        this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/add\">add mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabreviews\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/mods/1/12/11169/thirdagetotalwarbannercrf3.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/mods/third-age-total-war\">Third Age - Total War</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/games/medieval-ii-total-war-kingdoms\">Medieval II: Total War: Kingdoms
+        mod</a> | <time datetime=\"2009-04-27\">Released 2009</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"firsttab\"><a href=\"/mods/third-age-total-war\">summary</a></li><li
+        class=\"\"><a href=\"/mods/third-age-total-war/articles\">articles</a></li><li
+        class=\"on\"><a href=\"/mods/third-age-total-war/reviews\">reviews</a></li><li
+        class=\"\"><a href=\"/mods/third-age-total-war/downloads\">files</a></li><li
+        class=\"\"><a href=\"/mods/third-age-total-war/videos\">videos</a></li><li
+        class=\"\"><a href=\"/mods/third-age-total-war/images\">images</a></li><li
+        class=\"\"><a href=\"/mods/third-age-total-war/forum\">forum</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>Third
+        Age - Total War is a total conversion for 'Medieval II: Total War - Kingdoms
+        Expansion' that brings you into the world of Middle-earth.\n</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabreviews\">\t<div class=\"normalbox browsebox\"
+        id=\"reviewsbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/mods/third-age-total-war/reviews/add/#reviewsform\"
+        class=\"addicon\"  title=\"Post review\">Post review</a> <a href=\"https://rss.moddb.com/mods/third-age-total-war/reviews/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Reviews &nbsp;(0 - 10 of 2,896)</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<form action=\"https://www.moddb.com/mods/third-age-total-war/reviews\"
+        name=\"filterform\" class=\"filter filterauto clear\" method=\"get\"><input
+        type=\"hidden\" name=\"filter\" value=\"t\" />\t\t\t\t<div class=\"buttons\">\r\n\t\t\t\t\t<input
+        type=\"submit\" name=\"\" value=\"Search\" alt=\"Search\"  /> \r\n\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews\" title=\"Reset your search\" class=\"reset\">Reset</a>\r\n\t\t\t\t</div>\r\n<input
+        type=\"search\" name=\"kw\" maxlength=\"50\" value=\"\" placeholder=\"Search\"
+        size=\"40\"  /> <select name=\"rating\">\n<option value=\"\" selected=\"selected\">Rating</option>\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select> </form><div class=\"table\">\r\n\t\t<div
+        class=\"row rowsort clear\">\r\n\t\t<div class=\"content\">\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t\t\t\t\t<a href=\"/mods/third-age-total-war/reviews?filter=t&sort=id-desc\"
+        >Posted</a>\r\n\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews?filter=t&sort=ratingalt-desc\" >Rating</a>\r\n\t\t\t\t\t\t\t\t|
+        <a href=\"/mods/third-age-total-war/reviews?filter=t&sort=memberipid-asc\"
+        >Author</a>\r\n\t\t\t\t\t\t\t\t| <a href=\"/mods/third-age-total-war/reviews?filter=t&sort=positive-desc\"
+        >Agree</a>\r\n\t\t\t\t\t\t\t\t| <a href=\"/mods/third-age-total-war/reviews?filter=t&sort=negative-desc\"
+        >Disagree</a>\r\n\t\t\t\t\t\t\t\t| <a href=\"/mods/third-age-total-war/reviews?filter=t&sort=best-asc\"
+        class=\"descicon\">Helpful</a>\r\n\t\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"row\" style=\"display: none;\"></div>\t\t\t<div class=\"row rowcontent
+        rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/x4vi3r\">X4VI3R
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-12-03T05:06:50+00:00\">Dec
+        3 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=205206\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (121)\">Agree (121)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=205206\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (11)\">Disagree (11)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>It's hard not to give this one a 10.<br />\nIt has almost
+        everything you'd want from a LOTR mod in M2TW, and much more.</p>\n<p>The
+        only criticisms that i could give: As for right now, it lacks some really
+        important plot parts from the earlier Third Age.<br />\nBut Sub-Campaigns
+        for each faction (or some) could definitely help on this subject.\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/tranceswe\">Tranceswe
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-11-26T11:02:33+00:00\">Nov
+        26 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=203021\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (70)\">Agree (70)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=203021\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (4)\">Disagree (4)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>One of the best mods to date, and without doubt the most well
+        made mod for M2TW\n</p>\n\t</div>\r\n\t\t\t<div class=\"row rowcontent rowrating
+        rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/nuvendil\">Nuvendil
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-12-27T04:27:11+00:00\">Dec
+        27 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=211370\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (60)\">Agree (60)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=211370\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (4)\">Disagree (4)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>Third Age:  Total War is an amazing mod.  The vissuals are
+        amazing, the gameplay is balanced and the upcoming custom settlements are
+        just stunning.  This mod easily trumps ALL other LOTR rts games and is a mod
+        that any Middle Earth fan should keep their eye on.\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/agentgb\">AgentGB
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-11-25T20:50:10+00:00\">Nov
+        25 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=202899\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (48)\">Agree (48)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=202899\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (4)\">Disagree (4)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>One of the most indepth mods ive played, well worth purchasing
+        Med2 just for this mod, a must for all LOTR fans\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/shooterrick\">shooterrick
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-11-17T15:51:48+00:00\">Nov
+        17 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=200015\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (54)\">Agree (54)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=200015\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (9)\">Disagree (9)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>This mod is best mod in ModDB!!!\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/venatordestroyer\">VenatorDestroyer
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-10-15T11:32:49+00:00\">Oct
+        15 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=167655\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (47)\">Agree (47)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=167655\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (8)\">Disagree (8)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>awesomest mod ever\n</p>\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/xlucidx\">xlucidx
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-11-29T05:21:17+00:00\">Nov
+        29 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=203966\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (42)\">Agree (42)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=203966\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (6)\">Disagree (6)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>Truly phenomenal mod.<br />\nThis is almost what the Battle
+        for Middle Earth games should've been like.\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/kiciolp\">kiciolp
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-11-17T18:48:10+00:00\">Nov
+        17 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=200076\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (40)\">Agree (40)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=200076\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (8)\">Disagree (8)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>This is the best mod I've ever seen!\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/blahblah965\">blahblah965
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-12-07T22:48:27+00:00\">Dec
+        7 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=206578\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (33)\">Agree (33)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=206578\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (4)\">Disagree (4)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>AMAZing\n</p>\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/death-blade\">Death_Blade
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-06-24T20:24:56+00:00\">Jun
+        24 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=145227\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (36)\">Agree (36)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=145227\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree (6)\">Disagree (6)</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>BEST MOD EVER POSSIBLY IMAGINABLE\n</p>\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        reviews were found matching the criteria specified. We suggest you try the
+        <a href=\"/mods/third-age-total-war/reviews\">review list</a> with no filter
+        applied, to browse all available. <a href=\"/mods/third-age-total-war/reviews/add\">Post
+        review</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t \r\n<div
+        class=\"pagination clear\">\r\n\t<span class=\"previous\">&#171; Previous</span>\t<a
+        href=\"/mods/third-age-total-war/reviews/page/2?filter=t#reviewsbrowse\" class=\"next\"
+        title=\"Go to the next page\">Next &#187;</a>\t\r\n\t<div class=\"pages\">\r\n\t\t
+        \r\n\t\t<span class=\"current\">1</span>\r\n\t\t \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/2?filter=t#reviewsbrowse\"
+        title=\"Go to page 2\">2</a>\r\n\t\t \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/3?filter=t#reviewsbrowse\"
+        title=\"Go to page 3\">3</a>\r\n\t\t \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/4?filter=t#reviewsbrowse\"
+        title=\"Go to page 4\">4</a>\r\n\t\t \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/5?filter=t#reviewsbrowse\"
+        title=\"Go to page 5\">5</a>\r\n\t\t \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/6?filter=t#reviewsbrowse\"
+        title=\"Go to page 6\">6</a>\r\n\t\t \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/7?filter=t#reviewsbrowse\"
+        title=\"Go to page 7\">7</a>\r\n\t\t \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/8?filter=t#reviewsbrowse\"
+        title=\"Go to page 8\">8</a>\r\n\t\t\t\t<span class=\"spacer\">...</span>\r\n\t\t
+        \r\n\t\t<a href=\"/mods/third-age-total-war/reviews/page/290?filter=t#reviewsbrowse\"
+        title=\"Go to page 290\">290</a>\r\n\t\t \r\n\t</div>\r\n</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabreviews\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox\"
+        id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span>9.7</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 97%;\"></div></div>\r\n\t\t\t\t\t\t<p><span>2890</span> votes
+        submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"mods\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"11169\" /><input type=\"hidden\" name=\"hash\" value=\"671fad06d8e9be165b53260424e7bcc4\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"table tableform\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        class=\"row\" style=\"clear: both;\">\r\n\t\t\t\t\t\t<p><strong>Highest Rated
+        (121 agree) <a href=\"/mods/third-age-total-war/reviews?filter=t&amp;rating=10#review205206\">10/10</a></strong></p>\r\n\t\t\t\t\t\t<p>It's
+        hard not to give this one a 10.<br />\nIt has almost everything you'd want
+        from a LOTR mod in M2TW, and much more.</p>\n<p>The only criticisms that i
+        could give: As for right now, it lacks some really important plot parts from
+        the earlier Third Age.<br />\nBut Sub-Campaigns for each faction (or some)
+        could definitely help on this subject.\n</p>\n\t\t\t\t\t\t<p class=\"helper\">Dec
+        3 2010 by X4VI3R</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n \r\n<div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox\">\r\n\t<div class=\"supporter\"><div class=\"lazyload\"
+        data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250, 300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div>
+        \r\n</div>\r\n \t<div class=\"normalbox pollbox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Breakdown</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"inner\">\n\t\t\t<div
+        class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t\t\t\t\t\t<a href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=10\"
+        class=\"rating\">\n\t\t\t\t\t\t<span>10</span>\n\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t\t<div
+        class=\"barinner\" style=\"width: 85%;\">&nbsp;85%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=9\" class=\"rating\">\n\t\t\t\t\t\t<span>9</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        9%;\">&nbsp;9%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=8\" class=\"rating\">\n\t\t\t\t\t\t<span>8</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        4%;\">&nbsp;4%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=7\" class=\"rating\">\n\t\t\t\t\t\t<span>7</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        1%;\">&nbsp;1%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=6\" class=\"rating\">\n\t\t\t\t\t\t<span>6</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=5\" class=\"rating\">\n\t\t\t\t\t\t<span>5</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=4\" class=\"rating\">\n\t\t\t\t\t\t<span>4</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=3\" class=\"rating\">\n\t\t\t\t\t\t<span>3</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=2\" class=\"rating\">\n\t\t\t\t\t\t<span>2</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/third-age-total-war/reviews/?filter=t&amp;rating=1\" class=\"rating\">\n\t\t\t\t\t\t<span>1</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        1%;\">&nbsp;1%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">7475 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/medieval-ii-total-war-kingdoms\",\"name\":\"Medieval
+        II: Total War: Kingdoms\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/medieval-ii-total-war-kingdoms/mods\",\"name\":\"Mods\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/mods/third-age-total-war\",\"name\":\"Third
+        Age - Total War\"}},{\"@type\":\"ListItem\",\"position\":5,\"Item\":{\"@id\":\"https://www.moddb.com/mods/third-age-total-war/reviews\",\"name\":\"Reviews\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.rating.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=mods\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"mods\",\r\n\t\t\t\t\t\ttags:
+        [\"review\",\"single-player\",\"multiplayer\",\"historical\",\"military\",\"strategy\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames:
+        [\"medieval-ii-total-war-kingdoms\"],\r\n\t\t\t\t\t\tplayers: [\"single\",\"multi\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1713113741\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1713113741\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n$(\".99f1b4986d4ba469ecf17192b0d87745karmagood\").saveUpdate(\"karmagood\",
+        viewBrowse);\n$(\".e8a33b624f027103254061220a233ef2karmabad\").saveUpdate(\"karmabad\",
+        viewBrowse);\n$(\"form.ratingform\").rating(\"\", 20, 20);\n\r\n\t\tfunction
+        cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 874539949d6ea008-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 14 Apr 2024 16:55:42 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=atY90RljCxjSkvLOrlYz9JHvT5dFOPhmY82MxA55VgLJohgGlsz3i6vDZwONFoHfZHYLLJzqqTua4oaWtp%2BfSUft8lWcuPZ%2B1sRhip%2BoRhdWetogFE7BXuZ6vJlrHHYHfK4FaKaOGq9KmaE%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '40992'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=458c9a6907fe9cb874fdcc41cd7c34ed; expires=Sun, 14-Apr-2024 17:05:41
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=458c9a6907fe9cb874fdcc41cd7c34ed; expires=Sun, 14-Apr-2024 17:05:41
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/games/battle-for-middle-earth/reviews/page/1?filter=t
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Reviews
+        - Battle for Middle-earth - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t<meta
+        name=\"robots\" content=\"noindex\" /> \r\n\t<meta name=\"keywords\" content=\"battle
+        for middle earth, browse, search, reviews, rating, rate, articles, discussion\"
+        />\r\n\t<meta name=\"description\" content=\"Browse Battle for Middle-earth
+        reviews to see what users think.\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Reviews - Battle for Middle-earth\" />\r\n\t<meta
+        property=\"og:description\" content=\"Browse Battle for Middle-earth reviews
+        to see what users think.\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\"
+        />\r\n\t \r\n\t \r\n\t \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Reviews - Battle for Middle-earth\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"Browse Battle for Middle-earth reviews to see what users think.\"
+        />\r\n\t \r\n\t \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\"
+        href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/games/battle-for-middle-earth/reviews/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Reviews - Battle for Middle-earth feed\"
+        />\t<script src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><link
+        rel=\"next\" href=\"/games/battle-for-middle-earth/reviews/page/2\" /><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"Electronic
+        Arts\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single Player\",\"Multiplayer\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Blockbuster\",\"Fantasy\",\"Strategy\"],\"name\":
+        \"Battle for Middle-earth\",\"platforms\":[\"Windows\",\"PC\"]}],\r\n\t\t\t\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script>\r\n</head>\r\n<body>\r\n\r\n<div
+        id=\"body\">\r\n<div class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div
+        id=\"searchbox\">\r\n\t\t\t \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\"
+        title=\"Your personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1069</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Reviews - Battle for Middle-earth</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabreviews\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/games/1/1/101/tpbnr_ee.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/games/battle-for-middle-earth\">Battle for Middle-earth</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/company/electronic-arts\">Electronic Arts</a> | <time datetime=\"2004-12-04\">Released
+        2004</time>\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"firsttab\"><a href=\"/games/battle-for-middle-earth\">summary</a></li><li
+        class=\"\"><a href=\"/games/battle-for-middle-earth/articles\">articles</a></li><li
+        class=\"\"><a href=\"/games/battle-for-middle-earth/tutorials\">tutorials</a></li><li
+        class=\"on\"><a href=\"/games/battle-for-middle-earth/reviews\">reviews</a></li><li
+        class=\"\"><a href=\"/games/battle-for-middle-earth/downloads\">files</a></li><li
+        class=\"\"><a href=\"/games/battle-for-middle-earth/addons\">addons</a></li><li
+        class=\"\"><a href=\"/games/battle-for-middle-earth/mods\">mods</a></li><li
+        class=\"\"><a href=\"/games/battle-for-middle-earth/videos\">videos</a></li><li
+        class=\"\"><a href=\"/games/battle-for-middle-earth/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>Using
+        the Lord Of The Rings movie license, The Battle for Middle-earth is a Real-Time
+        Strategy game based upon both the renown literary works of J.R.R. Tolkien,
+        and the film trilogy directed by Peter Jackson. Players are given control
+        of enormous armies in the many of the epic battles depicted in the film. From
+        waging all-out combat among the vast forces of good and evil to controlling
+        your favorite heroes and characters to managing the troops and resources of
+        your side, the fate of a living, breathing Middle-earth is in the player's
+        hands.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div class=\"column
+        span-300-alt first tabreviews\">\t<div class=\"normalbox browsebox\" id=\"reviewsbrowse\">\r\n\t\t<div
+        class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/add/#reviewsform\" class=\"addicon\"
+        \ title=\"Post review\">Post review</a> <a href=\"https://rss.moddb.com/games/battle-for-middle-earth/reviews/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Reviews &nbsp;(0 - 10 of 243)</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<form action=\"https://www.moddb.com/games/battle-for-middle-earth/reviews\"
+        name=\"filterform\" class=\"filter filterauto clear\" method=\"get\"><input
+        type=\"hidden\" name=\"filter\" value=\"t\" />\t\t\t\t<div class=\"buttons\">\r\n\t\t\t\t\t<input
+        type=\"submit\" name=\"\" value=\"Search\" alt=\"Search\"  /> \r\n\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews\" title=\"Reset your search\"
+        class=\"reset\">Reset</a>\r\n\t\t\t\t</div>\r\n<input type=\"search\" name=\"kw\"
+        maxlength=\"50\" value=\"\" placeholder=\"Search\" size=\"40\"  /> <select
+        name=\"rating\">\n<option value=\"\" selected=\"selected\">Rating</option>\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select> </form><div class=\"table\">\r\n\t\t<div
+        class=\"row rowsort clear\">\r\n\t\t<div class=\"content\">\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t\t\t\t\t<a href=\"/games/battle-for-middle-earth/reviews?filter=t&sort=id-desc\"
+        >Posted</a>\r\n\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews?filter=t&sort=ratingalt-desc\"
+        >Rating</a>\r\n\t\t\t\t\t\t\t\t| <a href=\"/games/battle-for-middle-earth/reviews?filter=t&sort=memberipid-asc\"
+        >Author</a>\r\n\t\t\t\t\t\t\t\t| <a href=\"/games/battle-for-middle-earth/reviews?filter=t&sort=positive-desc\"
+        >Agree</a>\r\n\t\t\t\t\t\t\t\t| <a href=\"/games/battle-for-middle-earth/reviews?filter=t&sort=negative-desc\"
+        >Disagree</a>\r\n\t\t\t\t\t\t\t\t| <a href=\"/games/battle-for-middle-earth/reviews?filter=t&sort=best-asc\"
+        class=\"descicon\">Helpful</a>\r\n\t\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"row\" style=\"display: none;\"></div>\t\t\t<div class=\"row rowcontent
+        rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/na395410\">physco1
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2011-02-23T16:51:48+00:00\">Feb
+        23 2011</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=224445\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (5)\">Agree (5)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=224445\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>best game ever gondor rulez\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/jdog689\">JDOG689
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2012-11-17T16:39:12+00:00\">Nov
+        17 2012</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=393359\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (2)\">Agree (2)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=393359\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>I absolutely LOVE bfme.<br />\n<a href=\"/tags/somuchfunipeemyself\">#somuchfunipeemyself</a>\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating9 clear\">\r\n\t\t\t\t<span class=\"rating\">9</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/johnbeckjr\">johnbeckjr
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2012-10-22T21:14:24+00:00\">Oct
+        22 2012</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=385447\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (2)\">Agree (2)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=385447\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>Battle for mittle earth is an enthraling game, that you can
+        come back to again and again. With it's set up being far better then most
+        others of it's type.\n</p>\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/xxdraky\">xXdraky
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2012-09-07T20:58:02+00:00\">Sep
+        7 2012</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=369849\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (1)\">Agree (1)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=369849\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>Brilliance.\n</p>\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/mightycrow\">MightyCrow
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2012-07-03T18:52:18+00:00\">Jul
+        3 2012</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=346018\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (1)\">Agree (1)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=346018\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>Great game. Love the Lord of the Rings and this game suits
+        it perfectly.\n</p>\n\t</div>\r\n\t\t\t<div class=\"row rowcontent rowrating
+        rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/spartan184\">Spartan184
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2010-11-19T23:27:03+00:00\">Nov
+        20 2010</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=200822\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree (1)\">Agree (1)</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=200822\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>Very good gameplay, accurate to movies and somewhat for books
+        overall its very great game. I recommend buying it\n</p>\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/inuyasha929\">inuyasha929
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-02-15T00:52:05+00:00\">Feb
+        15 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=907979\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree\">Agree</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=907979\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>A great game!!\n</p>\n\t</div>\r\n\t\t\t<div class=\"row rowcontent
+        rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/numenoreantalion\">NumenoreanTalion
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2020-05-27T08:17:24+00:00\">May
+        27 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tMay
+        contain spoilers <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=732610\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree\">Agree</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=732610\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>I love their buildplots!\n</p>\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/neroburningrum\">NeroBurningRum
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2020-04-21T12:01:51+00:00\">Apr
+        21 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=729477\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree\">Agree</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=729477\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>one of the best rts ever\n</p>\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent rowrating rowrating10 clear\">\r\n\t\t\t\t<span class=\"rating\">10</span>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/members/inhumanoid\">Nontas
+        says</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2020-01-26T11:59:20+00:00\">Jan
+        26 2020</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\t<a
+        href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=reviews&amp;siteareaid=723409\"
+        class=\"karmagoodicon 99f1b4986d4ba469ecf17192b0d87745karmagood\" rel=\"nofollow\"
+        title=\"Agree\">Agree</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=reviews&amp;siteareaid=723409\"
+        class=\"karmabadicon e8a33b624f027103254061220a233ef2karmabad\" rel=\"nofollow\"
+        title=\"Disagree\">Disagree</a> \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>All time classic and thanks to this site we can enhance the
+        gameplay through fantastic modifications!<br />\n10/10\n</p>\n\t</div>\r\n\t</div>\t\t\t\t<p
+        class=\"viewbrowse\" style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo
+        reviews were found matching the criteria specified. We suggest you try the
+        <a href=\"/games/battle-for-middle-earth/reviews\">review list</a> with no
+        filter applied, to browse all available. <a href=\"/games/battle-for-middle-earth/reviews/add\">Post
+        review</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t \r\n<div
+        class=\"pagination clear\">\r\n\t<span class=\"previous\">&#171; Previous</span>\t<a
+        href=\"/games/battle-for-middle-earth/reviews/page/2?filter=t#reviewsbrowse\"
+        class=\"next\" title=\"Go to the next page\">Next &#187;</a>\t\r\n\t<div class=\"pages\">\r\n\t\t
+        \r\n\t\t<span class=\"current\">1</span>\r\n\t\t \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/2?filter=t#reviewsbrowse\"
+        title=\"Go to page 2\">2</a>\r\n\t\t \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/3?filter=t#reviewsbrowse\"
+        title=\"Go to page 3\">3</a>\r\n\t\t \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/4?filter=t#reviewsbrowse\"
+        title=\"Go to page 4\">4</a>\r\n\t\t \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/5?filter=t#reviewsbrowse\"
+        title=\"Go to page 5\">5</a>\r\n\t\t \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/6?filter=t#reviewsbrowse\"
+        title=\"Go to page 6\">6</a>\r\n\t\t \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/7?filter=t#reviewsbrowse\"
+        title=\"Go to page 7\">7</a>\r\n\t\t \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/8?filter=t#reviewsbrowse\"
+        title=\"Go to page 8\">8</a>\r\n\t\t\t\t<span class=\"spacer\">...</span>\r\n\t\t
+        \r\n\t\t<a href=\"/games/battle-for-middle-earth/reviews/page/25?filter=t#reviewsbrowse\"
+        title=\"Go to page 25\">25</a>\r\n\t\t \r\n\t</div>\r\n</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabreviews\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox\"
+        id=\"menureviews\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"heading\">Community Rating</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\t\t\t\t\r\n\t\t\t<div class=\"body clear\">\r\n\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table tablerating\">\r\n\t\t\t\t\t<div
+        class=\"score\">\r\n\t\t\t\t\t\t<p>Average</p>\r\n\t\t\t\t\t\t<span>9.2</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><div class=\"on\"
+        style=\"width: 92%;\"></div></div>\r\n\t\t\t\t\t\t<p><span>243</span> votes
+        submitted.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/reviews/ajax\"
+        method=\"post\" class=\"ratingform\" title=\"Your Rating: -\"><input type=\"hidden\"
+        name=\"sitearea\" value=\"games\" /><input type=\"hidden\" name=\"siteareaid\"
+        value=\"101\" /><input type=\"hidden\" name=\"hash\" value=\"56ad9cd2f10b3483f0d55ae4f47bf67c\"
+        /><input type=\"hidden\" name=\"earlyaccess\" value=\"0\" /> \r\n\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t<div class=\"score\">\r\n\t\t\t\t\t\t<p>You
+        Say</p>\r\n\t\t\t\t\t\t<span class=\"yousay\">-</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div
+        class=\"rating\">\r\n\t\t\t\t\t\t<div class=\"ratingbar\"><select name=\"rating\">\n<option
+        value=\"1\">1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option
+        value=\"4\">4</option>\n<option value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option
+        value=\"7\">7</option>\n<option value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option
+        value=\"10\">10</option>\n</select></div> \r\n\t\t\t\t\t\t<p class=\"yourate\">Submit
+        your vote.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"row rowextra\"
+        style=\"clear: both;\">\r\n\t\t\t\t\t\t<textarea name=\"summary\" cols=\"60\"
+        rows=\"10\" placeholder=\"Include a review...\" style=\"width: 100%;\" ></textarea><label
+        class=\"checkbox\"><input type=\"checkbox\" name=\"spoiler\" value=\"1\"  />
+        this review contains spoilers</label> <input type=\"submit\" name=\"reviews\"
+        value=\"Save Review\"  /> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t</form> \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t\t<div class=\"table tableform\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        class=\"row\" style=\"clear: both;\">\r\n\t\t\t\t\t\t<p><strong>Highest Rated
+        (5 agree) <a href=\"/games/battle-for-middle-earth/reviews?filter=t&amp;rating=10#review224445\">10/10</a></strong></p>\r\n\t\t\t\t\t\t<p>best
+        game ever gondor rulez\n</p>\n\t\t\t\t\t\t<p class=\"helper\">Feb 23 2011
+        by physco1</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n \r\n<div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox\">\r\n\t<div class=\"supporter\"><div class=\"lazyload\"
+        data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250, 300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div>
+        \r\n</div>\r\n \t<div class=\"normalbox pollbox\">\n\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">Breakdown</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"inner\">\n\t\t\t<div
+        class=\"body clear\">\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\n\t\t\t\t\n\t\t\t\t<div
+        class=\"poll\">\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=10\"
+        class=\"rating\">\n\t\t\t\t\t\t<span>10</span>\n\t\t\t\t\t\t<div class=\"barouter\">\n\t\t\t\t\t\t\t<div
+        class=\"barinner\" style=\"width: 66%;\">&nbsp;66%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=9\" class=\"rating\">\n\t\t\t\t\t\t<span>9</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        16%;\">&nbsp;16%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=8\" class=\"rating\">\n\t\t\t\t\t\t<span>8</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        10%;\">&nbsp;10%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=7\" class=\"rating\">\n\t\t\t\t\t\t<span>7</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        3%;\">&nbsp;3%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=6\" class=\"rating\">\n\t\t\t\t\t\t<span>6</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=5\" class=\"rating\">\n\t\t\t\t\t\t<span>5</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        1%;\">&nbsp;1%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=4\" class=\"rating\">\n\t\t\t\t\t\t<span>4</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=3\" class=\"rating\">\n\t\t\t\t\t\t<span>3</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        1%;\">&nbsp;1%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=2\" class=\"rating\">\n\t\t\t\t\t\t<span>2</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        0%;\">&nbsp;0%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth/reviews/?filter=t&amp;rating=1\" class=\"rating\">\n\t\t\t\t\t\t<span>1</span>\n\t\t\t\t\t\t<div
+        class=\"barouter\">\n\t\t\t\t\t\t\t<div class=\"barinner\" style=\"width:
+        2%;\">&nbsp;2%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">7475 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/battle-for-middle-earth\",\"name\":\"Battle
+        for Middle-earth\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/battle-for-middle-earth/reviews\",\"name\":\"Reviews\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.rating.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\ttags:
+        [\"review\",\"single-player\",\"multiplayer\",\"fantasy\",\"blockbuster\",\"strategy\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames:
+        [\"battle-for-middle-earth\"],\r\n\t\t\t\t\t\tplayers: [\"single\",\"multi\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1713113742\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1713113742\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n$(\".99f1b4986d4ba469ecf17192b0d87745karmagood\").saveUpdate(\"karmagood\",
+        viewBrowse);\n$(\".e8a33b624f027103254061220a233ef2karmabad\").saveUpdate(\"karmabad\",
+        viewBrowse);\n$(\"form.ratingform\").rating(\"\", 20, 20);\n\r\n\t\tfunction
+        cookieScript(e) {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 874539987992656f-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 14 Apr 2024 16:55:42 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2FpWQk3f1ntmMYl2L3pqTdAOB14q5cVBQ30s7LfKcat59Jzvj15ZmqoO6qRn5Y0UIIRdqRgHYpuGj5A5sTmyj%2BH9iGYgMMQFFbeVnpadfdG3v%2F4%2Ffghi4rV%2BkRtlioIPBSJrA591dLdXDKSw%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '40317'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=43c301a4b70c41ce979580dffb9d2722; expires=Sun, 14-Apr-2024 17:05:42
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=43c301a4b70c41ce979580dffb9d2722; expires=Sun, 14-Apr-2024 17:05:42
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

@@ -1692,8 +1692,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=mcDFBJ81%2BpShzwnNwxWehQAOQ2guCz%2Bv%2F40vMuV1yzfEoTwtsXoietsEpejIhegYE%2BTUG3N3QFI1xHv3ERhiElF6ht7T7wDxGA%2BpT3zsT1eL4uE%2BipSfdJjse0E%2BlGSurDCr8GO06ahx%2FXI%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -2797,8 +2795,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=a5bKcQAJOyNobb2Vs1j4jZW2NdnJcwi3XbcwrwYKErTKkB0OWAXQCjNm34I%2F2Nzkhu1Gn%2BwMiAVvfgmN9VNkUV2gq03CN2ZPqd4z7sV6a8MLFssfCOLmoXt39v0eWDvB91nesSixWOxlBSI%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -3906,8 +3902,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=zkyttFz1GmAp%2BMdBtzg61mBoC3uF8VUmQ24Po6rNZrL4nrFtWwUvJ6JZ117fta0xMZ%2BqtEMb9Dc5fmX10dO2etK4TLg7W9WbLxia00iuv93orS1DcmLCXcVYz%2B9EOsKoPEjfNlV%2BqS9cXvo%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -5014,8 +5008,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=YqmJp%2FgChGcnoCpoGJ%2BQJxCwk67c3yrBQPKkW4OUTmNT6Ct0%2Bt5lipGU0BoTGqMqHSNvsXgKQ2X188i%2B%2FJkUg8zjGokcT%2FvFQ4j6WRAhtwS2PB%2FgfaG%2B%2BOECzTM%2F0zOug%2FTg5NoCFIvwsBw%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -7173,8 +7165,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=25gpsbyaon7mBAjJWQg1YpwWam4BREQUVzD6c5vKnvztaZlX%2FBZo4U3Z304d%2B7pcZvgbsxdF8n6NGHvdqnmjdRGWG5Yl6tlBB%2Bu0H2bU%2FLUcosQbLdYvkJrJJmMNP3LZ5MLeYozgw5zUhHE%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -8155,6 +8145,1153 @@ interactions:
       - masterchief=c9c2ab4978fedfc62291e72d114e1ebb; expires=Sun, 14-Apr-2024 11:31:27
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       - masterchief=c9c2ab4978fedfc62291e72d114e1ebb; expires=Sun, 14-Apr-2024 11:31:27
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/mods/edain-mod/news/edain-472-released
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Edain 4.7.2
+        Released! news - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t \r\n\t<meta
+        name=\"keywords\" content=\"edain mod for battle for middle earth ii rise
+        of the witch king, edain 472 released, articles, information, data, gossip,
+        feature, read, view, discuss\" />\r\n\t<meta name=\"description\" content=\"A
+        new patch has been released, focusing on bugfixes, ringhero tweaks, balance
+        changes, and adding a new concept for the Three Trolls.\" />\r\n\t<meta name=\"robots\"
+        content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Edain 4.7.2 Released! news\" />\r\n\t<meta
+        property=\"og:description\" content=\"A new patch has been released, focusing
+        on bugfixes, ringhero tweaks, balance changes, and adding a new concept for
+        the Three Trolls.\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\"
+        />\r\n\t<meta property=\"og:type\" content=\"article\" /> \r\n\t<meta property=\"og:url\"
+        content=\"https://www.moddb.com/mods/edain-mod/news/edain-472-released\" />
+        \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/articles/1/325/324037/ModDB-Button1.jpg\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Edain 4.7.2 Released! news\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"A new patch has been released, focusing on bugfixes, ringhero tweaks,
+        balance changes, and adding a new concept for the Three Trolls.\" />\r\n\t<meta
+        property=\"twitter:url\" content=\"https://www.moddb.com/mods/edain-mod/news/edain-472-released\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/articles/1/325/324037/ModDB-Button1.jpg\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/mods/edain-mod/news/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Edain 4.7.2 Released! news feed\" />\t<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"Edain
+        Team\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single Player\",\"Multiplayer\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Fantasy\",\"Strategy\"],\"name\":
+        \"Battle for Middle-earth II: Rise of the Witch King\",\"platforms\":[\"Windows\",\"PC\"]}],\r\n\t\t\t\"article\":{\"date_published\":\"2024-03-14T21:41:51+01:00\",\"author\":\"ElendilsCousin\",\"type\":\"News\"},\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1069</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Edain 4.7.2 Released! news</h1>\r\n\t\t<a href=\"/\"
+        class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li
+        class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New
+        today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a
+        href=\"/month\" title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\"
+        title=\"New this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div
+        id=\"subheader\">\r\n\t\t<nav><ul class=\"tabs\">\r\n\t\t\t<li class=\"firsttab\"><a
+        href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li
+        class=\"on\"><a href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/add\">add mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabarticles\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/mods/1/11/10679/EdainHeader.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/mods/edain-mod\">Edain Mod</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king\">Battle for
+        Middle-earth II: Rise of the Witch King mod</a> | <time datetime=\"2015-03-27\">Released
+        2015</time>\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"firsttab\"><a href=\"/mods/edain-mod\">summary</a></li><li
+        class=\"on\"><a href=\"/mods/edain-mod/articles\">articles</a></li><li class=\"\"><a
+        href=\"/mods/edain-mod/reviews\">reviews</a></li><li class=\"\"><a href=\"/mods/edain-mod/downloads\">files</a></li><li
+        class=\"\"><a href=\"/mods/edain-mod/videos\">videos</a></li><li class=\"\"><a
+        href=\"/mods/edain-mod/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>The
+        Battle for Middle-earth has just begun! The Edain Mod returns to the classic
+        gameplay of the first Battle for Middle-earth, reimagined with countless new
+        heroes, units and abilities. Journey deeper into Tolkien's world than ever
+        before, relive the movies through meticulously crafted visuals and forge your
+        path to victory in epic strategic battles. Follow your destiny... Middle-earth
+        awaits.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>\nbody {\nbackground-color:
+        #221A18  !important;\nbackground-image: url(\"http://modding-union.com/edainimg/bsternmuste68d3_1450223154_1450257331.jpg\");\nbackground-repeat:
+        repeat;\n}\n\n#body, .container {\nbackground: transparent  !important;\n}\n\n\n\n.EdainColumn
+        {\nfloat:left;\npadding:20px\n}\n\n.EdainClear {\nclear:both\n}\n\n.EdainFeature
+        {\nfloat:left;\nwidth:290px;\nheight:230px;\nmargin:0 0 15px\n}\n\n.EdainMiddle
+        {\nmargin:0 15px 15px\n}\n\n.EdainFeature h3 {\nborder-bottom:1px solid #221A18;\ncolor:#221A18;\nfont-variant:small-caps;\nfont-size:24px;\nmargin:5px
+        0 13px\n}\n\n.EdainFeature p {\ncolor:#221A18;\nfont-size:13px;\nmargin:0
+        0 13px\n}\n\n.EdainFeature a:link,.EdainFeature a:visited {\ncolor:#221A18;\ntext-decoration:none\n}\n\n.EdainFeature
+        a:hover,.EdainFeature a:focus {\ncolor:#221A18\n}\n\n.EdainSmallButtons a
+        {\nfloat: center; \nmargin: 0 0 0 15px\n}\n\n.EdainSmallButtons a:link, .EdainYoutube
+        a:visited {\nopacity: 0.7;\nfilter:alpha(opacity=70)\n}\n\n.EdainSmallButtons
+        a:hover, .EdainYoutube a:focus {\nopacity: 1;\nfilter:alpha(opacity=100)\n}\n\n\ndiv.normalbox
+        div.body, div.row, div.rowalt,  div.normalbox div.mediaviewer div.media div.noflash
+        p {\nbackground-color: #FFE5C7 !important;\nborder-radius: 0px 0px 10px 10px;\n}\n\n\n\ndiv.normalbox
+        div.table div.rowalt {\nbackground-color: #FFE5C7 !important;\nborder-radius:
+        10px;\n}\n\n\n\ndiv.tooltip {\nbackground-color: #6E583F !important;\n}\n\ndiv.normalbox
+        div.body div.tooltip  {\nbackground-color: #C6A278 !important;\ncolor: #221A18;\n}\n\n\n\nbody,div.normalbox
+        div.tablecomments span.heading a:hover {\ncolor: #241D14 !important;\n}\n\n\n\n#footer
+        {\nborder: medium none !important;\nborder-radius: 5px !important;\nopacity:
+        .5 !important;\n}\n\n\n\n.normalbox a, span.summary a, span.date a, span.subheading
+        a, {\ncolor: #C6A278 !important;\n}\n\n\n\ndiv.normalbox div.title span.heading,
+        span.options a:hover {\ncolor: #FFE5C7 !important;\n}\n\n\n\ndiv.headerbox
+        h2 a:hover {\ncolor: #221A18;\n}\n \ndiv.headerbox h3 a:hover {\ncolor: #221A18;\n}\n
+        \ndiv.normalbox div.table span.summary a:hover {\ntext-decoration: none;\ncolor:
+        #221A18;\n}\n \ndiv.normalbox div.table span.subheading a:hover, div.normalbox
+        div.table span.date a:hover, div.normalbox div.table span.summary a:hover
+        {\ntext-decoration: none;\ncolor: #221A18;\n}\n\ndiv.normalbox div.tablemenu
+        span.summary a {\ntext-decoration: none;\ncolor: #221A18;\n}\n\ndiv.normalbox
+        div.tablemenu h5 {\nfloat: left;\nfont-size: 1em;\nfont-weight: normal;\nmargin:
+        0;\nwidth: 80px;\nfont-weight: bold;\ncolor: #221A18;\n}\n\ndiv.headerbox
+        ul.menu {\ntext-align:center;\n}\n\ndiv.headerbox div.title {\nopacity: 0;\n}\n\ndiv.headerbox
+        ul.menu li.on a {\nbackground-color: transparent;\ncolor: #CC7903;\n}\n\n\ndiv.normalbox
+        div.tablecomments span.heading, div.normalbox div.tablecomments a.action,
+        .karma, div.normalbox div.body p.introduction, p.helper {\ncolor: #C6A278
+        !important;\n}\n\ndiv.normalbox div.tablecomments span.heading, div.normalbox
+        div.tablecomments a.action, .karma {\nfont: oblique 99% Times,serif !important;\n}\n\na:hover
+        {\ncolor: #CC7903 !important;\n}\n\n\n\ndiv.normalbox div.body blockquote
+        span.quoteheading {\ncolor: #4F4F4F;\n}\n\ndiv.normalbox div.body blockquote
+        p {\ncolor: #221A18;\n}\n\n\n\ndiv.headerbox ul.menu li.on {\n    background:
+        none;\n}\n\ndiv.headerbox ul.menu li:hover {\n    background: none;\n}\n\ndiv.headerbox
+        ul.menu li {\nborder: 0px solid #333;\ndisplay: inline-block;\nfont-size:
+        1.0em;\nline-height: 30px;\ntext-transform: uppercase;\nfont-weight: bold!important;\n}\n\ndiv.headerbox
+        ul.menu li:hover {\nborder: 0px solid #333;\ndisplay: inline-block;\nfont-size:
+        1.0em;\nline-height: 30px;\ntext-transform: uppercase;\nfont-weight: bold!important;\n}\n\n\n\ndiv.normalbox
+        div.title a.related {\ncolor: #C6A278 !important;\n}\n\ndiv.normalbox div.title
+        a.related:hover {\ncolor: #CC7903 !important;\n}\n\n\n\ndiv.normalbox div.tableform
+        div.buttons input.previewbtn {\nfont-family: Arial!important;\nfont-weight:
+        400;\nfont-size: 11px;\nmargin: 3px 3px 8px;\npadding-top: 3px;\npadding-bottom:
+        3px;\npadding-left: 10px;\npadding-right: 10px;\ncolor: #000000;\nbackground:
+        #C6A278;\nwidth: auto!important;\nborder: 1px solid #221A18;\nborder-radius:
+        20px;\n}\n \ndiv.normalbox div.tableform div.buttons input {\nfont-family:
+        Arial!important;\nfont-weight: 400;\nfont-size: 11px;\nmargin: 3px 3px 8px;\npadding-top:
+        3px;\npadding-bottom: 3px;\npadding-left: 10px;\npadding-right: 10px;\ncolor:
+        #000000;\nbackground: #C6A278;\nwidth: auto!important;\nborder: 1px solid
+        #221A18;\nborder-radius: 20px;\n}\n \ndiv.normalbox div.tableform div.buttons
+        input:hover {\ncolor: #221A18;\nbackground: #FFE5C7;\nwidth: auto!important;\nborder:
+        1px solid ##FFE5C7;\nborder-radius: 20px;\n}\n \ndiv.normalbox div.tableform
+        div.buttons input.previewbtn:hover {\ncolor: #221A18;\nbackground: #FFE5C7;\nwidth:
+        auto!important;\nborder: 1px solid #221A18;\nborder-radius: 20px;\n}\n \n\n\n\ndiv.pagination
+        div.pages span.current {\nbackground-color: rgb(255, 229, 199);\ncolor: #000000;\nfont-weight:
+        bold;\npadding: 1px 6px;\nborder-radius: 10px;\n}\n \ndiv.pagination div.pages
+        a:hover {\nbackground-color: rgb(255, 229, 199);\ncolor: #000000;\n}\n \ndiv.pagination
+        div.pages a {\ntext-decoration: none;\nbackground-color: rgb(198, 162, 120);\ncolor:
+        #000000;\npadding-top: 1px;\npadding-bottom: 2px;\nborder-radius: 10px;\n}\n\n\n\n#searchbox
+        span a {\ncolor: #E0E0E0;\nfont-weight: normal!important;\ntext-decoration:
+        none;\nfont-size: 11px;\n}\n \n#searchbox form {\nbackground-color: transparent;\nfloat:
+        left;\nheight: 21px;\nwidth: 200px;\n}\n \n#searchbox form.search input.button
+        {\npadding-right: 0px;\nmargin-left: -19px;\nmargin-top: 1px;\nborder-radius:
+        30px;\nborder: 1px solid\nheight: 19px;\n}\n \n#searchbox input.text {\nbackground-color:
+        #FFE5C7;\ncolor: #000000;\nborder-radius: 10px;\nfont-family: Arial;\npadding-left:
+        5px;\npadding-top: 2px;\npadding-bottom: 2px;\nheight: 17px;\nmargin-top:
+        1px;\n}\n \n#searchbox span.member {\ncolor: rgba(170, 170, 170, 0);\nmargin-right:
+        10px;\n}\n\n#searchbox {\nbackground: #000000;\npadding: 2px 0px 2px 0px;\nborder-radius:
+        30px;\n}\n\n#searchbox form.login input.button {\ncolor: #000000;\nbackground-color:
+        #FFE5C7;\nborder-radius: 10px;\nheight: 21px;\nmargin-top: 1px;\nborder-left:
+        1px solid #000000;\n}\n\n#searchbox form.login input.password {\nborder-left:
+        1px solid #000000;\nwidth: 70px;\n}\n\n\n\n#subheader, .normalcorner {\nbackground:
+        #000000;\nborder-radius: 5px 5px 5px 5px;\nborder-bottom: 1px solid #000000;\n}\n\ndiv.normalcorner
+        {\nbackground: #000000;\nborder-radius: 10px 10px 0px 0px;\nborder-bottom:
+        1px solid #000000;\nheight: 36px;\ncolor: #000000;\n}\n\ndiv.headerbox div.headercorner
+        {\nbackground: transparent;\ncolor: #000000;\nbox-shadow: rgba(0,0,0,0.3)
+        0 1px 3px!important;\n}\n\n\n\ndiv.normalbox div.body span.rating {\nbackground-color:
+        #221A18; !important;\nborder-radius: 100px!important;\ndisplay: block;\nfont-size:
+        2.4em;\ntext-decoration: none;\nwidth: 36px;\n}\n\ndiv.normalbox div.poll
+        a.rating span {\ncolor: #221A18;\n}\n\ndiv.normalbox div.poll div.barinner
+        {\nbackground-color: #221A18;\n}\n\ndiv.normalbox div.poll div.barouter {\nbackground-color:
+        #C6A278;\n}\n\n\n\n\ndiv.normalbox div.table a.image {\nborder-radius: 4px;\n}\n\ndiv.normalbox
+        div.inner img {\nborder-radius: 4px;\n}\n\ndiv.normalbox div.inner iframe
+        {\nborder-radius: 4px;\n}\n\ndiv.normalbox div.tablerelated a.image {\nborder-radius:
+        4px;\n}\n\ndiv.imagebox li {\nbackground-color: transparent;\ndisplay: block;\nfloat:
+        left;\npadding: 4px;\nmargin: 0 0 0 10px;\nborder-radius: 4px;\n}\n\ndiv.imagebox
+        li img {\nmax-width: 120px;\nmax-height: 90px;\nborder-radius: 4px;\nborder:
+        2px solid #6E583F;\nbackground: transparent;\n}\n\ndiv.imagebox li.first:hover
+        \ {\nopacity: 0.8;\nfilter:alpha(opacity=80)\n}\n\ndiv.imagebox li img:hover
+        {\nmax-width: 120px;\nmax-height: 90px;\nborder-radius: 4px;\nborder: 2px
+        solid #6E583F;\nbackground: transparent;\nopacity: 0.8;\nfilter:alpha(opacity=80)\n}\n\ndiv.imagebox
+        li.on a {\nbackground-color: transparent;\n}\n\ndiv.imagebox li.previous a,
+        div.imagebox li.next a {\nbackground-image: url(http://modding-union.com/edainimg/pfeile_1450292265.png);\nbackground-repeat:
+        no-repeat;\nwidth: 50px;\nheight: 90px;\n}\n\ndiv.normalbox div.table div.row:nth-of-type(2n-1)
+        {\nbackground-color: transparent;\n}\n\n\n\n\ndiv.normalbox div.tablecomments
+        span.online, div.normalbox div.tablecomments span.new, div.normalbox div.tablecomments
+        span.staff, div.normalbox div.tablecomments a.subscriber, div.normalbox div.tablecomments
+        span.developer {\ncolor: #fff;\ndisplay: block;\nfont-size: 1.0em;\nmargin-top:
+        1px;\ntext-align: center;\ntext-decoration: none;\nwidth: 60px;\nborder-radius:
+        50px;\n}\n\ndiv.normalbox div.tablecomments a.avatar img {\nborder-radius:
+        100px!important;\nborder: 1px solid #221A18;\n}\n \ndiv.normalbox div.tablecomments
+        a.avatar {\nbackground: transparent;\ndisplay: block;\nheight: 50px;\npadding:
+        5px;\ntext-align: center;\nwidth: 50px;\n}\n\ndiv.normalbox div.tablecomments
+        div.rowguest a.avatar {\nbackground: transparent;\ndisplay: block;\nheight:
+        50px;\npadding: 5px;\ntext-align: center;\nwidth: 50px;\n}\n\ndiv.normalbox
+        div.tablecomments a.avatar[href=\"/members/tkaza\"]::after {\n    background:
+        #c00;\n    color: #fff;\n    display: block;\n    font-size: 12px;\n    text-align:
+        center;\n    text-decoration: none;\n    width: 60px;\n    content: \"Staff\";\n
+        \   margin-top: 4px;\n    margin-left: -5px;\n    position: absolute;\n    padding-top:
+        0px;\n    height: 18px;\n    border-radius: 54px;\n}\n\ndiv.normalbox div.tablecomments
+        a.avatar[href=\"/members/erayser\"]::after {\n    background: #c00;\n    color:
+        #fff;\n    display: block;\n    font-size: 12px;\n    text-align: center;\n
+        \   text-decoration: none;\n    width: 60px;\n    content: \"Staff\";\n    margin-top:
+        4px;\n    margin-left: -5px;\n    position: absolute;\n    padding-top: 0px;\n
+        \   height: 18px;\n    border-radius: 54px;\n}\n \ndiv.normalbox div.tablecomments
+        span.heading {\ncolor: #999;\nfont-weight: bold;\nfont-size: 1em;\n}\n \ndiv.normalbox
+        div.body p.introduction {\ncolor: rgb(200, 200, 200);\nmargin-bottom: 10px;\npadding-bottom:
+        10px;\npadding: 5px;\nbackground: rgb(255, 229, 199);\nborder: 1px solid #221A18;\nbackground-size:
+        100% 100%;\nborder-radius: 5px;\n}\n \ndiv.normalbox div.body span.social
+        {\nfloat: right;\nbackground: rgb(100, 100, 100);\npadding: 6px;\nmargin-top:
+        1px;\nmargin-right: 11px;\nborder-radius: 0px 3px 3px 0px;\nborder-left: 1px
+        solid #554E4E;\n}\n\n\n\nspan.options a.addicon {\nborder-color: #38311f;\nbackground-color:
+        #221A18;\nborder-radius: 10px;\nmargin-right: 5px;\n}\n \nspan.options a.rssicon
+        {\nborder-color: #38311f;\nbackground-color: #221A18;\nborder-radius: 10px;\nmargin-right:
+        5px;\n}\n \nspan.options a.watchicon {\nborder-color: #38311f;\nbackground-color:
+        #221A18;\nborder-radius: 10px;\nmargin-right: 5px;\n}\n\nspan.options a.archiveicon,
+        span.options a.moveicon, span.options a.authicon, span.options a.pinicon {\nborder-color:
+        #38311f;\nbackground-color: #221A18;\nborder-radius: 10px;\nmargin-right:
+        5px;\n}\n \nspan.options a.editicon {\nborder-color: #38311f;\nbackground-color:
+        #221A18;\nborder-radius: 10px;\nmargin-right: 5px;\n}\n \nspan.options a.deleteicon
+        {\nborder-color: #38311f;\nbackground-color: #221A18;\nborder-radius: 10px;\nmargin-right:
+        5px;\n}\n \nspan.options a.reporticon {\nborder-color: #38311f;\nbackground-color:
+        #221A18;\nborder-radius: 10px;\nmargin-right: 5px;\n}\n \nspan.options a.detailicon
+        {\nborder-color: #38311f;\nbackground-color: #221A18;\nborder-radius: 10px;\nmargin-right:
+        5px;\n}\n\n\n\n\ndiv.normalbox div.tablecomments span.actions a.deleteicon
+        {\nbackground: url(http://modding-union.com/edainimg/content_off_1453373983.png)
+        no-repeat left -130px;\nbackground-position: left 0px;\npadding-right: 4px;\n}\n\ndiv.normalbox
+        div.tablecomments span.actions a.deleteicon:hover {\nbackground: url(http://modding-union.com/edainimg/content_on_1453374030.png)
+        no-repeat left -130px;\nbackground-position: left 0px;\npadding-right: 4px;\n}\n\ndiv.normalbox
+        div.tablecomments span.actions a.deleteicon:active {\nbackground: url(http://modding-union.com/edainimg/content_active_1453374058.png)
+        no-repeat left -130px;\nbackground-position: left 0px;\npadding-right: 4px;\n}\n\ndiv.normalbox
+        div.tablecomments span.actions a {\ncolor: #C6A278 !important;\ntext-decoration:
+        none;\nfont: oblique 99% Times,serif !important;\n}\n\ndiv.normalbox div.tablecomments
+        span.actions a.entericon {\nbackground: url(http://modding-union.com/edainimg/content_off_1453373983.png)
+        no-repeat left -128px;\nmargin-left: 10px;\n}\n\ndiv.normalbox div.tablecomments
+        span.actions a.entericon:hover {\nbackground: url(http://modding-union.com/edainimg/content_on_1453374030.png)
+        no-repeat left -128px;\nmargin-left: 10px;\n}\n\ndiv.normalbox div.tablecomments
+        span.actions a.entericon:active {\nbackground: url(http://modding-union.com/edainimg/content_active_1453374058.png)
+        no-repeat left -128px;\nmargin-left: 10px;\n}\n\ndiv.normalbox div.tablecomments
+        span.actions a.replyicon {\nbackground: url(http://modding-union.com/edainimg/content_off_1453373983.png)
+        no-repeat left -130px;\nmargin-left: 10px;\n}\n\ndiv.normalbox div.tablecomments
+        span.actions a.replyicon:hover {\nbackground: url(http://modding-union.com/edainimg/content_on_1453374030.png)
+        no-repeat left -130px;\nmargin-left: 10px;\n}\n\ndiv.normalbox div.tablecomments
+        span.actions a.replyicon:active {\nbackground: url(http://modding-union.com/edainimg/content_active_1453374058.png)
+        no-repeat left -130px;\nmargin-left: 10px;\n}\n \ndiv.normalbox div.tablecomments
+        span.actions a.karmagoodicon {\nbackground: url(http://modding-union.com/edainimg/content_off_1453373983.png)
+        no-repeat left -128px;\nbackground-position: right -16px;\nmargin-left: 10px;\n}\n\ndiv.normalbox
+        div.tablecomments span.actions a.karmagoodicon:hover {\nbackground: url(http://modding-union.com/edainimg/content_on_1453374030.png)
+        no-repeat left -128px;\nbackground-position: right -16px;\nmargin-left: 10px;\n}\n\ndiv.normalbox
+        div.tablecomments span.actions a.karmagoodicon:active {\nbackground: url(http://modding-union.com/edainimg/content_active_1453374058.png)
+        no-repeat left -128px;\nbackground-position: right -16px;\nmargin-left: 10px;\n}\n\ndiv.normalbox
+        div.tablecomments span.actions a.editicon {\nbackground-image: url(http://modding-union.com/edainimg/content_off_1453373983.png);\nbackground-repeat:
+        no-repeat;\npadding-left: 18px;\n}\n\ndiv.normalbox div.tablecomments span.actions
+        a.editicon:hover {\nbackground-image: url(http://modding-union.com/edainimg/content_on_1453374030.png);\nbackground-repeat:
+        no-repeat;\npadding-left: 18px;\n}\n\ndiv.normalbox div.tablecomments span.actions
+        a.editicon:active {\nbackground-image: url(http://modding-union.com/edainimg/content_active_1453374058.png);\nbackground-repeat:
+        no-repeat;\npadding-left: 18px;\n}\n\ndiv.normalbox div.tablecomments span.actions
+        a.karmabadicon {\ndisplay: none;\n}\n\ndiv.normalbox div.tablecomments a.delete:hover,
+        div.normalbox div.tablecomments a.delete:active {\nbackground-position: left
+        0px!important;\npadding-right: 4px!important;\n}\n\ndiv.normalcorner span.sidesocialnorm
+        {\nleft: -21px;\nwidth: 18px;\nbackground: #FFFFFF;\nborder-radius: 3px 0px
+        0px 3px;\nbox-shadow: rgba(0,0,0,0.3) -1px 1px 3px!important;\n}\n\n.bookmarkicon,
+        .diggicon, .commenticon, .nexticon, .previousicon, .clearicon, .ascicon, .descicon,
+        .pmicon {\nbackground-image: url(https://static.moddb.com/cutoff/images/icons/content.png);\nbackground-repeat:
+        no-repeat;\npadding-left: 18px;\n}\n\n\n\nspan.options a:hover {\nborder-color:
+        transparent !important;\n}\n\n\n\ndiv.normalbox div.tablecomments span.heading
+        a {\ncolor: #000 !important;\n}\n\n\n\ndiv.normalbox div.tablecomments div.clearer
+        {\nmargin-bottom: 15px;\nborder-top: 1px solid #414141;\nborder-radius: 50px;\nmargin-left:
+        -40px;\nmargin-right: -15px;\n}\n\n\n\ndiv.pagination a.next {\ntext-transform:
+        uppercase;\nfont-size: 10px;\nfloat: right;\npadding: 3px;\nwidth: 60px!important;\ncolor:
+        #000000;\nbackground: #C6A278;\nborder: 1px solid #221A18;\nborder-radius:
+        15px;\n}\n \ndiv.pagination a.previous {\ntext-transform: uppercase;\nfont-size:
+        10px;\nfloat: left;\npadding: 3px;\nwidth: 70px!important;\ncolor: #000000;\nbackground:
+        #C6A278;\nborder: 1px solid #221A18;\nborder-radius: 15px;\n}\n \ndiv.pagination
+        a.previous:hover, div.pagination a.next:hover {\ncolor: rgb(255, 229, 199);\nbackground:
+        rgb(255, 229, 199);\nborder: 1px solid #221A18;\nborder-radius: 20px;\n}\n\ndiv.pagination
+        a.pageoff {\ntext-transform: uppercase;\nfont-weight: bold;\nfont-size: 10px;\npadding:
+        3px;\ncolor: #000000;\nbackground: #C6A278;\nwidth: 60px!important;\nborder:
+        1px solid rgba(163, 163, 163, 0.46);\nborder-radius: 15px;\n}\n  \ndiv.pagination
+        span.previous, div.pagination span.next {\ntext-transform: uppercase;\nfont-weight:
+        bold;\nfont-size: 10px;\npadding: 3px;\nwidth: 60px!important;\ncolor: #000000;\nbackground:
+        #C6A278;\nborder: 1px solid #221A18;\nborder-radius: 15px;\nopacity: 0.7;\n}\n\n\n\ndiv.normalbox
+        div.mediaviewer .medianext {\nborder-radius: 10px;\n}\n \ndiv.normalbox div.mediaviewer
+        .mediaprevious {\nborder-radius: 10px;\n}\n \ndiv.normalbox div.mediaviewer
+        .medianext:hover  {\nbackground-color: #221A18;\ncolor: #FFE5C7;\n}\n \ndiv.normalbox
+        div.mediaviewer .mediaprevious:hover {\nbackground-color: #221A18;\ncolor:
+        #FFE5C7;\n}\n\ndiv.normalbox div.mediaviewer .mediahd {\nborder-radius: 10px;\n}\n\ndiv.normalbox
+        div.mediaviewer .mediaembed {\nborder-radius: 10px;\n}\n \ndiv.normalbox div.mediaviewer
+        .mediashare {\nborder-radius: 10px;\n}\n\ndiv.normalbox div.mediaviewer .mediahd:hover
+        {\nbackground-color: #221A18;\n}\n\ndiv.normalbox div.mediaviewer .mediaembed:hover
+        {\nbackground-color: #221A18;\n}\n \ndiv.normalbox div.mediaviewer .mediashare:hover
+        {\nbackground-color: #221A18;\n}\n\n\n\ndiv.normalbox form.filter select {\nmargin-bottom:
+        3px;\nborder-radius: 5px;\ncolor: #222222;\nborder: 1px solid #221A18;\nbackground-color:
+        #C6A278;\nfont-weight: bold;\nfont-size: 11px;\ntext-transform: uppercase;\nfont-family:
+        Arial;\npadding: 2px;\n}\n \ndiv.normalbox form.filter input {\ncolor: #221A18;\nborder:
+        1px solid #221A18;\nbackground-color: #C6A278;\nborder-radius: 5px;\nfont-weight:
+        bold;\nfont-size: 11px;\ntext-transform: uppercase;\nfont-family: Arial;\npadding:
+        3px;\n}\n\ndiv.normalbox form.filter {\nmargin: 0 10px;\npadding: 5px;\nborder-radius:
+        5px;\nborder: 1px solid #221A18;\n}\n\ndiv.normalbox form.filter div.buttons
+        input, div.normalbox form.filter div.buttons a {\ncolor: #383838;\nbackground-color:
+        #221A18;\nfont-weight: bold;\nfont-size: 11px;\ntext-transform: uppercase;\nfont-family:
+        Arial;\nmargin-bottom: 5px;\nwidth: 60px;\nbackground: #C6A278;\nborder: 1px
+        solid #221A18;\nborder-radius: 20px;\nbox-shadow: 0 0 4px rgba(0,0,0,0.38),0
+        1px 0 #2c2c2c inset;\n}\n \n\ndiv.forumbox form.filter div.buttons input,
+        div.forumbox form.filter div.buttons a {\nfloat: left;\nmargin-left: 4px;\nbackground:
+        #C6A278;\nborder: 1px solid #221A18;\nborder-radius: 5px;\ncolor: #000000;\nfont-weight:
+        bold;\nfont-size: 11px;\ntext-transform: uppercase;\nfont-family: Arial;\nwidth:
+        80px;\n}\n \ndiv.forumbox div.body table.tableforum {\npadding: 0;\nwidth:
+        100%;\nbackground: #FFE5C7;\nmargin-top: 20px;\n}\n\ndiv.normalbox div.table
+        div.rowsort {\npadding: 1em 0 0;\nbackground: transparent;\nborder-bottom:
+        1px solid #535353;\n}\n \ntable.tableforum tr.subcategoryalt, table.tablepost
+        tr.postalt {\nbackground-color: transparent;\n}\n \ndiv.normalbox div.mediapreview
+        a.first {\nmargin-left: 0;\n}\n \ndiv.normalbox div.mediapreview a {\ndisplay:
+        block;\nfloat: left;\nheight: 150px;\nmargin-left: 10px;\noverflow: hidden;\ntext-align:
+        center;\nwidth: 200px;\nbox-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px!important;\n}\n\ndiv.normalbox
+        div.mediapreview a img {\nborder-radius: 3px;\nwidth: 200px;\nheight: 150px;\n}\n\ntable.tableforum
+        tr.subcategory td.category, table.tableforum tr.subcategory td.latest, table.tableforum
+        tr.subcategory td.topics, table.tableforum tr.subcategory td.posts, table.tablethread
+        tr.subcategory td.thread, table.tablethread tr.subcategory td.board, table.tablethread
+        tr.subcategory td.author {\nborder-right: 1px solid #0f0f0f;\ncolor: #221A18;\nbackground-color:
+        #FFE5C7;\nborder: 1px solid #0f0f0f!important;\nborder-radius: 0px;\n}\n\ntable.tableforum
+        tr.subcategory th {\ncolor: #221A18;\n}\n\ntable.tableforum tr.subcategory
+        td.category a.board {\ncolor: #221A18;\ntext-transform: uppercase;\n} \n\ntable.tableforum
+        tr.subcategory td.latest a {\ncolor: #221A18;\n}\n\ntable.tableforum tr.category
+        td {\npadding: 0 7px;\nheight: 30px;\nline-height: 30px;\nbackground: #221A18;\nborder:
+        1px solid #0f0f0f;\nbackground-repeat: repeat-x;\nborder-bottom: 1px solid
+        #000;\n}\n\ntable.tableforum tr.category td span.heading {\ncolor: #FFE5C7;\n}\n
+        \ntable.tableforum tr.subcategory td.fav, table.tableforum tr.subcategory
+        td.icon {\ntext-align: center;\nborder: 1px solid #0f0f0f;\nborder-radius:
+        0px;\nbackground: #FFE5C7;\n}\n \ntable.tableforum thead th.icon {\nborder-top:
+        none;\nwidth: 4%;\ncolor: #221A18;\nbackground-color: #C6A278;\nborder-radius:
+        0px;\nborder: 1px solid #0f0f0f;\n}\n \ntable.tableforum thead th.category
+        {\nwidth: 25%;\ncolor: #221A18;\nbackground-color: #C6A278;\nborder-radius:
+        0px;\nborder: 1px solid #0f0f0f;\n}\n \ntable.tableforum thead th.latest {\nwidth:
+        55%;\ncolor: #221A18;\nbackground-color: #C6A278;\nborder-radius: 0px;\nborder:
+        1px solid #0f0f0f;\n}\n \ntable.tableforum thead th.topics, table.tableforum
+        thead th.posts {\ntext-align: right;\nwidth: 6%;\ncolor: #221A18;\nbackground-color:
+        #C6A278;\nborder-radius: 0px;\nborder: 1px solid #0f0f0f;\n}\n \ntable.tableforum
+        thead th.fav {\nborder-right: none;\nwidth: 4%;\ncolor: #221A18;\nbackground-color:
+        #C6A278;\nborder-radius: 0px;\nborder: 1px solid #0f0f0f;\n}\n \ntable.tableforum
+        tr.category td span.related {\nmargin-left: 10px;\ncolor: #FFE5C7;\n}\n \ntable.tableforum
+        tr.category td span.related a {\ncolor: #FFE5C7;\n}\n\ntable.tableforum tr.category
+        td.buttons {\nbackground-color: #221A18;\n}\n\ntable.tablepost tr.post td.actions
+        {\nbackground-color: #C6A278;\nborder: 1px solid #221A18;\n}\n\ntable.tablepost
+        tr.post td.actions span.date {\ncolor: #221A18;\n}\n\ntable.tablepost tr.post
+        td.details {\nbackground-color: #C6A278;\nborder: 0.5px solid #221A18;\n}\n\ntable.tablepost
+        thead th.details {\nborder-top: none;\nwidth: 130px;\nbackground-color: #C6A278;\nborder-radius:
+        0px;\nborder: 1px solid #0f0f0f;\n}\n \ntable.tablepost thead th.post {\nwidth:
+        670px;\nbackground-color: #C6A278;\nborder-radius: 0px;\nborder: 1px solid
+        #0f0f0f;\ncolor: #221A18;\n}\n \ntable.tablepost thead th.filler {\nwidth:
+        110px;\nbackground-color: #C6A278;\nborder-radius: 0px;\nborder: 1px solid
+        #0f0f0f;\n}\n\ntable.tablepost tr.postmod td.details {\nfont-weight: bold!important;\nbackground-color:
+        #000000;\ncolor: #FFE5C7;\n}\n\n\n\ntable.tableforum a.avatar {\nbackground:
+        transparent;\ndisplay: block;\ntext-align: center;\n}\n \ntable.tableforum
+        a.avatar img {\nborder-radius: 100px!important;\nborder: 1px solid #221A18;\n}\n\ntable.tableforum
+        div.rowguest a.avatar {\nbackground: transparent;\ndisplay: block;\ntext-align:
+        center;\n}\n\ntable.tableforum div.online {\nbackground-color: transparent;\ncolor:
+        transparent;\nborder-left: 1px solid transparent;\n}\n\ntable.tablepost tr.post
+        td.details a.username {\ncolor: #221A18;\nfont: oblique 99% Times,serif !important;\n}\n\ntable.tableforum
+        a {\ncolor: #221A18;\n}\n\ndiv.imagebox li:hover a {\n    border: 0px solid
+        #c00\n}\n\ndiv.imagebox li:hover {\n    padding: 4px;\n}\n</style></div><div
+        class=\"column span-300-alt first tabarticles\"><article itemscope itemtype=\"https://schema.org/NewsArticle\">\r\n\t\t\t\t\t<meta
+        itemscope itemprop=\"mainEntityOfPage\"  itemtype=\"https://schema.org/WebPage\"
+        itemid=\"https://www.moddb.com/news/edain-472-released\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"dateModified\" content=\"2024-03-14T21:20:04+0000\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"image\" content=\"https://media.moddb.com/images/articles/1/325/324037/ModDB-Button1.jpg\"
+        />\r\n\t\t\t\t\t<div itemprop=\"publisher\" itemscope itemtype=\"https://schema.org/Organization\">\r\n\t\t\t\t\t\t<meta
+        itemprop=\"name\" content=\"ModDB\" />\r\n\t\t\t\t\t\t<div itemprop=\"logo\"
+        itemscope itemtype=\"https://schema.org/ImageObject\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"url\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"width\" content=\"120\">\r\n\t\t\t\t\t\t\t<meta itemprop=\"height\"
+        content=\"60\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\t<div class=\"normalbox\"
+        id=\"readarticle\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=324037\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"https://rss.moddb.com/mods/edain-mod/news/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\" itemprop=\"headline\">Edain 4.7.2 Released!</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodyarticle clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t<p
+        class=\"introductiontext\" itemprop=\"description\">A new patch has been released,
+        focusing on bugfixes, ringhero tweaks, balance changes, and adding a new concept
+        for the Three Trolls.</p>\r\n\t\t\t\t\t\t\t\t<p class=\"introduction\">\r\n\t\t\t\t\tPosted
+        by <span itemprop=\"author\" itemscope itemtype=\"https://schema.org/Person\"><span
+        itemprop=\"name\"><a href=\"/members/entfernterverwandter\" class=\"verifiedicon\"
+        title=\"Mod Manager\" itemprop=\"url\">ElendilsCousin</a></span></span> on
+        <time datetime=\"2024-03-14T20:41:51+00:00\" itemprop=\"datePublished\">Mar
+        14th, 2024</time> \t\t\t\t</p>\r\n\t\t\t\t<div id=\"articlecontent\" itemprop=\"articleBody\"><p><em>Greetings,
+        companions of Edain!</em></p>\n<p><img src=\"https://media.moddb.com/images/articles/1/94/93010/auto/1attemptedainbanner223.jpg\"
+        alt=\"\" /></p>\n<div class=\"center\" style=\"text-align: center;\">\n<p>Today,
+        we have released Patch 4.7.2 of the Edain Mod.<br /><br /><strong>You can
+        now easily download this patch using the update function of the Edain launcher.<br
+        /><br />If you don't have an Edain version installed yet, you first have to
+        download the basic version as a complete package by clicking on the banner.
+        However, you will still have to use the update function of the Edain launcher
+        after downloading to patch the Edain mod to the latest version. Click Update
+        until no further version is available - this may take some time. </strong><br
+        /><br /><br /><a href=\"https://www.moddb.com/mods/edain-mod/downloads/edain-47\"
+        target=\"_blank\" title=\"Download Edain 4.7 - Mod DB\" rel=\"noopener\"><img
+        src=\"https://button.moddb.com/download/medium/257917.png\" alt=\"Edain 4.7\"
+        /></a><br /><br /><strong>If you have problems with the installation, then
+        have a look at our <a href=\"https://modding-union.com/index.php/board,22.0.html\"
+        target=\"_blank\" rel=\"noopener\" class=\"bbc_link\">support forums</a>!</strong></p>\n<p><br
+        /></p>\n<p><u><strong>Bugfixes</strong></u></p>\n</div>\n<p><br />4.7.2 brings
+        a number of bugfixes: The Worldbuilder, which could not be started in some
+        cases in the last version, can now be used again without errors. The Misty
+        Mountains AI has been reworked again so that it no longer spawns buildings
+        in the bottom left corner of the map. Many maps have been adjusted so that
+        infantry is now better lit, and much more.</p>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.moddb.com/images/articles/1/325/324037/auto/Pd6a6uu.png\"
+        alt=\"\" width=\"330\" height=\"175\" /><img src=\"https://media.moddb.com/images/articles/1/325/324037/auto/h6HO9ci.png\"
+        alt=\"\" width=\"330\" height=\"175\" /></p>\n<p><span style=\"font-size:
+        8pt;\"><em>Let there be light!</em></span><br /><br /><strong><u>The Three
+        Trolls</u></strong></p>\n</div>\n<p><br />The three trolls from The Hobbit
+        that Bilbo encounters on his journey have been given a new concept, further
+        emphasizing their status as predators with a retreat. They are now closely
+        linked to their hoard, which they can summon directly at level one, and which
+        in turn can reach higher levels over time. Their new ability, Treasure Haul,
+        plays a particularly important role here. You can read more details <a href=\"https://modding-union.com/index.php/topic,37229.msg490999.html#msg490999\"
+        target=\"_blank\" rel=\"noopener\" class=\"bbc_link\">here</a>, where we present
+        the changes in detail.</p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.moddb.com/images/articles/1/325/324037/auto/kIDOSQ5.png\"
+        alt=\"\" width=\"600\" height=\"337\" /></p>\n<p><br /></p>\n<p><br /></p>\n<p><u><strong>Ring
+        Heroes</strong></u></p>\n<p><br /></p>\n</div>\n<p>Over the last few years,
+        we've heard feedback that people felt not all Ring Heroes were on par with
+        each other. We have therefore taken steps to strengthen these Ring Heroes
+        so that no player leaves the ring behind because they may not want to be burdened
+        with the disadvantages of finding it. This mainly concerns Smaug, Arvedui,
+        and Gandalf the Corrupted:<br /><br /></p>\n<ul>\n<li>Gandalf the Corrupted:\n<ul>\n<li>Speed
+        increased by 25%</li>\n<li>HP increased from 3500 to 4500, self-healing doubled</li>\n<li>Ability
+        damage increased by up to +100%</li>\n</ul>\n</li>\n<li>Smaug:\n<ul>\n<li>No
+        longer passively sets the ground around him on fire</li>\n<li><em>Inner Flames</em>
+        can now be activated to set the ground around him on fire instead</li>\n<li>Sea
+        of Flames will always activate directly underneath Smaug, making it easier
+        to use</li>\n</ul>\n</li>\n<li>Arvedui:\n<ul>\n<li>Armor strengthened</li>\n<li>Small
+        AoE damage added to standard attacks</li>\n<li><em>The King's Demand</em>
+        now reduces a farm's income to 0, but grants powerful healing and +100% experience
+        to heroes in medium range until destroyed</li>\n<li>New ability: <em>My line
+        must not end!</em> at level 10</li>\n</ul>\n</li>\n</ul>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><br /><u><strong>Miscellaneous</strong></u></p>\n</div>\n<p><br
+        />Last but not least, 4.7.2 also brings several Quality of Life changes and
+        balance improvements. For example, more intense colors are now available in
+        the combat menu, which are easier to recognize on the minimap; the test hero
+        \"The Hidden One\" has been further optimized; and some new sounds and FX
+        have been added, for example for the Rallying Call. The focus of the balance
+        is on the Misty Mountains: Their economy was a bit too strong and therefore
+        received several nerfs, while on the other hand we implemented buffs for rarely
+        seen alternative outposts. <a href=\"https://modding-union.com/index.php/topic,37261.msg491358.html#msg491358\">You
+        can find all the details of the changes here.</a><br /><br /><br />Have fun
+        playing!</p></div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</article><div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!gamer.network,1013459,1&kv_1=news,single-player,multiplayer,fantasy,strategy,windows,pc&kv_2=battle-for-middle-earth-ii-rise-of-the-witch-king\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox commentbox\" id=\"comments\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"#commentform\"
+        class=\"addicon\"  title=\"Post comment\">Post comment</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Comments</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body\">\r\n\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"table tablecomments\">\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div id=\"8735200\"
+        class=\"row\">\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a
+        href=\"/members/winzler\" title=\"WinzLer\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3293/3292388/ecc98b62bf4d7a22614a608b1b07b019.jpg\"
+        alt=\"WinzLer\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/winzler\" class=\"author\" data-nameid=\"winzler\">WinzLer</a>
+        \ - <a href=\"#8735200\" style=\"color: inherit;\"><time datetime=\"2024-03-14T21:49:41+00:00\">Mar
+        14 2024</time></a> - 77 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>yes!\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8735200\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8735200\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8735200\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8735398\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/watcheroutofthewatwe\"
+        title=\"Watcheroutofthewater\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4509/4508849/images.jpeg\"
+        alt=\"Watcheroutofthewater\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/watcheroutofthewatwe\" class=\"author\" data-nameid=\"watcheroutofthewatwe\">Watcheroutofthewater</a>
+        \ - <a href=\"#8735398\" style=\"color: inherit;\"><time datetime=\"2024-03-15T05:50:22+00:00\">Mar
+        15 2024</time></a> - 56 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>A lot of very interesting changes.</p>\n<p>I'm
+        glad to see the Rhudaur Axe-Throwers will no longer level up so quickly. I
+        was always confused when I saw the AI toting Lvl5 Axe-Throwers around XD\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8735398\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8735398\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8735398\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8735442\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        title=\"ElendilsCousin\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1439/1438972/Elendil_Bard.png\"
+        alt=\"ElendilsCousin\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        class=\"author\" data-nameid=\"entfernterverwandter\">ElendilsCousin</a>  -
+        <a href=\"#8735442\" style=\"color: inherit;\"><time datetime=\"2024-03-15T08:00:59+00:00\">Mar
+        15 2024</time></a> - 696 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>In hindsight, we really should have
+        caught that one earlier^^\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8735442\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8735442&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+4
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8735710\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/sergiohudson1989\"
+        title=\"Eorl1121\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4776/4775198/FB_IMG_1708391565334.jpg\"
+        alt=\"Eorl1121\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/sergiohudson1989\" class=\"author\" data-nameid=\"sergiohudson1989\">Eorl1121</a>
+        \ - <a href=\"#8735710\" style=\"color: inherit;\"><time datetime=\"2024-03-15T16:48:49+00:00\">Mar
+        15 2024</time></a> - 2 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>very good changes<br />\nRegarding
+        The Hidden One, I wanted to know if in the future they will implement more
+        heroes similar to him but for the factions that cannot use the Elven Lord
+        category (Like the 4 evil factions, Imadris and Rohan) or if there is something
+        in their plans so that can be used freely with any faction.<br />\nI know
+        that the builders of all factions can be summoned, but the settlement buildings
+        of the 6 factions that I mentioned, the heroes and all the units that come
+        from buildings in settlements or outposts cannot be accessed in any way .<br
+        />\nAmong other things, the Misty Mountains faction only allows you to play
+        with Gundabad and Goblin-Town, leaving out Moria.<br />\nIf there is a way
+        The Hidden One can be used freely that I don't know about, I'd like to know.<br
+        />\nFor someone like me who grew up with Lotr games, this mod is a caress
+        to the soul, I love it and I really appreciate the time that the entire Edain
+        team dedicates to it, thank you.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8735710\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8735710\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8735710\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8735853\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/officialnecro\"
+        title=\"officialNecro\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/4/3248/3247540/GIF_Project_1.png\"
+        alt=\"officialNecro\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Creator</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/officialnecro\" class=\"author\"
+        data-nameid=\"officialnecro\">officialNecro</a>  - <a href=\"#8735853\" style=\"color:
+        inherit;\"><time datetime=\"2024-03-15T20:28:57+00:00\">Mar 15 2024</time></a>
+        - 1,383 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Hey, the problem you're encountering
+        will be partially solved next patch. You will be able to select the Hidden
+        One for evil faction as we are loosening restriction on custom heroes. However,
+        it is not possible to do so for Imladris and Rohan as they were not part of
+        the original factions. </p>\n<p>Either way, you can circumvent this issue
+        by clicking on the custom hero you want to play and then pressing the first
+        letter of its name. So for The Hidden One you would have to press its name
+        and then press T.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"8735853\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8735853&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+5
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8735891\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/sergiohudson1989\"
+        title=\"Eorl1121\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4776/4775198/FB_IMG_1708391565334.jpg\"
+        alt=\"Eorl1121\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/sergiohudson1989\" class=\"author\" data-nameid=\"sergiohudson1989\">Eorl1121</a>
+        \ - <a href=\"#8735891\" style=\"color: inherit;\"><time datetime=\"2024-03-15T21:30:54+00:00\">Mar
+        15 2024</time></a> - 2 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Oh<br />\nI wasn't aware of that
+        feature<br />\nThanks:')\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8735891\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8735891\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8735891\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737003\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/lesournois\"
+        title=\"LeSournois\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"LeSournois\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/lesournois\" class=\"author\" data-nameid=\"lesournois\">LeSournois</a>
+        \ - <a href=\"#8737003\" style=\"color: inherit;\"><time datetime=\"2024-03-17T12:39:03+00:00\">Mar
+        17 2024</time></a> - 8 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Once again, a very nice update which
+        dedicate itself to the core priorities of the general balance of the game.
+        I was thinking that the economy of the Misty Mountains was too strong indeed
+        !</p>\n<p>So sad sometimes to see some youtubers stopping themselves from
+        exploring this mod because of some few bugs when the general qualit\xE9 of
+        it all is incredible.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"8737003\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737003\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8737003\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+3
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737226\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/gillespiecoda\"
+        title=\"Bladeisbest\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4373/4372356/avatar.jpg\"
+        alt=\"Bladeisbest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/gillespiecoda\" class=\"author\" data-nameid=\"gillespiecoda\">Bladeisbest</a>
+        \ - <a href=\"#8737226\" style=\"color: inherit;\"><time datetime=\"2024-03-17T18:28:44+00:00\">Mar
+        17 2024</time></a> - 9 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Any chance we will see the different
+        modes like \"Legendary Heroes\" not bug out the CP. Many of the maps still
+        give you 8x the amount you should (12000) and in turn when the CP bugs out,
+        the Heroes do not get their \"Legendary Hero\" stats as they die just as fast
+        as they do in normal Skirmish.. This much I have tested. You can for sure
+        tell when they have those \"Legendary\" stats as they are nowhere near as
+        squishy. </p>\n<p>It seems to differ depending on the faction, starting point,
+        map or it could just be random. It would also be nice if its possible to see
+        the stat differences on heroes in such modes if that's even possible. Overall,
+        I will always vouch for Edain as I have always loved the mod! Keep up the
+        creativity. :)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"8737226\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737226\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8737226\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737409\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        title=\"ElendilsCousin\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1439/1438972/Elendil_Bard.png\"
+        alt=\"ElendilsCousin\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        class=\"author\" data-nameid=\"entfernterverwandter\">ElendilsCousin</a>  -
+        <a href=\"#8737409\" style=\"color: inherit;\"><time datetime=\"2024-03-17T23:26:06+00:00\">Mar
+        18 2024</time></a> - 696 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>You can see the difference in damage
+        that is listed when you hover over the hero - Legendary Heroes will give you
+        +100% damage, so the values shown there will be doubled.</p>\n<p>As for the
+        bug, unfortunately this one is really difficult to fix. We haven't been able
+        to pinpoint what precisely triggers it, and as long as we don't know the cause
+        of the bug, we can't fix it unless we were to rework the entire gamemode.
+        It's what makes the cp bug one of the more frustrating things to deal with.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8737409\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737409&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737455\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/gillespiecoda\"
+        title=\"Bladeisbest\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4373/4372356/avatar.jpg\"
+        alt=\"Bladeisbest\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/gillespiecoda\" class=\"author\" data-nameid=\"gillespiecoda\">Bladeisbest</a>
+        \ - <a href=\"#8737455\" style=\"color: inherit;\"><time datetime=\"2024-03-18T01:19:07+00:00\">Mar
+        18 2024</time></a> - 9 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I see thank you for the information!
+        :)\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\" data-id=\"8737455\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"#commentform\" class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737455\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8737455\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737279\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/radhruinamandil\"
+        title=\"RadhruinAmandil\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4427/4426688/Damrod2.png\"
+        alt=\"RadhruinAmandil\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/radhruinamandil\" class=\"author\" data-nameid=\"radhruinamandil\">RadhruinAmandil</a>
+        \ - <a href=\"#8737279\" style=\"color: inherit;\"><time datetime=\"2024-03-17T20:04:17+00:00\">Mar
+        17 2024</time></a> - 8 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Wonderful work! :)</p>\n<p>There
+        are some things that still kicking me out of the magic though:</p>\n<p>IA
+        buildings and units in maps like Belfalas or Dol Amroth (when you start outside
+        the fortress in WOTR) should be allied to the player good forces approaching
+        the cities, instead of being tagged as enemies and sloughtered in a brutal
+        genocide.</p>\n<p>Aragorn gimli and legolas, in WOTR mode, could be called
+        during real time battles and then remain in strategy phase, giving you the
+        chance to manage different \"three hunters\" unit in different location on
+        the map.</p>\n<p>Angmar IA often get slow and freezing units now and then</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8737279\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737279\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8737279\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737411\" class=\"row rowdeveloper reply1\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        title=\"ElendilsCousin\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1439/1438972/Elendil_Bard.png\"
+        alt=\"ElendilsCousin\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        class=\"author\" data-nameid=\"entfernterverwandter\">ElendilsCousin</a>  -
+        <a href=\"#8737411\" style=\"color: inherit;\"><time datetime=\"2024-03-17T23:29:35+00:00\">Mar
+        18 2024</time></a> - 696 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>What does IA stand for? Do you mean
+        AI, a computer enemy?</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span class=\"actions\"
+        data-id=\"8737411\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\" class=\"entericon\"
+        \ title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737411&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+2
+        votes</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737580\" class=\"row reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/radhruinamandil\"
+        title=\"RadhruinAmandil\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/5/4427/4426688/Damrod2.png\"
+        alt=\"RadhruinAmandil\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/radhruinamandil\" class=\"author\" data-nameid=\"radhruinamandil\">RadhruinAmandil</a>
+        \ - <a href=\"#8737580\" style=\"color: inherit;\"><time datetime=\"2024-03-18T08:40:27+00:00\">Mar
+        18 2024</time></a> - 8 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>yes, my mistake. I said AI in my
+        country language.<br />\nI mean AI (computer enemy) in Angmar, and in maps
+        like belfalas or dol amroth i was referring to NPC\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8737580\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737580\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8737580\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8737677\" class=\"row rowdeveloper reply2\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        title=\"ElendilsCousin\" class=\"avatar\"><img src=\"https://media.moddb.com/images/members/2/1439/1438972/Elendil_Bard.png\"
+        alt=\"ElendilsCousin\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t<span
+        class=\"developer\">Author</span>\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t<span
+        class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a href=\"/members/entfernterverwandter\"
+        class=\"author\" data-nameid=\"entfernterverwandter\">ElendilsCousin</a>  -
+        <a href=\"#8737677\" style=\"color: inherit;\"><time datetime=\"2024-03-18T12:57:05+00:00\">Mar
+        18 2024</time></a> - 696 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>Ah, I see. I am not 100% sold on
+        the Dol Amroth suggestion, but we will look into the Three Hunters. I can't
+        say that I have encountered the bug you're describing with Angmar before,
+        do you have any more details on that?\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8737677\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8737677&amp;ca=t\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<div
+        id=\"8738297\" class=\"row\">\r\n\t\t\t\t\t\t<div class=\"clearer\"></div>
+        \r\n\t\t\t\t\t\t<div class=\"avatarholder\">\r\n\t\t\t\t\t\t\t<a href=\"/members/lesournois\"
+        title=\"LeSournois\" class=\"avatar\"><img src=\"https://static.moddb.com/html/cutoff/images/default/error_50x50.png\"
+        alt=\"LeSournois\" width=\"50\" height=\"50\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t\t<span class=\"heading\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/members/lesournois\" class=\"author\" data-nameid=\"lesournois\">LeSournois</a>
+        \ - <a href=\"#8738297\" style=\"color: inherit;\"><time datetime=\"2024-03-19T12:52:22+00:00\">Mar
+        19 2024</time></a> - 8 comments\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"comment\">\r\n\t\t\t\t\t\t\t\t<p>I see there are some sound animations
+        rework.<br />\nJust maybe it lacks a sound animation for the spell \"Drums
+        in the Deep\" for the Misty Mountains.\n</p>\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+        class=\"actions\" data-id=\"8738297\">\r\n\t\t\t\t\t\t\t\t<a href=\"#commentform\"
+        class=\"entericon\"  title=\"Reply\">Reply</a> <a href=\"/messages/ajax/action/?action=karmagood&amp;sitearea=comment&amp;siteareaid=8738297\"
+        class=\"karmagoodicon 4fc576f229ecff3d71153c266bacefeekarmagood\" rel=\"nofollow\"
+        title=\"Good karma\">Good karma</a> <a href=\"/messages/ajax/action/?action=karmabad&amp;sitearea=comment&amp;siteareaid=8738297\"
+        class=\"karmabadicon 1f1ac0d1ea02af982bbea53ed520bdd9karmabad\" rel=\"nofollow\"
+        title=\"Bad karma\">Bad karma</a><span class=\"karma\" title=\"Karma\">+1
+        vote</span>\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/mods/edain-mod/news/edain-472-released/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"a85525a3bfd96117fe5200525ab6c96d\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabarticles\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"modsinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=mods&amp;siteareaid=10679\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Unfollow\">Unfollow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=mods&amp;siteareaid=10679\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"/mods/edain-mod/downloads\" class=\"downloadautotoggle button buttonlarge
+        buttonfull\"><span style=\"float: right; font-weight: normal;\">574K</span><span>Download</span></a><div
+        class=\"downloadon\" style=\"display: none;\"><a href=\"/mods/edain-mod/downloads/edain-47\"
+        class=\"button buttonfull\"><span style=\"float: right;\">FULL</span><span>Edain
+        4.7</span><hr><span style=\"font-weight: normal; float: right;\">14.5K</span><span
+        style=\"font-weight: normal;\">2.62gb</span></a><a href=\"/mods/edain-mod/downloads/edain-mod-launcher-1200-edain-demo-required\"
+        class=\"button buttonfull\"><span style=\"float: right;\">PATCH</span><span>Edain
+        Mod Launcher 1.3.0.2 [Edain Demo required]</span><hr><span style=\"font-weight:
+        normal; float: right;\">95.1K</span><span style=\"font-weight: normal;\">31.54mb</span></a><div
+        style=\"text-align: center;\">Explore 3 more <a href=\"/mods/edain-mod/downloads\">downloads</a>
+        or <a href=\"/mods/edain-mod/downloads/add\">add content</a>.</div></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king\"><img
+        src=\"https://media.moddb.com/images/games/1/11/10009/rotwk_icon.png\" alt=\"Battle
+        for Middle-earth II: Rise of the Witch King\" width=\"32\" height=\"32\" /></a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Game</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king\">Battle
+        for Middle-earth II: Rise of the Witch King</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/edainmod-dev-team\">Edain
+        Team</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=modsgroup500\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"http://www.modding-union.com/\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Modding-union.com</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2015-03-27\">Released 2015</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Mod watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=mods&amp;siteareaid=10679\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Unfollow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tThis
+        mod is NOT using RTX Remix. Learn more about <a href=\"/news/rtx-remix-on-moddb\">ModDB's
+        collaboration with the Remix community</a> to organize all compatible games,
+        and <a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king#rtxremix\">Battle
+        for Middle-earth II: Rise of the Witch King's</a> support for RTX. <a href=\"/platforms/rtx/set\"
+        class=\"togglertxinfo\">Hide this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"articlesprofilemenu\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">News</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Tags</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/edain\">Edain</a>, <a href=\"/tags/release\">Release</a>,
+        <a href=\"/tags/three-trolls\">Three Trolls</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/mods/edain-mod/news\">News</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=324037\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Views</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/statistics/data/visit/articles/324037\"
+        rel=\"iframe=true;innerHeight=525;innerWidth=830\" class=\"thickbox\" title=\"Edain
+        4.7.2 Released! Statistics\">2,018 (26 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fmods%2Fedain-mod%2Fnews%2Fedain-472-released&title=Edain+4.7.2+Released%21+news\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Edain%204.7.2%20Released%21%20news&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fmods%2Fedain-mod%2Fnews%2Fedain-472-released\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Edain+4.7.2+Released%21+news+https%3A%2F%2Fwww.moddb.com%2Fmods%2Fedain-mod%2Fnews%2Fedain-472-released+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fmods%2Fedain-mod%2Fnews%2Fedain-472-released&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fmods%2Fedain-mod%2Fnews%2Fedain-472-released&quote=Edain+4.7.2+Released%21+news&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fmods%2Fedain-mod%2Fnews%2Fedain-472-released\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n
+        \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"nextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n <div class=\"normalbox
+        linksbox\" id=\"menulinksmods\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Mods</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/mods/edain-mod\" title=\"Edain Mod\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/mods/1/11/10679/crop_120x90/ModDB-Button.1.jpg\"
+        alt=\"Edain Mod\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/mods/edain-mod\" class=\"heading\">Edain Mod</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king\">Battle
+        for Middle-earth II: Rise of the Witch King</a> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksgames\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Games</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king\" title=\"Battle
+        for Middle-earth II: Rise of the Witch King\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/11/10009/crop_120x90/s30339_pc_31.jpg\"
+        alt=\"Battle for Middle-earth II: Rise of the Witch King\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t\t\t\t<a href=\"/games/battle-for-middle-earth-ii-rise-of-the-witch-king\"
+        class=\"heading\">Battle for Middle-earth II: Rise of the Witch King</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tReal Time Strategy \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksgroups\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Groups</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/company/edainmod-dev-team\" title=\"Edain Team\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/groups/1/1/500/crop_120x90/Edain.png\"
+        alt=\"Edain Team\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/company/edainmod-dev-team\" class=\"heading\">Edain Team</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tDeveloper &amp; Publisher \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_3\" data-dfp-sizes=\"300x250\"
+        id=\"div-ga-MODDB_MPU_3_3\"></div>\n<script>\n$(document).ready(function()
+        {\nif($(\".column.span-300\").length) {\n\tcolumnBottom = $(\".column.span-300\").position().top
+        + $(\".column.span-300\").outerHeight(true) + ($(\".column.span-300 .DBsupporter\").length*600)
+        + ($(\".column.span-300 .lazyload\").length*250);\n\tfooterTop = $(\"footer\").position().top
+        - 250;\n\twindowSpacing = $(window).height() + 250;\n\tplacements = footerTop
+        > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) :
+        0;\n\t\n\tfor(x = 1; x <= placements; x++) {\n\t\t$(\"<div class=\\\"lazyload\\\"
+        data-dfp-id=\\\"ModDB_Lazy_load_HP_MPU\\\" data-dfp-sizes=\\\"300x250\\\"
+        id=\\\"div-ga-MODDB_LAZYLOAD_\"+(x+3)+\"\\\" style=\\\"clear: both; margin-top:
+        \"+windowSpacing+\"px; text-align: center;\\\"></div>\").appendTo(\".column.span-300\");\n\t}\n}\n});\n</script></div>
+        \r\n</div>\r\n</div> \t<div style=\"clear: both; height: 1em;\"></div><!--
+        IE6 Hack -->\r\n</div>\r\n\r\n<footer><div id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a
+        href=\"https://www.dbolical.com\" class=\"network dbolical\" target=\"_blank\"
+        title=\"DBolical - Entertainment Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a
+        id=\"csconsentlink\" style=\"cursor: pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms
+        of Use</a> | <a href=\"/privacy-policy\" style=\"padding-right: 0\">Privacy
+        Policy</a></span>\r\n\t\t<span class=\"links\"><a href=\"/blog\">Blog</a>
+        | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a> | <a
+        href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a> | <a
+        href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod support
+        for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">7195 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king\",\"name\":\"Battle
+        for Middle-earth II: Rise of the Witch King\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king/mods\",\"name\":\"Mods\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/mods/edain-mod\",\"name\":\"Edain
+        Mod\"}},{\"@type\":\"ListItem\",\"position\":5,\"Item\":{\"@id\":\"https://www.moddb.com/mods/edain-mod/news\",\"name\":\"News\"}},{\"@type\":\"ListItem\",\"position\":6,\"Item\":{\"@id\":\"https://www.moddb.com/mods/edain-mod/news/edain-472-released\",\"name\":\"Edain
+        4.7.2 Released!\",\"image\":\"https://media.moddb.com/images/articles/1/325/324037/ModDB-Button1.jpg\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=mods\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"mods\",\r\n\t\t\t\t\t\ttags:
+        [\"news\",\"single-player\",\"multiplayer\",\"fantasy\",\"strategy\",\"windows\",\"pc\"],\r\n\t\t\t\t\t\tgames:
+        [\"battle-for-middle-earth-ii-rise-of-the-witch-king\"],\r\n\t\t\t\t\t\tplayers:
+        [\"single\",\"multi\"],\r\n\t\t\t\t\t\ttriggers: [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag
+        = window.googletag || { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1713112818\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1713112818\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".4fc576f229ecff3d71153c266bacefeekarmagood\").saveUpdate(\"karmagood\",
+        viewComment);\n$(\".1f1ac0d1ea02af982bbea53ed520bdd9karmabad\").saveUpdate(\"karmabad\",
+        viewComment);\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n\n\t\t\t\t\t$(\".downloadautotoggle\").click(function(){\n\t\t\t\t\t\t$(\".downloadon\").slideToggle();\n\t\t\t\t\t\treturn
+        false;\n\t\t\t\t\t});\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\tfunction cookieScript(e)
+        {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8745230b6c509f7e-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 14 Apr 2024 16:40:19 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=J9zxFFfGPkVmOfxemdbUFPQxblSZHlxEoDdX3CvsAM2MPVnp6k2nqe3hS8dhn3u%2BbH9ULNBfYZguE8M9F6%2FxDQ%2F7EMGSED4SXcHTnE4Sg7qECMxspUFJWByM2fUFhH%2Buf9LW3VCOLU59sqU%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '92853'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=a4adfbadf1c8b0f134aa82413523f288; expires=Sun, 14-Apr-2024 16:50:18
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=a4adfbadf1c8b0f134aa82413523f288; expires=Sun, 14-Apr-2024 16:50:18
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

@@ -25,10 +25,13 @@ class FakeResponse:
 V = TypeVar("V")
 
 
-def sample_list(l: List[V], k: int) -> List[V]:
+def sample_list(l: List[V], k: int, randomize: bool = False) -> List[V]:
     sample = min(k, len(l))
     if l:
-        return random.sample(l, sample)
+        if randomize:
+            return random.sample(l, sample)
+
+        return l[1:sample]
 
     return []
 

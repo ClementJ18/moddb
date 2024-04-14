@@ -1117,8 +1117,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=8l19h6fjGvWA1r3RgmfTnMUZF2I1DuvaeQOEyAU2BXMAspvuEgsoWoY0P4x6enbpZyuW2ORg%2BBzADi6q2NDz9hGk5IoMoprh1iEglhnKQpBbLC5LMRN5ySgFV%2Bg8DsSbVbQJ7xbnYmG3XZc%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -1632,8 +1630,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4c%2FvZg8onLKE%2FfdQAWS5w22BlEbwASYEjzrzflWx5pVPHBushP5uNJrgLyDuiAsNk5iu%2FZCao4Xn%2FSJ7lgDh8NWHNIWf0xXmJ%2B%2BcUm3BBsphifIFxYQYkoLxBv5rpfDPcQv0OJB2wO3tK9k%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -2147,8 +2143,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=wNWM1ztGcV6KYWDJMnfrZoV8KqzaQTRNJopRg5rgeEiqXpMpnCyUl2eNd1GzVW7Xj3OG1fHIzpIBJYA%2BJl8LystbTs%2Fn26oswgfj%2Bu798jbtD7ElJzw%2BPokxkOJHTpPnbBPziQCGQF5tufQ%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -2612,8 +2606,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=84LL6XokJ%2BCgRYIWNxGQs6R79YdvQGuAmQoi7hG7QXhiLkeY0nEhmPvR4rmz21QaMQxqmGQUDd820gbCgGFn5DeNM7QyPjah%2F1GOWLu3zwPuQsZB%2BkRYqFl%2Bzy2%2BbKjPuDqWe0%2FDAfVRLOM%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -3200,8 +3192,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=RPp6N14N6SQlgoSJvf6bwkpeT89BG9Vx87WUpmbonAYcihyEmI9z%2FN87DOa%2BzGDxpYG%2FG0KcrS87TEk52shf62BHyZbcyiOOwWQIQ17xAdxgN1EL6p9wpP0toWQiqGMCaJd0nbScIa9ViXo%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -4536,6 +4526,583 @@ interactions:
       - frame-ancestors 'self' moddb.com *.moddb.com
       set-cookie:
       - masterchief=da371c8e546f10a9af4ff46ddf78cc3e; expires=Sun, 14-Apr-2024 11:26:07
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/games/fallout-4/tutorials/fallout-4-ini-tweaks
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Fallout
+        4 INI Tweaks tutorial - ModDB</title>\r\n\t<meta charset=\"utf-8\">\r\n\t
+        \r\n\t<meta name=\"keywords\" content=\"fallout 4, fallout 4 ini tweaks, articles,
+        information, data, gossip, feature, read, view, discuss\" />\r\n\t<meta name=\"description\"
+        content=\"Just some INI tweaks for Fallout 4 to make performance better. Part
+        of larger guide directed to optimization.\" />\r\n\t<meta name=\"robots\"
+        content=\"max-image-preview:large\" />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Fallout 4 INI Tweaks tutorial\" />\r\n\t<meta
+        property=\"og:description\" content=\"Just some INI tweaks for Fallout 4 to
+        make performance better. Part of larger guide directed to optimization.\"
+        />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\" />\r\n\t<meta property=\"og:type\"
+        content=\"article\" /> \r\n\t<meta property=\"og:url\" content=\"https://www.moddb.com/games/fallout-4/tutorials/fallout-4-ini-tweaks\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/articles/1/303/302828/INI_Tweaks_Settings_Banner.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Fallout 4 INI Tweaks tutorial\" />\r\n\t<meta property=\"twitter:description\"
+        content=\"Just some INI tweaks for Fallout 4 to make performance better. Part
+        of larger guide directed to optimization.\" />\r\n\t<meta property=\"twitter:url\"
+        content=\"https://www.moddb.com/games/fallout-4/tutorials/fallout-4-ini-tweaks\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/articles/1/303/302828/INI_Tweaks_Settings_Banner.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/games/fallout-4/tutorials/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Fallout 4 INI Tweaks tutorial feed\"
+        />\t<script async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"Bethesda
+        Softworks\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single Player\",\"Science
+        Fiction\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Blockbuster\",\"RPG\"],\"name\":
+        \"Fallout 4\",\"platforms\":[\"PS4\",\"Oculus Quest\",\"Windows\",\"PC\",\"Xbox
+        One\"]}],\r\n\t\t\t\"article\":{\"date_published\":\"2022-02-14T09:29:17+01:00\",\"author\":\"FairFight\",\"type\":\"Guide\"},\r\n\t\t\t\"classifications_watson\":
+        {\r\n\t\t\t\"categories\": \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\"
+        }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/highlight.css,css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1069</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Fallout 4 INI Tweaks tutorial</h1>\r\n\t\t<a
+        href=\"/\" class=\"logo\" title=\"ModDB Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a href=\"/\">HOME</a></li>\r\n\t\t\t<li><a
+        href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a href=\"/week\"
+        title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\" title=\"New
+        this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New this
+        year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div class=\"column span-all tabtutorials\">\t<div class=\"headerbox\"
+        style=\"background-image: url(https://media.moddb.com/images/games/1/42/41925/f4_header.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2><a
+        href=\"/games/fallout-4\">Fallout 4</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<a
+        href=\"/company/bethesda-softworks\">Bethesda Softworks</a> | <time datetime=\"2015-11-09\">Released
+        2015</time>\t\t\t\t</h3>\r\n\t\t\t\t<span class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul
+        class=\"menu\">\r\n\t\t\t\t<li class=\"firsttab\"><a href=\"/games/fallout-4\">summary</a></li><li
+        class=\"\"><a href=\"/games/fallout-4/articles\">articles</a></li><li class=\"on\"><a
+        href=\"/games/fallout-4/tutorials\">tutorials</a></li><li class=\"\"><a href=\"/games/fallout-4/reviews\">reviews</a></li><li
+        class=\"\"><a href=\"/games/fallout-4/downloads\">files</a></li><li class=\"\"><a
+        href=\"/games/fallout-4/addons\">addons</a></li><li class=\"\"><a href=\"/games/fallout-4/mods\">mods</a></li><li
+        class=\"\"><a href=\"/games/fallout-4/videos\">videos</a></li><li class=\"\"><a
+        href=\"/games/fallout-4/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"headernormalbox normalbox\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<p>As
+        the sole survivor of Vault 111, you enter a world destroyed by nuclear war.
+        Every second is a fight for survival, and every choice is yours. Only you
+        can rebuild and determine the fate of the Wasteland. Welcome home.</p>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabtutorials\"><article itemscope itemtype=\"https://schema.org/TechArticle\">\r\n\t\t\t\t\t<meta
+        itemscope itemprop=\"mainEntityOfPage\"  itemtype=\"https://schema.org/WebPage\"
+        itemid=\"https://www.moddb.com/tutorials/fallout-4-ini-tweaks\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"dateModified\" content=\"2022-02-14T10:03:39+0000\" />\r\n\t\t\t\t\t<meta
+        itemprop=\"image\" content=\"https://media.moddb.com/images/articles/1/303/302828/INI_Tweaks_Settings_Banner.png\"
+        />\r\n\t\t\t\t\t<div itemprop=\"publisher\" itemscope itemtype=\"https://schema.org/Organization\">\r\n\t\t\t\t\t\t<meta
+        itemprop=\"name\" content=\"ModDB\" />\r\n\t\t\t\t\t\t<div itemprop=\"logo\"
+        itemscope itemtype=\"https://schema.org/ImageObject\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"url\" content=\"https://static.moddb.com/cutoff/images/default/splash.png\">\r\n\t\t\t\t\t\t\t<meta
+        itemprop=\"width\" content=\"120\">\r\n\t\t\t\t\t\t\t<meta itemprop=\"height\"
+        content=\"60\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\t<div class=\"normalbox\"
+        id=\"readarticle\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t<span
+        class=\"options\">\r\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=302828\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a> <a href=\"https://rss.moddb.com/games/fallout-4/tutorials/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\" itemprop=\"headline\">Fallout 4 INI Tweaks</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodyarticle clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t<p
+        class=\"introductiontext\" itemprop=\"description\">Just some INI tweaks for
+        Fallout 4 to make performance better. Part of larger guide directed to optimization.</p>\r\n\t\t\t\t\t\t\t\t<p
+        class=\"introduction\">\r\n\t\t\t\t\tPosted by <span itemprop=\"author\" itemscope
+        itemtype=\"https://schema.org/Person\"><span itemprop=\"name\"><a href=\"/members/fairfight\"
+        itemprop=\"url\">FairFight</a></span></span> on <time datetime=\"2022-02-14T08:29:17+00:00\"
+        itemprop=\"datePublished\">Feb 14th, 2022</time> - <span itemprop=\"proficiencyLevel\">Basic</span>
+        Other \t\t\t\t</p>\r\n\t\t\t\t<div id=\"articlecontent\" itemprop=\"articleBody\"><h3>Part
+        of my Performance Opitimization Guide for Fallout 4 that should improve frame
+        rate in game for those with low-end and mid-end PCs.</h3>\n<p><br />Resolution
+        change: Fallout4Prefs.ini -&gt; [DISPLAY]:</p>\n<pre><code class=\"lang-\">iSize
+        H=768iSize W=1366</code></pre>\n<p>Turning off VSync: Fallout4.ini, Fallout4Custom.ini,
+        Fallout4Prefs.ini -&gt; [DISPLAY]:</p>\n<pre><code class=\"lang-\">iPresentInterval=0</code></pre>\n<p>Field
+        of view: Fallout4.ini, Fallout4Custom.ini -&gt; [DISPLAY]:</p>\n<pre><code
+        class=\"lang-\">fDefaultWorldFOV=70\nfDefault1stPersonFOV=80</code></pre>\n<p>Sun
+        update time: Fallout4.ini, Fallout4Custom.ini -&gt; [DISPLAY]:</p>\n<pre><code
+        class=\"lang-\">fSunShadowUpdateTime=0\nfSunUpdateThreshold=0</code></pre>\n<p>Number
+        of CPU cores: Fallout4.ini, Fallout4Custom.ini -&gt; [GENERAL]:</p>\n<pre><code
+        class=\"lang-\">iNumHWThreads=4</code></pre>\n<p>Refresh rate: Fallout4.ini,
+        Fallout4Custom.ini -&gt; [HAVOK]:</p>\n<pre><code class=\"lang-\">For 60hz
+        monitors:\nfMaxTime=0.01666666\nFor 144hz monitors:\nfMaxTime=0.00694444</code></pre>\n<p>Preculling
+        and combined objects: Fallout4.ini, Fallout4Custom.ini and Fallout4Prefs.ini
+        -&gt; [GENERAL]:</p>\n<pre><code class=\"lang-ini\">bPreCulledObjectsEnabled=1\nbUseCombinedObjects=1\nbUsePreCreatedSCOL=1</code></pre>\n<p>Multithreading
+        optimization: Fallout4.ini, Fallout4Custom.ini -&gt; [DISPLAY]:</p>\n<pre><code
+        class=\"lang-\">bDynamicObjectQueryManager=1\nbMultiThreadedRendering=1\nbMultiThreadedAccumulation=1\nbMultiThreadedRenderingUNP=1</code></pre>\n<p>[Optional]
+        Papyrus settings: Fallout4.ini, Fallout4Custom.ini -&gt; [PAPYRUS]:</p>\n<pre><code
+        class=\"lang-\">bEnableLogging=0bEnableProfiling=0\nbEnableTrace=0\nbLoadDebugInformation=0\nfUpdateBudgetMS=1.0\nfExtraTaskletBudgetMS=1.0\nfPostLoadUpdateTimeMS=300.0</code></pre>\n<p>Antialiasing:
+        Fallout4Prefs.ini -&gt; [DISPLAY]</p>\n<pre><code class=\"lang-\">Performance:
+        \nsAntiAliasing=TAA (best quality AA)\nMore performance:\nsAntiAliasing=FXAA
+        (medium quality AA)\nMaximum performance:\nsAntiAliasing=0 (AA disabled)</code></pre>\n<p>TAA
+        Quality: Fallout4.ini, Fallout4Custom.ini -&gt; [DISPLAY]:</p>\n<pre><code
+        class=\"lang-\">fTAAPostSharpen=0.3\nfTAASharpen=1.3\nfTAAHighFreq=0.7\nfTAALowFreq=0.5\nfTAAPostOverlay=0.3</code></pre>\n<p>Anisotropy:
+        Fallout4Prefs.ini -&gt; [DISPLAY]:</p>\n<pre><code class=\"lang-\">iMaxAnisotropy=0</code></pre>\n<p>Ambient
+        occlusion: Fallout4Prefs.ini -&gt; [DISPLAY]</p>\n<pre><code class=\"lang-\">bSAOEnable=0</code></pre>\n<p>HBAO
+        quality: Fallout4Prefs.ini -&gt; [NVHBAO]:</p>\n<pre><code class=\"lang-\">bEnable=1\nfBackgroundAOViewDepth=7000.0000\nbBackgroundAOEnable=1\nfDepthThresholdSharpness=100.0000\nfDepthThresholdMaxViewDepth=7000.0000\nbDepthThresholdEnable=1\niDepthClampModeEnum=0\nfCoarseAO=0.9000fDetailAO=0.2500\nfBlurSharpnessProfileBackgroundViewDepth=1.0000\nfBlurSharpnessProfileForegroundViewDepth=0.0000\nfBlurSharpnessProfileForegroundSharpnessScale=1.0000\nbBlurSharpnessProfileEnable=1\nfBlurSharpness=16.0000\niBlurRadiusEnum=1\nbBlurEnable=1\nfPowerExponent=3.1000\nfBias=0.1000fRadius=0.7000</code></pre>\n<p>NVFlex
+        disable: Fallout4.ini, Fallout4Custom.ini -&gt; [NVFlex]:</p>\n<pre><code
+        class=\"lang-\">bNVFlexDrawDebris=0\nNVFlexEnable=0\nNVFlexInstanceDebris=0</code></pre>\n<p>Depth
+        of field: Fallout4Prefs.ini -&gt; [IMAGESPACE]:</p>\n<pre><code class=\"lang-\">bDoDepthOfField=0\nbScreenSpaceBokeh=0</code></pre>\n<p>Motion
+        blur: Fallout4Prefs.ini -&gt; [IMAGESPACE]:</p>\n<pre><code class=\"lang-\">bMBEnable=0</code></pre>\n<p>Godrays:
+        Fallout4Prefs.ini -&gt; [DISPLAY]:</p>\n<pre><code class=\"lang-\">bVolumetricLightingEnable=0</code></pre>\n<p>Screen
+        space tweaks: Fallout4Prefs.ini -&gt; [LIGHTINGSHADER]:</p>\n<pre><code class=\"lang-\">bScreenSpaceReflections=1\nbScreenSpaceSubsurfaceScattering=0</code></pre>\n<p>Blood
+        screen splatter: Fallout4.ini, Fallout4Custom.ini -&gt; [ SCREENSPLATTER]:</p>\n<pre><code
+        class=\"lang-\">bBloodSplatterEnabled=0</code></pre>\n<p>Textures tweaks:
+        Fallout4.ini,Fallout4Custom.ini -&gt; [GENERAL]:</p>\n<pre><code class=\"lang-\">iTextureDegradeDistance0=1600\niTextureDegradeDistance1=3000\niTextureUpgradeDistance0=1200\niTextureUpgradeDistance1=2400</code></pre>\n<p>Textures
+        bug solution: Fallout4Prefs.ini -&gt; [DISPLAY]:</p>\n<pre><code class=\"lang-\">iTexMipMapSkip=2</code></pre>\n<p>Water
+        textures: Fallout4Prefs.ini -&gt; [WATER]:</p>\n<pre><code class=\"lang-\">bUseWaterDepth=0\nbUseWaterDisplacements=0\nbUseWaterReflections=0\nbUseWaterRefractions=0</code></pre>\n<p>Wetness
+        effect: Fallout4Prefs.ini -&gt; [DISPLAY]:</p>\n<pre><code class=\"lang-\">bEnableWetnessMaterials=0</code></pre>\n<p>Grass
+        quality: Fallout4.ini, Fallout4Custom.ini -&gt; [GRASS]:</p>\n<pre><code class=\"lang-\">bAllowCreateGrass=1\nbAllowLoadGrass=0\nbDrawShaderGrass=1\nfGrassFadeRange=4000\niMaxGrassTypesPerTexure=2\niMinGrassSize=70</code></pre>\n<p>Grass
+        distance: Fallout4Prefs.ini -&gt; [GRASS]:</p>\n<pre><code class=\"lang-\">fGrassMaxStartFadeDistance=4000.0000\nfGrassMinStartFadeDistance=0.0000\nfGrassStartFadeDistance=4000.0000</code></pre>\n<p>Shadows
+        quality: Fallout4Prefs.ini -&gt; [DISPLAY]:</p>\n<pre><code class=\"lang-\">fBlendSplitDirShadow=0\nuiOrthoShadowFilter=2\nuiShadowFilter=2\niShadowMapResolution=1024\niMaxFocusShadows=2\niMaxFocusShadowsDialogue=3\nbAllowShadowcasterNPCLights=0</code></pre></div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</article><div
+        class=\"normalbox\">\r\n\t<div class=\"inner\" style=\"padding: 5px;\">\r\n\t\t<div
+        class=\"body clear\" align=\"center\">\r\n\t\t\t<div class=\"supporter\" style=\"padding:
+        10px 2px 10px 10px;\"><script type=\"text/javascript\" language=\"javascript\"
+        src=\"https://live.primis.tech/live/liveView.php?s=115823&schain=1.0,1!gamer.network,1013459,1&kv_1=article,guide,developer,single-player,science-fiction,modern-day,blockbuster,rpg,ps4,playstation,windows,pc,xboxone&kv_2=fallout-4\"></script></div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n
+        \t<div class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/games/fallout-4/tutorials/fallout-4-ini-tweaks/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"37c7e0080341a68729a0ccfa0add4a15\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabtutorials\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"gamesinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=41925\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=games&amp;siteareaid=41925\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"/games/fallout-4/downloads\" class=\"downloadautotoggle button buttonlarge
+        buttonfull\"><span style=\"float: right; font-weight: normal;\">118.9K</span><span>Download</span></a><div
+        class=\"downloadon\" style=\"display: none;\"><a href=\"/games/fallout-4/downloads/jtrainz-improved-f4-ranged-weaponry-3-2\"
+        class=\"button buttonfull\"><span style=\"float: right;\">DEMO</span><span>Jtrainz
+        Improved F4 Ranged Weaponry 3.2</span><hr><span style=\"font-weight: normal;
+        float: right;\">50</span><span style=\"font-weight: normal;\">18.39kb</span></a><a
+        href=\"/games/fallout-4/downloads/jtrainz-increased-iron-sight-zoom\" class=\"button
+        buttonfull\"><span style=\"float: right;\">DEMO</span><span>Jtrainz Increased
+        Iron Sight Zoom</span><hr><span style=\"font-weight: normal; float: right;\">39</span><span
+        style=\"font-weight: normal;\">7.78kb</span></a><a href=\"/games/fallout-4/downloads/jtrainz-arr-alcholic-rad-relief\"
+        class=\"button buttonfull\"><span style=\"float: right;\">DEMO</span><span>Jtrainz
+        ARR   Alcholic Rad Relief</span><hr><span style=\"font-weight: normal; float:
+        right;\">71</span><span style=\"font-weight: normal;\">2.92kb</span></a><a
+        href=\"/games/fallout-4/downloads/nuka-hero\" class=\"button buttonfull\"><span
+        style=\"float: right;\">DEMO</span><span>Nuka Hero</span><hr><span style=\"font-weight:
+        normal; float: right;\">209</span><span style=\"font-weight: normal;\">5.33kb</span></a><a
+        href=\"/games/fallout-4/downloads/you-shall-not-pass\" class=\"button buttonfull\"><span
+        style=\"float: right;\">DEMO</span><span>YOU SHALL NOT PASS!!!</span><hr><span
+        style=\"font-weight: normal; float: right;\">92</span><span style=\"font-weight:
+        normal;\">26.82mb</span></a><a href=\"/games/fallout-4/downloads/elizabeth-companion\"
+        class=\"button buttonfull\"><span style=\"float: right;\">DEMO</span><span>Elizabeth
+        Companion</span><hr><span style=\"font-weight: normal; float: right;\">4.1K</span><span
+        style=\"font-weight: normal;\">31.23mb</span></a><a href=\"/games/fallout-4/downloads/my-fallout-4-star-wars-mods\"
+        class=\"button buttonfull\"><span style=\"float: right;\">DEMO</span><span>My
+        Fallout 4 Star Wars Mods</span><hr><span style=\"font-weight: normal; float:
+        right;\">92</span><span style=\"font-weight: normal;\">2.35gb</span></a><a
+        href=\"/games/fallout-4/downloads/godrays-and-object-rotation-fixes\" class=\"button
+        buttonfull\"><span style=\"float: right;\">DEMO</span><span>Godrays and Object
+        Rotation Fixes</span><hr><span style=\"font-weight: normal; float: right;\">84</span><span
+        style=\"font-weight: normal;\">7.25kb</span></a><a href=\"/games/fallout-4/downloads/asc-weapons10\"
+        class=\"button buttonfull\"><span style=\"float: right;\">DEMO</span><span>ASC
+        WEAPONS10</span><hr><span style=\"font-weight: normal; float: right;\">309</span><span
+        style=\"font-weight: normal;\">26.78kb</span></a><a href=\"/games/fallout-4/downloads/guntron-banking-terminals\"
+        class=\"button buttonfull\"><span style=\"float: right;\">DEMO</span><span>Guntron
+        Banking Terminals</span><hr><span style=\"font-weight: normal; float: right;\">21</span><span
+        style=\"font-weight: normal;\">854kb</span></a><div style=\"text-align: center;\">Explore
+        174 more <a href=\"/games/fallout-4/mods\">mods</a>, <a href=\"/games/fallout-4/addons\">addons</a>
+        &amp; <a href=\"/games/fallout-4/downloads\">downloads</a> or <a href=\"/games/fallout-4/downloads/add\">add
+        content</a>.</div></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row
+        clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span class=\"summary\">\n\t\t\t\t\t\t\t<img
+        src=\"https://media.moddb.com/images/games/1/42/41925/f4_ico.png\" alt=\"Fallout
+        4\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/platforms/windows\" title=\"Windows\">Windows</a>,
+        <a href=\"/platforms/vr\" title=\"VR\">VR</a>, <a href=\"/platforms/xone\"
+        title=\"Xbox One\">XONE</a>, <a href=\"/platforms/ps4\" title=\"PlayStation
+        4\">PS4</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer &amp; Publisher</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/bethesda-softworks\">Bethesda
+        Softworks</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engine</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/creation-engine\">Creation
+        Engine</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=gamesgroup119\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2015-11-09\">Released 2015</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Game watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=41925\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tRTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS.<br><br>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLearn
+        more about this <a href=\"/games/fallout-4#rtxremix\">games compatiblity with
+        RTX Remix</a> and ModDB's collaboration with the Remix community to organize
+        all compatible games. <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">Hide
+        this dialog</a>.\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"menuprices\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Purchase</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\" style=\"overflow: visible\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu tableprice\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://www.anrdoezrs.net/links/7846631/type/dlg/https://www.greenmangaming.com/games/fallout-4\"
+        class=\"csstooltip\" title=\"Updated 49 mins ago\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"><span class=\"button\">Buy</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/3.png\"
+        title=\"Green Man Gaming\" alt=\"Green Man Gaming\" /><span class=\"priceoriginal\">$19.99</span>
+        <span class=\"price\">$4.25</span> <span class=\"button discount\">-79%</span>
+        </a>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://store.steampowered.com/app/377160\" class=\"csstooltip\" title=\"Updated
+        1 day ago\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"><span class=\"button\">Buy</span><img
+        src=\"https://static.moddb.com/html/cutoff/images/prices/1.png\" title=\"Steam\"
+        alt=\"Steam\" /><span class=\"priceoriginal\">$19.99</span> <span class=\"price\">$4.99</span>
+        <span class=\"button discount\">-75%</span> </a>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<a href=\"https://www.gog.com/en/game/fallout_4_game_of_the_year_edition?pp=51af0418179317caa1e2d452f67017b44d428d8d\"
+        class=\"csstooltip\" title=\"Updated 4 days ago\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"><span class=\"button\">Buy</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/4.png\"
+        title=\"GOG.com\" alt=\"GOG.com\" /><span class=\"priceoriginal\">$39.99</span>
+        <span class=\"price\">$9.99</span> <span class=\"button discount\">-75%</span>
+        </a>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"articlesprofilemenu\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tutorial</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Tags</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/tags/fallout-4-tweaks\">fallout
+        4 tweaks</a>, <a href=\"/tags/fallout-4-ini-tweaks\">fallout 4 INI tweaks</a>,
+        <a href=\"/tags/fallout-4-performance\">fallout 4 performance</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Browse</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/fallout-4/tutorials\">Tutorials</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Report</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=report&amp;sitearea=articles&amp;siteareaid=302828\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\">Report</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Views</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/statistics/data/visit/articles/302828\"
+        rel=\"iframe=true;innerHeight=525;innerWidth=830\" class=\"thickbox\" title=\"Fallout
+        4 INI Tweaks Statistics\">14,420 (41 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffallout-4%2Ftutorials%2Ffallout-4-ini-tweaks&title=Fallout+4+INI+Tweaks+tutorial\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Fallout%204%20INI%20Tweaks%20tutorial&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffallout-4%2Ftutorials%2Ffallout-4-ini-tweaks\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Fallout+4+INI+Tweaks+tutorial+https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffallout-4%2Ftutorials%2Ffallout-4-ini-tweaks+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffallout-4%2Ftutorials%2Ffallout-4-ini-tweaks&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffallout-4%2Ftutorials%2Ffallout-4-ini-tweaks&quote=Fallout+4+INI+Tweaks+tutorial&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fgames%2Ffallout-4%2Ftutorials%2Ffallout-4-ini-tweaks\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinksgames\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Games</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/fallout-4\" title=\"Fallout 4\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/42/41925/crop_120x90/f4prv.jpg\"
+        alt=\"Fallout 4\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/fallout-4\" class=\"heading\">Fallout 4</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tRole Playing \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinksengines\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Engines</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/engines/creation-engine\" title=\"Creation Engine\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/engines/1/1/317/crop_120x90/04orjhvi_01.jpg\"
+        alt=\"Creation Engine\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/engines/creation-engine\" class=\"heading\">Creation Engine</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tCommercial <time>TBD</time> \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"normalbox
+        linksbox\" id=\"menulinkshardware\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Hardware</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" title=\"HTC Vive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/111/crop_120x90/VR_Web_Product_HMD.4.1.png\"
+        alt=\"HTC Vive\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" class=\"heading\">HTC Vive</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/htc\">HTC</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div
+        class=\"normalbox linksbox\" id=\"menulinksgroups\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Related Groups</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/company/bethesda-softworks\" title=\"Bethesda Softworks\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/groups/1/1/119/crop_120x90/bethesda-logo.jpg\"
+        alt=\"Bethesda Softworks\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/company/bethesda-softworks\" class=\"heading\">Bethesda Softworks</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tDeveloper &amp; Publisher \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div> \t<div
+        style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">7195 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/fallout-4\",\"name\":\"Fallout
+        4\"}},{\"@type\":\"ListItem\",\"position\":3,\"Item\":{\"@id\":\"https://www.moddb.com/games/fallout-4/tutorials\",\"name\":\"Tutorials\"}},{\"@type\":\"ListItem\",\"position\":4,\"Item\":{\"@id\":\"https://www.moddb.com/games/fallout-4/tutorials/fallout-4-ini-tweaks\",\"name\":\"Fallout
+        4 INI Tweaks\",\"image\":\"https://media.moddb.com/images/articles/1/303/302828/INI_Tweaks_Settings_Banner.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.highlight.js\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\ttags:
+        [\"article\",\"guide\",\"developer\",\"single-player\",\"science-fiction\",\"modern-day\",\"blockbuster\",\"rpg\",\"ps4\",\"playstation\",\"windows\",\"pc\",\"xboxone\"],\r\n\t\t\t\t\t\tgames:
+        [\"fallout-4\"],\r\n\t\t\t\t\t\tplayers: [\"single\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1713112806\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1713112806\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\nhljs.initHighlightingOnLoad();\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\tviewComment = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"]
+        == \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n\n\t\t\t\t\t$(\".downloadautotoggle\").click(function(){\n\t\t\t\t\t\t$(\".downloadon\").slideToggle();\n\t\t\t\t\t\treturn
+        false;\n\t\t\t\t\t});\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\tfunction cookieScript(e)
+        {\r\n\t\t\tvar status = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 874522be49170e33-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 14 Apr 2024 16:40:06 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=5mWbkdYBcBWa5cnK2%2B3Orr5mPHrghtsjCBTfNrcQbgokyK%2FP3t%2F%2BYpFMIhTzT2RCFWqzHC6zORj95Y27TvSV5eA2y1B10JVqenKjyKgVwlMtnhwNE4Rqe2AfcO3m7jqHU8LQdQD5sdiggPs%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '49323'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=38122b3ce38c97da74103f7d3b427a76; expires=Sun, 14-Apr-2024 16:50:06
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=38122b3ce38c97da74103f7d3b427a76; expires=Sun, 14-Apr-2024 16:50:06
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000

@@ -1116,8 +1116,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2FgrGieIdHO%2Fz5ZV3F6er77oGDovinJTO7QIfuW%2BYtCKC71LKuIVO4KuSAUBQ467LZZHxx6mwjRoEAIMQHR7q0Kj0URVr%2FMAsfy%2Bveq5kZxjqxvJKePh3IKdeBrbOkEI%2BOQw9cv21msDx6F0%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -1975,8 +1973,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Sz3J5MIk3I0BiW3lmsG5fd4FTATJdQXAcbHUrspMmrO%2BCLW6NC4mRgUq5u4Ur7QJn%2FnvoG2hq7Mdz%2BEWSpMfPYo2DYJAgIAO7GOhsAJYYfiV2c60epg12M1PqpoCJJxfCLRkq%2BC0iDOKDC0%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -2830,8 +2826,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=O6avbdr5JiFb0%2FQk5wO8CxzCKLSoMT9wz2POuHNEdV8f%2B7p2mZju0GqgPc2IANF1OPFojEjcu0ucg6Bp0eHcYprP%2FsjzV8RZDRx5RN4k6W1ekX%2FZN1AzrIsq6rra%2FT1knpSJVBtcRfWgwkI%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -3729,8 +3723,6 @@ interactions:
       - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ZVdAJqRYuIBfOOK78T7NAH9XmfQIF67zRcqDD2RKbiGkkb7hQ2AP8FM%2FVKgx%2FiBwYb%2FjLdUO70OlvzkgXHJM%2BIzZ08n0TS%2FWK%2FDaDZ60qTUKoW9fUfnPgte%2FCX%2FS%2Fie5dqlnFv%2Fp3G8rhbk%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
@@ -5457,6 +5449,859 @@ interactions:
       - masterchief=8050279cf2c2e504056af46e057ade0b; expires=Sun, 14-Apr-2024 11:25:53
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       - masterchief=8050279cf2c2e504056af46e057ade0b; expires=Sun, 14-Apr-2024 11:25:53
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      strict-transport-security:
+      - max-age=63072000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle
+  response:
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<title>Sugar Mess
+        - Let's Play Jolly Battle Windows, Linux, VR, PS5 game - ModDB</title>\r\n\t<meta
+        charset=\"utf-8\">\r\n\t \r\n\t<meta name=\"keywords\" content=\"sugar mess
+        lets play jolly battle, windows, linux, vr, playstation 5, single, player,
+        fantasy, indie, first, person, shooter, video game, indie game, standalone
+        game, developers, creation, expansion pack\" />\r\n\t<meta name=\"description\"
+        content=\"Sugar Mess - Let's Play Jolly Battle is a fun arcade first-person
+        shooter for the whole family! Embark on a journey through the amazing levels
+        of the Sugar Kingdom! Fend off the attacks of hilarious yummy enemies that
+        shatter into pieces on impact! Make...\" />\r\n\t<meta name=\"robots\" content=\"max-image-preview:large\"
+        />\r\n\t<meta property=\"fb:app_id\" content=\"210134345672070\"/>\r\n\t<meta
+        property=\"og:title\" content=\"Sugar Mess - Let's Play Jolly Battle Windows,
+        Linux, VR, PS5 game\" />\r\n\t<meta property=\"og:description\" content=\"Sugar
+        Mess - Let's Play Jolly Battle is a fun arcade first-person shooter for the
+        whole family! Embark on a journey through the amazing levels of the Sugar
+        Kingdom! Fend off the attacks of hilarious yummy enemies that shatter into
+        pieces on impact! Make...\" />\r\n\t<meta property=\"og:site_name\" content=\"ModDB\"
+        />\r\n\t<meta property=\"og:type\" content=\"game\" /> \r\n\t<meta property=\"og:url\"
+        content=\"https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle\"
+        /> \r\n\t<meta property=\"og:image\" content=\"https://media.moddb.com/images/games/1/83/82489/fb1.png\"
+        /> \r\n\t \r\n\t<meta property=\"twitter:card\" content=\"summary_large_image\"
+        />\r\n\t<meta property=\"twitter:site\" content=\"@moddb\" />\r\n\t<meta property=\"twitter:title\"
+        content=\"Sugar Mess - Let's Play Jolly Battle Windows, Linux, VR, PS5 game\"
+        />\r\n\t<meta property=\"twitter:description\" content=\"Sugar Mess - Let's
+        Play Jolly Battle is a fun arcade first-person shooter for the whole family!
+        Embark on a journey through the amazing levels of the Sugar Kingdom! Fend
+        off the attacks of hilarious yummy enemies that shatter into pieces on impact!
+        Make...\" />\r\n\t<meta property=\"twitter:url\" content=\"https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle\"
+        /> \r\n\t<meta property=\"twitter:image\" content=\"https://media.moddb.com/images/games/1/83/82489/fb1.png\"
+        /> \r\n\t<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://static.moddb.com/html/external/min/index.php?g=css&amp;76\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.ico\" type=\"image/x-icon\"
+        />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon.png\" type=\"image/png\"
+        sizes=\"96x96\" />\r\n\t<link rel=\"icon\" href=\"https://www.moddb.com/favicon-192x192.png\"
+        type=\"image/png\" sizes=\"192x192\" />\r\n\t<link rel=\"apple-touch-icon\"
+        href=\"https://www.moddb.com/apple-touch-icon.png\" sizes=\"180x180\" />\r\n\t<link
+        rel=\"alternate\" href=\"https://rss.moddb.com/games/sugar-mess-lets-play-jolly-battle/articles/feed/rss.xml\"
+        type=\"application/rss+xml\" title=\"Sugar Mess - Let's Play Jolly Battle
+        Windows, Linux, VR, PS5 game feed\" />\t<script async src=https://boot.pbstck.com/v1/adm/b178b8eb-fe5d-4a51-a6b1-7859f8598523></script><script
+        type=\"text/javascript\" data-cfasync=\"false\" crossorigin=\"anonymous\"
+        src=\"https://static.kueezrtb.com/latest.js\" id=\"kueezrtb_latest\"></script><meta
+        name=\"pbstck_context:country\" content=\"nl\"/><script>\r\n\t\t!function(e,o,n,i){if(!e){e=e||{},window.permutive=e,e.q=[];var
+        t=function(){return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(e){return(e^(window.crypto||window.msCrypto).getRandomValues(new
+        Uint8Array(1))[0]&15>>e/4).toString(16)})};e.config=i||{},e.config.apiKey=o,e.config.workspaceId=n,e.config.environment=e.config.environment||\"production\",(window.crypto||window.msCrypto)&&(e.config.viewId=t());for(var
+        g=[\"addon\",\"identify\",\"track\",\"trigger\",\"query\",\"segment\",\"segments\",\"ready\",\"on\",\"once\",\"user\",\"consent\"],r=0;r<g.length;r++){var
+        w=g[r];e[w]=function(o){return function(){var n=Array.prototype.slice.call(arguments,0);e.q.push({functionName:o,arguments:n})}}(w)}}}(window.permutive,\"394f5b6d-4224-4a63-9ca8-964c7ebc364e\",\"0f73e92f-4074-4fe3-85d3-ed3fc969859e\",{\"consentRequired\":
+        true});\r\n\t\twindow.googletag=window.googletag||{},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(function(){if(0===window.googletag.pubads().getTargeting(\"permutive\").length){var
+        e=window.localStorage.getItem(\"_pdfps\");window.googletag.pubads().setTargeting(\"permutive\",e?JSON.parse(e):[]);var
+        o=window.localStorage.getItem(\"permutive-id\");o&&(window.googletag.pubads().setTargeting(\"puid\",o),window.googletag.pubads().setTargeting(\"ptime\",Date.now().toString())),window.permutive.config.viewId&&window.googletag.pubads().setTargeting(\"prmtvvid\",window.permutive.config.viewId),window.permutive.config.workspaceId&&window.googletag.pubads().setTargeting(\"prmtvwid\",window.permutive.config.workspaceId)}});\r\n\t\tpermutive.identify([{\r\n\t\t\t\"id\":
+        \"4616793\",\r\n\t\t\t\"tag\": \"dbolical_id\"\r\n\t\t}]);\r\n\t\tpermutive.addon(\"web\",{\r\n\t\t\"page\":
+        {\r\n\t\t\t\"user\":{\"logged_in\":true,\"subscriber\":false},\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\"companies\":[\"JollyCo\"],\r\n\t\t\t\t\r\n\t\t\t\"themes\":[\"Single
+        Player\"],\t\r\n\t\t\t\"video_games\":[{\"genres\":[\"Indie\",\"Fantasy\",\"FPS/Shooter\",\"Action
+        Adventure\"],\"name\": \"Sugar Mess - Let's Play Jolly Battle\",\"platforms\":[\"Linux\",\"PC\",\"PS5\",\"Oculus
+        Quest\",\"Windows\"]}],\r\n\t\t\t\r\n\t\t\t\"classifications_watson\": {\r\n\t\t\t\"categories\":
+        \"$alchemy_taxonomy\",\r\n\t\t\t\"keywords\": \"$alchemy_keywords\" }\r\n\t\t}});\r\n\t\t</script>\r\n\t\t<script
+        async src=\"https://0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app/0f73e92f-4074-4fe3-85d3-ed3fc969859e-web.js\"></script><style
+        type=\"text/css\">#rtxremix { display: none; }</style>\n<script src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/misc.isab.js\"></script><link
+        rel=\"stylesheet\" href=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=css/mentions.css&amp;1\"
+        type=\"text/css\" />\r\n</head>\r\n<body>\r\n\r\n<div id=\"body\">\r\n<div
+        class=\"container\">\r\n\t<header><div id=\"header\">\r\n\t\t<div id=\"searchbox\">\r\n\t\t\t
+        \r\n\t\t\t<span class=\"member\"><a href=\"/members/eremosthesecond\" title=\"Your
+        personal control panel and profile\"><strong>EremosTheSecond</strong></a>
+        | <a href=\"/messages/inbox\" class=\"pmicon messagescount\" title=\"Private
+        Messages\">0</a> | <a href=\"/messages/updates\" title=\"Group and watch updates\"><span
+        class=\"updatescount\">1069</span> updates</a> | <a href=\"/forum/board/thread-watch\"
+        title=\"Forum threadwatch\"><span class=\"threadwatchcount\">0</span> threads</a>
+        | <a href=\"/members/logout\">logout</a></span>\r\n\t\t\t<form action=\"https://www.moddb.com/search\"
+        class=\"search\" method=\"get\"><input type=\"text\" name=\"q\" maxlength=\"500\"
+        value=\"\" id=\"sitesearch\" class=\"text\" placeholder=\"Search\"  /><input
+        type=\"image\" name=\"sa\" value=\"Search\" src=\"https://static.moddb.com/cutoff/images/default/btn_search_box.png\"
+        class=\"button\" alt=\"Search ModDB\" title=\"Search ModDB\"  /></form>\t\t\t
+        \r\n\t\t</div>\r\n\r\n\t\t<h1>Sugar Mess - Let's Play Jolly Battle Windows,
+        Linux, VR, PS5 game</h1>\r\n\t\t<a href=\"/\" class=\"logo\" title=\"ModDB
+        Home\"></a>\r\n\r\n \t\t \r\n\t\t<ul class=\"tabs\">\r\n\t\t\t<li class=\"on\"><a
+        href=\"/\">HOME</a></li>\r\n\t\t\t<li><a href=\"/today\" title=\"New today\">Today</a></li>\r\n\t\t\t<li><a
+        href=\"/week\" title=\"New this week\">Week</a></li>\r\n\t\t\t<li><a href=\"/month\"
+        title=\"New this month\">Month</a></li>\r\n\t\t\t<li><a href=\"/year\" title=\"New
+        this year\">Year</a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n\t<div id=\"subheader\">\r\n\t\t<nav><ul
+        class=\"tabs\">\r\n\t\t\t<li class=\"on firsttab\"><a href=\"/games\">games</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/games/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/games/latest\">latest</a></li>\r\n\t\t\t\t\t
+        \r\n\t\t\t\t\t<li><a href=\"https://www.indiedb.com\">indies</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"https://modularity.games\">publishing</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/games/add\">add game</a></li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/mods\">mods</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/mods/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/mods/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/mods/add\">add
+        mod</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/addons\">addons</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/addons/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/addons/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/downloads\">files</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/downloads/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/downloads/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/downloads/add\">upload</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/rtx\">RTX Remix</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx\">Games Compatibility</a></li>\t\r\n\t\t\t\t\t<li><a href=\"/rtx/mods\">Mods</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/downloads\">Files</a></li>\r\n\t\t\t\t\t<li><a href=\"/rtx/downloads?filter=t&category=34\">PBR
+        Assets</a></li><!-- RTX_ASSET -->\r\n\t\t\t\t\t<li><a href=\"/rtx/articles\">News</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/rtx/tutorials\">Tutorials</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t
+        \r\n\t\t\t<li><a href=\"/videos\">videos</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/images\">images</a></li>\r\n\t\t\t\t\t<li><a href=\"/audio\">audio</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/articles\">articles</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/reviews\">reviews</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/headlines\">headlines</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a
+        href=\"/blogs\">blogs</a></li>\r\n\t\t\t\t\t \r\n\t\t\t\t\t<li><a href=\"/articles/add\">post
+        article</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/engines\">engines</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/engines/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/engines/add\">add engine</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/company\">developers</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"/company/top\">popular</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/company/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a href=\"/company/add\">add
+        dev</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a href=\"/groups\">groups</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/top\">popular</a></li>\r\n\t\t\t\t\t<li><a href=\"/groups/latest\">latest</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"/groups/add\">add group</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t\t<li><a
+        href=\"/forum\">forums</a></li>\r\n\t\t\t<li><a href=\"/jobs\">jobs</a>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        href=\"/jobs/add\">post job</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</li>\r\n\t\t</ul></nav>\r\n\t</div></header>\r\n\r\n\t
+        \r\n\r\n\t \r\n<div style=\"clear: both;\"></div>\r\n<div class=\"headermediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"DBsupporter\" data-dfp-id=\"MODDB_LB_1\"
+        data-dfp-sizes=\"728x90, 960x250, 970x250\" id=\"div-ga-MODDB_LB_1\"></div></div>
+        \r\n</div>\r\n<div itemscope itemtype=\"https://schema.org/SoftwareApplication\"><div
+        class=\"column span-all tabsummary\"><meta itemprop=\"applicationCategory\"
+        content=\"Game\" /><meta itemprop=\"screenshot\" content=\"https://media.moddb.com/images/games/1/83/82489/fb1.png\"
+        />\t<div class=\"headerbox\" style=\"background-image: url(https://media.moddb.com/images/games/1/83/82489/Outro_send_01_1.jpg);\">\r\n\t\t<div
+        class=\"headercorner\">\r\n\t\t\t<div class=\"title\">\r\n\t\t\t\t \r\n\t\t\t\t<h2
+        itemprop=\"name\"><a href=\"/games/sugar-mess-lets-play-jolly-battle\" itemprop=\"mainEntityOfPage\">Sugar
+        Mess - Let's Play Jolly Battle</a></h2>\r\n\t\t\t\t<h3>\r\n\t\t\t\t\t<span
+        itemprop=\"author\" itemscope itemtype=\"https://schema.org/Organization\"><a
+        href=\"/company/jollyco\" itemprop=\"url\"><span itemprop=\"name\">JollyCo</span></a></span>
+        | <time itemprop=\"datePublished\">TBD</time>\t\t\t\t</h3>\r\n\t\t\t\t<span
+        class=\"bg\"></span>\r\n\t\t\t</div>\r\n\t\t\t<nav><ul class=\"menu\">\r\n\t\t\t\t<li
+        class=\"on firsttab\"><a href=\"/games/sugar-mess-lets-play-jolly-battle\">summary</a></li><li
+        class=\"\"><a href=\"/games/sugar-mess-lets-play-jolly-battle/articles\">articles</a></li><li
+        class=\"off\"><a href=\"/games/sugar-mess-lets-play-jolly-battle/downloads\">files</a></li><li
+        class=\"off\"><a href=\"/games/sugar-mess-lets-play-jolly-battle/mods\">mods</a></li><li
+        class=\"\"><a href=\"/games/sugar-mess-lets-play-jolly-battle/videos\">videos</a></li><li
+        class=\"\"><a href=\"/games/sugar-mess-lets-play-jolly-battle/images\">images</a></li>\t\t\t</ul></nav>\r\n\t\t</div>\r\n\t</div>\r\n\t<meta
+        itemprop=\"description\" content=\"Sugar Mess - Let's Play Jolly Battle is
+        a fun arcade first-person shooter for the whole family!\n\nEmbark on a journey
+        through the amazing levels of the Sugar Kingdom! Fend off the attacks of hilarious
+        yummy enemies that shatter into pieces on impact!\n\nMake use of your vast
+        arsenal of weapons that get stronger as you use them. Use special items to
+        gain an advantage over your opponents.\n\n\n\nSuper-sweet weapon\n\n\n\nChallenge
+        mighty bosses, use their weak spots to defeat them!\n\n\n\nFeel the rhythm
+        and participate in musical performances!\n\n\nSolve challenging puzzles, ride
+        in a unique vehicle around the kingdom. Dive into a fairy tale world and find
+        out the exciting story of the Sugar Prince and his mysterious enemy!\" />\t<div
+        class=\"headernormalbox normalbox normalboxreadmore\">\r\n\t\t<div class=\"inner\">\r\n\t\t\t<div
+        class=\"body clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\t<div
+        id=\"profiledescription\"><div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.indiedb.com/images/games/1/83/82489/auto/steam2.gif\"
+        alt=\"\" /></p>\n<p><br /></p>\n<p><img src=\"https://media.indiedb.com/images/games/1/83/82489/auto/discord_about_3.png\"
+        alt=\"\" /></p>\n<p><br /></p>\n</div>\n<p><strong>Sugar Mess - Let's Play
+        Jolly Battle is a fun arcade first-person shooter for the whole family!</strong></p>\n<p>Embark
+        on a journey through the amazing levels of the Sugar Kingdom! Fend off the
+        attacks of hilarious yummy enemies that shatter into pieces on impact!</p>\n<p>Make
+        use of your vast arsenal of weapons that get stronger as you use them. Use
+        special items to gain an advantage over your opponents.</p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.indiedb.com/images/games/1/83/82489/auto/discord_Key_Features.png\"
+        alt=\"\" /></p>\n<p><br /></p>\n</div>\n<ul>\n<li>Super-sweet weapon<br />\n<p><br
+        /></p>\n</li>\n</ul>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.indiedb.com/images/games/1/83/82489/auto/sugar_mess.gif\"
+        alt=\"\" /><br /><br /></p>\n</div>\n<ul>\n<li>Challenge mighty bosses, use
+        their weak spots to defeat them!</li>\n</ul>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.indiedb.com/images/games/1/83/82489/auto/sugar_mess_feature.gif\"
+        alt=\"\" /></p>\n<p><br /></p>\n</div>\n<ul>\n<li>Feel the rhythm and participate
+        in musical performances!</li>\n</ul>\n<div class=\"center\" style=\"text-align:
+        center;\">\n<p><img src=\"https://media.indiedb.com/images/games/1/83/82489/auto/sugar_mess_feature_2.gif\"
+        alt=\"\" /></p>\n</div>\n<p><br /></p>\n<p>Solve challenging puzzles, ride
+        in a unique vehicle around the kingdom. Dive into a fairy tale world and find
+        out the exciting story of the Sugar Prince and his mysterious enemy!</p></div>\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"imagebox clear\">\r\n\t\t<ul id=\"imagebox\">\r\n\t\t\t \r\n\t\t\t<li
+        class=\"previous previousoff\"><a href=\"#\" title=\"Previous Media\" id=\"previousmedia\"></a></li>\r\n\t\t\t
+        \r\n\t\r\n\t\t\t \r\n\t\t\t<li class=\"first\">\r\n\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/videos/sugar-messlets-play-jolly-battle-trailer-1#imagebox\"
+        title=\"Sugar MessLets Play Jolly Battle Trailer 1\"><span class=\"play\"
+        data-id=\"2675110\"></span><img src=\"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/Sugar_MessLets_Play_Jolly_Battle_Trailer.webm.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/games/sugar-mess-lets-play-jolly-battle/images/image-6#imagebox\"
+        title=\"Image 6\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/Outro_send_01_1.1.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/games/sugar-mess-lets-play-jolly-battle/images/image-5#imagebox\"
+        title=\"Image 5\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_8c29fdea988d37ecf79217872b9b7417f.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/games/sugar-mess-lets-play-jolly-battle/images/image-4#imagebox\"
+        title=\"Image 4\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_ce26052b135970a518ba5ba9ea6dba171.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/games/sugar-mess-lets-play-jolly-battle/images/image-3#imagebox\"
+        title=\"Image 3\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_5d148f46da5bbb7432830b206febefa02.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t<li>\r\n\t\t\t\t<a
+        href=\"/games/sugar-mess-lets-play-jolly-battle/images/image-2#imagebox\"
+        title=\"Image 2\"><img src=\"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_1e8c4acfa74e853490ab200fd9171aad2.jpg\"
+        alt=\"View media\" /></a>\r\n\t\t\t</li>\r\n\t\t\t \r\n\t\t\t \r\n\t\r\n\t\t\t
+        \r\n\t\t\t<li class=\"next\"><a href=\"/games/sugar-mess-lets-play-jolly-battle/images/image-1#imagebox\"
+        title=\"Next Media\" id=\"nextmedia\"></a></li>\r\n\t\t\t \r\n\t\t</ul>\r\n\t</div>\r\n</div><div
+        class=\"column span-300-alt first tabsummary\">\t<div class=\"normalbox menubox\"
+        id=\"rtxremix\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div class=\"title\">\n\t\t\t\t\t\t\t\t<span
+        class=\"heading\">RTX Remix</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<p>RTX
+        Remix is a <a href=\"https://www.nvidia.com/en-us/geforce/rtx-remix/\" target=\"_blank\">modding
+        platform by NVIDIA</a>, which allows modders to create stunning HD remasters
+        of classic games <a href=\"/rtx\">(see all supported)</a>, with ray tracing
+        and DLSS. Playing RTX mods requires a RT capable GPU. <a href=\"https://www.nvidia.com/en-us/geforce/news/rtx-remix-open-beta-half-life-2-rtx-trailer/\"
+        target=\"_blank\">Learn more here</a>.</p><p><strong>Sugar Mess - Let's Play
+        Jolly Battle's compatibility with RTX Remix is:</strong></p><ul><li>Status:
+        <a href=\"#rtxremix\" class=\"none\">Not Compatible</a></li><li>RTX Remix
+        Runtime Version: N/A</li><li>Conf File: N/A</li><li>Captures: <a href=\"/games/sugar-mess-lets-play-jolly-battle/downloads?filter=t&category=33\">0
+        captures</a> - <a href=\"/games/sugar-mess-lets-play-jolly-battle/downloads/add?category=33&tags=RTX,NVIDIA,RTXRemix,Capture&name=RTX+capture+for+Sugar+Mess+-+Let%27s+Play+Jolly+Battle&summary=RTX+Remix+capture+file+for+Sugar+Mess+-+Let%27s+Play+Jolly+Battle%2C+NVIDIA%27s+modding+platform.\">add
+        new</a></li><li>Assets: <a href=\"/games/sugar-mess-lets-play-jolly-battle/downloads?filter=t&category=34\">0
+        assets</a> - <a href=\"/games/sugar-mess-lets-play-jolly-battle/downloads/add?category=34&tags=RTX,NVIDIA,RTXRemix,Asset&name=RTX+asset+for+Sugar+Mess+-+Let%27s+Play+Jolly+Battle&summary=RTX+Remix+asset+file+for+Sugar+Mess+-+Let%27s+Play+Jolly+Battle%2C+NVIDIA%27s+modding+platform.\">add
+        new</a></li><li>Mods: <a href=\"/games/sugar-mess-lets-play-jolly-battle/mods?filter=t&rtx=1\">0
+        mods</a> - <a href=\"/mods/add?game=82489&rtx=1\">add new</a></li><li>Hide:
+        <a href=\"/platforms/rtx/set\" class=\"togglertxinfo\">This dialog</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox browsebox\" id=\"articlesbrowse\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t<span class=\"options\">\r\n\t\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/articles/add/#articlesform\"
+        class=\"addicon\"  title=\"Post article\">Post article</a> <a href=\"https://rss.moddb.com/games/sugar-mess-lets-play-jolly-battle/articles/feed/rss.xml\"
+        target=\"_blank\" class=\"rssicon\"  title=\"RSS\">RSS</a>\t\t\t\t</span>\r\n\t\t\t\t<span
+        class=\"heading\">Articles</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t<div class=\"table\">\r\n\t\t\t<div class=\"row
+        rowcontent rownoimage clear\">\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/sugar-mess-lets-play-jolly-battle/news/sugar-mess-lets-play-jolly-battle-gdc-summary\">Sugar
+        Mess - Let\u2019s Play Jolly Battle: GDC Summary</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-03-29T17:42:43+00:00\">Mar 29 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row rowcontent rowcontentnext clear\" style=\"padding-left: 0; padding-right:
+        0;\">\r\n\t\t<p>The team of Sugar Mess - Let&rsquo;s Play Jolly Battle recently
+        returned from GDC 2024, which took place in San Francisco, California from
+        March 18 to 22. The game representatives successfully held the showcase and
+        received invaluable feedback from players and professionals from the gaming
+        industry.</p>\n<p><span style=\"font-weight: 400;\">The 2024 Game Developers
+        Conference</span><span style=\"font-weight: 400;\"> hosted nearly 30,000 registered
+        attendees, featuring over 1,000 speakers across 730 sessions, workshops, roundtable
+        discussions in addition to networking opportunities. Over 300 top game industry
+        companies exhibited their latest innovations.</span></p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.indiedb.com/images/members/5/4737/4736505/profile/IMG_20240320_150846_1.jpg\"
+        alt=\"GDC 2024: Sugar Mess - Let's Play Jolly Battle\" title=\"GDC 2024: Sugar
+        Mess - Let's Play Jolly Battle\" width=\"600\" height=\"400\" /></p>\n</div>\n<p><br
+        /></p>\n<p><span style=\"font-weight: 400;\">One of those was the VR game
+        &ldquo;Sugar Mess - Let&rsquo;s Play Jolly Battle&rdquo;, which received its
+        impressive share of attention from the public.</span></p>\n<div class=\"center\"
+        style=\"text-align: center;\">\n<p><img src=\"https://media.indiedb.com/images/members/5/4737/4736505/profile/IMG_20240320_114622_1.jpg\"
+        alt=\"GDC Play - Games Showcase\" title=\"GDC Play - Games Showcase\" width=\"600\"
+        height=\"381\" /></p>\n</div>\n<p><br /></p>\n<p><span style=\"font-weight:
+        400;\">Over the course of 3 days, about 100 players plunged into our VR adventure,
+        appreciating the fabulous Sugar Mess universe, clear game controls and its
+        dynamic gameplay.</span></p>\n<div class=\"center\" style=\"text-align: center;\">\n<p><img
+        src=\"https://media.indiedb.com/images/members/5/4737/4736505/profile/IMG_20240320_102428.jpg\"
+        alt=\"Multiple Gaming Enthusiasts Were Playing VR Sugar Mess \" title=\"Multiple
+        Gaming Enthusiasts Were Playing VR Sugar Mess \" width=\"600\" height=\"600\"
+        /></p>\n</div>\n<p><br /></p>\n<p><span style=\"font-weight: 400;\">In addition
+        to positive feedback, we paid special attention to critical comments or non-intuitive
+        aspects that were not clear to players. </span><span style=\"font-weight:
+        400;\">This</span><span style=\"font-weight: 400;\"> user experience flows
+        into our backlog, </span><span style=\"font-weight: 400;\">the main goal of
+        which </span><span style=\"font-weight: 400;\">is to improve our game.</span></p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.indiedb.com/images/members/5/4737/4736505/profile/PXL_20240322_191925762.MP_1.jpg\"
+        alt=\"VR Game Sugar Mess - Let's Play Jolly Battle\" title=\"VR Game Sugar
+        Mess - Let's Play Jolly Battle\" width=\"600\" height=\"602\" /></p>\n</div>\n<p><br
+        /></p>\n<p><span style=\"font-weight: 400;\">Among the visitors to our stand
+        were representatives of leading VR platforms such as Meta, PS5, as well as
+        publishers, journalists, influencers, and gaming enthusiasts.</span></p>\n<div
+        class=\"center\" style=\"text-align: center;\">\n<p><img src=\"https://media.indiedb.com/images/members/5/4737/4736505/profile/IMG_20240329_171229_342.jpg\"
+        alt=\"We Met With Industry Representatives, Gaming Enthusiasts and Influencers\"
+        title=\"We Met With Industry Representatives, Gaming Enthusiasts and Influencers\"
+        width=\"600\" height=\"450\" /></p>\n</div>\n<p><br /></p>\n<p><span style=\"font-weight:
+        400;\">We are grateful to GDC for the </span><span style=\"font-weight: 400;\">friendly
+        </span><span style=\"font-weight: 400;\">welcome and the opportunity to meet
+        so many VR game lovers</span><span style=\"font-weight: 400;\"> in person</span><span
+        style=\"font-weight: 400;\">!</span></p>\n<p>At the moment, the game is on
+        <a href=\"https://ocul.us/3vI4XpY\">Meta Quest</a> and <a href=\"https://bit.ly/3VFt7fE\">Pico</a>,
+        the Demo is also available on <a href=\"https://store.steampowered.com/app/2480010/Sugar_Mess__Lets_Play_Jolly_Battle/?utm_source=IDB&utm_campaign=GDC_Summary\">Steam</a></p>\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/news/highlights-from-gdc-2024-sugar-mess-let-play-jolly-battle\"
+        title=\"Highlights from GDC 2024: Sugar Mess - Let' Play Jolly Battle\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/325/324329/crop_120x90/Cover1.jpg\"
+        alt=\"Highlights from GDC 2024: Sugar Mess - Let' Play Jolly Battle\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/sugar-mess-lets-play-jolly-battle/news/highlights-from-gdc-2024-sugar-mess-let-play-jolly-battle\">Highlights
+        from GDC 2024: Sugar Mess - Let' Play Jolly Battle</a></h4>\r\n\t\t\t<span
+        class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-03-25T18:59:59+00:00\">Mar
+        25 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>\U0001F3AE We were excited to be here, surrounded
+        by the buzzing energy of game developers, industry experts, and enthusiasts
+        alike. Our team was diving headfirst...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/news/the-fairytale-vr-fps-sugar-mess-lets-play-jolly-battle-will-be-sh\"
+        title=\"The Fairytale VR FPS \u201CSugar Mess - Let\u2019s Play Jolly Battle\u201D
+        Will Be Sh\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/324/323842/crop_120x90/GDC_banner.png\"
+        alt=\"The Fairytale VR FPS \u201CSugar Mess - Let\u2019s Play Jolly Battle\u201D
+        Will Be Sh\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a
+        href=\"/games/sugar-mess-lets-play-jolly-battle/news/the-fairytale-vr-fps-sugar-mess-lets-play-jolly-battle-will-be-sh\">The
+        Fairytale VR FPS \u201CSugar Mess - Let\u2019s Play Jolly Battle\u201D Will
+        Be Sh</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time datetime=\"2024-03-06\">Mar
+        6 2024</time>\t\t\t</span>\r\n\t\t\t<span class=\"subheading\">\r\n\t\t\t\tNews
+        \ \t\t\t</span>\r\n\t\t\t<p>JollyCo is thrilled to announce its participation
+        in the upcoming Game Developers Conference (GDC) 2024, where it will showcase
+        its VR game Sugar Mess...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div class=\"row
+        rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/news/dev-diary-great-news-for-achievement-hunters\"
+        title=\"Dev Diary: Great News for Achievement Hunters\" class=\"image\"><img
+        src=\"https://media.moddb.com/cache/images/articles/1/324/323527/crop_120x90/achivement_3_2560x1440.png\"
+        alt=\"Dev Diary: Great News for Achievement Hunters\" /></a>\r\n\t\t\t\t<div
+        class=\"content\">\r\n\t\t\t \r\n\t\t\t<h4><a href=\"/games/sugar-mess-lets-play-jolly-battle/news/dev-diary-great-news-for-achievement-hunters\">Dev
+        Diary: Great News for Achievement Hunters</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-02-23T13:53:08+00:00\">Feb 23 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>With the
+        unveiling of our latest DevLog, we invite you to dive deeper into the world
+        of achievements, where every milestone reached brings you one step...</p>\t\t</div>\r\n\t</div>\r\n\t\t\t<div
+        class=\"row rowcontent clear\">\r\n\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/news/dev-diary-new-enemies-in-sugar-kingdom\"
+        title=\"Dev Diary: New Enemies in Sugar Kingdom\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/articles/1/323/322869/crop_120x90/SM_DevLog5_Applab_Steam_2560x144.png\"
+        alt=\"Dev Diary: New Enemies in Sugar Kingdom\" /></a>\r\n\t\t\t\t<div class=\"content\">\r\n\t\t\t
+        \r\n\t\t\t<h4><a href=\"/games/sugar-mess-lets-play-jolly-battle/news/dev-diary-new-enemies-in-sugar-kingdom\">Dev
+        Diary: New Enemies in Sugar Kingdom</a></h4>\r\n\t\t\t<span class=\"date\">\r\n\t\t\t\t<time
+        datetime=\"2024-01-26T15:06:50+00:00\">Jan 26 2024</time>\t\t\t</span>\r\n\t\t\t<span
+        class=\"subheading\">\r\n\t\t\t\tNews  \t\t\t</span>\r\n\t\t\t<p>Here are
+        some new insights about the upcoming great update: Chapter II of the VR game
+        Sugar Mess - Let\u2019s Play Jolly Battle. The update is planned for...</p>\t\t</div>\r\n\t</div>\r\n\t\t<div
+        class=\"row\" style=\"text-align: right;\">\r\n\t\t<h4>\r\n\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/articles/add\">Post
+        article</a> | <a href=\"/games/sugar-mess-lets-play-jolly-battle/articles\">More
+        articles &gt;&gt;</a>\t\t</h4>\r\n\t</div>\r\n\t</div>\t\t\t\t<p class=\"viewbrowse\"
+        style=\"display: none; margin-top: 1em;\">\r\n\t\t\t\t\tNo articles were found
+        matching the criteria specified. We suggest you try the <a href=\"/games/sugar-mess-lets-play-jolly-battle/articles\">article
+        list</a> with no filter applied, to browse all available. <a href=\"/games/sugar-mess-lets-play-jolly-battle/articles/add\">Post
+        article</a> and help us achieve our mission of showcasing the best content
+        from all developers.\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"commentform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Post a comment</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"commentform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle/#commentform\"
+        method=\"post\" name=\"commentform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"1541dbd3c370e9ab65b64a151a4e4f3f\" /><input type=\"hidden\" name=\"replyid\"
+        value=\"0\" id=\"commentreplyid\" /><input type=\"hidden\" name=\"page\" value=\"1\"
+        id=\"commentpage\" />\t\t\t\t\t<div class=\"row rowcommentsummary clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><textarea name=\"summary\" cols=\"80\" rows=\"10\" id=\"commentsummary\"
+        required=\"required\" ></textarea>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"comment\" value=\"Save comment\" id=\"commentsubmit\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div><div
+        class=\"column span-300 last tabsummary\"><div style=\"clear: both;\"></div>\r\n<div
+        class=\"nextmediabox nextmediaboxtop\">\r\n\t<div class=\"supporter\"><div
+        class=\"DBsupporter\" data-dfp-id=\"MODDB_MPU_1\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_1\"></div></div> \r\n</div>\r\n\t<div class=\"normalbox
+        menubox\" id=\"gamesinfo\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"options\">\n\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=82489\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\"
+        title=\"Follow\">Follow</a> <a href=\"/messages/ajax/action/?action=report&amp;sitearea=games&amp;siteareaid=82489\"
+        class=\"reporticon 44825bfc951a8ff5714f8bb710efda3freport\" rel=\"nofollow\"
+        title=\"Report\">Report</a>\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<span class=\"heading\">Profile</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Icon</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<img src=\"https://media.moddb.com/images/games/1/83/82489/Md7Fj-cM_400x400.jpg\"
+        alt=\"Sugar Mess - Let's Play Jolly Battle\" width=\"32\" height=\"32\" />\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Platforms</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"operatingSystem\"><a href=\"/platforms/windows\"
+        title=\"Windows\">Windows</a>, <a href=\"/platforms/linux\" title=\"Linux\">Linux</a>,
+        <a href=\"/platforms/vr\" title=\"VR\">VR</a>, <a href=\"/platforms/ps5\"
+        title=\"PlayStation 5\">PS5</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Developer &amp; Publisher</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/company/jollyco\">JollyCo</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Engine</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/engines/unity\">Unity</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Contact</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/compose?to=gamesgroup41856\">Send
+        Message</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Homepage</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"https://www.jollyco.us/sugarmess/\"
+        rel=\"noopener noreferrer\" target=\"_blank\">Jollyco.us</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Release date</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time>TBD</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Game watch</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/messages/ajax/action/?action=watch&amp;sitearea=games&amp;siteareaid=82489\"
+        class=\"watchicon c76625d26ff7f0c55142db2c328da119watch\" rel=\"nofollow\">Follow</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t \r\n<h5>Share</h5>\r\n<span class=\"summary
+        summarypromo\">\r\n\t<a href=\"https://www.reddit.com/r/1/submit?url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fsugar-mess-lets-play-jolly-battle&title=Sugar+Mess+-+Let%27s+Play+Jolly+Battle+Windows%2C+Linux%2C+VR%2C+PS5+game\"
+        class=\"redditpromo csstooltip\" title=\"Share on Reddit\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a><a href=\"mailto:?subject=Sugar%20Mess%20-%20Let%27s%20Play%20Jolly%20Battle%20Windows%2C%20Linux%2C%20VR%2C%20PS5%20game&body=Visit%3A%20https%3A%2F%2Fwww.moddb.com%2Fgames%2Fsugar-mess-lets-play-jolly-battle\"
+        class=\"emailpromo csstooltip\" title=\"Email a friend\" rel=\"nofollow\"></a><a
+        href=\"https://twitter.com/intent/tweet?status=Sugar+Mess+-+Let%27s+Play+Jolly+Battle+Windows%2C+Linux%2C+VR%2C+PS5+game+https%3A%2F%2Fwww.moddb.com%2Fgames%2Fsugar-mess-lets-play-jolly-battle+via+%40moddb&url=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fsugar-mess-lets-play-jolly-battle&via=moddb\"
+        class=\"twitterpromo csstooltip\" title=\"Tweeeeeet!\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer\"></a><a href=\"https://www.facebook.com/dialog/share?app_id=210134345672070&display=page&href=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fsugar-mess-lets-play-jolly-battle&quote=Sugar+Mess+-+Let%27s+Play+Jolly+Battle+Windows%2C+Linux%2C+VR%2C+PS5+game&redirect_uri=https%3A%2F%2Fwww.moddb.com%2Fgames%2Fsugar-mess-lets-play-jolly-battle\"
+        class=\"facebookpromo csstooltip\" title=\"Share on Facebook\" target=\"_blank\"
+        rel=\"nofollow noopener noreferrer\"></a> \r\n</span>\r\n \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"menuprices\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Purchase</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\" style=\"overflow: visible\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu tableprice\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t<a
+        href=\"https://store.steampowered.com/app/2480010\" class=\"csstooltip\" title=\"Updated
+        1 week ago\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"><span
+        class=\"button\">Wishlist</span><img src=\"https://static.moddb.com/html/cutoff/images/prices/1.png\"
+        title=\"Steam\" alt=\"Steam\" /><span class=\"price\">View</span></a><span
+        itemprop=\"offers\" itemscope itemtype=\"https://schema.org/Offer\" style=\"display:
+        none;\"><meta itemprop=\"priceCurrency\" content=\"USD\" /><meta itemprop=\"price\"
+        content=\"0.00\" /></span>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"gamesstyle\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Style</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Genre</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<span itemprop=\"genre\"><a href=\"/games?filter=t&amp;genre=3\"
+        rel=\"nofollow\">First Person Shooter</a></span>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Theme</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games?filter=t&amp;theme=4\"
+        rel=\"nofollow\">Fantasy</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Players</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games?filter=t&amp;players=1\"
+        rel=\"nofollow\">Single Player</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Project</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games?filter=t&amp;indie=2\"
+        rel=\"nofollow\">Indie</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinkshardware\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">Play With</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"inner\">\r\n\t\t<div class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t\t\t\t\t<div class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" title=\"HTC Vive\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/111/crop_120x90/VR_Web_Product_HMD.4.1.png\"
+        alt=\"HTC Vive\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/htc-vive\" class=\"heading\">HTC Vive</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/htc\">HTC</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/meta-2\" title=\"Meta
+        2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/110/crop_120x90/video_poster-98d72facb50f9807f05.jpg\"
+        alt=\"Meta 2\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/meta-2\" class=\"heading\">Meta 2</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/meta-company\">Meta
+        Company</a> Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/oculus-dk1\"
+        title=\"Oculus DK1\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/1/crop_120x90/dk1-product.jpg\"
+        alt=\"Oculus DK1\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/oculus-dk1\" class=\"heading\">Oculus DK1</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/oculus\">Oculus</a>
+        Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/oculus-dk2\"
+        title=\"Oculus DK2\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/2/crop_120x90/preview.jpg\"
+        alt=\"Oculus DK2\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/oculus-dk2\" class=\"heading\">Oculus DK2</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/oculus\">Oculus</a>
+        Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/oculus-rift\"
+        title=\"Oculus Rift\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/29/crop_120x90/rift_hero.jpg\"
+        alt=\"Oculus Rift\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/oculus-rift\" class=\"heading\">Oculus Rift</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/oculus\">Oculus</a>
+        Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/playstation-vr\"
+        title=\"PlayStation VR\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/5/crop_120x90/preview.jpg\"
+        alt=\"PlayStation VR\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/playstation-vr\" class=\"heading\">PlayStation VR</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/sony-computer-entertainment\">Sony
+        Computer Entertainment</a> Headset \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/hardware/valve-index\"
+        title=\"Valve Index\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/hardware/1/1/145/crop_120x90/3.jpg\"
+        alt=\"Valve Index\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/hardware/valve-index\" class=\"heading\">Valve Index</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\t<a href=\"/company/valve\">Valve</a> Headset
+        \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"twitterform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">X</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"twitterform\" class=\"body bodysimple
+        clear\">\r\n\t\t\t\t\t\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/twitter/ajax/#twitterform\"
+        method=\"post\" name=\"twitterform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"1541dbd3c370e9ab65b64a151a4e4f3f\" />\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+        class=\"normalbox formbox\" id=\"tagsform\">\r\n\t\t<div class=\"normalcorner\">\r\n\t\t\t<div
+        class=\"title\">\r\n\t\t\t\t\t\t\t\t<span class=\"heading\">Tags</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div
+        class=\"inner\">\r\n\t\t\t<div id=\"tagsform\" class=\"body bodysimple clear\">\r\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t<div
+        class=\"table tableform\">\r\n\t\t\t\t\t<form action=\"https://www.moddb.com/tags/ajax/add/#tagsform\"
+        method=\"post\" name=\"tagsform\"><input type=\"hidden\" name=\"formhash\"
+        value=\"1541dbd3c370e9ab65b64a151a4e4f3f\" />\t\t\t\t\t<div class=\"row rowtagstagvr
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a href=\"/tags/vr\">VR</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=vr&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=vr&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagfps clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/fps\">FPS</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=fps&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=fps&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagfunny clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/funny\">Funny</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=funny&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=funny&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagaction clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/action\">Action</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=action&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=action&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagadventure clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"helper\"></p><p><a
+        href=\"/tags/adventure\">Adventure</a><span style=\"float: right;\"><a href=\"/tags/ajax/add?tag=adventure&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=adventure&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagstagsingleplayer clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/single-player\">Single-Player</a><span
+        style=\"float: right;\"><a href=\"/tags/ajax/add?tag=single-player&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=single-player&sitearea=games&siteareaid=82489&hash=807612e294d29921c2bfcdc56273b0bb&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row rowtagsdemo clear\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><p><a href=\"/tags/TAGID\">TAGID</a><span style=\"float:
+        right;\"><a href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=807612e294d29921c2bfcdc56273b0bb\"
+        title=\"1 agree\" class=\"tagaction karmagoodicon\" rel=\"nofollow\"></a><a
+        href=\"/tags/ajax/add?tag=TAGID&sitearea=SITEAREA&siteareaid=SITEAREAID&hash=807612e294d29921c2bfcdc56273b0bb&negative=1\"
+        title=\"0 disagree\" class=\"tagaction karmabadicon\" rel=\"nofollow\"></a></span></p>\t\t\t\t\t</div>\r\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"hash\" value=\"807612e294d29921c2bfcdc56273b0bb\" id=\"tagshash\"
+        /><input type=\"hidden\" name=\"sitearea\" value=\"games\" id=\"tagssitearea\"
+        /><input type=\"hidden\" name=\"siteareaid\" value=\"82489\" id=\"tagssiteareaid\"
+        />\t\t\t\t\t<div class=\"row rowtagstag clear\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p
+        class=\"helper\"></p><input type=\"text\" name=\"tag\" maxlength=\"40\" value=\"\"
+        id=\"tagstag\" class=\"text\" placeholder=\"Example: Funny, Pixel Graphics\"
+        \ />\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"submit\" name=\"tags\" value=\"Add tag\" id=\"tagssubmit\"  />\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n<style>.allbtn
+        a.on img { background: #77c628; -moz-box-shadow: 0 0 5px #77c628; -webkit-box-shadow:
+        0 0 5px #77c628; box-shadow: 0 0 5px #77c628; }</style>\t<div class=\"normalbox
+        menubox\" id=\"gamesbuttons\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Embed Buttons</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\tLink
+        to Sugar Mess - Let's Play Jolly Battle by selecting a button and using the
+        embed code provided <a href=\"#\" class=\"moreembed\">more...</a><input type=\"text\"
+        name=\"\" maxlength=\"500\" value=\"&lt;a href=&quot;https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle&quot;
+        title=&quot;View Sugar Mess - Let&#039;s Play Jolly Battle on ModDB&quot;
+        target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://button.moddb.com/popularity/medium/games/82489.png&quot;
+        alt=&quot;Sugar Mess - Let&#039;s Play Jolly Battle&quot; /&gt;&lt;/a&gt;\"
+        class=\"text textembed\" style=\"margin-top: 5px;\"  />\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t<div class=\"allbtn popularitybtn\" style=\"text-align:
+        center;\"><a href=\"https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle\"
+        title=\"View Sugar Mess - Let's Play Jolly Battle on ModDB\"><img src=\"https://button.moddb.com/popularity/medium/games/82489.png\"
+        alt=\"Sugar Mess - Let's Play Jolly Battle\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\" style=\"display: none;\">\n\t\t\t\t\t\t<div class=\"allbtn
+        smallbtn\" style=\"text-align: center;\"><a href=\"https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle\"
+        title=\"View Sugar Mess - Let's Play Jolly Battle - ModDB\"><img src=\"https://media.moddb.com/images/global/moddb.png\"
+        alt=\"Sugar Mess - Let's Play Jolly Battle\" /></a></div>\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div
+        class=\"normalbox menubox\" id=\"gamesprofilestats\">\n\t\t\t\t<div class=\"normalcorner\">\n\t\t\t<div
+        class=\"title\">\n\t\t\t\t\t\t\t\t<span class=\"heading\">Statistics</span>\n\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div
+        class=\"inner\">\n\t\t\t<div class=\"body bodysimple\">\n\t\t\t\t\t\t\t\t<div
+        class=\"tooltip\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"table
+        tablemenu\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Rank</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/top\">2,531 of 71,140</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Visits</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/stats\">5,776
+        (15 today)</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Last Update</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<time datetime=\"2024-03-25T17:52:35+00:00\"
+        itemprop=\"dateModified\">2 weeks ago</time>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Watchers</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/watchers\">2
+        members</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h5>Articles</h5>\n\t\t\t\t\t\t<span
+        class=\"summary\">\n\t\t\t\t\t\t\t<a href=\"/games/sugar-mess-lets-play-jolly-battle/articles\">13</a>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t</div>\n<div
+        class=\"normalbox linksbox\" id=\"menulinksgames\">\r\n\t<div class=\"normalcorner\">\r\n\t\t<div
+        class=\"title\">\r\n\t\t\t \r\n\t\t\t<span class=\"heading\">You may also
+        like</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inner\">\r\n\t\t<div
+        class=\"body bodysimple\">\r\n\t\t\t<div class=\"tooltip\"></div>\r\n\t\t\t<div
+        class=\"table tablerelated\">\r\n\t\t\t\t \r\n\t\t\t\t<div class=\"row rowbutton
+        clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games\" class=\"button\">View All</a>\r\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"/games/top\" class=\"button buttonalt\">Top Games</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/blood-rush\"
+        title=\"Blood Rush\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/84/83067/crop_120x90/Store_Capsule_Main_02.png\"
+        alt=\"Blood Rush\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/blood-rush\" class=\"heading\">Blood Rush</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/legendary\" title=\"Legendary\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/24/23313/crop_120x90/preview.jpg\"
+        alt=\"Legendary\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/legendary\" class=\"heading\">Legendary</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/arcane-worlds\"
+        title=\"Arcane Worlds\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/17/16422/crop_120x90/a.png\"
+        alt=\"Arcane Worlds\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/arcane-worlds\" class=\"heading\">Arcane Worlds</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/atajrubah\" title=\"Atajrubah\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/24/23661/crop_120x90/IndieGoGo_Campaign_Cover_Image_S.1.jpg\"
+        alt=\"Atajrubah\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/atajrubah\" class=\"heading\">Atajrubah</a>\r\n\t\t\t\t\t\t<span
+        class=\"summary\">\r\n\t\t\t\t\t\t\tFirst Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/arkos\" title=\"ARKOS\"
+        class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/78/77203/crop_120x90/logo.jpg\"
+        alt=\"ARKOS\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/arkos\" class=\"heading\">ARKOS</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tFirst
+        Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+        class=\"row clear\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/games/uncharted-lands-beginning\"
+        title=\"Uncharted Lands: Beginning\" class=\"image\"><img src=\"https://media.moddb.com/cache/images/games/1/81/80193/crop_120x90/ul_1024.png\"
+        alt=\"Uncharted Lands: Beginning\" /></a>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t<a
+        href=\"/games/uncharted-lands-beginning\" class=\"heading\">Uncharted Lands:
+        Beginning</a>\r\n\t\t\t\t\t\t<span class=\"summary\">\r\n\t\t\t\t\t\t\tFirst
+        Person Shooter \t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t
+        \r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n \r\n<div style=\"clear:
+        both;\"></div>\r\n<div class=\"nextmediabox footernextmediabox\">\r\n\t<div
+        class=\"supporter\"><div class=\"lazyload\" data-dfp-id=\"MODDB_MPU_2\" data-dfp-sizes=\"300x250,
+        300x600\" id=\"div-ga-MODDB_MPU_2\"></div></div> \r\n</div>\r\n</div></div>
+        \t<div style=\"clear: both; height: 1em;\"></div><!-- IE6 Hack -->\r\n</div>\r\n\r\n<footer><div
+        id=\"footer\">\r\n\t<div class=\"content\">\r\n\t\t<a href=\"https://www.dbolical.com\"
+        class=\"network dbolical\" target=\"_blank\" title=\"DBolical - Entertainment
+        Euphoria\"></a>\r\n\t\t<span class=\"terms\"><a id=\"csconsentlink\" style=\"cursor:
+        pointer;\">Cookies</a> | <a href=\"/terms-of-use\">Terms of Use</a> | <a href=\"/privacy-policy\"
+        style=\"padding-right: 0\">Privacy Policy</a></span>\r\n\t\t<span class=\"links\"><a
+        href=\"/blog\">Blog</a> | <a href=\"/about\">About</a> | <a href=\"/advertise\">Advertise</a>
+        | <a href=\"/contact\">Contact</a> | <a href=\"/mods/add\">Submit Mod</a>
+        | <a href=\"https://mod.io\" target=\"_blank\" title=\"Cross Platform Mod
+        support for game developers\">Cross-Platform Mod Support</a> | <a href=\"/sitemap\">Site
+        Map</a></span>\r\n\t\t<span class=\"copyright\">&copy; 2002 - 2024 <a href=\"https://www.dbolical.com\"
+        target=\"_blank\">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a
+        href=\"/members/online\">6675 modders</a>.</span>\r\n\t</div>\r\n</div></footer>\r\n</div>\r\n\r\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1\"></script><script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"Item\":{\"@id\":\"https://www.moddb.com/games\",\"name\":\"Games\"}},{\"@type\":\"ListItem\",\"position\":2,\"Item\":{\"@id\":\"https://www.moddb.com/games/sugar-mess-lets-play-jolly-battle\",\"name\":\"Sugar
+        Mess - Let's Play Jolly Battle\",\"image\":\"https://media.moddb.com/images/games/1/83/82489/fb1.png\"}}]}</script>\n<script
+        src=\"https://static.moddb.com/html/external/min/index.php?g=js&amp;18\"></script><script
+        src=\"https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.form.js,js/jquery.gallery.js,js/jquery.suggestform.js,js/jquery.ui.core.js,js/jquery.ui.menu.js,js/jquery.ui.zautocomplete.js,js/jquery.ui.zmentions.js&amp;1\"></script>\n<script>\n$(document).ready(function()
+        { $(\"#sitesearch\").suggestClick(\"https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=games\",{resultsClass:
+        \"suggest_search\", positionIn: \"#searchbox\", limit: 10});\n\r\n\t\t\t\t\tvar
+        custom_variables = { \r\n\t\t\t\t\t\turl: document.location.pathname.substr(0,40),\r\n\t\t\t\t\t\tversion:
+        \"hd\",\r\n\t\t\t\t\t\tsource: \"profile\",\r\n\t\t\t\t\t\tchannel: \"games\",\r\n\t\t\t\t\t\ttags:
+        [\"single-player\",\"fantasy\",\"military\",\"adventure\",\"indie\",\"fps\",\"action\",\"action-adventure\",\"linux\",\"pc\",\"ps5\",\"playstation\",\"windows\"],\r\n\t\t\t\t\t\tgames:
+        [\"sugar-mess-lets-play-jolly-battle\"],\r\n\t\t\t\t\t\tplayers: [\"single\"],\r\n\t\t\t\t\t\ttriggers:
+        [\"\"]\r\n\t\t\t\t\t};\r\n\t\t\t\t\twindow.googletag = window.googletag ||
+        { cmd: [] };\r\n\t\t\t\t\tArray.from(Object.entries(custom_variables)).forEach((target)
+        => {\r\n\t\t\t\t\t\tgoogletag.cmd.push(() => {\r\n\t\t\t\t\t\t\tgoogletag.pubads().setTargeting(target[0],
+        target[1]);\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t});\n\n\t\tif(typeof isAB ===
+        \"undefined\") {\n\t\t\tyesAB(true);\n\t\t} else {\n\t\t\tisAB.on(true, yesAB).onNotDetected(noAB);\n\t\t}\n\n\t\tfunction
+        yesAB(unknown) {\n\t\t\tif(unknown) {\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\",
+        \"Undefined\", \"true\", 1);\n\t\t\t} else {\n\t\t\t\theight = Math.floor((Math.random()
+        * 5)) < 1 ? 600 : 250;\n\t\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Blocked\",
+        \"true\", 1);\n\n\t\t\t\t$(\"div.nextmediaboxtop,div.footermediabox\").remove();\n\t\t\t\t$(\"div.nextmediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/300/\"+height+\"?sad=t&t=1713112510\\\"
+        width=300 height=\"+height+\" frameborder=0></iframe>\");\n\t\t\t\t$(\"div.headermediabox
+        div.supporter\").html(\"<iframe src=\\\"https://www.moddb.com/media/block/728/90?sad=t&t=1713112510\\\"
+        width=728 height=90 frameborder=0></iframe>\");\n\t\t\t}\n\t\t}\n\t\n\t\tfunction
+        noAB() {\n\t\t\tgaAB(\"send\", \"event\", \"Adblock\", \"Unblocked\", \"false\",
+        1);\n\t\t}\n\t\t\n\t\tfunction gaAB(var1, var2, var3, var4, var5, var6) {\n\t\t\tif(typeof
+        ga === \"function\") {\n\t\t\t\tga(var1, var2, var3, var4, var5, var6);\n\t\t\t}\n\t\t}\n\r\n\t\t\t\t\tvar
+        profileHeight = measureHeight(\"#profiledescription\");\r\n\r\n\t\t\t\t\tif(profileHeight
+        < 450) {\r\n\t\t\t\t\t\t$(\".normalboxreadmore\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t$(\"#profiledescription\").append(\"<div class=\\\"readmore
+        hide\\\">READ MORE</div>\");\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t$(\".normalboxreadmore
+        .readmore\").click(function() {\r\n\t\t\t\t\t\t\t$(\".normalboxreadmore\").animate({\"max-height\":
+        profileHeight+\"px\"}, \"medium\", null, function() { \r\n\t\t\t\t\t\t\t\t$(\".normalboxreadmore\").css(\"max-height\",
+        \"none\").removeClass(\"normalboxreadmore\");\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\n\r\n\t\t\t\tvar
+        tempvideos = {\"2675110\":\"<iframe style=\\\"margin: 20px 0 10px;\\\" width=\\\"600\\\"
+        height=\\\"338\\\" src=\\\"https:\\/\\/www.moddb.com\\/media\\/iframe\\/2675110?autoplay=1\\\"
+        frameborder=\\\"0\\\" allowfullscreen><\\/iframe>\"};\r\n\t\t\t\tvar shownvideo
+        = 0;\r\n\t\t\t\t$(\"#imagebox span.play\").click(function(){\r\n\t\t\t\t\t$(\".tempplayer\").remove();\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(shownvideo
+        != $(this).data(\"id\")) {\r\n\t\t\t\t\t\tshownvideo = $(this).data(\"id\");\r\n\t\t\t\t\t\t$(\".imagebox\").append(\"<div
+        class=\\\"tempplayer\\\" style=\\\"display: none; text-align: center;\\\">\"+tempvideos[shownvideo]+\"</div>\");\r\n\t\t\t\t\t\t$(\".tempplayer\").slideDown();\r\n\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\tshownvideo = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\nvar
+        slidearr = new Array(); slidearr[1] = new Array(6);slidearr[1][0] = new Array(0,
+        \"/games/sugar-mess-lets-play-jolly-battle/videos/sugar-messlets-play-jolly-battle-trailer-1#imagebox\",
+        \"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/Sugar_MessLets_Play_Jolly_Battle_Trailer.webm.jpg\",
+        2675110, \"Sugar MessLets Play Jolly Battle Trailer 1\", \"video\"); slidearr[1][1]
+        = new Array(0, \"/games/sugar-mess-lets-play-jolly-battle/images/image-6#imagebox\",
+        \"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/Outro_send_01_1.1.jpg\",
+        2675116, \"Image 6\", \"image\"); slidearr[1][2] = new Array(0, \"/games/sugar-mess-lets-play-jolly-battle/images/image-5#imagebox\",
+        \"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_8c29fdea988d37ecf79217872b9b7417f.jpg\",
+        2675115, \"Image 5\", \"image\"); slidearr[1][3] = new Array(0, \"/games/sugar-mess-lets-play-jolly-battle/images/image-4#imagebox\",
+        \"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_ce26052b135970a518ba5ba9ea6dba171.jpg\",
+        2675114, \"Image 4\", \"image\"); slidearr[1][4] = new Array(0, \"/games/sugar-mess-lets-play-jolly-battle/images/image-3#imagebox\",
+        \"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_5d148f46da5bbb7432830b206febefa02.jpg\",
+        2675113, \"Image 3\", \"image\"); slidearr[1][5] = new Array(0, \"/games/sugar-mess-lets-play-jolly-battle/images/image-2#imagebox\",
+        \"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_1e8c4acfa74e853490ab200fd9171aad2.jpg\",
+        2675112, \"Image 2\", \"image\"); slidearr[2] = new Array(6);slidearr[2][0]
+        = new Array(0, \"/games/sugar-mess-lets-play-jolly-battle/images/image-1#imagebox\",
+        \"https://media.moddb.com/cache/images/games/1/83/82489/crop_120x90/ss_80ee490e85acab47d4dac1de1ec4990f7.jpg\",
+        2675111, \"Image 1\", \"image\");  \r\n\t\t\t$(\"#imagebox\").galleryBrowse(0,
+        1, 2, 6, slidearr, \"/games/sugar-mess-lets-play-jolly-battle/images/add\",
+        true);\n$(\".togglertxinfo\").click(function(e){\r\n\t\t\t\tif($(this).attr(\"href\")
+        == \"#rtxremix\") {\r\n\t\t\t\t\tlocalStorage.setItem(\"rtxtoggled\", true);\r\n\t\t\t\t\t$(\"#rtxremix\").show();\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tlocalStorage.removeItem(\"rtxtoggled\");\r\n\t\t\t\t\t$(\"#rtxremix\").hide();\r\n\t\t\t\t\treturn
+        false;\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t\t\r\n\t\t\t\n\r\n\t\t\t\tviewBrowse
+        = function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\tif(response[\"labels\"]) {\r\n\t\t\t\t\t\t\tfor (i in response[\"labels\"])
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.parent().find(\".\"+i+\"uniqueicon\").attr(\"title\",
+        response[\"labels\"][i]).html(response[\"labels\"][i]).change();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tif(response[\"action\"]
+        == \"pin\" && response[\"pinned\"]) {\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").hide().prependTo(currentoption.closest(\".table\")).fadeIn();\r\n\t\t\t\t\t\t}
+        else if(response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\t\tif(currentoption.closest(\".row\").next(\".row\").hasClass(\"rowcontentnext\"))
+        {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").next(\".row\").remove();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t\t\t} else if(response[\"action\"]
+        == \"ban\") {\r\n\t\t\t\t\t\t\tif(currentoption.text() == \"Ban\") {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").removeClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\tcurrentoption.closest(\".row\").find(\".statusbox\").addClass(\"statusboxbad\");\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t};\n\r\n\t\t\tviewComment
+        = function(currentoption, response) {\r\n\t\t\t\tif(response[\"action\"] ==
+        \"delete\") {\r\n\t\t\t\t\t$(\"#\"+currentoption.closest(\".actions\").data(\"id\")+\"
+        div.comment\").show().html(response[\"success\"] ? \"<p>Your comment action
+        was successful. When a comment is deleted all replies to the comment will
+        be removed as well. Because you are an admin, you can click the \\\"view deleted\\\"
+        link above to view deleted comments in-case you wish to undelete them in the
+        future. If this was a mistake, click the link again to reverse the change.</p>\"
+        : \"<p>\"+response[\"text\"]+\"</p>\");\r\n\t\t\t\t\tcurrentoption.html(response[\"labels\"][\"delete\"]);\r\n\t\t\t\t}
+        else if(response[\"action\"] == \"archive\") {\r\n\t\t\t\t\tcurrentoption.closest(\".row\").slideUp(400,
+        function(){$(this).remove();});\r\n\t\t\t\t} else if(response[\"action\"].includes(\"karma\"))
+        {\r\n\t\t\t\t\tif(response[\"success\"]) {\r\n\t\t\t\t\t\tkarma = parseInt(currentoption.parent().find(\".karma\").html().split(\"
+        \", 1));\r\n\t\t\t\t\t\tkarma = karma ? (karma + response[\"karma\"]) : response[\"karma\"];\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html((karma==1
+        ? \"+1 vote\" : (karma>1 ? \"+\"+karma+\" votes\" : karma+\" votes\")));\r\n\t\t\t\t\t}
+        else if(response[\"error\"]) {\r\n\t\t\t\t\t\tcurrentoption.parent().find(\".karma\").html(response[\"text\"]);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t\t\t\r\n\t\t\t$(\".rowdeleted
+        .comment,.rowbury .comment\").hide().each(function() {\r\n\t\t\t\textra =
+        $(this).find(\".hidereason\").html();\r\n\t\t\t\t$(this).find(\".hidereason\").remove();\r\n\t\t\t\t$(this).before(\"<p><a
+        href=# class=togglecomment>View comment</a> <em>\"+extra+\"</em></p>\");\r\n\t\t\t});\r\n\t\t\t\t\r\n\t\t\t$(\".togglecomment\").click(function()
+        {\r\n\t\t\t\t$(this).parent().next().slideDown();\r\n\t\t\t\t$(this).parent().remove();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\"#commentsummary\").formAutoResize({extraSpace: 0});\n$(\"#commentsummary\").mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\",
+        autocomplete: {minLength: 1}}).closest(\".body\").css(\"overflow\", \"visible\").closest(\".inner\").css(\"overflow\",
+        \"visible\");\n\r\n\t\t\t$(\".tablecomments .entericon\").click( function()
+        {\r\n\t\t\t\tvar post = $(this).closest(\".actions\").data(\"id\");\r\n\t\t\t\tvar
+        link = $(this);\r\n\t\t\r\n\t\t\t\tif(!$(\"#commentsummary\").length) {\r\n\t\t\t\t\treturn
+        true;\r\n\t\t\t\t} else if($(\"#\"+post+\" div.replypostholder\").length)
+        {\r\n\t\t\t\t\t// do nothing\r\n\t\t\t\t} else {\r\n\t\t\t\t\t$(\"#\"+post+\"
+        div.comment\").append(\"<div class=\\\"replypostholder\\\"><br /><textarea
+        rows=\\\"5\\\" cols=\\\"50\\\" class=\\\"editpost\\\" id=\\\"reply\"+post+\"\\\"
+        placeholder=\\\"Reply to @\"+$(\"#\"+post+\" .author\").data(\"nameid\")+\"\\\"></textarea><div><input
+        type=\\\"button\\\" value=\\\"Cancel\\\" id=\\\"cancelreply\"+post+\"\\\"
+        /> <input type=\\\"button\\\" value=\\\"Save\\\" id=\\\"savereply\"+post+\"\\\"
+        style=\\\"font-weight: bold;\\\" /></div></div>\");\r\n\t\t\t\t\tvar textarea
+        = $(\"#reply\"+post);\r\n\t\t\t\t\tvar mentions = $(\"#commentform .mentions-input\").length
+        > 0;\r\n\r\n\t\t\t\t\tif(mentions) {\r\n\t\t\t\t\t\ttextarea.mentionsInput({source:
+        \"https://www.moddb.com/html/scripts/autocomplete.php?a=mentions&p=home&l=6&u=4616793\"});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t\t\t$(\"#cancelreply\"+post).click(function()
+        {\r\n\t\t\t\t\t\t$(\"#\"+post+\" div.replypostholder\").remove();\r\n\t\t\t\t\t});\r\n\t\t\r\n\t\t\t\t\t$(\"#savereply\"+post).click(function()
+        {\r\n\t\t\t\t\t\tpostcontent = mentions ? textarea.mentionsInput(\"getValue\")
+        : textarea.val();\r\n\t\t\r\n\t\t\t\t\t\tif(postcontent) {\r\n\t\t\t\t\t\t\t$(this).remove();\r\n\t\t\t\t\t\t\t$(\"#cancelreply\"+post).remove();\r\n\t\t\t\t\t\t\ttextarea.after(\"<span
+        class=\\\"ajaxicon\\\">Saving your reply</span>\");\r\n\t\t\t\t\t\t\tif(mentions)
+        {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").mentionsInput(\"setValue\", postcontent);\r\n\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t$(\"#commentsummary\").val(postcontent);\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t$(\"#commentform
+        input[name=replyid]\").val(post);\r\n\t\t\t\t\t\t\t$(\"#commentsubmit\").click();\r\n\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t$(this).text(\"Please enter a comment\");\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\t\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n$(\".c76625d26ff7f0c55142db2c328da119watch\").saveUpdate(\"watch\",
+        false);\n$(\".44825bfc951a8ff5714f8bb710efda3freport\").saveUpdate(\"report\",
+        false);\n\r\n\t\t\t\tvar tagperforming = false;\r\n\t\r\n\t\t\t\ttagVote =
+        function(currentoption, response) {\r\n\t\t\t\t\tif(response[\"success\"]
+        && response[\"action\"] && response[\"action\"] == \"delete\") {\r\n\t\t\t\t\t\tcurrentoption.closest(\".row\").remove();\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t\t\r\n\t\t\t\t$(\"#tagstag\").suggest(\"/html/scripts/autocomplete.php?a=tags&sa=games\",{minchars:
+        1});\r\n\t\t\t\t$(\"#tagsform .tagaction\").saveUpdate(\"add\", tagVote);\r\n\t\t\t
+        \t$(\"#tagsform form\").submit(function() {\r\n\t\t\t\t\tvar re = /^[#a-zA-Z0-9-
+        ]{2,40}$/\r\n\t\t\t\t\t\r\n\t\t\t\t\tif(!tagperforming && !$(\"#tagstag\").val().match(re))
+        {\r\n\t\t\t\t\t\t$.achtung({message: \"Please enter a valid tag (2 to 40 characters
+        in length and can only contain letters, numbers and spaces).\", className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t$(\".rowtagstag\").addClass(\"rowerror\");\r\n\t\t\t\t\t}
+        else if(!tagperforming) {\r\n\t\t\t\t\t\ttagperforming = $.achtung({message:
+        \"Adding tag\", className: \"achtungWait\", icon: \"wait-icon\", timeout:
+        0});\r\n\t\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\ttype: \"POST\", url: urlPath($(this).attr(\"action\")),
+        timeout: 60000, dataType: \"json\",\r\n\t\t\t\t\t\t\tdata: {ajax: \"t\", hash:
+        $(\"#tagshash\").val(), tag: $(\"#tagstag\").val(), sitearea: $(\"#tagssitearea\").val(),
+        siteareaid: $(\"#tagssiteareaid\").val()},\r\n\t\t\t\t\t\t\terror: function(response,
+        error, exception) {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming
+        = false;\r\n\t\t\t\t\t\t\t\t$.achtung({message: \"An error has occurred performing
+        the action requested. Please try again shortly.\", className: \"achtungFail\",
+        timeout:10});\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\tsuccess: function(response)
+        {\r\n\t\t\t\t\t\t\t\ttagperforming.achtung(\"close\"); tagperforming = false;\r\n\t\r\n\t\t\t\t\t\t\t\tif(response[\"success\"])
+        {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungSuccess\", timeout:10});\r\n\t\t\t\t\t\t\t\t\t$(\".rowtagstag\").removeClass(\"rowerror\");\r\n\r\n\t\t\t\t\t\t\t\t\tvar
+        clone = $(\".rowtagsdemo\").clone(true).removeClass(\"rowtagsdemo\").show();\r\n\t\t\t\t\t\t\t\t\tclone.find(\"a\").each(function(){\r\n\t\t\t\t\t\t\t\t\t\t$(this).attr(\"href\",
+        $(this).attr(\"href\").replace(/TAGID/g, $(\"#tagstag\").val()).replace(/SITEAREAID/g,
+        $(\"#tagssiteareaid\").val()).replace(/SITEAREA/g, $(\"#tagssitearea\").val()));\r\n\t\t\t\t\t\t\t\t\t\t$(this).text($(this).text()
+        ? $(\"#tagstag\").val() : \"\");\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t\tclone.insertBefore(\".rowtagsdemo\");\r\n\r\n\t\t\t\t\t\t\t\t\t$(\"#tagstag\").val(\"\");\r\n\t\t\t\t\t\t\t\t}
+        else {\r\n\t\t\t\t\t\t\t\t\t$.achtung({message: response[\"text\"], className:
+        \"achtungFail\", timeout:10});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\r\n\t\t\t
+        \t\treturn false;\r\n\t\t\t \t});\n\r\n\t\t\t$(\".allbtn a\").click(function(){\r\n\t\t\t\t$(\".allbtn
+        a.on\").removeClass(\"on\");\r\n\t\t\t\t$(\".textembed\").val($(this).parent().html());\r\n\t\t\t\t$(this).addClass(\"on\");\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\r\n\r\n\t\t\t$(\".allbtn\").closest(\".table,.menu\").find(\".allbtn:first
+        a\").click();\r\n\r\n\t\t\t$(\".moreembed\").click(function(){\r\n\t\t\t\t$(\".ratingbtn,.smallbtn\").parent().slideToggle();\r\n\t\t\t\treturn
+        false;\r\n\t\t\t});\n\r\n\t\tfunction cookieScript(e) {\r\n\t\t\tvar status
+        = CookieScript.instance.currentState().categories.includes(\"targeting\")
+        ? \"false\" : \"true\";\r\n\t\t\tvar cookies = CookieScript.instance.currentState().categories.includes(\"performance\")
+        ? \"true\" : \"false\";\r\n\t\t\tvar cookie_data = { npa : {status:status,cookies:cookies,version:\"1.0.13\",chosen:\"true\"},
+        expires : 365 };\r\n\t\t\tCookies.set(\"dfp-npa\", cookie_data.npa, { expires:
+        cookie_data.expires, secure: true });\r\n\tif (typeof gamernetwork_piwik ===
+        \"function\" && cookie_data.npa.cookies == \"true\") { gamernetwork_piwik();
+        }\r\n\r\n\tif (typeof gtag === \"function\") { gtag(\"consent\", \"update\",
+        {\"ad_storage\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_user_data\": cookie_data.npa.status == \"false\" ? \"granted\" : \"denied\",
+        \"ad_personalization\": cookie_data.npa.status == \"false\" ? \"granted\"
+        : \"denied\", \"analytics_storage\": cookie_data.npa.cookies == \"true\" ?
+        \"granted\" : \"denied\"}); }\r\n\r\n\tif(cookie_data.npa.status == \"false\")
+        {\r\n\t\t// personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": true, \"token\": \"Allow All\" }); }\r\n\t} else {\r\n\t\t// don't
+        personalize\r\n\t\tif (typeof permutive === \"object\") { permutive.consent({
+        \"opt_in\": false }); }\r\n\t\tCookies.remove(\"permutive-id\", { domain:
+        \"moddb.com\", secure: true });\r\n\t}\r\n\t\t}\r\n\r\n\t\tif(!Cookies.get(\"dfp-npa\"))
+        {\r\n\t\t\tCookies.set(\"dfp-npa\", {status:\"false\",cookies:\"true\",version:\"1.0.13\",chosen:\"false\"},
+        { expires: 60, secure: true });\r\n\t\t}\r\n\r\n\t\twindow.addEventListener(\"CookieScriptAcceptAll\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptAccept\", cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptReject\",
+        cookieScript);\r\n\t\twindow.addEventListener(\"CookieScriptClose\", cookieScript);\n$(\"a.thickbox\").click(function()
+        { $.colorbox({href:$(this).attr(\"href\"), rel:$(this).attr(\"rel\"), open:true,
+        onOpen:function(){ $(\".nextmediabox\").hide(); }, onClosed:function(){ $(\".nextmediabox\").show();
+        }}); return false; });\n });\n</script>\r\n<script type=\"text/javascript\"
+        charset=\"UTF-8\" src=\"//geo.cookie-script.com/s/02fe83eeed96d72125f64a74a34c1e06.js?country=gb&region=eu\"></script>\r\n<script>\r\nvar
+        _comscore = _comscore || [];\r\n_comscore.push({ c1: \"2\", c2: \"8518622\",
+        cs_ucfr: \"0\" }); (function() {\r\nvar s = document.createElement(\"script\"),
+        el = document.getElementsByTagName(\"script\")[0]; s.async = true; s.src =
+        \"https://sb.scorecardresearch.com/cs/8518622/beacon.js\";\r\nel.parentNode.insertBefore(s,
+        el);\r\n})();\r\n</script>\r\n<noscript><img src=\"https://b.scorecardresearch.com/p?c1=2&c2=8518622&cs_ucfr=0&cv=2.0&cj=1\"
+        height=\"1\" width=\"1\" alt=\"CS\"></noscript>\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-VBMFL9G8M0\"></script>\r\n<script>\r\n
+        \ window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n
+        \ gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});\r\n
+        \ gtag('js', new Date());\r\n  gtag('config', 'G-VBMFL9G8M0', { 'anonymize_ip':true,'store_gac':false
+        });\r\n</script>\r\n<script>\r\ngamernetwork_piwik = function() {\r\n(function(window,
+        document, dataLayerName, id) {\r\nwindow[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new
+        Date).getTime(),event:\"stg.start\"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');\r\nfunction
+        stgCreateCookie(a,b,c){var d=\"\";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d=\";
+        expires=\"+e.toUTCString()}document.cookie=a+\"=\"+b+d+\"; path=/\"}\r\nvar
+        isStgDebug=(window.location.href.match(\"stg_debug\")||document.cookie.match(\"stg_debug\"))&&!window.location.href.match(\"stg_disable_debug\");stgCreateCookie(\"stg_debug\",isStgDebug?1:\"\",isStgDebug?14:-1);\r\nvar
+        qP=[];dataLayerName!==\"dataLayer\"&&qP.push(\"data_layer_name=\"+dataLayerName),isStgDebug&&qP.push(\"stg_debug\");var
+        qPString=qP.length>0?(\"?\"+qP.join(\"&\")):\"\";\r\ntags.async=!0,tags.src=\"https://rxreedpop.containers.piwik.pro/\"+id+\".js\"+qPString,scripts.parentNode.insertBefore(tags,scripts);\r\n!function(a,n,i){a[n]=a[n]||{};for(var
+        c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var
+        a=[].slice.call(arguments,0);\"string\"==typeof a[0]&&window[dataLayerName].push({event:n+\".\"+i+\":\"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,\"ppms\",[\"tm\",\"cm\"]);\r\n})(window,
+        document, 'dataLayer', '7f2fd072-d2ec-454b-aaa9-c61be1d3606c');\r\n}\r\n</script>\r\n
+        </body>\r\n</html>"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 87451b861d8f0a55-AMS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 14 Apr 2024 16:35:10 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=b2xrpRXw7yNvRGvkhC3cFrgl8KJNpQkcZ0Pyr6ufht6l4uF5SRAGNw2CvpCMkF2YNp6FOsevNSIKV%2FEiwcDlej%2FVVtTOn79AEA59CG8kDWybirxpj0b%2FSxOCeTspiqFrbXS3gRXoqHQQ8Rk%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '71534'
+      content-security-policy:
+      - frame-ancestors 'self' moddb.com *.moddb.com
+      set-cookie:
+      - masterchief=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/;
+        secure; HttpOnly; SameSite=Lax
+      - masterchief=427c8cbafa233fbb0a694019f4bc8adb; expires=Sun, 14-Apr-2024 16:45:10
+        GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
+      - masterchief=427c8cbafa233fbb0a694019f4bc8adb; expires=Sun, 14-Apr-2024 16:45:10
         GMT; Max-Age=600; path=/; secure; HttpOnly; SameSite=Lax
       strict-transport-security:
       - max-age=63072000
