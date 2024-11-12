@@ -235,7 +235,7 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
     }
 
     req = requests.Request("POST", f"{BASE_URL}/members/login", data=data, cookies=resp.cookies)
-    session.send(prepare_request(req), allow_redirects=False)
+    login = session.send(prepare_request(req, session), allow_redirects=False)
 
     if "freeman" not in login.cookies:
         raise ValueError(f"Login failed for user {username}")
