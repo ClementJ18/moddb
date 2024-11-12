@@ -40,7 +40,7 @@ user_agent_list = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
-    "Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0"
+    "Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
 ]
 
 
@@ -81,8 +81,8 @@ def concat_docs(cls):
 class SSLAdapter(requests.adapters.HTTPAdapter):
     def init_poolmanager(self, *args, **kwargs):
         ssl_context = ssl.create_default_context()
-        ssl_context.maximum_version = ssl.TLSVersion.TLSv1_2 
-        
+        ssl_context.maximum_version = ssl.TLSVersion.TLSv1_2
+
         kwargs["ssl_context"] = ssl_context
         return super().init_poolmanager(*args, **kwargs)
 
@@ -216,7 +216,6 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
     if session is None:
         session = sys.modules["moddb"].SESSION
 
-    
     req = requests.Request("GET", f"{BASE_URL}/members/login")
     resp = session.send(prepare_request(req, session))
     html = soup(resp.text)
