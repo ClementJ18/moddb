@@ -4,9 +4,10 @@ from .base import front_page, login, logout, parse_page, parse_results, rss, sea
 from .client import Client, Thread
 from .enums import *
 from .pages import *
-from .utils import BASE_URL, LOGGER, Object, get_page, request, soup
+from .utils import BASE_URL, LOGGER, Object, get_page, request, soup, SSLAdapter
 
 SESSION = requests.Session()
+SESSION.mount("https://", SSLAdapter())
 
 __version__ = "0.11.0"
 
