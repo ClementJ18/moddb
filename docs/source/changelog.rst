@@ -8,6 +8,11 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.12.0
+-------
+Bug Fixes
+##########
+* Fixed SSL block
 
 v0.11.0
 -------

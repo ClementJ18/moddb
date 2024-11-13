@@ -4,6 +4,7 @@ import inspect
 import logging
 import random
 import re
+import ssl
 import sys
 import time
 import uuid
@@ -33,31 +34,13 @@ time_mapping = {
 }
 
 user_agent_list = [
-    # Chrome
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
-    # Firefox
-    "Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)",
-    "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",
-    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)",
-    "Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko",
-    "Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko",
-    "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko",
-    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)",
-    "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
-    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)",
-    "Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko",
-    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)",
-    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)",
-    "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.2792.65",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edge/44.18363.8131",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
+    "Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
 ]
 
 
@@ -93,6 +76,15 @@ def concat_docs(cls):
     cls.__doc__ = "\n".join(final)
 
     return cls
+
+
+class SSLAdapter(requests.adapters.HTTPAdapter):
+    def init_poolmanager(self, *args, **kwargs):
+        ssl_context = ssl.create_default_context()
+        ssl_context.maximum_version = ssl.TLSVersion.TLSv1_2
+
+        kwargs["ssl_context"] = ssl_context
+        return super().init_poolmanager(*args, **kwargs)
 
 
 class Ratelimit:
@@ -189,10 +181,10 @@ def prepare_request(req: requests.Request, session: requests.Session):
     else:
         req.cookies = cookies
 
-    req.headers["User-Agent"] = random.choice(user_agent_list)
+    if "User-Agent" not in req.headers:
+        req.headers["User-Agent"] = random.choice(user_agent_list)
 
-    prepped = session.prepare_request(req)
-    return prepped
+    return session.prepare_request(req)
 
 
 def raise_for_status(response: requests.Response):
@@ -224,7 +216,8 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
     if session is None:
         session = sys.modules["moddb"].SESSION
 
-    resp = session.get(f"{BASE_URL}/members/login")
+    req = requests.Request("GET", f"{BASE_URL}/members/login")
+    resp = session.send(prepare_request(req, session))
     html = soup(resp.text)
     form = html.find("form", attrs={"name": "membersform"})
 
@@ -240,12 +233,8 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
         "members": "Sign in",
     }
 
-    login = session.post(
-        f"{BASE_URL}/members/login",
-        data=data,
-        cookies=resp.cookies,
-        allow_redirects=False,
-    )
+    req = requests.Request("POST", f"{BASE_URL}/members/login", data=data, cookies=resp.cookies)
+    login = session.send(prepare_request(req, session), allow_redirects=False)
 
     if "freeman" not in login.cookies:
         raise ValueError(f"Login failed for user {username}")
@@ -270,10 +259,10 @@ def request(req: requests.Request):
     """
     session: requests.Session = sys.modules["moddb"].SESSION
     prepped = prepare_request(req, session)
-    r = session.send(prepped)
+    resp = session.send(prepped)
 
-    raise_for_status(r)
-    return r
+    raise_for_status(resp)
+    return resp
 
 
 def soup(html: str) -> BeautifulSoup:

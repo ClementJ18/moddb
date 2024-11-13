@@ -23,19 +23,19 @@ class TestFrontPage:
     def _get_object(self, request):
         self.fp = moddb.front_page()
 
-    def get_articles(self):
+    def test_get_articles(self):
         for article in sample_list(self.fp.articles, 3):
             article.parse()
 
-    def get_games(self):
+    def test_get_games(self):
         for game in sample_list(self.fp.games, 3):
             game.parse()
 
-    def get_files(self):
+    def test_get_files(self):
         for file in sample_list(self.fp.files, 3):
             file.parse()
 
-    def get_poll(self):
+    def test_get_poll(self):
         self.fp.get_poll()
 
 
