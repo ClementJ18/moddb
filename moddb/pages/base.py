@@ -52,16 +52,20 @@ class BaseMetaClass:
             except AttributeError:
                 self.name = html.find("meta", property="og:title")["content"]
 
-        try:
-            self.id = int(
-                re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]
-            )
-        except TypeError:
+
+        for index, func in enumerate([
+            lambda: int(re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]),
+            lambda: int(html.find("input", attrs={"name": "siteareaid"})["value"]),
+            lambda: int(html.find("meta", property="og:image")["content"].split("/")[-2]),
+            lambda: re.match(r"https:\/\/www\.moddb\.com\/html\/scripts\/autocomplete\.php\?a=mentions&p=home&l=6&u=(\d*)", str(html)).group(1)
+        ]):
             try:
-                self.id = int(html.find("input", attrs={"name": "siteareaid"})["value"])
+                self.id = func()
+                break
             except (AttributeError, TypeError):
-                # really scratching the bottom here but a lot of "official" groups don't have the regular ID
-                self.id = int(html.find("meta", property="og:image")["content"].split("/")[-2])
+                LOGGER.warning("Failed to get id from method %s for member %s", index, self.name)
+        else:
+            raise AttributeError(f"Failed to get id from member {self.name}")
 
         try:
             self.url = html.find("meta", property="og:url")["content"]

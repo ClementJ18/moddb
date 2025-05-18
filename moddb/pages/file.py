@@ -19,6 +19,19 @@ from ..utils import (
 )
 from .base import BaseMetaClass
 
+def parse_location(html) -> list[Thumbnail] | None:
+    location = html.find("h5", string="Location").parent.find_all('a')
+    if location is None:
+        return None
+    
+    return [
+        Thumbnail(
+            type=ThumbnailType[location[x].string.lower()[:-1]], 
+            url=location[x+1]["href"], 
+            name=location[x+1].string,
+        )
+        for x in range(0, len(location)-1, 2)
+    ]
 
 @concat_docs
 class File(BaseMetaClass):
@@ -83,6 +96,10 @@ class File(BaseMetaClass):
         Description of the file, as written by the author
     preview : str
         URL of the preview image for the file
+    location: list[Thumbnail]
+        An ordered list detailing the hierarchy of entities the
+        file or addon sits under. The last one being the entity
+        directly attached to this file. 
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
@@ -128,6 +145,8 @@ class File(BaseMetaClass):
         self.description = html.find("p", id="downloadsummary").string
 
         self.preview = html.find_all("img", src=True)[0]["src"]
+
+        self.location = parse_location(html)
 
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
