@@ -83,6 +83,8 @@ class File(BaseMetaClass):
         Description of the file, as written by the author
     preview : str
         URL of the preview image for the file
+    game : str
+        The name of the game that the file is attached to.
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
@@ -106,6 +108,11 @@ class File(BaseMetaClass):
         downloads = html.find("h5", string="Downloads").parent.a.string
         self.today = int(re.sub(r"[(),today]", "", downloads.split(" ")[1]))
         self.downloads = int(downloads.split(" ")[0].replace(",", ""))
+        location = html.find("h5", string="Location").parent.find_all('a')
+        if location[0].string == "Games":
+            self.game = location[1].string    
+        else:
+            self.game = "None"    
 
         try:
             self.category = FileCategory(
