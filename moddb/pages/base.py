@@ -76,7 +76,7 @@ class BaseMetaClass:
 
         try:
             self.report = join(html.find("a", string="Report")["href"])
-        except TypeError:
+        except (TypeError, AttributeError):
             self.report = None
             LOGGER.info(
                 "'%s' '%s' cannot be reported",

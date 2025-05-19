@@ -17,7 +17,7 @@ __all__ = ["search", "parse_page", "login", "logout", "front_page", "parse_resul
 
 
 def search(
-    category: SearchCategory,
+    search_category: SearchCategory,
     *,
     query: str = None,
     sort: Tuple[str, str] = None,
@@ -35,7 +35,7 @@ def search(
 
     Parameters
     ------------
-    category : SearchCategory
+    search_category : SearchCategory
         The model type that you want to search
     query : str
         String to search for in the model title
@@ -58,7 +58,7 @@ def search(
     game = filters.get("game", None)
     game = game.id if game else None
 
-    url = f"{BASE_URL}/{category.name}/page/{page}"
+    url = f"{BASE_URL}/{search_category.name}/page/{page}"
     filter_parsed = {key: value.value for key, value in filters.items() if hasattr(value, "value")}
 
     params = {
@@ -82,7 +82,7 @@ def search(
         total_pages=total_pages,
         current_page=current_page,
         params=params,
-        url=f"{BASE_URL}/{category.name}",
+        url=f"{BASE_URL}/{search_category.name}",
         total_results=total_results,
     )
 

@@ -8,6 +8,17 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.13.0
+-----------
+Bug Fixes
+###########
+* Renamed `base.search` `category` parameter to `search_category` to avoid conflict with filters
+* Fixed the way IDs are retrieved
+
+New Features
+##############
+* `File` and `Addon` now have a `location` value that contains the location list of the entity
+
 v0.12.0
 -------
 Bug Fixes
