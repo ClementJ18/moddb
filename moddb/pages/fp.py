@@ -4,7 +4,7 @@ import bs4
 
 from ..boxes import Thumbnail
 from ..enums import ThumbnailType
-from ..utils import get_page, get_page_type
+from ..utils import LOGGER, get_page, get_page_type
 from . import opinion
 
 
@@ -52,12 +52,20 @@ class FrontPage:
             elif "data-bg" in x.div:
                 image = x.div["data-bg"]
 
+            try:
+                page_type = get_page_type(x.a["href"])
+            except IndexError:
+                LOGGER.warning(
+                    "Unabled to get page type from %s for front page, skipping", x.a["href"]
+                )
+                continue
+
             thumbnail = Thumbnail(
                 name=name.string if name else None,
                 url=x.a["href"],
                 summary=summary.string if summary else None,
                 image=image,
-                type=get_page_type(x.a["href"]),
+                type=page_type,
             )
 
             self.slider.append(thumbnail)

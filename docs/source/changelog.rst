@@ -15,6 +15,7 @@ Bug Fixes
 * Renamed `base.search` `category` parameter to `search_category` to avoid conflict with filters
 * Fixed the way IDs are retrieved
 * Fixed a bug where saving files and medias would not stream the response
+* Fixed issue where the front page would sometimes fail to parse
 
 New Features
 ##############
