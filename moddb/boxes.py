@@ -5,8 +5,9 @@ import datetime
 import logging
 import re
 import sys
-from typing import TYPE_CHECKING, Any, List, Tuple, Union
+from typing import TYPE_CHECKING, Any, Generic, List, Tuple, TypeVar
 
+from typing_extensions import Self
 from bs4 import BeautifulSoup
 
 from .enums import (
@@ -1072,8 +1073,9 @@ class Option:
     def __repr__(self):
         return f"<Option text={self.text}>"
 
+T = TypeVar('T')
 
-class ModDBList(collections.abc.MutableSequence):
+class ModDBList(collections.abc.MutableSequence[T], Generic[T]):
     """Base List type for the lib
 
     Attributes
@@ -1087,8 +1089,8 @@ class ModDBList(collections.abc.MutableSequence):
     """
 
     def __init__(self, **kwargs):
-        self._results = kwargs.pop("results")
-        self._params = kwargs.pop("params", {})
+        self._results: List[T] = kwargs.pop("results")
+        self._params: dict = kwargs.pop("params", {})
         self._url = kwargs.pop("url")
         self.total_pages = kwargs.pop("total_pages")
         self.current_page = kwargs.pop("current_page")
@@ -1113,13 +1115,13 @@ class ModDBList(collections.abc.MutableSequence):
             total_results=total_results,
         )
 
-    def next_page(self) -> Union["ResultList", "CommentList"]:
+    def next_page(self) -> Self:
         """Returns the next page of results as either a CommentList if you are retriving comments or
         as a ResultList if it's literally anything else.
 
         Returns
         --------
-        Union[ResultList, CommentList]
+        Self
             The new search objects containing a new set of results.
 
         Raises
@@ -1132,13 +1134,13 @@ class ModDBList(collections.abc.MutableSequence):
 
         return self.to_page(self.current_page + 1)
 
-    def previous_page(self) -> Union["ResultList", "CommentList"]:
+    def previous_page(self) -> Self:
         """Returns the previous page of results as either a CommentList if you are retriving comments or
         as a ResultList if it's literally anything else.
 
         Returns
         --------
-        Union[ResultList, CommentList]
+        Self
             The new list-like object of results.
 
         Raises
@@ -1151,7 +1153,7 @@ class ModDBList(collections.abc.MutableSequence):
 
         return self.to_page(self.current_page - 1)
 
-    def to_page(self, page: int) -> Union["ResultList", "CommentList"]:
+    def to_page(self, page: int) -> Self:
         """Returns the desired page of results as either a CommentList if you are retriving comments or
         as a ResultList if it's literally anything else.
 
@@ -1162,7 +1164,7 @@ class ModDBList(collections.abc.MutableSequence):
 
         Returns
         --------
-        Union[ResultList, CommentList]
+        Self
             The new list-like object of results.
 
         Raises
@@ -1175,7 +1177,7 @@ class ModDBList(collections.abc.MutableSequence):
 
         return self._do_request(page=page)
 
-    def get_all_results(self):
+    def get_all_results(self) -> Self:
         """An expensive methods that iterates over every page of the result query and returns all
         the results. This may return more results than you expected if new page have fit the criteria
         while iterating.
@@ -1206,26 +1208,26 @@ class ModDBList(collections.abc.MutableSequence):
         search._results = list({key(e): e for e in results}.values())
         return search
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<{self.__class__.__name__} pages={self.current_page}/{self.total_pages}, results={self._results}>"
 
-    def __getitem__(self, element):
-        return self._results.__getitem__(element)
+    def __getitem__(self, index: int) -> T:
+        return self._results.__getitem__(index)
 
-    def __delitem__(self, element):
-        self._results.__delitem__(element)
+    def __delitem__(self, index: int):
+        self._results.__delitem__(index)
 
-    def __len__(self):
+    def __len__(self) -> int:
         return self._results.__len__()
 
-    def __setitem__(self, key, value):
+    def __setitem__(self, key: int, value: T):
         self._results.__setitem__(key, value)
 
-    def insert(self, index, value):
+    def insert(self, index: int, value: T):
         self._results.insert(index, value)
 
 
-class ResultList(ModDBList):
+class ResultList(ModDBList[Thumbnail]):
     """Represents a list of result gotten from one of the many get methods the library uses. This is returned
     over a regular list because it has additional methods that allow for easily go through all the results. In
     the same way that the moddb site works, you don't have to re-run the query manually to get the next page,
@@ -1246,7 +1248,7 @@ class ResultList(ModDBList):
     def _parse_method(self, html: BeautifulSoup):
         return _parse_results(html)
 
-    def resort(self, new_sort: Tuple[str, str]) -> "ResultList":
+    def resort(self, new_sort: Tuple[str, str]) -> Self:
         """Allows you to sort the whole search by a new sorting parameters. Returns a new search object.
 
         Parameters
@@ -1261,11 +1263,11 @@ class ResultList(ModDBList):
         """
         return self._do_request(sort=f"{new_sort[0]}-{new_sort[1]}")
 
-    def __contains__(self, element):
+    def __contains__(self, element: Thumbnail) -> bool:
         return get(self._results, name=element.name) is not None
 
 
-class CommentList(ModDBList):
+class CommentList(ModDBList[Comment]):
     """Represents a list of comments. This emulates a list and will behave like one, so you
     can use any of the regular list operators in addition to the methods defined below.
 
@@ -1282,7 +1284,7 @@ class CommentList(ModDBList):
     def _parse_method(self, html: BeautifulSoup):
         return _parse_comments(html)
 
-    def __contains__(self, element):
+    def __contains__(self, element: Comment) -> bool:
         return get(self._results, name=element.name) is not None
 
     def flatten(self) -> List[Comment]:

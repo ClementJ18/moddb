@@ -1,4 +1,5 @@
 import logging
+import time
 import pytest
 
 from tests import (
@@ -30,6 +31,9 @@ handler = logging.FileHandler(filename="moddb.log", encoding="utf-8", mode="w")
 handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(message)s"))
 logger.addHandler(handler)
 
+@pytest.fixture(scope='class')
+def delay():
+    time.sleep(60)
 
 @pytest.mark.vcr
 class TestMods(test_mod.TestMod):
@@ -39,6 +43,7 @@ class TestMods(test_mod.TestMod):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestGames(test_game.TestGame):
     @pytest.fixture(params=utils.game_urls, autouse=True)
     def _get_object(self, request):
@@ -46,6 +51,7 @@ class TestGames(test_game.TestGame):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestEngines(test_engine.TestEngine):
     @pytest.fixture(params=utils.engine_urls, autouse=True)
     def _get_object(self, request):
@@ -53,6 +59,7 @@ class TestEngines(test_engine.TestEngine):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestFiles(test_file.TestFile):
     @pytest.fixture(params=utils.file_urls, autouse=True)
     def _get_object(self, request):
@@ -60,6 +67,7 @@ class TestFiles(test_file.TestFile):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestAddons(test_addon.TestAddon):
     @pytest.fixture(params=utils.addon_urls, autouse=True)
     def _get_object(self, request):
@@ -67,6 +75,7 @@ class TestAddons(test_addon.TestAddon):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestMedias(test_media.TestMedia):
     @pytest.fixture(params=utils.media_urls, autouse=True)
     def _get_object(self, request):
@@ -74,6 +83,7 @@ class TestMedias(test_media.TestMedia):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestArticles(test_article.TestArticle):
     @pytest.fixture(params=utils.article_urls, autouse=True)
     def _get_object(self, request):
@@ -81,6 +91,7 @@ class TestArticles(test_article.TestArticle):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestGroups(test_group.TestGroup):
     @pytest.fixture(params=utils.group_urls, autouse=True)
     def _get_object(self, request):
@@ -88,6 +99,7 @@ class TestGroups(test_group.TestGroup):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestTeams(test_team.TestTeam):
     @pytest.fixture(params=utils.team_urls, autouse=True)
     def _get_object(self, request):
@@ -95,6 +107,7 @@ class TestTeams(test_team.TestTeam):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestJobs(test_job.TestJob):
     @pytest.fixture(params=utils.job_urls, autouse=True)
     def _get_object(self, request):
@@ -102,6 +115,7 @@ class TestJobs(test_job.TestJob):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestMembers(test_member.TestMember):
     @pytest.fixture(params=utils.member_urls, autouse=True)
     def _get_object(self, request):
@@ -109,6 +123,7 @@ class TestMembers(test_member.TestMember):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestPlatforms(test_platform.TestPlatform):
     @pytest.fixture(params=utils.platform_urls, autouse=True)
     def _get_object(self, request):
@@ -116,6 +131,7 @@ class TestPlatforms(test_platform.TestPlatform):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestHardwares(test_hardware.TestHardware):
     @pytest.fixture(params=utils.hardware_urls, autouse=True)
     def _get_object(self, request):
@@ -123,6 +139,7 @@ class TestHardwares(test_hardware.TestHardware):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestSoftwares(test_software.TestSoftware):
     @pytest.fixture(params=utils.software_urls, autouse=True)
     def _get_object(self, request):
@@ -130,6 +147,7 @@ class TestSoftwares(test_software.TestSoftware):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestPolls(test_poll.TestPoll):
     @pytest.fixture(params=utils.poll_urls, autouse=True)
     def _get_object(self, request):
@@ -137,20 +155,24 @@ class TestPolls(test_poll.TestPoll):
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestSearches(test_base.TestSearch):
     @pytest.fixture(params=utils.queries, autouse=True)
     def _get_object(self, request):
         self.search = moddb.search(request.param[1], query=request.param[0])
 
 
+@pytest.mark.usefixtures("delay")
 class TestLogin(test_base.TestLogin):
     pass
 
 
 @pytest.mark.vcr
+@pytest.mark.usefixtures("delay")
 class TestFrontPage(test_base.TestFrontPage):
     pass
 
 
+@pytest.mark.usefixtures("delay")
 class TestClient(test_client.TestClient):
     pass

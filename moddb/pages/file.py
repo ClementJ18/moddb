@@ -1,6 +1,7 @@
 import datetime
 import re
 import sys
+from typing import BinaryIO, List
 
 import bs4
 import requests
@@ -15,9 +16,23 @@ from ..utils import (
     get_views,
     join,
     prepare_request,
-    raise_for_status,
 )
 from .base import BaseMetaClass
+
+
+def parse_location(html) -> list[Thumbnail] | None:
+    location = html.find("h5", string="Location").parent.find_all("a")
+    if location is None:
+        return None
+
+    return [
+        Thumbnail(
+            type=ThumbnailType[location[x].string.lower()[:-1]],
+            url=location[x + 1]["href"],
+            name=location[x + 1].string,
+        )
+        for x in range(0, len(location) - 1, 2)
+    ]
 
 
 @concat_docs
@@ -83,6 +98,10 @@ class File(BaseMetaClass):
         Description of the file, as written by the author
     preview : str
         URL of the preview image for the file
+    location: list[Thumbnail]
+        An ordered list detailing the hierarchy of entities the
+        file or addon sits under. The last one being the entity
+        directly attached to this file.
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
@@ -129,23 +148,27 @@ class File(BaseMetaClass):
 
         self.preview = html.find_all("img", src=True)[0]["src"]
 
+        self.location = parse_location(html)
+
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
 
-    def save(self, file_obj, *, mirror=None):
+    def save(self, file_obj: BinaryIO, *, mirror=None, chunk_size: int = 10_000_000):
         """Save the file to an object. This functions makes
         two requests. If you pass a valid mirror it will
         make only one request.
 
         Parameters
         -----------
-        file_obj : typing.BinaryIO
+        file_obj : BinaryIO
             The file obj to save the file to. The binary data
             will be streamed to that object.
         mirror : Optional[Mirror]
             An optional mirror object to download the
             file from a specific moddb mirror
-
+        chunk_size: int
+            The size of the chunks to stream the response
+            back in. 10MB by default
         """
         if mirror is None:
             download = get_page(f"{BASE_URL}/downloads/start/{self.id}")
@@ -153,14 +176,14 @@ class File(BaseMetaClass):
         else:
             url = mirror._url
 
-        SESSION = sys.modules["moddb"].SESSION
+        SESSION: requests.Session = sys.modules["moddb"].SESSION
         prepped = prepare_request(requests.Request("GET", join(url)), SESSION)
         with SESSION.send(prepped, stream=True) as r:
-            raise_for_status(r)
-            for chunk in r.iter_content(chunk_size=8192):
+            r.raise_for_status()
+            for chunk in r.iter_content(chunk_size=chunk_size):
                 file_obj.write(chunk)
 
-    def get_mirrors(self):
+    def get_mirrors(self) -> List[Mirror]:
         """Get all the mirrors from which a file can be downloaded. This
         can then be passed to File.save to download from a specific mirror.
 
@@ -342,20 +365,23 @@ class Media(BaseMetaClass):
     def __repr__(self):
         return f"<Media name={self.name} type={self.category.name}>"
 
-    def save(self, file_obj):
+    def save(self, file_obj: BinaryIO, *, chunk_size: int = 10_000_000):
         """Save the media to an object.
 
         Parameters
         -----------
-        file_obj : typing.BinaryIO
+        file_obj : BinaryIO
             The file obj to save the file to. The binary data
             will be streamed to that object.
+        chunk_size: int
+            The size of the chunks to stream the response
+            back in. 10MB by default
 
         """
-        SESSION = sys.modules["moddb"].SESSION
+        SESSION: requests.Session = sys.modules["moddb"].SESSION
         prepped = prepare_request(requests.Request("GET", self.fileurl), SESSION)
 
         with SESSION.send(prepped, stream=True) as r:
-            raise_for_status(r)
-            for chunk in r.iter_content(chunk_size=8192):
+            r.raise_for_status()
+            for chunk in r.iter_content(chunk_size=chunk_size):
                 file_obj.write(chunk)
