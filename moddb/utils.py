@@ -218,6 +218,8 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
 
     req = requests.Request("GET", f"{BASE_URL}/members/login")
     resp = session.send(prepare_request(req, session))
+    resp.raise_for_status()
+
     html = soup(resp.text)
     form = html.find("form", attrs={"name": "membersform"})
 
