@@ -9,7 +9,7 @@ from .utils import BASE_URL, LOGGER, Object, get_page, request, soup, SSLAdapter
 SESSION = requests.Session()
 SESSION.mount("https://", SSLAdapter())
 
-__version__ = "0.12.0"
+__version__ = "0.13.0"
 
 __all__ = [
     "front_page",
