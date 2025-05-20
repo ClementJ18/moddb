@@ -52,13 +52,19 @@ class BaseMetaClass:
             except AttributeError:
                 self.name = html.find("meta", property="og:title")["content"]
 
-
-        for index, func in enumerate([
-            lambda: int(re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]),
-            lambda: int(html.find("input", attrs={"name": "siteareaid"})["value"]),
-            lambda: int(html.find("meta", property="og:image")["content"].split("/")[-2]),
-            lambda: re.match(r"https:\/\/www\.moddb\.com\/html\/scripts\/autocomplete\.php\?a=mentions&p=home&l=6&u=(\d*)", str(html)).group(1)
-        ]):
+        for index, func in enumerate(
+            [
+                lambda: int(
+                    re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]
+                ),
+                lambda: int(html.find("input", attrs={"name": "siteareaid"})["value"]),
+                lambda: int(html.find("meta", property="og:image")["content"].split("/")[-2]),
+                lambda: re.match(
+                    r"https:\/\/www\.moddb\.com\/html\/scripts\/autocomplete\.php\?a=mentions&p=home&l=6&u=(\d*)",
+                    str(html),
+                ).group(1),
+            ]
+        ):
             try:
                 self.id = func()
                 break
