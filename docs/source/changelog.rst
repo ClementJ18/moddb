@@ -14,10 +14,12 @@ Bug Fixes
 ###########
 * Renamed `base.search` `category` parameter to `search_category` to avoid conflict with filters
 * Fixed the way IDs are retrieved
+* Fixed a bug where saving files and medias would not stream the response
 
 New Features
 ##############
 * `File` and `Addon` now have a `location` value that contains the location list of the entity
+* `File.save`, `Addon.save` and `Media.save` can now take `chunk_size` as a keyword parameter to define the size of the chunks to stream in
 
 v0.12.0
 -------
