@@ -1,6 +1,7 @@
 import datetime
 import re
 import sys
+import hashlib
 from typing import BinaryIO, List
 
 import bs4
@@ -18,7 +19,8 @@ from ..utils import (
     prepare_request,
 )
 from .base import BaseMetaClass
-
+import logging
+LOGGER = logging.getLogger("moddb")
 
 def parse_location(html) -> list[Thumbnail] | None:
     location = html.find("h5", string="Location").parent.find_all("a")
@@ -153,7 +155,16 @@ class File(BaseMetaClass):
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
 
-    def save(self, file_obj: BinaryIO, *, mirror=None, chunk_size: int = 10_000_000):
+    def hashFunction(self, file_obj: BinaryIO):
+        file_obj.seek(0)
+        if hashlib.md5(file_obj.read()).hexdigest() == self.hash:
+            LOGGER.info("Hash matches!")
+            return True
+        else:
+            LOGGER.info("Hash does not match!")
+            return False
+
+    def save(self, file_obj: BinaryIO, *, mirror=None, chunk_size: int = 10_000_000, hashRequested=False):
         """Save the file to an object. This functions makes
         two requests. If you pass a valid mirror it will
         make only one request.
@@ -170,18 +181,26 @@ class File(BaseMetaClass):
             The size of the chunks to stream the response
             back in. 10MB by default
         """
+        if hashRequested:
+            if self.hashFunction(file_obj):
+                return
+            else:
+                file_obj.seek(0)
         if mirror is None:
             download = get_page(f"{BASE_URL}/downloads/start/{self.id}")
             url = download.find("a", string=f"download {self.filename}")["href"]
         else:
             url = mirror._url
-
         SESSION: requests.Session = sys.modules["moddb"].SESSION
         prepped = prepare_request(requests.Request("GET", join(url)), SESSION)
         with SESSION.send(prepped, stream=True) as r:
             r.raise_for_status()
             for chunk in r.iter_content(chunk_size=chunk_size):
                 file_obj.write(chunk)
+        file_obj.truncate(self.size) #necessary in case file hash mismatched and it over-downloaded and this is a redownload
+        if hashRequested and not self.hashFunction(file_obj):
+            LOGGER.info("Redownloading!")
+            self.save(file_obj, mirror=mirror, chunk_size=chunk_size, hashRequested=hashRequested)
 
     def get_mirrors(self) -> List[Mirror]:
         """Get all the mirrors from which a file can be downloaded. This
