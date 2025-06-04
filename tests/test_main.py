@@ -31,9 +31,11 @@ handler = logging.FileHandler(filename="moddb.log", encoding="utf-8", mode="w")
 handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(message)s"))
 logger.addHandler(handler)
 
-@pytest.fixture(scope='class')
+
+@pytest.fixture(scope="class")
 def delay():
     time.sleep(60)
+
 
 @pytest.mark.vcr
 class TestMods(test_mod.TestMod):

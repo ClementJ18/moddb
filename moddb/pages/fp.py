@@ -4,7 +4,7 @@ import bs4
 
 from ..boxes import Thumbnail
 from ..enums import ThumbnailType
-from ..utils import LOGGER, get_page, get_page_type
+from ..utils import LOGGER, get_page, get_page_type, join
 from . import opinion
 
 
@@ -35,6 +35,8 @@ class FrontPage:
     files : List[Thumbnail]
         A list of file like thumbnail objects representing the suggested
         files on the front page.
+    poll_url : str
+        The url to the poll on the front page
     """
 
     def __init__(self, html: bs4.BeautifulSoup):
@@ -146,7 +148,7 @@ class FrontPage:
             for x in files
         ]
 
-        self._poll_url = html.find("div", class_="poll").form["action"]
+        self.poll_url = join(html.find("div", class_="poll").find("a", class_="results")["href"])
         self._html = html
         self._poll = None
 
@@ -163,6 +165,6 @@ class FrontPage:
             The returned poll
         """
         if self._poll is None:
-            self._poll = opinion.Poll(get_page(self._poll_url))
+            self._poll = opinion.Poll(get_page(self.poll_url))
 
         return self._poll
