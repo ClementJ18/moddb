@@ -61,6 +61,7 @@ jobs:
       with:
         name: Test result
         path: report.html
+      if: ${{ always() }}
       
 
   
