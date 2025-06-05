@@ -148,7 +148,13 @@ class FrontPage:
             for x in files
         ]
 
-        self.poll_url = join(html.find("div", class_="poll").find("a", class_="results")["href"])
+        try:
+            #maybe they haven't voted yet and the vote bar is there
+            self.poll_url = html.find("div", class_="poll").form["action"]
+        except AttributeError:
+            #maybe they've already voted and the result link is there
+            self.poll_url = join(html.find("div", class_="poll").find("a", class_="results")["href"])
+        
         self._html = html
         self._poll = None
 
