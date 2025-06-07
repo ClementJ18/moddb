@@ -5,6 +5,7 @@ import re
 import sys
 from typing import TYPE_CHECKING, Any, List, Tuple, Union
 
+from curl_adapter import CurlCffiAdapter
 import requests
 from bs4 import BeautifulSoup
 from requests import utils
@@ -20,7 +21,6 @@ from .utils import (
     GLOBAL_LIMITER,
     GLOBAL_THROTLE,
     LOGGER,
-    SSLAdapter,
     concat_docs,
     generate_hash,
     generate_login_cookies,
@@ -295,7 +295,8 @@ class Client:
 
     def __init__(self, username: str, password: str):
         session = requests.Session()
-        session.mount("https://", SSLAdapter())
+        session.mount("http://", CurlCffiAdapter())
+        session.mount("https://", CurlCffiAdapter())
         session.cookies = generate_login_cookies(username, password, session=session)
         self._session = session
         LOGGER.info("Login successful for %s", username)
