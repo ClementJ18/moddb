@@ -59,17 +59,19 @@ class BaseMetaClass:
                 ),
                 lambda: int(html.find("input", attrs={"name": "siteareaid"})["value"]),
                 lambda: int(html.find("meta", property="og:image")["content"].split("/")[-2]),
-                lambda: re.match(
+                lambda: re.findall(
                     r"https:\/\/www\.moddb\.com\/html\/scripts\/autocomplete\.php\?a=mentions&p=home&l=6&u=(\d*)",
                     str(html),
-                ).group(1),
+                )[0],
             ]
         ):
             try:
                 self.id = func()
                 break
-            except (AttributeError, TypeError):
-                LOGGER.warning("Failed to get id from method %s for member %s", index, self.name)
+            except (AttributeError, TypeError) as e:
+                LOGGER.warning(
+                    "Failed to get id from method %s for member %s: %s", index, self.name, e
+                )
         else:
             raise AttributeError(f"Failed to get id from member {self.name}")
 

@@ -20,3 +20,11 @@ class Ratelimited(ModdbException):
         super().__init__(message)
 
         self.remaining = remaining
+
+
+class AuthError(ModdbException):
+    """The user you are trying to login with requires 2FA to login. Use
+    the TwoFactorAuthClient object to do so.
+    """
+
+    pass
