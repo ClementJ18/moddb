@@ -208,19 +208,8 @@ class Profile:
             "div", class_="table tablemenu"
         )
         self.contact = join(html.find("h5", string="Contact").parent.span.a["href"])
-        self.follow = join(
-            profile_raw.find_all(
-                "h5",
-                string=[
-                    "Mod watch",
-                    "Game watch",
-                    "Group watch",
-                    "Engine watch",
-                    "Hardware watch",
-                    "Software watch",
-                ],
-            )[0].parent.span.a["href"]
-        )
+
+        self.follow = join(html.find("a", title="Follow")["href"])
 
         try:
             share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
@@ -874,8 +863,8 @@ class MemberProfile:
             )
 
         try:
-            self.follow = join(profile_raw.find("h5", string="Member watch").parent.span.a["href"])
-        except AttributeError:
+            self.follow = join(html.find("a", title="Follow")["href"])
+        except TypeError:
             LOGGER.info(
                 "Can't watch yourself, narcissist...", exc_info=LOGGER.level >= logging.DEBUG
             )
@@ -1073,7 +1062,9 @@ class Option:
     def __repr__(self):
         return f"<Option text={self.text}>"
 
-T = TypeVar('T')
+
+T = TypeVar("T")
+
 
 class ModDBList(collections.abc.MutableSequence[T], Generic[T]):
     """Base List type for the lib
