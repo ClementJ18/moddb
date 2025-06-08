@@ -80,6 +80,22 @@ that mod page you would be forced to completly parse the result page on your own
 See more snippets there: :ref:`snippets-ref`.
 
 
+Two Factor Authentication
+--------------------------
+Sometimes ModDB will ask you for a code sent to your email when logging from a new device. There is no
+way to circuvement this. As such the library provides a class to do this handshake::
+
+   >> import moddb
+   >> e = moddb.TwoFactorAuthClient("MyUser", "*****")
+   >> e.login()
+   False
+   >> e.submit_2fa_code("AZADV")
+   < Member >
+
+
+This class' `login` method returns false if 2FA is required instead of erroring, allowing you elegantly 
+check for the code and to send it in a second request.
+
 Searching
 ----------
 

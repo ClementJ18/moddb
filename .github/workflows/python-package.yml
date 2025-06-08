@@ -33,10 +33,6 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
-    - name: Echo env
-      run: |
-        echo ${{ github.event.pull_request.base.ref }}
-        echo ${{ github.event.pull_request.base.ref_name }}
     - name: Black and flake
       run: |
         bash run_lint.sh
@@ -65,6 +61,3 @@ jobs:
         name: Test result
         path: report.html
       if: ${{ always() }}
-      
-
-  

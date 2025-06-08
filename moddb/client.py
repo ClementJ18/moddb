@@ -13,7 +13,7 @@ from requests import utils
 from .base import parse_page
 from .boxes import ResultList, Thumbnail, _parse_results
 from .enums import Status, ThumbnailType
-from .errors import AuthError, ModdbException
+from .errors import ModdbException
 from .pages import Member
 from .utils import (
     BASE_URL,
@@ -1242,10 +1242,11 @@ class TwoFactorAuthClient(Client):
 
         data = {
             "rememberme": "1",
-            "referer": "",
+            "referer": "/",
             "2faemaildomain": form.find("input", id="members2faemaildomain")["value"],
             "2faemailhash": form.find("input", id="members2faemailhash")["value"],
             "2faemailcode": code,
+            "members": "Verify",
         }
 
         req = requests.Request(
