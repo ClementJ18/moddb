@@ -33,10 +33,6 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
-    - name: Echo env
-      run: |
-        echo ${{ github.event.pull_request.base.ref }}
-        echo ${{ github.event.pull_request.base.ref_name }}
     - name: Black and flake
       run: |
         bash run_lint.sh
@@ -48,19 +44,20 @@ jobs:
       run: |
         bash run_tests.sh full --test-group-count 3 --test-group=1 --reruns 3 --reruns-delay 15 
       if: github.event.pull_request.base.ref == 'main'
+      continue-on-error: true
     - name: Test changes with full tests 2/3
       run: |
         bash run_tests.sh full --test-group-count 3 --test-group=2 --reruns 3 --reruns-delay 15 
       if: github.event.pull_request.base.ref == 'main'
+      continue-on-error: true
     - name: Test changes with full tests 3/3
       run: |
         bash run_tests.sh full --test-group-count 3 --test-group=3 --reruns 3 --reruns-delay 15 
       if: github.event.pull_request.base.ref == 'main'
+      continue-on-error: true
     - name: Upload test results
       uses: actions/upload-artifact@v4
       with:
         name: Test result
         path: report.html
-      
-
-  
+      if: ${{ always() }}

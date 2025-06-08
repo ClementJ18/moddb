@@ -129,7 +129,7 @@ class Article(BaseMetaClass):
         self.summary = html.find("p", class_="introductiontext").string
 
         if self.category == ArticleCategory.tutorials:
-            cat = html.find("span", itemprop="proficiencyLevel").nextSibling.strip()
+            cat = html.find("span", itemprop="proficiencyLevel").next_sibling.strip()
             self.tutorial_category = TutorialCategory[
                 cat.replace("/", "_").replace(" ", "_").lower()
             ]

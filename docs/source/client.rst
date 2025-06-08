@@ -13,6 +13,13 @@ Client
     :inherited-members:
 
 
+TwoFactorAuthClient
+--------------------
+.. autoclass:: moddb.client.TwoFactorAuthClient
+    :members:
+    :inherited-members:
+
+
 ThreadThumbnail
 ----------------
 .. autoclass:: moddb.client.ThreadThumbnail

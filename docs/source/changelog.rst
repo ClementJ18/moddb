@@ -8,6 +8,18 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.14.0
+-----------
+Bug Fixes
+###########
+* Changed SLA adapter to CurlCffiAdapter
+* `Profile.follow` is more reliably parsed
+
+New Features
+#############
+* Exposed front page poll url under `FrontPage.poll_url`
+
+
 v0.13.0
 -----------
 Bug Fixes

@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup, Tag
 from requests import utils
 
 from .enums import MediaCategory, ThumbnailType
-from .errors import AwaitingAuthorisation, ModdbException, Ratelimited
+from .errors import AuthError, AwaitingAuthorisation, ModdbException, Ratelimited
 
 LOGGER = logging.getLogger("moddb")
 BASE_URL = "https://www.moddb.com"
@@ -216,6 +216,21 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
     if session is None:
         session = sys.modules["moddb"].SESSION
 
+    data, resp = create_login_payload(username, password, session)
+
+    req = requests.Request("POST", f"{BASE_URL}/members/login", data=data, cookies=resp.cookies)
+    login = session.send(prepare_request(req, session), allow_redirects=False)
+
+    if "members2faemailhash" in login.text:
+        raise AuthError("2FA required, use TwoFactorAuthClient")
+
+    if "freeman" not in login.cookies:
+        raise ValueError(f"Login failed for user {username}")
+
+    return login.cookies
+
+
+def create_login_payload(username: str, password: str, session: requests.Session):
     req = requests.Request("GET", f"{BASE_URL}/members/login")
     resp = session.send(prepare_request(req, session))
     resp.raise_for_status()
@@ -235,13 +250,7 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
         "members": "Sign in",
     }
 
-    req = requests.Request("POST", f"{BASE_URL}/members/login", data=data, cookies=resp.cookies)
-    login = session.send(prepare_request(req, session), allow_redirects=False)
-
-    if "freeman" not in login.cookies:
-        raise ValueError(f"Login failed for user {username}")
-
-    return login.cookies
+    return data, resp
 
 
 @ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
