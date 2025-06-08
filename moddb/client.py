@@ -22,6 +22,7 @@ from .utils import (
     GLOBAL_THROTLE,
     LOGGER,
     concat_docs,
+    create_login_payload,
     generate_hash,
     generate_login_cookies,
     get,
@@ -30,6 +31,7 @@ from .utils import (
     get_sitearea,
     get_siteareaid,
     join,
+    prepare_request,
     raise_for_status,
     ratelimit,
     soup,
@@ -1176,3 +1178,90 @@ class Client:
             Whether the downvote was successful
         """
         return self._vote_tag(tag, 1)
+
+
+class TwoFactorAuthClient(Client):
+    """A subclass of client to be used when facing 2FA requirements."""
+
+    def __init__(self, username: str, password: str):
+        self.username = username
+        self.password = password
+
+        session = requests.Session()
+        session.mount("http://", CurlCffiAdapter())
+        session.mount("https://", CurlCffiAdapter())
+        self._session = session
+        self.member: Member = None
+
+        self._2fa_request: requests.Response = None
+
+    def __repr__(self):
+        return f"<Client username={self.username}>"
+
+    def login(self) -> bool:
+        """Log the user in
+
+        Returns
+        --------
+        bool
+            True if the login was successful, false it the login requires 2FA
+        """
+        data, resp = create_login_payload(self.username, self.password, self._session)
+
+        req = requests.Request("POST", f"{BASE_URL}/members/login", data=data, cookies=resp.cookies)
+        login = self._session.send(prepare_request(req, self._session), allow_redirects=False)
+
+        if "members2faemailhash" in login.text:
+            self._2fa_request = login
+            return False
+
+        if "freeman" not in login.cookies:
+            raise ValueError(f"Login failed for user {self.username}")
+
+        self._session.cookies = login.cookies
+
+        self.member = Member(
+            soup(self._request("GET", f"{BASE_URL}/members/{self.username.replace('_', '-')}").text)
+        )
+        return True
+
+    def submit_2fa_code(self, code: str) -> Member:
+        """Submit the 2FA code sent to the user being logged in. Only works if called
+        after `login`
+
+        Returns
+        --------
+        Member
+            The logged in member
+        """
+        if self._2fa_request is None:
+            raise ValueError("Call login first")
+
+        html = soup(self._2fa_request.text)
+        form = html.find("form", action="https://www.moddb.com/members/login2fa/#membersform")
+
+        data = {
+            "rememberme": "1",
+            "referer": "/",
+            "2faemaildomain": form.find("input", id="members2faemaildomain")["value"],
+            "2faemailhash": form.find("input", id="members2faemailhash")["value"],
+            "2faemailcode": code,
+            "members": "Verify",
+        }
+
+        req = requests.Request(
+            "POST", f"{BASE_URL}/members/login2fa", data=data, cookies=self._2fa_request.cookies
+        )
+        login = self._session.send(prepare_request(req, self._session), allow_redirects=False)
+
+        if "freeman" not in login.cookies:
+            raise ValueError(f"Login failed for user {self.username}")
+
+        self._session.cookies = login.cookies
+        self._2fa_request = None
+
+        self.member = Member(
+            soup(self._request("GET", f"{BASE_URL}/members/{self.username.replace('_', '-')}").text)
+        )
+
+        return self.member
