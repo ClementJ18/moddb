@@ -69,7 +69,7 @@ class BaseMetaClass:
                 self.id = func()
                 break
             except (AttributeError, TypeError) as e:
-                LOGGER.warning(
+                LOGGER.info(
                     "Failed to get id from method %s for member %s: %s", index, self.name, e
                 )
         else:
