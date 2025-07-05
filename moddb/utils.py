@@ -7,8 +7,9 @@ import re
 import ssl
 import sys
 import time
+from typing_extensions import Protocol
 import uuid
-from typing import Optional, Sequence, Tuple, TypeVar
+from typing import Generic, Optional, Sequence, Tuple, TypeVar
 from urllib.parse import urljoin
 
 import bs4
@@ -480,7 +481,19 @@ def get_list_stats(result_box: bs4.BeautifulSoup, per_page: int = 30) -> Tuple[i
     return current_page, max_page, all_results
 
 
-class Object:
+U = TypeVar("U")
+
+
+class HasIdAndEntityType(Protocol):
+    id: str
+    entity_type: str
+
+
+class HasUrl(Protocol):
+    url: str
+
+
+class Object(Generic[U]):
     """A dud objects that will transform every kwarg given into an attribute"""
 
     def __init__(self, **kwargs):

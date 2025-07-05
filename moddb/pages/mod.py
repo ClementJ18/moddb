@@ -49,5 +49,7 @@ class Mod(PageMetaClass, GetAddonsMixin):
 
     """
 
+    entity_type: str = "mod"
+
     def __init__(self, html: BeautifulSoup):
         super().__init__(html, SearchCategory.mods)

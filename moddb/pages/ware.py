@@ -56,6 +56,8 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
         A list of recommended hardwares.
     """
 
+    entity_type: str = "hardware"
+
     def __init__(self, html: BeautifulSoup):
         super().__init__(html)
         self._type = SearchCategory.hardwares
@@ -194,6 +196,8 @@ class Software(HardwareSoftwareMetaClass):
         * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
 
     """
+
+    entity_type: str = "software"
 
     def __init__(self, html: BeautifulSoup):
         super().__init__(html)

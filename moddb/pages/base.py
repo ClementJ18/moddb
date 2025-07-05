@@ -1,3 +1,4 @@
+import json
 import logging
 import re
 from typing import List
@@ -45,12 +46,13 @@ class BaseMetaClass:
         URL to report the page
     """
 
+    entity_type: str = None
+
     def __init__(self, html: BeautifulSoup):
         if not getattr(self, "name", None):
-            try:
-                self.name = html.find("a", itemprop="mainEntityOfPage").string
-            except AttributeError:
-                self.name = html.find("meta", property="og:title")["content"]
+            breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
+            self.name = breadcrumbs["itemListElement"][-1]["Item"]["name"]
+            self.url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
 
         for index, func in enumerate(
             [
@@ -74,11 +76,6 @@ class BaseMetaClass:
                 )
         else:
             raise AttributeError(f"Failed to get id from member {self.name}")
-
-        try:
-            self.url = html.find("meta", property="og:url")["content"]
-        except TypeError:
-            self.url = join(html.find("a", string=self.name)["href"])
 
         self.name_id = self.url.split("/")[-1]
 
@@ -412,8 +409,6 @@ class PageMetaClass(
                 exc_info=LOGGER.level >= logging.DEBUG,
             )
 
-        self.description = str(html.find("div", id="profiledescription"))
-
         try:
             self.description = str(html.find("div", id="profiledescription"))
             self.plaintext = html.find("div", id="profiledescription").text
@@ -682,7 +677,7 @@ class HardwareSoftwareMetaClass(
         self.medias = self._get_media(1, html=html)
 
         try:
-            t = ThumbnailType[self.__class__.__name__.lower()]
+            t = ThumbnailType[self.entity_type]
             suggestions = html.find(
                 "span", string="You may also like"
             ).parent.parent.parent.find_all("a", class_="image")

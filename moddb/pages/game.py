@@ -42,5 +42,7 @@ class Game(PageMetaClass, GetModsMixin, GetAddonsMixin):
         * **dateup** - order by latest update, asc is most recent update first, desc is oldest update first
     """
 
+    entity_type: str = "game"
+
     def __init__(self, html: bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.games)

@@ -1,15 +1,17 @@
+import json
 import logging
 
 import bs4
 
 from ..boxes import PartialTag, Profile, Thumbnail
 from ..enums import ArticleCategory, Difficulty, ThumbnailType, TutorialCategory
+from ..pages.mixins import GetTagsMixin
 from ..utils import LOGGER, concat_docs, get_date, get_views, join
 from .base import BaseMetaClass
 
 
 @concat_docs
-class Article(BaseMetaClass):
+class Article(BaseMetaClass, GetTagsMixin):
     """This object represents an news article, a tutorial or a feature.
 
     Parameters
@@ -46,6 +48,8 @@ class Article(BaseMetaClass):
         Whether this article is a news article, a tutorial or a feature
     name : str
         The name of the article
+    url : str
+        Link to the article
     profile : Profile
         The profile object of the moddb model the article is for (engine, game, mod...). Can be none if it is not
         rattached to anything, such as for site news.
@@ -73,11 +77,12 @@ class Article(BaseMetaClass):
         If the article category is tutorial, this represents how hard the tutorial is.
     """
 
+    entity_type: str = "article"
+
     def __init__(self, html: bs4.BeautifulSoup):
-        try:
-            self.name = html.find("span", itemprop="headline").string
-        except AttributeError:
-            self.name = html.find("span", itemprop="heading").string
+        breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
+        self.name = breadcrumbs["itemListElement"][-1]["Item"]["name"]
+        self.url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
 
         super().__init__(html)
 
@@ -166,6 +171,8 @@ class Blog(BaseMetaClass):
         spaces removed and shortened.
 
     """
+
+    entity_type: str = "blog"
 
     def __init__(self, *, heading, text):
         author = heading.find("span", class_="subheading").a

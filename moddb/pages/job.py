@@ -6,10 +6,11 @@ import bs4
 
 from ..boxes import PartialTag, Thumbnail
 from ..enums import JobSkill, ThumbnailType
+from ..pages.mixins import GetTagsMixin
 from ..utils import LOGGER, join
 
 
-class Job:
+class Job(GetTagsMixin):
     """Model representing a job proposed on ModDB
 
     Parameters
@@ -56,6 +57,8 @@ class Job:
         A list of team like thumbnails of companies related to the job poster
 
     """
+
+    entity_type: str = "job"
 
     def __init__(self, html: bs4.BeautifulSoup):
         breadcrumb = json.loads(html.find("script", type="application/ld+json").string)[
