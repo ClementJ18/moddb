@@ -28,3 +28,9 @@ class AuthError(ModdbException):
     """
 
     pass
+
+
+class ValidationError(ModdbException):
+    """A client side validation has failed."""
+
+    pass

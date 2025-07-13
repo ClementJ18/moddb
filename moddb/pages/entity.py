@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 from typing import TYPE_CHECKING, List, Tuple
 
@@ -55,6 +56,8 @@ class Group(PageMetaClass, GetAddonsMixin):
     -----------
     name : str
         The name of the group
+    url : str
+        Link to the group
     private : bool
         Whether or not the group is private
     profile : Profile
@@ -78,10 +81,14 @@ class Group(PageMetaClass, GetAddonsMixin):
         The plaintext description of the group
     """
 
+    entity_type: str = "group"
     get_reviews = None
 
     def __init__(self, html: bs4.BeautifulSoup):
-        self.name = html.find("div", class_="title").h2.a.string
+        breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
+        self.name = breadcrumbs["itemListElement"][-1]["Item"]["name"]
+        self.url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
+
         BaseMetaClass.__init__(self, html)
         self.private = False
 
@@ -255,6 +262,8 @@ class Team(Group, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin):
 
     """
 
+    entity_type: str = "team"
+
     def __init__(self, html: bs4.BeautifulSoup):
         super().__init__(html)
         try:
@@ -328,6 +337,8 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
         A list of member like thumbnails representing some of the friends shown on the member's front
         page
     """
+
+    entity_type: str = "member"
 
     def __init__(self, html: bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.members)

@@ -1,4 +1,6 @@
 import datetime
+import json
+import logging
 import re
 import sys
 from typing import BinaryIO, List
@@ -6,10 +8,11 @@ from typing import BinaryIO, List
 import bs4
 import requests
 
-from ..boxes import Mirror, Thumbnail
-from ..enums import AddonCategory, FileCategory, MediaCategory, ThumbnailType
+from ..boxes import Mirror, PartialTag, Thumbnail
+from ..enums import AddonCategory, FileCategory, Licence, MediaCategory, ThumbnailType
 from ..utils import (
     BASE_URL,
+    LOGGER,
     concat_docs,
     get_date,
     get_page,
@@ -104,18 +107,22 @@ class File(BaseMetaClass):
         directly attached to this file.
     """
 
+    entity_type: str = "file"
+
     def __init__(self, html: bs4.BeautifulSoup):
         if html.find("span", string="File Deleted", class_="heading"):
             raise ValueError("This file has been removed")
+
+        breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
+        self.name = breadcrumbs["itemListElement"][-1]["Item"]["name"]
+        self.url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
 
         info = html.find("div", class_="table tablemenu")
         file = {
             x.string.lower(): x.parent.span.string.strip()
             for x in info.find_all("h5", string=("Filename", "Size", "MD5 Hash"))
         }
-        self.name = (
-            html.find("a", title="Report").parent.parent.find("span", class_="heading").string
-        )
+
         self.filename = file["filename"]
         super().__init__(html)
 
@@ -144,11 +151,28 @@ class File(BaseMetaClass):
         self.button = info.find("h5", string="Embed Button").parent.span.input["value"]
         self.widget = info.find("h5", string="Embed Widget").parent.span.input["value"]
 
-        self.description = html.find("p", id="downloadsummary").string
+        self.summary = html.find("p", id="downloadsummary").string
+        self.description = html.find("p", id="downloaddescription").string
 
         self.preview = html.find_all("img", src=True)[0]["src"]
 
         self.location = parse_location(html)
+
+        try:
+            raw_tags = html.find("form", attrs={"name": "tagsform"}).find_all("a")
+            self.tags = [
+                PartialTag(x.string, join(x["href"]), x["href"].split("/")[-1])
+                for x in raw_tags
+                if x.string is not None
+            ]
+        except AttributeError:
+            self.tags = []
+            LOGGER.info(
+                "'%s' '%s' has no tags",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
 
     def __repr__(self):
         return f"<{self.__class__.__name__} name={self.name} type={self.category.name}>"
@@ -256,10 +280,28 @@ class Addon(File):
         * **licence** - order based on licence
         * **date** - order by upload date, asc is most recent first, desc is oldest first
 
-
     """
 
-    pass
+    entity_type: str = "addon"
+
+    def __init__(self, html):
+        super().__init__(html)
+
+        info = html.find("div", class_="table tablemenu")
+        self.licence = Licence(
+            int(info.find("h5", string="Licence").parent.a["href"].split("=")[-1])
+        )
+
+        try:
+            self.credits = info.find("h5", string="Credits").parent.span.string
+        except AttributeError:
+            LOGGER.info(
+                "'%s' '%s' has no credits",
+                self.__class__.__name__,
+                self.name,
+                exc_info=LOGGER.level >= logging.DEBUG,
+            )
+            self.credts = None
 
 
 @concat_docs
@@ -312,11 +354,12 @@ class Media(BaseMetaClass):
         The description of the file as given by the file uploader.
     """
 
+    entity_type: str = "media"
+
     def __init__(self, html: bs4.BeautifulSoup):
-        try:
-            self.name = html.find("meta", itemprop="name")["content"]
-        except TypeError:
-            self.name = html.find("img", id="mediaimage")["title"]
+        breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
+        self.name = breadcrumbs["itemListElement"][-1]["Item"]["name"]
+        self.url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
 
         super().__init__(html)
         medias = html.find_all("h5", string=("Date", "By", "Duration", "Size", "Views", "Filename"))

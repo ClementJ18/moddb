@@ -1,11 +1,12 @@
 from __future__ import annotations
 
+import json
 import logging
 from typing import TYPE_CHECKING
 
 from ..boxes import PlatformStatistics, Thumbnail
 from ..enums import ThumbnailType
-from ..utils import LOGGER, concat_docs, get_date, join
+from ..utils import LOGGER, concat_docs, get_date
 from .base import BaseMetaClass
 from .mixins import GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin
 
@@ -78,11 +79,14 @@ class Platform(
         A list of mods suggested on the platform main page.
     """
 
-    def __init__(self, html: BeautifulSoup):
-        self.name = html.find("a", itemprop="mainEntityOfPage").string
-        self.id = None
+    entity_type: str = "platform"
 
-        self.url = join(html.find("a", itemprop="mainEntityOfPage")["href"])
+    def __init__(self, html: BeautifulSoup):
+        breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
+        self.name = breadcrumbs["itemListElement"][-1]["Item"]["name"]
+        self.url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
+
+        self.id = None
         self.name_id = self.url.split("/")[0]
         try:
             self.description = html.find("div", id="profiledescription").p.string

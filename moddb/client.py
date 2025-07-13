@@ -14,13 +14,16 @@ from .base import parse_page
 from .boxes import ResultList, Thumbnail, _parse_results
 from .enums import Status, ThumbnailType
 from .errors import ModdbException
-from .pages import Member
+from .mutables import MutableAddon
+from .pages import Member, Addon
 from .utils import (
     BASE_URL,
     COMMENT_LIMITER,
     GLOBAL_LIMITER,
     GLOBAL_THROTLE,
     LOGGER,
+    HasUrl,
+    Object,
     concat_docs,
     create_login_payload,
     generate_hash,
@@ -329,7 +332,12 @@ class Client:
         }
 
         req = requests.Request(
-            method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {})
+            method,
+            url,
+            headers=headers,
+            cookies=cookies,
+            data=kwargs.pop("data", {}),
+            files=kwargs.pop("files", {}),
         )
         prepped = self._session.prepare_request(req)
         LOGGER.info("Request: %s", prepped.url)
@@ -1178,6 +1186,152 @@ class Client:
             Whether the downvote was successful
         """
         return self._vote_tag(tag, 1)
+
+    def upload_addon(self, addon: MutableAddon) -> Addon:
+        """Upload a new addon
+
+        Parameters
+        ------------
+        addon: MutableAddon
+            The addon to upload
+
+        Returns
+        --------
+        Addon
+            The uploaded addon
+        """
+        upload_url = join("/addons/add")
+        html = soup(self._request("GET", upload_url).text)
+
+        formhash = html.find("input", {"name": "formhash"})["value"]
+        file_name = self._upload_file(formhash, addon)
+
+        logo_file = {"logo": (addon.thumbnail.filename, addon.thumbnail.fp)}
+
+        data = {
+            "formhash": formhash,
+            "legacy": 0,
+            "platformstemp": 1,
+            "filedataUp": file_name,
+            "category": addon.category.value,
+            "licence": addon.licence.value,
+            "credit": addon.credits if addon.credits is not None else "",
+            "tags": ",".join(addon.tags),
+            "name": addon.name,
+            "summary": addon.summary,
+            "description": addon.description if addon.description is not None else "",
+            "links[]": [platform.value for platform in addon.platforms]
+            + [f"{parent.name}|{parent.entity_type}s{parent.id}" for parent in addon.links],
+            "downloads": "Please wait uploading file",
+        }
+
+        resp = self._request("POST", upload_url, data=data, files=logo_file)
+        self._validate_post_response(resp.text)
+        addon.thumbnail.fp.close()
+
+        return Addon(soup(resp.text))
+
+    def get_mutable_addon(self, addon: Union[Addon, Object[HasUrl]]) -> MutableAddon:
+        """Get the mutable version of an addon for editing purpose.
+
+        Parameters
+        -----------
+        addon: Union[Addon,Object[HasUrl]]
+            The addon or an object with an url attribute to retrieve
+
+        Returns
+        --------
+        MutableAddon
+            The mutable addon retrieved
+        """
+        edit_url = f"{addon.url}/edit"
+        html = soup(self._request("GET", edit_url).text)
+
+        if not html.find("input", {"name": "formhash"}):
+            raise ModdbException("You do not have permission to edit the requested addon")
+
+        return MutableAddon._from_html(html)
+
+    def edit_addon(self, addon: MutableAddon):
+        """Edit an existing addon. The MutableAddon passed to this
+        function should be retrieved through `Client.get_mutable_addon`
+
+        Parameters
+        -----------
+        addon: MutableAddon
+            The mutable addon to edit
+        """
+        logo_file = {}
+        data = {
+            "formhash": addon._form_hash,
+            "legacy": 0,
+            "platformstemp": 1,
+            "category": addon.category.value,
+            "licence": addon.licence.value,
+            "credit": addon.credits if addon.credits is not None else "",
+            "tags": ",".join(addon.tags),
+            "name": addon.name,
+            "nameid": addon.name_id,
+            "summary": addon.summary,
+            "description": addon.description if addon.description is not None else "",
+            "links[]": [platform.value for platform in addon.platforms]
+            + [f"{parent.name}|{parent.entity_type}s{parent.id}" for parent in addon.links],
+            "downloads": "Please wait uploading file",
+        }
+
+        if addon.file_file is not None or addon.file_url is not None:
+            file_name = self._upload_file(addon._form_hash, addon)
+            data["filedataUp"] = file_name
+
+        if addon.thumbnail is not None:
+            logo_file["logo"] = (addon.thumbnail.filename, addon.thumbnail.fp)
+
+        resp = self._request("POST", addon.url, data=data, files=logo_file)
+        self._validate_post_response(resp.text)
+
+        if addon.thumbnail is not None:
+            addon.thumbnail.fp.close()
+
+    def _upload_file(self, hash: str, addon: MutableAddon):
+        url = f"https://upload.moddb.com/downloads/ajax/upload/{hash}"
+        resp = None
+
+        if addon.file_file is not None:
+            resp = self._request(
+                "POST",
+                url,
+                data={"filename": addon.file_file.filename},
+                files={"filedata": addon.file_file.fp},
+            )
+            addon.file_file.fp.close()
+
+        if addon.file_url is not None:
+            resp = self._request("POST", url, json={"wget": "t", "filedataWget": addon.file_url})
+
+        if resp is not None:
+            error = resp.json()["error"]
+            if error:
+                raise ModdbException(
+                    f"An error occurred while trying to upload the add-on: {error}"
+                )
+
+            return resp.json()["text"]
+
+    def _validate_post_response(self, html_str: str):
+        soup_obj = soup(html_str)
+        if soup_obj.find("a", id="downloadmirrorstoggle"):
+            return  # Upload successful
+
+        # We are still on the upload form
+        error_tooltip = soup_obj.find("div", class_="tooltip errortooltip clear")
+        if error_tooltip:
+            if error_tooltip.ul:
+                error_list = error_tooltip.ul.find_all("li", recursive=False)
+                errors = "\n".join([f"- {error.text}" for error in error_list])
+            else:
+                # p-tag contains a space at the beginning and a new line at the end
+                errors = f"- {error_tooltip.p.text.strip()}"
+            raise ModdbException(f"Please correct the following: \n{errors}")
 
 
 class TwoFactorAuthClient(Client):

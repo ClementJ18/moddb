@@ -170,6 +170,44 @@ class Month(enum.Enum):
     december = "12"
 
 
+class PlatformCategory(enum.Enum):
+    """The category of the platform"""
+
+    windows = "Windows|platforms1"
+    mac = "Mac|platforms8"
+    linux = "Linux|platforms7"
+    vr = "VR|platforms35"
+    ar = "AR|platforms36"
+    web = "Web|platforms24"
+    rtx = "RTX|platforms40"
+    flash = "Flash|platforms23"
+    dos = "DOS|platforms19"
+    steamdeck = "SteamDeck|platforms41"
+    ios = "iOS|platforms20"
+    android = "Android|platforms22"
+    metro = "Metro|platforms25"
+    xsx = "XSX|platforms39"
+    xone = "XONE|platforms34"
+    x360 = "X360|platforms2"
+    xbox = "XBOX|platforms18"
+    ps5 = "PS5|platforms38"
+    ps4 = "PS4|platforms32"
+    ps3 = "PS3|platforms4"
+    ps2 = "PS2|platforms17"
+    ps1 = "PS1|platforms16"
+    vita = "VITA|platforms28"
+    psp = "PSP|platforms5"
+    switch = "Switch|platforms37"
+    wiiu = "WiiU|platforms31"
+    wii = "Wii|platforms3"
+    gcn = "GCN|platforms15"
+    n64 = "N64|platforms14"
+    snes = "SNES|platforms13"
+    nes = "NES|platforms12"
+    ds = "DS|platforms6"
+    gba = "GBA|platforms11"
+
+
 # BELOW THIS LINE ENUMS ARE GENERATED AUTOMATICALLY
 # PR changes to scripts/generate_enums.py if you want to
 # change something

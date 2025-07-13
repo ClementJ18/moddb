@@ -89,6 +89,8 @@ class Review:
         Link to disagree with the review
     """
 
+    entity_type: str = "review"
+
     def __init__(self, **attrs):
         text = attrs.get("text")
         if text:
@@ -166,6 +168,8 @@ class Poll(BaseMetaClass):
     options : List[Option]
         The list of available options for the poll
     """
+
+    entity_type: str = "poll"
 
     def __init__(self, html: BeautifulSoup):
         poll = html.find("div", class_="poll")

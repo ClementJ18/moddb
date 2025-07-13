@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import collections
 import datetime
+import json
 import logging
 import re
 import sys
@@ -118,8 +119,14 @@ class Statistics:
         self.visits, self.today = get_views(visits)
 
         rank = normalize(html.find("h5", string="Rank").parent.a.string).split("of")
-        self.rank = int(rank[0].replace(",", ""))
-        self.total = int(rank[1].replace(",", ""))
+
+        try:
+            self.rank = int(rank[0].replace(",", ""))
+            self.total = int(rank[1].replace(",", ""))
+        except ValueError:
+            LOGGER.info("No rank detected")
+            self.rank = 0
+            self.total = 0
 
         try:
             self.updated = get_date(html.find("time", itemprop="dateModified")["datetime"])
@@ -208,8 +215,7 @@ class Profile:
             "div", class_="table tablemenu"
         )
         self.contact = join(html.find("h5", string="Contact").parent.span.a["href"])
-
-        self.follow = join(html.find("a", title="Follow")["href"])
+        self.follow = join(html.find("a", title=("Follow", "Unfollow"))["href"])
 
         try:
             share = profile_raw.find("h5", string="Share").parent.span.find_all("a")
@@ -792,6 +798,8 @@ class MemberProfile:
     -----------
     name : str
         Name of the member
+    url : str
+        Link to the member
     level : int
         Current level
     progress : float
@@ -815,12 +823,14 @@ class MemberProfile:
     """
 
     def __init__(self, html: BeautifulSoup):
+        breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
+        self.name = breadcrumbs["itemListElement"][-1]["Item"]["name"]
+        self.url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
+
         profile_raw = html.find("span", string="Profile").parent.parent.parent.find(
             "div", class_="table tablemenu"
         )
         level_raw = profile_raw.find("h5", string="Level").parent.span.div
-        self.name = html.find("meta", property="og:title")["content"]
-
         self.level = int(level_raw.find("span", class_="level").string)
         self.progress = float(
             "0." + level_raw.find("span", class_="info").strong.string.replace("%", "")
@@ -863,7 +873,7 @@ class MemberProfile:
             )
 
         try:
-            self.follow = join(html.find("a", title="Follow")["href"])
+            self.follow = join(html.find("a", title=("Follow", "Unfollow"))["href"])
         except TypeError:
             LOGGER.info(
                 "Can't watch yourself, narcissist...", exc_info=LOGGER.level >= logging.DEBUG

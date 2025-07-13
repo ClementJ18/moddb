@@ -42,6 +42,8 @@ class Engine(PageMetaClass, GetGamesMixin):
         A list of games suggested on the engine main page.
     """
 
+    entity_type: str = "engine"
+
     def __init__(self, html: bs4.BeautifulSoup):
         super().__init__(html, SearchCategory.engines)
         delattr(self, "files")

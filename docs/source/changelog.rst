@@ -8,6 +8,24 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.15.0
+----------
+Bug Fixes
+###########
+* Missing Rank information in page profiles no longer causes an exception during parsing
+* Already following a page no longer causes an exception during parsing
+* 
+
+New Features
+##############
+* Page name and url parsing is now more reliable
+* More pages now have the `url` attribute
+* Added `get_tags` to `Article`
+* Added `get_tags` to `Job`
+* New enum `PlatformCategory`
+* New `Client` methods `Client.upload_addon`, `Client.get_mutable_addon`, `Client.edit_addon`
+
+
 v0.14.0
 -----------
 Bug Fixes
