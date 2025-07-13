@@ -489,6 +489,10 @@ class HasIdAndEntityType(Protocol):
     entity_type: str
 
 
+class NamedEntity(HasIdAndEntityType):
+    name: str
+
+
 class HasUrl(Protocol):
     url: str
 
@@ -498,6 +502,9 @@ class Object(Generic[U]):
 
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
+
+    def __repr__(self):
+        return "< Object >"
 
 
 D = TypeVar("D")

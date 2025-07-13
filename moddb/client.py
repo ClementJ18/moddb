@@ -1250,7 +1250,7 @@ class Client:
         if not html.find("input", {"name": "formhash"}):
             raise ModdbException("You do not have permission to edit the requested addon")
 
-        return MutableAddon.from_html(html)
+        return MutableAddon._from_html(html)
 
     def edit_addon(self, addon: MutableAddon):
         """Edit an existing addon. The MutableAddon passed to this

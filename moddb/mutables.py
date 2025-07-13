@@ -1,6 +1,7 @@
 import io
 import json
 import os
+import re
 from typing import Any, Optional, Union
 
 import bs4
@@ -9,7 +10,7 @@ from typing_extensions import Self
 from .enums import AddonCategory, Licence, PlatformCategory
 from .errors import ValidationError
 from .pages import Game, Group, Mod
-from .utils import HasIdAndEntityType, Object
+from .utils import NamedEntity, Object
 
 file_extensions = (
     ".psd",
@@ -77,7 +78,8 @@ thumbnail_extensions = (".gif", ".jpg", ".jpeg", ".png")
 
 
 class MutableFile:
-    """An object used for passing files to other functions of the lirbary
+    """An object used for passing files to other functions of the library. This
+    file can only be used once, after that it will need to be recreated.
 
     Parameters
     -----------
@@ -112,7 +114,10 @@ class MutableFile:
 
 
 class MutableAddon:
-    """This represents an addon that can be edited."""
+    """This represents an addon that can be edited. You should
+    use the various methods to set up the addon to look as you
+    wish.
+    """
 
     def __init__(self, **kwargs):
         self.name = kwargs.get("name")
@@ -129,6 +134,7 @@ class MutableAddon:
         self.licence = kwargs.get("licence", Licence.proprietary)
         self.credits = kwargs.get("credits")
         self.platforms = kwargs.get("platforms", [])
+        self.links = kwargs.get("links", [])
         self.category = kwargs.get("category")
 
         # these are attributes only available when we edit
@@ -136,8 +142,11 @@ class MutableAddon:
         self._form_hash = kwargs.get("form_hash")
         self.url = kwargs.get("url")
 
+    def __repr__(self):
+        return f"< MutableAddon name={self.name} >"
+
     @classmethod
-    def from_html(cls, html: bs4.BeautifulSoup):
+    def _from_html(cls, html: bs4.BeautifulSoup):
         category = AddonCategory(
             int(
                 html.find("select", id="downloadscategory").find_all(
@@ -148,14 +157,6 @@ class MutableAddon:
         name = html.find("input", id="downloadsname")["value"]
         summary = html.find("textarea", id="downloadssummary").text
         description = html.find("textarea", id="downloadsdescription").text
-        platforms = list(
-            map(
-                lambda c: PlatformCategory(c["value"]),
-                html.find("select", id="downloadsplatforms").find_all(
-                    "option", {"selected": "selected"}
-                ),
-            )
-        )
         licence = Licence(
             int(
                 html.find("select", id="downloadslicence").find_all(
@@ -171,6 +172,21 @@ class MutableAddon:
         breadcrumbs = json.loads(html.find("script", type="application/ld+json").string)
         url = breadcrumbs["itemListElement"][-1]["Item"]["@id"]
 
+        platforms = [
+            PlatformCategory(platform["value"])
+            for platform in html.find(id="downloadsplatforms").find_all(
+                "option", selected="selected"
+            )
+        ]
+        links = []
+        for link in html.find("select", {"name": "links[]", "class": "right select"}).find_all(
+            "option", selected="selected"
+        ):
+            link_name, link_id, link_type = re.match(
+                r"([A-Za-z ]*)\|([a-z]*)([0-9]*)", link["value"]
+            ).groups()
+            links.append(Object(name=link_name, id=link_id, entity_type=link_type))
+
         return cls(
             category=category,
             name=name,
@@ -183,6 +199,7 @@ class MutableAddon:
             name_id=name_id,
             form_hash=formhash,
             url=url,
+            links=links,
         )
 
     def set_name(self, value: str) -> Self:
@@ -406,7 +423,7 @@ class MutableAddon:
 
         return self
 
-    def set_links(self, values: list[Union[Group, Mod, Game, Object[HasIdAndEntityType]]]) -> Self:
+    def set_links(self, values: list[Union[Group, Mod, Game, Object[NamedEntity]]]) -> Self:
         """Set the entity this addon is for
 
         Parameters
