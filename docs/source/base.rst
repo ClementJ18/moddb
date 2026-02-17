@@ -30,6 +30,10 @@ logout
 --------
 .. autofunction:: moddb.base.logout
 
+get_freeman_cookie
+-------------------
+.. autofunction:: moddb.base.get_freeman_cookie
+
 front_page
 -----------
 .. autofunction:: moddb.base.front_page

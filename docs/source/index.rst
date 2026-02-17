@@ -96,6 +96,14 @@ way to circuvement this. As such the library provides a class to do this handsha
 This class' `login` method returns false if 2FA is required instead of erroring, allowing you elegantly 
 check for the code and to send it in a second request.
 
+If you already have a valid `freeman` cookie, both :class:`Client` and :class:`TwoFactorAuthClient`
+can be initialized directly with it::
+
+   >> c = moddb.Client(freeman_cookie="...")
+   >> tfa = moddb.TwoFactorAuthClient(freeman_cookie="...")
+   >> tfa.login()
+   True
+
 Searching
 ----------
 
@@ -164,6 +172,19 @@ groups/members. In order to login simply use the built-in library method::
 
    import moddb
    moddb.login("valid_username", "valid_password")
+
+If you already have a valid `freeman` cookie, you can authenticate with it directly::
+
+   import moddb
+   moddb.login(freeman_cookie="...")
+
+After logging in, you can retrieve that cookie to re-use it in a future session::
+
+   import moddb
+   moddb.login("valid_username", "valid_password")
+   cookie = moddb.get_freeman_cookie()
+   # later
+   moddb.login(freeman_cookie=cookie)
 
 The session the package uses will be updated and all further requests will now be made logged in as that user. 
 The function will raise a ValueError if the login fails. You can also log out of the account to disable access 

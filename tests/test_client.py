@@ -2,6 +2,7 @@ import time
 import pytest
 import random
 
+from moddb.utils import LOGIN_LIMITER
 from tests.utils import mixed_urls
 
 try:
@@ -30,6 +31,24 @@ def sender():
 
 
 class TestClient:
+    def test_cookie_client_login(self, client: moddb.Client):
+        LOGIN_LIMITER.reset()
+        cookie = client._session.cookies["freeman"]
+        cookie_client = moddb.Client(freeman_cookie=cookie)
+
+        assert cookie_client.member.name_id == client.member.name_id
+
+    def test_cookie_twofactor_client_login(self, client: moddb.Client):
+        LOGIN_LIMITER.reset()
+        cookie = client._session.cookies["freeman"]
+        cookie_client = moddb.TwoFactorAuthClient(freeman_cookie=cookie)
+
+        assert cookie_client.member.name_id == client.member.name_id
+        assert cookie_client.login() is True
+
+    def test_get_freeman_cookie(self, client: moddb.Client):
+        assert client.get_freeman_cookie() == client._session.cookies["freeman"]
+
     @pytest.mark.parametrize("watch_type", moddb.WatchType)
     def test_get_watched(self, watch_type, client: moddb.Client):
         client.get_watched(watch_type)
