@@ -10,9 +10,9 @@ from .pages import FrontPage, Member
 from .utils import (
     BASE_URL,
     generate_login_cookies,
-    get_session_freeman_cookie,
     get_page,
     get_page_type,
+    get_session_freeman_cookie,
     login_with_freeman_cookie,
     request,
     soup,
@@ -22,7 +22,15 @@ if TYPE_CHECKING:
     from .enums import RSSType, SearchCategory
 
 
-__all__ = ["search", "parse_page", "login", "logout", "get_freeman_cookie", "front_page", "parse_results"]
+__all__ = [
+    "search",
+    "parse_page",
+    "login",
+    "logout",
+    "get_freeman_cookie",
+    "front_page",
+    "parse_results",
+]
 
 
 def search(

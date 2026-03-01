@@ -205,9 +205,7 @@ def raise_for_status(response: requests.Response):
         "is currently awaiting authorisation, which can take a couple of days while a"
         in response.text.lower()
     ):
-        raise AwaitingAuthorisation(
-            "This page is still await authorisation and cannot currently be parsed"
-        )
+        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
 
 
 @ratelimit(LOGIN_LIMITER)
@@ -260,9 +258,7 @@ def get_logged_in_member_nameid(session: requests.Session = None) -> Optional[st
     return parts[2]
 
 
-def login_with_freeman_cookie(
-    freeman_cookie: str, session: requests.Session = None
-) -> str:
+def login_with_freeman_cookie(freeman_cookie: str, session: requests.Session = None) -> str:
     """Set a freeman cookie on the session and return the authenticated member name-id"""
     if session is None:
         session = sys.modules["moddb"].SESSION

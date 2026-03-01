@@ -130,12 +130,8 @@ class Article(BaseMetaClass):
 
         if self.category == ArticleCategory.tutorials:
             cat = html.find("span", itemprop="proficiencyLevel").next_sibling.strip()
-            self.tutorial_category = TutorialCategory[
-                cat.replace("/", "_").replace(" ", "_").lower()
-            ]
-            self.difficulty = Difficulty[
-                html.find("span", itemprop="proficiencyLevel").string.lower()
-            ]
+            self.tutorial_category = TutorialCategory[cat.replace("/", "_").replace(" ", "_").lower()]
+            self.difficulty = Difficulty[html.find("span", itemprop="proficiencyLevel").string.lower()]
 
     def __repr__(self):
         return f"<Article title={self.name} type={self.category.name}>"

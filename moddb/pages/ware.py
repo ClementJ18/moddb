@@ -76,9 +76,7 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in hardware
             ]
         except AttributeError:
-            LOGGER.info(
-                "Hardware '%s' has no hardware", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Hardware '%s' has no hardware", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.hardware = []
 
         try:
@@ -97,9 +95,7 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in software
             ]
         except AttributeError:
-            LOGGER.info(
-                "Hardware '%s' has no software", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Hardware '%s' has no software", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.software = []
 
         try:
@@ -118,15 +114,11 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in games
             ]
         except AttributeError:
-            LOGGER.info(
-                "Hardware '%s' has no games", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Hardware '%s' has no games", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.games = []
 
         try:
-            history = html.find("span", string="History").parent.parent.parent.find_all(
-                "a", class_="image"
-            )
+            history = html.find("span", string="History").parent.parent.parent.find_all("a", class_="image")
             self.history = [
                 Thumbnail(
                     url=x["href"],
@@ -137,9 +129,7 @@ class Hardware(HardwareSoftwareMetaClass, GetGamesMixin, GetWaresMixin):
                 for x in history
             ]
         except AttributeError:
-            LOGGER.info(
-                "Harware '%s' has no history", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Harware '%s' has no history", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.history = []
 
         try:

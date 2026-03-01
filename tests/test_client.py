@@ -1,12 +1,13 @@
-import time
-import pytest
 import random
+import time
+
+import pytest
 
 from moddb.utils import LOGIN_LIMITER
 from tests.utils import mixed_urls
 
 try:
-    from tests.test_config import username, password, sender_username, sender_password
+    from tests.test_config import password, sender_password, sender_username, username
 except ModuleNotFoundError:
     import os
 
@@ -16,7 +17,6 @@ except ModuleNotFoundError:
     sender_password = os.environ["SENDER_PASSWORD"]
 
 import moddb
-
 from moddb.errors import Ratelimited
 
 

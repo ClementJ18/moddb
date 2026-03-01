@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
-from pkg_resources import parse_requirements
-from setuptools import setup, find_packages
 import re
+
+from packaging.requirements import Requirement
+from setuptools import find_packages, setup
 
 version = ""
 with open("moddb/__init__.py") as f:
@@ -17,7 +18,10 @@ with open("README.md") as f:
 
 install_requires = []
 with open("requirements.txt") as f:
-    install_requires = [str(requirement) for requirement in parse_requirements(f)]
+    for line in f.readlines():
+        line = line.strip()
+        if line and not line.startswith("#"):
+            install_requires.append(str(Requirement(line)))
 
 setup(
     name="moddb",

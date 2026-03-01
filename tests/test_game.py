@@ -1,8 +1,7 @@
 import pytest
 
-from tests.utils import sample_list
-
 import moddb
+from tests.utils import sample_list
 
 DEFAULT = "https://www.moddb.com/games/battle-for-middle-earth-ii-rise-of-the-witch-king"
 

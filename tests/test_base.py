@@ -4,7 +4,7 @@ from moddb.utils import LOGIN_LIMITER, generate_login_cookies
 from tests.utils import sample_list
 
 try:
-    from tests.test_config import username, password
+    from tests.test_config import password, username
 except ModuleNotFoundError:
     import os
 

@@ -2,7 +2,6 @@ import pytest
 
 import moddb
 
-
 DEFAULT = "https://www.moddb.com/games/grand-theft-auto-san-andreas/addons/superman-sa-beta-v10"
 
 pytestmark = [pytest.mark.vcr, pytest.mark.vcr_delete_on_fail]

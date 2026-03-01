@@ -172,4 +172,3 @@ class Month(enum.Enum):
 # BELOW THIS LINE ENUMS ARE GENERATED AUTOMATICALLY
 # PR changes to scripts/generate_enums.py if you want to
 # change something
-

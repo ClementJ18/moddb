@@ -1,2 +1,2 @@
-black --check --diff  moddb/ tests/ --line-length 100
-flakeheaven lint moddb/
+ruff check --fix --select=I --select=F401 .
+ruff format --line-length=110 .

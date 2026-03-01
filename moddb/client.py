@@ -5,9 +5,9 @@ import re
 import sys
 from typing import TYPE_CHECKING, Any, List, Optional, Tuple, Union
 
-from curl_adapter import CurlCffiAdapter
 import requests
 from bs4 import BeautifulSoup
+from curl_adapter import CurlCffiAdapter
 from requests import utils
 
 from .base import parse_page
@@ -25,10 +25,10 @@ from .utils import (
     create_login_payload,
     generate_hash,
     generate_login_cookies,
-    get_session_freeman_cookie,
     get,
     get_date,
     get_page_type,
+    get_session_freeman_cookie,
     get_sitearea,
     get_siteareaid,
     join,
@@ -121,8 +121,7 @@ class Thread:
 
         self.id = int(option["href"][option["href"].index("=") + 1 :])
         self.members = [
-            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member)
-            for member in members
+            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member) for member in members
         ]
         self.messages = [Message(message) for message in messages]
 
@@ -350,9 +349,7 @@ class Client:
             "User-Agent": random.choice(user_agent_list),
         }
 
-        req = requests.Request(
-            method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {})
-        )
+        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
         prepped = self._session.prepare_request(req)
         LOGGER.info("Request: %s", prepped.url)
 
@@ -382,8 +379,7 @@ class Client:
         )
         raw = html.find_all("span", string=strings)
         objects = [
-            e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
-            for e in raw
+            e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False) for e in raw
         ]
 
         objects_raw = [item for sublist in objects for item in sublist[:-1]]
@@ -435,7 +431,7 @@ class Client:
         if link is None:
             return True
 
-        r = self._request("POST", f'{BASE_URL}{link["href"]}', data={"ajax": "t"})
+        r = self._request("POST", f"{BASE_URL}{link['href']}", data={"ajax": "t"})
 
         return "updates were cleared" in r.json()["text"]
 
@@ -451,9 +447,7 @@ class Client:
         html = soup(r.text)
         requests = []
         raw = html.find("span", string="Friend Requests")
-        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all(
-            "div", recursive=False
-        )
+        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
 
         for request in raw_requests[:-1]:
             thumbnail = request.find("a")
@@ -866,9 +860,7 @@ class Client:
 
         return "Your comment has been saved" in r.json()["text"]
 
-    def add_review(
-        self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False
-    ) -> bool:
+    def add_review(self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False) -> bool:
         """Rate and review a page. If you rating is below 3 or above 8 you will be asked
         to also provide a review or else the request will not be made. This is also
         used to edit existing reviews.
@@ -1005,9 +997,7 @@ class Client:
         )
         html = soup(r.text)
 
-        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all(
-            "div", class_=["rowcontent"]
-        )
+        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all("div", class_=["rowcontent"])
         threads = []
         for thread in threads_raw:
             member = thread.find("span", class_="subheading").find_all("a")[0]
@@ -1216,9 +1206,7 @@ class TwoFactorAuthClient(Client):
         The freeman cookie for the user session.
     """
 
-    def __init__(
-        self, username: str = None, password: str = None, freeman_cookie: str = None
-    ):
+    def __init__(self, username: str = None, password: str = None, freeman_cookie: str = None):
         self.username = username
         self.password = password
 

@@ -102,10 +102,8 @@ class Review:
         # id and hash are none if the review doesn't have content
         try:
             strings = ("Agree", "Delete", "Disagree")
-            self.id = int(
-                re.findall(r"siteareaid=(\d*)", review.find("a", title=strings)["href"])[0]
-            )
-        except TypeError:
+            self.id = int(re.findall(r"siteareaid=(\d*)", review.find("a", title=strings)["href"])[0])
+        except (TypeError, IndexError):
             self.id = None
 
         try:
@@ -170,9 +168,7 @@ class Poll(BaseMetaClass):
     def __init__(self, html: BeautifulSoup):
         poll = html.find("div", class_="poll")
         self.question = (
-            poll.parent.parent.parent.find("div", class_="normalcorner")
-            .find("span", class_="heading")
-            .string
+            poll.parent.parent.parent.find("div", class_="normalcorner").find("span", class_="heading").string
         )
         self.name = self.question
         super().__init__(html)
@@ -191,9 +187,7 @@ class Poll(BaseMetaClass):
             raw = percentage[index].div.string.replace("%", "").replace("\xa0", "")
             percent = float(f"0.{raw}")
             text = re.sub(r"\([\d,]* vote(s)?\)", "", rest[index].text)
-            votes = int(
-                re.search(r"([\d,]*) vote(s)?", rest[index].span.string)[1].replace(",", "")
-            )
+            votes = int(re.search(r"([\d,]*) vote(s)?", rest[index].span.string)[1].replace(",", ""))
             self.options.append(Option(text=text, votes=votes, percent=percent))
 
     def __repr__(self):

@@ -2,7 +2,9 @@ import pytest
 
 import moddb
 
-DEFAULT = "https://www.moddb.com/jobs/programmer-enviro-artist-audio-specialist-needed-to-expand-our-launched-game"
+DEFAULT = (
+    "https://www.moddb.com/jobs/programmer-enviro-artist-audio-specialist-needed-to-expand-our-launched-game"
+)
 
 pytestmark = [pytest.mark.vcr]
 
