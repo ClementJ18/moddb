@@ -7,8 +7,8 @@ import re
 import sys
 from typing import TYPE_CHECKING, Any, Generic, List, Tuple, TypeVar
 
-from typing_extensions import Self
 from bs4 import BeautifulSoup
+from typing_extensions import Self
 
 from .enums import (
     AddonCategory,
@@ -110,9 +110,7 @@ class Statistics:
                 "Members",
             ),
         )
-        self.__dict__.update(
-            {stat.string.lower(): int(normalize(stat.parent.a.string)) for stat in misc}
-        )
+        self.__dict__.update({stat.string.lower(): int(normalize(stat.parent.a.string)) for stat in misc})
 
         visits = normalize(html.find("h5", string="Visits").parent.a.string)
         self.visits, self.today = get_views(visits)
@@ -229,9 +227,7 @@ class Profile:
             self.share = None
 
         if page_type in [SearchCategory.developers, SearchCategory.groups]:
-            self.private = (
-                profile_raw.find("h5", string="Privacy").parent.span.string.strip() != "Public"
-            )
+            self.private = profile_raw.find("h5", string="Privacy").parent.span.string.strip() != "Public"
 
             membership = profile_raw.find("h5", string="Subscription").parent.span.string.strip()
             if membership == "Open to all members":
@@ -308,8 +304,7 @@ class Profile:
             if page_type != SearchCategory.mods:
                 platforms = profile_raw.find("h5", string="Platforms").parent.span.find_all("a")
                 self.platforms = [
-                    Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform)
-                    for x in platforms
+                    Thumbnail(name=x.string, url=x["href"], type=ThumbnailType.platform) for x in platforms
                 ]
 
         if page_type != SearchCategory.groups:
@@ -369,9 +364,7 @@ class Profile:
 
         if page_type in [SearchCategory.games, SearchCategory.mods]:
             try:
-                self.download_count = unroll_number(
-                    html.find("a", class_="downloadautotoggle").span.string
-                )
+                self.download_count = unroll_number(html.find("a", class_="downloadautotoggle").span.string)
             except AttributeError:
                 self.download_count = 0
                 LOGGER.info(
@@ -409,9 +402,7 @@ class Style:
 
     def __init__(self, html: BeautifulSoup):
         misc = html.find_all("h5", string=("Theme", "Genre", "Players"))
-        styles = {
-            style.string.lower(): re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc
-        }
+        styles = {style.string.lower(): re.findall(r"(\d*)$", style.parent.a["href"])[0] for style in misc}
 
         self.theme = Theme(int(styles["theme"]))
         self.genre = Genre(int(styles["genre"]))
@@ -428,9 +419,7 @@ class Style:
             LOGGER.info("Has no boxart", exc_info=LOGGER.level >= logging.DEBUG)
 
     def __repr__(self):
-        return (
-            f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
-        )
+        return f"<Style genre={self.genre.name} theme={self.theme.name} players={str(self.players)}>"
 
 
 class Thumbnail:
@@ -506,9 +495,7 @@ def _parse_results(html):
             )
     except (TypeError, KeyError):
         # parse as a title-content pair of articles
-        LOGGER.info(
-            "Parsing articles as key-value pair list", exc_info=LOGGER.level >= logging.DEBUG
-        )
+        LOGGER.info("Parsing articles as key-value pair list", exc_info=LOGGER.level >= logging.DEBUG)
         for title, content in zip(search_raws[::2], search_raws[1::2]):
             date = title.find("time")
             url = title.find("h4").a
@@ -591,9 +578,7 @@ class CommentAuthor(Thumbnail):
         self.comment_count: int = attrs.get("comment_count", 0)
 
     def __repr__(self):
-        return (
-            f"<Thumbnail name={self.name} type={self.type.name} comment_count={self.comment_count}>"
-        )
+        return f"<Thumbnail name={self.name} type={self.type.name} comment_count={self.comment_count}>"
 
 
 class Comment:
@@ -741,9 +726,7 @@ class Comment:
         return self._fetch_time + datetime.timedelta(minute=30) > datetime.datetime.utcnow()
 
     def __repr__(self):
-        return (
-            f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
-        )
+        return f"<Comment author={self.author.name} position={self.position} approved={self.approved}>"
 
 
 class MissingComment:
@@ -822,17 +805,13 @@ class MemberProfile:
         self.name = html.find("meta", property="og:title")["content"]
 
         self.level = int(level_raw.find("span", class_="level").string)
-        self.progress = float(
-            "0." + level_raw.find("span", class_="info").strong.string.replace("%", "")
-        )
+        self.progress = float("0." + level_raw.find("span", class_="info").strong.string.replace("%", ""))
         self.title = level_raw.find("span", class_="info").a.string
 
         self.avatar = profile_raw.find("div", class_="avatarinfo").img["src"]
         self.online = bool(profile_raw.find("h5", string="Status"))
         last_online = profile_raw.find("h5", string="Last Online")
-        self.last_online = (
-            get_date(last_online.parent.span.time["datetime"]) if last_online else None
-        )
+        self.last_online = get_date(last_online.parent.span.time["datetime"]) if last_online else None
 
         try:
             self.gender = profile_raw.find("h5", string="Gender").parent.span.string.strip()
@@ -848,9 +827,7 @@ class MemberProfile:
             self.homepage = html.find("h5", string="Homepage").parent.span.a["href"]
         except AttributeError:
             self.homepage = None
-            LOGGER.info(
-                "Member %s has no homepage", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Member %s has no homepage", self.name, exc_info=LOGGER.level >= logging.DEBUG)
 
         try:
             self.country = profile_raw.find("h5", string="Country").parent.span.string.strip()
@@ -865,9 +842,7 @@ class MemberProfile:
         try:
             self.follow = join(html.find("a", title="Follow")["href"])
         except TypeError:
-            LOGGER.info(
-                "Can't watch yourself, narcissist...", exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Can't watch yourself, narcissist...", exc_info=LOGGER.level >= logging.DEBUG)
             self.follow = None
 
     def __repr__(self):
@@ -917,10 +892,7 @@ class MemberStatistics:
             string=("Watchers", "Activity Points", "Comments", "Tags", "Site visits"),
         )
         self.__dict__.update(
-            {
-                stat.string.lower().replace(" ", "_"): int(normalize(get(stat.parent)))
-                for stat in misc
-            }
+            {stat.string.lower().replace(" ", "_"): int(normalize(get(stat.parent))) for stat in misc}
         )
 
         visits = normalize(html.find("h5", string="Visitors").parent.a.string)

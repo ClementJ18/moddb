@@ -3,11 +3,11 @@ from __future__ import annotations
 import random
 import re
 import sys
-from typing import TYPE_CHECKING, Any, List, Tuple, Union
+from typing import TYPE_CHECKING, Any, List, Optional, Tuple, Union
 
-from curl_adapter import CurlCffiAdapter
 import requests
 from bs4 import BeautifulSoup
+from curl_adapter import CurlCffiAdapter
 from requests import utils
 
 from .base import parse_page
@@ -28,9 +28,11 @@ from .utils import (
     get,
     get_date,
     get_page_type,
+    get_session_freeman_cookie,
     get_sitearea,
     get_siteareaid,
     join,
+    login_with_freeman_cookie,
     prepare_request,
     raise_for_status,
     ratelimit,
@@ -119,8 +121,7 @@ class Thread:
 
         self.id = int(option["href"][option["href"].index("=") + 1 :])
         self.members = [
-            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member)
-            for member in members
+            Thumbnail(url=member["href"], name=member.string, type=ThumbnailType.member) for member in members
         ]
         self.messages = [Message(message) for message in messages]
 
@@ -279,15 +280,22 @@ class Client:
     Parameters
     -----------
     username : str
-        The username of the user
+        The username of the user. Required unless `freeman_cookie` is provided.
 
     password : str
-        The password associated to that username
+        The password associated to that username. Required unless `freeman_cookie`
+        is provided.
+
+    freeman_cookie : str
+        The freeman cookie for the user session
 
     Raises
     -------
+    AuthError
+        A 2FA code is required to login
+
     ValueError
-        The password or username was incorrect
+        The password, username or freeman cookie was incorrect
 
     Attributes
     ----------
@@ -295,13 +303,22 @@ class Client:
         The member objects this client instance represents
     """
 
-    def __init__(self, username: str, password: str):
+    def __init__(self, username: str = None, password: str = None, freeman_cookie: str = None):
         session = requests.Session()
         session.mount("http://", CurlCffiAdapter())
         session.mount("https://", CurlCffiAdapter())
-        session.cookies = generate_login_cookies(username, password, session=session)
+
+        if freeman_cookie:
+            username = login_with_freeman_cookie(freeman_cookie, session=session)
+            LOGGER.info("Authenticated using freeman cookie for %s", username)
+        else:
+            if not username or not password:
+                raise ValueError("Username and password must be provided to login")
+
+            session.cookies = generate_login_cookies(username, password, session=session)
+            LOGGER.info("Login successful for %s", username)
+
         self._session = session
-        LOGGER.info("Login successful for %s", username)
 
         self.member = Member(
             soup(self._request("GET", f"{BASE_URL}/members/{username.replace('_', '-')}").text)
@@ -318,6 +335,10 @@ class Client:
         sys.modules["moddb"].SESSION = self._fake_session
         delattr(self, "_fake_session")
 
+    def get_freeman_cookie(self) -> Optional[str]:
+        """Return the `freeman` cookie from this client's session, if available"""
+        return get_session_freeman_cookie(self._session)
+
     @ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
@@ -328,9 +349,7 @@ class Client:
             "User-Agent": random.choice(user_agent_list),
         }
 
-        req = requests.Request(
-            method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {})
-        )
+        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
         prepped = self._session.prepare_request(req)
         LOGGER.info("Request: %s", prepped.url)
 
@@ -360,8 +379,7 @@ class Client:
         )
         raw = html.find_all("span", string=strings)
         objects = [
-            e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
-            for e in raw
+            e.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False) for e in raw
         ]
 
         objects_raw = [item for sublist in objects for item in sublist[:-1]]
@@ -413,7 +431,7 @@ class Client:
         if link is None:
             return True
 
-        r = self._request("POST", f'{BASE_URL}{link["href"]}', data={"ajax": "t"})
+        r = self._request("POST", f"{BASE_URL}{link['href']}", data={"ajax": "t"})
 
         return "updates were cleared" in r.json()["text"]
 
@@ -429,9 +447,7 @@ class Client:
         html = soup(r.text)
         requests = []
         raw = html.find("span", string="Friend Requests")
-        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all(
-            "div", recursive=False
-        )
+        raw_requests = raw.parent.parent.parent.find("div", class_="table").find_all("div", recursive=False)
 
         for request in raw_requests[:-1]:
             thumbnail = request.find("a")
@@ -844,9 +860,7 @@ class Client:
 
         return "Your comment has been saved" in r.json()["text"]
 
-    def add_review(
-        self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False
-    ) -> bool:
+    def add_review(self, page: Any, rating: int, *, text: str = None, has_spoilers: bool = False) -> bool:
         """Rate and review a page. If you rating is below 3 or above 8 you will be asked
         to also provide a review or else the request will not be made. This is also
         used to edit existing reviews.
@@ -983,9 +997,7 @@ class Client:
         )
         html = soup(r.text)
 
-        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all(
-            "div", class_=["rowcontent"]
-        )
+        threads_raw = html.find_all("div", class_=["tabinbox"])[-1].find_all("div", class_=["rowcontent"])
         threads = []
         for thread in threads_raw:
             member = thread.find("span", class_="subheading").find_all("a")[0]
@@ -1181,9 +1193,20 @@ class Client:
 
 
 class TwoFactorAuthClient(Client):
-    """A subclass of client to be used when facing 2FA requirements."""
+    """A subclass of client to be used when facing 2FA requirements.
 
-    def __init__(self, username: str, password: str):
+    Parameters
+    -----------
+    username : str
+        The username of the user. Required unless `freeman_cookie` is provided.
+    password : str
+        The password associated to that username. Required unless `freeman_cookie`
+        is provided.
+    freeman_cookie : str
+        The freeman cookie for the user session.
+    """
+
+    def __init__(self, username: str = None, password: str = None, freeman_cookie: str = None):
         self.username = username
         self.password = password
 
@@ -1195,8 +1218,17 @@ class TwoFactorAuthClient(Client):
 
         self._2fa_request: requests.Response = None
 
+        if freeman_cookie:
+            self.username = login_with_freeman_cookie(freeman_cookie, session=self._session)
+            self._set_member(self.username)
+
     def __repr__(self):
         return f"<Client username={self.username}>"
+
+    def _set_member(self, username: str):
+        self.member = Member(
+            soup(self._request("GET", f"{BASE_URL}/members/{username.replace('_', '-')}").text)
+        )
 
     def login(self) -> bool:
         """Log the user in
@@ -1204,8 +1236,14 @@ class TwoFactorAuthClient(Client):
         Returns
         --------
         bool
-            True if the login was successful, false it the login requires 2FA
+            True if the login was successful, false if the login requires 2FA
         """
+        if self.member is not None:
+            return True
+
+        if not self.username or not self.password:
+            raise ValueError("Username and password must be provided to login")
+
         data, resp = create_login_payload(self.username, self.password, self._session)
 
         req = requests.Request("POST", f"{BASE_URL}/members/login", data=data, cookies=resp.cookies)
@@ -1220,9 +1258,7 @@ class TwoFactorAuthClient(Client):
 
         self._session.cookies = login.cookies
 
-        self.member = Member(
-            soup(self._request("GET", f"{BASE_URL}/members/{self.username.replace('_', '-')}").text)
-        )
+        self._set_member(self.username)
         return True
 
     def submit_2fa_code(self, code: str) -> Member:
@@ -1260,8 +1296,6 @@ class TwoFactorAuthClient(Client):
         self._session.cookies = login.cookies
         self._2fa_request = None
 
-        self.member = Member(
-            soup(self._request("GET", f"{BASE_URL}/members/{self.username.replace('_', '-')}").text)
-        )
+        self._set_member(self.username)
 
         return self.member

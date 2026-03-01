@@ -546,9 +546,7 @@ class GetAddonsMixin:
 
 
 class GetWatchersMixin:
-    def get_watchers(
-        self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None
-    ) -> ResultList:
+    def get_watchers(self, index: int = 1, *, query: str = None, sort: Tuple[str, str] = None) -> ResultList:
         """Get a page of watchers for the page. Each page will yield up to 30 members.
 
         Parameters

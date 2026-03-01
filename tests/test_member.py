@@ -1,9 +1,8 @@
 import pytest
-
-from tests.utils import sample_list
+import requests
 
 import moddb
-import requests
+from tests.utils import sample_list
 
 DEFAULT = "https://www.moddb.com/members/upstart"
 

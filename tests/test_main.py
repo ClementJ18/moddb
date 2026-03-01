@@ -1,29 +1,29 @@
 import logging
 import time
+
 import pytest
 
+import moddb
 from tests import (
-    test_mod,
-    test_game,
-    test_engine,
-    test_file,
     test_addon,
-    test_media,
     test_article,
-    test_group,
-    test_team,
-    test_job,
-    test_member,
-    test_platform,
-    test_software,
-    test_hardware,
-    test_poll,
     test_base,
     test_client,
+    test_engine,
+    test_file,
+    test_game,
+    test_group,
+    test_hardware,
+    test_job,
+    test_media,
+    test_member,
+    test_mod,
+    test_platform,
+    test_poll,
+    test_software,
+    test_team,
     utils,
 )
-
-import moddb
 
 logger = logging.getLogger("moddb")
 logger.setLevel(logging.DEBUG)

@@ -1,8 +1,6 @@
 import json
-import os
 import random
 from typing import List, TypeVar
-from unittest.mock import patch
 
 import moddb
 

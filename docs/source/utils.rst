@@ -34,6 +34,10 @@ get_page
 ---------
 .. autofunction:: moddb.utils.get_page
 
+get_freeman_cookie
+-------------------
+.. autofunction:: moddb.utils.get_freeman_cookie
+
 get_views
 ---------
 .. autofunction:: moddb.utils.get_views
@@ -57,4 +61,3 @@ get_page_type
 get_list_stats
 ---------
 .. autofunction:: moddb.utils.get_list_stats
-

@@ -205,9 +205,7 @@ def raise_for_status(response: requests.Response):
         "is currently awaiting authorisation, which can take a couple of days while a"
         in response.text.lower()
     ):
-        raise AwaitingAuthorisation(
-            "This page is still await authorisation and cannot currently be parsed"
-        )
+        raise AwaitingAuthorisation("This page is still await authorisation and cannot currently be parsed")
 
 
 @ratelimit(LOGIN_LIMITER)
@@ -228,6 +226,57 @@ def generate_login_cookies(username: str, password: str, session: requests.Sessi
         raise ValueError(f"Login failed for user {username}")
 
     return login.cookies
+
+
+def get_logged_in_member_nameid(session: requests.Session = None) -> Optional[str]:
+    """Return the currently authenticated member name-id for a session"""
+    if session is None:
+        session = sys.modules["moddb"].SESSION
+
+    req = requests.Request("GET", f"{BASE_URL}")
+    resp = session.send(prepare_request(req, session))
+    raise_for_status(resp)
+
+    html = soup(resp.text)
+    searchbox = html.find("div", id="searchbox")
+    if searchbox is None:
+        return None
+
+    member_nav = searchbox.find("span", class_="member")
+    if member_nav is None:
+        return None
+
+    profile_link = member_nav.find("a", href=True)
+    if profile_link is None:
+        return None
+
+    href = profile_link["href"].strip()
+    parts = href.split("/")
+    if len(parts) != 3:
+        return None
+
+    return parts[2]
+
+
+def login_with_freeman_cookie(freeman_cookie: str, session: requests.Session = None) -> str:
+    """Set a freeman cookie on the session and return the authenticated member name-id"""
+    if session is None:
+        session = sys.modules["moddb"].SESSION
+
+    session.cookies.set("freeman", freeman_cookie, domain="www.moddb.com", path="/")
+    member_nameid = get_logged_in_member_nameid(session)
+    if member_nameid is None:
+        raise ValueError("Invalid freeman cookie")
+
+    return member_nameid
+
+
+def get_session_freeman_cookie(session: requests.Session = None) -> Optional[str]:
+    """Return the `freeman` cookie value for a session, if present"""
+    if session is None:
+        session = sys.modules["moddb"].SESSION
+
+    return session.cookies.get("freeman", domain="www.moddb.com", path="/")
 
 
 def create_login_payload(username: str, password: str, session: requests.Session):

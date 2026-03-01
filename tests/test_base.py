@@ -1,10 +1,10 @@
 import pytest
 
-from moddb.utils import LOGIN_LIMITER
+from moddb.utils import LOGIN_LIMITER, generate_login_cookies
 from tests.utils import sample_list
 
 try:
-    from tests.test_config import username, password
+    from tests.test_config import password, username
 except ModuleNotFoundError:
     import os
 
@@ -63,10 +63,32 @@ class TestLogin:
         LOGIN_LIMITER.reset()
         moddb.login(username, password)
 
+    def test_login_with_freeman_cookie(self):
+        LOGIN_LIMITER.reset()
+        cookies = generate_login_cookies(username, password)
+        LOGIN_LIMITER.reset()
+        member = moddb.login(freeman_cookie=cookies["freeman"])
+        LOGIN_LIMITER.reset()
+        reference_member = moddb.login(username, password)
+
+        assert member.name_id == reference_member.name_id
+
+    def test_get_freeman_cookie(self):
+        LOGIN_LIMITER.reset()
+        moddb.login(username, password)
+
+        cookie = moddb.get_freeman_cookie()
+        assert cookie is not None
+        assert isinstance(cookie, str)
+
     def test_bad_login(self):
         LOGIN_LIMITER.reset()
         with pytest.raises(ValueError):
             moddb.login("tico", "ticoisgod")
+
+    def test_bad_cookie_login(self):
+        with pytest.raises(ValueError):
+            moddb.login(freeman_cookie="invalid-cookie")
 
     def tearDown(self):
         moddb.SESSION.close()

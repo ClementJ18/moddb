@@ -17,7 +17,13 @@ from ..enums import GroupCategory, Membership, SearchCategory, ThumbnailType, Ti
 from ..utils import LOGGER, concat_docs, get_page, join
 from .article import Blog
 from .base import BaseMetaClass, PageMetaClass
-from .mixins import GetAddonsMixin, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin
+from .mixins import (
+    GetAddonsMixin,
+    GetEnginesMixin,
+    GetGamesMixin,
+    GetModsMixin,
+    GetWaresMixin,
+)
 
 if TYPE_CHECKING:
     import bs4
@@ -127,9 +133,7 @@ class Group(PageMetaClass, GetAddonsMixin):
             try:
                 self.embed = str(html.find_all("textarea")[1].a)
             except IndexError:
-                LOGGER.info(
-                    "Group '%s' has no embed", self.name, exc_info=LOGGER.level >= logging.DEBUG
-                )
+                LOGGER.info("Group '%s' has no embed", self.name, exc_info=LOGGER.level >= logging.DEBUG)
                 self.embed = None
 
         self.suggestions = self._get_suggestions(html)
@@ -138,9 +142,7 @@ class Group(PageMetaClass, GetAddonsMixin):
             articles_raw = html.find("span", string="Articles").parent.parent.parent.find(
                 "div", class_="table"
             )
-            thumbnails = articles_raw.find_all(
-                "div", class_="row rowcontent clear", recursive=False
-            )
+            thumbnails = articles_raw.find_all("div", class_="row rowcontent clear", recursive=False)
             self.articles = [
                 Thumbnail(
                     name=x.a["title"],
@@ -164,9 +166,7 @@ class Group(PageMetaClass, GetAddonsMixin):
             self.description = html.find("div", id="profiledescription").text
         except AttributeError:
             self.description = (
-                html.find("div", class_=["column", "span-all"])
-                .find("div", class_="tooltip")
-                .parent.text
+                html.find("div", class_=["column", "span-all"]).find("div", class_="tooltip").parent.text
             )
 
         self.medias = self._get_media(2, html=html)
@@ -266,9 +266,7 @@ class Team(Group, GetEnginesMixin, GetGamesMixin, GetModsMixin, GetWaresMixin):
         try:
             self.engines = self._get_engines(html)
         except AttributeError:
-            LOGGER.info(
-                "Team '%s' has no engines", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Team '%s' has no engines", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.engines = []
         try:
             mods = (
@@ -354,9 +352,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
         try:
             self.description = html.find("div", id="profiledescription").p.string
         except AttributeError:
-            LOGGER.info(
-                "Member '%s' has no description", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Member '%s' has no description", self.name, exc_info=LOGGER.level >= logging.DEBUG)
             self.description = None
 
         try:
@@ -411,9 +407,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             )
 
         try:
-            friends = html.find("div", class_="table tablerelated").find_all(
-                "div", recursive=False
-            )[1:]
+            friends = html.find("div", class_="table tablerelated").find_all("div", recursive=False)[1:]
             self.friends = [
                 Thumbnail(
                     name=friend.a["title"],
@@ -424,9 +418,7 @@ class Member(PageMetaClass, GetGamesMixin, GetModsMixin, GetAddonsMixin):
             ]
         except AttributeError:
             self.friends = []
-            LOGGER.info(
-                "Member '%s' has no friends ;(", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Member '%s' has no friends ;(", self.name, exc_info=LOGGER.level >= logging.DEBUG)
 
     def __repr__(self):
         return f"<Member name={self.name} level={self.profile.level}>"

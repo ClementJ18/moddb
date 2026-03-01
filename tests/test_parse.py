@@ -2,9 +2,8 @@ import logging
 
 import pytest
 
-from tests import utils
-
 import moddb
+from tests import utils
 
 logger = logging.getLogger("moddb")
 logger.setLevel(logging.DEBUG)

@@ -57,9 +57,7 @@ class FrontPage:
             try:
                 page_type = get_page_type(x.a["href"])
             except IndexError:
-                LOGGER.warning(
-                    "Unabled to get page type from %s for front page, skipping", x.a["href"]
-                )
+                LOGGER.warning("Unabled to get page type from %s for front page, skipping", x.a["href"])
                 continue
 
             thumbnail = Thumbnail(
@@ -153,9 +151,7 @@ class FrontPage:
             self.poll_url = html.find("div", class_="poll").form["action"]
         except AttributeError:
             # maybe they've already voted and the result link is there
-            self.poll_url = join(
-                html.find("div", class_="poll").find("a", class_="results")["href"]
-            )
+            self.poll_url = join(html.find("div", class_="poll").find("a", class_="results")["href"])
 
         self._html = html
         self._poll = None

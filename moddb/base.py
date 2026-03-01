@@ -1,19 +1,36 @@
 from __future__ import annotations
 
 import sys
-from typing import TYPE_CHECKING, Any, Tuple, Union
+from typing import TYPE_CHECKING, Any, Optional, Tuple, Union
 
 import requests
 
 from .boxes import PartialTag, ResultList, Tag, _parse_results
 from .pages import FrontPage, Member
-from .utils import BASE_URL, generate_login_cookies, get_page, get_page_type, request, soup
+from .utils import (
+    BASE_URL,
+    generate_login_cookies,
+    get_page,
+    get_page_type,
+    get_session_freeman_cookie,
+    login_with_freeman_cookie,
+    request,
+    soup,
+)
 
 if TYPE_CHECKING:
     from .enums import RSSType, SearchCategory
 
 
-__all__ = ["search", "parse_page", "login", "logout", "front_page", "parse_results"]
+__all__ = [
+    "search",
+    "parse_page",
+    "login",
+    "logout",
+    "get_freeman_cookie",
+    "front_page",
+    "parse_results",
+]
 
 
 def search(
@@ -150,21 +167,26 @@ def parse_results(url: str, *, params: dict = {}) -> ResultList:
     )
 
 
-def login(username: str, password: str) -> Member:
+def login(username: str = None, password: str = None, freeman_cookie: str = None) -> Member:
     """Login the user to moddb through the library, this allows user to see guest comments and see
     private groups they are part of.
 
     Parameters
     -----------
     username : str
-        The username of the user
+        The username of the user. Required unless `freeman_cookie` is provided.
     password : str
-        The password associated to that username
+        The password associated to that username. Required unless `freeman_cookie`
+        is provided.
+    freeman_cookie : str
+        The freeman cookie for the user session
 
     Raises
     -------
+    AuthError
+        A 2FA code is required to login
     ValueError
-        The password or username was incorrect
+        The password, username or freeman cookie was incorrect
 
     Returns
     --------
@@ -172,7 +194,14 @@ def login(username: str, password: str) -> Member:
         The member you are logged in as
     """
 
-    sys.modules["moddb"].SESSION.cookies = generate_login_cookies(username, password)
+    if freeman_cookie:
+        username = login_with_freeman_cookie(freeman_cookie)
+    else:
+        if not username or not password:
+            raise ValueError("Username and password must be provided to login")
+
+        sys.modules["moddb"].SESSION.cookies = generate_login_cookies(username, password)
+
     return Member(get_page(f"{BASE_URL}/members/{username.replace('_', '-')}"))
 
 
@@ -181,6 +210,11 @@ def logout():
     all private groups will be hidden once more
     """
     sys.modules["moddb"].SESSION.cookies.clear()
+
+
+def get_freeman_cookie() -> Optional[str]:
+    """Return the `freeman` cookie from the module session, if available"""
+    return get_session_freeman_cookie()
 
 
 def front_page() -> FrontPage:

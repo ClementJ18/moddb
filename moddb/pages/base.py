@@ -54,9 +54,7 @@ class BaseMetaClass:
 
         for index, func in enumerate(
             [
-                lambda: int(
-                    re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]
-                ),
+                lambda: int(re.search(r"siteareaid=(\d*)", html.find("a", class_=["reporticon"])["href"])[1]),
                 lambda: int(html.find("input", attrs={"name": "siteareaid"})["value"]),
                 lambda: int(html.find("meta", property="og:image")["content"].split("/")[-2]),
                 lambda: re.findall(
@@ -69,9 +67,7 @@ class BaseMetaClass:
                 self.id = func()
                 break
             except (AttributeError, TypeError) as e:
-                LOGGER.warning(
-                    "Failed to get id from method %s for member %s: %s", index, self.name, e
-                )
+                LOGGER.info("Failed to get id from method %s for member %s: %s", index, self.name, e)
         else:
             raise AttributeError(f"Failed to get id from member {self.name}")
 
@@ -205,9 +201,7 @@ class BaseMetaClass:
         return self._get_comments(get_page(f"{self.url}/page/{index}", params=params))
 
 
-class PageMetaClass(
-    BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin
-):
+class PageMetaClass(BaseMetaClass, SharedMethodsMixin, RSSFeedMixin, GetWatchersMixin, GetTagsMixin):
     """The common class representing the page for either a Mod, Game, Engine or a Member. Mostly used to be inherited by
     those classes.
 
@@ -304,9 +298,7 @@ class PageMetaClass(
 
         articles_raw = None
         try:
-            raw = html.find("span", string="Articles") or html.find(
-                "span", string="Related Articles"
-            )
+            raw = html.find("span", string="Articles") or html.find("span", string="Related Articles")
             articles_raw = raw.parent.parent.parent.find("div", class_="table")
             thumbnails = articles_raw.find_all("div", class_="row rowcontent clear")
             self.articles = [
@@ -393,9 +385,9 @@ class PageMetaClass(
             )
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find(
-                "input", {"name": "hash"}
-            )["value"]
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
+                "value"
+            ]
         except AttributeError:
             self._review_hash = None
 
@@ -624,9 +616,9 @@ class HardwareSoftwareMetaClass(
             )
 
         try:
-            self._review_hash = html.find("form", class_="ratingform").find(
-                "input", {"name": "hash"}
-            )["value"]
+            self._review_hash = html.find("form", class_="ratingform").find("input", {"name": "hash"})[
+                "value"
+            ]
         except AttributeError:
             self._review_hash = None
 
@@ -675,20 +667,17 @@ class HardwareSoftwareMetaClass(
             ]
         except AttributeError:
             self.tags = []
-            LOGGER.info(
-                "Hardware '%s' has no tags", self.name, exc_info=LOGGER.level >= logging.DEBUG
-            )
+            LOGGER.info("Hardware '%s' has no tags", self.name, exc_info=LOGGER.level >= logging.DEBUG)
 
         self.medias = self._get_media(1, html=html)
 
         try:
             t = ThumbnailType[self.__class__.__name__.lower()]
-            suggestions = html.find(
-                "span", string="You may also like"
-            ).parent.parent.parent.find_all("a", class_="image")
+            suggestions = html.find("span", string="You may also like").parent.parent.parent.find_all(
+                "a", class_="image"
+            )
             self.suggestions = [
-                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"])
-                for x in suggestions
+                Thumbnail(url=x["href"], name=x["title"], type=t, image=x.img["src"]) for x in suggestions
             ]
         except AttributeError:
             LOGGER.info(
