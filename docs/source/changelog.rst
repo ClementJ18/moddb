@@ -8,6 +8,13 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
+v0.15.0
+-----------
+New Features
+#############
+* Added cookie-based authentication with `freeman` cookie support in `base.login`, `Client` and `TwoFactorAuthClient`
+* Added methods to retrieve the active `freeman` cookie from module and client sessions
+
 v0.14.0
 -----------
 Bug Fixes
@@ -18,6 +25,7 @@ Bug Fixes
 New Features
 #############
 * Exposed front page poll url under `FrontPage.poll_url`
+* Added `TwoFactorAuthClient` for handling login flows that require 2FA verification
 
 
 v0.13.0

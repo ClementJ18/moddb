@@ -16,6 +16,14 @@ Clients represents an independtly logged in user. This allows you to make certai
     #standard request, we're just gonna get the update that have been posted.
     updates = client.get_updates()
     #list of special thumbnails representing the updates this user has
+    cookie = client.get_freeman_cookie()
+
+If you already have a valid `freeman` cookie, you can initialize a client directly with it::
+
+    import moddb
+
+    client = moddb.Client(freeman_cookie="...")
+    updates = client.get_updates()
 
 A simple little example, users have updates which happen when pages upload new articles, files and media. These are based on what pages users follow. But let's say we want to make one of the more general requests provided by the library without overwriting permanently the module session:: 
 
@@ -34,3 +42,18 @@ A simple little example, users have updates which happen when pages upload new a
 
     #now we can see this profile from the persepctive of RegularUser.
 
+The same cookie-based initialization works with :class:`TwoFactorAuthClient` as well::
+
+    import moddb
+
+    client = moddb.TwoFactorAuthClient(freeman_cookie="...")
+    assert client.login() is True
+
+You can also export the current session's cookie and re-use it later::
+
+    import moddb
+
+    moddb.login("Username", "Password")
+    cookie = moddb.get_freeman_cookie()
+
+    client = moddb.Client(freeman_cookie=cookie)

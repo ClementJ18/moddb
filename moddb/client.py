@@ -3,7 +3,7 @@ from __future__ import annotations
 import random
 import re
 import sys
-from typing import TYPE_CHECKING, Any, List, Tuple, Union
+from typing import TYPE_CHECKING, Any, List, Optional, Tuple, Union
 
 from curl_adapter import CurlCffiAdapter
 import requests
@@ -25,12 +25,14 @@ from .utils import (
     create_login_payload,
     generate_hash,
     generate_login_cookies,
+    get_session_freeman_cookie,
     get,
     get_date,
     get_page_type,
     get_sitearea,
     get_siteareaid,
     join,
+    login_with_freeman_cookie,
     prepare_request,
     raise_for_status,
     ratelimit,
@@ -279,15 +281,22 @@ class Client:
     Parameters
     -----------
     username : str
-        The username of the user
+        The username of the user. Required unless `freeman_cookie` is provided.
 
     password : str
-        The password associated to that username
+        The password associated to that username. Required unless `freeman_cookie`
+        is provided.
+
+    freeman_cookie : str
+        The freeman cookie for the user session
 
     Raises
     -------
+    AuthError
+        A 2FA code is required to login
+
     ValueError
-        The password or username was incorrect
+        The password, username or freeman cookie was incorrect
 
     Attributes
     ----------
@@ -295,13 +304,22 @@ class Client:
         The member objects this client instance represents
     """
 
-    def __init__(self, username: str, password: str):
+    def __init__(self, username: str = None, password: str = None, freeman_cookie: str = None):
         session = requests.Session()
         session.mount("http://", CurlCffiAdapter())
         session.mount("https://", CurlCffiAdapter())
-        session.cookies = generate_login_cookies(username, password, session=session)
+
+        if freeman_cookie:
+            username = login_with_freeman_cookie(freeman_cookie, session=session)
+            LOGGER.info("Authenticated using freeman cookie for %s", username)
+        else:
+            if not username or not password:
+                raise ValueError("Username and password must be provided to login")
+
+            session.cookies = generate_login_cookies(username, password, session=session)
+            LOGGER.info("Login successful for %s", username)
+
         self._session = session
-        LOGGER.info("Login successful for %s", username)
 
         self.member = Member(
             soup(self._request("GET", f"{BASE_URL}/members/{username.replace('_', '-')}").text)
@@ -317,6 +335,10 @@ class Client:
     def __exit__(self, exc_type, exc_val, exc_tb):
         sys.modules["moddb"].SESSION = self._fake_session
         delattr(self, "_fake_session")
+
+    def get_freeman_cookie(self) -> Optional[str]:
+        """Return the `freeman` cookie from this client's session, if available"""
+        return get_session_freeman_cookie(self._session)
 
     @ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
     def _request(self, method, url, **kwargs):
@@ -1181,9 +1203,22 @@ class Client:
 
 
 class TwoFactorAuthClient(Client):
-    """A subclass of client to be used when facing 2FA requirements."""
+    """A subclass of client to be used when facing 2FA requirements.
 
-    def __init__(self, username: str, password: str):
+    Parameters
+    -----------
+    username : str
+        The username of the user. Required unless `freeman_cookie` is provided.
+    password : str
+        The password associated to that username. Required unless `freeman_cookie`
+        is provided.
+    freeman_cookie : str
+        The freeman cookie for the user session.
+    """
+
+    def __init__(
+        self, username: str = None, password: str = None, freeman_cookie: str = None
+    ):
         self.username = username
         self.password = password
 
@@ -1195,8 +1230,17 @@ class TwoFactorAuthClient(Client):
 
         self._2fa_request: requests.Response = None
 
+        if freeman_cookie:
+            self.username = login_with_freeman_cookie(freeman_cookie, session=self._session)
+            self._set_member(self.username)
+
     def __repr__(self):
         return f"<Client username={self.username}>"
+
+    def _set_member(self, username: str):
+        self.member = Member(
+            soup(self._request("GET", f"{BASE_URL}/members/{username.replace('_', '-')}").text)
+        )
 
     def login(self) -> bool:
         """Log the user in
@@ -1204,8 +1248,14 @@ class TwoFactorAuthClient(Client):
         Returns
         --------
         bool
-            True if the login was successful, false it the login requires 2FA
+            True if the login was successful, false if the login requires 2FA
         """
+        if self.member is not None:
+            return True
+
+        if not self.username or not self.password:
+            raise ValueError("Username and password must be provided to login")
+
         data, resp = create_login_payload(self.username, self.password, self._session)
 
         req = requests.Request("POST", f"{BASE_URL}/members/login", data=data, cookies=resp.cookies)
@@ -1220,9 +1270,7 @@ class TwoFactorAuthClient(Client):
 
         self._session.cookies = login.cookies
 
-        self.member = Member(
-            soup(self._request("GET", f"{BASE_URL}/members/{self.username.replace('_', '-')}").text)
-        )
+        self._set_member(self.username)
         return True
 
     def submit_2fa_code(self, code: str) -> Member:
@@ -1260,8 +1308,6 @@ class TwoFactorAuthClient(Client):
         self._session.cookies = login.cookies
         self._2fa_request = None
 
-        self.member = Member(
-            soup(self._request("GET", f"{BASE_URL}/members/{self.username.replace('_', '-')}").text)
-        )
+        self._set_member(self.username)
 
         return self.member
