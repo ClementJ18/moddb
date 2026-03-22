@@ -266,6 +266,7 @@ def login_with_freeman_cookie(freeman_cookie: str, session: requests.Session = N
     session.cookies.set("freeman", freeman_cookie, domain="www.moddb.com", path="/")
     member_nameid = get_logged_in_member_nameid(session)
     if member_nameid is None:
+        session.cookies.clear(domain="www.moddb.com", path="/", name="freeman")
         raise ValueError("Invalid freeman cookie")
 
     return member_nameid
