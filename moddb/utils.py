@@ -42,7 +42,17 @@ user_agent_list = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
     "Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
 ]
-
+browser_types = [
+    "chrome",
+    "edge",
+    "safari",
+    "safari_ios",
+    "safari_beta",
+    "safari_ios_beta",
+    "chrome_android",
+    "firefox",
+    "tor"
+]
 
 def concat_docs(cls):
     """Does it look like I'm enjoying this?"""
