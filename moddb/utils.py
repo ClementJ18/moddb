@@ -51,8 +51,9 @@ browser_types = [
     "safari_ios_beta",
     "chrome_android",
     "firefox",
-    "tor"
+    "tor",
 ]
+
 
 def concat_docs(cls):
     """Does it look like I'm enjoying this?"""
@@ -98,7 +99,7 @@ class SSLAdapter(requests.adapters.HTTPAdapter):
 
 
 class Ratelimit:
-    def __init__(self, rate: float, per: float, sleep: Optional[None] = None):
+    def __init__(self, rate: float, per: float, sleep: Optional[float] = None):
         self.rate = rate
         self.per = per
         self.sleep = sleep
@@ -125,11 +126,11 @@ class Ratelimit:
         if self.call_count + 1 > self.rate:
             remaining = (expiry - now).total_seconds()
             if self.sleep is not None and remaining <= self.sleep:
-                LOGGER.info("Ratelimited! Sleeping for %s", remaining)
+                LOGGER.warning("Ratelimited! Sleeping for %.0f seconds", remaining)
                 time.sleep(remaining)
                 self.reset(now)
             else:
-                raise Ratelimited(f"Ratelimited please try again in {remaining}", remaining)
+                raise Ratelimited(f"Ratelimited, please try again in {remaining:.0f} seconds", remaining)
 
         self.call_count += 1
 
@@ -149,9 +150,45 @@ def ratelimit(*limiters: Ratelimit):
 
 
 GLOBAL_LIMITER = Ratelimit(40, 300, sleep=300)
-GLOBAL_THROTLE = Ratelimit(5, 1, sleep=1)
+GLOBAL_THROTTLE = Ratelimit(5, 1, sleep=1)
 COMMENT_LIMITER = Ratelimit(1, 60)
 LOGIN_LIMITER = Ratelimit(1, 5)
+
+
+def set_ratelimits(
+    *,
+    rate: Optional[float] = None,
+    per: Optional[float] = None,
+    throttle_rate: Optional[float] = None,
+    throttle_per: Optional[float] = None,
+):
+    """Adjust the library-wide ratelimits. Only the arguments passed are
+    changed. Lowering the defaults is a good idea for long-running batch
+    jobs to reduce the load on the website.
+
+    Parameters
+    -----------
+    rate : Optional[float]
+        Number of requests allowed by the global limiter per `per` seconds
+        (default 40)
+    per : Optional[float]
+        Length in seconds of the global limiter window (default 300)
+    throttle_rate : Optional[float]
+        Number of requests allowed by the burst throttle per `throttle_per`
+        seconds (default 5)
+    throttle_per : Optional[float]
+        Length in seconds of the burst throttle window (default 1)
+    """
+    if rate is not None:
+        GLOBAL_LIMITER.rate = rate
+    if per is not None:
+        GLOBAL_LIMITER.per = per
+        GLOBAL_LIMITER.sleep = per
+    if throttle_rate is not None:
+        GLOBAL_THROTTLE.rate = throttle_rate
+    if throttle_per is not None:
+        GLOBAL_THROTTLE.per = throttle_per
+        GLOBAL_THROTTLE.sleep = throttle_per
 
 
 def get_date(d: str) -> datetime.datetime:
@@ -313,7 +350,7 @@ def create_login_payload(username: str, password: str, session: requests.Session
     return data, resp
 
 
-@ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
+@ratelimit(GLOBAL_THROTTLE, GLOBAL_LIMITER)
 def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 

@@ -15,7 +15,7 @@ from .base import (
 from .client import Client, Thread, TwoFactorAuthClient
 from .enums import *
 from .pages import *
-from .utils import BASE_URL, LOGGER, Object, get_page, request, soup
+from .utils import BASE_URL, LOGGER, Object, get_page, request, set_ratelimits, soup
 
 SESSION = requests.Session()
 SESSION.mount("http://", CurlCffiAdapter())
@@ -41,5 +41,6 @@ __all__ = [
     "Object",
     "get_page",
     "request",
+    "set_ratelimits",
     "soup",
 ]

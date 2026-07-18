@@ -19,8 +19,9 @@ from .utils import (
     BASE_URL,
     COMMENT_LIMITER,
     GLOBAL_LIMITER,
-    GLOBAL_THROTLE,
+    GLOBAL_THROTTLE,
     LOGGER,
+    browser_types,
     concat_docs,
     create_login_payload,
     generate_hash,
@@ -38,7 +39,6 @@ from .utils import (
     ratelimit,
     soup,
     user_agent_list,
-    browser_types,
 )
 
 if TYPE_CHECKING:
@@ -341,7 +341,7 @@ class Client:
         """Return the `freeman` cookie from this client's session, if available"""
         return get_session_freeman_cookie(self._session)
 
-    @ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
+    @ratelimit(GLOBAL_THROTTLE, GLOBAL_LIMITER)
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""
@@ -351,11 +351,22 @@ class Client:
             "User-Agent": random.choice(user_agent_list),
         }
 
-        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
+        req = requests.Request(
+            method,
+            url,
+            headers=headers,
+            cookies=cookies,
+            data=kwargs.pop("data", {}),
+            params=kwargs.pop("params", None),
+        )
         prepped = self._session.prepare_request(req)
         LOGGER.info("Request: %s", prepped.url)
 
-        r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
+        allow_redirects = kwargs.pop("allow_redirects", True)
+        if kwargs:
+            raise TypeError(f"_request got unexpected arguments: {', '.join(kwargs)}")
+
+        r = self._session.send(prepped, allow_redirects=allow_redirects)
         raise_for_status(r)
 
         return r
