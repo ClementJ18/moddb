@@ -38,6 +38,7 @@ from .utils import (
     ratelimit,
     soup,
     user_agent_list,
+    browser_types,
 )
 
 if TYPE_CHECKING:
@@ -304,9 +305,10 @@ class Client:
     """
 
     def __init__(self, username: str = None, password: str = None, freeman_cookie: str = None):
+        browser_type = random.choice(browser_types)
         session = requests.Session()
-        session.mount("http://", CurlCffiAdapter())
-        session.mount("https://", CurlCffiAdapter())
+        session.mount("http://", CurlCffiAdapter(impersonate_browser_type=browser_type))
+        session.mount("https://", CurlCffiAdapter(impersonate_browser_type=browser_type))
 
         if freeman_cookie:
             username = login_with_freeman_cookie(freeman_cookie, session=session)
@@ -1210,9 +1212,10 @@ class TwoFactorAuthClient(Client):
         self.username = username
         self.password = password
 
+        browser_type = random.choice(browser_types)
         session = requests.Session()
-        session.mount("http://", CurlCffiAdapter())
-        session.mount("https://", CurlCffiAdapter())
+        session.mount("http://", CurlCffiAdapter(impersonate_browser_type=browser_type))
+        session.mount("https://", CurlCffiAdapter(impersonate_browser_type=browser_type))
         self._session = session
         self.member: Member = None
 
