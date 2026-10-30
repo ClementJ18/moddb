@@ -2,7 +2,6 @@ import datetime
 import functools
 import inspect
 import logging
-import random
 import re
 import ssl
 import sys
@@ -14,6 +13,7 @@ from urllib.parse import urljoin
 import bs4
 import requests
 from bs4 import BeautifulSoup, Tag
+from curl_adapter import CurlCffiAdapter
 from requests import utils
 
 from .enums import MediaCategory, ThumbnailType
@@ -33,26 +33,12 @@ time_mapping = {
     "econd": 1,
 }
 
-user_agent_list = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.2792.65",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edge/44.18363.8131",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
-    "Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
-]
-browser_types = [
-    "chrome",
-    "edge",
-    "safari",
-    "safari_ios",
-    "safari_beta",
-    "safari_ios_beta",
-    "chrome_android",
-    "firefox",
-    "tor",
-]
+# The User-Agent must match the impersonated browser, curl_adapter only impersonates the TLS
+# fingerprint and leaves the headers to requests
+BROWSER_TYPE = "chrome150"
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+)
 
 
 def concat_docs(cls):
@@ -87,6 +73,16 @@ def concat_docs(cls):
     cls.__doc__ = "\n".join(final)
 
     return cls
+
+
+def create_session() -> requests.Session:
+    """Create a session that impersonates a Chrome browser"""
+    session = requests.Session()
+    session.headers["User-Agent"] = USER_AGENT
+    session.mount("http://", CurlCffiAdapter(impersonate_browser_type=BROWSER_TYPE))
+    session.mount("https://", CurlCffiAdapter(impersonate_browser_type=BROWSER_TYPE))
+
+    return session
 
 
 class SSLAdapter(requests.adapters.HTTPAdapter):
@@ -227,9 +223,6 @@ def prepare_request(req: requests.Request, session: requests.Session):
         req.cookies = {**req.cookies, **cookies}
     else:
         req.cookies = cookies
-
-    if "User-Agent" not in req.headers:
-        req.headers["User-Agent"] = random.choice(user_agent_list)
 
     return session.prepare_request(req)
 
