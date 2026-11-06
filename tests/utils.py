@@ -70,7 +70,7 @@ engine_urls = [
 ]
 
 file_urls = [
-    "https://www.moddb.com/games/pokemon-generations/downloads/pokegen-v2-launcher",
+    "https://www.moddb.com/mods/brutal-doom/downloads/brutal-doom-v21-beta",
     "https://www.moddb.com/mods/hidden-source/downloads/hidden-source-beta-4b",
     "https://www.moddb.com/mods/third-age-total-war/downloads/third-age-total-war-30-part-1of2",
     "https://www.moddb.com/groups/scgames/downloads/bottom-defender-101",
