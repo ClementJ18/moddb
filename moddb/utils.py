@@ -2,7 +2,6 @@ import datetime
 import functools
 import inspect
 import logging
-import random
 import re
 import ssl
 import sys
@@ -14,6 +13,7 @@ from urllib.parse import urljoin
 import bs4
 import requests
 from bs4 import BeautifulSoup, Tag
+from curl_adapter import CurlCffiAdapter
 from requests import utils
 
 from .enums import MediaCategory, ThumbnailType
@@ -33,15 +33,12 @@ time_mapping = {
     "econd": 1,
 }
 
-user_agent_list = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.2792.65",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edge/44.18363.8131",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
-    "Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 OPR/114.0.0.0",
-]
+# The User-Agent must match the impersonated browser, curl_adapter only impersonates the TLS
+# fingerprint and leaves the headers to requests
+BROWSER_TYPE = "chrome150"
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+)
 
 
 def concat_docs(cls):
@@ -78,6 +75,16 @@ def concat_docs(cls):
     return cls
 
 
+def create_session() -> requests.Session:
+    """Create a session that impersonates a Chrome browser"""
+    session = requests.Session()
+    session.headers["User-Agent"] = USER_AGENT
+    session.mount("http://", CurlCffiAdapter(impersonate_browser_type=BROWSER_TYPE))
+    session.mount("https://", CurlCffiAdapter(impersonate_browser_type=BROWSER_TYPE))
+
+    return session
+
+
 class SSLAdapter(requests.adapters.HTTPAdapter):
     def init_poolmanager(self, *args, **kwargs):
         ssl_context = ssl.create_default_context()
@@ -88,7 +95,7 @@ class SSLAdapter(requests.adapters.HTTPAdapter):
 
 
 class Ratelimit:
-    def __init__(self, rate: float, per: float, sleep: Optional[None] = None):
+    def __init__(self, rate: float, per: float, sleep: Optional[float] = None):
         self.rate = rate
         self.per = per
         self.sleep = sleep
@@ -115,11 +122,11 @@ class Ratelimit:
         if self.call_count + 1 > self.rate:
             remaining = (expiry - now).total_seconds()
             if self.sleep is not None and remaining <= self.sleep:
-                LOGGER.info("Ratelimited! Sleeping for %s", remaining)
+                LOGGER.warning("Ratelimited! Sleeping for %.0f seconds", remaining)
                 time.sleep(remaining)
                 self.reset(now)
             else:
-                raise Ratelimited(f"Ratelimited please try again in {remaining}", remaining)
+                raise Ratelimited(f"Ratelimited, please try again in {remaining:.0f} seconds", remaining)
 
         self.call_count += 1
 
@@ -139,9 +146,45 @@ def ratelimit(*limiters: Ratelimit):
 
 
 GLOBAL_LIMITER = Ratelimit(40, 300, sleep=300)
-GLOBAL_THROTLE = Ratelimit(5, 1, sleep=1)
+GLOBAL_THROTTLE = Ratelimit(5, 1, sleep=1)
 COMMENT_LIMITER = Ratelimit(1, 60)
 LOGIN_LIMITER = Ratelimit(1, 5)
+
+
+def set_ratelimits(
+    *,
+    rate: Optional[float] = None,
+    per: Optional[float] = None,
+    throttle_rate: Optional[float] = None,
+    throttle_per: Optional[float] = None,
+):
+    """Adjust the library-wide ratelimits. Only the arguments passed are
+    changed. Lowering the defaults is a good idea for long-running batch
+    jobs to reduce the load on the website.
+
+    Parameters
+    -----------
+    rate : Optional[float]
+        Number of requests allowed by the global limiter per `per` seconds
+        (default 40)
+    per : Optional[float]
+        Length in seconds of the global limiter window (default 300)
+    throttle_rate : Optional[float]
+        Number of requests allowed by the burst throttle per `throttle_per`
+        seconds (default 5)
+    throttle_per : Optional[float]
+        Length in seconds of the burst throttle window (default 1)
+    """
+    if rate is not None:
+        GLOBAL_LIMITER.rate = rate
+    if per is not None:
+        GLOBAL_LIMITER.per = per
+        GLOBAL_LIMITER.sleep = per
+    if throttle_rate is not None:
+        GLOBAL_THROTTLE.rate = throttle_rate
+    if throttle_per is not None:
+        GLOBAL_THROTTLE.per = throttle_per
+        GLOBAL_THROTTLE.sleep = throttle_per
 
 
 def get_date(d: str) -> datetime.datetime:
@@ -180,9 +223,6 @@ def prepare_request(req: requests.Request, session: requests.Session):
         req.cookies = {**req.cookies, **cookies}
     else:
         req.cookies = cookies
-
-    if "User-Agent" not in req.headers:
-        req.headers["User-Agent"] = random.choice(user_agent_list)
 
     return session.prepare_request(req)
 
@@ -266,6 +306,7 @@ def login_with_freeman_cookie(freeman_cookie: str, session: requests.Session = N
     session.cookies.set("freeman", freeman_cookie, domain="www.moddb.com", path="/")
     member_nameid = get_logged_in_member_nameid(session)
     if member_nameid is None:
+        session.cookies.clear(domain="www.moddb.com", path="/", name="freeman")
         raise ValueError("Invalid freeman cookie")
 
     return member_nameid
@@ -302,7 +343,7 @@ def create_login_payload(username: str, password: str, session: requests.Session
     return data, resp
 
 
-@ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
+@ratelimit(GLOBAL_THROTTLE, GLOBAL_LIMITER)
 def request(req: requests.Request):
     """Helper function to make get/post requests with the current SESSION object.
 
