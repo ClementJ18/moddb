@@ -1,6 +1,3 @@
-import requests
-from curl_adapter import CurlCffiAdapter
-
 from .base import (
     front_page,
     get_freeman_cookie,
@@ -15,11 +12,9 @@ from .base import (
 from .client import Client, Thread, TwoFactorAuthClient
 from .enums import *
 from .pages import *
-from .utils import BASE_URL, LOGGER, Object, get_page, request, set_ratelimits, soup
+from .utils import BASE_URL, LOGGER, Object, create_session, get_page, request, set_ratelimits, soup
 
-SESSION = requests.Session()
-SESSION.mount("http://", CurlCffiAdapter())
-SESSION.mount("https://", CurlCffiAdapter())
+SESSION = create_session()
 
 __version__ = "0.15.0"
 

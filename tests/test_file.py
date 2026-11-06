@@ -2,7 +2,7 @@ import pytest
 
 import moddb
 
-DEFAULT = "https://www.moddb.com/games/pokemon-generations/downloads/pokegen-v2-launcher"
+DEFAULT = "https://www.moddb.com/mods/brutal-doom/downloads/brutal-doom-v21-beta"
 
 pytestmark = [pytest.mark.vcr]
 

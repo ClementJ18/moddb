@@ -1,13 +1,11 @@
 from __future__ import annotations
 
-import random
 import re
 import sys
 from typing import TYPE_CHECKING, Any, List, Optional, Tuple, Union
 
 import requests
 from bs4 import BeautifulSoup
-from curl_adapter import CurlCffiAdapter
 from requests import utils
 
 from .base import parse_page
@@ -21,9 +19,9 @@ from .utils import (
     GLOBAL_LIMITER,
     GLOBAL_THROTTLE,
     LOGGER,
-    browser_types,
     concat_docs,
     create_login_payload,
+    create_session,
     generate_hash,
     generate_login_cookies,
     get,
@@ -38,7 +36,6 @@ from .utils import (
     raise_for_status,
     ratelimit,
     soup,
-    user_agent_list,
 )
 
 if TYPE_CHECKING:
@@ -305,10 +302,7 @@ class Client:
     """
 
     def __init__(self, username: str = None, password: str = None, freeman_cookie: str = None):
-        browser_type = random.choice(browser_types)
-        session = requests.Session()
-        session.mount("http://", CurlCffiAdapter(impersonate_browser_type=browser_type))
-        session.mount("https://", CurlCffiAdapter(impersonate_browser_type=browser_type))
+        session = create_session()
 
         if freeman_cookie:
             username = login_with_freeman_cookie(freeman_cookie, session=session)
@@ -346,15 +340,10 @@ class Client:
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""
         cookies = utils.dict_from_cookiejar(self._session.cookies)
-        headers = {
-            **kwargs.pop("headers", {}),
-            "User-Agent": random.choice(user_agent_list),
-        }
-
         req = requests.Request(
             method,
             url,
-            headers=headers,
+            headers=kwargs.pop("headers", {}),
             cookies=cookies,
             data=kwargs.pop("data", {}),
             params=kwargs.pop("params", None),
@@ -1223,10 +1212,7 @@ class TwoFactorAuthClient(Client):
         self.username = username
         self.password = password
 
-        browser_type = random.choice(browser_types)
-        session = requests.Session()
-        session.mount("http://", CurlCffiAdapter(impersonate_browser_type=browser_type))
-        session.mount("https://", CurlCffiAdapter(impersonate_browser_type=browser_type))
+        session = create_session()
         self._session = session
         self.member: Member = None
 

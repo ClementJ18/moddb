@@ -116,7 +116,7 @@ class Statistics:
         self.visits, self.today = get_views(visits)
 
         rank = normalize(html.find("h5", string="Rank").parent.a.string).split("of")
-        self.rank = int(rank[0].replace(",", ""))
+        self.rank = int(rank[0].replace(",", "")) if rank[0].strip() != "-" else 0
         self.total = int(rank[1].replace(",", ""))
 
         try:
@@ -903,7 +903,7 @@ class MemberStatistics:
 
         try:
             rank = normalize(html.find("h5", string="Rank").parent.span.string).split("of")
-            self.rank = int(rank[0].replace(",", ""))
+            self.rank = int(rank[0].replace(",", "")) if rank[0].strip() != "-" else 0
             self.total = int(rank[1].replace(",", ""))
         except AttributeError:
             self.rank = 0
