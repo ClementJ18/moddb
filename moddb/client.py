@@ -1,11 +1,13 @@
 from __future__ import annotations
 
+import random
 import re
 import sys
 from typing import TYPE_CHECKING, Any, List, Optional, Tuple, Union
 
 import requests
 from bs4 import BeautifulSoup
+from curl_adapter import CurlCffiAdapter
 from requests import utils
 
 from .base import parse_page
@@ -17,11 +19,10 @@ from .utils import (
     BASE_URL,
     COMMENT_LIMITER,
     GLOBAL_LIMITER,
-    GLOBAL_THROTTLE,
+    GLOBAL_THROTLE,
     LOGGER,
     concat_docs,
     create_login_payload,
-    create_session,
     generate_hash,
     generate_login_cookies,
     get,
@@ -36,6 +37,7 @@ from .utils import (
     raise_for_status,
     ratelimit,
     soup,
+    user_agent_list,
 )
 
 if TYPE_CHECKING:
@@ -302,7 +304,9 @@ class Client:
     """
 
     def __init__(self, username: str = None, password: str = None, freeman_cookie: str = None):
-        session = create_session()
+        session = requests.Session()
+        session.mount("http://", CurlCffiAdapter())
+        session.mount("https://", CurlCffiAdapter())
 
         if freeman_cookie:
             username = login_with_freeman_cookie(freeman_cookie, session=session)
@@ -335,27 +339,21 @@ class Client:
         """Return the `freeman` cookie from this client's session, if available"""
         return get_session_freeman_cookie(self._session)
 
-    @ratelimit(GLOBAL_THROTTLE, GLOBAL_LIMITER)
+    @ratelimit(GLOBAL_THROTLE, GLOBAL_LIMITER)
     def _request(self, method, url, **kwargs):
         """Making sure we do our request with the cookies from this client rather than the cookies
         of the library."""
         cookies = utils.dict_from_cookiejar(self._session.cookies)
-        req = requests.Request(
-            method,
-            url,
-            headers=kwargs.pop("headers", {}),
-            cookies=cookies,
-            data=kwargs.pop("data", {}),
-            params=kwargs.pop("params", None),
-        )
+        headers = {
+            **kwargs.pop("headers", {}),
+            "User-Agent": random.choice(user_agent_list),
+        }
+
+        req = requests.Request(method, url, headers=headers, cookies=cookies, data=kwargs.pop("data", {}))
         prepped = self._session.prepare_request(req)
         LOGGER.info("Request: %s", prepped.url)
 
-        allow_redirects = kwargs.pop("allow_redirects", True)
-        if kwargs:
-            raise TypeError(f"_request got unexpected arguments: {', '.join(kwargs)}")
-
-        r = self._session.send(prepped, allow_redirects=allow_redirects)
+        r = self._session.send(prepped, allow_redirects=kwargs.pop("allow_redirects", True))
         raise_for_status(r)
 
         return r
@@ -1212,7 +1210,9 @@ class TwoFactorAuthClient(Client):
         self.username = username
         self.password = password
 
-        session = create_session()
+        session = requests.Session()
+        session.mount("http://", CurlCffiAdapter())
+        session.mount("https://", CurlCffiAdapter())
         self._session = session
         self.member: Member = None
 

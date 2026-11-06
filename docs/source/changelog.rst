@@ -8,15 +8,6 @@ The page attempt to keep a clear list of breaking/non-breaking changes and new f
    :local:
    :backlinks: none
 
-
-v0.16.0
------------
-Bug Fixes
-###########
-* Fix Cloudflare 403 by updating curl_cffi 
-* Clear cookies on logout to avoid issues with re-login
-* Use `Client.get_cookies` to retrieve cookies from the client session instead of `Client.cookies` which is now deprecated
-
 v0.15.0
 -----------
 New Features
