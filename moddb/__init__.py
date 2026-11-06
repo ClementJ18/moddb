@@ -16,7 +16,7 @@ from .utils import BASE_URL, LOGGER, Object, create_session, get_page, request, 
 
 SESSION = create_session()
 
-__version__ = "0.15.0"
+__version__ = "0.16.0"
 
 __all__ = [
     "front_page",
