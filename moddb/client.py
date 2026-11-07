@@ -795,7 +795,7 @@ class Client:
         """
         with self:
             page = parse_page(comment._url)
-            updated_comment = get(page.comments, id=comment.id)
+            updated_comment = get(page.comments.flatten(), id=comment.id)
 
         r = self._comment_state_update(updated_comment)
 
@@ -826,7 +826,7 @@ class Client:
         with self:
             page = parse_page(comment._url)
             updated_comment = get(
-                page._get_comments(get_page(comment._url, params={"deleted": "t"})),
+                page._get_comments(get_page(comment._url, params={"deleted": "t"})).flatten(),
                 id=comment.id,
             )
 
