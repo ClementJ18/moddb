@@ -324,12 +324,12 @@ class Client:
         return f"<Client username={self.member.name} level={self.member.profile.level}>"
 
     def __enter__(self):
-        self._fake_session = sys.modules["moddb"].SESSION
+        self.__dict__.setdefault("_previous_sessions", []).append(sys.modules["moddb"].SESSION)
         sys.modules["moddb"].SESSION = self._session
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        sys.modules["moddb"].SESSION = self._fake_session
-        delattr(self, "_fake_session")
+        sys.modules["moddb"].SESSION = self._previous_sessions.pop()
 
     def get_freeman_cookie(self) -> Optional[str]:
         """Return the `freeman` cookie from this client's session, if available"""
