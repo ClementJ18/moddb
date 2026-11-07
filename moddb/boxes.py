@@ -673,20 +673,24 @@ class Comment:
             )
             self.content = None
 
+        # moddb marks comments awaiting approval with this class, logged in or not
+        self.approved = "rowspamorham" not in position
+
         try:
             karma = actions.span.string
-            self.karma = int(re.findall(r"[+-]?\d", karma)[0].replace(",", ""))
+            self.karma = int(re.findall(r"[+-]?[\d,]+", karma)[0].replace(",", ""))
+        except (AttributeError, IndexError):
+            # no actions when logged out, "ham or spam?" instead of votes while awaiting approval
+            self.karma = 0
+
+        try:
             self.upvote = join(actions.find_all("a")[1]["href"])
             self.downvote = join(actions.find_all("a")[2]["href"])
-            self.approved = True
         except AttributeError:
-            self.karma = 0
             self.upvote = None
             self.downvote = None
-            self.approved = False
         except IndexError:
             self.downvote = None
-            self.approved = True
 
         self.developer = bool(html.find("span", class_="developer"))
         self.staff = bool(html.find("span", class_="staff"))
