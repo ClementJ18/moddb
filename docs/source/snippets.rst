@@ -42,6 +42,30 @@ A simple little example, users have updates which happen when pages upload new a
 
     #now we can see this profile from the persepctive of RegularUser.
 
+Only requests made inside the ``with`` block use the client's session. Objects parsed inside it don't remember the client, so any method that makes a new request (``get_comments``, ``next_page``, ``get_all_results``, ``Thumbnail.parse``, ...) has to be called inside the block as well, otherwise it is made with the module session. This matters for guest comments awaiting approval, which are only visible when logged in::
+
+    import moddb
+
+    client = moddb.Client("Username", "Password")
+
+    with client:
+        page = moddb.parse_page("https://www.moddb.com/mods/brutal-doom")
+
+        #all of these are requested as the client
+        comments = page.comments
+        page_two = page.get_comments(2)
+        everything = comments.get_all_results()
+
+        for comment in everything.flatten():
+            if comment.guest and not comment.approved:
+                print(comment.id, comment.content)
+
+        #client methods like client.delete_comment(comment) can be used inside the block as well
+
+    #already parsed attributes are still fine to read here, but this request is made with
+    #the module session again, so guest comments awaiting approval are hidden
+    page.get_comments(2)
+
 The same cookie-based initialization works with :class:`TwoFactorAuthClient` as well::
 
     import moddb

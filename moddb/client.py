@@ -26,6 +26,7 @@ from .utils import (
     generate_login_cookies,
     get,
     get_date,
+    get_page,
     get_page_type,
     get_session_freeman_cookie,
     get_sitearea,
@@ -324,12 +325,12 @@ class Client:
         return f"<Client username={self.member.name} level={self.member.profile.level}>"
 
     def __enter__(self):
-        self._fake_session = sys.modules["moddb"].SESSION
+        self.__dict__.setdefault("_previous_sessions", []).append(sys.modules["moddb"].SESSION)
         sys.modules["moddb"].SESSION = self._session
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        sys.modules["moddb"].SESSION = self._fake_session
-        delattr(self, "_fake_session")
+        sys.modules["moddb"].SESSION = self._previous_sessions.pop()
 
     def get_freeman_cookie(self) -> Optional[str]:
         """Return the `freeman` cookie from this client's session, if available"""
@@ -794,7 +795,7 @@ class Client:
         """
         with self:
             page = parse_page(comment._url)
-            updated_comment = get(page.comments, id=comment.id)
+            updated_comment = get(page.comments.flatten(), id=comment.id)
 
         r = self._comment_state_update(updated_comment)
 
@@ -825,7 +826,7 @@ class Client:
         with self:
             page = parse_page(comment._url)
             updated_comment = get(
-                page._get_comments_from_url(comment._url, show_deleted=True),
+                page._get_comments(get_page(comment._url, params={"deleted": "t"})).flatten(),
                 id=comment.id,
             )
 
