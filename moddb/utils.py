@@ -542,8 +542,8 @@ def get_list_stats(result_box: bs4.BeautifulSoup, per_page: int = 30) -> Tuple[i
     result_box: bs4.BeautifulSoup
         The HTML of the result box from a list of results page
     per_page: Optional[int]
-        The number of results per page, important for calculations. Defaults
-        to 30, doesn't usually need to be touched
+        The number of results per page, only used if the page has no pagination
+        links to read the pages from. Defaults to 30
 
     Returns
     --------
@@ -562,8 +562,20 @@ def get_list_stats(result_box: bs4.BeautifulSoup, per_page: int = 30) -> Tuple[i
     if not stats:  # less than a page
         return 1, 1, None
 
-    max_results = int(stats.group(2).replace(",", ""))
     all_results = int(stats.group(3).replace(",", ""))
+
+    # the number of results per page differs between lists (10 for comments, 50 for
+    # watchers, ...) so read the pages from the pagination links when possible
+    pages = result_box.find("div", class_="pages")
+    if pages is not None:
+        current = pages.find("span", class_="current")
+        numbers = [
+            int(x.string) for x in pages.find_all(["a", "span"]) if x.string and x.string.strip().isdigit()
+        ]
+        if current is not None and numbers:
+            return int(current.string), max(numbers), all_results
+
+    max_results = int(stats.group(2).replace(",", ""))
     max_page = ceildiv(all_results, per_page)
     current_page = ceildiv(max_results, per_page)
 
