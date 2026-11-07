@@ -26,6 +26,7 @@ from .utils import (
     generate_login_cookies,
     get,
     get_date,
+    get_page,
     get_page_type,
     get_session_freeman_cookie,
     get_sitearea,
@@ -825,7 +826,7 @@ class Client:
         with self:
             page = parse_page(comment._url)
             updated_comment = get(
-                page._get_comments_from_url(comment._url, show_deleted=True),
+                page._get_comments(get_page(comment._url, params={"deleted": "t"})),
                 id=comment.id,
             )
 
